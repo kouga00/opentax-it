@@ -9,6 +9,7 @@ import { validationPipe } from './common/validation.pipe.js';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { bodyParser: false });
+  app.set('trust proxy', process.env.TRUST_PROXY ?? 'loopback');
   app.use(hostAllowlist());
   app.use(helmet());
   app.use(jsonOnly());

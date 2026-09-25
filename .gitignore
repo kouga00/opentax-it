@@ -27,3 +27,9 @@ conversazione.md
 notes/
 *.tsbuildinfo
 apps/api/storage/
+
+# agent artifacts
+.agents/
+.claude/
+.windsurf/
+skills-lock.json

@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { api, ApiError, TENANT_COOKIE } from './api';
+import { api, ApiError, SESSION_COOKIE } from './api';
 import type { ImportFile, ImportPreviewRow, ImportResult } from './types';
 
 export type ActionState = { error?: string } | undefined;
@@ -12,21 +12,91 @@ function errorMessage(e: unknown): string {
   return e instanceof ApiError ? e.message : 'Errore inatteso';
 }
 
-/** The tenant cookie is only read on the server: not readable by page scripts, HTTPS-only in production. */
-const TENANT_COOKIE_OPTIONS = { path: '/', sameSite: 'lax', httpOnly: true, secure: process.env.NODE_ENV === 'production' } as const;
+async function handleActionError(e: unknown): Promise<ActionState> {
+  if (e instanceof ApiError && e.status === 401) {
+    const store = await cookies();
+    store.delete(SESSION_COOKIE);
+    redirect('/login');
+  }
+  return { error: errorMessage(e) };
+}
+
+/** The session cookie is only read on the server: not readable by page scripts, HTTPS-only in production. */
+const SESSION_COOKIE_OPTIONS = {
+  path: '/',
+  sameSite: 'lax',
+  httpOnly: true,
+  secure: process.env.NODE_ENV === 'production',
+  maxAge: 30 * 24 * 60 * 60,
+} as const;
+
+export async function loginAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const email = String(formData.get('email') ?? '').trim();
+  const password = String(formData.get('password') ?? '');
+  try {
+    const res = await api.login({ email, password });
+    const store = await cookies();
+    store.set(SESSION_COOKIE, res.token, SESSION_COOKIE_OPTIONS);
+  } catch (e) {
+    return { error: errorMessage(e) };
+  }
+  redirect('/dashboard');
+}
+
+export async function registerAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const email = String(formData.get('email') ?? '').trim();
+  const password = String(formData.get('password') ?? '');
+  const confirmPassword = String(formData.get('confirmPassword') ?? '');
+  const name = String(formData.get('name') ?? '').trim();
+
+  if (password !== confirmPassword) {
+    return { error: 'Le password non coincidono' };
+  }
+
+  try {
+    const res = await api.register({ email, password, name: name || undefined });
+    const store = await cookies();
+    store.set(SESSION_COOKIE, res.token, SESSION_COOKIE_OPTIONS);
+  } catch (e) {
+    return { error: errorMessage(e) };
+  }
+  redirect('/setup/new');
+}
+
+export async function logoutAction(): Promise<void> {
+  try {
+    await api.logout();
+  } catch (err) {
+    console.warn('Logout API call failed:', err);
+  }
+  const store = await cookies();
+  store.delete(SESSION_COOKIE);
+  redirect('/login');
+}
 
 export async function selectTenant(formData: FormData) {
   const id = String(formData.get('tenantId') ?? '');
-  if (!/^[a-z0-9]{20,32}$/.test(id)) redirect('/setup'); // tenant ids are cuids
-  const store = await cookies();
-  store.set(TENANT_COOKIE, id, TENANT_COOKIE_OPTIONS);
+  if (!/^[a-z0-9]{20,32}$/.test(id)) {
+    redirect('/setup?error=' + encodeURIComponent('Identificativo partita IVA non valido'));
+  }
+  try {
+    await api.selectTenant(id);
+  } catch (e) {
+    if (e instanceof ApiError && e.status === 401) {
+      const store = await cookies();
+      store.delete(SESSION_COOKIE);
+      redirect('/login');
+    }
+    redirect('/setup?error=' + encodeURIComponent(errorMessage(e)));
+  }
+  revalidatePath('/', 'layout');
   redirect('/invoices');
 }
 
 export async function createTenant(_prev: ActionState, formData: FormData): Promise<ActionState> {
   const f = (k: string) => String(formData.get(k) ?? '').trim();
   try {
-    const tenant = await api.createTenant({
+    await api.createTenant({
       name: f('name'),
       businessName: f('businessName') || undefined,
       firstName: f('firstName'),
@@ -52,10 +122,8 @@ export async function createTenant(_prev: ActionState, formData: FormData): Prom
       inpsOfficeId: f('inpsOfficeId') || undefined,
       pecAddress: f('pecAddress') || undefined,
     });
-    const store = await cookies();
-    store.set(TENANT_COOKIE, tenant.id, TENANT_COOKIE_OPTIONS);
   } catch (e) {
-    return { error: errorMessage(e) };
+    return handleActionError(e);
   }
   redirect('/invoices');
 }

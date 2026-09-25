@@ -1,5 +1,28 @@
 // Shared API types (client-safe).
 
+export type UserRole = 'PLATFORM_ADMIN' | 'TENANT_ADMIN' | 'TENANT_USER';
+
+export interface TenantMembershipSummary {
+  id: string;
+  name: string;
+  role: string;
+}
+
+export interface User {
+  id: string;
+  email: string;
+  name: string | null;
+  role: UserRole;
+  activeTenantId: string | null;
+  tenants: TenantMembershipSummary[];
+}
+
+export interface AuthResponse {
+  token: string;
+  expiresAt: string;
+  user: User;
+}
+
 export interface Deadline {
   kind: string;
   nominalDate: string;

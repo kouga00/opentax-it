@@ -13,7 +13,33 @@ function hostName(host: string | null): string {
   return h.split(':')[0];
 }
 
+const PROTECTED_PREFIXES = [
+  '/dashboard',
+  '/invoices',
+  '/customers',
+  '/deadlines',
+  '/taxes',
+  '/f24',
+  '/credits',
+  '/banks',
+  '/payment-terms',
+  '/setup',
+];
+
 export function proxy(request: NextRequest) {
-  if (allowed.has(hostName(request.headers.get('host')))) return NextResponse.next();
-  return new NextResponse('Host not allowed', { status: 421 });
+  if (!allowed.has(hostName(request.headers.get('host')))) {
+    return new NextResponse('Host not allowed', { status: 421 });
+  }
+
+  const { pathname } = request.nextUrl;
+  const isProtected = PROTECTED_PREFIXES.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`));
+  const hasSession = Boolean(request.cookies.get('opentax_session')?.value);
+
+
+  if (isProtected && !hasSession) {
+    const loginUrl = new URL('/login', request.url);
+    return NextResponse.redirect(loginUrl);
+  }
+
+  return NextResponse.next();
 }

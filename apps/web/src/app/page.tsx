@@ -1,5 +1,10 @@
 import { redirect } from 'next/navigation';
+import { currentUser } from '@/lib/api';
 
-export default function HomePage() {
-  redirect('/dashboard');
+export default async function HomePage() {
+  const user = await currentUser();
+  if (user) {
+    redirect('/dashboard');
+  }
+  redirect('/login');
 }

@@ -1,21 +1,64 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import { createHash } from 'node:crypto';
 import { INPS_OFFICES, isValidInpsOfficeIdForGestioneSeparata } from '@opentax-it/fiscal-rules';
+import { AuditLogService } from '../audit-log/audit-log.service.js';
+import { UserRole } from '../generated/prisma/enums.js';
 import { PrismaService } from '../prisma/prisma.service.js';
 import type { BankAccountDto, CreateTenantDto, PaymentTermsDto, UpdateTenantProfileDto } from './tenants.dto.js';
 
 @Injectable()
 export class TenantsService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly auditLog: AuditLogService,
+  ) {}
 
-  create(dto: CreateTenantDto) {
+  async create(dto: CreateTenantDto, userId?: string, sessionToken?: string) {
     const { name, ...profile } = dto;
     if (profile.inpsOfficeId !== undefined && !isValidInpsOfficeIdForGestioneSeparata(profile.inpsOfficeId)) {
       throw new BadRequestException('Unknown INPS office (see the AdE "Tabella codici sede INPS")');
     }
-    return this.prisma.tenant.create({
-      data: { name, profile: { create: { ...profile, ...personalData(profile) } } },
-      include: { profile: true },
+
+    const tenant = await this.prisma.$transaction(async (tx) => {
+      const created = await tx.tenant.create({
+        data: {
+          name,
+          profile: { create: { ...profile, ...personalData(profile) } },
+          ...(userId
+            ? {
+                members: {
+                  create: {
+                    userId,
+                    role: UserRole.TENANT_ADMIN,
+                  },
+                },
+              }
+            : {}),
+        },
+        include: { profile: true },
+      });
+
+      if (sessionToken && userId) {
+        const tokenHash = createHash('sha256').update(sessionToken).digest('hex');
+        await tx.session.updateMany({
+          where: { tokenHash, userId },
+          data: { activeTenantId: created.id },
+        });
+      }
+
+      return created;
     });
+
+    await this.auditLog.log({
+      tenantId: tenant.id,
+      userId: userId ?? null,
+      action: 'TENANT_CREATE',
+      entityType: 'Tenant',
+      entityId: tenant.id,
+      data: { name: tenant.name },
+    });
+
+    return tenant;
   }
 
   async updateProfile(tenantId: string, dto: UpdateTenantProfileDto) {
@@ -101,8 +144,22 @@ export class TenantsService {
     return { ...tenant, profile: tenant.profile };
   }
 
-  list() {
-    return this.prisma.tenant.findMany({ select: { id: true, name: true, createdAt: true }, orderBy: { createdAt: 'asc' } });
+  list(userId?: string, userRole?: string) {
+    const where =
+      userId && userRole !== UserRole.PLATFORM_ADMIN
+        ? {
+            OR: [
+              { members: { some: { userId } } },
+              { users: { some: { id: userId } } },
+            ],
+          }
+        : undefined;
+
+    return this.prisma.tenant.findMany({
+      where,
+      select: { id: true, name: true, createdAt: true },
+      orderBy: { createdAt: 'asc' },
+    });
   }
 }
 

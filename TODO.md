@@ -63,10 +63,12 @@ Regole di lavoro in [AGENTS.md](AGENTS.md) (fatto il 24/09/2026, letto anche da 
   - modello di PR (`.github/pull_request_template.md`) con la checklist: fonte ufficiale e citazione, test, OWASP, documentazione letta, AGENTS.md aggiornato se cambia una convenzione.
 
 ### Autenticazione e permessi
-Oggi la partita IVA attiva è scelta in `/setup` e salvata in un cookie; l'API riceve il tenant da un header. **Obbligatoria prima di qualsiasi uso fuori dal proprio computer.**
-- Login (email + password o passkey), sessioni, ruoli già previsti nello schema (`UserRole`), tenant multipli per utente.
-- L'header `x-tenant-id` e il cookie `opentax_tenant` vanno sostituiti dalla sessione.
-- Rate limiting e audit log (`AuditLog` esiste nello schema, non è usato).
+Fatto il 25/09/2026.
+- **Login e registrazione** (email e password con hashing sicuro `scrypt` e salt casuale da `node:crypto`), sessioni persistite con token hash SHA-256 (`Session`), durata configurabile (default 30 giorni).
+- **Ruoli e multi-tenancy**: ruoli (`PLATFORM_ADMIN`, `TENANT_ADMIN`, `TENANT_USER`), supporto a tenant multipli per utente con `TenantMember`. Il primo utente creato diventa automaticamente `PLATFORM_ADMIN`.
+- **Sostituzione cookie e header**: `x-tenant-id` e `opentax_tenant` sostituiti dalla sessione (`opentax_session` `httpOnly`, header `Authorization: Bearer <token>`); tenant attivo mantenuto nella sessione con endpoint `POST /auth/select-tenant`.
+- **Rate limiting e audit log**: rate limiting a finestra mobile su login ed endpoint sensibili (blocco con HTTP 429 e `Retry-After`); `AuditLogService` registra login, tentativi falliti, registrazioni, logout e cambi tenant su `AuditLog`.
+- **Interfaccia web**: pagine `/login` e `/register`, protezione delle rotte applicative, indicazione dell'utente attivo nell'app shell e logout.
 
 ### Invio allo SDI via PEC e ricevute
 Emissione e XML sono pronti; manca la trasmissione. Normativa verificata in [docs/normativa-2026.md](docs/normativa-2026.md) §4.3; tabelle `SdiTransmission`/`SdiNotification` e `TenantProfile.sdiPecAssigned` già nello schema.

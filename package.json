@@ -23,6 +23,7 @@
     "db:up": "docker compose up -d db",
     "db:migrate": "pnpm --filter @opentax-it/api exec prisma migrate dev",
     "demo:seed": "pnpm --filter @opentax-it/api run demo:seed",
+    "admin:create": "pnpm --filter @opentax-it/api run admin:create",
     "fonti": "node scripts/fonti.mjs"
   }
 }

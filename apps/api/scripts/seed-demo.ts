@@ -28,12 +28,20 @@ const TENANT_NAME = 'Demo Forfettario';
 const thisYear = new Date().getFullYear();
 const prevYear = thisYear - 1;
 
+const DEMO_EMAIL = 'demo@opentax.it';
+const DEMO_PASSWORD = 'PasswordDemo123!';
+
 let tenantId = '';
+let sessionToken = '';
 
 async function call<T>(method: string, path: string, body?: unknown): Promise<T> {
+  const headers: Record<string, string> = { 'content-type': 'application/json' };
+  if (sessionToken) headers['authorization'] = `Bearer ${sessionToken}`;
+  else if (tenantId) headers['x-tenant-id'] = tenantId;
+
   const res = await fetch(`${API}${path}`, {
     method,
-    headers: { 'content-type': 'application/json', ...(tenantId ? { 'x-tenant-id': tenantId } : {}) },
+    headers,
     body: body === undefined ? undefined : JSON.stringify(body),
   });
   if (res.status === 204) return undefined as T;
@@ -74,6 +82,14 @@ async function checkRuleSets(years: number[]) {
 const iso = (y: number, m: number, d: number) => `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
 
 async function main() {
+  try {
+    const auth = await call<{ token: string }>('POST', '/auth/login', { email: DEMO_EMAIL, password: DEMO_PASSWORD });
+    sessionToken = auth.token;
+  } catch {
+    const reg = await call<{ token: string }>('POST', '/auth/register', { email: DEMO_EMAIL, password: DEMO_PASSWORD, name: 'Demo User' });
+    sessionToken = reg.token;
+  }
+
   await checkRuleSets([prevYear, thisYear]);
   const tenants = await call<Array<{ id: string; name: string }>>('GET', '/tenants');
   const existing = tenants.find((t) => t.name === TENANT_NAME);
@@ -109,6 +125,7 @@ async function main() {
     inpsOfficeId: '5500-palermo',
   });
   tenantId = tenant.id;
+  await call('POST', '/auth/select-tenant', { tenantId });
   console.log(`Created tenant ${tenantId}`);
 
   await call('POST', '/tenants/me/bank-accounts', { name: 'Conto principale', bankName: 'Banca Demo', iban: 'IT60X0542811101000000123456', isDefault: true });

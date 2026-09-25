@@ -1,4 +1,8 @@
 import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put } from '@nestjs/common';
+import { CurrentUser } from '../auth/current-user.decorator.js';
+import { Public } from '../auth/public.decorator.js';
+import { SessionToken } from '../auth/session-token.decorator.js';
+import type { UserWithMemberships } from '../auth/auth.mapper.js';
 import { TenantId } from '../common/tenant.decorator.js';
 import { BankAccountDto, CreateTenantDto, PaymentTermsDto, UpdateTenantProfileDto } from './tenants.dto.js';
 import { TenantsService } from './tenants.service.js';
@@ -8,13 +12,17 @@ export class TenantsController {
   constructor(private readonly service: TenantsService) {}
 
   @Post()
-  create(@Body() dto: CreateTenantDto) {
-    return this.service.create(dto);
+  create(
+    @Body() dto: CreateTenantDto,
+    @CurrentUser() user?: UserWithMemberships,
+    @SessionToken() token?: string,
+  ) {
+    return this.service.create(dto, user?.id, token);
   }
 
   @Get()
-  list() {
-    return this.service.list();
+  list(@CurrentUser() user?: UserWithMemberships) {
+    return this.service.list(user?.id, user?.role);
   }
 
   @Get('me/bank-accounts')
@@ -41,6 +49,7 @@ export class TenantsController {
   @Delete('me/payment-terms/:id') @HttpCode(204)
   deletePaymentTerms(@TenantId() tenantId: string, @Param('id') id: string) { return this.service.deletePaymentTerms(tenantId, id); }
 
+  @Public()
   @Get('inps-offices')
   inpsOffices() {
     return this.service.inpsOffices();

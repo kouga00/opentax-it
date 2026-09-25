@@ -1,9 +1,11 @@
 import { Controller, Get, Param, ParseBoolPipe, Query, Res, StreamableFile } from '@nestjs/common';
 import type { Response } from 'express';
+import { Public } from '../auth/public.decorator.js';
 import { inline } from '../common/content-disposition.js';
 import { SourcesService } from './sources.service.js';
 
 /** Registry of the official sources: global, not per tenant. */
+@Public()
 @Controller('sources')
 export class SourcesController {
   constructor(private readonly service: SourcesService) {}

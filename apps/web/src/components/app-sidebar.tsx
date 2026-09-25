@@ -37,7 +37,13 @@ const GROUPS = [
   { label: 'Normativa', items: [{ href: '/rules', label: 'Regole fiscali', icon: Scale }, { href: '/sources', label: 'Fonti ufficiali', icon: Library }] },
 ];
 
-export function AppSidebar({ tenantName }: { tenantName: string | null }) {
+export function AppSidebar({
+  tenantName,
+  userEmail,
+}: {
+  tenantName: string | null;
+  userEmail?: string | null;
+}) {
   const pathname = usePathname();
   return (
     <Sidebar collapsible="icon" className="print:hidden">
