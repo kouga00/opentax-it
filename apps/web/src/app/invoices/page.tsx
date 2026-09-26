@@ -18,10 +18,12 @@ export default async function InvoicesPage({ searchParams }: PageProps<'/invoice
   const currentYear = new Date().getFullYear();
   // Invoices are never dated in a future year: a future year in the URL falls back to the current one.
   const year = Math.min(Number(params.year ?? currentYear) || currentYear, currentYear);
-  const [invoices, invoiceYears] = await Promise.all([
+  const [invoices, invoiceYears, pec] = await Promise.all([
     fetchOrNull(() => api.invoices(year)).then((r) => r ?? []),
     fetchOrNull(() => api.invoiceYears()).then((r) => r ?? []),
+    fetchOrNull(() => api.pecSettings()),
   ]);
+  const sdiRecipient = pec?.address && pec.hasPassword ? pec.recipient : null;
   const years = [...new Set([currentYear, year, ...invoiceYears])].sort((a, b) => b - a);
   const collected = invoices.filter((i) => i.status !== 'DRAFT' && i.status !== 'CANCELLED' && i.type !== 'TD04');
   const total = collected.reduce((s, i) => s + Number(i.total), 0);
@@ -29,7 +31,7 @@ export default async function InvoicesPage({ searchParams }: PageProps<'/invoice
     <main className="mx-auto w-full max-w-6xl space-y-6 p-6">
       <div>
         <h1 className="text-2xl font-semibold">Fatture {year}</h1>
-        <p className="text-sm text-muted-foreground">Emesso (totali documento, escluse note di credito): {formatMoney(total)}</p>
+        <p className="text-sm text-muted-foreground">Fatturato (totali dei documenti numerati, escluse note di credito): {formatMoney(total)}</p>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <YearSelect path="/invoices" value={year} years={years} />
@@ -61,8 +63,8 @@ export default async function InvoicesPage({ searchParams }: PageProps<'/invoice
                   <TableCell>{TYPE_LABELS[i.type] ?? i.type}</TableCell>
                   <TableCell>{customerLabel(i.customer)}</TableCell>
                   <TableCell className="text-right font-mono">{formatMoney(i.total, i.currency)}</TableCell>
-                  <TableCell><InvoiceStatusBadge status={i.status} /></TableCell>
-                  <TableCell><InvoiceRowActions invoice={i} /></TableCell>
+                  <TableCell><InvoiceStatusBadge status={i.status} imported={i.imported} /></TableCell>
+                  <TableCell><InvoiceRowActions invoice={i} sdiRecipient={sdiRecipient} /></TableCell>
                 </TableRow>
               ))}
               {invoices.length === 0 && <TableRow><TableCell colSpan={7} className="text-center text-muted-foreground">Nessun documento nel {year}.</TableCell></TableRow>}

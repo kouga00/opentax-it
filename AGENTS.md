@@ -46,4 +46,4 @@ Il codice attuale non la segue ancora del tutto: la migrazione è nell'epica "Qu
 
 ## Web (apps/web)
 
-Componenti shadcn/ui (Base UI); le tabelle usano le azioni a icone con tooltip di `components/row-actions.tsx`; gli anni si scelgono con `components/year-select.tsx`. Pagine server che chiamano l'API da `lib/api.ts`; il browser non raggiunge mai l'API direttamente.
+Componenti shadcn/ui (Base UI); le tabelle usano le azioni di `components/row-actions.tsx`: fino a tre icone con tooltip, oltre le prime due e un menu "⋯" con le altre (i dialog stanno fuori dal menu, con lo stato nella riga); gli anni si scelgono con `components/year-select.tsx`. Pagine server che chiamano l'API da `lib/api.ts`; il browser non raggiunge mai l'API direttamente.

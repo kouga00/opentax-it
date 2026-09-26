@@ -2,12 +2,17 @@ import type { InvoiceStatus } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
+/**
+ * The invoice is issued only when SDI delivers it (Consegnata) or makes it available to the customer (Messa a
+ * disposizione, MC); a rejection means it was never issued (Spec. 1.9.1 §1.6). Before sending it is numbered with
+ * its XML ready: "Da inviare".
+ */
 export const STATUS_LABELS: Record<InvoiceStatus, string> = {
   DRAFT: 'Bozza',
-  ISSUED: 'Emessa',
-  SENT: 'Inviata a SDI',
+  ISSUED: 'Da inviare',
+  SENT: 'Inviata allo SDI',
   DELIVERED: 'Consegnata',
-  NOT_DELIVERED: 'Non consegnata',
+  NOT_DELIVERED: 'Messa a disposizione',
   REJECTED: 'Scartata',
   CANCELLED: 'Annullata',
 };
@@ -26,6 +31,8 @@ const STATUS_CLASSES: Record<InvoiceStatus, string> = {
   CANCELLED: 'bg-muted text-muted-foreground line-through',
 };
 
-export function InvoiceStatusBadge({ status, className }: { status: InvoiceStatus; className?: string }) {
+/** Imported invoices were issued and sent with another tool: shown as such instead of "Da inviare". */
+export function InvoiceStatusBadge({ status, imported, className }: { status: InvoiceStatus; imported?: boolean; className?: string }) {
+  if (imported && status === 'ISSUED') return <Badge variant="outline" className={cn('border-transparent bg-muted text-muted-foreground', className)}>Importata</Badge>;
   return <Badge variant="outline" className={cn(STATUS_CLASSES[status], status !== 'DRAFT' && 'border-transparent', className)}>{STATUS_LABELS[status]}</Badge>;
 }

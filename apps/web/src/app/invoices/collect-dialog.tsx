@@ -1,7 +1,6 @@
 'use client';
 
 import { useActionState, useEffect, useState } from 'react';
-import { Banknote } from 'lucide-react';
 import { addPayment, getInvoiceCollection, type ActionState } from '@/lib/actions';
 import { formatMoney } from '@/lib/format';
 import type { Invoice, InvoiceCollection } from '@/lib/types';
@@ -12,25 +11,24 @@ import { Input } from '@/components/ui/input';
 import { Field } from '@/components/field';
 import { ErrorAlert } from '@/components/error-alert';
 import { useExchangeRate } from '@/components/exchange-rate';
-import { RowAction } from '@/components/row-actions';
 
 type CollectInvoice = Pick<Invoice, 'id' | 'type' | 'number'>;
 
 /** Today in Italy, as YYYY-MM-DD: collections are dated in the taxpayer's calendar, not in UTC. */
 const todayInItaly = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome' }).format(new Date());
 
+export const collectLabel = (invoice: Pick<Invoice, 'type'>) => (invoice.type === 'TD04' ? 'Registra rimborso' : 'Segna come incassata');
+
 /**
- * Row action of the invoice list that records a collection in a dialog, with today's date and the amount
- * still to collect. On a credit note it records the refund, as a negative amount.
+ * Dialog of the invoice list that records a collection, with today's date and the amount still to collect. On a
+ * credit note it records the refund, as a negative amount. Opened from the row menu, which holds its state.
  */
-export function CollectDialog({ invoice }: { invoice: CollectInvoice }) {
-  const [open, setOpen] = useState(false);
+export function CollectDialog({ invoice, open, onOpenChange }: { invoice: CollectInvoice; open: boolean; onOpenChange: (open: boolean) => void }) {
   const refund = invoice.type === 'TD04';
-  const label = refund ? 'Registra rimborso' : 'Segna come incassata';
+  const label = collectLabel(invoice);
   return (
     <>
-      <RowAction label={label} onClick={() => setOpen(true)}><Banknote /></RowAction>
-      <Dialog open={open} onOpenChange={setOpen}>
+      <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>{label} · {invoice.number}</DialogTitle>
@@ -40,7 +38,7 @@ export function CollectDialog({ invoice }: { invoice: CollectInvoice }) {
                 : "Principio di cassa: l'incasso concorre al reddito dell'anno in cui avviene (L. 190/2014 art. 1 c. 64) e conta per le soglie di 85.000 e 100.000 € (c. 54 e 71)."}
             </DialogDescription>
           </DialogHeader>
-          {open && <CollectForm invoice={invoice} refund={refund} onDone={() => setOpen(false)} />}
+          {open && <CollectForm invoice={invoice} refund={refund} onDone={() => onOpenChange(false)} />}
         </DialogContent>
       </Dialog>
     </>

@@ -37,7 +37,7 @@ export class SdiTransmissionsService {
   async send(tenantId: string, invoiceId: string): Promise<SdiTransmission> {
     const inv = await this.invoices.get(tenantId, invoiceId);
     if (this.invoiceStatus.isImported(inv)) throw new BadRequestException('Fattura importata: è stata inviata allo SDI con un altro strumento.');
-    if (inv.status !== 'ISSUED') throw new BadRequestException('Si possono inviare solo le fatture emesse e non ancora inviate.');
+    if (inv.status !== 'ISSUED') throw new BadRequestException('Si possono inviare solo le fatture numerate e non ancora inviate.');
     if (!inv.xmlPath || !inv.xmlFileName) throw new UnprocessableEntityException(`Invoice ${invoiceId} is issued but has no XML file stored`);
     // Invoices to the public administration must be signed (fatturapa.gov.it, "Firmare la FatturaPA"): not supported yet.
     if (inv.customer.kind === 'IT_PA') throw new BadRequestException('Le fatture verso la PA vanno firmate: la firma non è ancora supportata.');

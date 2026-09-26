@@ -98,7 +98,7 @@ export default async function DashboardPage() {
   // Document totals: the recharged stamp duty is part of the fee (AdE ruling 428/2022).
   const revenue = issued.reduce((s, i) => s + (i.type === 'TD04' ? -1 : 1) * Number(i.total), 0);
   const drafts = all.filter((i) => i.status === 'DRAFT').length;
-  const toSend = issued.filter((i) => i.status === 'ISSUED').length;
+  const toSend = issued.filter((i) => i.status === 'ISSUED' && !i.imported).length;
   const stamps = issued.filter((i) => i.virtualStamp).length;
   const collected = taxes?.collectedRevenue ?? 0;
   const upcoming = (deadlines ?? []).filter((d) => d.date >= today).slice(0, 6);
@@ -129,7 +129,7 @@ export default async function DashboardPage() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile label="Prossima scadenza" value={next.value} hint={sameDay > 0 ? `${next.hint} · altre ${sameDay} lo stesso giorno` : next.hint} />
         <StatTile label="Documenti emessi" value={String(issued.length)} hint={`${drafts} bozze`} />
-        <StatTile label="Da inviare allo SDI" value={String(toSend)} hint="Emesse ma non ancora trasmesse" />
+        <StatTile label="Da inviare allo SDI" value={String(toSend)} hint="Numerate ma non ancora trasmesse" />
         <StatTile label="Bolli virtuali" value={formatMoney(stamps * 2)} hint={`${stamps} fatture con bollo da 2 €`} />
       </div>
 
@@ -210,7 +210,7 @@ export default async function DashboardPage() {
                   <TableCell>{formatDate(i.date)}</TableCell>
                   <TableCell>{customerLabel(i.customer)}</TableCell>
                   <TableCell className="text-right font-mono">{formatMoney(i.total, i.currency)}</TableCell>
-                  <TableCell><InvoiceStatusBadge status={i.status} /></TableCell>
+                  <TableCell><InvoiceStatusBadge status={i.status} imported={i.imported} /></TableCell>
                 </TableRow>
               ))}
               {all.length === 0 && <TableRow><TableCell colSpan={5} className="text-center text-muted-foreground">Nessun documento nel {year}.</TableCell></TableRow>}

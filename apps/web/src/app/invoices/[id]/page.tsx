@@ -12,7 +12,8 @@ import { paymentMethodLabel, usesBankAccount } from '@/lib/payment-methods';
 import { TYPE_LABELS } from '../page';
 import { IssueForm } from './issue-form';
 import { Payments } from './payments';
-import { SendToSdi } from './send-to-sdi';
+import { SendButton } from '../send-dialog';
+import { canSendToSdi } from '../row-actions';
 import { SyncReceipts } from './sync-receipts';
 import type { SdiTransmissionStatus } from '@/lib/types';
 
@@ -65,7 +66,7 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
       <div>
         <div className="flex items-center gap-3">
           <h1 className="text-2xl font-semibold">{TYPE_LABELS[inv.type]} {inv.number || '(bozza)'}</h1>
-          <InvoiceStatusBadge status={inv.status} />
+          <InvoiceStatusBadge status={inv.status} imported={inv.imported} />
         </div>
         <p className="text-sm text-muted-foreground">{formatDate(inv.date)} · {customerLabel(inv.customer)}</p>
       </div>
@@ -150,8 +151,8 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
                 {pec?.lastReceiptsSyncError && <p className="text-xs text-destructive">Ultimo controllo non riuscito: {pec.lastReceiptsSyncError}</p>}
               </div>
             )}
-            {inv.status === 'ISSUED' && inv.customer.kind !== 'IT_PA' && (pecReady
-              ? <SendToSdi id={inv.id} recipient={pec!.recipient} />
+            {canSendToSdi(inv) && (pecReady
+              ? <SendButton invoice={inv} recipient={pec!.recipient} />
               : <p className="text-sm text-muted-foreground">Per inviare configura la casella PEC in <Link href="/setup?tab=pec" className="underline">Impostazioni</Link>.</p>)}
           </CardContent>
         </Card>
@@ -160,8 +161,8 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
       {isDraft ? (
         <Card>
           <CardHeader>
-            <CardTitle>Emetti</CardTitle>
-            <CardDescription>Assegna il numero progressivo, genera l&apos;XML FatturaPA e lo salva. Dopo l&apos;emissione il documento non è più modificabile.</CardDescription>
+            <CardTitle>Numera e genera l&apos;XML</CardTitle>
+            <CardDescription>Assegna il numero progressivo e genera l&apos;XML FatturaPA, pronto per l&apos;invio allo SDI. Dopo il documento non è più modificabile. La fattura è emessa quando lo SDI la consegna al cliente o gliela mette a disposizione; uno scarto significa che non è mai stata emessa.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-sm text-muted-foreground">Modalità: {paymentMethodLabel(method)} · Scadenza: {chosenTerms ? `${chosenTerms.name} (${chosenTerms.days} gg)` : 'nessuna'}{bankUsed && <> · Banca: {chosenBank ? chosenBank.name : 'nessuna'}</>}. La modalità si cambia modificando la bozza; scadenza{bankUsed ? ' e IBAN' : ''} anche qui sotto prima di emettere.</p>

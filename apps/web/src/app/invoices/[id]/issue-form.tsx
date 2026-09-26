@@ -38,7 +38,7 @@ export function IssueForm({ id, defaultDueDate, defaultIban, showIban, threshold
         </Alert>
       )}
       <div className="flex flex-wrap gap-2">
-        <Button type="submit" disabled={pending}>{pending ? 'Emissione…' : 'Emetti fattura'}</Button>
+        <Button type="submit" disabled={pending}>{pending ? 'In corso…' : 'Numera e genera XML'}</Button>
         {/* Same form (nested forms are invalid): formAction sends the draft id to the delete action instead. */}
         <Button type="submit" variant="destructive" formAction={deleteInvoice} formNoValidate disabled={pending} onClick={(e) => { if (!window.confirm('Eliminare la bozza?')) e.preventDefault(); }}>
           Elimina bozza
