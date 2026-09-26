@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { api, fetchOrNull, formatDate, type SourceCitation } from '@/lib/api';
-import { RULE_LABELS, ruleValueLabel, SOURCE_KIND_LABELS } from '@/lib/sources';
+import { RULE_LABELS, ruleHref, ruleValueLabel, SOURCE_KIND_LABELS } from '@/lib/sources';
 
 const FORMAT_LABELS = { pdf: 'PDF', html: 'testo della pagina', xls: 'foglio XLS' } as const;
 
@@ -15,7 +15,7 @@ function Citation({ c }: { c: SourceCitation }) {
   return (
     <div id={`${c.year}-${c.key}`} className="scroll-mt-4 space-y-2 border-t pt-4 first:border-t-0 first:pt-0">
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <Link href={`/rules?year=${c.year}#${c.key}`} className="font-medium hover:underline">{RULE_LABELS[c.key] ?? c.key}</Link>
+        <Link href={ruleHref(c.year, c.key)} className="font-medium hover:underline">{RULE_LABELS[c.key] ?? c.key}</Link>
         {value && <span className="font-mono text-sm tabular-nums">{value}</span>}
         {!c.main && <Badge variant="outline">fonte aggiuntiva</Badge>}
       </div>

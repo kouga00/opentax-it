@@ -101,6 +101,14 @@ export function byRuleOrder(a: string, b: string): number {
   return (LABEL_ORDER.get(a) ?? Infinity) - (LABEL_ORDER.get(b) ?? Infinity) || a.localeCompare(b);
 }
 
+/** Section of a rule set path: "deadlines.secondAdvance" → "deadlines". */
+export const ruleSection = (path: string) => path.split('.')[0];
+
+/** Link to a rule inside the rules page: the section is chosen in the page, the hash scrolls to the rule. */
+export function ruleHref(year: number, path: string, setId?: string): string {
+  return `/rules?year=${year}${setId ? `&set=${setId}` : ''}&section=${ruleSection(path)}#${path}`;
+}
+
 /** Sections of a rule set, in the order shown. */
 export const RULE_SECTIONS: Array<{ key: string; label: string }> = [
   { key: 'flatRate', label: 'Regime forfettario' },

@@ -11,7 +11,8 @@ import { RevealHashTarget } from '@/components/reveal-hash-target';
 import { YearSelect } from '@/components/year-select';
 import { activateRuleSet, seedRuleSets } from '@/lib/actions';
 import { api, fetchOrNull, formatDate, yearRange, type RuleSetDetail, type RuleSourceRef, type SourceSummary } from '@/lib/api';
-import { byRuleOrder, RULE_LABELS, RULE_SECTIONS, ruleValueLabel } from '@/lib/sources';
+import { byRuleOrder, RULE_LABELS, RULE_SECTIONS, ruleHref, ruleSection, ruleValueLabel } from '@/lib/sources';
+import { SectionSelect } from './section-select';
 
 const STATUS_LABELS: Record<string, string> = { DRAFT: 'Bozza', PROPOSED: 'Proposto', ACTIVE: 'Attivo', SUPERSEDED: 'Superato' };
 
@@ -115,7 +116,7 @@ function Changes({ detail, sources }: { detail: RuleSetDetail; sources: Sources 
               <TableBody>
                 {[...c.values].sort((a, b) => byRuleOrder(a.path, b.path)).map((v) => (
                   <TableRow key={v.path}>
-                    <TableCell className="whitespace-normal"><a href={`#${v.path}`} className="hover:underline">{label(v.path)}</a></TableCell>
+                    <TableCell className="whitespace-normal"><Link href={ruleHref(detail.year, v.path, detail.id)} scroll={false} className="hover:underline">{label(v.path)}</Link></TableCell>
                     <TableCell className="whitespace-normal"><Value path={v.path} value={v.before} /></TableCell>
                     <TableCell className="whitespace-normal"><Value path={v.path} value={v.after} /></TableCell>
                   </TableRow>
@@ -130,7 +131,7 @@ function Changes({ detail, sources }: { detail: RuleSetDetail; sources: Sources 
                 {[...c.sources].sort((a, b) => byRuleOrder(a.key, b.key)).map((s) => (
                   <TableRow key={s.key} className="align-top">
                     <TableCell className="whitespace-normal">
-                      <a href={`#${s.key}`} className="hover:underline">{label(s.key)}</a>
+                      <Link href={ruleHref(detail.year, s.key, detail.id)} scroll={false} className="hover:underline">{label(s.key)}</Link>
                       <span className="mt-1 flex flex-wrap gap-1">{changedParts(s.before, s.after).map((p) => <Badge key={p} variant="secondary">cambia {p}</Badge>)}</span>
                     </TableCell>
                     <TableCell className="max-w-sm whitespace-normal">{s.before ? <Source refKey={s.key} sourceRef={s.before} year={detail.year} sources={sources} /> : <span className="text-muted-foreground">nessuna</span>}</TableCell>
@@ -146,53 +147,85 @@ function Changes({ detail, sources }: { detail: RuleSetDetail; sources: Sources 
   );
 }
 
-function Contents({ detail, sources }: { detail: RuleSetDetail; sources: Sources }) {
-  const sectionOf = (path: string) => path.split('.')[0];
+/** Sections of the set that have rules, in the order of RULE_SECTIONS; unknown sections at the end. */
+function sectionsOf(detail: RuleSetDetail) {
   const known = new Set(RULE_SECTIONS.map((s) => s.key));
-  const sections = [...RULE_SECTIONS, ...[...new Set(detail.fields.map((f) => sectionOf(f.path)))].filter((k) => !known.has(k)).map((key) => ({ key, label: key }))];
-  return sections.map((section) => {
-    const fields = detail.fields.filter((f) => sectionOf(f.path) === section.key).sort((a, b) => byRuleOrder(a.path, b.path));
-    const documents = detail.documents.filter((d) => sectionOf(d.key) === section.key).sort((a, b) => byRuleOrder(a.key, b.key));
-    if (fields.length === 0 && documents.length === 0) return null;
-    return (
-      <CollapsibleCard key={section.key} id={section.key} title={section.label} description={`${fields.length + documents.length} ${fields.length + documents.length === 1 ? 'regola' : 'regole'}`}>
+  const keys = [...detail.fields.map((f) => f.path), ...detail.documents.map((d) => d.key)].map(ruleSection);
+  const all = [...RULE_SECTIONS, ...[...new Set(keys)].filter((k) => !known.has(k)).map((key) => ({ key, label: key }))];
+  return all
+    .map((section) => ({
+      ...section,
+      fields: detail.fields.filter((f) => ruleSection(f.path) === section.key).sort((a, b) => byRuleOrder(a.path, b.path)),
+      documents: detail.documents.filter((d) => ruleSection(d.key) === section.key).sort((a, b) => byRuleOrder(a.key, b.key)),
+    }))
+    .filter((section) => section.fields.length + section.documents.length > 0);
+}
+
+const rulesCount = (n: number) => `${n} ${n === 1 ? 'regola' : 'regole'}`;
+
+/** Content of the set, one section at a time: the section is chosen in the select and kept in the URL. */
+function Contents({ detail, sources, section: requested, baseHref }: { detail: RuleSetDetail; sources: Sources; section?: string; baseHref: string }) {
+  const sections = sectionsOf(detail);
+  const section = sections.find((s) => s.key === requested) ?? sections[0];
+  if (!section) return null;
+  const { fields, documents } = section;
+  return (
+    <>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <p className="text-sm">
+          Contenuto di <span className="font-mono">v{detail.version}</span> <Badge variant={detail.status === 'ACTIVE' ? 'default' : 'outline'}>{STATUS_LABELS[detail.status] ?? detail.status}</Badge>
+          {detail.status !== 'ACTIVE' && !detail.comparison && <span className="text-muted-foreground"> · nessun set attivo per il {detail.year} da confrontare</span>}
+        </p>
+        <SectionSelect
+          items={sections.map((s) => ({ value: s.key, label: `${s.label} (${s.fields.length + s.documents.length})` }))}
+          value={section.key}
+          baseHref={baseHref}
+        />
+      </div>
+      <Card id={section.key} className="scroll-mt-4">
+        <CardHeader>
+          <CardTitle>{section.label}</CardTitle>
+          <CardDescription>{rulesCount(fields.length + documents.length)}</CardDescription>
+        </CardHeader>
+        <CardContent>
           <Table>
-            <TableHeader><TableRow><TableHead className="w-1/3">Regola</TableHead><TableHead className="w-1/4">Valore</TableHead><TableHead>Fonte</TableHead></TableRow></TableHeader>
-            <TableBody>
-              {fields.map((f) => (
-                <TableRow key={f.path} id={f.path} className="scroll-mt-4 align-top">
-                  <TableCell className="whitespace-normal">
-                    <span className="font-medium">{label(f.path)}</span>
-                    <span className="block font-mono text-xs text-muted-foreground">{f.path}</span>
-                  </TableCell>
-                  <TableCell className="whitespace-normal"><Value path={f.path} value={f.value} /></TableCell>
-                  <TableCell className="whitespace-normal">
-                    {f.ref && f.refKey ? (
-                      <>
-                        {f.refKey !== f.path && <p className="mb-1 text-xs text-muted-foreground">Fonte della sezione: {label(f.refKey)}</p>}
-                        <Source refKey={f.refKey} sourceRef={f.ref} year={detail.year} sources={sources} />
-                      </>
-                    ) : (
-                      <span className="text-sm text-destructive">Nessuna fonte</span>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-              {documents.map((d) => (
-                <TableRow key={d.key} id={d.key} className="scroll-mt-4 align-top">
-                  <TableCell className="whitespace-normal">
-                    <span className="font-medium">{label(d.key)}</span>
-                    <span className="block font-mono text-xs text-muted-foreground">{d.key}</span>
-                  </TableCell>
-                  <TableCell className="text-sm text-muted-foreground">riferimento</TableCell>
-                  <TableCell className="whitespace-normal"><Source refKey={d.key} sourceRef={d.ref} year={detail.year} sources={sources} /></TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-      </CollapsibleCard>
-    );
-  });
+          <TableHeader><TableRow><TableHead className="w-1/3">Regola</TableHead><TableHead className="w-1/4">Valore</TableHead><TableHead>Fonte</TableHead></TableRow></TableHeader>
+          <TableBody>
+            {fields.map((f) => (
+              <TableRow key={f.path} id={f.path} className="scroll-mt-4 align-top">
+                <TableCell className="whitespace-normal">
+                  <span className="font-medium">{label(f.path)}</span>
+                  <span className="block font-mono text-xs text-muted-foreground">{f.path}</span>
+                </TableCell>
+                <TableCell className="whitespace-normal"><Value path={f.path} value={f.value} /></TableCell>
+                <TableCell className="whitespace-normal">
+                  {f.ref && f.refKey ? (
+                    <>
+                      {f.refKey !== f.path && <p className="mb-1 text-xs text-muted-foreground">Fonte della sezione: {label(f.refKey)}</p>}
+                      <Source refKey={f.refKey} sourceRef={f.ref} year={detail.year} sources={sources} />
+                    </>
+                  ) : (
+                    <span className="text-sm text-destructive">Nessuna fonte</span>
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+            {documents.map((d) => (
+              <TableRow key={d.key} id={d.key} className="scroll-mt-4 align-top">
+                <TableCell className="whitespace-normal">
+                  <span className="font-medium">{label(d.key)}</span>
+                  <span className="block font-mono text-xs text-muted-foreground">{d.key}</span>
+                </TableCell>
+                <TableCell className="text-sm text-muted-foreground">riferimento</TableCell>
+                <TableCell className="whitespace-normal"><Source refKey={d.key} sourceRef={d.ref} year={detail.year} sources={sources} /></TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        </CardContent>
+      </Card>
+    </>
+  );
 }
 
 export default async function RulesPage({ searchParams }: PageProps<'/rules'>) {
@@ -263,12 +296,8 @@ export default async function RulesPage({ searchParams }: PageProps<'/rules'>) {
 
       {detail && (
         <>
-          <p className="text-sm">
-            Contenuto di <span className="font-mono">v{detail.version}</span> <Badge variant={detail.status === 'ACTIVE' ? 'default' : 'outline'}>{STATUS_LABELS[detail.status] ?? detail.status}</Badge>
-            {detail.status !== 'ACTIVE' && !detail.comparison && <span className="text-muted-foreground"> · nessun set attivo per il {year} da confrontare</span>}
-          </p>
+          <Contents detail={detail} sources={sources} section={typeof params.section === 'string' ? params.section : undefined} baseHref={`/rules?year=${year}&set=${detail.id}`} />
           {detail.comparison && <Changes detail={detail} sources={sources} />}
-          <Contents detail={detail} sources={sources} />
           <RevealHashTarget />
         </>
       )}
