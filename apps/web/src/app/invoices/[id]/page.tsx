@@ -121,7 +121,7 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
             )}
             {inv.status === 'ISSUED' && inv.customer.kind !== 'IT_PA' && (pecReady
               ? <SendToSdi id={inv.id} recipient={pec!.recipient} />
-              : <p className="text-sm text-muted-foreground">Per inviare configura la casella PEC in <Link href="/setup#pec" className="underline">Impostazioni</Link>.</p>)}
+              : <p className="text-sm text-muted-foreground">Per inviare configura la casella PEC in <Link href="/setup?tab=pec" className="underline">Impostazioni</Link>.</p>)}
           </CardContent>
         </Card>
       )}

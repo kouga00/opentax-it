@@ -477,6 +477,7 @@ export interface PecProvider {
   imapPort: number;
   usernameHint?: string;
   passwordHint?: string;
+  clientGuideUrl: string;
   sourceUrl: string;
   verifiedOn: string;
 }
@@ -497,14 +498,15 @@ export interface PecSettings {
   encryptionConfigured: boolean;
 }
 
-export interface ConnectionCheck {
-  ok: boolean;
-  message: string;
-}
+export type PecTestStep = 'SMTP_CONNECT' | 'SMTP_LOGIN' | 'IMAP_CONNECT' | 'IMAP_LOGIN';
+export type PecTestStepStatus = 'RUNNING' | 'OK' | 'FAILED' | 'SKIPPED';
 
-export interface PecConnectionTest {
-  smtp: ConnectionCheck;
-  imap: ConnectionCheck;
+/** Data of the Server-Sent Events of the PEC test: "step" events carry step and status, the "done" event carries ok. */
+export interface PecTestEventData {
+  step?: PecTestStep;
+  status?: PecTestStepStatus;
+  ok?: boolean;
+  message?: string;
 }
 
 export type SdiTransmissionStatus = 'PENDING' | 'SENT' | 'ACCEPTED_BY_PEC' | 'DELIVERED_TO_SDI' | 'SDI_DELIVERED' | 'SDI_NOT_DELIVERED' | 'SDI_REJECTED' | 'ERROR';

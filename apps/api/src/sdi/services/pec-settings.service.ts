@@ -1,11 +1,11 @@
-import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, HttpException, Injectable, NotFoundException } from '@nestjs/common';
 import { OTHER_PEC_PROVIDER, pecProvider, SDI_FIRST_PEC_ADDRESS } from '@opentax-it/fatturapa';
 import { decryptSecret, encryptionConfigured, encryptSecret } from '../../common/secret-cipher.js';
 import type { TenantProfile } from '../../generated/prisma/client.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
 import type { SavePecSettingsDto } from '../dto/request/save-pec-settings.dto.js';
-import type { ConnectionCheck } from '../types/connection-check.js';
 import type { PecConnection } from '../types/pec-connection.js';
+import type { PecTestEvent } from '../types/pec-test-event.js';
 import type { PecSettings } from '../types/pec-settings.js';
 import { PecMailerService } from './pec-mailer.service.js';
 
@@ -83,10 +83,26 @@ export class PecSettingsService {
     return { address: s.address, username: s.username ?? s.address, password, smtpHost: s.smtpHost, smtpPort: s.smtpPort, imapHost: s.imapHost, imapPort: s.imapPort };
   }
 
-  /** Logs in to both servers without sending anything. */
-  async test(tenantId: string): Promise<{ smtp: ConnectionCheck; imap: ConnectionCheck }> {
-    const c = await this.connection(tenantId);
-    const [smtp, imap] = await Promise.all([this.mailer.checkSmtp(c), this.mailer.checkImap(c)]);
-    return { smtp, imap };
+  /**
+   * Logs in to the SMTP and IMAP servers without sending anything, yielding each step as it happens. Incomplete
+   * settings end the test with their message instead of an HTTP error, since the page is already reading the stream.
+   */
+  async *test(tenantId: string): AsyncGenerator<PecTestEvent> {
+    let c: PecConnection;
+    try {
+      c = await this.connection(tenantId);
+    } catch (err) {
+      if (!(err instanceof HttpException)) throw err;
+      yield { kind: 'done', ok: false, message: err.message };
+      return;
+    }
+    let ok = true;
+    for (const steps of [this.mailer.testSmtp(c), this.mailer.testImap(c)]) {
+      for await (const event of steps) {
+        if (event.kind === 'step' && event.status === 'FAILED') ok = false;
+        yield event;
+      }
+    }
+    yield ok ? { kind: 'done', ok, message: 'La casella PEC è pronta per l\'invio allo SDI.' } : { kind: 'done', ok };
   }
 }

@@ -10,7 +10,16 @@ function setup(profile: Record<string, unknown> = {}) {
   let stored: Record<string, unknown> = { tenantId: 't1', pecProvider: null, pecAddress: null, pecUsername: null, pecSmtpHost: null, pecSmtpPort: null, pecImapHost: null, pecImapPort: null, pecPasswordEnc: null, sdiPecAssigned: null, ...profile };
   const update = vi.fn().mockImplementation(({ data }: { data: object }) => { stored = { ...stored, ...data }; return Promise.resolve(stored); });
   const prisma = { tenantProfile: { findUnique: vi.fn().mockImplementation(() => Promise.resolve(stored)), update } } as unknown as PrismaService;
-  const mailer = { checkSmtp: vi.fn().mockResolvedValue({ ok: true, message: 'ok' }), checkImap: vi.fn().mockResolvedValue({ ok: true, message: 'ok' }) } as unknown as PecMailerService;
+  const mailer = {
+    testSmtp: vi.fn(async function* () {
+      yield { kind: 'step', step: 'SMTP_CONNECT', status: 'OK' };
+      yield { kind: 'step', step: 'SMTP_LOGIN', status: 'FAILED', message: 'rifiutato' };
+    }),
+    testImap: vi.fn(async function* () {
+      yield { kind: 'step', step: 'IMAP_CONNECT', status: 'OK' };
+      yield { kind: 'step', step: 'IMAP_LOGIN', status: 'OK' };
+    }),
+  } as unknown as PecMailerService;
   return { service: new PecSettingsService(prisma, mailer), update, stored: () => stored };
 }
 
@@ -58,5 +67,20 @@ describe('PecSettingsService', () => {
     const enc = encryptSecret('segreta');
     process.env.APP_ENCRYPTION_KEY = randomBytes(32).toString('base64');
     await expect(setup({ pecProvider: 'aruba', pecAddress: 'mario@pec.it', pecPasswordEnc: enc }).service.connection('t1')).rejects.toThrow('di nuovo');
+  });
+
+  it('streams the SMTP steps, then the IMAP ones, then the overall result', async () => {
+    const { service } = setup({ pecProvider: 'aruba', pecAddress: 'mario@pec.it', pecPasswordEnc: encryptSecret('segreta') });
+    const events = [];
+    for await (const e of service.test('t1')) events.push(e);
+    expect(events.map((e) => (e.kind === 'step' ? `${e.step}:${e.status}` : `done:${e.ok}`))).toEqual([
+      'SMTP_CONNECT:OK', 'SMTP_LOGIN:FAILED', 'IMAP_CONNECT:OK', 'IMAP_LOGIN:OK', 'done:false',
+    ]);
+  });
+
+  it('ends the stream with the reason when the mailbox is not configured, instead of an HTTP error', async () => {
+    const events = [];
+    for await (const e of setup().service.test('t1')) events.push(e);
+    expect(events).toEqual([{ kind: 'done', ok: false, message: expect.stringContaining('Configura') }]);
   });
 });

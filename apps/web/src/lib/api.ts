@@ -1,6 +1,6 @@
 import 'server-only';
 import { cookies } from 'next/headers';
-import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, CollectionPayment, InvoiceCollection, InvoiceDetail, PecConnectionTest, PecProvider, PecSettings, SdiTransmission, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
+import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, CollectionPayment, InvoiceCollection, InvoiceDetail, PecProvider, PecSettings, SdiTransmission, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
 
 export * from './types';
 export * from './format';
@@ -64,7 +64,6 @@ export const api = {
   pecProviders: () => request<PecProvider[]>('/sdi/pec-providers'),
   pecSettings: () => tenantRequest<PecSettings>('/sdi/pec-settings'),
   savePecSettings: (data: unknown) => tenantRequest<PecSettings>('/sdi/pec-settings', { method: 'PUT', body: JSON.stringify(data) }),
-  testPecSettings: () => tenantRequest<PecConnectionTest>('/sdi/pec-settings/test', { method: 'POST' }),
   sdiTransmissions: (invoiceId: string) => tenantRequest<SdiTransmission[]>(`/invoices/${seg(invoiceId)}/sdi-transmissions`),
   sendToSdi: (invoiceId: string) => tenantRequest<SdiTransmission>(`/invoices/${seg(invoiceId)}/sdi-transmissions`, { method: 'POST' }),
   paymentTerms: () => tenantRequest<PaymentTerms[]>('/tenants/me/payment-terms'),
@@ -131,6 +130,14 @@ export const api = {
     const res = await fetch(`${API_URL}/invoices/${seg(id)}/pdf`, { headers: tenantId ? { 'x-tenant-id': tenantId } : {}, cache: 'no-store' });
     if (!res.ok) throw new ApiError(res.status, 'PDF non disponibile');
     return { fileName: res.headers.get('content-disposition')?.match(/filename="([^"]+)"/)?.[1] ?? 'fattura.pdf', content: await res.arrayBuffer() };
+  },
+  /** Server-Sent Events of the PEC mailbox test, passed through as they arrive; `signal` stops the test when the page leaves. */
+  pecTestStream: async (signal: AbortSignal) => {
+    const tenantId = await currentTenantId();
+    if (!tenantId) throw new ApiError(400, 'Nessun tenant selezionato');
+    const res = await fetch(`${API_URL}/sdi/pec-settings/test`, { headers: { 'x-tenant-id': tenantId, accept: 'text/event-stream' }, cache: 'no-store', signal });
+    if (!res.ok || !res.body) throw new ApiError(res.status, 'Prova della connessione non disponibile');
+    return res.body;
   },
   sources: () => request<SourceSummary[]>('/sources'),
   source: (id: string) => request<SourceDetail>(`/sources/${seg(id)}`),

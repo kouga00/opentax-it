@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { api, ApiError, TENANT_COOKIE } from './api';
-import type { ConnectionCheck, ImportFile, ImportPreviewRow, ImportResult, InvoiceCollection } from './types';
+import type { ImportFile, ImportPreviewRow, ImportResult, InvoiceCollection } from './types';
 
 export type ActionState = { error?: string } | undefined;
 
@@ -434,16 +434,6 @@ export async function savePecSettings(_prev: ActionState, formData: FormData): P
   }
   revalidatePath('/setup');
   return undefined;
-}
-
-export type PecTestState = { error?: string; smtp?: ConnectionCheck; imap?: ConnectionCheck } | undefined;
-
-export async function testPecSettings(): Promise<PecTestState> {
-  try {
-    return await api.testPecSettings();
-  } catch (e) {
-    return { error: errorMessage(e) };
-  }
 }
 
 export async function sendToSdi(_prev: ActionState, formData: FormData): Promise<ActionState> {

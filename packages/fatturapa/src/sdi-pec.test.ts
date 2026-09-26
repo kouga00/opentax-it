@@ -12,6 +12,7 @@ describe('PEC providers', () => {
     for (const p of PEC_PROVIDERS) {
       expect([p.smtpPort, p.imapPort]).toEqual([465, 993]);
       expect(p.sourceUrl).toMatch(/^https:\/\//);
+      expect(p.clientGuideUrl).toMatch(/^https:\/\//);
       expect(p.verifiedOn).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     }
   });

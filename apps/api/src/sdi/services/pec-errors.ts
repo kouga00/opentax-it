@@ -1,10 +1,18 @@
+import type { ConnectionStep } from '../types/connection-check.js';
+import type { PecServer } from '../types/pec-server.js';
+
+const isAuthError = (e: { code?: string; authenticationFailed?: boolean }) => Boolean(e.authenticationFailed || e.code === 'EAUTH' || e.code === 'ENOAUTH');
+
+/** Step at which a server check failed: the login when the server rejected the credentials, otherwise the connection. */
+export const pecErrorStep = (err: unknown): ConnectionStep => (isAuthError((err ?? {}) as { code?: string }) ? 'LOGIN' : 'CONNECT');
+
 /**
  * Turns an SMTP (nodemailer) or IMAP (imapflow) error into a message for the user. The library message is not
  * shown as it is: it can carry server responses and internal details.
  */
-export function pecErrorMessage(err: unknown, server: 'SMTP' | 'IMAP'): string {
+export function pecErrorMessage(err: unknown, server: PecServer): string {
   const e = (err ?? {}) as { code?: string; authenticationFailed?: boolean; responseCode?: number };
-  if (e.authenticationFailed || e.code === 'EAUTH' || e.code === 'ENOAUTH') {
+  if (isAuthError(e)) {
     return `Accesso al server ${server} rifiutato: controlla nome utente e password della casella PEC.`;
   }
   if (e.code === 'EDNS' || e.code === 'ENOTFOUND' || e.code === 'EAI_AGAIN') return `Server ${server} non trovato: controlla il nome del server.`;

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { pecErrorMessage } from './pec-errors.js';
+import { pecErrorMessage, pecErrorStep } from './pec-errors.js';
 
 describe('pecErrorMessage', () => {
   it('explains authentication failures from nodemailer and imapflow', () => {
@@ -15,5 +15,12 @@ describe('pecErrorMessage', () => {
   it('points to the server name or port on network errors', () => {
     expect(pecErrorMessage({ code: 'EDNS' }, 'SMTP')).toContain('non trovato');
     expect(pecErrorMessage({ code: 'ETIMEDOUT' }, 'IMAP')).toContain('non risponde');
+  });
+
+  it('tells whether the connection or the login failed', () => {
+    expect(pecErrorStep({ code: 'EAUTH' })).toBe('LOGIN');
+    expect(pecErrorStep({ authenticationFailed: true })).toBe('LOGIN');
+    expect(pecErrorStep({ code: 'ETIMEDOUT' })).toBe('CONNECT');
+    expect(pecErrorStep(undefined)).toBe('CONNECT');
   });
 });
