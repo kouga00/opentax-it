@@ -7,11 +7,16 @@ const at = new Date('2026-09-26T10:05:00Z');
 
 describe('sdiReceiptTransition (Spec. 1.9.1 §1.5.7)', () => {
   it('RC delivers, MC makes available, NS rejects with the error codes', () => {
-    expect(sdiReceiptTransition(receipt('RC'))).toEqual({ transmission: { status: 'SDI_DELIVERED', sdiId: '111' }, invoice: 'DELIVERED' });
-    expect(sdiReceiptTransition(receipt('MC'))).toEqual({ transmission: { status: 'SDI_NOT_DELIVERED', sdiId: '111' }, invoice: 'NOT_DELIVERED' });
-    expect(sdiReceiptTransition(receipt('NS', [{ code: '00404', description: 'Fattura duplicata' }]))).toEqual({
+    expect(sdiReceiptTransition({ status: 'SENT' }, receipt('RC'))).toEqual({ transmission: { status: 'SDI_DELIVERED', sdiId: '111' }, invoice: 'DELIVERED' });
+    expect(sdiReceiptTransition({ status: 'SENT' }, receipt('MC'))).toEqual({ transmission: { status: 'SDI_NOT_DELIVERED', sdiId: '111' }, invoice: 'NOT_DELIVERED' });
+    expect(sdiReceiptTransition({ status: 'SENT' }, receipt('NS', [{ code: '00404', description: 'Fattura duplicata' }]))).toEqual({
       transmission: { status: 'SDI_REJECTED', sdiId: '111', lastError: '00404 Fattura duplicata' }, invoice: 'REJECTED',
     });
+  });
+
+  it('keeps the first SDI outcome: SDI sends one per file, a second one is only recorded', () => {
+    expect(sdiReceiptTransition({ status: 'SDI_DELIVERED' }, receipt('NS'))).toBeUndefined();
+    expect(sdiReceiptTransition({ status: 'SDI_NOT_DELIVERED' }, receipt('RC'))).toBeUndefined();
   });
 });
 

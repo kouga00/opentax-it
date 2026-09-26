@@ -94,12 +94,16 @@ export default async function DashboardPage() {
     fetchOrNull(() => api.f24s(year)),
   ]);
   const all: Invoice[] = invoices ?? [];
-  const issued = all.filter((i) => i.status !== 'DRAFT' && i.status !== 'CANCELLED');
+  // Numbered documents that may still be issued; rejected ones were never issued and must be sent again.
+  const numbered = all.filter((i) => i.status !== 'DRAFT' && i.status !== 'CANCELLED' && i.status !== 'REJECTED');
+  // Issued for the tax rules (delivered or made available by SDI, or imported): the API decides (`issued`).
+  const issued = all.filter((i) => i.issued);
   // Document totals: the recharged stamp duty is part of the fee (AdE ruling 428/2022).
   const revenue = issued.reduce((s, i) => s + (i.type === 'TD04' ? -1 : 1) * Number(i.total), 0);
   const drafts = all.filter((i) => i.status === 'DRAFT').length;
-  const toSend = issued.filter((i) => i.status === 'ISSUED' && !i.imported).length;
-  const stamps = issued.filter((i) => i.virtualStamp).length;
+  const toSend = numbered.filter((i) => i.status === 'ISSUED' && !i.imported).length;
+  const awaiting = numbered.filter((i) => i.status === 'SENT').length;
+  const stamps = numbered.filter((i) => i.virtualStamp).length;
   const collected = taxes?.collectedRevenue ?? 0;
   const upcoming = (deadlines ?? []).filter((d) => d.date >= today).slice(0, 6);
   const active = ruleSet?.find((r) => r.status === 'ACTIVE');
@@ -128,7 +132,7 @@ export default async function DashboardPage() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile label="Prossima scadenza" value={next.value} hint={sameDay > 0 ? `${next.hint} · altre ${sameDay} lo stesso giorno` : next.hint} />
-        <StatTile label="Documenti emessi" value={String(issued.length)} hint={`${drafts} bozze`} />
+        <StatTile label="Documenti emessi" value={String(issued.length)} hint={`${awaiting} in attesa di esito · ${drafts} bozze`} />
         <StatTile label="Da inviare allo SDI" value={String(toSend)} hint="Numerate ma non ancora trasmesse" />
         <StatTile label="Bolli virtuali" value={formatMoney(stamps * 2)} hint={`${stamps} fatture con bollo da 2 €`} />
       </div>

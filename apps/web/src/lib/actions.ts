@@ -270,19 +270,19 @@ async function importFilesFrom(formData: FormData): Promise<ImportFile[]> {
 }
 
 /** First step of the import: what would happen, without writing anything. */
-export async function previewInvoiceImport(formData: FormData): Promise<{ rows?: ImportPreviewRow[]; error?: string }> {
+export async function previewImport(formData: FormData): Promise<{ rows?: ImportPreviewRow[]; error?: string }> {
   try {
-    return { rows: await api.previewInvoiceImport(await importFilesFrom(formData)) };
+    return { rows: await api.previewImport(await importFilesFrom(formData)) };
   } catch (e) {
     return { error: e instanceof ApiError ? e.message : e instanceof Error ? e.message : 'Errore inatteso' };
   }
 }
 
 /** Second step: the same files again, with the preview rows chosen by the user in "selected". */
-export async function importInvoiceFiles(formData: FormData): Promise<{ results?: ImportResult[]; error?: string }> {
+export async function importDocuments(formData: FormData): Promise<{ results?: ImportResult[]; error?: string }> {
   try {
     const selected = formData.getAll('selected').map(String);
-    const results = await api.importInvoices(await importFilesFrom(formData), selected);
+    const results = await api.importDocuments(await importFilesFrom(formData), selected);
     revalidatePath('/invoices');
     revalidatePath('/customers');
     revalidatePath('/dashboard');

@@ -1,6 +1,8 @@
 import { BadRequestException, ConflictException, Injectable, Logger, NotFoundException, UnprocessableEntityException } from '@nestjs/common';
 import { buildInvoiceXml, invoiceFileName, nextFileSequence, parseInvoiceXml, type FlatRateInvoice } from '@opentax-it/fatturapa';
 import { customerTreatment, thresholdOutlook, type FiscalRuleSet, type ThresholdOutlook } from '@opentax-it/fiscal-rules';
+import { NEVER_ISSUED } from '../../common/invoice-issue.js';
+import { FUTURE_INVOICE_DATE, todayInItaly } from '../../common/italian-date.js';
 import { FiscalRulesService } from '../../fiscal-rules/fiscal-rules.service.js';
 import type { Customer, Invoice, InvoiceLine, TenantProfile } from '../../generated/prisma/client.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
@@ -71,6 +73,11 @@ export class InvoicesService {
     const inv = await this.prisma.invoice.findFirst({ where: { id, tenantId }, include: { lines: { orderBy: { lineNumber: 'asc' } }, customer: true } });
     if (!inv) throw new NotFoundException(`Invoice ${id} not found`);
     return inv;
+  }
+
+  /** The invoice whose SDI file has this name (unique per tenant: Spec. 1.9.1 §1.2.2, error 00002), if any. */
+  findByXmlFileName(tenantId: string, xmlFileName: string): Promise<Invoice | null> {
+    return this.prisma.invoice.findFirst({ where: { tenantId, xmlFileName } });
   }
 
   /** Compute derived amounts and texts from the DTO, the customer and the active rule set. */
@@ -197,7 +204,7 @@ export class InvoicesService {
       this.tenants.getWithProfile(tenantId),
       this.prisma.payment.aggregate({ where: { tenantId, date: { gte: new Date(Date.UTC(year, 0, 1)), lt: new Date(Date.UTC(year + 1, 0, 1)) } }, _sum: { amountEur: true } }),
       this.prisma.invoice.findMany({
-        where: { tenantId, status: { notIn: ['DRAFT', 'CANCELLED'] }, type: { not: 'TD04' } },
+        where: { tenantId, status: { notIn: NEVER_ISSUED }, type: { not: 'TD04' } },
         select: { total: true, exchangeRate: true, payments: { select: { amountEur: true } } },
       }),
       invoiceId ? this.get(tenantId, invoiceId) : Promise.resolve(null),
@@ -223,8 +230,7 @@ export class InvoicesService {
       throw new BadRequestException('Le fatture verso la pubblica amministrazione vanno firmate con un certificato di firma qualificata (CAdES o XAdES): la firma non è ancora supportata, emetti questa fattura con un altro strumento');
     }
     // SDI rejects an invoice dated after its receipt (error 00403): the date must not be in the future.
-    const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome' }).format(new Date());
-    if (existing.date.toISOString().slice(0, 10) > today) throw new BadRequestException('The invoice date cannot be in the future');
+    if (existing.date.toISOString().slice(0, 10) > todayInItaly()) throw new BadRequestException(FUTURE_INVOICE_DATE);
     if (!dto?.confirmThresholds) {
       const t = await this.thresholds(tenantId, id);
       const eur = (n: number | null) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', useGrouping: 'always' }).format(n ?? 0);

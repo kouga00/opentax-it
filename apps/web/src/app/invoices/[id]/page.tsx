@@ -151,6 +151,9 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
                 {pec?.lastReceiptsSyncError && <p className="text-xs text-destructive">Ultimo controllo non riuscito: {pec.lastReceiptsSyncError}</p>}
               </div>
             )}
+            {inv.status === 'ISSUED' && (
+              <p className="text-xs text-muted-foreground">Inviata con un altro strumento, ad esempio dal portale Fatture e Corrispettivi? <Link href="/invoices/import" className="underline">Carica la ricevuta SDI</Link> per registrarne l&apos;esito.</p>
+            )}
             {canSendToSdi(inv) && (pecReady
               ? <SendButton invoice={inv} recipient={pec!.recipient} />
               : <p className="text-sm text-muted-foreground">Per inviare configura la casella PEC in <Link href="/setup?tab=pec" className="underline">Impostazioni</Link>.</p>)}

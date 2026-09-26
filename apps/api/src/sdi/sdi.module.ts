@@ -7,6 +7,7 @@ import { PecConnectionTestService } from './services/pec-connection-test.service
 import { PecImapService } from './services/pec-imap.service.js';
 import { PecSettingsService } from './services/pec-settings.service.js';
 import { PecSmtpService } from './services/pec-smtp.service.js';
+import { SdiReceiptsImportService } from './services/sdi-receipts-import.service.js';
 import { SdiReceiptsSyncService } from './services/sdi-receipts-sync.service.js';
 import { SdiReceiptsScheduler } from './services/sdi-receipts.scheduler.js';
 import { SdiReceiptsService } from './services/sdi-receipts.service.js';
@@ -21,7 +22,8 @@ import { SdiTransmissionsService } from './services/sdi-transmissions.service.js
   controllers: [PecSettingsController, SdiTransmissionsController, SdiReceiptsController],
   providers: [
     PecSettingsService, PecConnectionTestService, PecSmtpService, PecImapService,
-    SdiTransmissionsService, SdiReceiptsService, SdiReceiptsSyncService, SdiReceiptsScheduler,
+    SdiTransmissionsService, SdiReceiptsService, SdiReceiptsSyncService, SdiReceiptsScheduler, SdiReceiptsImportService,
   ],
+  exports: [SdiReceiptsImportService],
 })
 export class SdiModule {}

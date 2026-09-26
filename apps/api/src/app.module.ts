@@ -7,6 +7,7 @@ import { CustomersModule } from './customers/customers.module.js';
 import { ExchangeRatesModule } from './exchange-rates/exchange-rates.module.js';
 import { F24Module } from './f24/f24.module.js';
 import { FiscalRulesModule } from './fiscal-rules/fiscal-rules.module.js';
+import { ImportsModule } from './imports/imports.module.js';
 import { InvoicesModule } from './invoices/invoices.module.js';
 import { PaymentsModule } from './payments/payments.module.js';
 import { TaxCreditsModule } from './tax-credits/tax-credits.module.js';
@@ -34,6 +35,7 @@ import { TenantsModule } from './tenants/tenants.module.js';
     ExchangeRatesModule,
     SourcesModule,
     SdiModule,
+    ImportsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

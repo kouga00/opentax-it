@@ -31,7 +31,9 @@ const PROVIDER_FAILURES: Partial<Record<PecCertificationType, string>> = {
   'rilevazione-virus': 'Il gestore PEC ha rilevato un virus nel messaggio, che non è stato consegnato.',
 };
 
-export function sdiReceiptTransition(receipt: SdiReceipt): Transition {
+/** Undefined when the transmission already has an SDI outcome: SDI sends one per file, a second one is only recorded. */
+export function sdiReceiptTransition(current: { status: SdiTransmissionStatus }, receipt: SdiReceipt): Transition | undefined {
+  if (SDI_OUTCOMES.includes(current.status)) return undefined;
   const outcome = SDI_STATUS[receipt.type];
   const errors = receipt.errors.map((e) => `${e.code}${e.description ? ` ${e.description}` : ''}`).join('; ');
   return {

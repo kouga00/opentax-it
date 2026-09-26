@@ -5,7 +5,7 @@ import type { TenantsService } from '../../tenants/tenants.service.js';
 import { InvoicesImportService } from './invoices-import.service.js';
 
 // Each test file carries its own document number, which the mocked parser returns.
-const file = (name: string, number: string) => ({ name, content: Buffer.from(number) });
+const file = (name: string, number: string) => ({ name, fileName: name, xml: number });
 
 vi.mock('@opentax-it/fatturapa', () => ({
   parseInvoiceXml: (xml: string) => ({
@@ -45,10 +45,10 @@ function setup() {
   return { service, storage, tx, invoiceFindFirst, customerFindFirst, getWithProfile };
 }
 
-describe('InvoicesImportService.importFiles', () => {
+describe('InvoicesImportService.importEntries', () => {
   it('stores two files with the same name at different paths, never overwriting', async () => {
     const { service, storage, tx } = setup();
-    const results = await service.importFiles('tenant1', [
+    const results = await service.importEntries('tenant1', [
       file('fattura.xml', '1/2025'),
       file('fattura.xml', '2/2025'),
     ]);
@@ -65,14 +65,14 @@ describe('InvoicesImportService.importFiles', () => {
   it('reports an error when the XML cannot be stored, inside the transaction', async () => {
     const { service, storage } = setup();
     storage.write.mockRejectedValueOnce(Object.assign(new Error('EEXIST: file already exists'), { code: 'EEXIST' }));
-    const [result] = await service.importFiles('tenant1', [file('fattura.xml', '1/2025')]);
+    const [result] = await service.importEntries('tenant1', [file('fattura.xml', '1/2025')]);
     expect(result.status).toBe('ERROR');
     expect(result.message).toBe('Errore imprevisto durante l\'import di questo file'); // no file system details
   });
 
   it('rejects a Numero that is not Basic Latin or longer than 20 characters (String20Type)', async () => {
     const { service, storage } = setup();
-    const results = await service.importFiles('tenant1', [
+    const results = await service.importEntries('tenant1', [
       file('a.xml', '1/2025"\r\nX'),
       file('b.xml', '1/2025-ç'),
       file('c.xml', '123456789012345678901'),
@@ -84,18 +84,17 @@ describe('InvoicesImportService.importFiles', () => {
 });
 
 describe('InvoicesImportService.preview', () => {
-  it('reports new, already present and repeated documents and ignored files, writing nothing', async () => {
+  it('reports new, already present and repeated documents, writing nothing', async () => {
     const { service, storage, tx, invoiceFindFirst, customerFindFirst } = setup();
     invoiceFindFirst.mockImplementation((args: { where: { number?: string } }) =>
       Promise.resolve(args.where.number === '2/2025' ? { id: 'old', number: '2/2025', sequence: 2 } : null));
-    const rows = await service.preview('tenant1', [file('a.xml', '1/2025'), file('b.xml', '2/2025'), file('c.xml', '1/2025'), file('d.pdf', 'x')]);
+    const rows = await service.preview('tenant1', [file('a.xml', '1/2025'), file('b.xml', '2/2025'), file('c.xml', '1/2025')]);
     expect(rows.map((r) => [r.file, r.status, r.number, r.message])).toEqual([
       ['a.xml', 'NEW', '1/2025', undefined],
       ['b.xml', 'DUPLICATE', '2/2025', 'Già presente'],
       ['c.xml', 'DUPLICATE', '1/2025', 'Compare più volte nei file caricati'],
-      ['d.pdf', 'IGNORED', undefined, 'Non è un file XML o ZIP'],
     ]);
-    expect(rows[0]).toMatchObject({ documentType: 'TD01', date: '2025-03-01', customer: 'Acme', total: 100 });
+    expect(rows[0]).toMatchObject({ kind: 'INVOICE', documentType: 'TD01', date: '2025-03-01', customer: 'Acme', total: 100 });
     expect(rows[1].invoiceId).toBe('old');
     expect(tx.invoice.create).not.toHaveBeenCalled();
     expect(storage.write).not.toHaveBeenCalled();
@@ -115,14 +114,5 @@ describe('InvoicesImportService.preview', () => {
     const rows = await service.preview('tenant1', [file('a.xml', '3/2025'), file('b.xml', 'FPA 3/2025')]);
     expect(rows.map((r) => r.status)).toEqual(['NEW', 'ERROR']);
     expect(rows[1].message).toBe('Progressivo 3/2025 già usato dal documento 3/2025 nei file caricati');
-  });
-});
-
-describe('InvoicesImportService.importFiles with a selection', () => {
-  it('imports only the selected entries', async () => {
-    const { service, storage } = setup();
-    const results = await service.importFiles('tenant1', [file('a.xml', '1/2025'), file('b.xml', '2/2025')], ['b.xml']);
-    expect(results.map((r) => [r.file, r.status])).toEqual([['b.xml', 'IMPORTED']]);
-    expect(storage.write).toHaveBeenCalledTimes(1);
   });
 });

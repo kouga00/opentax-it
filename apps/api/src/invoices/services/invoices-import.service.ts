@@ -5,19 +5,20 @@ import type { CustomerKind, DocumentType, VatNature } from '../../generated/pris
 import { PrismaService } from '../../prisma/prisma.service.js';
 import { StorageService } from '../../storage/storage.service.js';
 import { TenantsService } from '../../tenants/tenants.service.js';
-import { extractXmlEntries } from './invoice-archive.js';
-import type { ImportPreviewRow } from '../types/import-preview-row.js';
-import type { ImportResult } from '../types/import-result.js';
-import type { UploadedFile } from '../types/uploaded-file.js';
-import type { XmlEntry } from '../types/xml-entry.js';
+import type { ImportContext } from '../../common/import/import-context.js';
+import { FUTURE_INVOICE_DATE, todayInItaly } from '../../common/italian-date.js';
+import type { ImportHandler } from '../../common/import/import-handler.js';
+import type { ImportPreviewRow } from '../../common/import/import-preview-row.js';
+import type { ImportResult } from '../../common/import/import-result.js';
+import type { XmlEntry } from '../../common/import/xml-entry.js';
 
 /**
- * Imports invoices issued with other software from their FatturaPA XML files, loose or in ZIP
- * archives (see invoice-archive.ts), so that the year's numbering, stamp duty and collections are
- * complete. Imported documents are stored as ISSUED with the original number and the original XML file.
+ * Import handler (strategy of the imports module) for invoices issued with other software, from their FatturaPA
+ * XML files, so that the year's numbering, stamp duty and collections are complete. Imported documents are stored
+ * as ISSUED and imported, with the original number and the original XML file.
  *
  * Two steps on the same files, with nothing kept on the server in between: preview() analyses them
- * without writing, importFiles() writes the selected ones after analysing them again.
+ * without writing, importEntries() writes the selected ones after analysing them again.
  *
  * Checks: the CedentePrestatore must be the tenant (same VAT number); a document with the
  * same year, type and number is skipped; only TD01/TD04/TD05/TD06 are accepted.
@@ -36,12 +37,13 @@ const round2 = (n: number) => Math.round((n + Number.EPSILON) * 100) / 100;
 const ACCEPTED: DocumentType[] = ['TD01', 'TD04', 'TD05', 'TD06'];
 const UNEXPECTED = 'Errore imprevisto durante l\'import di questo file';
 
-/** Imported XML files are stored in this folder: they were issued and sent to SDI with another tool. */
+/** Imported XML files are stored apart from the ones generated here. */
 const IMPORTED_FOLDER = 'imported';
-export const isImportedXmlPath = (xmlPath: string | null): boolean => Boolean(xmlPath?.split('/').includes(IMPORTED_FOLDER));
 
 @Injectable()
-export class InvoicesImportService {
+export class InvoicesImportService implements ImportHandler {
+  readonly kind = 'INVOICE' as const;
+
   private readonly logger = new Logger(InvoicesImportService.name);
 
   constructor(
@@ -50,10 +52,9 @@ export class InvoicesImportService {
     private readonly storage: StorageService,
   ) {}
 
-  /** What an import of these files would do, without writing anything. */
-  async preview(tenantId: string, files: UploadedFile[]): Promise<ImportPreviewRow[]> {
+  /** What importing these invoices would do, without writing anything. */
+  async preview(tenantId: string, entries: XmlEntry[], context?: ImportContext): Promise<ImportPreviewRow[]> {
     const { profile } = await this.tenants.getWithProfile(tenantId);
-    const { entries, ignored } = extractXmlEntries(files);
     const rows: ImportPreviewRow[] = [];
     // Documents met earlier in the same upload, which the import would find already stored.
     const numbers = new Set<string>();
@@ -63,12 +64,13 @@ export class InvoicesImportService {
       try {
         p = parse(e.xml);
       } catch (err) {
-        rows.push({ file: e.name, status: 'ERROR', message: this.errorMessage(e.name, err) });
+        rows.push({ file: e.name, kind: 'INVOICE', status: 'ERROR', message: this.errorMessage(e.name, err) });
         continue;
       }
       // The document data is shown even when a check fails, so that the user can tell which one it is.
       const row: ImportPreviewRow = {
         file: e.name,
+        kind: 'INVOICE',
         status: 'NEW',
         documentType: p.documentType,
         number: p.number.slice(0, 40),
@@ -86,24 +88,22 @@ export class InvoicesImportService {
         else if (sequences.has(sequenceKey)) Object.assign(row, { status: 'ERROR', message: `Progressivo ${a.sequence}/${a.year} già usato dal documento ${sequences.get(sequenceKey)} nei file caricati` });
         numbers.add(numberKey);
         if (!sequences.has(sequenceKey)) sequences.set(sequenceKey, p.number);
+        if (row.status === 'NEW') context?.upcomingInvoices.set(e.fileName, { number: p.number });
       } catch (err) {
         Object.assign(row, { status: 'ERROR', message: this.errorMessage(e.name, err) });
       }
     }
-    return [...rows, ...ignored.map((i): ImportPreviewRow => ({ file: i.name, status: 'IGNORED', message: i.message }))];
+    return rows;
   }
 
-  /** Imports the documents in the files; with `selected`, only the entries with those names. */
-  async importFiles(tenantId: string, files: UploadedFile[], selected?: string[]): Promise<ImportResult[]> {
+  async importEntries(tenantId: string, entries: XmlEntry[]): Promise<ImportResult[]> {
     const { profile } = await this.tenants.getWithProfile(tenantId);
-    const only = selected ? new Set(selected) : undefined;
     const results: ImportResult[] = [];
-    for (const e of extractXmlEntries(files).entries) {
-      if (only && !only.has(e.name)) continue;
+    for (const e of entries) {
       try {
-        results.push(await this.importOne(tenantId, profile.vatNumber, e));
+        results.push({ ...(await this.importOne(tenantId, profile.vatNumber, e)), kind: 'INVOICE' });
       } catch (err) {
-        results.push({ file: e.name, status: 'ERROR', message: this.errorMessage(e.name, err) });
+        results.push({ file: e.name, kind: 'INVOICE', status: 'ERROR', message: this.errorMessage(e.name, err) });
       }
     }
     return results;
@@ -125,6 +125,8 @@ export class InvoicesImportService {
     // Numero: String20Type of the FatturaPA XSD (Basic Latin, 1-20 characters).
     if (!/^[\x20-\x7E]{1,20}$/.test(p.number)) throw new BadRequestException(`Numero documento non valido "${p.number.slice(0, 40)}"`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(p.date)) throw new BadRequestException(`Data documento non valida "${p.date}"`);
+    // An invoice that went through SDI cannot be dated after its receipt: such a file was never issued.
+    if (p.date > todayInItaly()) throw new BadRequestException(FUTURE_INVOICE_DATE);
     const year = Number(p.date.slice(0, 4));
     const type = p.documentType as DocumentType;
 
@@ -174,6 +176,7 @@ export class InvoicesImportService {
           total: amounts.total,
           notes: p.notes,
           status: 'ISSUED',
+          imported: true,
           refInvoiceId: refInvoice?.id ?? null,
           paymentMethod: p.payments[0]?.method ?? null,
           xmlFileName,

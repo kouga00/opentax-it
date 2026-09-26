@@ -5,7 +5,7 @@ import { IsBase64, IsString, Length, MaxLength } from 'class-validator';
 const MAX_BASE64_LENGTH = Math.ceil((20 * 1024 * 1024) / 3) * 4;
 
 export class ImportFileDto {
-  @ApiProperty({ description: 'Nome del file scelto: .xml (FatturaPA) oppure .zip con i file XML', example: 'IT01234567890_00001.xml' })
+  @ApiProperty({ description: 'Nome del file scelto: .xml (fattura FatturaPA o ricevuta SDI) oppure .zip con i file XML', example: 'IT01234567890_00001.xml' })
   @IsString() @Length(1, 200) name!: string;
 
   @ApiProperty({ description: 'Contenuto del file in base64 (fino a 20 MB)' })

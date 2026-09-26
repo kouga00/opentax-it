@@ -15,6 +15,7 @@ import {
   type FiscalRuleSet,
   type SourceRef,
 } from '@opentax-it/fiscal-rules';
+import { NEVER_ISSUED } from '../common/invoice-issue.js';
 import { PrismaService } from '../prisma/prisma.service.js';
 
 /** Rule sets shipped with the code; they are seeded as DRAFT and must be activated by an admin. */
@@ -134,7 +135,7 @@ export class FiscalRulesService {
     const [stampDutyByQuarter, profile, euInvoices] = await Promise.all([
       this.stampDutyByQuarter(tenantId, year),
       this.prisma.tenantProfile.findUnique({ where: { tenantId }, select: { viesRegistered: true, isaSubject: true } }),
-      this.prisma.invoice.count({ where: { tenantId, year, status: { notIn: ['DRAFT', 'CANCELLED'] }, customer: { kind: 'EU' } } }),
+      this.prisma.invoice.count({ where: { tenantId, year, status: { notIn: NEVER_ISSUED }, customer: { kind: 'EU' } } }),
     ]);
     const quarterlyIntrastat = opts.quarterlyIntrastat ?? (profile?.viesRegistered === true || euInvoices > 0);
     return buildDeadlines(rules, { ...opts, quarterlyIntrastat, stampDutyByQuarter, isaSubject: profile?.isaSubject ?? false });
@@ -146,7 +147,7 @@ export class FiscalRulesService {
    */
   async stampDutyByQuarter(tenantId: string, year: number): Promise<Record<1 | 2 | 3 | 4, number>> {
     const rows = await this.prisma.invoice.findMany({
-      where: { tenantId, year, virtualStamp: true, status: { notIn: ['DRAFT', 'CANCELLED'] } },
+      where: { tenantId, year, virtualStamp: true, status: { notIn: NEVER_ISSUED } },
       select: { date: true, stampAmount: true },
     });
     const totals: Record<1 | 2 | 3 | 4, number> = { 1: 0, 2: 0, 3: 0, 4: 0 };

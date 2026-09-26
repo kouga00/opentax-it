@@ -4,6 +4,7 @@ import type { SdiTransmission } from '../../generated/prisma/client.js';
 import { InvoiceStatusService } from '../../invoices/services/invoice-status.service.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
 import { StorageService } from '../../storage/storage.service.js';
+import type { SdiReceipt } from '@opentax-it/fatturapa';
 import type { PecProviderReceipt, SdiReceiptMessage } from '../types/pec-inbound.js';
 import { readPecMessage } from './pec-message-reader.js';
 import { providerReceiptTransition, sdiReceiptTransition, type Transition } from './transmission-transitions.js';
@@ -13,6 +14,12 @@ import { providerReceiptTransition, sdiReceiptTransition, type Transition } from
  * receipt once (SdiNotification.dedupeKey) and applies the transition (transmission-transitions.ts), asking the
  * invoices module for the invoice status. Reading the mailbox is SdiReceiptsSyncService's job.
  */
+
+/**
+ * Key against recording the same SDI receipt twice, from its content (type, IdentificativoSdI and MessageId), so that
+ * a renamed copy or the same receipt from the mailbox and from the portal is still recognised.
+ */
+export const sdiReceiptKey = (r: SdiReceipt) => `sdi:${r.type}:${r.sdiId}:${r.messageId}`;
 
 const isUniqueViolation = (err: unknown) => err instanceof Prisma.PrismaClientKnownRequestError && err.code === 'P2002';
 
@@ -72,16 +79,7 @@ export class SdiReceiptsService {
       const t = await this.prisma.sdiTransmission.findFirst({ where: { fileName: receipt.fileName, invoice: { tenantId } }, orderBy: { createdAt: 'desc' } });
       if (!t) continue;
       matched = true;
-      const rawPath = await this.storage.write(`${tenantId}/sdi/receipts/${fileName.replace(/[^A-Za-z0-9._-]/g, '_')}`, xml);
-      await this.record(tenantId, t, {
-        type: receipt.type,
-        receivedAt: toDate(receipt.deliveredAt ?? receipt.receivedAt),
-        sdiId: receipt.sdiId,
-        fileName,
-        rawPath,
-        dedupeKey: `sdi:${fileName}`,
-        details: { receivedAt: receipt.receivedAt, deliveredAt: receipt.deliveredAt, errors: receipt.errors.map((e) => ({ ...e })), description: receipt.description },
-      }, sdiReceiptTransition(receipt));
+      await this.applySdiReceipt(tenantId, t, fileName, xml, receipt);
     }
     if (!matched) return false;
     // The sender of SDI's replies is the address to use from now on (Allegato B 1.8.4 §3.1.1): learned once, from a
@@ -90,8 +88,25 @@ export class SdiReceiptsService {
     return true;
   }
 
-  /** Records the receipt and applies the transition in one transaction; a receipt already recorded changes nothing. */
-  private async record(tenantId: string, t: SdiTransmission, notification: Omit<Prisma.SdiNotificationUncheckedCreateInput, 'transmissionId'>, transition: Transition | undefined): Promise<void> {
+  /**
+   * Records an SDI receipt (RC, NS, MC) for the transmission, stores its XML and moves transmission and invoice.
+   * False when the same receipt was already recorded. Also used by the manual import of receipts.
+   */
+  async applySdiReceipt(tenantId: string, t: SdiTransmission, receiptFileName: string, xml: Buffer, receipt: SdiReceipt): Promise<boolean> {
+    const rawPath = await this.storage.write(`${tenantId}/sdi/receipts/${receiptFileName.replace(/[^A-Za-z0-9._-]/g, '_')}`, xml);
+    return this.record(tenantId, t, {
+      type: receipt.type,
+      receivedAt: toDate(receipt.deliveredAt ?? receipt.receivedAt),
+      sdiId: receipt.sdiId,
+      fileName: receiptFileName,
+      rawPath,
+      dedupeKey: sdiReceiptKey(receipt),
+      details: { receivedAt: receipt.receivedAt, deliveredAt: receipt.deliveredAt, errors: receipt.errors.map((e) => ({ ...e })), description: receipt.description },
+    }, sdiReceiptTransition(t, receipt));
+  }
+
+  /** Records the receipt and applies the transition in one transaction; false when it was already recorded. */
+  private async record(tenantId: string, t: SdiTransmission, notification: Omit<Prisma.SdiNotificationUncheckedCreateInput, 'transmissionId'>, transition: Transition | undefined): Promise<boolean> {
     try {
       await this.prisma.$transaction(async (tx) => {
         await tx.sdiNotification.create({ data: { ...notification, transmissionId: t.id } });
@@ -102,6 +117,8 @@ export class SdiReceiptsService {
       });
     } catch (err) {
       if (!isUniqueViolation(err)) throw err;
+      return false;
     }
+    return true;
   }
 }

@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { useState, useTransition } from 'react';
-import { importInvoiceFiles, previewInvoiceImport } from '@/lib/actions';
+import { importDocuments, previewImport } from '@/lib/actions';
 import { formatDate, formatMoney } from '@/lib/format';
-import type { ImportPreviewRow, ImportResult } from '@/lib/types';
+import type { ImportPreviewRow, ImportResult, XmlDocumentKind } from '@/lib/types';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -13,7 +13,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { ErrorAlert } from '@/components/error-alert';
 
 const PREVIEW_LABELS: Record<ImportPreviewRow['status'], string> = { NEW: 'Da importare', DUPLICATE: 'Già presente', ERROR: 'Errore', IGNORED: 'Ignorato' };
-const RESULT_LABELS: Record<ImportResult['status'], string> = { IMPORTED: 'Importata', SKIPPED: 'Già presente', ERROR: 'Errore' };
+const RESULT_LABELS: Record<ImportResult['status'], string> = { IMPORTED: 'Importato', SKIPPED: 'Già presente', ERROR: 'Errore' };
+
+/** What each file is: invoices and SDI receipts are imported, metadata and other SDI messages are set aside. */
+const KIND_LABELS: Record<XmlDocumentKind, string> = { INVOICE: 'Fattura', SDI_RECEIPT: 'Ricevuta SDI', SDI_MESSAGE: 'Messaggio SDI', SDI_METADATA: 'Metadati SDI' };
+const kindLabel = (kind?: XmlDocumentKind) => (kind ? KIND_LABELS[kind] : 'Altro');
 const variant = (status: string) => (status === 'ERROR' ? 'destructive' : status === 'NEW' || status === 'IMPORTED' ? 'secondary' : 'outline');
 
 /**
@@ -45,7 +49,7 @@ export function ImportForm() {
   const analyse = () => {
     setError(undefined);
     start(async () => {
-      const res = await previewInvoiceImport(formData(false));
+      const res = await previewImport(formData(false));
       if (res.error) return setError(res.error);
       setRows(res.rows);
       setSelected(new Set(res.rows?.filter((r) => r.status === 'NEW').map((r) => r.file)));
@@ -55,7 +59,7 @@ export function ImportForm() {
   const importSelected = () => {
     setError(undefined);
     start(async () => {
-      const res = await importInvoiceFiles(formData(true));
+      const res = await importDocuments(formData(true));
       if (res.error) return setError(res.error);
       setResults(res.results);
       setRows(undefined);
@@ -79,8 +83,8 @@ export function ImportForm() {
         <Button variant={rows ? 'outline' : 'default'} onClick={analyse} disabled={pending || files.length === 0}>{pending && !rows ? 'Analisi…' : 'Analizza'}</Button>
       </div>
       <p className="text-xs text-muted-foreground">
-        File .xml FatturaPA o archivi .zip che li contengono (ad esempio scaricati dal portale Fatture e Corrispettivi), fino a 20 MB in totale.
-        Le fatture firmate (.p7m) non sono ancora supportate. Il cedente deve essere la partita IVA attiva; i clienti mancanti vengono creati.
+        Fatture FatturaPA e ricevute SDI (consegna, scarto, impossibilità di recapito) in file .xml o in archivi .zip, anche insieme, come quelli del portale Fatture e Corrispettivi (&quot;Consultazioni e download massivi&quot;); fino a 20 MB per file.
+        Le fatture firmate (.p7m) non sono ancora supportate. Il cedente deve essere la partita IVA attiva e i clienti mancanti vengono creati. Una ricevuta si collega alla fattura dal nome del file: le fatture si importano prima delle ricevute.
       </p>
 
       {rows && (
@@ -97,7 +101,7 @@ export function ImportForm() {
                     onCheckedChange={(on) => setSelected(new Set(on ? selectable.map((r) => r.file) : []))}
                   />
                 </TableHead>
-                <TableHead>File</TableHead><TableHead>Esito</TableHead><TableHead>Numero</TableHead><TableHead>Data</TableHead><TableHead>Cliente / messaggio</TableHead><TableHead className="text-right">Totale</TableHead>
+                <TableHead>File</TableHead><TableHead>Tipo</TableHead><TableHead>Esito</TableHead><TableHead>Fattura</TableHead><TableHead>Data</TableHead><TableHead>Cliente / messaggio</TableHead><TableHead className="text-right">Totale</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -107,10 +111,11 @@ export function ImportForm() {
                     {r.status === 'NEW' && <Checkbox aria-label={`Importa ${r.file}`} checked={selected.has(r.file)} onCheckedChange={(on) => toggle(r.file, on)} />}
                   </TableCell>
                   <TableCell className="font-mono text-xs break-all">{r.file}</TableCell>
+                  <TableCell className="text-sm">{kindLabel(r.kind)}{r.kind === 'SDI_RECEIPT' && r.documentType && <span className="text-muted-foreground"> {r.documentType}</span>}</TableCell>
                   <TableCell><Badge variant={variant(r.status)}>{PREVIEW_LABELS[r.status]}</Badge></TableCell>
                   <TableCell>{r.invoiceId ? <Link href={`/invoices/${r.invoiceId}`} className="font-mono hover:underline">{r.number}</Link> : (r.number ?? '—')}</TableCell>
                   <TableCell>{r.date ? formatDate(r.date) : '—'}</TableCell>
-                  <TableCell className="text-sm">{r.status === 'NEW' ? r.customer : [r.customer, r.message].filter(Boolean).join(' · ')}</TableCell>
+                  <TableCell className="text-sm">{r.status === 'NEW' ? (r.customer ?? r.message) : [r.customer, r.message].filter(Boolean).join(' · ')}</TableCell>
                   <TableCell className="text-right tabular-nums">{r.total !== undefined ? formatMoney(r.total) : ''}</TableCell>
                 </TableRow>
               ))}
@@ -118,7 +123,7 @@ export function ImportForm() {
           </Table>
           <div className="flex justify-end">
             <Button onClick={importSelected} disabled={pending || selected.size === 0}>
-              {pending ? 'Importazione…' : `Importa ${selected.size} ${selected.size === 1 ? 'fattura' : 'fatture'}`}
+              {pending ? 'Importazione…' : `Importa ${selected.size} ${selected.size === 1 ? 'documento' : 'documenti'}`}
             </Button>
           </div>
         </>
@@ -126,11 +131,12 @@ export function ImportForm() {
 
       {results && (
         <Table>
-          <TableHeader><TableRow><TableHead>File</TableHead><TableHead>Esito</TableHead><TableHead>Numero</TableHead><TableHead>Cliente / messaggio</TableHead></TableRow></TableHeader>
+          <TableHeader><TableRow><TableHead>File</TableHead><TableHead>Tipo</TableHead><TableHead>Esito</TableHead><TableHead>Fattura</TableHead><TableHead>Cliente / messaggio</TableHead></TableRow></TableHeader>
           <TableBody>
             {results.map((r, i) => (
               <TableRow key={i}>
                 <TableCell className="font-mono text-xs break-all">{r.file}</TableCell>
+                <TableCell className="text-sm">{kindLabel(r.kind)}</TableCell>
                 <TableCell><Badge variant={variant(r.status)}>{RESULT_LABELS[r.status]}</Badge></TableCell>
                 <TableCell>{r.invoiceId ? <Link href={`/invoices/${r.invoiceId}`} className="font-mono hover:underline">{r.number}</Link> : (r.number ?? '—')}</TableCell>
                 <TableCell className="text-sm">{r.customer ?? r.message ?? ''}</TableCell>

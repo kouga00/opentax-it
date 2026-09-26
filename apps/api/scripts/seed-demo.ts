@@ -1,7 +1,14 @@
 /**
  * Loads a fictitious tenant ("Demo Forfettario") with customers, invoices issued in the
- * previous and current year, collections and manually entered year data, so that the
- * taxes summary, the deadline calendar and the F24 plan have something to show.
+ * previous and current year with their SDI receipts, collections and manually entered year data,
+ * so that the taxes summary, the deadline calendar and the F24 plan have something to show.
+ *
+ * The SDI outcome of each invoice comes from a receipt uploaded through the import (as a user
+ * would upload the ones of invoices sent with another tool): delivery (RC) for businesses,
+ * impossibility of delivery (MC) for the private customer without an SDI channel, whose invoice is
+ * made available in the customer's reserved area (Spec. FatturaPA 1.9.1 §1.5). The receipts follow
+ * the official schema (MessaggiTypes_v1.1) but are not signed: real ones are signed by SDI. The
+ * last invoice of the current year is left to send.
  *
  * Runs against a running API (default http://localhost:3000/api) through the public
  * endpoints, so every document goes through the same validation as the UI. Idempotent:
@@ -29,6 +36,27 @@ const thisYear = new Date().getFullYear();
 const prevYear = thisYear - 1;
 
 let tenantId = '';
+let sdiId = 800000;
+
+/** SDI receipt as described by the official schema (MessaggiTypes_v1.1), without the signature. */
+function sdiReceipt(type: 'RC' | 'MC', invoiceFileName: string, date: string): { name: string; contentBase64: string } {
+  const root = type === 'RC' ? 'RicevutaConsegna' : 'NotificaMancataConsegna';
+  const body = type === 'RC'
+    ? `<DataOraConsegna>${date}T10:05:00</DataOraConsegna><Destinatario><Codice>ABCDEF1</Codice><Descrizione>Destinatario demo</Descrizione></Destinatario>`
+    : '<Descrizione>Il file non è stato recapitato: la fattura è a disposizione del cliente nella sua area riservata</Descrizione>';
+  const xml = `<?xml version="1.0" encoding="UTF-8"?><types:${root} xmlns:types="http://www.fatturapa.gov.it/sdi/messaggi/v1.0" versione="1.0">`
+    + `<IdentificativoSdI>${++sdiId}</IdentificativoSdI><NomeFile>${invoiceFileName}</NomeFile><DataOraRicezione>${date}T10:00:00</DataOraRicezione>${body}`
+    + `<MessageId>${sdiId}</MessageId></types:${root}>`;
+  return { name: `${invoiceFileName.replace(/\.xml$/, '')}_${type}_001.xml`, contentBase64: Buffer.from(xml).toString('base64') };
+}
+
+/** Uploads the receipts through the import, like a user, and stops if one is not recorded. */
+async function importReceipts(receipts: Array<{ name: string; contentBase64: string }>) {
+  const results = await call<Array<{ file: string; status: string; message?: string }>>('POST', '/imports', { files: receipts });
+  const failed = results.filter((r) => r.status !== 'IMPORTED');
+  if (failed.length) throw new Error(`Receipts not recorded: ${failed.map((r) => `${r.file} ${r.message ?? r.status}`).join('; ')}`);
+  console.log(`Recorded ${results.length} SDI receipts`);
+}
 
 async function call<T>(method: string, path: string, body?: unknown): Promise<T> {
   const res = await fetch(`${API}${path}`, {
@@ -134,9 +162,11 @@ async function main() {
     [11, gmbh.id, 6100, 'Backend API development — November'],
   ];
   let collectedPrev = 0;
+  const receipts: Array<{ name: string; contentBase64: string }> = [];
   for (const [month, customerId, amount, description] of prev) {
     const inv = await call<{ id: string }>('POST', '/invoices', { customerId, date: iso(prevYear, month, 28), lines: [{ description, quantity: 1, unitPrice: amount }] });
-    const issued = await call<{ id: string; total: string; number: string }>('POST', `/invoices/${inv.id}/issue`, {});
+    const issued = await call<{ id: string; total: string; number: string; xmlFileName: string }>('POST', `/invoices/${inv.id}/issue`, {});
+    receipts.push(sdiReceipt(customerId === rossi.id ? 'MC' : 'RC', issued.xmlFileName, iso(prevYear, month, 28)));
     const payDate = month === 11 ? iso(prevYear, 12, 20) : iso(prevYear, month + 1, 15);
     await call('POST', `/invoices/${inv.id}/payments`, { date: payDate, amount: Number(issued.total) });
     collectedPrev += Number(issued.total);
@@ -155,14 +185,19 @@ async function main() {
     [7, acme.id, 5200, 'Sviluppo e manutenzione — luglio'],
     [9, acme.id, 5200, 'Sviluppo e manutenzione — settembre'],
   ];
-  for (const [month, customerId, amount, description] of cur) {
-    if (month > now.getMonth() + 1) break;
-    const inv = await call<{ id: string }>('POST', '/invoices', { customerId, date: iso(thisYear, month, Math.min(28, month === now.getMonth() + 1 ? now.getDate() : 28)), lines: [{ description, quantity: 1, unitPrice: amount }] });
-    const issued = await call<{ id: string; total: string; number: string }>('POST', `/invoices/${inv.id}/issue`, {});
+  const current = cur.filter(([month]) => month <= now.getMonth() + 1);
+  for (const [index, [month, customerId, amount, description]] of current.entries()) {
+    const date = iso(thisYear, month, Math.min(28, month === now.getMonth() + 1 ? now.getDate() : 28));
+    const inv = await call<{ id: string }>('POST', '/invoices', { customerId, date, lines: [{ description, quantity: 1, unitPrice: amount }] });
+    const issued = await call<{ id: string; total: string; number: string; xmlFileName: string }>('POST', `/invoices/${inv.id}/issue`, {});
+    // The last one stays to send, to show the transmission.
+    if (index < current.length - 1) receipts.push(sdiReceipt(customerId === rossi.id ? 'MC' : 'RC', issued.xmlFileName, date));
     const paid = month < now.getMonth() + 1;
     if (paid) await call('POST', `/invoices/${inv.id}/payments`, { date: iso(thisYear, month + 1, 10), amount: Number(issued.total) });
     console.log(`Issued ${issued.number} (${issued.total} EUR)${paid ? ', collected' : ', open'}`);
   }
+
+  await importReceipts(receipts);
 
   // Amounts paid during the previous year with F24 (entered by hand, as in the taxes page).
   await call('PUT', `/taxes/${prevYear}/data`, { contributionsPaid: 8500, taxAdvancesPaid: 1200, inpsAdvancesPaid: 3900, taxCredits: 0, inpsReducedRate: false });

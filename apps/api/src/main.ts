@@ -13,7 +13,7 @@ async function bootstrap() {
   app.use(helmet());
   app.use(jsonOnly());
   // Large bodies only where XML files are uploaded; a request already parsed is skipped by the next parser.
-  app.use('/api/invoices/import', json({ limit: '50mb' }));
+  app.use('/api/imports', json({ limit: '50mb' }));
   app.use(json({ limit: '1mb' }));
   app.setGlobalPrefix('api');
   app.useGlobalPipes(validationPipe);

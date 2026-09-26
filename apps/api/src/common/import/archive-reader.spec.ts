@@ -1,7 +1,7 @@
 import { parseInvoiceXml } from '@opentax-it/fatturapa';
 import { strToU8, zipSync } from 'fflate';
 import { describe, expect, it } from 'vitest';
-import { extractXmlEntries, MAX_ARCHIVE_ENTRIES, MAX_INVOICE_FILE_BYTES } from './invoice-archive.js';
+import { extractXmlEntries, MAX_ARCHIVE_ENTRIES, MAX_INVOICE_FILE_BYTES } from './archive-reader.js';
 
 // Same shape as a real download (flat, entries stored without compression, FPR12 with an "ns3" prefix
 // on the root element, SDI file names of an intermediary), with invented data.
@@ -42,16 +42,15 @@ describe('extractXmlEntries', () => {
     expect(entries.map((e) => [e.name, e.fileName])).toEqual([['a.zip/emesse/2026/f1.XML', 'f1.XML'], ['f2.xml', 'f2.xml']]);
   });
 
-  it('sets aside SDI metadata, signed files and other files with a reason', () => {
+  it('returns every XML, metadata included (what to keep is decided by the import handlers), and sets aside signed and other files', () => {
     const { entries, ignored } = extractXmlEntries([
       { name: 'a.zip', content: zip({ 'f_MT_001.xml': metadata, 'f.xml.p7m': new Uint8Array([0x30, 0x80]), 'f.pdf': 'x', 'f.xml': invoice('1') }) },
       { name: 'note.txt', content: Buffer.from('x') },
     ]);
-    expect(entries.map((e) => e.name)).toEqual(['a.zip/f.xml']);
+    expect(entries.map((e) => e.name).sort()).toEqual(['a.zip/f.xml', 'a.zip/f_MT_001.xml']);
     expect(ignored).toEqual([
       { name: 'a.zip/f.xml.p7m', message: 'Fattura firmata (.p7m): non ancora supportata' },
       { name: 'a.zip/f.pdf', message: 'Non è un file XML o ZIP' },
-      { name: 'a.zip/f_MT_001.xml', message: 'File di metadati SDI: non contiene la fattura' },
       { name: 'note.txt', message: 'Non è un file XML o ZIP' },
     ]);
   });
@@ -74,5 +73,10 @@ describe('extractXmlEntries', () => {
     const { entries, ignored } = extractXmlEntries([{ name: 'a.zip', content: zip(many) }]);
     expect(entries).toEqual([]);
     expect(ignored.at(-1)).toEqual({ name: 'a.zip', message: `Contiene più di ${MAX_ARCHIVE_ENTRIES} file: dividilo in archivi più piccoli` });
+  });
+
+  it('says when an archive is empty, or holds only folders', () => {
+    expect(extractXmlEntries([{ name: 'vuoto.zip', content: zip({}) }])).toEqual({ entries: [], ignored: [{ name: 'vuoto.zip', message: 'Archivio ZIP vuoto' }] });
+    expect(extractXmlEntries([{ name: 'cartelle.zip', content: zip({ 'a/': new Uint8Array(0) }) }]).ignored).toEqual([{ name: 'cartelle.zip', message: 'Archivio ZIP vuoto' }]);
   });
 });

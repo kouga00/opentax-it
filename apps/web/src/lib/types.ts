@@ -122,6 +122,8 @@ export interface Invoice {
   xmlFileName: string | null;
   /** Imported from an XML issued and sent to SDI with another tool: it cannot be sent from here. */
   imported: boolean;
+  /** Issued for the tax rules: delivered or made available by SDI, or imported. */
+  issued: boolean;
   internalNotes: string | null;
   customer: InvoiceCustomerSummary;
   lines?: InvoiceLine[];
@@ -203,8 +205,12 @@ export interface ImportFile {
   contentBase64: string;
 }
 
+/** What an imported XML file is (fatturapa xmlDocumentKind). */
+export type XmlDocumentKind = 'INVOICE' | 'SDI_RECEIPT' | 'SDI_MESSAGE' | 'SDI_METADATA';
+
 export interface ImportPreviewRow {
   file: string;
+  kind?: XmlDocumentKind;
   status: 'NEW' | 'DUPLICATE' | 'ERROR' | 'IGNORED';
   documentType?: string;
   number?: string;
@@ -217,6 +223,7 @@ export interface ImportPreviewRow {
 
 export interface ImportResult {
   file: string;
+  kind?: XmlDocumentKind;
   status: 'IMPORTED' | 'SKIPPED' | 'ERROR';
   number?: string;
   invoiceId?: string;

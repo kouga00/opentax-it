@@ -3,7 +3,7 @@ import { Type } from 'class-transformer';
 import { ArrayMaxSize, ArrayMinSize, IsArray, IsOptional, IsString, MaxLength, ValidateNested } from 'class-validator';
 import { ImportFileDto } from './import-file.dto.js';
 
-export class ImportInvoicesDto {
+export class ImportDocumentsDto {
   @ApiProperty({ type: [ImportFileDto], minItems: 1, maxItems: 200 })
   @ValidateNested({ each: true }) @Type(() => ImportFileDto) @ArrayMinSize(1) @ArrayMaxSize(200) files!: ImportFileDto[];
 

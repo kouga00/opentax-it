@@ -6,3 +6,4 @@ export * from './payment-methods.js';
 export * from './sdi-pec.js';
 export * from './sdi-receipts.js';
 export * from './pec-daticert.js';
+export * from './xml-document-kind.js';

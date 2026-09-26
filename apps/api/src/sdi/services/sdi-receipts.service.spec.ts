@@ -61,7 +61,7 @@ describe('SdiReceiptsService.apply', () => {
     expect(await service.apply('tenant1', await sdiEnvelope('sdi27@pec.fatturapa.it'))).toBe(true);
     expect(t).toMatchObject({ status: 'SDI_DELIVERED', sdiId: '111' });
     expect(invoice.status).toBe('DELIVERED');
-    expect(notifications).toMatchObject([{ type: 'RC', sdiId: '111', dedupeKey: 'sdi:IT01234567890_11111_RC_001.xml' }]);
+    expect(notifications).toMatchObject([{ type: 'RC', sdiId: '111', dedupeKey: 'sdi:RC:111:123456' }]);
     expect(write).toHaveBeenCalledWith('tenant1/sdi/receipts/IT01234567890_11111_RC_001.xml', expect.any(Buffer));
   });
 

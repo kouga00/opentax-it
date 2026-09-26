@@ -1,6 +1,6 @@
 import type { ThresholdOutlook } from '@opentax-it/fiscal-rules';
+import { isIssued } from '../../common/invoice-issue.js';
 import type { Customer, Invoice, InvoiceLine } from '../../generated/prisma/client.js';
-import { isImportedXmlPath } from '../services/invoices-import.service.js';
 import { InvoiceCustomerDto } from '../dto/response/invoice-customer.dto.js';
 import { InvoiceDetailDto } from '../dto/response/invoice-detail.dto.js';
 import { InvoiceLineResponseDto } from '../dto/response/invoice-line.dto.js';
@@ -39,7 +39,8 @@ function fields(i: Invoice & { customer: CustomerSummary }) {
     bankAccountId: i.bankAccountId,
     paymentMethod: i.paymentMethod,
     xmlFileName: i.xmlFileName,
-    imported: isImportedXmlPath(i.xmlPath),
+    imported: i.imported,
+    issued: isIssued(i),
     internalNotes: i.internalNotes,
     customer: toCustomerDto(i.customer),
   };

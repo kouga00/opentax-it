@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import type { Prisma } from '../../generated/prisma/client.js';
 import type { InvoiceStatus } from '../../generated/prisma/enums.js';
-import { isImportedXmlPath } from './invoices-import.service.js';
 
 /** Inside a transaction of the caller, so that the invoice changes together with the transmission. */
 type Tx = Prisma.TransactionClient;
@@ -14,8 +13,8 @@ type Tx = Prisma.TransactionClient;
 @Injectable()
 export class InvoiceStatusService {
   /** Imported invoices were issued and sent to SDI with another tool: they are never sent from here. */
-  isImported(invoice: { xmlPath: string | null }): boolean {
-    return isImportedXmlPath(invoice.xmlPath);
+  isImported(invoice: { imported: boolean }): boolean {
+    return invoice.imported;
   }
 
   /** Issued → sent; false when another request claimed the invoice first. */

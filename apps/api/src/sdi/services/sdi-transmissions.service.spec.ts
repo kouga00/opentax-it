@@ -11,8 +11,8 @@ import { SdiTransmissionsService } from './sdi-transmissions.service.js';
 
 const CONNECTION = { address: 'mario.rossi@pec.example.it', username: 'mario.rossi@pec.example.it', password: 'x', smtpHost: 'smtp.example.it', smtpPort: 465, imapHost: 'imap.example.it', imapPort: 993 };
 
-function setup(opts: { status?: string; xmlPath?: string; kind?: string; assigned?: string | null; alreadySent?: number; claimed?: number; sendError?: unknown } = {}) {
-  const invoice = { id: 'inv1', tenantId: 't1', status: opts.status ?? 'ISSUED', xmlPath: opts.xmlPath ?? 't1/invoices/2026/IT01234567890_00001.xml', xmlFileName: 'IT01234567890_00001.xml', customer: { kind: opts.kind ?? 'IT_BUSINESS' } };
+function setup(opts: { status?: string; xmlPath?: string; imported?: boolean; kind?: string; assigned?: string | null; alreadySent?: number; claimed?: number; sendError?: unknown } = {}) {
+  const invoice = { id: 'inv1', tenantId: 't1', status: opts.status ?? 'ISSUED', xmlPath: opts.xmlPath ?? 't1/invoices/2026/IT01234567890_00001.xml', xmlFileName: 'IT01234567890_00001.xml', imported: opts.imported ?? false, customer: { kind: opts.kind ?? 'IT_BUSINESS' } };
   const invoiceUpdateMany = vi.fn().mockResolvedValue({ count: opts.claimed ?? 1 });
   const transmissionUpdate = vi.fn().mockImplementation(({ data }: { data: object }) => Promise.resolve({ id: 'tr1', ...data }));
   const transmissionCreate = vi.fn().mockResolvedValue({ id: 'tr1', status: 'PENDING' });
@@ -61,7 +61,7 @@ describe('SdiTransmissionsService.send (spec 1.9.1 §1.3.1)', () => {
   });
 
   it('refuses imported invoices, drafts and invoices already sent', async () => {
-    await expect(setup({ xmlPath: 't1/invoices/2026/imported/x_IT01234567890_00001.xml' }).service.send('t1', 'inv1')).rejects.toThrow('importata');
+    await expect(setup({ imported: true }).service.send('t1', 'inv1')).rejects.toThrow('importata');
     await expect(setup({ status: 'DRAFT' }).service.send('t1', 'inv1')).rejects.toThrow(BadRequestException);
     await expect(setup({ status: 'SENT' }).service.send('t1', 'inv1')).rejects.toThrow(BadRequestException);
   });

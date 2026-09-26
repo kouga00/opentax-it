@@ -276,6 +276,8 @@ model Invoice {
   paymentMethod  String?
   xmlFileName   String?
   xmlPath       String?
+  /// Imported from an XML issued and sent to SDI with another tool: never sent from here, and counted as issued.
+  imported      Boolean       @default(false)
   internalNotes String?
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
@@ -324,6 +326,8 @@ model Payment {
 
 enum SdiChannel {
   PEC
+  /// Sent with another tool (e.g. the AdE portal): known only from the SDI receipts uploaded by the user.
+  OTHER
 }
 
 enum SdiTransmissionStatus {
