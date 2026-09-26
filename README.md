@@ -1,17 +1,41 @@
 # OpenTax IT
 
-Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime forfettario** (L. 190/2014, art. 1 c. 54-89):
+Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime forfettario** (L. 190/2014, art. 1 c. 54-89). Ogni regola applicata cita una fonte ufficiale.
 
-- fatture e note di credito in formato **FatturaPA** (XML); invio allo **SDI via PEC** (nessun provider a pagamento, nessun accreditamento) *in sviluppo*;
-- **principio di cassa**: emesso vs incassato, reddito imponibile calcolato sugli incassi dell'anno;
-- **soglie 85.000 / 100.000 €** con avviso di avvicinamento, proiezione sulle fatture da incassare e limite personale che chiede conferma prima di emettere;
-- **clienti italiani, UE ed extra UE**, aziende o privati, con natura IVA e diciture corrette (art. 7-ter e 7-septies DPR 633/72); fatture in **valuta** con il cambio di riferimento della Banca d'Italia;
-- **scadenzario**: saldo, acconti (40/60, o 50/50 per i soggetti ISA), rate mensili fino al 16 dicembre, INPS Gestione Separata, imposta di bollo trimestrale;
-- **libro mastro crediti/compensazioni** (credito da dichiarazione → F24 che lo usano → residuo);
-- preparazione F24 per rata, stampati sul modello ufficiale AdE e pensati per l'addebito a date future (**I24**) da inviare con F24 web;
-- registro degli **avvisi/comunicazioni** (CIVIS) e delle relative rate *(da fare)*;
-- **regole fiscali versionate per anno** (`FiscalRuleSet`): niente valori hardcodati; ogni nuovo set va attivato esplicitamente dall'amministratore; un job che controlla periodicamente le fonti ufficiali (AdE, INPS, GU/Normattiva, ADM) e propone le modifiche è *da fare*;
-- schema **multi-tenant** fin dall'inizio.
+## Cosa fa
+
+**Fatture** (`/invoices`)
+- Fatture e note di credito in formato **FatturaPA** (XML validato sullo schema ufficiale), con numerazione progressiva assegnata all'emissione e bozze illimitate e modificabili.
+- **Clienti italiani, UE ed extra UE**, aziende o privati, con natura IVA e diciture corrette (art. 7-ter e 7-septies DPR 633/72); data mai nel futuro (errore SDI 00403).
+- Fatture in **valuta** con il cambio di riferimento della Banca d'Italia precompilato.
+- Modalità di pagamento scelta sulla fattura (bonifico, carta, SEPA Direct Debit, contanti), con il conto di accredito quando serve.
+- Copia di cortesia in PDF, download dell'XML, **import** di XML e archivi ZIP emessi con altri software.
+
+**Incassi e soglie**
+- **Principio di cassa**: il reddito si calcola sugli incassi dell'anno, non sul fatturato.
+- Incasso registrato dall'elenco fatture, anche parziale, con data e residuo proposti; incassi in valuta al cambio del giorno dell'incasso.
+- **Soglie 85.000 / 100.000 €** in dashboard e all'emissione, con proiezione sulle fatture da incassare e un limite personale che chiede conferma prima di emettere.
+
+**Imposte e contributi** (`/taxes`)
+- Reddito, imposta sostitutiva, contributo **INPS Gestione Separata** (in euro interi sul rigo LM34), acconti 40/60 o 50/50 per i soggetti ISA; sopra 100.000 € il calcolo forfettario si ferma.
+
+**F24** (`/f24`, `/credits`)
+- Piano di versamento: saldo e acconti in unica soluzione o a **rate mensili** fino al 16 dicembre, con interessi e, in caso di differimento, maggiorazione (per l'INPS nella riga DPPI).
+- **Crediti e compensazioni**: registro dei crediti (credito da dichiarazione → F24 che lo usano → residuo) e modello a saldo zero.
+- Stampa sul **modello ufficiale AdE**, stato delle deleghe e date per l'addebito programmato (**I24**) con F24 web.
+
+**Scadenze** (`/deadlines`, `/dashboard`)
+- Scadenzario di saldo, acconti, rate, INPS e imposta di bollo trimestrale, con le festività nazionali calcolate per ogni anno; in dashboard la prossima scadenza, i documenti da inviare e le soglie.
+
+**Regole e fonti** (`/rules`, `/sources`)
+- **Regole fiscali versionate per anno** (`FiscalRuleSet`): niente valori scritti nel codice, ogni nuovo set si attiva a mano, dopo aver visto cosa cambia rispetto a quello attivo; consultabili per sezione, ogni valore con la sua fonte e la citazione esatta.
+- **Registro delle fonti ufficiali** con la copia archiviata di ogni documento; i test verificano che ogni citazione compaia nel documento archiviato.
+
+**In arrivo** (dettagli in [TODO.md](TODO.md))
+- Invio allo **SDI via PEC** e lettura delle ricevute (nessun provider a pagamento, nessun accreditamento).
+- Autenticazione, con più partite IVA per utente (lo schema è **multi-tenant** fin dall'inizio).
+- Registro degli **avvisi/comunicazioni** (CIVIS) e delle relative rate.
+- Controllo periodico delle fonti ufficiali (AdE, INPS, GU/Normattiva, ADM) con proposta delle modifiche alle regole.
 
 ![Dashboard di OpenTax IT con dati di prova: prossima scadenza F24, documenti emessi e da inviare allo SDI, bolli, incassato e fatturato rispetto alle soglie del forfettario, prossime scadenze](docs/images/dashboard.png)
 
@@ -22,15 +46,6 @@ Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime f
 ## Stato
 
 Fase iniziale, in uso **solo in locale** (manca ancora l'autenticazione). Ogni funzione è ancorata a una fonte ufficiale, elencata in [docs/compliance.md](docs/compliance.md); le citazioni verificate sono in [docs/normativa-2026.md](docs/normativa-2026.md).
-
-**Funziona**
-- **Regole fiscali** (`/rules`): set 2025 e 2026 (`packages/fiscal-rules`), consultabili per sezione, ogni valore con la sua fonte e la citazione esatta; versioni per anno, attivazione manuale e, prima di attivare una bozza, cosa cambia rispetto al set attivo.
-- **Fonti ufficiali** (`/sources`): registro dei documenti letti con la copia archiviata ([docs/fonti](docs/fonti/README.md)); per ogni fonte le regole che la citano, con la citazione evidenziata nel testo. I test verificano che ogni citazione compaia nel documento archiviato.
-- **Fatture** (`/invoices`): clienti, bozze illimitate e modificabili, note di credito, emissione con numerazione progressiva e XML FatturaPA validato sullo schema ufficiale, copia di cortesia in PDF, import di XML emessi con altri software. Data mai nel futuro (errore SDI 00403), clienti esteri azienda o privato, valuta con cambio precompilato dalla Banca d'Italia.
-- **Incassi e soglie**: principio di cassa, incasso registrato dall'elenco fatture (anche parziale), modalità di pagamento scelta sulla fattura, incassi in valuta al cambio del giorno, soglie 85.000 / 100.000 € in dashboard e all'emissione, limite personale nel profilo.
-- **Imposte** (`/taxes`): reddito, imposta sostitutiva, contributo INPS Gestione Separata (in euro interi sul rigo LM34), acconti 40/60 o 50/50 ISA; sopra 100.000 € il calcolo forfettario si ferma.
-- **F24** (`/f24`, `/credits`): piano rate con interessi, differimento con maggiorazione (per l'INPS nella riga DPPI), compensazione dei crediti a saldo zero, stampa sul modello ufficiale AdE, stato delle deleghe e date I24.
-- **Scadenzario** (`/deadlines`) e **dashboard** (`/dashboard`), con festività nazionali calcolate per ogni anno.
 
 **Limiti noti** (dettagli in [TODO.md](TODO.md))
 - L'invio allo SDI via PEC e la lettura delle ricevute non ci sono ancora: l'XML va trasmesso con un altro canale.
