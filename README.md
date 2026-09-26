@@ -13,7 +13,7 @@ Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime f
 - **regole fiscali versionate per anno** (`FiscalRuleSet`): niente valori hardcodati; ogni nuovo set va attivato esplicitamente dall'amministratore; un job che controlla periodicamente le fonti ufficiali (AdE, INPS, GU/Normattiva, ADM) e propone le modifiche è *da fare*;
 - schema **multi-tenant** fin dall'inizio.
 
-![Dashboard di OpenTax IT con dati di prova: incassato nell'anno, documenti emessi, soglia del forfettario e prossime scadenze](docs/images/dashboard.png)
+![Dashboard di OpenTax IT con dati di prova: prossima scadenza F24, documenti emessi e da inviare allo SDI, bolli, incassato e fatturato rispetto alle soglie del forfettario, prossime scadenze](docs/images/dashboard.png)
 
 > **Avvertenza.** Questo software è uno strumento di supporto al calcolo e all'organizzazione: **non è consulenza fiscale** e non sostituisce un professionista abilitato. **Non si garantisce la veridicità né la correttezza dei dati e dei calcoli prodotti: la responsabilità del loro uso è esclusivamente dell'utilizzatore.** Le regole fiscali cambiano ogni anno; verifica sempre i valori attivi con le fonti ufficiali. Gli autori e i contributori non rispondono di errori di calcolo, sanzioni o omissioni derivanti dall'uso del software: vedi [DISCLAIMER.md](DISCLAIMER.md) e [LICENSE](LICENSE), sez. 15-16.
 
