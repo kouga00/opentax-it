@@ -157,7 +157,8 @@ export function thresholdStatus(rules: FiscalRuleSet, collectedRevenue: number):
 /** Share of a threshold from which it is shown as "near" (project choice, not a legal value). */
 export const THRESHOLD_NEAR_PCT = 80;
 
-export type ThresholdLevel = 'OK' | 'NEAR' | 'OVER';
+export const THRESHOLD_LEVELS = ['OK', 'NEAR', 'OVER'] as const;
+export type ThresholdLevel = (typeof THRESHOLD_LEVELS)[number];
 
 export interface ThresholdOutlook extends ThresholdStatus {
   /** Issued documents not yet collected (EUR): they count when collected (cash basis, par. 54 and 71). */

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PDFDocument, PDFFont, PDFPage, StandardFonts, rgb } from 'pdf-lib';
 import { paymentMethodLabel } from '@opentax-it/fatturapa';
-import type { CourtesyInvoice } from './invoices.dto.js';
+import type { CourtesyInvoice } from './types/courtesy-invoice.js';
 
 export type InvoicePdfData = CourtesyInvoice;
 

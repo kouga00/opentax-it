@@ -84,10 +84,10 @@ export type InvoiceStatus = 'DRAFT' | 'ISSUED' | 'SENT' | 'DELIVERED' | 'NOT_DEL
 export interface InvoiceLine {
   lineNumber: number;
   description: string;
-  quantity: string;
+  quantity: number;
   unit: string | null;
-  unitPrice: string;
-  totalPrice: string;
+  unitPrice: number;
+  totalPrice: number;
 }
 
 export interface InvoiceCustomerSummary {
@@ -106,13 +106,13 @@ export interface Invoice {
   date: string;
   currency: string;
   /** EUR per unit of the invoice currency (1 for EUR). */
-  exchangeRate: string;
+  exchangeRate: number;
   vatNature: 'N2_1' | 'N2_2';
-  taxableAmount: string;
-  inpsSurcharge: string;
+  taxableAmount: number;
+  inpsSurcharge: number;
   virtualStamp: boolean;
-  stampAmount: string;
-  total: string;
+  stampAmount: number;
+  total: number;
   notes: string[];
   status: InvoiceStatus;
   refInvoiceId: string | null;
@@ -121,12 +121,12 @@ export interface Invoice {
   /** ModalitaPagamento asked of the customer, e.g. MP05; null when the document has no DatiPagamento. */
   paymentMethod: string | null;
   xmlFileName: string | null;
+  internalNotes: string | null;
   customer: InvoiceCustomerSummary;
   lines?: InvoiceLine[];
 }
 
-export interface InvoiceDetail extends Omit<Invoice, 'customer'> {
-  customer: Customer;
+export interface InvoiceDetail extends Invoice {
   lines: InvoiceLine[];
 }
 
@@ -327,30 +327,33 @@ export interface TaxCredit {
   localCode: string | null;
   installmentCode: string | null;
   referenceYear: number;
-  amount: string;
+  amount: number;
+  /** YYYY-MM-DD */
   usableFrom: string | null;
   description: string | null;
   notes: string | null;
   used: number;
   remaining: number;
-  usages: Array<{ id: string; amount: string; f24Line: { f24: { id: string; paymentDate: string; status: string } } }>;
+  /** Uses in F24 forms. */
+  usages: Array<{ amount: number; f24Id: string; paymentDate: string; f24Status: string }>;
 }
 
 export interface InstallmentPlan {
   id: string;
   taxYear: number;
   paymentYear: number;
+  /** YYYY-MM-DD */
   firstDueDate: string;
   installments: number;
-  surchargePct: string;
-  taxBalance: string;
-  taxFirstAdvance: string;
-  taxSecondAdvance: string;
-  inpsBalance: string;
-  inpsFirstAdvance: string;
-  inpsSecondAdvance: string;
-  creditsUsed: string;
-  ruleSetVersion?: number | null;
+  surchargePct: number;
+  taxBalance: number;
+  taxFirstAdvance: number;
+  taxSecondAdvance: number;
+  inpsBalance: number;
+  inpsFirstAdvance: number;
+  inpsSecondAdvance: number;
+  creditsUsed: number;
+  ruleSetVersion: number | null;
   createdAt: string;
   f24s: F24[];
 }

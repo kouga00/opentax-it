@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service.js';
-import type { CreatePaymentDto } from './payments.dto.js';
+import type { CreatePaymentDto } from './dto/request/create-payment.dto.js';
 import type { InvoiceCollection } from './types/invoice-collection.js';
 
 /**
@@ -13,10 +13,6 @@ const round6 = (n: number) => Math.round(n * 1e6) / 1e6;
 @Injectable()
 export class PaymentsService {
   constructor(private readonly prisma: PrismaService) {}
-
-  listByInvoice(tenantId: string, invoiceId: string) {
-    return this.prisma.payment.findMany({ where: { tenantId, invoiceId }, orderBy: { date: 'asc' } });
-  }
 
   /** What an issued document asks, what was collected and what is left, in the document currency. */
   async collection(tenantId: string, invoiceId: string): Promise<InvoiceCollection> {
@@ -40,14 +36,6 @@ export class PaymentsService {
       paymentMethod: invoice.paymentMethod,
       payments: invoice.payments,
     };
-  }
-
-  listByYear(tenantId: string, year: number) {
-    return this.prisma.payment.findMany({
-      where: { tenantId, date: { gte: new Date(Date.UTC(year, 0, 1)), lt: new Date(Date.UTC(year + 1, 0, 1)) } },
-      include: { invoice: { select: { id: true, number: true, type: true, currency: true, customer: { select: { businessName: true, firstName: true, lastName: true } } } } },
-      orderBy: { date: 'desc' },
-    });
   }
 
   async create(tenantId: string, invoiceId: string, dto: CreatePaymentDto) {

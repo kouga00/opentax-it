@@ -1,11 +1,13 @@
-import { Body, Controller, Delete, Get, HttpCode, Param, ParseIntPipe, Post, Query } from '@nestjs/common';
-import { ApiOkResponse } from '@nestjs/swagger';
+import { Body, Controller, Delete, Get, HttpCode, Param, Post } from '@nestjs/common';
+import { ApiCreatedResponse, ApiNoContentResponse, ApiOkResponse } from '@nestjs/swagger';
 import { TenantId } from '../common/tenant.decorator.js';
+import { CreatePaymentDto } from './dto/request/create-payment.dto.js';
 import { InvoiceCollectionDto } from './dto/response/invoice-collection.dto.js';
-import { toInvoiceCollectionDto } from './payments.mapper.js';
-import { CreatePaymentDto } from './payments.dto.js';
+import { PaymentDto } from './dto/response/payment.dto.js';
+import { toInvoiceCollectionDto, toPaymentDto } from './payments.mapper.js';
 import { PaymentsService } from './payments.service.js';
 
+/** Collections of issued documents: the summary and the new collections hang under the document, a collection is removed by its id. */
 @Controller()
 export class PaymentsController {
   constructor(private readonly service: PaymentsService) {}
@@ -16,15 +18,16 @@ export class PaymentsController {
     return toInvoiceCollectionDto(await this.service.collection(tenantId, id));
   }
 
-  @Get('invoices/:id/payments')
-  byInvoice(@TenantId() tenantId: string, @Param('id') id: string) { return this.service.listByInvoice(tenantId, id); }
-
   @Post('invoices/:id/payments')
-  create(@TenantId() tenantId: string, @Param('id') id: string, @Body() dto: CreatePaymentDto) { return this.service.create(tenantId, id, dto); }
+  @ApiCreatedResponse({ type: PaymentDto })
+  async create(@TenantId() tenantId: string, @Param('id') id: string, @Body() dto: CreatePaymentDto): Promise<PaymentDto> {
+    return toPaymentDto(await this.service.create(tenantId, id, dto));
+  }
 
-  @Get('payments')
-  byYear(@TenantId() tenantId: string, @Query('year', ParseIntPipe) year: number) { return this.service.listByYear(tenantId, year); }
-
-  @Delete('payments/:id') @HttpCode(204)
-  remove(@TenantId() tenantId: string, @Param('id') id: string) { return this.service.remove(tenantId, id); }
+  @Delete('payments/:id')
+  @HttpCode(204)
+  @ApiNoContentResponse()
+  remove(@TenantId() tenantId: string, @Param('id') id: string): Promise<void> {
+    return this.service.remove(tenantId, id);
+  }
 }

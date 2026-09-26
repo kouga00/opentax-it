@@ -7,7 +7,11 @@ import { PrismaService } from '../prisma/prisma.service.js';
 import { StorageService } from '../storage/storage.service.js';
 import { TenantsService } from '../tenants/tenants.service.js';
 import { InvoicesPdfService } from './invoices-pdf.service.js';
-import type { CourtesyInvoice, CreateInvoiceDto, ListInvoicesQuery, UpdateInvoiceDto } from './invoices.dto.js';
+import type { IssueInvoiceDto } from './dto/request/issue-invoice.dto.js';
+import type { InvoicePaymentDto } from './dto/request/invoice-payment.dto.js';
+import type { ListInvoicesQueryDto } from './dto/request/list-invoices-query.dto.js';
+import type { SaveInvoiceDto } from './dto/request/save-invoice.dto.js';
+import type { CourtesyInvoice } from './types/courtesy-invoice.js';
 
 /**
  * Invoices under the flat-rate regime.
@@ -50,9 +54,9 @@ export class InvoicesService {
     private readonly pdfService: InvoicesPdfService,
   ) {}
 
-  list(tenantId: string, q: ListInvoicesQuery) {
+  list(tenantId: string, q: ListInvoicesQueryDto) {
     return this.prisma.invoice.findMany({
-      where: { tenantId, ...(q.year ? { year: q.year } : {}), ...(q.status ? { status: q.status as Invoice['status'] } : {}) },
+      where: { tenantId, ...(q.year ? { year: q.year } : {}), ...(q.status ? { status: q.status } : {}) },
       include: { customer: { select: { id: true, businessName: true, firstName: true, lastName: true, kind: true } } },
       orderBy: [{ date: 'desc' }, { sequence: 'desc' }],
     });
@@ -70,7 +74,7 @@ export class InvoicesService {
   }
 
   /** Compute derived amounts and texts from the DTO, the customer and the active rule set. */
-  private async prepare(tenantId: string, dto: CreateInvoiceDto) {
+  private async prepare(tenantId: string, dto: SaveInvoiceDto) {
     const year = Number(dto.date.slice(0, 4));
     const rules = await this.rules.getActive(year);
     const { profile } = await this.tenants.getWithProfile(tenantId);
@@ -149,7 +153,7 @@ export class InvoicesService {
     };
   }
 
-  async create(tenantId: string, dto: CreateInvoiceDto) {
+  async create(tenantId: string, dto: SaveInvoiceDto) {
     const p = await this.prepare(tenantId, dto);
     return this.prisma.invoice.create({
       data: { tenantId, ...p.data, number: '', status: 'DRAFT', lines: { create: p.lines } },
@@ -157,7 +161,7 @@ export class InvoicesService {
     });
   }
 
-  async update(tenantId: string, id: string, dto: UpdateInvoiceDto) {
+  async update(tenantId: string, id: string, dto: SaveInvoiceDto) {
     const existing = await this.get(tenantId, id);
     if (existing.status !== 'DRAFT') throw new BadRequestException('Only draft invoices can be edited');
     const p = await this.prepare(tenantId, dto);
@@ -210,7 +214,7 @@ export class InvoicesService {
     });
   }
 
-  async issue(tenantId: string, id: string, dto?: { payment?: CreateInvoiceDto['payment']; confirmThresholds?: boolean }) {
+  async issue(tenantId: string, id: string, dto?: IssueInvoiceDto) {
     const existing = await this.get(tenantId, id);
     if (existing.status !== 'DRAFT') throw new BadRequestException('Invoice already issued');
     // Invoices to public administrations must be signed with a qualified certificate (fatturapa.gov.it,
@@ -272,7 +276,7 @@ export class InvoicesService {
    * invoice date + days of the payment terms (or the tenant default terms); bank = the invoice's bank account,
    * else the tenant default bank, only for the methods paid into the supplier's account.
    */
-  private async paymentFromTerms(tenantId: string, inv: Invoice): Promise<CreateInvoiceDto['payment'] | undefined> {
+  private async paymentFromTerms(tenantId: string, inv: Invoice): Promise<InvoicePaymentDto | undefined> {
     const terms = inv.paymentTermsId
       ? await this.prisma.paymentTerms.findFirst({ where: { id: inv.paymentTermsId, tenantId } })
       : await this.prisma.paymentTerms.findFirst({ where: { tenantId, isDefault: true } });
@@ -484,7 +488,7 @@ export class InvoicesService {
     rules: FiscalRuleSet,
     transmissionSeq: number,
     refInvoice: Invoice | null,
-    payment?: CreateInvoiceDto['payment'],
+    payment?: InvoicePaymentDto,
   ): FlatRateInvoice {
     const c = inv.customer;
     const treatment = customerTreatment(rules, c.kind, c.art7SeptiesServices);

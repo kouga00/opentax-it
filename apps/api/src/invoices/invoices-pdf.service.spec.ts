@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { PDFDocument } from 'pdf-lib';
 import { InvoicesPdfService } from './invoices-pdf.service.js';
-import type { CourtesyInvoice } from './invoices.dto.js';
+import type { CourtesyInvoice } from './types/courtesy-invoice.js';
 
 describe('InvoicesPdfService', () => {
   const service = new InvoicesPdfService();

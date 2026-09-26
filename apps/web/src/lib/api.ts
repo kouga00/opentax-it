@@ -1,6 +1,6 @@
 import 'server-only';
 import { cookies } from 'next/headers';
-import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, InvoiceCollection, InvoiceDetail, Payment, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
+import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, CollectionPayment, InvoiceCollection, InvoiceDetail, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
 
 export * from './types';
 export * from './format';
@@ -85,7 +85,7 @@ export const api = {
   deleteCustomer: (id: string) => tenantRequest<void>(`/customers/${seg(id)}`, { method: 'DELETE' }),
   invoices: (year?: number) => tenantRequest<Invoice[]>(`/invoices${year ? `?year=${year}` : ''}`),
   invoiceYears: () => tenantRequest<number[]>('/invoices/years'),
-  thresholds: () => tenantRequest<ThresholdOutlook>('/invoices/thresholds'),
+  thresholds: () => tenantRequest<ThresholdOutlook>('/revenue-thresholds'),
   exchangeRate: (currency: string, date: string) =>
     request<{ currency: string; requestedDate: string; quotationDate: string; unitsPerEur: number; source: string }>(`/exchange-rates?currency=${encodeURIComponent(currency)}&date=${encodeURIComponent(date)}`),
   invoiceThresholds: (id: string) => tenantRequest<ThresholdOutlook>(`/invoices/${seg(id)}/thresholds`),
@@ -95,22 +95,22 @@ export const api = {
   deleteInvoice: (id: string) => tenantRequest<void>(`/invoices/${seg(id)}`, { method: 'DELETE' }),
   issueInvoice: (id: string, data: unknown) => tenantRequest<Invoice>(`/invoices/${seg(id)}/issue`, { method: 'POST', body: JSON.stringify(data) }),
   collection: (invoiceId: string) => tenantRequest<InvoiceCollection>(`/invoices/${seg(invoiceId)}/collection`),
-  createPayment: (invoiceId: string, data: unknown) => tenantRequest<Payment>(`/invoices/${seg(invoiceId)}/payments`, { method: 'POST', body: JSON.stringify(data) }),
+  createPayment: (invoiceId: string, data: unknown) => tenantRequest<CollectionPayment>(`/invoices/${seg(invoiceId)}/payments`, { method: 'POST', body: JSON.stringify(data) }),
   deletePayment: (id: string) => tenantRequest<void>(`/payments/${seg(id)}`, { method: 'DELETE' }),
   taxSummary: (year: number) => tenantRequest<TaxSummary>(`/taxes/${year}/summary`),
   taxYearData: (year: number) => tenantRequest<TaxYearData>(`/taxes/${year}/data`),
   updateTaxYearData: (year: number, data: unknown) => tenantRequest<TaxYearData>(`/taxes/${year}/data`, { method: 'PUT', body: JSON.stringify(data) }),
-  taxCredits: () => tenantRequest<TaxCredit[]>('/taxes/credits'),
-  taxCredit: (id: string) => tenantRequest<TaxCredit>(`/taxes/credits/${seg(id)}`),
-  saveTaxCredit: (data: unknown, id?: string) => tenantRequest<TaxCredit>(id ? `/taxes/credits/${seg(id)}` : '/taxes/credits', { method: id ? 'PUT' : 'POST', body: JSON.stringify(data) }),
-  deleteTaxCredit: (id: string) => tenantRequest<void>(`/taxes/credits/${seg(id)}`, { method: 'DELETE' }),
+  taxCredits: () => tenantRequest<TaxCredit[]>('/tax-credits'),
+  taxCredit: (id: string) => tenantRequest<TaxCredit>(`/tax-credits/${seg(id)}`),
+  saveTaxCredit: (data: unknown, id?: string) => tenantRequest<TaxCredit>(id ? `/tax-credits/${seg(id)}` : '/tax-credits', { method: id ? 'PUT' : 'POST', body: JSON.stringify(data) }),
+  deleteTaxCredit: (id: string) => tenantRequest<void>(`/tax-credits/${seg(id)}`, { method: 'DELETE' }),
   f24s: (year: number) => tenantRequest<F24[]>(`/f24?year=${year}`),
   f24: (id: string) => tenantRequest<F24>(`/f24/${seg(id)}`),
-  planOptions: (taxYear: number) => tenantRequest<PlanOptions>(`/f24/plans/${taxYear}/options`),
-  plan: (taxYear: number) => tenantRequest<InstallmentPlan>(`/f24/plans/${taxYear}`),
-  previewPlan: (taxYear: number, data: unknown) => tenantRequest<PlanPreview>(`/f24/plans/${taxYear}/preview`, { method: 'POST', body: JSON.stringify(data) }),
-  createPlan: (taxYear: number, data: unknown) => tenantRequest<InstallmentPlan>(`/f24/plans/${taxYear}`, { method: 'POST', body: JSON.stringify(data) }),
-  deletePlan: (taxYear: number) => tenantRequest<void>(`/f24/plans/${taxYear}`, { method: 'DELETE' }),
+  planOptions: (taxYear: number) => tenantRequest<PlanOptions>(`/installment-plans/${taxYear}/options`),
+  plan: (taxYear: number) => tenantRequest<InstallmentPlan>(`/installment-plans/${taxYear}`),
+  previewPlan: (taxYear: number, data: unknown) => tenantRequest<PlanPreview>(`/installment-plans/${taxYear}/preview`, { method: 'POST', body: JSON.stringify(data) }),
+  createPlan: (taxYear: number, data: unknown) => tenantRequest<InstallmentPlan>(`/installment-plans/${taxYear}`, { method: 'POST', body: JSON.stringify(data) }),
+  deletePlan: (taxYear: number) => tenantRequest<void>(`/installment-plans/${taxYear}`, { method: 'DELETE' }),
   updateF24Status: (id: string, data: unknown) => tenantRequest<F24>(`/f24/${seg(id)}/status`, { method: 'PATCH', body: JSON.stringify(data) }),
   previewInvoiceImport: (files: ImportFile[]) => tenantRequest<ImportPreviewRow[]>('/invoices/import/preview', { method: 'POST', body: JSON.stringify({ files }) }),
   importInvoices: (files: ImportFile[], selected: string[]) => tenantRequest<ImportResult[]>('/invoices/import', { method: 'POST', body: JSON.stringify({ files, selected }) }),

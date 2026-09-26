@@ -138,7 +138,7 @@ async function main() {
     const inv = await call<{ id: string }>('POST', '/invoices', { customerId, date: iso(prevYear, month, 28), lines: [{ description, quantity: 1, unitPrice: amount }] });
     const issued = await call<{ id: string; total: string; number: string }>('POST', `/invoices/${inv.id}/issue`, {});
     const payDate = month === 11 ? iso(prevYear, 12, 20) : iso(prevYear, month + 1, 15);
-    await call('POST', `/invoices/${inv.id}/payments`, { date: payDate, amount: Number(issued.total), method: 'bank transfer' });
+    await call('POST', `/invoices/${inv.id}/payments`, { date: payDate, amount: Number(issued.total) });
     collectedPrev += Number(issued.total);
     console.log(`Issued ${issued.number} (${issued.total} EUR), collected on ${payDate}`);
   }
@@ -160,7 +160,7 @@ async function main() {
     const inv = await call<{ id: string }>('POST', '/invoices', { customerId, date: iso(thisYear, month, Math.min(28, month === now.getMonth() + 1 ? now.getDate() : 28)), lines: [{ description, quantity: 1, unitPrice: amount }] });
     const issued = await call<{ id: string; total: string; number: string }>('POST', `/invoices/${inv.id}/issue`, {});
     const paid = month < now.getMonth() + 1;
-    if (paid) await call('POST', `/invoices/${inv.id}/payments`, { date: iso(thisYear, month + 1, 10), amount: Number(issued.total), method: 'bank transfer' });
+    if (paid) await call('POST', `/invoices/${inv.id}/payments`, { date: iso(thisYear, month + 1, 10), amount: Number(issued.total) });
     console.log(`Issued ${issued.number} (${issued.total} EUR)${paid ? ', collected' : ', open'}`);
   }
 
@@ -169,15 +169,15 @@ async function main() {
   await call('PUT', `/taxes/${thisYear}/data`, { contributionsPaid: 0, taxAdvancesPaid: 0, inpsAdvancesPaid: 0, taxCredits: 0, inpsReducedRate: false });
 
   // Credits from the previous year's return, used in a zero-balance form before the installments.
-  await call('POST', '/taxes/credits', { section: 'TREASURY', code: '4001', referenceYear: prevYear, amount: 1500, installmentCode: '0101', description: `Credito IRPEF ${prevYear} (demo)` });
-  await call('POST', '/taxes/credits', { section: 'LOCAL', code: '3844', localCode: 'G273', referenceYear: prevYear, amount: 109, installmentCode: '0101', description: 'Addizionale comunale a credito (demo)' });
+  await call('POST', '/tax-credits', { section: 'TREASURY', code: '4001', referenceYear: prevYear, amount: 1500, installmentCode: '0101', description: `Credito IRPEF ${prevYear} (demo)` });
+  await call('POST', '/tax-credits', { section: 'LOCAL', code: '3844', localCode: 'G273', referenceYear: prevYear, amount: 109, installmentCode: '0101', description: 'Addizionale comunale a credito (demo)' });
 
   // Installment plan for the previous tax year, paid this year: first available start without surcharge, five installments.
-  const options = await call<{ starts: Array<{ start: string; date: string; surchargePct: number; maxInstallments: number }> }>('GET', `/f24/plans/${prevYear}/options`);
+  const options = await call<{ starts: Array<{ start: string; date: string; surchargePct: number; maxInstallments: number }> }>('GET', `/installment-plans/${prevYear}/options`);
   const start = options.starts.find((s) => s.start === 'EXTENDED') ?? options.starts.find((s) => s.surchargePct === 0) ?? options.starts[0];
   if (start) {
     const installments = Math.min(5, start.maxInstallments);
-    await call('POST', `/f24/plans/${prevYear}`, { start: start.start, installments, useCredits: true, creditOrder: 'INPS_FIRST' });
+    await call('POST', `/installment-plans/${prevYear}`, { start: start.start, installments, useCredits: true, creditOrder: 'INPS_FIRST' });
     console.log(`Created the ${prevYear} installment plan: start ${start.date}, ${installments} installments, credits used`);
   }
 

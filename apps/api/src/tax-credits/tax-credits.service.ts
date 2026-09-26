@@ -1,7 +1,8 @@
 import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import type { AvailableCredit, CreditUse } from '@opentax-it/fiscal-rules';
 import { PrismaService } from '../prisma/prisma.service.js';
-import type { CreateTaxCreditDto } from './tax-credits.dto.js';
+import type { SaveTaxCreditDto } from './dto/request/save-tax-credit.dto.js';
+import type { TaxCreditBalance } from './types/tax-credit-balance.js';
 
 /**
  * Credits usable in F24 and their uses (one TaxCreditUsage per credit row of a form).
@@ -12,7 +13,7 @@ import type { CreateTaxCreditDto } from './tax-credits.dto.js';
 export class TaxCreditsService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async list(tenantId: string) {
+  async list(tenantId: string): Promise<TaxCreditBalance[]> {
     const rows = await this.prisma.taxCredit.findMany({ where: { tenantId }, include: { usages: { include: { f24Line: { include: { f24: { select: { id: true, paymentDate: true, status: true } } } } } } }, orderBy: [{ referenceYear: 'desc' }, { createdAt: 'asc' }] });
     return rows.map((c) => {
       const used = round2(c.usages.reduce((s, u) => s + Number(u.amount), 0));
@@ -33,20 +34,22 @@ export class TaxCreditsService {
       .map((c) => ({ id: c.id, section: c.section, code: c.code, referenceYear: c.referenceYear, amount: c.remaining, localCode: c.localCode ?? undefined, installmentCode: c.installmentCode ?? undefined, description: c.description ?? undefined }));
   }
 
-  async get(tenantId: string, id: string) {
+  async get(tenantId: string, id: string): Promise<TaxCreditBalance> {
     const credit = (await this.list(tenantId)).find((c) => c.id === id);
     if (!credit) throw new NotFoundException('Credit not found');
     return credit;
   }
 
-  create(tenantId: string, dto: CreateTaxCreditDto) {
-    return this.prisma.taxCredit.create({ data: { tenantId, ...fields(dto) } });
+  async create(tenantId: string, dto: SaveTaxCreditDto): Promise<TaxCreditBalance> {
+    const credit = await this.prisma.taxCredit.create({ data: { tenantId, ...fields(dto) } });
+    return this.get(tenantId, credit.id);
   }
 
   /** Like deletion, allowed only while no F24 uses the credit: its rows would no longer match. */
-  async update(tenantId: string, id: string, dto: CreateTaxCreditDto) {
+  async update(tenantId: string, id: string, dto: SaveTaxCreditDto): Promise<TaxCreditBalance> {
     await this.unused(tenantId, id);
-    return this.prisma.taxCredit.update({ where: { id }, data: fields(dto) });
+    await this.prisma.taxCredit.update({ where: { id }, data: fields(dto) });
+    return this.get(tenantId, id);
   }
 
   async remove(tenantId: string, id: string) {
@@ -72,7 +75,7 @@ export class TaxCreditsService {
 
 const round2 = (n: number) => Math.round((n + Number.EPSILON) * 100) / 100;
 
-function fields(dto: CreateTaxCreditDto) {
+function fields(dto: SaveTaxCreditDto) {
   return {
     section: dto.section,
     code: dto.code,

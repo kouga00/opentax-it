@@ -1,12 +1,19 @@
 import { BadRequestException, ConflictException, Injectable, NotFoundException, UnprocessableEntityException } from '@nestjs/common';
 import { buildCompensation, buildPaymentSchedule, creditsAboveLimit, type F24Draft, findInpsOfficeById, type FiscalRuleSet, horizontalUses, i24CancelBy, maxInstallmentDates, nextBusinessDay, parseIsoDate, type PaymentScheduleAmounts, toIsoDate } from '@opentax-it/fiscal-rules';
-import type { F24Kind, F24Status } from '../generated/prisma/enums.js';
+import type { F24Kind } from '../generated/prisma/enums.js';
 import { PrismaService } from '../prisma/prisma.service.js';
-import { TaxCreditsService } from '../taxes/tax-credits.service.js';
+import { TaxCreditsService } from '../tax-credits/tax-credits.service.js';
 import { TaxesService } from '../taxes/taxes.service.js';
 import { TenantsService } from '../tenants/tenants.service.js';
 import { F24PdfService } from './f24-pdf.service.js';
-import { type PlanOptionsDto, type PlanStart, type UpdateF24StatusDto } from './f24.dto.js';
+import type { PlanParametersDto } from './dto/request/plan-parameters.dto.js';
+import type { UpdateF24StatusDto } from './dto/request/update-f24-status.dto.js';
+import type { PlanStart } from './types/plan-start.js';
+import type { PlanOptions } from './types/plan-options.js';
+import type { PlanPreview, PlannedForm } from './types/plan-preview.js';
+import type { PlanStartOption } from './types/plan-start-option.js';
+import type { SavedF24 } from './types/saved-f24.js';
+import type { SavedPlan } from './types/saved-plan.js';
 
 /**
  * Installment plans and F24 forms for the balance/advances of a tax year. The forms are
@@ -18,15 +25,6 @@ import { type PlanOptionsDto, type PlanStart, type UpdateF24StatusDto } from './
  * (DL 70/2011 art. 7); the installment interest is computed on the nominal dates
  * (Redditi PF 2026 instructions, "Rateazione").
  */
-
-export interface PlanStartOption {
-  start: PlanStart;
-  date: string;
-  surchargePct: number;
-  maxInstallments: number;
-  source?: string;
-}
-
 @Injectable()
 export class F24Service {
   constructor(
@@ -52,13 +50,13 @@ export class F24Service {
     ].filter((o): o is PlanStartOption => o !== null);
   }
 
-  async planOptions(tenantId: string, taxYear: number) {
+  async planOptions(tenantId: string, taxYear: number): Promise<PlanOptions> {
     const { paymentRules, paymentRulesYear, warnings } = await this.taxes.rulesForTaxYear(taxYear);
     await this.tenants.getWithProfile(tenantId);
     return { taxYear, paymentYear: taxYear + 1, rulesYear: paymentRulesYear, warnings, starts: this.startOptions(paymentRules), secondAdvanceDate: paymentRules.deadlines.secondAdvance };
   }
 
-  private async compute(tenantId: string, taxYear: number, dto: PlanOptionsDto) {
+  private async compute(tenantId: string, taxYear: number, dto: PlanParametersDto): Promise<PlanPreview> {
     const { profile } = await this.tenants.getWithProfile(tenantId);
     const office = profile.inpsOfficeId ? findInpsOfficeById(profile.inpsOfficeId) : undefined;
     if (!office) throw new BadRequestException('Set the INPS office (codice sede) in the profile before generating F24 forms');
@@ -152,11 +150,11 @@ export class F24Service {
     return rs?.version ?? null;
   }
 
-  async preview(tenantId: string, taxYear: number, dto: PlanOptionsDto) {
+  async preview(tenantId: string, taxYear: number, dto: PlanParametersDto): Promise<PlanPreview> {
     return this.compute(tenantId, taxYear, dto);
   }
 
-  async createPlan(tenantId: string, taxYear: number, dto: PlanOptionsDto) {
+  async createPlan(tenantId: string, taxYear: number, dto: PlanParametersDto): Promise<SavedPlan> {
     const existing = await this.prisma.installmentPlan.findUnique({ where: { tenantId_taxYear: { tenantId, taxYear } } });
     if (existing) throw new ConflictException(`A plan for ${taxYear} already exists: delete it to generate a new one`);
     const p = await this.compute(tenantId, taxYear, dto);
@@ -215,7 +213,7 @@ export class F24Service {
     return this.getPlan(tenantId, taxYear);
   }
 
-  async getPlan(tenantId: string, taxYear: number) {
+  async getPlan(tenantId: string, taxYear: number): Promise<SavedPlan> {
     const plan = await this.prisma.installmentPlan.findUnique({
       where: { tenantId_taxYear: { tenantId, taxYear } },
       include: { f24s: { include: { lines: true }, orderBy: { paymentDate: 'asc' } } },
@@ -224,7 +222,7 @@ export class F24Service {
     return plan;
   }
 
-  async listByPaymentYear(tenantId: string, year: number) {
+  async listByPaymentYear(tenantId: string, year: number): Promise<SavedF24[]> {
     return this.prisma.f24.findMany({
       where: { tenantId, paymentDate: { gte: new Date(Date.UTC(year, 0, 1)), lt: new Date(Date.UTC(year + 1, 0, 1)) } },
       include: { lines: true, plan: { select: { taxYear: true, installments: true } } },
@@ -239,7 +237,7 @@ export class F24Service {
     await this.prisma.installmentPlan.delete({ where: { id: plan.id } });
   }
 
-  async get(tenantId: string, id: string) {
+  async get(tenantId: string, id: string): Promise<SavedF24> {
     const f24 = await this.prisma.f24.findFirst({ where: { id, tenantId }, include: { lines: true, plan: { select: { taxYear: true, installments: true } } } });
     if (!f24) throw new NotFoundException('F24 not found');
     return f24;
@@ -277,17 +275,18 @@ export class F24Service {
     return { fileName: `F24_${date}_${label}.pdf`, content };
   }
 
-  async updateStatus(tenantId: string, id: string, dto: UpdateF24StatusDto) {
+  async updateStatus(tenantId: string, id: string, dto: UpdateF24StatusDto): Promise<SavedF24> {
     const f24 = await this.prisma.f24.findFirst({ where: { id, tenantId } });
     if (!f24) throw new NotFoundException('F24 not found');
-    const status = dto.status as F24Status;
+    const { status } = dto;
     const data =
       status === 'PAID'
         ? { status, paidOn: dto.paidOn ? parseIsoDate(dto.paidOn) : new Date(), i24ScheduledAt: f24.i24ScheduledAt }
         : status === 'SCHEDULED_I24'
           ? { status, paidOn: null, i24ScheduledAt: new Date() }
           : { status, paidOn: null, i24ScheduledAt: null };
-    return this.prisma.f24.update({ where: { id }, data, include: { lines: true } });
+    await this.prisma.f24.update({ where: { id }, data });
+    return this.get(tenantId, id);
   }
 }
 
@@ -303,7 +302,7 @@ function creditsUsedTotal(p: { compensation: { used: number } }): number {
 }
 
 /** Payment date moved to the next business day; the I24 cancellation limit follows the actual debit date. */
-function serializeForm(f: F24Draft) {
+function serializeForm(f: F24Draft): PlannedForm {
   const paymentDate = nextBusinessDay(f.paymentDate);
   return {
     ...f,
