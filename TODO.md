@@ -127,6 +127,7 @@ Emissione e XML sono pronti; manca la trasmissione. Normativa verificata in [doc
 - Fatto: piano rate, unica soluzione (1 rata → `0101`), interessi, I24, stampa sul modello ufficiale, compensazione a saldo zero, collegamento F24 pagati → Imposte.
 - Da fare: F24 per il bollo trimestrale (codici 2521-2524, scadenze già in calendario); ravvedimento operoso (D.Lgs. 472/97 art. 13; D.Lgs. 471/97 art. 13) con codici 8944/1989/1990 — **da verificare**; export dei dati per F24 web/home banking (formato **da verificare**: non esiste un tracciato pubblico per il contribuente, solo per intermediari).
 - Set di regole 2027 quando usciranno circolare INPS, istruzioni e proroghe.
+- **Usi dei crediti fuori dall'app**: oggi un credito si consuma solo con le righe degli F24 generati qui. Registrare a mano un uso esterno (data, codice tributo del debito, importo), es. il credito 4001 usato dall'intermediario per versare le ritenute (codice 1040) sulle sue fatture. Gli usi esterni orizzontali contano nel limite dei 5.000 € per credito e anno (ris. AdE 110/E/2019).
 - Messaggi di avviso dell'API in italiano (oggi in inglese).
 
 ### Monitoraggio normativo
