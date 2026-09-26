@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIR = join(ROOT, 'docs/fonti');
 const REGISTRY = join(DIR, 'registro.json');
-const OFFICIAL_HOSTS = /(^|\.)(agenziaentrate\.gov\.it|normattiva\.it|gazzettaufficiale\.it|inps\.it|adm\.gov\.it|fatturapa\.gov\.it)$/;
+const OFFICIAL_HOSTS = /(^|\.)(agenziaentrate\.gov\.it|normattiva\.it|gazzettaufficiale\.it|inps\.it|adm\.gov\.it|fatturapa\.gov\.it|agid\.gov\.it)$/;
 const UA = 'Mozilla/5.0 (opentax-it source archive)';
 
 const sha256 = (buf) => createHash('sha256').update(buf).digest('hex');

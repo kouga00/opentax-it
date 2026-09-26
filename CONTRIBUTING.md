@@ -16,7 +16,7 @@ In questo settore un errore costa sanzioni a chi usa il software. Per questo:
 Lo stesso vale per la documentazione e per `TODO.md`: una feature non verificata resta "da verificare", non "da fare".
 
 ## Regole fiscali
-- **Solo fonti ufficiali**: Agenzia delle Entrate, INPS, Gazzetta Ufficiale/Normattiva, ADM, fatturapa.gov.it. Blog e portali fiscali possono orientare, ma non sono una fonte accettabile in una PR.
+- **Solo fonti ufficiali**: Agenzia delle Entrate, INPS, Gazzetta Ufficiale/Normattiva, ADM, fatturapa.gov.it e, per la posta elettronica certificata, AgID. Blog e portali fiscali possono orientare, ma non sono una fonte accettabile in una PR.
 - Ogni regola in `packages/fiscal-rules` deve avere: riferimento normativo in commento (atto, articolo/comma o provvedimento, data), test con casi presi dagli esempi ufficiali (es. il prospetto rate delle istruzioni Redditi PF), e un'entry in `docs/normativa-*.md`.
 - Nessun valore hardcodato nel codice applicativo: aliquote, soglie, scadenze vivono nel `FiscalRuleSet` dell'anno.
 - Se una fonte è ambigua, apri una issue prima di codificare.

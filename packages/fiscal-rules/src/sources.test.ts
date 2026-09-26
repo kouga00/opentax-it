@@ -43,7 +43,7 @@ describe('source registry', () => {
     expect(byId.size).toBe(registry.sources.length);
     for (const s of registry.sources) {
       for (const url of [s.url, s.fetchUrl, s.sessionUrl].filter(Boolean) as string[]) {
-        expect(new URL(url).hostname, s.id).toMatch(/(^|\.)(agenziaentrate\.gov\.it|normattiva\.it|gazzettaufficiale\.it|inps\.it|adm\.gov\.it|fatturapa\.gov\.it)$/);
+        expect(new URL(url).hostname, s.id).toMatch(/(^|\.)(agenziaentrate\.gov\.it|normattiva\.it|gazzettaufficiale\.it|inps\.it|adm\.gov\.it|fatturapa\.gov\.it|agid\.gov\.it)$/);
       }
     }
   });

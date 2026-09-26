@@ -402,6 +402,30 @@
       "file": "documenti/normattiva-dl-193-2016-art7quater.txt",
       "retrievedOn": "2026-09-24",
       "sha256": "24e4f52231e07ee936b4b675d5a5f0d516b1d05e0d881fada4f86b89ff8de564"
+    },
+    {
+      "id": "agid-dm-2005-11-02-pec",
+      "authority": "AgID",
+      "title": "DM 2 novembre 2005, \"Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica certificata\" (G.U. 15 novembre 2005, n. 266)",
+      "kind": "law",
+      "url": "https://www.agid.gov.it/sites/default/files/repository_files/leggi_decreti_direttive/dm_2-nov-2005.pdf",
+      "format": "pdf",
+      "file": "documenti/agid-dm-2005-11-02-pec.pdf",
+      "text": "documenti/agid-dm-2005-11-02-pec.txt",
+      "retrievedOn": "2026-09-26",
+      "sha256": "bd61c1e22c4836fb921737fec87228fed0764809db11bf920f71baf7d3e00154"
+    },
+    {
+      "id": "agid-pec-regole-tecniche",
+      "authority": "AgID",
+      "title": "Regole tecniche del servizio di trasmissione di documenti informatici mediante posta elettronica certificata (allegato al DM 2 novembre 2005)",
+      "kind": "specification",
+      "url": "https://www.agid.gov.it/sites/default/files/repository_files/leggi_decreti_direttive/pec_regole_tecniche_dm_2-nov-2005.pdf",
+      "format": "pdf",
+      "file": "documenti/agid-pec-regole-tecniche.pdf",
+      "text": "documenti/agid-pec-regole-tecniche.txt",
+      "retrievedOn": "2026-09-26",
+      "sha256": "5f3a9772880e4b7cc07cd15d1d5763db8ed445d2a0c900fe2acc5df58ea8f6ae"
     }
   ]
 }

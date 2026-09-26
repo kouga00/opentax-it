@@ -1,0 +1,495 @@
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della
+posta elettronica certificata”
+G.U. 15 novembre 2005, n. 266
+IL MINISTRO PER L'INNOVAZIONE E LE TECNOLOGIE
+-
+
+Visto l’articolo 17 del decreto del Presidente della Repubblica 11 febbraio 2005, n. 68,
+concernente
+
+-
+
+Visto il Regolamento recante disposizioni per l’utilizzo della posta elettronica certificata, a
+norma dell’articolo 27 della legge 16 gennaio 2003, n. 3;
+
+-
+
+Visti gli articoli 8, comma 2, e 14, comma 2, del decreto del Presidente della Repubblica 28
+dicembre 2000, n. 445, recante Testo unico sulla documentazione amministrativa, e
+successive modificazioni;
+
+-
+
+Visto il decreto del Presidente del Consiglio dei Ministri 6 maggio 2005, concernente delega
+di funzioni del Presidente del Consiglio dei Ministri in materia di innovazione e tecnologie
+al Ministro senza portafoglio, dott. Lucio Stanca;
+
+-
+
+Espletata la procedura di notifica alla Commissione europea, di cui alla direttiva 98/34/CE
+del Parlamento europeo e del Consiglio del 22 giugno 1998, modificata dalla direttiva
+98/48/CE del Parlamento europeo e del Consiglio del 20 luglio 1998, recepita
+nell’ordinamento italiano con il decreto legislativo 23 novembre 2000, n. 427;
+
+-
+
+Sentito il Ministro per la funzione pubblica;
+DECRETA
+Capo I - Principi generali
+
+Articolo 1 - Definizioni
+1. Ai fini del presente decreto si applicano le definizioni contenute nell’articolo 1 del decreto
+del Presidente della Repubblica 11 febbraio 2005, n. 68, citato nelle premesse. Si intende,
+inoltre, per:
+a. punto di accesso: il sistema che fornisce i servizi di accesso per l’invio e la lettura di
+messaggi di posta elettronica certificata, nonché i servizi di identificazione ed
+accesso dell’utente, di verifica della presenza di virus informatici all’interno del
+messaggio, di emissione della ricevuta di accettazione e di imbustamento del
+messaggio originale nella busta di trasporto;
+
+www.cnipa.gov.it
+
+1/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+b. punto di ricezione: il sistema che riceve il messaggio all’interno di un dominio di
+posta elettronica certificata, effettua i controlli sulla provenienza e sulla correttezza
+del messaggio ed emette la ricevuta di presa in carico, imbusta i messaggi errati in
+una busta di anomalia e verifica la presenza di virus informatici all’interno dei
+messaggi di posta ordinaria e delle buste di trasporto;
+c. punto di consegna: il sistema che compie la consegna del messaggio nella casella di
+posta elettronica certificata del titolare destinatario, verifica la provenienza e la
+correttezza del messaggio ed emette, a seconda dei casi, la ricevuta di avvenuta
+consegna o l’avviso di mancata consegna;
+d. firma del gestore di posta elettronica certificata: la firma elettronica avanzata, basata
+su un sistema di chiavi asimmetriche, che consente di rendere manifesta la
+provenienza e di assicurare l’integrità e l’autenticità dei messaggi del sistema di
+posta elettronica certificata, generata attraverso una procedura informatica che
+garantisce la connessione univoca al gestore e la sua univoca identificazione, creata
+automaticamente con mezzi che garantiscano il controllo esclusivo da parte del
+gestore;
+e. ricevuta di accettazione: la ricevuta, sottoscritta con la firma del gestore di posta
+elettronica certificata del mittente, contenente i dati di certificazione, rilasciata al
+mittente dal punto di accesso a fronte dell’invio di un messaggio di posta elettronica
+certificata;
+f. avviso di non accettazione: l’avviso, sottoscritto con la firma del gestore di posta
+elettronica certificata del mittente, che viene emesso quando il gestore mittente è
+impossibilitato ad accettare il messaggio in ingresso, recante la motivazione per cui
+non è possibile accettare il messaggio e l’esplicitazione che il messaggio non potrà
+essere consegnato al destinatario;
+g. ricevuta di presa in carico: la ricevuta, sottoscritta con la firma del gestore di posta
+elettronica certificata del destinatario, emessa dal punto di ricezione nei confronti del
+gestore di posta elettronica certificata mittente per attestare l’avvenuta presa in
+carico del messaggio da parte del sistema di posta elettronica certificata di
+destinazione, recante i dati di certificazione per consentirne l’associazione con il
+messaggio a cui si riferisce;
+h. ricevuta di avvenuta consegna: la ricevuta, sottoscritta con la firma del gestore di
+posta elettronica certificata del destinatario, emessa dal punto di consegna al mittente
+nel momento in cui il messaggio è inserito nella casella di posta elettronica
+certificata del destinatario;
+i. ricevuta completa di avvenuta consegna: la ricevuta nella quale sono contenuti i dati
+di certificazione ed il messaggio originale;
+l. l) ricevuta breve di avvenuta consegna: la ricevuta nella quale sono contenuti i dati di
+certificazione ed un estratto del messaggio originale;
+m. ricevuta sintetica di avvenuta consegna: la ricevuta che contiene i dati di
+certificazione;
+n. avviso di mancata consegna: l’avviso, emesso dal sistema, per indicare l’anomalia al
+mittente del messaggio originale nel caso in cui il gestore di posta elettronica
+certificata sia impossibilitato a consegnare il messaggio nella casella di posta
+elettronica certificata del destinatario;
+www.cnipa.gov.it
+
+2/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+o. messaggio originale: il messaggio inviato da un utente di posta elettronica certificata
+prima del suo arrivo al punto di accesso e consegnato al titolare destinatario per
+mezzo di una busta di trasporto che lo contiene;
+p. busta di trasporto: la busta creata dal punto di accesso e sottoscritta con la firma del
+gestore di posta elettronica certificata mittente, all’interno della quale sono inseriti il
+messaggio originale inviato dall’utente di posta elettronica certificata ed i relativi
+dati di certificazione;
+q. busta di anomalia: la busta, sottoscritta con la firma del gestore di posta elettronica
+certificata del destinatario, nella quale è inserito un messaggio errato ovvero non di
+posta elettronica certificata e consegnata ad un titolare, per evidenziare al
+destinatario detta anomalia;
+r. dati di certificazione: i dati, quali ad esempio data ed ora di invio, mittente,
+destinatario, oggetto, identificativo del messaggio, che descrivono l’invio del
+messaggio originale e sono certificati dal gestore di posta elettronica certificata del
+mittente; tali dati sono inseriti nelle ricevute e sono trasferiti al titolare destinatario
+insieme al messaggio originale per mezzo di una busta di trasporto;
+s. gestore di posta elettronica certificata: il soggetto che gestisce uno o più domini di
+posta elettronica certificata con i relativi punti di accesso, di ricezione e di consegna,
+titolare della chiave usata per la firma delle ricevute e delle buste e che si interfaccia
+con altri gestori di posta elettronica certificata per l’interoperabilità con altri titolari;
+t. titolare: il soggetto a cui è assegnata una casella di posta elettronica certificata;
+u. dominio di posta elettronica certificata: dominio di posta elettronica certificata che
+contiene unicamente caselle di posta elettronica certificata;
+v. indice dei gestori di posta elettronica certificata: il sistema, che contiene l’elenco dei
+domini e dei gestori di posta elettronica certificata, con i relativi certificati
+corrispondenti alle chiavi usate per la firma delle ricevute, degli avvisi e delle buste,
+realizzato per mezzo di un server Lightweight Directory Access Protocol, di seguito
+denominato LDAP, posizionato in un’area raggiungibile dai vari gestori di posta
+elettronica certificata e che costituisce, inoltre, la struttura tecnica relativa all’elenco
+pubblico dei gestori di posta elettronica certificata.
+z. casella di posta elettronica certificata: la casella di posta elettronica posta all’interno
+di un dominio di posta elettronica certificata ed alla quale è associata una funzione
+che rilascia ricevute di avvenuta consegna al ricevimento di messaggi di posta
+elettronica certificata;
+aa. marca temporale: un'evidenza informatica con cui si attribuisce, ad uno o più
+documenti informatici, un riferimento temporale opponibile ai terzi secondo quanto
+previsto dal decreto del Presidente della Repubblica 28 dicembre 2000, n. 445 e dal
+decreto del Presidente del Consiglio dei Ministri 13 gennaio 2004, pubblicato nella
+Gazzetta Ufficiale del 27 aprile 2004, n. 98.
+Articolo 2 - Obiettivi e finalità
+1. Il presente decreto definisce le regole tecniche relative alle modalità di realizzazione e
+funzionamento della posta elettronica certificata di cui al D.P.R. n. 68 del 2005.
+www.cnipa.gov.it
+
+3/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+Articolo 3 - Norme tecniche di riferimento
+1. Sono di seguito elencati gli standard di riferimento delle norme tecniche, le cui specifiche di
+dettaglio vengono riportate in allegato al presente decreto:
+a. RFC 1847 (Security
+Multipart/Encrypted);
+
+Multiparts
+
+for
+
+MIME:
+
+Multipart/Signed
+
+and
+
+b. RFC 1891 (SMTP Service Extension for Delivery Status Notifications);
+c. RFC 1912 (Common DNS Operational and Configuration Errors);
+d. RFC 2252 (Lightweight Directory Access Protocol (v3): Attribute Syntax
+Definitions);
+e. RFC 2315 (PKCS #7: Cryptographic Message Syntax Version 1.5);
+f. RFC 2633 (S/MIME Version 3 Message Specification);
+g. RFC 2660 (The Secure HyperText Transfer Protocol);
+h. RFC 2821 (Simple Mail Transfer Protocol);
+i. RFC 2822 (Internet Message Format);
+l. RFC 2849 (The LDAP Data Interchange Format (LDIF) - Technical Specification);
+m. RFC 3174 (US Secure Hash Algorithm 1 - SHA1);
+n. RFC 3207 (SMTP Service Extension for Secure SMTP over Transport Layer
+Security);
+o. RFC 3280 (Internet X.509 Public Key Infrastructure Certificate and Certificate
+Revocation List - CRL Profile).
+Articolo 4 - Compatibilità operativa degli standard
+192.
+Il Centro nazionale per l’informatica nella pubblica amministrazione, di seguito
+denominato CNIPA, verifica, in funzione dell’evoluzione tecnologica, la coerenza operativa
+degli standard così come adottati nelle specifiche tecniche, dando tempestiva informazione
+delle eventuali variazioni nel proprio sito istituzionale.
+
+Capo II - Disposizioni per i titolari e per i gestori di posta elettronica certificata
+Articolo 5 - Comunicazione e variazione della disponibilità all’utilizzo della posta elettronica
+certificata
+1. La dichiarazione di cui all’articolo 4, comma 4, del D.P.R. n. 68 del 2005, può essere resa
+mediante l’utilizzo di strumenti informatici, nel qual caso la dichiarazione deve essere
+www.cnipa.gov.it
+
+4/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+sottoscritta con la firma digitale di cui all’art. 1, comma 1, lettera n) del D.P.R. n. 445 del
+2000.
+2. La dichiarazione di cui al comma 1 è resa anche nei casi di variazione dell’indirizzo di posta
+elettronica certificata o di cessazione della volontà di avvalersi della posta elettronica
+certificata medesima.
+
+Articolo 6 - Caratteristiche dei messaggi gestiti dai sistemi di posta elettronica certificata
+1. I sistemi di posta elettronica certificata generano messaggi conformi allo standard
+internazionale S/MIME, così come descritto dallo standard RFC 2633.
+2. I messaggi di cui al comma 1 si dividono in tre categorie:
+a. ricevute;
+b. avvisi;
+c. buste.
+3. La differenziazione dei messaggi, come indicato nel comma 2, è realizzata dai sistemi di
+posta elettronica certificata utilizzando la struttura header, prevista dallo standard S/MIME,
+da impostare per ogni tipologia di messaggio in conformità a quanto previsto dalle
+specifiche tecniche di cui all’allegato.
+4. I sistemi di posta elettronica certificata in relazione alla tipologia di messaggio da gestire
+realizzano funzionalità distinte e specifiche.
+5. L’elaborazione dei messaggi di posta elettronica certificata avviene anche nel caso in cui il
+mittente ed il destinatario appartengano allo stesso dominio di posta elettronica certificata.
+6. Le ricevute generate dai sistemi di posta elettronica certificata sono le seguenti:
+a. ricevuta di accettazione;
+b. ricevuta di presa in carico;
+c. ricevuta di avvenuta consegna completa, breve, sintetica.
+7. La ricevuta di avvenuta consegna è rilasciata per ogni destinatario al quale il messaggio è
+consegnato.
+8. Gli avvisi generati dai sistemi di posta elettronica certificata sono i seguenti:
+a. avviso di non accettazione per eccezioni formali ovvero per virus informatici;
+b. avviso di rilevazione di virus informatici;
+c. avviso di mancata consegna per superamento dei tempi massimi previsti ovvero per
+rilevazione di virus informatici.
+9. Le buste generate dai sistemi di posta elettronica certificata sono le seguenti:
+a. busta di trasporto;
+b. busta di anomalia.
+
+www.cnipa.gov.it
+
+5/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+10. La busta di trasporto è consegnata immodificata nella casella di posta elettronica certificata
+di destinazione per permettere la verifica dei dati di certificazione da parte del ricevente.
+Articolo 7 - Firma elettronica dei messaggi di posta elettronica certificata
+1. I messaggi di cui all’articolo 6, generati dai sistemi di posta elettronica certificata, sono
+sottoscritti dai gestori mediante la firma del gestore di posta elettronica certificata, in
+conformità a quanto previsto dall’allegato.
+2. I certificati di firma di cui al comma 1 sono rilasciati dal CNIPA al gestore al momento
+dell’iscrizione nell’elenco pubblico dei gestori di posta elettronica certificata e sino ad un
+numero massimo di dieci firme per ciascun gestore.
+3. Qualora un gestore abbia ravvisato la necessità di utilizzare un numero di certificati di firma
+superiore a dieci, può richiederli al CNIPA documentando tale necessità. Il CNIPA, previa
+valutazione della richiesta, stabilisce se fornire o meno al gestore ulteriori certificati di
+firma.
+Articolo 8 -Interoperabilità
+1. Le specifiche tecniche finalizzate a garantire l’interoperabilità sono definite nell’allegato.
+
+Articolo 9 - Riferimento temporale
+1. A ciascuna trasmissione è apposto un unico riferimento temporale, secondo le modalità
+indicate nell’allegato.
+2. Il riferimento temporale può essere generato con qualsiasi sistema che garantisca
+stabilmente uno scarto non superiore ad un minuto secondo rispetto alla scala di Tempo
+Universale Coordinato (UTC), determinata ai sensi dell’articolo 3, comma 1, della legge 11
+agosto 1991, n. 273.
+Articolo 10 - Conservazione dei log dei messaggi
+1. Al fine della conservazione dei log dei messaggi, di cui alle deliberazioni del CNIPA in
+materia di riproduzione e conservazione dei documenti su supporto ottico, ogni gestore
+provvede a:
+a. definire un intervallo temporale unitario non superiore alle ventiquattro ore;
+b. eseguire senza soluzioni di continuità il salvataggio dei log dei messaggi generati in
+ciascun intervallo temporale come sopra definito.
+2. Ai file generati da ciascuna operazione di salvataggio deve essere associata la relativa marca
+temporale.
+www.cnipa.gov.it
+
+6/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+Articolo 11 - Conservazione dei messaggi contenenti virus e relativa informativa al mittente
+1. Il gestore è tenuto a trattare il messaggio contenente virus secondo le regole tecniche
+indicate nell’allegato.
+2. Il gestore è tenuto ad informare il mittente che il messaggio inviato contiene virus.
+3. Il gestore è tenuto a conservare il messaggio contenente virus per un periodo non inferiore ai
+trenta mesi secondo le modalità indicate nelle deliberazioni del CNIPA in materia di
+riproduzione e conservazione dei documenti su supporto ottico.
+Articolo 12 - Livelli di servizio
+1. Il gestore di posta elettronica certificata può fissare il numero massimo di destinatari e la
+dimensione massima del singolo messaggio, sia per i messaggi che provengono da un suo
+titolare, sia per i messaggi che provengono da titolari di caselle di altri gestori di posta
+elettronica certificata.
+2. In ogni caso il gestore di posta elettronica certificata deve garantire la possibilità dell’invio
+di un messaggio:
+a. almeno fino a cinquanta destinatari;
+b. per il quale il prodotto del numero dei destinatari per la dimensione del messaggio
+stesso non superi i trenta megabytes.
+3. La disponibilità nel tempo del servizio di posta elettronica certificata deve essere maggiore o
+uguale al 99,8% del periodo temporale di riferimento.
+4. Il periodo temporale di riferimento, per il calcolo della disponibilità del servizio di posta
+elettronica certificata, è pari ad un quadrimestre.
+5. La durata massima di ogni evento di indisponibilità del servizio di posta elettronica
+certificata deve essere minore, o uguale, al 50% del totale previsto per l'intervallo di tempo
+di riferimento.
+6. Nell’ambito dell’intervallo di disponibilità di cui al comma 3, la ricevuta di accettazione
+deve essere fornita al mittente entro un termine, da concordarsi tra gestore e titolare, da
+calcolare a partire dall’inoltro del messaggio, non considerando i tempi relativi alla
+trasmissione.
+7. Al fine di assicurare in ogni caso il completamento della trasmissione ed il rilascio delle
+ricevute, il gestore di posta elettronica certificata descrive nel manuale operativo, di cui
+all’articolo 23, le soluzioni tecniche ed organizzative che realizzano i servizi di emergenza,
+ai sensi di quanto previsto dall’articolo 11, comma 4, del D.P.R. n. 68 del 2005, e
+consentano il rispetto dei vincoli definiti nei commi 4 e 5 del presente articolo.
+Articolo 13 - Avvisi di mancata consegna
+
+www.cnipa.gov.it
+
+7/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+1. Qualora il gestore del mittente non abbia ricevuto dal gestore del destinatario, nelle dodici
+ore successive all’inoltro del messaggio, la ricevuta di presa in carico o di avvenuta
+consegna del messaggio inviato, comunica al mittente che il gestore del destinatario
+potrebbe non essere in grado di realizzare la consegna del messaggio.
+2. Qualora, entro ulteriori dodici ore, il gestore del mittente non abbia ricevuto la ricevuta di
+avvenuta consegna del messaggio inviato, inoltra al mittente un ulteriore avviso relativo alla
+mancata consegna del messaggio entro le 24 ore successive all’invio, così come previsto dal
+D.P.R. n. 68 del 2005.
+Articolo 14 - Norme di garanzia sulla natura della posta elettronica ricevuta
+1. Il gestore di posta elettronica certificata del destinatario ha l’obbligo di segnalare a
+quest’ultimo se la posta elettronica in arrivo non è qualificabile come posta elettronica
+certificata, secondo quanto prescritto dal D.P.R. n. 68 del 2005, nonché dal presente decreto
+e relativo allegato.
+2. I messaggi relativi all’invio e alla consegna di documenti attraverso la posta elettronica
+certificata sono rilasciati indipendentemente dalle caratteristiche e dal valore giuridico dei
+documenti trasmessi.
+Articolo 15 - Limiti di utilizzo
+1. La pubblica amministrazione che intende iscriversi all’elenco dei gestori di posta elettronica
+certificata, di cui all’articolo 14 del D.P.R. n. 68 del 2005, è tenuta a presentare al CNIPA
+una relazione tecnica che illustri le misure adottate affinché l’utilizzo di caselle di posta
+elettronica rilasciate a privati dall’amministrazione medesima:
+a. costituisca invio valido ai sensi dell’articolo 16, comma 2, del D.P.R. n. 68 del 2005;
+b. avvenga limitatamente ai rapporti di cui al medesimo articolo 16, comma 2.
+Articolo 16 - Modalità di iscrizione all’elenco dei gestori di posta elettronica certificata
+1. I soggetti che presentano domanda di iscrizione all’elenco pubblico, di cui all’articolo 14 del
+D.P.R. n. 68 del 2005, forniscono inoltre al CNIPA le informazioni e i documenti di seguito
+indicati, anche su supporto elettronico, ad eccezione del documento di cui alla lettera e):
+a. denominazione sociale;
+b. sede legale;
+c. sedi presso le quali è erogato il servizio;
+d. rappresentante legale;
+e. piano per la sicurezza, contenuto in busta sigillata;
+f. manuale operativo di cui all’articolo 23;
+g. dichiarazione di impegno al rispetto delle disposizioni del D.P.R. n. 68 del 2005;
+www.cnipa.gov.it
+
+8/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+h. dichiarazione di conformità ai requisiti previsti nel presente decreto e suo allegato;
+i. relazione sulla struttura organizzativa.
+2. I soggetti che rivestono natura giuridica privata trasmettono, inoltre, copia cartacea di una
+polizza assicurativa o di un certificato provvisorio impegnativo di copertura dei rischi
+dell’attività e dei danni causati a terzi, rilasciata da una società di assicurazioni abilitata ad
+esercitare nel campo dei rischi industriali, a norma delle vigenti disposizioni.
+Articolo 17 - Equivalenza dei requisiti dei gestori stranieri
+1. Il gestore di posta elettronica certificata stabilito in altri Stati membri dell’Unione europea
+che si trovi nelle condizioni di cui all’articolo 15 del D.P.R. n. 68 del 2005 ed intenda
+esercitare il servizio di posta elettronica certificata in Italia, comunica in via preventiva al
+CNIPA tale intenzione ed ogni notizia utile al fine della verifica di cui al citato articolo 15.
+La comunicazione costituisce domanda di iscrizione nell’elenco di gestori di posta
+elettronica certificata; sono applicabili le disposizioni procedimentali di cui all’articolo14
+del D.P.R. n. 68 del 2005.
+Articolo 18 - Indice ed elenco pubblico dei gestori di posta elettronica certificata
+1. I gestori di posta elettronica certificata si attengono alle regole riportate nell’allegato per
+accedere all’indice dei gestori di posta elettronica certificata.
+2. Il certificato elettronico, da utilizzare per la funzione di accesso di cui al comma 1, è
+rilasciato dal CNIPA al gestore al momento dell’iscrizione nell’elenco pubblico di cui
+all’articolo 14 del D.P.R. n. 68 del 2005.
+3. L'elenco pubblico dei gestori di posta elettronica certificata tenuto dal CNIPA contiene, per
+ogni gestore, le seguenti indicazioni:
+a. denominazione sociale;
+b. sede legale;
+c. rappresentante legale;
+d. indirizzo internet;
+e. data di iscrizione all’elenco;
+f. data di cessazione ed eventuale gestore sostitutivo.
+4. L'elenco pubblico è sottoscritto con firma digitale dal CNIPA, che lo rende disponibile per
+via telematica.
+Articolo 19 - Disciplina dei compiti del CNIPA
+1. 1. Il CNIPA definisce con circolari le modalità di inoltro della domanda e le modalità
+dell’esercizio dei compiti di vigilanza e controllo di cui all’articolo 14 del D.P.R. n. 68 del
+2005.
+www.cnipa.gov.it
+
+9/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+Articolo 20 - Sistema di qualità del gestore
+1. Entro un anno dall'iscrizione del gestore all’elenco pubblico di cui all’articolo 14 del D.P.R
+n. 68 del 2005, il gestore medesimo fornisce copia della certificazione di conformità del
+proprio sistema di qualità alle norme UNI EN ISO 9001:2000 e successive evoluzioni
+relativamente a tutti i processi connessi al servizio di posta elettronica certificata.
+2. Il manuale della qualità è depositato presso il CNIPA e reso disponibile presso il gestore.
+Articolo 21 - Organizzazione e funzioni del personale del certificatore
+1. L'organizzazione del personale addetto al servizio di posta elettronica certificata prevede
+almeno la presenza di responsabili preposti allo svolgimento delle seguenti attività e
+funzioni:
+a. registrazione dei titolari;
+b. servizi tecnici;
+c. verifiche e ispezioni (auditing);
+d. sicurezza;
+e. sicurezza dei log dei messaggi;
+f. sistema di riferimento temporale.
+2. È possibile attribuire al medesimo soggetto più responsabilità tra quelle previste dalle lettere
+d), e) ed f).
+Articolo 22 - Requisiti di competenza ed esperienza del personale
+1. Il personale cui sono attribuite le funzioni previste dall'articolo 21 deve aver maturato
+un’esperienza almeno quinquennale nelle attività di analisi, progettazione,
+commercializzazione e conduzione di sistemi informatici.
+2. Per ogni aggiornamento apportato al sistema di posta elettronica certificata, il gestore eroga,
+alle figure professionali interessate, apposita attività di addestramento.
+Articolo 23 - Manuale operativo
+1. Il manuale operativo definisce e descrive le procedure applicate dal gestore di posta
+elettronica certificata nello svolgimento della propria attività.
+2. Il manuale operativo è depositato presso il CNIPA.
+3. Il manuale contiene:
+a. i dati identificativi del gestore;
+www.cnipa.gov.it
+
+10/11
+
+Decreto 2 novembre 2005
+“Regole tecniche per la formazione, la trasmissione e la validazione, anche temporale, della posta elettronica
+certificata”
+G.U. 15 novembre 2005, n. 266
+
+b. i dati identificativi della versione del manuale operativo;
+c. l’indicazione del responsabile del manuale operativo;
+d. l’individuazione, l’indicazione e la definizione degli obblighi del gestore di posta
+elettronica certificata e dei titolari;
+e. la definizione delle responsabilità e delle eventuali limitazioni agli indennizzi;
+f. l'indirizzo del sito web del gestore ove sono pubblicate le informazioni relative ai
+servizi offerti;
+g. le modalità di protezione della riservatezza dei dati;
+h. le modalità per l’apposizione e la definizione del riferimento temporale.
+Il presente decreto è inviato ai competenti organi di controllo ed è pubblicato sulla Gazzetta
+Ufficiale della Repubblica Italiana.
+Roma, 2 novembre 2005
+Il Ministro per l'innovazione e le tecnologie Stanca
+
+www.cnipa.gov.it
+
+11/11
+
+
