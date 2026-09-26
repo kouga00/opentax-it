@@ -1,29 +1,20 @@
 'use client';
 
-import { useActionState, useState } from 'react';
-import { addPayment, deletePayment } from '@/lib/actions';
+import { deletePayment } from '@/lib/actions';
 import { formatDate, formatMoney } from '@/lib/format';
-import type { Payment } from '@/lib/types';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import type { InvoiceCollection } from '@/lib/types';
+import { paymentMethodLabel } from '@/lib/payment-methods';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Field } from '@/components/field';
-import { ErrorAlert } from '@/components/error-alert';
-import { useExchangeRate } from '@/components/exchange-rate';
 import { DeleteRowAction, RowActions } from '@/components/row-actions';
 
-export function Payments({ invoiceId, currency, total, payments }: { invoiceId: string; currency: string; total: number; payments: Payment[] }) {
-  const [state, action, pending] = useActionState(addPayment, undefined);
-  const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
-  const [ecbRate, setEcbRate] = useState('');
-  const rate = useExchangeRate(currency, date, ecbRate, setEcbRate);
-  const collected = payments.reduce((s, p) => s + Number(p.amount), 0);
-  const outstanding = Math.round((total - collected) * 100) / 100;
+/** Collections of an issued document; on a credit note they are the refunds, recorded as negative amounts. */
+export function Payments({ collection }: { collection: InvoiceCollection }) {
+  const { invoiceId, currency, refund, collected, remaining, payments } = collection;
   return (
     <div className="space-y-4">
       <dl className="grid max-w-sm grid-cols-2 gap-1 text-sm">
-        <dt className="text-muted-foreground">Incassato</dt><dd className="text-right font-mono">{formatMoney(collected, currency)}</dd>
-        <dt className="text-muted-foreground">Residuo</dt><dd className="text-right font-mono">{formatMoney(outstanding, currency)}</dd>
+        <dt className="text-muted-foreground">{refund ? 'Rimborsato' : 'Incassato'}</dt><dd className="text-right font-mono">{formatMoney(collected, currency)}</dd>
+        <dt className="text-muted-foreground">Residuo</dt><dd className="text-right font-mono">{formatMoney(remaining, currency)}</dd>
       </dl>
       {payments.length > 0 && (
         <Table>
@@ -33,7 +24,7 @@ export function Payments({ invoiceId, currency, total, payments }: { invoiceId: 
               <TableRow key={p.id}>
                 <TableCell className="font-mono">{formatDate(p.date)}</TableCell>
                 <TableCell className="text-right font-mono">{formatMoney(p.amount, currency)}</TableCell>
-                <TableCell>{p.method ?? '—'}</TableCell>
+                <TableCell>{paymentMethodLabel(p.method)}</TableCell>
                 <TableCell>
                   <RowActions>
                     <DeleteRowAction action={deletePayment} fields={{ id: p.id, invoiceId }} label="Elimina incasso" confirm={`Eliminare l'incasso del ${formatDate(p.date)}?`} />
@@ -44,19 +35,6 @@ export function Payments({ invoiceId, currency, total, payments }: { invoiceId: 
           </TableBody>
         </Table>
       )}
-      <form action={action} className="grid gap-3 sm:grid-cols-4">
-        <ErrorAlert message={state?.error} />
-        <input type="hidden" name="invoiceId" value={invoiceId} />
-        <Field label="Data incasso" htmlFor="date"><Input id="date" name="date" type="date" required value={date} onChange={(e) => setDate(e.target.value)} /></Field>
-        <Field label={`Importo (${currency})`} htmlFor="amount" hint="Negativo per un rimborso"><Input id="amount" name="amount" type="number" step="0.01" required defaultValue={outstanding > 0 ? outstanding : ''} /></Field>
-        {currency !== 'EUR' && (
-          <Field label={`Cambio del giorno: 1 EUR = … ${currency}`} htmlFor="ecbRate" hint={rate.info ?? "Cambio del giorno dell'incasso (art. 9 c. 2 TUIR)"}>
-            <Input id="ecbRate" name="ecbRate" type="number" step="0.000001" min="0.000001" required value={ecbRate} onChange={(e) => rate.onManualChange(e.target.value)} />
-          </Field>
-        )}
-        <Field label="Metodo" htmlFor="method"><Input id="method" name="method" placeholder="bonifico" /></Field>
-        <div className="flex items-end"><Button type="submit" disabled={pending}>{pending ? 'Salvataggio…' : 'Registra incasso'}</Button></div>
-      </form>
     </div>
   );
 }

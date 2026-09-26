@@ -28,6 +28,7 @@ export default async function EditInvoicePage({ params }: PageProps<'/invoices/[
     surcharge: surchargeApplied === me?.profile?.applyInpsSurcharge ? 'default' : surchargeApplied ? 'yes' : 'no',
     paymentTermsId: inv.paymentTermsId ?? '',
     bankAccountId: inv.bankAccountId ?? '',
+    paymentMethod: inv.paymentMethod ?? '',
     ecbRate: inv.currency !== 'EUR' && Number(inv.exchangeRate) > 0 ? String(Math.round((1 / Number(inv.exchangeRate)) * 1e4) / 1e4) : undefined,
     lines: (inv.lines ?? []).map((l) => ({ description: l.description, quantity: String(Number(l.quantity)), unit: l.unit ?? '', unitPrice: String(Number(l.unitPrice)) })),
   };

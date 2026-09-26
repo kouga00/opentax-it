@@ -10,12 +10,12 @@ export function RowActions({ children }: { children: ReactNode }) {
   return <div className="flex justify-end gap-1">{children}</div>;
 }
 
-/** Icon button with a tooltip: a link when `render` is given, otherwise a native submit button. */
-export function RowAction({ label, render, destructive, children }: { label: string; render?: ReactElement; destructive?: boolean; children: ReactElement }) {
+/** Icon button with a tooltip: a link when `render` is given, a plain button with `onClick`, otherwise a native submit button. */
+export function RowAction({ label, render, onClick, destructive, children }: { label: string; render?: ReactElement; onClick?: () => void; destructive?: boolean; children: ReactElement }) {
   const variant = destructive ? 'destructive' : 'ghost';
   const button = render
     ? <Button variant={variant} size="icon-sm" aria-label={label} render={render} />
-    : <Button variant={variant} size="icon-sm" aria-label={label} type="submit" />;
+    : <Button variant={variant} size="icon-sm" aria-label={label} type={onClick ? 'button' : 'submit'} onClick={onClick} />;
   return (
     <Tooltip>
       <TooltipTrigger render={button}>{children}</TooltipTrigger>

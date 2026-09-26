@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { BadRequestException, ConflictException, UnprocessableEntityException } from '@nestjs/common';
+import { isXmllintAvailable, validateWithXsd } from '@opentax-it/fatturapa';
 import { ruleSet2026 } from '@opentax-it/fiscal-rules';
 import { Prisma } from '../generated/prisma/client.js';
 import type { FiscalRulesService } from '../fiscal-rules/fiscal-rules.service.js';
@@ -160,6 +161,99 @@ describe('InvoicesService.preview', () => {
     expect(preview.customer.name).toBe('Acme Solutions S.r.l.');
     expect(preview.payment?.iban).toBe('IT60X0542811101000000123456');
     expect(preview.lines[0].vatNature).toBe('N2.2');
+  });
+
+  /** Draft of 1,000 + 4% INPS + stamp, with the given payment method, payment terms of 30 days and a bank account. */
+  const draftWithMethod = (paymentMethod: string | null) => ({
+    id: 'draft-1',
+    tenantId: 'tenant1',
+    customerId: 'cust1',
+    type: 'TD01' as const,
+    year: 2026,
+    sequence: null,
+    number: '',
+    date: new Date('2026-09-22T00:00:00Z'),
+    currency: 'EUR',
+    exchangeRate: new Prisma.Decimal(1),
+    vatNature: 'N2_2' as const,
+    taxableAmount: new Prisma.Decimal(1000),
+    inpsSurcharge: new Prisma.Decimal(40),
+    virtualStamp: true,
+    stampAmount: new Prisma.Decimal(2),
+    total: new Prisma.Decimal(1042),
+    notes: ['Nota 1'],
+    status: 'DRAFT' as const,
+    refInvoiceId: null,
+    paymentTermsId: 'terms1',
+    bankAccountId: 'bank1',
+    paymentMethod,
+    xmlFileName: null,
+    xmlPath: null,
+    internalNotes: null,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    customer: mockCustomer,
+    lines: [{ id: 'line1', invoiceId: 'draft-1', lineNumber: 1, description: 'Sviluppo software', quantity: new Prisma.Decimal(1), unit: null, unitPrice: new Prisma.Decimal(1000), totalPrice: new Prisma.Decimal(1000) }],
+  });
+  const termsMock = { findFirst: vi.fn().mockResolvedValue({ id: 'terms1', name: '30 gg', days: 30, method: 'MP05', isDefault: true }) };
+  const bankMock = () => ({ findFirst: vi.fn().mockResolvedValue({ id: 'bank1', iban: 'IT60X0542811101000000123456', bic: 'UNCRITM1XXX' }) });
+
+  it('uses the method chosen on the draft, not the one of the payment terms, and leaves out the bank for a card payment', async () => {
+    const bankAccount = bankMock();
+    const prismaMock = {
+      invoice: { findFirst: vi.fn().mockResolvedValue(draftWithMethod('MP08')) },
+      paymentTerms: termsMock,
+      bankAccount,
+    } as unknown as PrismaService;
+    const service = new InvoicesService(
+      prismaMock,
+      { getActive: vi.fn().mockResolvedValue(mockRules) } as unknown as FiscalRulesService,
+      { getWithProfile: vi.fn().mockResolvedValue({ profile: mockProfile }) } as unknown as TenantsService,
+      {} as unknown as StorageService,
+      new InvoicesPdfService(),
+    );
+
+    const preview = await service.preview('tenant1', 'draft-1');
+
+    expect(preview.payment).toEqual({ dueDate: '2026-10-22', method: 'MP08', iban: undefined, bic: undefined });
+    expect(bankAccount.findFirst).not.toHaveBeenCalled();
+  });
+
+  it('issues with the method of the draft when the issue form changes due date and IBAN, and stores it on the invoice', async () => {
+    const draft = draftWithMethod('MP19');
+    let xml = '';
+    const update = vi.fn().mockImplementation(({ data }: { data: object }) => Promise.resolve({ ...draft, ...data }));
+    const tx = {
+      $executeRaw: vi.fn().mockResolvedValue(1),
+      invoice: {
+        findFirst: vi.fn().mockImplementation(({ where }: { where: { id: string } }) => Promise.resolve(where.id === 'draft-1' ? { status: 'DRAFT' } : null)),
+        aggregate: vi.fn().mockResolvedValue({ _max: { sequence: 4 } }),
+        findMany: vi.fn().mockResolvedValue([]),
+        update,
+      },
+    };
+    const prismaMock = {
+      invoice: { findFirst: vi.fn().mockResolvedValue(draft) },
+      paymentTerms: termsMock,
+      bankAccount: bankMock(),
+      $transaction: vi.fn().mockImplementation((fn: (t: typeof tx) => unknown) => fn(tx)),
+    } as unknown as PrismaService;
+    const storageMock = { write: vi.fn().mockImplementation((_path: string, content: string) => { xml = content; return Promise.resolve(); }) } as unknown as StorageService;
+    const service = new InvoicesService(
+      prismaMock,
+      { getActive: vi.fn().mockResolvedValue(ruleSet2026) } as unknown as FiscalRulesService,
+      { getWithProfile: vi.fn().mockResolvedValue({ profile: { ...mockProfile, sdiFileProgressiveStart: null } }) } as unknown as TenantsService,
+      storageMock,
+      new InvoicesPdfService(),
+    );
+
+    await service.issue('tenant1', 'draft-1', { payment: { dueDate: '2026-10-31', iban: 'IT02L1234512345123456789012' }, confirmThresholds: true });
+
+    expect(xml).toContain('<ModalitaPagamento>MP19</ModalitaPagamento>');
+    expect(xml).toContain('<DataScadenzaPagamento>2026-10-31</DataScadenzaPagamento>');
+    expect(xml).toContain('<IBAN>IT02L1234512345123456789012</IBAN>');
+    expect(update).toHaveBeenCalledWith(expect.objectContaining({ data: expect.objectContaining({ status: 'ISSUED', paymentMethod: 'MP19' }) }));
+    if (isXmllintAvailable()) expect(validateWithXsd(xml)).toEqual([]);
   });
 
   it('builds preview for an ISSUED invoice by parsing the saved XML file', async () => {

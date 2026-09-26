@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PDFDocument, PDFFont, PDFPage, StandardFonts, rgb } from 'pdf-lib';
+import { paymentMethodLabel } from '@opentax-it/fatturapa';
 import type { CourtesyInvoice } from './invoices.dto.js';
 
 export type InvoicePdfData = CourtesyInvoice;
@@ -325,7 +326,7 @@ export class InvoicesPdfService {
       page.drawText('MODALITA DI PAGAMENTO', { x: MARGIN_LEFT, y: py - 8, size: 8, font: fontBold, color: rgb(0.3, 0.4, 0.5) });
       py -= 14;
       if (data.payment.method) {
-        page.drawText(`Metodo: ${data.payment.method === 'MP05' ? 'Bonifico bancario (MP05)' : data.payment.method}`, {
+        page.drawText(`Metodo: ${paymentMethodLabel(data.payment.method)}`, {
           x: MARGIN_LEFT,
           y: py - 8,
           size: 8.5,

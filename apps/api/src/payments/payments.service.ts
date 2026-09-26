@@ -1,6 +1,7 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service.js';
 import type { CreatePaymentDto } from './payments.dto.js';
+import type { InvoiceCollection } from './types/invoice-collection.js';
 
 /**
  * Collections on invoices. Cash basis (L. 190/2014 art. 1 par. 64; Istr. LM section III):
@@ -15,6 +16,30 @@ export class PaymentsService {
 
   listByInvoice(tenantId: string, invoiceId: string) {
     return this.prisma.payment.findMany({ where: { tenantId, invoiceId }, orderBy: { date: 'asc' } });
+  }
+
+  /** What an issued document asks, what was collected and what is left, in the document currency. */
+  async collection(tenantId: string, invoiceId: string): Promise<InvoiceCollection> {
+    const invoice = await this.prisma.invoice.findFirst({
+      where: { id: invoiceId, tenantId },
+      include: { payments: { orderBy: { date: 'asc' } } },
+    });
+    if (!invoice) throw new NotFoundException(`Invoice ${invoiceId} not found`);
+    // A credit note is settled by refunds, recorded as negative collections: count them as positive.
+    const refund = invoice.type === 'TD04';
+    const recorded = invoice.payments.reduce((s, p) => s + Number(p.amount), 0);
+    const collected = round2(refund ? -recorded : recorded);
+    const total = Number(invoice.total);
+    return {
+      invoiceId: invoice.id,
+      currency: invoice.currency,
+      total,
+      refund,
+      collected,
+      remaining: round2(total - collected),
+      paymentMethod: invoice.paymentMethod,
+      payments: invoice.payments,
+    };
   }
 
   listByYear(tenantId: string, year: number) {
@@ -37,7 +62,8 @@ export class PaymentsService {
     if (!exchangeRate) throw new BadRequestException(`Incasso in ${invoice.currency}: indica il cambio del giorno dell'incasso (art. 9 c. 2 TUIR)`);
     const amountEur = dto.amountEur ?? round2(dto.amount * exchangeRate);
     return this.prisma.payment.create({
-      data: { tenantId, invoiceId, date: new Date(`${dto.date}T00:00:00Z`), amount: dto.amount, amountEur, exchangeRate, method: dto.method, notes: dto.notes },
+      // Without an explicit method, the collection takes the one asked in the invoice (ModalitaPagamento).
+      data: { tenantId, invoiceId, date: new Date(`${dto.date}T00:00:00Z`), amount: dto.amount, amountEur, exchangeRate, method: dto.method ?? invoice.paymentMethod, notes: dto.notes },
     });
   }
 

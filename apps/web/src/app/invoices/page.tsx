@@ -62,7 +62,7 @@ export default async function InvoicesPage({ searchParams }: PageProps<'/invoice
                   <TableCell>{customerLabel(i.customer)}</TableCell>
                   <TableCell className="text-right font-mono">{formatMoney(i.total, i.currency)}</TableCell>
                   <TableCell><InvoiceStatusBadge status={i.status} /></TableCell>
-                  <TableCell><InvoiceRowActions id={i.id} status={i.status} hasXml={Boolean(i.xmlFileName)} /></TableCell>
+                  <TableCell><InvoiceRowActions invoice={i} /></TableCell>
                 </TableRow>
               ))}
               {invoices.length === 0 && <TableRow><TableCell colSpan={7} className="text-center text-muted-foreground">Nessun documento nel {year}.</TableCell></TableRow>}

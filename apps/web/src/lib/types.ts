@@ -118,6 +118,8 @@ export interface Invoice {
   refInvoiceId: string | null;
   paymentTermsId: string | null;
   bankAccountId: string | null;
+  /** ModalitaPagamento asked of the customer, e.g. MP05; null when the document has no DatiPagamento. */
+  paymentMethod: string | null;
   xmlFileName: string | null;
   customer: InvoiceCustomerSummary;
   lines?: InvoiceLine[];
@@ -432,4 +434,31 @@ export interface RuleSetDetail extends RuleSetSummary {
     values: Array<{ path: string; before: unknown; after: unknown }>;
     sources: Array<{ key: string; before?: RuleSourceRef; after?: RuleSourceRef }>;
   } | null;
+}
+
+/** A collection as returned by GET /invoices/:id/collection. */
+export interface CollectionPayment {
+  id: string;
+  /** YYYY-MM-DD */
+  date: string;
+  /** In the document currency; negative for a refund. */
+  amount: number;
+  amountEur: number;
+  exchangeRate: number;
+  method: string | null;
+  notes: string | null;
+}
+
+/** What an issued document asks, what was collected and what is left, in the document currency. */
+export interface InvoiceCollection {
+  invoiceId: string;
+  currency: string;
+  total: number;
+  /** Credit note: collections are refunds, recorded as negative amounts. */
+  refund: boolean;
+  /** Collected (refunded) so far, as a positive amount. */
+  collected: number;
+  remaining: number;
+  paymentMethod: string | null;
+  payments: CollectionPayment[];
 }

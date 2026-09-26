@@ -18,6 +18,7 @@ vi.mock('@opentax-it/fatturapa', () => ({
     lines: [{ lineNumber: 1, description: 'Consulenza', unitPrice: 100, totalPrice: 100 }],
     summaryNatures: ['N2.2'],
     relatedDocuments: [],
+    payments: [{ method: 'MP05', dueDate: '2025-03-31', amount: 100 }],
     notes: [],
   }),
 }));
@@ -57,6 +58,8 @@ describe('InvoicesImportService.importFiles', () => {
     expect(paths).toEqual(['tenant1/invoices/2025/imported/inv1_fattura.xml', 'tenant1/invoices/2025/imported/inv2_fattura.xml']);
     for (const call of storage.write.mock.calls) expect(call[2]).toEqual({ exclusive: true });
     expect(tx.invoice.update).toHaveBeenCalledWith({ where: { id: 'inv1' }, data: { xmlPath: paths[0] } });
+    // ModalitaPagamento of the document, so that its collections take it.
+    expect(tx.invoice.create).toHaveBeenCalledWith(expect.objectContaining({ data: expect.objectContaining({ paymentMethod: 'MP05' }) }));
   });
 
   it('reports an error when the XML cannot be stored, inside the transaction', async () => {

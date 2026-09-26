@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Field } from '@/components/field';
 import { NativeSelect } from '@/components/native-select';
 import { ErrorAlert } from '@/components/error-alert';
+import { PAYMENT_METHOD_OPTIONS } from '@/lib/payment-methods';
 
 export function TermsForm({ terms, first }: { terms?: PaymentTerms; first?: boolean }) {
   const [state, action, pending] = useActionState(savePaymentTerms, undefined);
@@ -21,10 +22,7 @@ export function TermsForm({ terms, first }: { terms?: PaymentTerms; first?: bool
       <Field label="Giorni dalla data fattura" htmlFor="days"><Input id="days" name="days" type="number" min={0} max={365} required defaultValue={t?.days ?? 10} /></Field>
       <Field label="Modalità (ModalitaPagamento)" htmlFor="method">
         <NativeSelect id="method" name="method" defaultValue={t?.method ?? 'MP05'}>
-          <option value="MP05">MP05 · Bonifico</option>
-          <option value="MP08">MP08 · Carta di pagamento</option>
-          <option value="MP19">MP19 · SEPA Direct Debit</option>
-          <option value="MP01">MP01 · Contanti</option>
+          {PAYMENT_METHOD_OPTIONS.map((o) => <option key={o.code} value={o.code}>{o.code} · {o.label}</option>)}
         </NativeSelect>
       </Field>
       <label className="flex items-center gap-2 text-sm sm:col-span-3"><Checkbox name="isDefault" defaultChecked={t ? t.isDefault : first} /> Profilo predefinito (usato quando la fattura non ne indica uno)</label>

@@ -260,6 +260,9 @@ model Invoice {
   paymentTerms   PaymentTerms? @relation(fields: [paymentTermsId], references: [id])
   bankAccountId  String?
   bankAccount    BankAccount?  @relation(fields: [bankAccountId], references: [id])
+  /// ModalitaPagamento asked of the customer (spec 1.9.1), e.g. MP05 bank transfer; null when the document
+  /// has no DatiPagamento. Collections recorded on the invoice take this method.
+  paymentMethod  String?
   xmlFileName   String?
   xmlPath       String?
   internalNotes String?

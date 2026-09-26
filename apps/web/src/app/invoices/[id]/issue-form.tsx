@@ -13,7 +13,7 @@ import { Input } from '@/components/ui/input';
 import { Field } from '@/components/field';
 import { ErrorAlert } from '@/components/error-alert';
 
-export function IssueForm({ id, defaultDueDate, defaultIban, thresholds }: { id: string; defaultDueDate?: string; defaultIban?: string; thresholds?: ThresholdOutlook | null }) {
+export function IssueForm({ id, defaultDueDate, defaultIban, showIban, thresholds }: { id: string; defaultDueDate?: string; defaultIban?: string; showIban: boolean; thresholds?: ThresholdOutlook | null }) {
   const needsConfirm = Boolean(thresholds && (thresholds.projectedOverExit || thresholds.projectedOverPersonalLimit));
   const [state, action, pending] = useActionState(issueInvoice, undefined);
   return (
@@ -22,7 +22,7 @@ export function IssueForm({ id, defaultDueDate, defaultIban, thresholds }: { id:
       <input type="hidden" name="id" value={id} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Scadenza pagamento" htmlFor="dueDate" hint="Precompilata dalle condizioni del profilo"><Input id="dueDate" name="dueDate" type="date" defaultValue={defaultDueDate ?? ''} /></Field>
-        <Field label="IBAN" htmlFor="iban"><Input id="iban" name="iban" defaultValue={defaultIban ?? ''} /></Field>
+        {showIban && <Field label="IBAN" htmlFor="iban"><Input id="iban" name="iban" defaultValue={defaultIban ?? ''} /></Field>}
       </div>
       {thresholds && needsConfirm && (
         <Alert variant={thresholds.projectedOverExit ? 'destructive' : 'warning'}>

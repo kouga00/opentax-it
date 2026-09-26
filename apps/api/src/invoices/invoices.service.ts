@@ -31,6 +31,13 @@ const round2 = (n: number) => Math.round((n + Number.EPSILON) * 100) / 100;
 
 type InvoiceWithRelations = Invoice & { lines: InvoiceLine[]; customer: Customer };
 
+/**
+ * Methods paid into the supplier's account, for which DatiPagamento carries the bank (IBAN: "il conto corrente del
+ * beneficiario", spec 1.9.1): bank transfer and SEPA Direct Debit. The spec allows the IBAN with any method;
+ * leaving it out for cash or card is a choice of this app, so that the customer is not shown an account to use.
+ */
+export const usesBankAccount = (method: string) => method === 'MP05' || method === 'MP19';
+
 @Injectable()
 export class InvoicesService {
   private readonly logger = new Logger(InvoicesService.name);
@@ -76,10 +83,10 @@ export class InvoicesService {
       const ref = await this.prisma.invoice.findFirst({ where: { id: dto.refInvoiceId, tenantId } });
       if (!ref) throw new BadRequestException(`Referenced invoice ${dto.refInvoiceId} not found`);
     }
-    if (dto.paymentTermsId) {
-      const terms = await this.prisma.paymentTerms.findFirst({ where: { id: dto.paymentTermsId, tenantId } });
-      if (!terms) throw new BadRequestException(`Payment terms ${dto.paymentTermsId} not found`);
-    }
+    const terms = dto.paymentTermsId
+      ? await this.prisma.paymentTerms.findFirst({ where: { id: dto.paymentTermsId, tenantId } })
+      : await this.prisma.paymentTerms.findFirst({ where: { tenantId, isDefault: true } });
+    if (dto.paymentTermsId && !terms) throw new BadRequestException(`Payment terms ${dto.paymentTermsId} not found`);
     if (dto.bankAccountId) {
       const bank = await this.prisma.bankAccount.findFirst({ where: { id: dto.bankAccountId, tenantId } });
       if (!bank) throw new BadRequestException(`Bank account ${dto.bankAccountId} not found`);
@@ -134,6 +141,7 @@ export class InvoicesService {
         refInvoiceId: dto.refInvoiceId ?? null,
         paymentTermsId: dto.paymentTermsId ?? null,
         bankAccountId: dto.bankAccountId ?? null,
+        paymentMethod: dto.paymentMethod ?? terms?.method ?? null,
         internalNotes: dto.internalNotes ?? null,
       },
       lines,
@@ -239,7 +247,9 @@ export class InvoicesService {
       const transmissionSeq = nextFileSequence(used.map((u) => u.xmlFileName ?? ''), profile.country, profile.fiscalCode, profile.sdiFileProgressiveStart ?? undefined);
 
       const refInvoice = existing.refInvoiceId ? await tx.invoice.findFirst({ where: { id: existing.refInvoiceId, tenantId } }) : null;
-      const payment = dto?.payment ?? (await this.paymentFromTerms(tenantId, existing));
+      // The issue form replaces due date and IBAN (an emptied field leaves it out); the method stays the one chosen on the draft.
+      const fromDraft = await this.paymentFromTerms(tenantId, existing);
+      const payment = dto?.payment ? { ...dto.payment, method: dto.payment.method ?? fromDraft?.method } : fromDraft;
       const model = this.toFatturaPa({ ...existing, number }, profile, rules, transmissionSeq, refInvoice, payment);
       const xml = buildInvoiceXml(model);
       const xmlFileName = invoiceFileName(profile.country, profile.fiscalCode, transmissionSeq);
@@ -247,7 +257,7 @@ export class InvoicesService {
 
       const issued = await tx.invoice.update({
         where: { id },
-        data: { sequence, number, status: 'ISSUED', xmlFileName, xmlPath },
+        data: { sequence, number, status: 'ISSUED', xmlFileName, xmlPath, paymentMethod: payment ? (payment.method ?? 'MP05') : null },
         include: { lines: true, customer: true },
       });
       // Last step: a failed write rolls the transaction back. The file may replace one left by a
@@ -258,19 +268,23 @@ export class InvoicesService {
   }
 
   /**
-   * DatiPagamento from the invoice's payment terms (or the tenant default terms): due date =
-   * invoice date + days; bank = the invoice's bank account, else the tenant default bank.
+   * DatiPagamento of a draft: method chosen on the draft (else the one of its payment terms); due date =
+   * invoice date + days of the payment terms (or the tenant default terms); bank = the invoice's bank account,
+   * else the tenant default bank, only for the methods paid into the supplier's account.
    */
   private async paymentFromTerms(tenantId: string, inv: Invoice): Promise<CreateInvoiceDto['payment'] | undefined> {
     const terms = inv.paymentTermsId
       ? await this.prisma.paymentTerms.findFirst({ where: { id: inv.paymentTermsId, tenantId } })
       : await this.prisma.paymentTerms.findFirst({ where: { tenantId, isDefault: true } });
-    const bank = inv.bankAccountId
-      ? await this.prisma.bankAccount.findFirst({ where: { id: inv.bankAccountId, tenantId } })
-      : await this.prisma.bankAccount.findFirst({ where: { tenantId, isDefault: true } });
-    if (!terms && !bank) return undefined;
+    const method = inv.paymentMethod ?? terms?.method ?? 'MP05';
+    const bank = !usesBankAccount(method)
+      ? null
+      : inv.bankAccountId
+        ? await this.prisma.bankAccount.findFirst({ where: { id: inv.bankAccountId, tenantId } })
+        : await this.prisma.bankAccount.findFirst({ where: { tenantId, isDefault: true } });
+    if (!terms && !bank && !inv.paymentMethod) return undefined;
     const due = terms ? new Date(inv.date.getTime() + terms.days * 24 * 3600 * 1000).toISOString().slice(0, 10) : undefined;
-    return { dueDate: due, method: terms?.method ?? 'MP05', iban: bank?.iban, bic: bank?.bic ?? undefined };
+    return { dueDate: due, method, iban: bank?.iban, bic: bank?.bic ?? undefined };
   }
 
   async xml(tenantId: string, id: string): Promise<{ fileName: string; content: string }> {

@@ -11,6 +11,7 @@ import { Field } from '@/components/field';
 import { useExchangeRate } from '@/components/exchange-rate';
 import { HelpTip } from '@/components/help-tip';
 import { NativeSelect } from '@/components/native-select';
+import { PAYMENT_METHOD_OPTIONS, usesBankAccount } from '@/lib/payment-methods';
 import { ErrorAlert } from '@/components/error-alert';
 
 interface LineDraft { description: string; quantity: string; unit: string; unitPrice: string }
@@ -27,6 +28,8 @@ export interface InvoiceDraft {
   surcharge: 'default' | 'yes' | 'no';
   paymentTermsId: string;
   bankAccountId: string;
+  /** ModalitaPagamento; empty when the draft has none. */
+  paymentMethod: string;
   /** Foreign currency: ECB rate "1 EUR = X units", as entered. */
   ecbRate?: string;
   lines: LineDraft[];
@@ -50,6 +53,14 @@ export function InvoiceForm({ customers, issuedInvoices, terms, banks, draft, su
   const [surcharge, setSurcharge] = useState<'default' | 'yes' | 'no'>(draft?.surcharge ?? 'default');
   const [paymentTermsId, setPaymentTermsId] = useState(draft ? draft.paymentTermsId : (terms.find((t) => t.isDefault)?.id ?? terms[0]?.id ?? ''));
   const [bankAccountId, setBankAccountId] = useState(draft ? draft.bankAccountId : (banks.find((b) => b.isDefault)?.id ?? banks[0]?.id ?? ''));
+  const termsMethod = (id: string) => terms.find((t) => t.id === id)?.method ?? 'MP05';
+  const [paymentMethod, setPaymentMethod] = useState(draft?.paymentMethod || termsMethod(paymentTermsId));
+  const bankUsed = usesBankAccount(paymentMethod);
+  // A payment terms profile carries its own method: choosing the profile proposes it.
+  const chooseTerms = (id: string) => {
+    setPaymentTermsId(id);
+    if (id) setPaymentMethod(termsMethod(id));
+  };
   const [lines, setLines] = useState<LineDraft[]>(draft?.lines.length ? draft.lines : [emptyLine()]);
   const [ecbRate, setEcbRate] = useState(draft?.ecbRate ?? '');
   const currency = customers.find((c) => c.id === customerId)?.currency ?? 'EUR';
@@ -69,7 +80,8 @@ export function InvoiceForm({ customers, issuedInvoices, terms, banks, draft, su
         date,
         applyInpsSurcharge: surcharge === 'default' ? undefined : surcharge === 'yes',
         paymentTermsId: paymentTermsId || undefined,
-        bankAccountId: bankAccountId || undefined,
+        bankAccountId: (bankUsed && bankAccountId) || undefined,
+        paymentMethod,
         // ECB quotes "1 EUR = X units"; the API stores EUR per unit.
         exchangeRate: foreignCurrency && Number(ecbRate) > 0 ? Math.round((1 / Number(ecbRate.replace(',', '.'))) * 1e6) / 1e6 : undefined,
         lines: lines.map((l) => ({ description: l.description, quantity: Number(l.quantity) || 1, unit: l.unit || undefined, unitPrice: Number(l.unitPrice) })),
@@ -114,17 +126,25 @@ export function InvoiceForm({ customers, issuedInvoices, terms, banks, draft, su
           </Field>
         )}
         <Field label="Profilo di scadenza" htmlFor="terms" hint={terms.length === 0 ? 'Nessun profilo: creane uno nelle impostazioni' : undefined}>
-          <NativeSelect id="terms" value={paymentTermsId} onChange={(e) => setPaymentTermsId(e.target.value)}>
+          <NativeSelect id="terms" value={paymentTermsId} onChange={(e) => chooseTerms(e.target.value)}>
             <option value="">— nessuna scadenza in fattura —</option>
             {terms.map((t) => <option key={t.id} value={t.id}>{t.name} ({t.days} gg)</option>)}
           </NativeSelect>
         </Field>
-        <Field label="Banca" htmlFor="bank" hint={banks.length === 0 ? 'Nessuna banca: aggiungila nelle impostazioni' : undefined}>
-          <NativeSelect id="bank" value={bankAccountId} onChange={(e) => setBankAccountId(e.target.value)}>
-            <option value="">— nessun IBAN in fattura —</option>
-            {banks.map((b) => <option key={b.id} value={b.id}>{b.name}{b.bankName ? ` · ${b.bankName}` : ''}</option>)}
+        <Field label="Modalità di pagamento" htmlFor="paymentMethod" hint="Come chiedi al cliente di pagare (ModalitaPagamento)">
+          <NativeSelect id="paymentMethod" value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value)}>
+            {PAYMENT_METHOD_OPTIONS.map((o) => <option key={o.code} value={o.code}>{o.label} ({o.code})</option>)}
+            {!PAYMENT_METHOD_OPTIONS.some((o) => o.code === paymentMethod) && <option value={paymentMethod}>{paymentMethod}</option>}
           </NativeSelect>
         </Field>
+        {bankUsed && (
+          <Field label="Conto di accredito" htmlFor="bank" hint={banks.length === 0 ? 'Nessuna banca: aggiungila nelle impostazioni' : 'IBAN su cui il cliente paga'}>
+            <NativeSelect id="bank" value={bankAccountId} onChange={(e) => setBankAccountId(e.target.value)}>
+              <option value="">— nessun IBAN in fattura —</option>
+              {banks.map((b) => <option key={b.id} value={b.id}>{b.name}{b.bankName ? ` · ${b.bankName}` : ''}</option>)}
+            </NativeSelect>
+          </Field>
+        )}
         <Field label={inpsSurchargeLabel(surchargePct)} htmlFor="surcharge">
           <NativeSelect id="surcharge" value={surcharge} onChange={(e) => setSurcharge(e.target.value as 'default' | 'yes' | 'no')}>
             <option value="default">Come da profilo</option>

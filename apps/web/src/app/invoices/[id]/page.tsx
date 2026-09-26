@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { InvoiceStatusBadge } from '@/components/invoice-status-badge';
+import { paymentMethodLabel, usesBankAccount } from '@/lib/payment-methods';
 import { TYPE_LABELS } from '../page';
 import { IssueForm } from './issue-form';
 import { Payments } from './payments';
@@ -18,13 +19,15 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
   if (!inv) notFound();
   const isDraft = inv.status === 'DRAFT';
   const rules = Number(inv.inpsSurcharge) > 0 ? await fetchOrNull(() => api.activeRules(inv.year)) : null;
-  const payments = isDraft ? [] : ((await fetchOrNull(() => api.payments(id))) ?? []);
+  const collection = isDraft ? null : await fetchOrNull(() => api.collection(id));
   const [terms, banks, thresholds, me] = isDraft
     ? await Promise.all([fetchOrNull(() => api.paymentTerms()), fetchOrNull(() => api.bankAccounts()), fetchOrNull(() => api.invoiceThresholds(id)), fetchOrNull(() => api.me())])
     : [null, null, null, null];
   const missingVies = inv.customer.kind === 'EU' && me?.profile && !me.profile.viesRegistered;
   const chosenTerms = terms?.find((t) => t.id === inv.paymentTermsId) ?? terms?.find((t) => t.isDefault);
-  const chosenBank = banks?.find((b) => b.id === inv.bankAccountId) ?? banks?.find((b) => b.isDefault);
+  const method = inv.paymentMethod ?? chosenTerms?.method ?? 'MP05';
+  const bankUsed = usesBankAccount(method);
+  const chosenBank = bankUsed ? (banks?.find((b) => b.id === inv.bankAccountId) ?? banks?.find((b) => b.isDefault)) : undefined;
   const defaultDueDate = chosenTerms ? new Date(new Date(inv.date).getTime() + chosenTerms.days * 86_400_000).toISOString().slice(0, 10) : undefined;
   return (
     <main className="mx-auto w-full max-w-6xl space-y-6 p-6">
@@ -39,6 +42,7 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
         {isDraft && <Button variant="outline" render={<Link href={`/invoices/${inv.id}/edit`} />}>Modifica</Button>}
         <Button variant="outline" render={<a href={`/invoices/${inv.id}/pdf?inline=1`} target="_blank" rel="noreferrer" />}>Anteprima</Button>
         <Button variant="outline" render={<a href={`/invoices/${inv.id}/pdf`} />}>Scarica PDF</Button>
+        {inv.xmlFileName && <Button variant="outline" render={<a href={`/invoices/${inv.id}/xml`} />}>Scarica XML</Button>}
       </div>
 
       <Card>
@@ -83,7 +87,7 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
             <CardDescription>Assegna il numero progressivo, genera l&apos;XML FatturaPA e lo salva. Dopo l&apos;emissione il documento non è più modificabile.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-sm text-muted-foreground">Scadenza: {chosenTerms ? `${chosenTerms.name} (${chosenTerms.days} gg)` : 'nessuna'} · Banca: {chosenBank ? chosenBank.name : 'nessuna'}. Puoi modificare i valori qui sotto prima di emettere.</p>
+            <p className="text-sm text-muted-foreground">Modalità: {paymentMethodLabel(method)} · Scadenza: {chosenTerms ? `${chosenTerms.name} (${chosenTerms.days} gg)` : 'nessuna'}{bankUsed && <> · Banca: {chosenBank ? chosenBank.name : 'nessuna'}</>}. La modalità si cambia modificando la bozza; scadenza{bankUsed ? ' e IBAN' : ''} anche qui sotto prima di emettere.</p>
             {missingVies && (
               <Alert variant="warning">
                 <TriangleAlert />
@@ -98,31 +102,17 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
                 <AlertDescription>Le fatture verso la PA vanno firmate con un certificato di firma qualificata (CAdES .xml.p7m o XAdES, fatturapa.gov.it &quot;Firmare la FatturaPA&quot;). La firma non è ancora supportata: l&apos;emissione è bloccata, usa un altro strumento per questa fattura.</AlertDescription>
               </Alert>
             )}
-            <IssueForm id={inv.id} defaultDueDate={defaultDueDate} defaultIban={chosenBank?.iban} thresholds={thresholds} />
+            <IssueForm id={inv.id} defaultDueDate={defaultDueDate} defaultIban={chosenBank?.iban} showIban={bankUsed} thresholds={thresholds} />
           </CardContent>
         </Card>
       ) : (
-        <>
         <Card>
           <CardHeader>
             <CardTitle>Incassi</CardTitle>
-            <CardDescription>Principio di cassa: il compenso concorre al reddito dell&apos;anno in cui viene incassato (L. 190/2014 art. 1 c. 64).</CardDescription>
+            <CardDescription>Modalità di pagamento in fattura: {paymentMethodLabel(inv.paymentMethod)}. Principio di cassa: il compenso concorre al reddito dell&apos;anno in cui viene incassato (L. 190/2014 art. 1 c. 64). I nuovi incassi si registrano dall&apos;elenco delle fatture.</CardDescription>
           </CardHeader>
-          <CardContent><Payments invoiceId={inv.id} currency={inv.currency} total={Number(inv.total)} payments={payments} /></CardContent>
+          <CardContent>{collection && <Payments collection={collection} />}</CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>File e Stampa</CardTitle>
-            <CardDescription>{inv.xmlFileName ? `XML: ${inv.xmlFileName}` : 'Documento emesso'}</CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-wrap gap-2">
-            <Button render={<a href={`/invoices/${inv.id}/pdf?inline=1`} target="_blank" rel="noreferrer" />}>Anteprima</Button>
-            <Button variant="outline" render={<a href={`/invoices/${inv.id}/pdf`} />}>Scarica PDF</Button>
-            {inv.xmlFileName && <Button variant="outline" render={<a href={`/invoices/${inv.id}/xml`} />}>Scarica XML</Button>}
-            <Button variant="ghost" render={<Link href="/invoices" />}>Torna all&apos;elenco</Button>
-          </CardContent>
-        </Card>
-        </>
       )}
     </main>
   );

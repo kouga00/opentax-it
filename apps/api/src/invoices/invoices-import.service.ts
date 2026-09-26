@@ -171,6 +171,7 @@ export class InvoicesImportService {
           notes: p.notes,
           status: 'ISSUED',
           refInvoiceId: refInvoice?.id ?? null,
+          paymentMethod: p.payments[0]?.method ?? null,
           xmlFileName,
           internalNotes: `Importata da ${f.name}`,
           lines: {

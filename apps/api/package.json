@@ -19,7 +19,8 @@
     "test:e2e": "vitest run --config ./vitest.config.e2e.ts",
     "demo:seed": "node scripts/seed-demo.ts",
     "dev": "prisma generate && nest start --watch",
-    "prisma:generate": "prisma generate"
+    "prisma:generate": "prisma generate",
+    "payment-method:backfill": "node scripts/backfill-payment-method.ts"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",

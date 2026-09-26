@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { api, ApiError, TENANT_COOKIE } from './api';
-import type { ImportFile, ImportPreviewRow, ImportResult } from './types';
+import type { ImportFile, ImportPreviewRow, ImportResult, InvoiceCollection } from './types';
 
 export type ActionState = { error?: string } | undefined;
 
@@ -104,6 +104,8 @@ export interface InvoiceInput {
   refInvoiceId?: string;
   paymentTermsId?: string;
   bankAccountId?: string;
+  /** ModalitaPagamento, e.g. MP05. */
+  paymentMethod?: string;
   date: string;
   applyInpsSurcharge?: boolean;
   /** EUR per unit of a foreign invoice currency. */
@@ -130,7 +132,8 @@ export async function issueInvoice(_prev: ActionState, formData: FormData): Prom
   const iban = String(formData.get('iban') ?? '').trim();
   try {
     await api.issueInvoice(id, {
-      payment: dueDate || iban ? { dueDate: dueDate || undefined, iban: iban || undefined, method: 'MP05' } : undefined,
+      // The method is the one chosen on the draft: here only due date and IBAN can change.
+      payment: dueDate || iban ? { dueDate: dueDate || undefined, iban: iban || undefined } : undefined,
       confirmThresholds: formData.get('confirmThresholds') === 'on',
     });
   } catch (e) {
@@ -212,14 +215,25 @@ export async function addPayment(_prev: ActionState, formData: FormData): Promis
   } catch (e) {
     return { error: errorMessage(e) };
   }
+  revalidatePath('/invoices');
   revalidatePath(`/invoices/${invoiceId}`);
   revalidatePath('/dashboard');
   revalidatePath('/taxes');
   return undefined;
 }
 
+/** Total, collected and remaining of an invoice, for the dialog that records a collection from the invoice list. */
+export async function getInvoiceCollection(invoiceId: string): Promise<{ collection: InvoiceCollection } | { error: string }> {
+  try {
+    return { collection: await api.collection(invoiceId) };
+  } catch (e) {
+    return { error: errorMessage(e) };
+  }
+}
+
 export async function deletePayment(formData: FormData) {
   await api.deletePayment(String(formData.get('id')));
+  revalidatePath('/invoices');
   revalidatePath(`/invoices/${String(formData.get('invoiceId'))}`);
   revalidatePath('/dashboard');
   revalidatePath('/taxes');

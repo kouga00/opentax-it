@@ -1,5 +1,6 @@
 import { Type } from 'class-transformer';
 import { ArrayMaxSize, ArrayMinSize, IsBoolean, IsEnum, IsIn, IsNumber, IsOptional, IsString, Length, Matches, Max, MaxLength, Min, ValidateNested } from 'class-validator';
+import { PAYMENT_METHODS } from '@opentax-it/fatturapa';
 import { DocumentType } from '../generated/prisma/enums.js';
 
 export class InvoiceLineDto {
@@ -34,6 +35,8 @@ export class CreateInvoiceDto {
   @IsOptional() @IsString() paymentTermsId?: string;
   /** Bank account for DatiPagamento; defaults to the tenant default bank. */
   @IsOptional() @IsString() bankAccountId?: string;
+  /** ModalitaPagamento asked of the customer; defaults to the method of the payment terms. */
+  @IsOptional() @IsIn(Object.keys(PAYMENT_METHODS)) paymentMethod?: string;
   @IsOptional() @IsString() @MaxLength(2000) internalNotes?: string;
 }
 
