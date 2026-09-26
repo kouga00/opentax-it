@@ -105,10 +105,20 @@ model TenantProfile {
   /// INPS office ("codice sede") for the F24 INPS section, by residence (INPS sheet "F24 per professionisti iscritti alla GS").
   /// Stored as the unique id from packages/fiscal-rules INPS_OFFICES (e.g. "5500-palermo"); the 4-digit code is derived from it.
   inpsOfficeId       String?
-  /// PEC credentials for SDI submissions: encrypted at rest with APP_ENCRYPTION_KEY.
+  /// PEC mailbox used to send invoices to SDI (spec 1.9.1 §1.3.1, "servizio PEC").
   pecAddress         String?
-  pecCredentialsEnc  String?
-  /// SDI PEC address assigned after the first submission to sdi01@pec.fatturapa.it (spec 1.9.1 §1.5).
+  /// Preset provider id from packages/fatturapa PEC_PROVIDERS, or "OTHER" with the servers below.
+  pecProvider        String?
+  /// Login of the mailbox when it differs from the address (e.g. the InfoCert Legalmail User ID).
+  pecUsername        String?
+  /// Servers of an "OTHER" provider, always with implicit TLS. Presets take theirs from PEC_PROVIDERS.
+  pecSmtpHost        String?
+  pecSmtpPort        Int?
+  pecImapHost        String?
+  pecImapPort        Int?
+  /// PEC password, encrypted at rest with APP_ENCRYPTION_KEY (common/secret-cipher.ts). Never returned by the API.
+  pecPasswordEnc     String?
+  /// SDI PEC address assigned after the first submission to sdi01@pec.fatturapa.it (spec 1.9.1 §1.3.1).
   sdiPecAssigned     String?
   ibanEnc            String?
   createdAt          DateTime @default(now())

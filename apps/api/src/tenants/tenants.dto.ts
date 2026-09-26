@@ -1,4 +1,4 @@
-import { IsBoolean, IsEmail, IsInt, IsNumber, IsOptional, IsString, Length, Matches, Max, MaxLength, Min } from 'class-validator';
+import { IsBoolean, IsInt, IsNumber, IsOptional, IsString, Length, Matches, Max, MaxLength, Min } from 'class-validator';
 
 export class CreateTenantDto {
   @IsString() @Length(1, 120) name!: string;
@@ -27,7 +27,6 @@ export class CreateTenantDto {
   @IsOptional() @IsString() @Matches(/^[MF]?$/) sex?: string;
   @IsOptional() @IsString() @Length(0, 60) birthPlace?: string;
   @IsOptional() @IsString() @Matches(/^([A-Z]{2})?$/) birthProvince?: string;
-  @IsOptional() @IsEmail() @MaxLength(256) pecAddress?: string;
 }
 
 export class UpdateTenantProfileDto {
@@ -55,7 +54,6 @@ export class UpdateTenantProfileDto {
   @IsOptional() @IsString() @Matches(/^[MF]?$/) sex?: string;
   @IsOptional() @IsString() @Length(0, 60) birthPlace?: string;
   @IsOptional() @IsString() @Matches(/^([A-Z]{2})?$/) birthProvince?: string;
-  @IsOptional() @IsEmail() @MaxLength(256) pecAddress?: string;
   @IsOptional() @IsString() @Matches(/^\d{4}-[a-z0-9-]+$/) inpsOfficeId?: string;
 }
 

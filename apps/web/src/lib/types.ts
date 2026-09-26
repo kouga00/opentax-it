@@ -48,7 +48,6 @@ export interface TenantProfile {
   birthProvince: string | null;
   applyInpsSurcharge: boolean;
   viesRegistered: boolean;
-  pecAddress: string | null;
   inpsOfficeId: string | null;
 }
 
@@ -121,6 +120,8 @@ export interface Invoice {
   /** ModalitaPagamento asked of the customer, e.g. MP05; null when the document has no DatiPagamento. */
   paymentMethod: string | null;
   xmlFileName: string | null;
+  /** Imported from an XML issued and sent to SDI with another tool: it cannot be sent from here. */
+  imported: boolean;
   internalNotes: string | null;
   customer: InvoiceCustomerSummary;
   lines?: InvoiceLine[];
@@ -464,4 +465,56 @@ export interface InvoiceCollection {
   remaining: number;
   paymentMethod: string | null;
   payments: CollectionPayment[];
+}
+
+/** PEC provider with preset servers (API: GET /sdi/pec-providers). */
+export interface PecProvider {
+  id: string;
+  name: string;
+  smtpHost: string;
+  smtpPort: number;
+  imapHost: string;
+  imapPort: number;
+  usernameHint?: string;
+  passwordHint?: string;
+  sourceUrl: string;
+  verifiedOn: string;
+}
+
+/** PEC mailbox settings; the password is never returned, only whether one is stored. */
+export interface PecSettings {
+  provider: string | null;
+  address: string | null;
+  username: string | null;
+  smtpHost: string | null;
+  smtpPort: number | null;
+  imapHost: string | null;
+  imapPort: number | null;
+  hasPassword: boolean;
+  sdiPecAssigned: string | null;
+  /** Where the next transmission goes: the assigned address, or sdi01@pec.fatturapa.it before the first one. */
+  recipient: string;
+  encryptionConfigured: boolean;
+}
+
+export interface ConnectionCheck {
+  ok: boolean;
+  message: string;
+}
+
+export interface PecConnectionTest {
+  smtp: ConnectionCheck;
+  imap: ConnectionCheck;
+}
+
+export type SdiTransmissionStatus = 'PENDING' | 'SENT' | 'ACCEPTED_BY_PEC' | 'DELIVERED_TO_SDI' | 'SDI_DELIVERED' | 'SDI_NOT_DELIVERED' | 'SDI_REJECTED' | 'ERROR';
+
+export interface SdiTransmission {
+  id: string;
+  channel: 'PEC';
+  fileName: string;
+  status: SdiTransmissionStatus;
+  sentAt: string | null;
+  lastError: string | null;
+  createdAt: string;
 }

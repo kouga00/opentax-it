@@ -484,7 +484,7 @@ export class InvoicesService {
 
   private toFatturaPa(
     inv: InvoiceWithRelations,
-    profile: TenantProfile,
+    profile: Omit<TenantProfile, 'pecPasswordEnc' | 'ibanEnc'>,
     rules: FiscalRuleSet,
     transmissionSeq: number,
     refInvoice: Invoice | null,

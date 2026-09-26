@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { api, ApiError, TENANT_COOKIE } from './api';
-import type { ImportFile, ImportPreviewRow, ImportResult, InvoiceCollection } from './types';
+import type { ConnectionCheck, ImportFile, ImportPreviewRow, ImportResult, InvoiceCollection } from './types';
 
 export type ActionState = { error?: string } | undefined;
 
@@ -50,7 +50,6 @@ export async function createTenant(_prev: ActionState, formData: FormData): Prom
       revenueLimit: f('revenueLimit') ? Number(f('revenueLimit').replace(/\./g, '').replace(',', '.')) : null,
       sdiFileProgressiveStart: f('sdiFileProgressiveStart').toUpperCase() || null,
       inpsOfficeId: f('inpsOfficeId') || undefined,
-      pecAddress: f('pecAddress') || undefined,
     });
     const store = await cookies();
     store.set(TENANT_COOKIE, tenant.id, TENANT_COOKIE_OPTIONS);
@@ -176,7 +175,6 @@ export async function updateTenantProfile(_prev: ActionState, formData: FormData
       viesRegistered: formData.get('viesRegistered') === 'on',
       revenueLimit: f('revenueLimit') ? Number(f('revenueLimit').replace(/\./g, '').replace(',', '.')) : null,
       sdiFileProgressiveStart: f('sdiFileProgressiveStart').toUpperCase() || null,
-      pecAddress: f('pecAddress') || undefined,
       inpsOfficeId: f('inpsOfficeId'),
     });
   } catch (e) {
@@ -413,4 +411,51 @@ export async function getExchangeRate(currency: string, date: string): Promise<{
   } catch (e) {
     return { error: errorMessage(e) };
   }
+}
+
+export async function savePecSettings(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const f = (k: string) => String(formData.get(k) ?? '').trim();
+  const other = f('provider') === 'OTHER';
+  try {
+    await api.savePecSettings({
+      provider: f('provider'),
+      address: f('address'),
+      username: f('username') || undefined,
+      // An empty field keeps the stored password.
+      password: String(formData.get('password') ?? '') || undefined,
+      smtpHost: other ? f('smtpHost') : undefined,
+      smtpPort: other ? Number(f('smtpPort')) : undefined,
+      imapHost: other ? f('imapHost') : undefined,
+      imapPort: other ? Number(f('imapPort')) : undefined,
+      sdiPecAssigned: f('sdiPecAssigned') || null,
+    });
+  } catch (e) {
+    return { error: errorMessage(e) };
+  }
+  revalidatePath('/setup');
+  return undefined;
+}
+
+export type PecTestState = { error?: string; smtp?: ConnectionCheck; imap?: ConnectionCheck } | undefined;
+
+export async function testPecSettings(): Promise<PecTestState> {
+  try {
+    return await api.testPecSettings();
+  } catch (e) {
+    return { error: errorMessage(e) };
+  }
+}
+
+export async function sendToSdi(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const id = String(formData.get('id'));
+  let error: string | undefined;
+  try {
+    await api.sendToSdi(id);
+  } catch (e) {
+    error = errorMessage(e);
+  }
+  // Also after a failure: the page shows the failed transmission with its reason.
+  revalidatePath(`/invoices/${id}`);
+  revalidatePath('/invoices');
+  return error ? { error } : undefined;
 }

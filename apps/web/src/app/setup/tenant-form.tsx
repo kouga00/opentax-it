@@ -74,7 +74,6 @@ export function TenantForm({ offices, current, surchargePct }: Props) {
       <Field label="CAP" htmlFor="postalCode"><Input id="postalCode" name="postalCode" required pattern="\d{5}" defaultValue={p?.postalCode ?? ''} /></Field>
       <Field label="Comune" htmlFor="city"><Input id="city" name="city" required defaultValue={p?.city ?? ''} /></Field>
       <Field label="Provincia" htmlFor="province"><Input id="province" name="province" required minLength={2} maxLength={2} defaultValue={p?.province ?? ''} /></Field>
-      <Field label="PEC (per l'invio allo SDI)" htmlFor="pecAddress"><Input id="pecAddress" name="pecAddress" type="email" defaultValue={p?.pecAddress ?? ''} /></Field>
       <Field
         label="Limite personale di incassi nell'anno (€)"
         htmlFor="revenueLimit"

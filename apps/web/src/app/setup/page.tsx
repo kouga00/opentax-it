@@ -4,15 +4,18 @@ import { selectTenant } from '@/lib/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { NativeSelect } from '@/components/native-select';
+import { PecForm } from './pec-form';
 import { TenantForm } from './tenant-form';
 
 export default async function SetupPage() {
   const year = new Date().getFullYear();
-  const [tenants, offices, me, rules] = await Promise.all([
+  const [tenants, offices, me, rules, pecProviders, pecSettings] = await Promise.all([
     fetchOrNull(() => api.tenants()),
     fetchOrNull(() => api.inpsOffices()),
     fetchOrNull(() => api.me()),
     fetchOrNull(() => api.activeRules(year)),
+    fetchOrNull(() => api.pecProviders()),
+    fetchOrNull(() => api.pecSettings()),
   ]);
   const current = await currentTenantId();
   const list = tenants ?? [];
@@ -47,6 +50,16 @@ export default async function SetupPage() {
             <CardDescription>Dati del cedente/prestatore usati nelle fatture elettroniche (FatturaPA, CedentePrestatore) e negli F24.</CardDescription>
           </CardHeader>
           <CardContent><TenantForm offices={offices ?? []} current={{ name: me.name, profile: me.profile }} surchargePct={rules?.inps.surchargePct} /></CardContent>
+        </Card>
+      ) : null}
+
+      {me && pecSettings ? (
+        <Card id="pec">
+          <CardHeader>
+            <CardTitle>PEC per l&apos;invio allo SDI</CardTitle>
+            <CardDescription>Le fatture emesse si inviano allo SDI come allegato di un messaggio PEC, senza accreditamento (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). Serve una casella PEC con accesso SMTP e IMAP; la password resta cifrata nel database.</CardDescription>
+          </CardHeader>
+          <CardContent><PecForm providers={pecProviders ?? []} settings={pecSettings} /></CardContent>
         </Card>
       ) : null}
 

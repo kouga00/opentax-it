@@ -24,6 +24,7 @@ export class InvoiceDto {
   @ApiProperty({ type: String, nullable: true }) bankAccountId!: string | null;
   @ApiProperty({ type: String, nullable: true, description: 'ModalitaPagamento, es. MP05' }) paymentMethod!: string | null;
   @ApiProperty({ type: String, nullable: true, description: 'Nome del file XML inviato allo SDI' }) xmlFileName!: string | null;
+  @ApiProperty({ description: 'Importata da un XML emesso e inviato allo SDI con un altro strumento' }) imported!: boolean;
   @ApiProperty({ type: String, nullable: true }) internalNotes!: string | null;
   @ApiProperty({ type: InvoiceCustomerDto }) customer!: InvoiceCustomerDto;
 }

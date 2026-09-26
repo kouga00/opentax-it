@@ -3,6 +3,9 @@ import { INPS_OFFICES, isValidInpsOfficeIdForGestioneSeparata } from '@opentax-i
 import { PrismaService } from '../prisma/prisma.service.js';
 import type { BankAccountDto, CreateTenantDto, PaymentTermsDto, UpdateTenantProfileDto } from './tenants.dto.js';
 
+/** Encrypted secrets never leave the API, not even encrypted (OWASP API3:2023): this module still returns entities. */
+const PROFILE_WITHOUT_SECRETS = { profile: { omit: { pecPasswordEnc: true, ibanEnc: true } } } as const;
+
 @Injectable()
 export class TenantsService {
   constructor(private readonly prisma: PrismaService) {}
@@ -14,7 +17,7 @@ export class TenantsService {
     }
     return this.prisma.tenant.create({
       data: { name, profile: { create: { ...profile, ...personalData(profile) } } },
-      include: { profile: true },
+      include: PROFILE_WITHOUT_SECRETS,
     });
   }
 
@@ -36,7 +39,7 @@ export class TenantsService {
           },
         },
       },
-      include: { profile: true },
+      include: PROFILE_WITHOUT_SECRETS,
     });
   }
 
@@ -96,7 +99,7 @@ export class TenantsService {
   }
 
   async getWithProfile(tenantId: string) {
-    const tenant = await this.prisma.tenant.findUnique({ where: { id: tenantId }, include: { profile: true } });
+    const tenant = await this.prisma.tenant.findUnique({ where: { id: tenantId }, include: PROFILE_WITHOUT_SECRETS });
     if (!tenant?.profile) throw new NotFoundException(`Tenant ${tenantId} not found or without a fiscal profile`);
     return { ...tenant, profile: tenant.profile };
   }

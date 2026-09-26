@@ -36,6 +36,10 @@ const round2 = (n: number) => Math.round((n + Number.EPSILON) * 100) / 100;
 const ACCEPTED: DocumentType[] = ['TD01', 'TD04', 'TD05', 'TD06'];
 const UNEXPECTED = 'Errore imprevisto durante l\'import di questo file';
 
+/** Imported XML files are stored in this folder: they were issued and sent to SDI with another tool. */
+const IMPORTED_FOLDER = 'imported';
+export const isImportedXmlPath = (xmlPath: string | null): boolean => Boolean(xmlPath?.split('/').includes(IMPORTED_FOLDER));
+
 @Injectable()
 export class InvoicesImportService {
   private readonly logger = new Logger(InvoicesImportService.name);
@@ -186,7 +190,7 @@ export class InvoicesImportService {
           },
         },
       });
-      const xmlPath = await this.storage.write(`${tenantId}/invoices/${year}/imported/${created.id}_${xmlFileName}`, f.xml, { exclusive: true });
+      const xmlPath = await this.storage.write(`${tenantId}/invoices/${year}/${IMPORTED_FOLDER}/${created.id}_${xmlFileName}`, f.xml, { exclusive: true });
       return tx.invoice.update({ where: { id: created.id }, data: { xmlPath } });
     });
     return { file: f.name, status: 'IMPORTED', number: p.number, invoiceId: inv.id, customer: partyName(customer) };

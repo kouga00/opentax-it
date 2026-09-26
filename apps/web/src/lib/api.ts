@@ -1,6 +1,6 @@
 import 'server-only';
 import { cookies } from 'next/headers';
-import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, CollectionPayment, InvoiceCollection, InvoiceDetail, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
+import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, CollectionPayment, InvoiceCollection, InvoiceDetail, PecConnectionTest, PecProvider, PecSettings, SdiTransmission, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
 
 export * from './types';
 export * from './format';
@@ -61,6 +61,12 @@ export const api = {
   bankAccounts: () => tenantRequest<BankAccount[]>('/tenants/me/bank-accounts'),
   saveBankAccount: (data: unknown, id?: string) => tenantRequest<BankAccount>(id ? `/tenants/me/bank-accounts/${seg(id)}` : '/tenants/me/bank-accounts', { method: id ? 'PUT' : 'POST', body: JSON.stringify(data) }),
   deleteBankAccount: (id: string) => tenantRequest<void>(`/tenants/me/bank-accounts/${seg(id)}`, { method: 'DELETE' }),
+  pecProviders: () => request<PecProvider[]>('/sdi/pec-providers'),
+  pecSettings: () => tenantRequest<PecSettings>('/sdi/pec-settings'),
+  savePecSettings: (data: unknown) => tenantRequest<PecSettings>('/sdi/pec-settings', { method: 'PUT', body: JSON.stringify(data) }),
+  testPecSettings: () => tenantRequest<PecConnectionTest>('/sdi/pec-settings/test', { method: 'POST' }),
+  sdiTransmissions: (invoiceId: string) => tenantRequest<SdiTransmission[]>(`/invoices/${seg(invoiceId)}/sdi-transmissions`),
+  sendToSdi: (invoiceId: string) => tenantRequest<SdiTransmission>(`/invoices/${seg(invoiceId)}/sdi-transmissions`, { method: 'POST' }),
   paymentTerms: () => tenantRequest<PaymentTerms[]>('/tenants/me/payment-terms'),
   savePaymentTerms: (data: unknown, id?: string) => tenantRequest<PaymentTerms>(id ? `/tenants/me/payment-terms/${seg(id)}` : '/tenants/me/payment-terms', { method: id ? 'PUT' : 'POST', body: JSON.stringify(data) }),
   deletePaymentTerms: (id: string) => tenantRequest<void>(`/tenants/me/payment-terms/${seg(id)}`, { method: 'DELETE' }),

@@ -12,6 +12,19 @@ import { paymentMethodLabel, usesBankAccount } from '@/lib/payment-methods';
 import { TYPE_LABELS } from '../page';
 import { IssueForm } from './issue-form';
 import { Payments } from './payments';
+import { SendToSdi } from './send-to-sdi';
+import type { SdiTransmissionStatus } from '@/lib/types';
+
+const TRANSMISSION_LABELS: Record<SdiTransmissionStatus, string> = {
+  PENDING: 'In invio',
+  SENT: 'Inviata via PEC',
+  ACCEPTED_BY_PEC: 'Accettata dal gestore PEC',
+  DELIVERED_TO_SDI: 'Consegnata allo SDI',
+  SDI_DELIVERED: 'Consegnata al cliente',
+  SDI_NOT_DELIVERED: 'Non consegnata (a disposizione)',
+  SDI_REJECTED: 'Scartata',
+  ERROR: 'Invio non riuscito',
+};
 
 export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'>) {
   const { id } = await params;
@@ -20,6 +33,9 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
   const isDraft = inv.status === 'DRAFT';
   const rules = Number(inv.inpsSurcharge) > 0 ? await fetchOrNull(() => api.activeRules(inv.year)) : null;
   const collection = isDraft ? null : await fetchOrNull(() => api.collection(id));
+  const sendable = !isDraft && !inv.imported;
+  const [transmissions, pec] = sendable ? await Promise.all([fetchOrNull(() => api.sdiTransmissions(id)), fetchOrNull(() => api.pecSettings())]) : [null, null];
+  const pecReady = Boolean(pec?.address && pec.hasPassword);
   const [terms, banks, thresholds, me] = isDraft
     ? await Promise.all([fetchOrNull(() => api.paymentTerms()), fetchOrNull(() => api.bankAccounts()), fetchOrNull(() => api.invoiceThresholds(id)), fetchOrNull(() => api.me())])
     : [null, null, null, null];
@@ -79,6 +95,36 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
         <CardHeader><CardTitle>Diciture in fattura</CardTitle></CardHeader>
         <CardContent><ul className="list-disc space-y-1 pl-5 text-sm">{inv.notes.map((n) => <li key={n}>{n}</li>)}</ul></CardContent>
       </Card>
+
+      {sendable && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Invio allo SDI</CardTitle>
+            <CardDescription>L&apos;XML si invia via PEC. Le ricevute del gestore PEC attestano solo la trasmissione: la fattura è emessa quando lo SDI la consegna o la mette a disposizione, mentre uno scarto significa che non è mai stata emessa (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). Le ricevute arrivano nella tua casella PEC; la lettura automatica non è ancora disponibile.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {transmissions && transmissions.length > 0 && (
+              <Table>
+                <TableHeader>
+                  <TableRow><TableHead>Data</TableHead><TableHead>File</TableHead><TableHead>Stato</TableHead></TableRow>
+                </TableHeader>
+                <TableBody>
+                  {transmissions.map((t) => (
+                    <TableRow key={t.id}>
+                      <TableCell>{new Date(t.sentAt ?? t.createdAt).toLocaleString('it-IT')}</TableCell>
+                      <TableCell className="font-mono">{t.fileName}</TableCell>
+                      <TableCell>{TRANSMISSION_LABELS[t.status]}{t.lastError && <span className="text-muted-foreground"> · {t.lastError}</span>}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            )}
+            {inv.status === 'ISSUED' && inv.customer.kind !== 'IT_PA' && (pecReady
+              ? <SendToSdi id={inv.id} recipient={pec!.recipient} />
+              : <p className="text-sm text-muted-foreground">Per inviare configura la casella PEC in <Link href="/setup#pec" className="underline">Impostazioni</Link>.</p>)}
+          </CardContent>
+        </Card>
+      )}
 
       {isDraft ? (
         <Card>

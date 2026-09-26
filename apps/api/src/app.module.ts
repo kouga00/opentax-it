@@ -11,6 +11,7 @@ import { PaymentsModule } from './payments/payments.module.js';
 import { TaxCreditsModule } from './tax-credits/tax-credits.module.js';
 import { TaxesModule } from './taxes/taxes.module.js';
 import { PrismaModule } from './prisma/prisma.module.js';
+import { SdiModule } from './sdi/sdi.module.js';
 import { SourcesModule } from './sources/sources.module.js';
 import { StorageModule } from './storage/storage.module.js';
 import { TenantsModule } from './tenants/tenants.module.js';
@@ -30,6 +31,7 @@ import { TenantsModule } from './tenants/tenants.module.js';
     F24Module,
     ExchangeRatesModule,
     SourcesModule,
+    SdiModule,
   ],
   controllers: [AppController],
   providers: [AppService],
