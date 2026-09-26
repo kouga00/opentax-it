@@ -1,4 +1,4 @@
-import type { ConnectionStep } from '../types/connection-check.js';
+import type { ConnectionStep } from '../types/connection-step.js';
 import type { PecServer } from '../types/pec-server.js';
 
 const isAuthError = (e: { code?: string; authenticationFailed?: boolean }) => Boolean(e.authenticationFailed || e.code === 'EAUTH' || e.code === 'ENOAUTH');

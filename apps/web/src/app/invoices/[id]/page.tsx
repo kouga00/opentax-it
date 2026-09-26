@@ -13,6 +13,7 @@ import { TYPE_LABELS } from '../page';
 import { IssueForm } from './issue-form';
 import { Payments } from './payments';
 import { SendToSdi } from './send-to-sdi';
+import { SyncReceipts } from './sync-receipts';
 import type { SdiTransmissionStatus } from '@/lib/types';
 
 const TRANSMISSION_LABELS: Record<SdiTransmissionStatus, string> = {
@@ -24,6 +25,20 @@ const TRANSMISSION_LABELS: Record<SdiTransmissionStatus, string> = {
   SDI_NOT_DELIVERED: 'Non consegnata (a disposizione)',
   SDI_REJECTED: 'Scartata',
   ERROR: 'Invio non riuscito',
+};
+
+/** Receipts about a transmission: from SDI (Spec. 1.9.1 §1.5.7) and from the PEC provider (Regole tecniche PEC §6). */
+const NOTIFICATION_LABELS: Record<string, string> = {
+  RC: 'Ricevuta di consegna dello SDI: fattura consegnata al cliente',
+  NS: 'Ricevuta di scarto dello SDI: la fattura non è stata emessa',
+  MC: 'Impossibilità di recapito: la fattura è emessa ed è a disposizione del cliente nella sua area riservata',
+  PEC_ACCETTAZIONE: 'Accettazione del tuo gestore PEC',
+  PEC_AVVENUTA_CONSEGNA: 'Consegna alla casella PEC dello SDI',
+  PEC_PRESA_IN_CARICO: 'Presa in carico dal gestore dello SDI',
+  PEC_PREAVVISO_ERRORE_CONSEGNA: 'Preavviso di mancata consegna del gestore PEC',
+  PEC_ERRORE_CONSEGNA: 'Mancata consegna alla casella dello SDI',
+  PEC_NON_ACCETTAZIONE: 'Messaggio non accettato dal tuo gestore PEC',
+  PEC_RILEVAZIONE_VIRUS: 'Virus rilevato dal gestore PEC',
 };
 
 export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'>) {
@@ -100,24 +115,40 @@ export default async function InvoicePage({ params }: PageProps<'/invoices/[id]'
         <Card>
           <CardHeader>
             <CardTitle>Invio allo SDI</CardTitle>
-            <CardDescription>L&apos;XML si invia via PEC. Le ricevute del gestore PEC attestano solo la trasmissione: la fattura è emessa quando lo SDI la consegna o la mette a disposizione, mentre uno scarto significa che non è mai stata emessa (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). Le ricevute arrivano nella tua casella PEC; la lettura automatica non è ancora disponibile.</CardDescription>
+            <CardDescription>L&apos;XML si invia via PEC. Le ricevute del gestore PEC attestano solo la trasmissione: la fattura è emessa quando lo SDI la consegna o la mette a disposizione, mentre uno scarto significa che non è mai stata emessa (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). Le ricevute si leggono dalla tua casella PEC, senza modificarla: ogni 10 minuti finché un invio attende l&apos;esito, all&apos;avvio dell&apos;app e con &quot;Controlla ricevute&quot;.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {transmissions && transmissions.length > 0 && (
-              <Table>
-                <TableHeader>
-                  <TableRow><TableHead>Data</TableHead><TableHead>File</TableHead><TableHead>Stato</TableHead></TableRow>
-                </TableHeader>
-                <TableBody>
-                  {transmissions.map((t) => (
-                    <TableRow key={t.id}>
-                      <TableCell>{new Date(t.sentAt ?? t.createdAt).toLocaleString('it-IT')}</TableCell>
-                      <TableCell className="font-mono">{t.fileName}</TableCell>
-                      <TableCell>{TRANSMISSION_LABELS[t.status]}{t.lastError && <span className="text-muted-foreground"> · {t.lastError}</span>}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+            {transmissions?.map((t) => (
+              <div key={t.id} className="space-y-2 rounded-lg border p-3">
+                <div className="flex flex-wrap items-baseline justify-between gap-2 text-sm">
+                  <span className="font-medium">{TRANSMISSION_LABELS[t.status]}</span>
+                  <span className="text-muted-foreground">{new Date(t.sentAt ?? t.createdAt).toLocaleString('it-IT')} · <span className="font-mono">{t.fileName}</span>{t.sdiId && <> · Identificativo SdI {t.sdiId}</>}</span>
+                </div>
+                {t.lastError && <p className="text-sm text-destructive">{t.lastError}</p>}
+                {t.warning && (
+                  <Alert variant="warning">
+                    <TriangleAlert />
+                    <AlertDescription>{t.warning}</AlertDescription>
+                  </Alert>
+                )}
+                {t.notifications.length > 0 && (
+                  <ul className="space-y-1 text-sm">
+                    {t.notifications.map((n) => (
+                      <li key={`${n.type}-${n.receivedAt}-${n.fileName ?? ''}`} className="flex flex-wrap gap-x-2">
+                        <span className="text-muted-foreground">{new Date(n.receivedAt).toLocaleString('it-IT')}</span>
+                        <span>{NOTIFICATION_LABELS[n.type] ?? n.type}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+            {transmissions && transmissions.length > 0 && pecReady && (
+              <div className="space-y-1">
+                <SyncReceipts id={inv.id} />
+                {pec?.lastReceiptsSyncAt && <p className="text-xs text-muted-foreground">Ultimo controllo della casella: {new Date(pec.lastReceiptsSyncAt).toLocaleString('it-IT')}</p>}
+                {pec?.lastReceiptsSyncError && <p className="text-xs text-destructive">Ultimo controllo non riuscito: {pec.lastReceiptsSyncError}</p>}
+              </div>
             )}
             {inv.status === 'ISSUED' && inv.customer.kind !== 'IT_PA' && (pecReady
               ? <SendToSdi id={inv.id} recipient={pec!.recipient} />

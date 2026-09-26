@@ -8,12 +8,16 @@ import { PecTestEventDto } from '../dto/response/pec-test-event.dto.js';
 import { PecProviderDto } from '../dto/response/pec-provider.dto.js';
 import { PecSettingsDto } from '../dto/response/pec-settings.dto.js';
 import { toPecProviderDto, toPecSettingsDto, toPecTestMessage } from '../mappers/pec-settings.mapper.js';
+import { PecConnectionTestService } from '../services/pec-connection-test.service.js';
 import { PecSettingsService } from '../services/pec-settings.service.js';
 
 /** PEC mailbox for the SDI channel: preset providers, settings of the tenant and a login test. */
 @Controller('sdi')
 export class PecSettingsController {
-  constructor(private readonly service: PecSettingsService) {}
+  constructor(
+    private readonly service: PecSettingsService,
+    private readonly connectionTest: PecConnectionTestService,
+  ) {}
 
   @Get('pec-providers')
   @ApiOkResponse({ type: [PecProviderDto] })
@@ -41,6 +45,6 @@ export class PecSettingsController {
   @ApiProduces('text/event-stream')
   @ApiOkResponse({ type: PecTestEventDto, description: 'Eventi "step" per ogni passaggio, poi un evento "done"' })
   test(@TenantId() tenantId: string): Observable<MessageEvent> {
-    return from(this.service.test(tenantId)).pipe(map(toPecTestMessage));
+    return from(this.connectionTest.run(tenantId)).pipe(map(toPecTestMessage));
   }
 }

@@ -496,6 +496,9 @@ export interface PecSettings {
   /** Where the next transmission goes: the assigned address, or sdi01@pec.fatturapa.it before the first one. */
   recipient: string;
   encryptionConfigured: boolean;
+  /** Last complete reading of the mailbox for receipts (ISO 8601), and the reason of the last failure. */
+  lastReceiptsSyncAt: string | null;
+  lastReceiptsSyncError: string | null;
 }
 
 export type PecTestStep = 'SMTP_CONNECT' | 'SMTP_LOGIN' | 'IMAP_CONNECT' | 'IMAP_LOGIN';
@@ -519,4 +522,24 @@ export interface SdiTransmission {
   sentAt: string | null;
   lastError: string | null;
   createdAt: string;
+  /** IdentificativoSdI, from the first SDI receipt. */
+  sdiId: string | null;
+  /** Receipts, newest first: SDI (RC, NS, MC) or PEC provider (PEC_ACCETTAZIONE...). */
+  notifications: SdiNotification[];
+  /** Shown when an outcome is late. */
+  warning: string | null;
+}
+
+export interface SdiNotification {
+  type: string;
+  receivedAt: string;
+  sdiId: string | null;
+  fileName: string | null;
+}
+
+export interface ReceiptsSyncResult {
+  status: 'DONE' | 'BUSY' | 'NOT_CONFIGURED' | 'ERROR';
+  read: number;
+  matched: number;
+  message?: string;
 }

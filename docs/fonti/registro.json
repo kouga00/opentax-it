@@ -426,6 +426,30 @@
       "text": "documenti/agid-pec-regole-tecniche.txt",
       "retrievedOn": "2026-09-26",
       "sha256": "5f3a9772880e4b7cc07cd15d1d5763db8ed445d2a0c900fe2acc5df58ea8f6ae"
+    },
+    {
+      "id": "fatturapa-inviare-la-fatturapa",
+      "authority": "Agenzia delle Entrate (fatturapa.gov.it)",
+      "title": "Pagina \"Inviare la FatturaPA\"",
+      "kind": "web-page",
+      "url": "https://www.fatturapa.gov.it/it/comefare/operatori-economici/inviare-la-fatturapa/",
+      "format": "html",
+      "contentSelector": "class=\"col-12 col-lg-9\"",
+      "file": "documenti/fatturapa-inviare-la-fatturapa.txt",
+      "retrievedOn": "2026-09-26",
+      "sha256": "50bbeba31b4b122dd37c7b0a30409a6f7d7015a8a10e5226cded6517fe09b191"
+    },
+    {
+      "id": "fatturapa-spec-sdi-1-8-4",
+      "authority": "Agenzia delle Entrate (fatturapa.gov.it)",
+      "title": "Specifiche tecniche relative al Sistema di Interscambio, versione 1.8.4 (Allegato B, DM 55/2013)",
+      "kind": "specification",
+      "url": "https://www.fatturapa.gov.it/export/documenti/Specifiche-tecniche-relative-al-Sistema-di-Interscambio-versione-1.8.4.pdf",
+      "format": "pdf",
+      "file": "documenti/fatturapa-spec-sdi-1-8-4.pdf",
+      "text": "documenti/fatturapa-spec-sdi-1-8-4.txt",
+      "retrievedOn": "2026-09-26",
+      "sha256": "f3357ea93ee12fe4071ad73c422885756fbcf2d192f447c843fa5b79ceb6ef90"
     }
   ]
 }

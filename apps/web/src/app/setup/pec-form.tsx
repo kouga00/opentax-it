@@ -99,8 +99,8 @@ export function PecForm({ providers, settings }: { providers: PecProvider[]; set
         <Field
           label="Indirizzo PEC assegnato dallo SDI"
           htmlFor="sdiPecAssigned"
-          hint="Vuoto fino al primo invio"
-          help={<HelpTip><p>Il primo invio va a sdi01@pec.fatturapa.it; con il primo messaggio di risposta lo SDI comunica l&apos;indirizzo da usare per gli invii successivi, e un indirizzo diverso &quot;non garantisce il buon fine della ricezione&quot; (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). Finché la lettura delle ricevute non è disponibile, copialo qui dalla risposta arrivata nella tua casella PEC: senza, dopo il primo invio i successivi sono bloccati.</p></HelpTip>}
+          hint={settings.sdiPecAssigned ? 'Letto dalla prima ricevuta dello SDI; cambialo solo se lo SDI te ne comunica un altro.' : 'Si compila da solo con la prima ricevuta dello SDI.'}
+          help={<HelpTip><p>Il primo invio va a sdi01@pec.fatturapa.it; con il primo messaggio di risposta lo SDI comunica l&apos;indirizzo da usare per gli invii successivi, e un indirizzo diverso &quot;non garantisce il buon fine della ricezione&quot; (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). L&apos;app lo legge da sola: è il mittente della prima ricevuta dello SDI, che lo usa anche per le risposte successive (Specifiche tecniche SdI, Allegato B, v1.8.4 §3.1.1). Finché non è noto, dopo il primo invio i successivi sono bloccati.</p></HelpTip>}
         >
           <Input id="sdiPecAssigned" name="sdiPecAssigned" type="email" defaultValue={settings.sdiPecAssigned ?? ''} />
         </Field>

@@ -39,6 +39,7 @@ model Tenant {
   taxNotices       TaxNotice[]
   attachments      Attachment[]
   auditLogs        AuditLog[]
+  pecMailbox       PecMailboxState?
 }
 
 enum UserRole {
@@ -343,7 +344,10 @@ model SdiTransmission {
   channel      SdiChannel            @default(PEC)
   fileName     String
   sentAt       DateTime?
+  /// Message-ID we gave the PEC message, without angle brackets: provider receipts refer to it (Regole tecniche PEC §6.3).
   pecMessageId String?
+  /// Identifier the PEC provider gave the message (daticert.xml "identificativo").
+  pecProviderId String?
   status       SdiTransmissionStatus @default(PENDING)
   sdiId        String? // IdentificativoSdI
   lastError    String?
@@ -360,14 +364,34 @@ model SdiNotification {
   id             String          @id @default(cuid())
   transmissionId String
   transmission   SdiTransmission @relation(fields: [transmissionId], references: [id], onDelete: Cascade)
+  /// SDI receipt (RC, NS, MC) or PEC provider receipt (PEC_ACCETTAZIONE, PEC_AVVENUTA_CONSEGNA, PEC_ERRORE_CONSEGNA...).
   type           String
   receivedAt     DateTime
   sdiId          String?
   fileName       String?
   rawPath        String?
   details        Json?
+  /// Same receipt read twice (after a restart or a rescan of the mailbox) is recorded once.
+  dedupeKey      String
 
+  @@unique([transmissionId, dedupeKey])
   @@index([transmissionId])
+}
+
+/// Where the reading of the tenant's PEC mailbox got to, so that after downtime it resumes from there (IMAP UIDs).
+model PecMailboxState {
+  id            String    @id @default(cuid())
+  tenantId      String    @unique
+  tenant        Tenant    @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  /// UIDVALIDITY of the inbox: when it changes, the UIDs below are no longer valid (RFC 9051 §2.3.1.1).
+  uidValidity   BigInt?
+  /// Highest UID already read.
+  lastUid       BigInt?
+  /// Set while a sync runs, so that the periodic sync and the button do not overlap.
+  syncStartedAt DateTime?
+  lastSyncAt    DateTime?
+  lastError     String?
+  updatedAt     DateTime  @updatedAt
 }
 
 /// Stamp duty per quarter (AdE guide June 2026: due 31/5, 30/9, 30/11, 28/2; EUR 5,000 deferral threshold).

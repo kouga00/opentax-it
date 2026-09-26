@@ -449,3 +449,21 @@ export async function sendToSdi(_prev: ActionState, formData: FormData): Promise
   revalidatePath('/invoices');
   return error ? { error } : undefined;
 }
+
+export type ReceiptsState = { error?: string; message?: string } | undefined;
+
+/** Reads the new messages of the PEC mailbox and updates the transmissions (the mailbox is not modified). */
+export async function syncReceipts(_prev: ReceiptsState, formData: FormData): Promise<ReceiptsState> {
+  const id = String(formData.get('id') ?? '');
+  try {
+    const r = await api.syncReceipts();
+    if (id) revalidatePath(`/invoices/${id}`);
+    revalidatePath('/invoices');
+    if (r.status === 'BUSY') return { message: 'Un controllo delle ricevute è già in corso: riprova tra poco.' };
+    if (r.status !== 'DONE') return { error: r.message ?? 'Controllo delle ricevute non riuscito.' };
+    if (r.read === 0) return { message: 'Nessun nuovo messaggio nella casella PEC.' };
+    return { message: `Letti ${r.read} nuovi messaggi, ${r.matched} relativi agli invii allo SDI.` };
+  } catch (e) {
+    return { error: errorMessage(e) };
+  }
+}

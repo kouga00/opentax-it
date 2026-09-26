@@ -1,21 +1,16 @@
-import { BadRequestException, HttpException, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { OTHER_PEC_PROVIDER, pecProvider, SDI_FIRST_PEC_ADDRESS } from '@opentax-it/fatturapa';
 import { decryptSecret, encryptionConfigured, encryptSecret } from '../../common/secret-cipher.js';
 import type { TenantProfile } from '../../generated/prisma/client.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
 import type { SavePecSettingsDto } from '../dto/request/save-pec-settings.dto.js';
 import type { PecConnection } from '../types/pec-connection.js';
-import type { PecTestEvent } from '../types/pec-test-event.js';
 import type { PecSettings } from '../types/pec-settings.js';
-import { PecMailerService } from './pec-mailer.service.js';
 
 /** PEC mailbox of the tenant, used to send invoices to SDI (spec 1.9.1 §1.3.1). The password is stored encrypted. */
 @Injectable()
 export class PecSettingsService {
-  constructor(
-    private readonly prisma: PrismaService,
-    private readonly mailer: PecMailerService,
-  ) {}
+  constructor(private readonly prisma: PrismaService) {}
 
   private async profile(tenantId: string): Promise<TenantProfile> {
     const profile = await this.prisma.tenantProfile.findUnique({ where: { tenantId } });
@@ -26,6 +21,7 @@ export class PecSettingsService {
   async get(tenantId: string): Promise<PecSettings> {
     const p = await this.profile(tenantId);
     const preset = pecProvider(p.pecProvider);
+    const mailbox = await this.prisma.pecMailboxState.findUnique({ where: { tenantId } });
     return {
       provider: p.pecProvider,
       address: p.pecAddress,
@@ -38,6 +34,8 @@ export class PecSettingsService {
       sdiPecAssigned: p.sdiPecAssigned,
       recipient: p.sdiPecAssigned ?? SDI_FIRST_PEC_ADDRESS,
       encryptionConfigured: encryptionConfigured(),
+      lastReceiptsSyncAt: mailbox?.lastSyncAt ?? null,
+      lastReceiptsSyncError: mailbox?.lastError ?? null,
     };
   }
 
@@ -81,28 +79,5 @@ export class PecSettingsService {
       throw new BadRequestException('La password PEC salvata non si può leggere con l\'attuale APP_ENCRYPTION_KEY: inseriscila di nuovo in Impostazioni.');
     }
     return { address: s.address, username: s.username ?? s.address, password, smtpHost: s.smtpHost, smtpPort: s.smtpPort, imapHost: s.imapHost, imapPort: s.imapPort };
-  }
-
-  /**
-   * Logs in to the SMTP and IMAP servers without sending anything, yielding each step as it happens. Incomplete
-   * settings end the test with their message instead of an HTTP error, since the page is already reading the stream.
-   */
-  async *test(tenantId: string): AsyncGenerator<PecTestEvent> {
-    let c: PecConnection;
-    try {
-      c = await this.connection(tenantId);
-    } catch (err) {
-      if (!(err instanceof HttpException)) throw err;
-      yield { kind: 'done', ok: false, message: err.message };
-      return;
-    }
-    let ok = true;
-    for (const steps of [this.mailer.testSmtp(c), this.mailer.testImap(c)]) {
-      for await (const event of steps) {
-        if (event.kind === 'step' && event.status === 'FAILED') ok = false;
-        yield event;
-      }
-    }
-    yield ok ? { kind: 'done', ok, message: 'La casella PEC è pronta per l\'invio allo SDI.' } : { kind: 'done', ok };
   }
 }

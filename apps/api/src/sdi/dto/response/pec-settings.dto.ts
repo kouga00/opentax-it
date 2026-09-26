@@ -13,4 +13,6 @@ export class PecSettingsDto {
   @ApiProperty({ type: String, nullable: true }) sdiPecAssigned!: string | null;
   @ApiProperty({ description: 'Destinatario del prossimo invio: l\'indirizzo assegnato o sdi01@pec.fatturapa.it' }) recipient!: string;
   @ApiProperty({ description: 'APP_ENCRYPTION_KEY impostata: senza, la password non si può salvare' }) encryptionConfigured!: boolean;
+  @ApiProperty({ type: String, nullable: true, description: 'Ultima lettura completa della casella per le ricevute (ISO 8601)' }) lastReceiptsSyncAt!: string | null;
+  @ApiProperty({ type: String, nullable: true, description: 'Motivo dell\'ultima lettura non riuscita, per l\'utente' }) lastReceiptsSyncError!: string | null;
 }

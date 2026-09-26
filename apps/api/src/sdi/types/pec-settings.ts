@@ -12,4 +12,7 @@ export interface PecSettings {
   /** Where the next transmission goes: the assigned address, or sdi01@pec.fatturapa.it before the first one. */
   recipient: string;
   encryptionConfigured: boolean;
+  /** Last complete reading of the mailbox for receipts, and the reason of the last failure. */
+  lastReceiptsSyncAt: Date | null;
+  lastReceiptsSyncError: string | null;
 }

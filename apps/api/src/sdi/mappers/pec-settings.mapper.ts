@@ -15,6 +15,7 @@ export const toPecSettingsDto = (s: PecSettings): PecSettingsDto =>
   Object.assign(new PecSettingsDto(), {
     provider: s.provider, address: s.address, username: s.username, smtpHost: s.smtpHost, smtpPort: s.smtpPort, imapHost: s.imapHost, imapPort: s.imapPort,
     hasPassword: s.hasPassword, sdiPecAssigned: s.sdiPecAssigned, recipient: s.recipient, encryptionConfigured: s.encryptionConfigured,
+    lastReceiptsSyncAt: s.lastReceiptsSyncAt?.toISOString() ?? null, lastReceiptsSyncError: s.lastReceiptsSyncError,
   });
 
 /** Server-Sent Event for NestJS @Sse: the event type tells the page how to read the data. */

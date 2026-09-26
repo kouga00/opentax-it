@@ -2,8 +2,11 @@ import { BadGatewayException, BadRequestException, ConflictException } from '@ne
 import { describe, expect, it, vi } from 'vitest';
 import type { PrismaService } from '../../prisma/prisma.service.js';
 import type { StorageService } from '../../storage/storage.service.js';
-import type { PecMailerService } from './pec-mailer.service.js';
+import type { InvoiceStatusService } from '../../invoices/services/invoice-status.service.js';
+import type { InvoicesService } from '../../invoices/services/invoices.service.js';
+import type { PecSmtpService } from './pec-smtp.service.js';
 import type { PecSettingsService } from './pec-settings.service.js';
+import { InvoiceStatusService as InvoiceStatusServiceImpl } from '../../invoices/services/invoice-status.service.js';
 import { SdiTransmissionsService } from './sdi-transmissions.service.js';
 
 const CONNECTION = { address: 'mario.rossi@pec.example.it', username: 'mario.rossi@pec.example.it', password: 'x', smtpHost: 'smtp.example.it', smtpPort: 465, imapHost: 'imap.example.it', imapPort: 993 };
@@ -12,28 +15,36 @@ function setup(opts: { status?: string; xmlPath?: string; kind?: string; assigne
   const invoice = { id: 'inv1', tenantId: 't1', status: opts.status ?? 'ISSUED', xmlPath: opts.xmlPath ?? 't1/invoices/2026/IT01234567890_00001.xml', xmlFileName: 'IT01234567890_00001.xml', customer: { kind: opts.kind ?? 'IT_BUSINESS' } };
   const invoiceUpdateMany = vi.fn().mockResolvedValue({ count: opts.claimed ?? 1 });
   const transmissionUpdate = vi.fn().mockImplementation(({ data }: { data: object }) => Promise.resolve({ id: 'tr1', ...data }));
-  const tx = { invoice: { updateMany: invoiceUpdateMany }, sdiTransmission: { create: vi.fn().mockResolvedValue({ id: 'tr1', status: 'PENDING' }) } };
+  const transmissionCreate = vi.fn().mockResolvedValue({ id: 'tr1', status: 'PENDING' });
+  const tx = { invoice: { updateMany: invoiceUpdateMany }, sdiTransmission: { create: transmissionCreate, update: transmissionUpdate } };
   const prisma = {
-    invoice: { findFirst: vi.fn().mockResolvedValue(invoice), updateMany: invoiceUpdateMany },
+    invoice: { updateMany: invoiceUpdateMany },
     sdiTransmission: { count: vi.fn().mockResolvedValue(opts.alreadySent ?? 0), update: transmissionUpdate },
     $transaction: vi.fn().mockImplementation((arg: unknown) => (typeof arg === 'function' ? arg(tx) : Promise.all(arg as Promise<unknown>[]))),
   } as unknown as PrismaService;
   const storage = { read: vi.fn().mockResolvedValue(Buffer.from('<xml/>')) } as unknown as StorageService;
   const settings = { connection: vi.fn().mockResolvedValue(CONNECTION), get: vi.fn().mockResolvedValue({ sdiPecAssigned: opts.assigned ?? null, recipient: opts.assigned ?? 'sdi01@pec.fatturapa.it' }) } as unknown as PecSettingsService;
-  const send = opts.sendError ? vi.fn().mockRejectedValue(opts.sendError) : vi.fn().mockResolvedValue({ messageId: '<abc@pec.example.it>' });
-  const mailer = { send } as unknown as PecMailerService;
-  return { service: new SdiTransmissionsService(prisma, storage, settings, mailer), send, invoiceUpdateMany, transmissionUpdate };
+  const send = opts.sendError ? vi.fn().mockRejectedValue(opts.sendError) : vi.fn().mockResolvedValue(undefined);
+  const smtp = { send } as unknown as PecSmtpService;
+  const invoices = { get: vi.fn().mockResolvedValue(invoice) } as unknown as InvoicesService;
+  // The real status rules of the invoices module, over the fake transaction.
+  const invoiceStatus = new InvoiceStatusServiceImpl();
+  return { service: new SdiTransmissionsService(prisma, storage, settings, smtp, invoices, invoiceStatus as unknown as InvoiceStatusService), send, invoiceUpdateMany, transmissionUpdate, transmissionCreate };
 }
 
 describe('SdiTransmissionsService.send (spec 1.9.1 §1.3.1)', () => {
   it('sends the XML as attachment to sdi01@pec.fatturapa.it the first time', async () => {
-    const { service, send, transmissionUpdate } = setup();
+    const { service, send, transmissionUpdate, transmissionCreate } = setup();
     const t = await service.send('t1', 'inv1');
+    // Our Message-ID is saved before sending, so that receipts can be matched even after a stop right after it.
+    const { pecMessageId } = transmissionCreate.mock.calls[0][0].data;
+    expect(pecMessageId).toMatch(/^[0-9a-f-]{36}@pec\.example\.it$/);
     expect(send).toHaveBeenCalledWith(CONNECTION, expect.objectContaining({
       to: 'sdi01@pec.fatturapa.it',
+      messageId: pecMessageId,
       attachment: { fileName: 'IT01234567890_00001.xml', content: Buffer.from('<xml/>') },
     }));
-    expect(t).toMatchObject({ status: 'SENT', pecMessageId: '<abc@pec.example.it>' });
+    expect(t).toMatchObject({ status: 'SENT' });
     expect(transmissionUpdate).toHaveBeenCalledTimes(1);
   });
 

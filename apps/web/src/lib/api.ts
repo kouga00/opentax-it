@@ -1,6 +1,6 @@
 import 'server-only';
 import { cookies } from 'next/headers';
-import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, CollectionPayment, InvoiceCollection, InvoiceDetail, PecProvider, PecSettings, SdiTransmission, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
+import type { BankAccount, Customer, Deadline, RuleSetDetail, SourceDetail, SourceSummary, F24, ImportFile, ImportPreviewRow, ImportResult, InstallmentPlan, Invoice, CollectionPayment, InvoiceCollection, InvoiceDetail, PecProvider, ReceiptsSyncResult, PecSettings, SdiTransmission, ThresholdOutlook, PaymentTerms, PlanOptions, PlanPreview, RuleSetSummary, TaxCredit, TaxSummary, TaxYearData, Tenant, TenantWithProfile } from './types';
 
 export * from './types';
 export * from './format';
@@ -65,6 +65,7 @@ export const api = {
   pecSettings: () => tenantRequest<PecSettings>('/sdi/pec-settings'),
   savePecSettings: (data: unknown) => tenantRequest<PecSettings>('/sdi/pec-settings', { method: 'PUT', body: JSON.stringify(data) }),
   sdiTransmissions: (invoiceId: string) => tenantRequest<SdiTransmission[]>(`/invoices/${seg(invoiceId)}/sdi-transmissions`),
+  syncReceipts: () => tenantRequest<ReceiptsSyncResult>('/sdi/receipts/sync', { method: 'POST' }),
   sendToSdi: (invoiceId: string) => tenantRequest<SdiTransmission>(`/invoices/${seg(invoiceId)}/sdi-transmissions`, { method: 'POST' }),
   paymentTerms: () => tenantRequest<PaymentTerms[]>('/tenants/me/payment-terms'),
   savePaymentTerms: (data: unknown, id?: string) => tenantRequest<PaymentTerms>(id ? `/tenants/me/payment-terms/${seg(id)}` : '/tenants/me/payment-terms', { method: id ? 'PUT' : 'POST', body: JSON.stringify(data) }),
