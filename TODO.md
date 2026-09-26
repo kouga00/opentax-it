@@ -67,6 +67,7 @@ Oggi la partita IVA attiva è scelta in `/setup` e salvata in un cookie; l'API r
 - Login (email + password o passkey), sessioni, ruoli già previsti nello schema (`UserRole`), tenant multipli per utente.
 - L'header `x-tenant-id` e il cookie `opentax_tenant` vanno sostituiti dalla sessione.
 - Rate limiting e audit log (`AuditLog` esiste nello schema, non è usato).
+- Attivazione dell'account via email alla registrazione: così la registrazione risponde sempre allo stesso modo ("ti abbiamo inviato un link di attivazione") e non rivela se un indirizzo è già registrato ([OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages)). Dipende dall'invio email (SMTP).
 
 ### Invio allo SDI via PEC e ricevute
 Emissione e XML sono pronti; manca la trasmissione. Normativa verificata in [docs/normativa-2026.md](docs/normativa-2026.md) §4.3; tabelle `SdiTransmission`/`SdiNotification` e `TenantProfile.sdiPecAssigned` già nello schema.

@@ -22,4 +22,5 @@ Esito dell'ultima security review e punti ancora aperti: [TODO.md](TODO.md), epi
 
 Linee guida di progetto:
 - isolamento per tenant applicato a livello di query;
+- messaggi di errore generici su login, registrazione e recupero password: la risposta non rivela se un account esiste (stesso messaggio, stesso codice di stato, tempi simili), come indica l'[OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#authentication-and-error-messages);
 - nessun dato reale nei test o nei fixture.
