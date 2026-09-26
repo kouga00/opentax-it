@@ -24,10 +24,10 @@ Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime f
 Fase iniziale, in uso **solo in locale** (manca ancora l'autenticazione). Ogni funzione è ancorata a una fonte ufficiale, elencata in [docs/compliance.md](docs/compliance.md); le citazioni verificate sono in [docs/normativa-2026.md](docs/normativa-2026.md).
 
 **Funziona**
-- **Regole fiscali** (`/rules`): set 2025 e 2026 (`packages/fiscal-rules`), ogni valore con la sua fonte e la citazione esatta; versioni per anno, attivazione manuale e, prima di attivare una bozza, cosa cambia rispetto al set attivo.
+- **Regole fiscali** (`/rules`): set 2025 e 2026 (`packages/fiscal-rules`), consultabili per sezione, ogni valore con la sua fonte e la citazione esatta; versioni per anno, attivazione manuale e, prima di attivare una bozza, cosa cambia rispetto al set attivo.
 - **Fonti ufficiali** (`/sources`): registro dei documenti letti con la copia archiviata ([docs/fonti](docs/fonti/README.md)); per ogni fonte le regole che la citano, con la citazione evidenziata nel testo. I test verificano che ogni citazione compaia nel documento archiviato.
 - **Fatture** (`/invoices`): clienti, bozze illimitate e modificabili, note di credito, emissione con numerazione progressiva e XML FatturaPA validato sullo schema ufficiale, copia di cortesia in PDF, import di XML emessi con altri software. Data mai nel futuro (errore SDI 00403), clienti esteri azienda o privato, valuta con cambio precompilato dalla Banca d'Italia.
-- **Incassi e soglie**: principio di cassa, incassi in valuta al cambio del giorno, soglie 85.000 / 100.000 € in dashboard e all'emissione, limite personale nel profilo.
+- **Incassi e soglie**: principio di cassa, incasso registrato dall'elenco fatture (anche parziale), modalità di pagamento scelta sulla fattura, incassi in valuta al cambio del giorno, soglie 85.000 / 100.000 € in dashboard e all'emissione, limite personale nel profilo.
 - **Imposte** (`/taxes`): reddito, imposta sostitutiva, contributo INPS Gestione Separata (in euro interi sul rigo LM34), acconti 40/60 o 50/50 ISA; sopra 100.000 € il calcolo forfettario si ferma.
 - **F24** (`/f24`, `/credits`): piano rate con interessi, differimento con maggiorazione (per l'INPS nella riga DPPI), compensazione dei crediti a saldo zero, stampa sul modello ufficiale AdE, stato delle deleghe e date I24.
 - **Scadenzario** (`/deadlines`) e **dashboard** (`/dashboard`), con festività nazionali calcolate per ogni anno.

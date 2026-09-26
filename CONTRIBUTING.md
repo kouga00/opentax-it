@@ -22,7 +22,7 @@ Lo stesso vale per la documentazione e per `TODO.md`: una feature non verificata
 - Se una fonte è ambigua, apri una issue prima di codificare.
 
 ## Codice
-- Convenzioni di architettura (DTO di richiesta e risposta, mapper, Swagger, pattern API, OWASP) e comandi in [AGENTS.md](AGENTS.md): valgono per tutti, con o senza agente AI.
+- Convenzioni in [AGENTS.md](AGENTS.md), con i comandi: pacchetti mantenuti invece di codice scritto a mano, niente duplicati di codice, enum e costanti, cartelle fisse per modulo, DTO di richiesta e risposta, mapper, Swagger, pattern API, early return, OWASP e messaggi generici sull'autenticazione. Valgono per tutti, con o senza agente AI.
 - TypeScript strict, lint (`pnpm lint`) e test (`pnpm test`) verdi.
 - Commit piccoli con messaggio che spiega il *perché*.
 - Niente dati reali (P.IVA, IBAN, fatture) negli esempi e nei test: usa dati fittizi.
