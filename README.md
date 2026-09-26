@@ -1,6 +1,13 @@
 # OpenTax IT
 
+[![CI](https://github.com/kouga00/opentax-it/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kouga00/opentax-it/actions/workflows/ci.yml)
+[![Licenza: AGPL-3.0](https://img.shields.io/github/license/kouga00/opentax-it)](LICENSE)
+[![Node.js 24](https://img.shields.io/badge/node-24-339933?logo=nodedotjs&logoColor=white)](package.json)
+[![Stato: fase iniziale, solo in locale](https://img.shields.io/badge/stato-fase%20iniziale-orange)](#stato)
+
 Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime forfettario** (L. 190/2014, art. 1 c. 54-89). Ogni regola applicata cita una fonte ufficiale.
+
+![Dashboard di OpenTax IT con dati di prova: prossima scadenza F24, documenti emessi e da inviare allo SDI, bolli, incassato e fatturato rispetto alle soglie del forfettario, prossime scadenze](docs/images/dashboard.png)
 
 ## Cosa fa
 
@@ -36,8 +43,6 @@ Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime f
 - Autenticazione, con più partite IVA per utente (lo schema è **multi-tenant** fin dall'inizio).
 - Registro degli **avvisi/comunicazioni** (CIVIS) e delle relative rate.
 - Controllo periodico delle fonti ufficiali (AdE, INPS, GU/Normattiva, ADM) con proposta delle modifiche alle regole.
-
-![Dashboard di OpenTax IT con dati di prova: prossima scadenza F24, documenti emessi e da inviare allo SDI, bolli, incassato e fatturato rispetto alle soglie del forfettario, prossime scadenze](docs/images/dashboard.png)
 
 > **Avvertenza.** Questo software è uno strumento di supporto al calcolo e all'organizzazione: **non è consulenza fiscale** e non sostituisce un professionista abilitato. **Non si garantisce la veridicità né la correttezza dei dati e dei calcoli prodotti: la responsabilità del loro uso è esclusivamente dell'utilizzatore.** Le regole fiscali cambiano ogni anno; verifica sempre i valori attivi con le fonti ufficiali. Gli autori e i contributori non rispondono di errori di calcolo, sanzioni o omissioni derivanti dall'uso del software: vedi [DISCLAIMER.md](DISCLAIMER.md) e [LICENSE](LICENSE), sez. 15-16.
 
