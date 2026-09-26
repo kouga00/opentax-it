@@ -147,6 +147,18 @@ Emissione e XML sono pronti; manca la trasmissione. Normativa verificata in [doc
 
 ### Fatture ricevute (acquisti)
 - Le fatture ricevute non incidono sul reddito forfettario ma servono per il registro e per l'IVA sugli acquisti esteri (L. 190/2014 c. 60: versamento entro il 16 del mese successivo). Import dallo SDI e scadenza in calendario.
+- Oggi l'import rifiuta gli XML in cui il cedente non è la partita IVA attiva (`invoices-import.service.ts`): le fatture ricevute non entrano.
+- **Come arrivano** (Spec. 1.9.1 §1.5.5, archiviata; verificato il 26/09/2026). Lo SDI recapita a:
+  1. l'indirizzo telematico registrato dal destinatario sul portale Fatture e Corrispettivi (§1.5.1.2: la registrazione "verrà considerata dal SdI come prioritaria");
+  2. altrimenti il canale del `CodiceDestinatario` scritto dal fornitore (il codice di un software o di un intermediario);
+  3. con `CodiceDestinatario` "0000000", la PEC in `PECDestinatario`;
+  4. senza PEC, o se il recapito non riesce, l'area riservata del destinatario sul sito dell'Agenzia ("ricevuta di impossibilità di recapito" al fornitore).
+
+  Quindi la PEC riceve le fatture solo se il destinatario l'ha registrata o se il fornitore la indica. I canali web service e SFTP richiedono l'accreditamento (epica "Invio allo SDI via PEC").
+- Passi:
+  1. **Import dal portale Fatture e Corrispettivi**: estendere l'import di XML e ZIP ai documenti in cui la partita IVA attiva è il cessionario/committente, salvati come acquisti, separati dalle fatture emesse (tabella e pagina proprie). **Da verificare** sulla pagina ufficiale del servizio di consultazione se nel portale sono disponibili tutte le fatture ricevute, anche quelle recapitate via PEC o codice destinatario, o solo quelle messe a disposizione nell'area riservata.
+  2. **Via PEC, facoltativa**: per chi registra la propria PEC come indirizzo telematico, leggere dalla casella anche le fatture in arrivo (un file fattura e un file di metadati per messaggio, Allegato B DM 55/2013 v1.8.4 §3.2.1), insieme alle ricevute dell'epica PEC.
+  3. Scadenze e versamento dell'IVA sugli acquisti esteri (L. 190/2014 c. 60, **da verificare** nel testo prima di codificarlo).
 
 ## Versamenti
 
