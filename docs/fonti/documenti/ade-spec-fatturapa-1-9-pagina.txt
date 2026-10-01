@@ -1,0 +1,27 @@
+Specifiche tecniche versione 1.9
+
+Documentazione utilizzabile dal 1° aprile 2025
+
+Allegato A - Specifiche tecniche vers 1.9 – pdf – (aggiornate il 31 gennaio 2025)
+
+Appendix A - Technical Specifications vers 1.9 – pdf
+
+Rappresentazione tabellare del tracciato fattura ordinaria - xlsx
+
+Table view B2B Ordinary invoice – xls
+
+Rappresentazione tabellare fattura semplificata - xlsx
+
+Table view B2B Simplified invoice – xls
+
+Schema VFSM10 - xsd
+
+Schema_VFPR12 - xsd
+
+MessaggiFatturaTypes_v1.0 - xsd
+
+Qr Code partita IVA - Specifiche tecniche - pdf
+
+Esempi fattura, hash e ricevute
+
+Fogli di stile per ricevute

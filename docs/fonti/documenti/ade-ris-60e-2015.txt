@@ -1,0 +1,60 @@
+Direzione Centrale Servizi ai Contribuenti
+
+RISOLUZIONE N. 60/E
+
+Roma, 18/06/2015
+
+OGGETTO: Istituzione di causali contributo per il versamento, tramite modello
+F24, dei contributi previdenziali e assistenziali dovuti dagli iscritti
+all’Ente Nazionale di Previdenza e Assistenza per gli Psicologi E.N.P.A.P.
+Il decreto interministeriale 10 gennaio 2014 del Ministro dell’Economia e
+delle Finanze, di concerto con il Ministro del Lavoro e delle Politiche Sociali, ha
+stabilito che il sistema dei versamenti unitari e la compensazione, previsti
+dall’articolo 17 del decreto legislativo 9 luglio 1997, n. 241, si applicano, tra gli
+altri, anche all’Ente Nazionale di Previdenza e Assistenza per gli Psicologi (di
+seguito E.N.P.A.P.).
+Con la convenzione dell’11 maggio 2015, stipulata tra l’Agenzia delle
+entrate e l’E.N.P.A.P., è stato regolato il servizio di riscossione, mediante il
+modello F24, per il versamento dei contributi previdenziali e assistenziali dovuti
+dagli iscritti al suddetto Ente.
+
+Per consentire il versamento, tramite il modello F24, delle suddette somme,
+si istituiscono le causali contributo di seguito indicate:
+“ECTR” denominato “ENPAP – Contributi (Acconto/Saldo)”;
+“ERPS” denominato “ENPAP – Riscatto periodi di studio”;
+“EAPR” denominato “ENPAP – Riscatto anni di esercizio professionale
+precedenti la fondazione dell’Ente”;
+“ESNZ” denominato “ENPAP – Sanzioni ”;
+“EINT” denominato “ENPAP – Interessi ”.
+
+In sede di compilazione del modello F24, le suddette causali contributo sono
+esposte nella sezione “Altri enti previdenziali e assicurativi” (secondo riquadro)
+in corrispondenza, esclusivamente, delle somme indicate nella colonna “importi a
+debito versati”, indicando:
+-
+
+nel campo “codice ente”, il codice “0007”;
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, nessun valore;
+
+-
+
+nel campo “periodo di riferimento da mm/aaaa a mm/aaaa”, l’anno di
+competenza del contributo da versare, nel formato “AAAA”; il mese non è
+da valorizzare;
+
+-
+
+nel campo “importi a credito compensati”, nessun valore.
+
+Si precisa che le suddette causali contributo sono operativamente efficaci a
+decorrere dal 6 luglio 2015.
+IL DIRETTORE CENTRALE
+
+

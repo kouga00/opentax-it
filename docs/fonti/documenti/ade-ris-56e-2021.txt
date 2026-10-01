@@ -1,0 +1,56 @@
+RISOLUZIONE N. 56/E
+
+Divisione Servizi
+______________
+Direzione Centrale Servizi Fiscali
+
+Roma, 6 settembre 2021
+
+OGGETTO: Istituzione delle causali contributo “E105” e “E106” per il versamento,
+tramite il modello “F24”, dei contributi di spettanza della Cassa Nazionale di
+Previdenza ed Assistenza Forense
+Il decreto del Ministro dell’Economia e delle Finanze del 10 gennaio 2014, emanato di
+concerto con il Ministro del Lavoro e delle Politiche Sociali, ha stabilito che il sistema dei
+versamenti unitari e la compensazione previsti dall’articolo 17 del decreto legislativo 9 luglio
+1997, n. 241 si applicano, tra gli altri, anche alla Cassa Nazionale di Previdenza ed Assistenza
+Forense (di seguito CASSA FORENSE).
+Con la convenzione del 26 novembre 2020 stipulata tra l’Agenzia delle entrate e la Cassa
+Forense, è stato regolato il servizio di riscossione, mediante il modello F24, dei contributi
+previdenziali e assistenziali dovuti dagli iscritti alla citata Cassa.
+Con nota prot. n. 177408 del 14 luglio 2021, la Cassa Forense ha richiesto l’istituzione
+di ulteriori causali contributo, rispetto alle causali già istituite con le risoluzioni n. 1/E dell’11
+gennaio 2021 e n. 34/E del 21 maggio 2021.
+Ciò premesso, si istituiscono le causali contributo di seguito indicate:
+ “E105” denominata “CASSA FORENSE – integrazione contr. minimo soggettivo (12
+mesi)”;
+ “E106” denominata “CASSA FORENSE – interessi integrazione contr. minimo
+soggettivo”.
+In sede di compilazione del modello F24, le causali in argomento sono esposte nella
+sezione “Altri enti previdenziali e assicurativi” (secondo riquadro), nel campo “causale
+contributo”, esclusivamente in corrispondenza delle somme indicate nella colonna “importi
+a debito versati”, riportando:
+-
+
+nel campo “codice ente”, il codice “0013”;
+
+2
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, nessun valore;
+
+-
+
+nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e l’anno di
+competenza del contributo da versare, nel formato “MM/AAAA”.
+Si precisa che le suddette causali sono operativamente efficaci a decorrere dal 15
+
+settembre 2021.
+IL DIRETTORE CENTRALE
+Firmato digitalmente
+
+

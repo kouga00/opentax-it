@@ -1,0 +1,22 @@
+{
+  "stampDutyDeferral": {
+    "paragraphs": [
+      "Guida AdE sull'imposta di bollo (giugno 2026): se l'importo dovuto per il 1° trimestre non supera 5.000 €, si può versare entro il 30 settembre; se 1° + 2° trimestre non superano 5.000 €, entro il 30 novembre. È una facoltà: la scadenza ordinaria resta valida."
+    ]
+  },
+  "stampDutyEstimate": {
+    "paragraphs": [
+      "Per l'Agenzia delle Entrate il trimestre dipende dalla data di consegna della \"ricevuta di consegna\" SDI (o dalla data di messa a disposizione): una fattura del 30 marzo consegnata il 1° aprile va nel 2° trimestre (Guida AdE sull'imposta di bollo, giugno 2026). Alcune fatture di questo trimestre non hanno ancora quella data (non inviate, in attesa di esito o importate senza ricevute) e sono contate con la loro data. L'importo da versare è quello degli elenchi A e B del portale Fatture e Corrispettivi."
+    ]
+  },
+  "notSplittable": {
+    "paragraphs": [
+      "Le istruzioni Redditi PF ammettono la rateazione solo di saldo e primo acconto (D.Lgs. 33/2025 art. 10)."
+    ]
+  },
+  "filingOnly": {
+    "paragraphs": [
+      "Termine telematico (DPR 322/1998 art. 2). I versamenti di saldo e acconti hanno scadenze proprie."
+    ]
+  }
+}

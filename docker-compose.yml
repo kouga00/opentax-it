@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:18-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: opentax
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: opentax
+    ports:
+      - "127.0.0.1:5432:5432" # localhost only
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:

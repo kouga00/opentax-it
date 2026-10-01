@@ -1,0 +1,64 @@
+Direzione Centrale Servizi ai Contribuenti
+____________
+
+RISOLUZIONE N. 19/E
+
+Roma, 17 febbraio 2015
+
+OGGETTO: Istituzione delle causali contributo per il versamento, tramite il
+modello F24, dei contributi previdenziali e assistenziali dovuti
+dagli iscritti all’Ente di Previdenza dei Periti Industriali e dei Periti
+Industriali Laureati - EPPI
+Il decreto del Ministro dell’Economia e delle Finanze del 10 gennaio 2014,
+emanato di concerto con il Ministro del Lavoro e delle Politiche Sociali, ha
+stabilito che il sistema dei versamenti unitari e la compensazione previsti
+dall’articolo 17 del decreto legislativo 9 luglio 1997, n. 241 si applicano, tra gli
+altri, anche all’Ente di Previdenza dei Periti Industriali e dei Periti Industriali
+Laureati (di seguito EPPI).
+Con la convenzione del 4 febbraio 2015 stipulata tra l’Agenzia delle entrate
+e l’EPPI, è stato regolato il servizio di riscossione, mediante il modello F24, dei
+contributi previdenziali e assistenziali dovuti dagli iscritti al citato Ente.
+Pertanto, per consentire il versamento dei suddetti contributi, tramite il
+modello F24, si istituiscono le causali contributo di seguito indicate:
+ “E066” denominato “EPPI - I Acconto – art. 8, c. 1, del Regolamento di
+previdenza”;
+ “E067” denominato “EPPI - II Acconto – art. 8, c. 1, del Regolamento di
+previdenza”;
+
+ “E068” denominato “EPPI - Saldo contributivo – art. 8, c. 1, del Regolamento
+di previdenza”;
+ “E069” denominato “EPPI - Contributi scaduti”;
+ “E070” denominato “EPPI - Interessi di mora e sanzioni per il ritardato
+pagamento dei contributi – art. 10 del Regolamento di previdenza”;
+ “E071” denominato “EPPI - Sanzioni per omessa, ritardata trasmissione,
+nonché infedele dichiarazione delle comunicazioni obbligatorie – art. 11, c. 5,
+del Regolamento di previdenza”;
+ “E072” denominato “EPPI – Spese legali a seguito di procedimento
+giudiziario”.
+
+In sede di compilazione del modello F24, le causali in argomento sono
+esposte nella sezione “Altri enti previdenziali e assicurativi” (secondo riquadro),
+nel campo “causale contributo”, in corrispondenza, esclusivamente, delle somme
+indicate nella colonna “importi a debito versati”, indicando:
+-
+
+nel campo “codice ente”, il codice “0009”;
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, nessun valore;
+
+-
+
+nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e
+l’anno nel quale si effettua il versamento, nel formato “MM/AAAA”.
+
+Si precisa che le suddette causali sono operativamente efficaci a decorrere
+dal 23 febbraio 2015.
+IL DIRETTORE CENTRALE
+
+

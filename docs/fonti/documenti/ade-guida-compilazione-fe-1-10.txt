@@ -1,0 +1,1781 @@
+GUIDA ALLA COMPILAZIONE DELLE FATTURE ELETTRONICHE
+E DELL’ESTEROMETRO
+
+Data
+
+Versione
+
+Descrizione
+
+Autore
+
+1° aprile 2025
+
+1.10
+
+Introduzione del tipo documento TD29
+“Comunicazione per omessa o
+irregolare fatturazione (ex art. 6 c.8
+d.lgs. 471/97)” e modifica della
+descrizione del tipo documento TD20.
+
+Agenzia delle entrate
+
+5 marzo 2024
+
+1.9
+
+Introduzione della descrizione delle
+modalità di rettifica delle
+comunicazioni trasmesse via SDI con i
+tipi documento TD16, TD17, TD18,
+TD19, TD20, TD21, TD22, TD23, TD26
+e TD28.
+
+Agenzia delle entrate
+
+1
+
+Fornite indicazioni per la compilazione
+della sezione “AltriDatiGestionali” da
+parte delle imprese agricole in regime
+speciale.
+30 settembre 2022
+
+1.8
+
+Introduzione del tipo documento TD28
+per la comunicazione esterometro nel
+caso di ricezione di fattura cartacea con
+addebito IVA da operatore
+sammarinese per acquisto di beni;
+introdotte ulteriori precisazioni per
+rendere più chiare le indicazioni per
+l’utilizzo del TD19 per acquisto di beni
+dalla Repubblica di San Marino o dalla
+Città del Vaticano
+
+Agenzia delle entrate
+
+15 luglio 2022
+
+1.7
+
+Correzione di refusi e ulteriori
+precisazioni per rendere più chiare
+alcune indicazioni
+
+Agenzia delle entrate
+
+04 febbraio 2022
+
+1.6
+
+Modifica della sezione relativa alla
+registrazione della fattura per il tipo
+documento TD21 se l’assolvimento
+dell’IVA avviene in sede di liquidazione
+periodica, per correggere un refuso
+
+Agenzia delle entrate
+
+07 luglio 2021
+
+1.5
+
+Modifica della descrizione del tipo
+documento TD25 e della natura N6.2
+per correggere un refuso
+
+Agenzia delle entrate
+
+02 luglio 2021
+
+1.4
+
+Modifica della descrizione del tipo
+documento TD24 e della natura N6.2
+
+Agenzia delle entrate
+
+Ulteriori precisazioni per la
+compilazione della fattura e per i criteri
+di elaborazione delle bozze dei registri
+IVA precompilati in caso di
+valorizzazione del tipo documento
+TD04, TD17, TD19 e TD23 e della
+natura N.2.2
+18 dicembre 2020
+
+1.3
+
+Ulteriori precisazioni per la
+compilazione della fattura in caso di
+valorizzazione della natura N.2.1
+
+Agenzia delle entrate
+
+16 dicembre 2020
+
+1.2
+
+Ulteriori precisazioni per rendere più
+chiare alcune indicazioni
+
+Agenzia delle entrate
+
+25 novembre 2020
+
+1.1
+
+Correzione di un refuso a pag.7:
+sostituzione del codice TD27 con TD19
+
+Agenzia delle entrate
+
+23 novembre 2020
+
+1.0
+
+Prima versione del documento
+
+Agenzia delle entrate
+
+2
+
+Indice
+Prefazione .......................................................................................................................................................... 5
+Tabella riepilogativa dei codici Tipo-Documento .............................................................................................. 6
+CORRETTO UTILIZZO DEI CODICI TIPO-DOCUMENTO ....................................................................................... 7
+TD01 FATTURA, TD02 ACCONTO/ANTICIPO SU FATTURA, TD03 ACCONTO/ANTICIPO SU PARCELLA, TD06
+PARCELLA, TD07 FATTURA SEMPLIFICATA ........................................................................................................ 7
+TD04 NOTA DI CREDITO, TD08 NOTA DI CREDITO SEMPLIFICATA .................................................................... 7
+TD05 NOTA DI DEBITO, TD09 NOTA DI DEBITO SEMPLIFICATA ........................................................................ 9
+TD16 INTEGRAZIONE FATTURA DA REVERSE CHARGE INTERNO .................................................................... 10
+TD17 INTEGRAZIONE/AUTOFATTURA PER ACQUISTO SERVIZI DALL’ESTERO................................................. 11
+TD18 INTEGRAZIONE PER ACQUISTO DI BENI INTRACOMUNITARI................................................................. 13
+TD19 INTEGRAZIONE/AUTOFATTURA PER ACQUISTO DI BENI EX ART. 17, SECONDO COMMA, DEL D.P.R. N.
+633 DEL 1972 ................................................................................................................................................... 15
+TD20 AUTOFATTURA PER REGOLARIZZAZIONE E INTEGRAZIONE DELLE FATTURE (EX ART. 6 C. 9-BIS D.LGS.
+N. 471 DEL 1997 O ART. 46, COMMA 5, D.L. N. 331 DEL 1993) ...................................................................... 18
+TD21 AUTOFATTURA PER SPLAFONAMENTO ................................................................................................. 20
+TD22 ESTRAZIONE BENI DA DEPOSITO IVA ..................................................................................................... 21
+TD23 ESTRAZIONE BENI DA DEPOSITO IVA CON VERSAMENTO DELL’IVA ...................................................... 24
+TD24 FATTURA DIFFERITA DI CUI ALL’ART. 21, COMMA 4, TERZO PERIODO, LETT. A), DEL D.P.R. N. 633 DEL
+1972 ................................................................................................................................................................. 26
+TD25 FATTURA DIFFERITA DI CUI ALL’ART. 21, COMMA 4, TERZO PERIODO, LETT. B), DEL D.P.R. N. 633 DEL
+1972 ................................................................................................................................................................. 27
+TD26 CESSIONE DI BENI AMMORTIZZABILI E PASSAGGI INTERNI (EX ART. 36, QUINTO COMMA, DEL D.P.R. N.
+633 DEL 1972) .................................................................................................................................................. 28
+TD27 FATTURA PER AUTOCONSUMO O PER CESSIONI GRATUITE SENZA RIVALSA ........................................ 29
+TD28 ACQUISTI DA SAN MARINO CON IVA (fattura cartacea) ........................................................................ 30
+TD29 COMUNICAZIONE PER OMESSA O IRREGOLARE FATTURAZIONE (ART. 6, COMMA 8, D.LGS. 471/97) . 31
+Tabella riepilogativa dei codici natura IVA ...................................................................................................... 33
+CORRETTO UTILIZZO DEI CODICI NATURA IVA ................................................................................................ 34
+N2.1 – Operazioni non soggette ad IVA ai sensi degli artt. da 7 a 7-septies, del d.P.R. n. 633 del 1972 ........ 34
+N2.2 – Operazioni non soggette – Altri casi .................................................................................................... 34
+N3.1 – Non imponibili – Esportazioni .............................................................................................................. 35
+N3.2 – Non imponibili – Cessioni intracomunitarie......................................................................................... 35
+N3.3 – Non imponibili – Cessioni verso San Marino........................................................................................ 36
+N3.4 – Non imponibili – Operazioni assimilate alle cessioni all’esportazione ................................................ 36
+3
+
+N3.5 – Non imponibili – Non imponibile a seguito di dichiarazioni d’intento ................................................ 36
+N3.6 – Non imponibili – Altre operazioni che non concorrono alla formazione del plafond ......................... 37
+N6.1 – Inversione contabile – Cessione di rottami e altri materiali di recupero............................................. 37
+N6.2 – Inversione contabile – Cessione di oro e argento ai sensi della legge n. 7 del 2000 nonché di
+oreficeria usata ad OPO................................................................................................................................... 37
+N6.3 – Inversione contabile – Subappalto nel settore edile ........................................................................... 38
+N6.4 – Inversione contabile – Cessione di fabbricati ...................................................................................... 38
+N6.5 – Inversione contabile – Cessione di telefoni cellulari ............................................................................ 38
+N6.6 – Inversione contabile – Cessione di prodotti elettronici ....................................................................... 38
+N6.7 – Inversione contabile – Prestazioni comparto edile e settori connessi ................................................ 38
+N6.8 – Inversione contabile – Operazioni settore energetico......................................................................... 39
+N6.9 – Inversione contabile – Altri casi ........................................................................................................... 39
+Istruzioni sull’utilizzo dei codici presenti nel blocco informativo <AltriDatiGestionali> 2.2.1.16 ................... 40
+
+4
+
+Prefazione
+
+Le modalità di compilazione dei tipi documento, esposte nella presente guida, costituiscono
+indicazioni operative la cui osservanza consente, fermo restando il rispetto delle norme esistenti, di
+ottimizzare il processo di fatturazione, rendendo le informazioni contenute nel documento trasmesso
+attraverso il Sistema di Interscambio (d’ora in avanti SDI) aderenti alla tipologia di cessione di beni
+o prestazione di servizi realmente effettuata. L’osservanza di tali indicazioni permette inoltre la
+corretta annotazione delle diverse tipologie di operazioni IVA nelle bozze dei registri precompilati
+dall’Agenzia delle entrate.
+Si fa presente che i dati delle operazione transfrontaliere relativi a cessioni di beni/prestazioni di
+servizi effettuate fino al 30 giugno 2022 possono ancora essere trasmessi tramite il vecchio
+esterometro, utilizzando il tracciato “Schema dati fattura.xsd“.
+
+5
+
+Tabella riepilogativa dei codici Tipo-Documento
+Codice
+Descrizione
+TD01 fattura
+TD02 acconto/anticipo su fattura
+TD03 acconto/anticipo su parcella
+TD04
+TD05
+TD06
+TD07
+TD08
+TD09
+TD10
+TD11
+TD12
+TD16
+TD17
+TD18
+TD19
+TD20
+TD21
+TD22
+TD23
+TD24
+TD25
+TD26
+TD27
+TD28
+TD29
+
+Flusso
+FE/vecchio esterometro
+FE
+FE
+FE/ vecchio
+nota di credito
+esterometro
+nota di debito
+FE/vecchio esterometro
+parcella
+FE
+fattura semplificata
+FES
+nota di credito semplificata
+FES
+nota di debito semplificata
+FES
+fattura di acquisto intracomunitario beni
+vecchio esterometro
+fattura di acquisto intracomunitario servizi
+vecchio esterometro
+documento riepilogativo (art. 6, d.P.R. 695/1996)
+vecchio esterometro
+integrazione fattura reverse charge interno
+FE
+integrazione/autofattura per acquisto servizi dall’estero
+FE
+integrazione per acquisto di beni intracomunitari
+FE
+integrazione/autofattura per acquisto di beni ex art. 17 c.2 DPR 633/72
+FE
+autofattura per regolarizzazione e integrazione delle fatture (ex art. 6
+c. 9-bis d.lgs. 471/97 o art. 46 c.5 d.l. 331/93)
+FE
+autofattura per splafonamento
+FE
+estrazione beni da Deposito IVA
+FE
+estrazione beni da Deposito IVA con versamento dell’IVA
+FE
+fattura differita di cui all'art. 21, comma 4, terzo periodo lett. a) DPR
+633/72
+FE
+fattura differita di cui all'art. 21, comma 4, terzo periodo lett. b) DPR
+633/72
+FE
+cessione di beni ammortizzabili e per passaggi interni (ex art. 36 DPR
+633/72)
+FE
+fattura per autoconsumo o per cessioni gratuite senza rivalsa
+FE
+acquisti da San Marino con IVA (fattura cartacea)
+FE
+comunicazione per omessa o irregolare fatturazione (ex art. 6, comma
+8, d.lgs. 471/97)
+FE
+
+6
+
+CORRETTO UTILIZZO DEI CODICI TIPO-DOCUMENTO
+
+TD01
+FATTURA,
+TD02
+ACCONTO/ANTICIPO
+SU
+FATTURA,
+TD03
+ACCONTO/ANTICIPO SU PARCELLA, TD06 PARCELLA, TD07 FATTURA
+SEMPLIFICATA
+Descrizione operazione: operazione in regime di IVA ordinaria. Il cedente/prestatore (d’ora in poi
+C/P), entro dodici giorni dal momento di effettuazione dell’operazione 1 , emette una fattura nei
+confronti del cessionario/committente (d’ora in poi C/C).
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P emittente.
+Blocco <CessionarioCommittente>: dati del C/C.
+Indicazione di imponibile e imposta o della Natura nel caso non si tratti di un’operazione imponibile.
+Registrazione della fattura (regole generali)
+Il C/P annota la fattura emessa nel registro delle fatture emesse entro il giorno 15 del mese successivo
+a quello di effettuazione dell’operazione, seppure con riferimento a quest’ultimo (articolo 23 del
+d.P.R. n. 633 del 1972).
+Il C/C annota la fattura ricevuta nel registro delle fatture ricevute con riferimento al mese in cui vuole
+esercitare (articolo 25 del d.P.R. n. 633 del 1972), il diritto alla detrazione in base alle disposizioni
+contenute nell’articolo 19 del d.P.R. n. 633 del 1972 e nell’articolo 1, del d.P.R. n. 100 del 1998.
+
+TD04 NOTA DI CREDITO, TD08 NOTA DI CREDITO SEMPLIFICATA
+Descrizione dell’operazione: il C/P emette una nota di variazione in diminuzione – nota di credito
+TD04 o nota di credito semplificata TD08 ai sensi dell’articolo 26, comma 2, del d.P.R. n. 633 del
+1972 nei confronti del C/C, indicando l’imponibile e la relativa imposta o la natura nei casi non si
+applichi l’imposta. La funzione di tali documenti è quella di variare – in diminuzione – quanto
+fatturato in precedenza.
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P emittente.
+Blocco <CessionarioCommittente>: dati del C/C.
+
+1
+
+Regola generale salvo le deroghe normativamente previste (cfr., ad esempio, l’articolo 21, comma 4, del d.P.R. n. 633
+del 1972).
+
+7
+
+Indicazione di imponibile e imposta o della Natura nel caso non si tratti di un’operazione imponibile.
+Indicazione degli estremi della fattura precedentemente emessa ed inviata da rettificare nel campo
+2.1.6 nel caso di TD04, per fattura ordinaria e nel blocco 2.1.2 nel caso di TD08, per fattura
+semplificata.
+Registrazione della fattura
+Il C/P annota la nota di credito nel registro delle fatture emesse nel mese in cui è stata effettuata
+l’operazione; il C/C annota la nota di credito ricevuta nel registro delle fatture di acquisto nel mese
+in cui l’ha ricevuta2.
+Per le note di credito emesse dal C/P finalizzate a rettificare una fattura trasmessa in cui non è indicata
+l’imposta in quanto il debitore d’imposta è il C/C, quest’ultimo può integrare la nota di credito
+ricevuta con il valore dell’imposta utilizzando la medesima tipologia di documento trasmessa allo
+SDI per integrare la prima fattura ricevuta (ossia nei casi in cui è prevista la trasmissione allo SDI di
+un documento integrativo o di un’autofattura con i codici da TD16 a TD19), indicando gli importi
+con segno negativo e non deve utilizzare il documento TD04. Analoga modalità di trasmissione potrà
+essere adoperata per rettificare, in diminuzione, un precedente documento trasmesso con le Tipologie
+documento TD20, TD21, TD22, TD23, TD26 e TD28. Nell’ipotesi di rettifica effettuata con tali
+modalità il documento trasmesso assume in ogni caso il valore di una nota di variazione ai fini
+IVA. In tali casistiche, il C/C, nel documento emesso per rettificare un precedente documento
+integrativo, dovrà indicare nel campo 2.1.6 <DatiFattureCollegate> gli estremi della nota di credito
+ricevuta, quando disponibile.
+Esempio:
+•
+
+il cedente francese emette (con facoltà di trasmissione della stessa tramite SDI) la fattura n.
+15 del 05/10/2020 non imponibile di 200 euro per cessione di beni;
+
+•
+
+il cessionario residente o stabilito in Italia trasmette a SDI il 06/10/2020 un documento TD18
+in cui, con riferimento alla fattura n. 15 del 05/10/2020 del cedente francese, è riportato
+l’imponibile di 200 euro e l’imposta di 44 euro;
+
+•
+
+il cedente francese il 03/11/2020 emette (con facoltà di trasmissione della stessa tramite SDI),
+con riferimento alla fattura n. 15 del 05/10/2020, una nota di credito dell’importo di 20 euro;
+
+•
+
+conseguentemente il cessionario residente o stabilito in Italia può trasmettere a SDI un
+documento TD18 rettificativo di quello trasmesso il 06/10/2020, riportando un imponibile di
+- 20 euro e un’imposta di - 4,4 euro e indicando nel campo 2.1.6 gli estremi della nota di
+credito ricevuta di 20 euro.
+
+Dovrà essere invece adoperato il TD04 (o il TD08) nel caso di variazione in diminuzione di una
+precedente fattura trasmessa con TD24, TD25 o TD27.
+
+2
+
+Tale criterio di registrazione sarà seguito nell’elaborazione delle bozze dei registri IVA precompilati, per ogni linea
+della fattura.
+
+8
+
+TD05 NOTA DI DEBITO, TD09 NOTA DI DEBITO SEMPLIFICATA
+Descrizione dell’operazione: il C/P emette una nota di variazione in aumento (nota di debito TD05
+o nota di debito semplificata TD09) ai sensi dell’articolo 26, comma 1, del d.P.R. n. 633 del 1972 nei
+confronti del C/C, indicando l’imponibile e la relativa imposta o la natura nei casi in cui non si
+applichi l’imposta. La funzione di tali documenti è quella di variare – in aumento – quanto fatturato
+in precedenza.
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P emittente.
+Blocco <CessionarioCommittente>: dati del C/C.
+Indicazione di imponibile e imposta o della Natura nel caso non si tratti di un’operazione imponibile.
+Indicazione degli estremi della fattura precedentemente inviata da rettificare nel campo 2.1.6 nel caso
+di TD05, per fattura ordinaria e nel blocco 2.1.2 nel caso di TD09, per fattura semplificata.
+Registrazione della fattura
+Il C/P annota, entro i termini di legge, la nota di debito nel registro delle fatture emesse con
+riferimento al mese in cui è stata effettuata l’operazione, mentre il C/C annota la nota di debito
+ricevuta nel registro delle fatture ricevute con riferimento al mese in cui vuole esercitare il diritto alla
+detrazione entro i limiti di legge.
+Per le note di debito emesse dal C/P finalizzata a rettificare una fattura trasmessa, in cui non è indicata
+l’imposta in quanto il debitore d’imposta è il C/C, quest’ultimo deve integrare la nota di debito
+ricevuta e può, al tal fine, utilizzare la medesima tipologia di documento trasmessa allo SDI per
+integrare la prima fattura ricevuta (ossia nei casi in cui è prevista la trasmissione allo SDI di un
+documento integrativo o di un’autofattura con i codici da TD16 a TD19), indicando gli importi con
+segno positivo e non può utilizzare il documento TD05. Analoga modalità di trasmissione potrà essere
+adoperata per rettificare, in aumento, un precedente documento trasmesso con le Tipologie
+documento TD20, TD21, TD22, TD23, TD26 e TD28. Nell’ipotesi di rettifica effettuata con tali
+modalità il documento trasmesso assume in ogni caso il valore di una nota di variazione ai fini
+IVA. In tali casistiche, il C/C, nel documento emesso per rettificare un precedente documento
+integrativo, dovrà indicare nel campo 2.1.6 <DatiFattureCollegate> gli estremi della nota di debito
+ricevuta, quando disponibile.
+Dovrà essere invece adoperato il TD05 (o il TD09) nel caso di variazione in aumento di una
+precedente fattura trasmessa con TD24, TD25 o TD27.
+
+9
+
+TD16 INTEGRAZIONE FATTURA DA REVERSE CHARGE INTERNO
+
+Descrizione operazione: operazione interna effettuata in regime di inversione contabile, ai sensi
+degli articoli 17, commi quinto e sesto e 74, commi 7 e 8, del d.P.R. n. 633 del 1972. Il C/P ha emesso
+una fattura elettronica (ad esempio TD01, TD02 o TD24) con uno dei codici Natura da N6.1 a N6.9,
+la quale deve essere integrata dal C/C indicando aliquota e imposta dovuta.
+Per integrare la fattura ricevuta (normalmente una fattura elettronica) nell’ipotesi di reverse charge
+interno, il C/C può effettuare attraverso lo SDI l’integrazione della fattura (che con la fattura cartacea
+avveniva scrivendo sulla stessa) usando il tipo documento TD16, che sarà recapitato solo a sé stesso
+(dato che è quest’ultimo a essere tenuto a integrare l’IVA in fattura). Il documento integrativo sarà
+utilizzato in fase di elaborazione delle bozze dei registri IVA da parte dell’Agenzia.
+Qualora il C/C volesse avvalersi delle bozze dei registri IVA precompilati elaborati dall’Agenzia
+delle Entrate, è consigliabile trasmettere il tipo documento TD16 allo SDI entro la fine del mese
+riportato nel campo <Data>.
+Alternativamente alla trasmissione del TD16 via SDI, il C/C può integrare manualmente la fattura
+ricevuta, da conservare secondo le indicazioni fornite dall’Agenzia nella Circolare n. 26/E del 13
+luglio 2022, ma in tal caso l’operazione non apparirà nelle suddette bozze di registri IVA elaborati
+dall’Agenzia.
+Per rettificare una comunicazione trasmessa via SDI con TD16, il C/C trasmette un documento della
+medesima tipologia del documento già trasmesso allo SDI (TD16), indicando gli importi con segno
+positivo o negativo a seconda del tipo di errore che si vuole correggere:
+1) se la rettifica è dovuta a seguito di una nota di variazione inviata dal C/P, nel campo 2.1.6
+<DatiFattureCollegate> vanno indicati separatamente il numero e la data della nota di
+variazione ricevuta e il relativo IdSdI;
+2) se la rettifica è dovuta a seguito di un errore nella comunicazione precedentemente inviata dal
+C/C, nel campo 2.1.6 <DatiFattureCollegate> vanno indicati separatamente il numero e la
+data della comunicazione errata e il relativo IdSdI.
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P che ha emesso la fattura in reverse charge.
+Blocco <CessionarioCommittente>: dati del C/C che effettua l’integrazione.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di ricezione della fattura in reserve charge o comunque una data ricadente nel mese
+di ricezione della fattura emessa dal C/P.
+Indicazione dell’imponibile presente nella fattura inviata dal C/P e della relativa imposta calcolata
+dal C/C (in caso di aliquote diversificate, si compilerà il documento con i singoli imponibili e le
+singole imposte).
+10
+
+Indicazione del codice Natura presente nella fattura inviata dal C/P (codici Natura da N6.1 a N6.9).
+Indicazione nel campo 2.1.6 <DatiFattureCollegate> degli estremi della fattura/nota di
+variazione/comunicazione di riferimento e il relativo IdSdI.
+Campo 2.1.1.4 <Numero>: consigliabile adoperare una numerazione progressiva ad hoc.
+Registrazione della fattura
+Il C/C annota la fattura integrata nel registro delle fatture emesse e nel registro delle fatture di
+acquisto.
+
+TD17 INTEGRAZIONE/AUTOFATTURA PER ACQUISTO SERVIZI DALL’ESTERO
+Descrizione dell’operazione: il prestatore non residente e privo di stabile organizzazione nel
+territorio dello Stato (anche residente nella Repubblica di San Marino o nello Stato della Città del
+Vaticano) emette una fattura per prestazioni di servizi al committente residente o stabilito nel
+territorio nazionale indicando l’imponibile ma non la relativa imposta in quanto l’operazione, vista
+dal lato dell’emittente, è non soggetta ed è imponibile in Italia e l’imposta è assolta dal committente
+residente o stabilito in Italia3.
+Il committente, ai sensi dell’articolo 17, secondo comma, del d.P.R. n. 633 del 1972, deve integrare
+il documento ricevuto (nel caso di servizi intra-UE) o emettere un’autofattura (nel caso di servizi
+extra-UE) per indicare l’imposta dovuta che dovrà poi confluire nella propria liquidazione. Al fine di
+adempiere agli obblighi comunicativi di cui all’ articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015
+per le operazioni effettuate a partire dal 1° luglio 2022, il committente deve inviare tramite SDI un
+tipo documento TD17 che sarà recapitato al solo soggetto emittente (dato che quest’ultimo è tenuto
+ad integrare la fattura con l’IVA). La trasmissione di un tipo documento TD17 consente anche di
+adempiere all’obbligo d’integrazione/autofattura ai sensi dell’articolo 17, secondo comma, del d.P.R.
+n. 633 del 1972.
+Qualora il committente volesse avvalersi delle bozze dei registri IVA precompilati elaborati
+dall’Agenzia delle Entrate, è consigliabile trasmettere il tipo documento TD17 allo SDI entro la fine
+del mese riportato nel campo <Data>.
+Per rettificare una comunicazione da esterometro trasmessa via SDI con TD17 per operazioni
+effettuate dal 1° luglio 2022, il committente trasmette un documento della medesima tipologia del
+documento già trasmesso allo SDI (TD17), indicando gli importi con segno positivo o negativo a
+seconda del tipo di errore che si vuole correggere:
+
+Ai sensi dell’articolo 17, quarto comma, del d.P.R. n. 633 del 1972 il reverse charge non trova applicazione (e il TD17
+non deve essere utilizzato) qualora la prestazione di servizi territorialmente rilevante sia stata effettuata dal soggetto non
+residente per il tramite di una stabile organizzazione nel territorio dello Stato.
+3
+
+11
+
+1) se la rettifica è dovuta a seguito di una nota di variazione inviata dal prestatore, nel campo
+2.1.6 <DatiFattureCollegate> vanno indicati separatamente il numero e la data della nota di
+variazione ricevuta e, se disponibile, il relativo IdSdI;
+2) se la rettifica è dovuta a seguito di un errore nella comunicazione precedentemente inviata dal
+committente, nel campo 2.1.6 <DatiFattureCollegate> vanno indicati separatamente il numero
+e la data della comunicazione errata e il relativo IdSdI.
+Si ricorda che la rettifica delle comunicazioni da esterometro trasmesse con tipo documento TD17
+incide anche sugli obblighi d’integrazione/autofattura ai fini IVA qualora questi ultimi non siano stati
+adempiuti in via cartacea. Pertanto, in quest’ultima ipotesi il documento rettificativo trasmesso
+assume anche la valenza di una nota di variazione ai fini IVA.
+Per le operazioni effettuate fino al 30 giugno 2022, alternativamente alla trasmissione del TD17 via
+SDI, il committente può integrare manualmente la fattura o emettere un’autofattura cartacea o
+elettronica extra SDI ed è obbligato a comunicare i dati dell’operazione ricevuta dal prestatore estero,
+integrati con quelli dell’imposta, tramite il vecchio esterometro.
+Per la trasmissione degli acquisti di servizi effettuati da un soggetto passivo italiano all’estero (non
+rilevanti ai fini IVA in Italia) si veda il paragrafo relativo all’utilizzo della Natura N2.2 – Operazioni
+non soggette – altri casi.
+Nel caso di acquisti di servizi da un soggetto non residente ammesso al regime transfrontaliero di
+franchigia ai sensi dell’art. 70-quaterdecies e seguenti del d.P.R. n. 633 del 1972, occorre indicare la
+Natura N2.2 e dovrà essere indicato anche lo specifico regime fiscale RF20 denominato “Regime
+transfrontaliero di Franchigia (Direttiva UE 2020/285)”. Si evidenzia che la trasmissione di tale
+documento in quest’ultima fattispecie deve essere effettuata al solo fine di adempiere agli obblighi
+comunicativi di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015 e non assume alcuna
+rilevanza ai fini IVA.
+
+Compilazione del documento
+Fattura elettronica TD17
+Blocco <CedentePrestatore>: dati del prestatore estero con l’indicazione del paese di residenza dello
+stesso 4.
+Blocco <CessionarioCommittente>: dati del committente che effettua l’integrazione o emette
+l’autofattura.
+
+4
+
+Si ricorda che qualora il prestatore emetta una fattura riportante la partita IVA italiana aperta tramite un rappresentante
+fiscale o identificazione diretta ai sensi dell’articolo 35-ter del d.P.R. n. 633 del 1972 il documento emesso non avrà
+rilevanza ai fini IVA (Risoluzione n. 89/E del 25 agosto 2010). Pertanto, qualora il prestatore sia extra-UE, il committente
+deve trasmettere un TD17 avente valore di autofattura indicando l’identificativo estero del prestatore; qualora invece il
+prestatore sia residente in un paese UE, il committente deve trasmettere un TD17 avente valore di integrazione della
+fattura emessa tramite la posizione IVA estera avente rilevanza ai fini IVA indicando l’identificativo estero del prestatore.
+
+12
+
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata:
+−
+
+la data di ricezione (o comunque una data ricadente nel mese di ricezione della fattura emessa
+dal prestatore estero), nel caso di emissione del documento integrativo relativo all’acquisto di
+servizi intra-UE;
+
+−
+
+la data di effettuazione dell’operazione, nel caso di emissione dell’autofattura relativa
+all’acquisto di servizi extra-UE o all’acquisto di servizi da prestatore residente nella
+Repubblica di San Marino o nello Stato della Città del Vaticano.
+
+Indicazione dell’imponibile presente nella fattura inviata dal prestatore e della relativa imposta
+calcolata dal committente o della Natura nel caso non si tratti di un’operazione imponibile (ad
+esempio, codice N3.4 nel caso di non imponibilità, codice N4 nel caso di esenzione).
+Indicazione nel campo 2.1.6 <DatiFattureCollegate> degli estremi della fattura/nota di
+variazione/comunicazione di riferimento e, quando disponibile, il relativo IdSdI.
+Campo 2.1.1.4 <Numero>: consigliabile adoperare una numerazione progressiva ad hoc.
+Comunicazione dei dati delle operazioni transfrontaliere tramite vecchio esterometro
+Il committente trasmette tramite il vecchio esterometro i dati della fattura integrata valorizzando il
+blocco DTR (dati fatture ricevute) e adoperando il TD11 nel caso di acquisti di servizi intra-UE o il
+codice TD01 nel caso di autofattura per acquisti di servizi extra-UE con l’utilizzo, in entrambi i casi,
+della relativa Natura qualora non si tratti di un’operazione imponibile (ad esempio N3.4 per acquisto
+di servizi non imponibili ex articolo 9 del decreto IVA e N4 per acquisto di servizi esenti).
+Registrazione del documento integrativo
+Il documento integrativo trasmesso dal committente è annotato sia nel registro delle fatture emesse
+sia in quello delle fatture ricevute.
+
+TD18 INTEGRAZIONE PER ACQUISTO DI BENI INTRACOMUNITARI
+Descrizione dell’operazione: il cedente residente in altro paese UE emette una fattura per la vendita
+di beni al cessionario residente o stabilito nel territorio nazionale indicando l’imponibile ma non la
+relativa imposta in quanto l’operazione, vista dal lato dell’emittente, è non imponibile nel Paese di
+residenza del cedente mentre è imponibile in Italia e l’imposta è assolta dal cessionario.
+Il cessionario, ai sensi dell’articolo 46, comma 1, del D.L. n. 331 del 1993, deve integrare il
+documento ricevuto per indicare l’imposta dovuta che dovrà poi confluire nella propria liquidazione.
+Al fine di adempiere agli obblighi comunicativi di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127
+del 2015 per le operazioni effettuate a partire dal 1° luglio 2022, il cessionario deve predisporre un
+altro documento, ad integrazione della fattura ricevuta dal soggetto passivo UE, ed inviarlo tramite
+SDI con tipo documento TD18 che verrà recapitato solo al soggetto emittente (dato che è quest’ultimo
+13
+
+ad essere tenuto ad integrare l’IVA in fattura). La trasmissione di un tipo documento TD18 consente
+anche di adempiere all’obbligo d’integrazione ai sensi dell’articolo 46, comma 1, del D.L. n. 331 del
+1993. Si precisa che il codice TD18 deve essere utilizzato anche per gli acquisti intracomunitari con
+introduzione dei beni in un deposito IVA.
+Qualora il cessionario volesse avvalersi delle bozze dei registri IVA precompilati elaborati
+dall’Agenzia delle Entrate, è consigliabile trasmettere il tipo documento TD18 allo SDI entro la fine
+del mese riportato nel campo <Data>.
+Per rettificare una comunicazione da esterometro trasmessa via SDI con TD18 per operazioni
+effettuate dal 1° luglio 2022, il cessionario trasmette un documento della medesima tipologia del
+documento già trasmesso allo SDI (TD18), indicando gli importi con segno positivo o negativo a
+seconda del tipo di errore che si vuole correggere:
+1) se la rettifica è dovuta a seguito di una nota di variazione inviata dal cedente UE, nel campo
+2.1.6 <DatiFattureCollegate> vanno indicati separatamente il numero e la data della nota di
+variazione ricevuta e, se disponibile, il relativo IdSdI;
+2) se la rettifica è dovuta a seguito di un errore nella comunicazione precedentemente inviata dal
+cessionario, nel campo 2.1.6 <DatiFattureCollegate> vanno indicati separatamente il numero
+e la data della comunicazione errata e il relativo IdSdI.
+Si ricorda che la rettifica delle comunicazioni da esterometro trasmesse con tipo documento TD18
+incide anche sull’obbligo d’integrazione ai fini IVA qualora quest’ultimo non sia stato adempiuto in
+via cartacea. Pertanto, in quest’ultima ipotesi il documento rettificativo trasmesso assume anche la
+valenza di una nota di variazione ai fini IVA.
+Per le operazioni effettuate fino al 30 giugno 2022, alternativamente alla trasmissione del TD18 via
+SDI, il cessionario può integrare manualmente la fattura ed è obbligato a comunicare i dati della
+fattura ricevuta dal cedente estero, integrata con i dati dell’imposta, tramite il vecchio esterometro.
+Compilazione del documento
+Fattura elettronica TD18
+Blocco <CedentePrestatore>: dati del cedente estero con l’indicazione del paese di residenza dello
+stesso.
+Blocco <CessionarioCommittente>: dati del cessionario che effettua l’integrazione.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di ricezione (o comunque una data ricadente nel mese di ricezione della fattura emessa
+dal cedente estero).
+Indicazione dell’imponibile presente nella fattura inviata dal cedente e della relativa imposta calcolata
+dal cessionario o della Natura nel caso non si tratti di un’operazione imponibile (ad esempio per gli
+acquisti non imponibili con uso del plafond occorre indicare N3.5).
+
+14
+
+Nel caso di introduzione di beni in un deposito IVA a seguito di acquisto intracomunitario occorre
+indicare la Natura N3.6.
+Nel caso di acquisti esenti occorre indicare la Natura N4.
+Indicazione nel campo 2.1.6 <DatiFattureCollegate> degli estremi della fattura/nota di
+variazione/comunicazione di riferimento e, se disponibile, il relativo IdSdI.
+Campo 2.1.1.4 <Numero>: consigliabile adoperare una numerazione progressiva ad hoc.
+Comunicazione dei dati delle operazioni transfrontaliere tramite il vecchio esterometro
+Il cessionario trasmette tramite il vecchio esterometro i dati della fattura integrata valorizzando il
+blocco DTR (dati fatture ricevute) e adoperando il TD10 trattandosi di acquisti intracomunitari di
+beni con l’utilizzo della relativa Natura qualora non si tratti di un’operazione imponibile (ad esempio
+N3.6 per acquisto di beni da paese UE con introduzione in deposito IVA e N4 per acquisti esenti).
+Registrazione della fattura
+Il documento integrativo trasmesso dal committente è annotato sia nel registro delle fatture emesse
+sia in quello delle fatture ricevute.
+
+TD19 INTEGRAZIONE/AUTOFATTURA PER ACQUISTO DI BENI EX ART. 17,
+SECONDO COMMA, DEL D.P.R. N. 633 DEL 1972
+
+Descrizione dell’operazione: il cedente non residente e privo di stabile organizzazione nel territorio
+dello Stato emette una fattura per la vendita di beni già presenti in Italia (non sono quindi importazioni
+o acquisti intracomunitari) al cessionario residente o stabilito nel territorio nazionale, indicando
+l’imponibile ma non la relativa imposta in quanto l’operazione, vista dal lato dell’emittente, è non
+soggetta, imponibile in Italia e l’imposta è assolta dal cessionario 5.
+Il cessionario, ai sensi dell’articolo 17, secondo comma, del d.P.R. n. 633 del 1972, deve integrare il
+documento ricevuto (nel caso di cedente intra-UE) o emettere un’autofattura (nel caso di cedente
+extra-UE) per indicare l’imposta dovuta che dovrà poi confluire nella propria liquidazione. Al fine di
+adempiere agli obblighi comunicativi di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015 per
+le operazioni effettuate a partire dal 1° luglio 2022, il cessionario deve predisporre un altro
+documento, contenente sia i dati necessari per l’integrazione sia gli estremi della fattura ricevuta dal
+cedente estero, ed inviarlo tramite SDI con tipo documento TD19 che verrà recapitato solo al soggetto
+emittente. Il documento integrativo elettronico sarà utilizzato in fase di elaborazione delle bozze dei
+registri IVA da parte dell’Agenzia. La trasmissione di un tipo documento TD19 consente anche di
+adempiere all’obbligo d’integrazione/autofattura ai sensi dell’articolo 17, secondo comma, del d.P.R.
+n. 633 del 1972.
+Ai sensi dell’articolo 17, quarto comma, del d.P.R. n. 633 del 1972 il reverse charge non trova applicazione (e il TD19
+non deve essere utilizzato) qualora la cessione di beni territorialmente rilevante sia stata effettuata dal soggetto non
+residente per il tramite di una stabile organizzazione nel territorio dello Stato.
+5
+
+15
+
+La trasmissione allo SDI di un tipo documento TD19 potrà essere effettuata dal cessionario anche nel
+caso di emissione di un’autofattura per acquisto di beni provenienti dallo Stato della Città del
+Vaticano ai sensi dell’articolo 17, secondo comma, del d.P.R. n. 633 del 1972.
+Il TD19 deve essere invece obbligatoriamente utilizzato nel caso di acquisto di beni provenienti dalla
+Repubblica di San Marino ai sensi dell’articolo 17, secondo comma, del d.P.R. n. 633 del 1972 al
+fine di integrare la fattura emessa dal cedente sammarinese in formato elettronico (cfr. Circolare n.
+26/E del 13 luglio 2022).
+Il codice TD19 deve essere utilizzato anche in caso di integrazione/autofattura ex articolo 17, secondo
+comma, del d.P.R. n. 633 del 1972 per acquisti da soggetti non residenti di beni già presenti in Italia
+con introduzione in un deposito IVA (articolo 50-bis, comma 4, lettera c)), oppure per acquisti da
+soggetti non residenti di beni (o di servizi su beni) che si trovano all’interno di un deposito IVA
+utilizzando la natura N3.6.
+Nel caso di acquisti di beni da un soggetto non residente ammesso al regime transfrontaliero di
+franchigia ai sensi dell’art. 70-quaterdecies e seguenti del d.P.R. n. 633 del 1972, occorre indicare la
+Natura N2.2 e dovrà essere indicato anche lo specifico regime fiscale RF20 denominato “Regime
+transfrontaliero di Franchigia (Direttiva UE 2020/285)”. Si evidenzia che la trasmissione di tale
+documento in quest’ultima fattispecie deve essere effettuata al solo fine di adempiere agli obblighi
+comunicativi di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015 e non assume alcuna
+rilevanza ai fini IVA.
+Qualora il cessionario volesse avvalersi delle bozze dei registri IVA precompilati elaborati
+dall’Agenzia delle Entrate, è consigliabile trasmettere il tipo documento TD19 allo SDI entro la fine
+del mese riportato nel campo <Data>.
+Per rettificare una comunicazione da esterometro ovvero una comunicazione di integrazione riferita
+ad acquisto da San Marino trasmessa via SDI con TD19 per operazioni effettuate dal 1° luglio
+2022, il cessionario trasmette un documento della medesima tipologia del documento già trasmesso
+allo SDI (TD19), indicando gli importi con segno positivo o negativo a seconda del tipo di errore che
+si vuole correggere:
+1) se la rettifica è dovuta a seguito di una nota di variazione inviata dal cedente, nel campo 2.1.6
+<DatiFattureCollegate> vanno indicati separatamente il numero e la data della nota di
+variazione ricevuta e, se disponibile, il relativo IdSdI;
+2) se la rettifica è dovuta a seguito di un errore nella comunicazione precedentemente inviata dal
+cessionario, nel campo 2.1.6 <DatiFattureCollegate> vanno indicati separatamente il numero
+e la data della comunicazione errata e il relativo IdSdI.
+Si ricorda che la rettifica delle comunicazioni da esterometro trasmesse con tipo documento TD19
+incide anche sugli obblighi d’integrazione/autofattura ai fini IVA qualora questi ultimi non siano stati
+adempiuti in via cartacea. Pertanto, in quest’ultima ipotesi il documento rettificativo trasmesso
+assume anche la valenza di una nota di variazione ai fini IVA.
+
+16
+
+Per le operazioni effettuate fino al 30 giugno 2022, alternativamente alla trasmissione del TD19 via
+SDI, il cessionario può integrare manualmente la fattura o emette un’autofattura cartacea o elettronica
+extra SDI ed è obbligato a comunicare i dati dell’operazione ricevuta dal cedente estero, integrati con
+quelli dell’imposta, tramite il vecchio esterometro.
+Per la trasmissione degli acquisti di beni effettuati da un soggetto passivo italiano all’estero (non
+rilevanti ai fini IVA in Italia) si veda il paragrafo relativo all’utilizzo della Natura N2.2 – Operazioni
+non soggette – altri casi.
+Compilazione del documento
+Fattura elettronica TD19
+Blocco <CedentePrestatore>: dati del cedente estero con l’indicazione del paese di residenza dello
+stesso6.
+Blocco <CessionarioCommittente>: dati del cessionario che effettua l’integrazione o emette
+l’autofattura.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata:
+−
+
+la data di ricezione della fattura emessa dal cedente UE o dal cedente residente nella
+Repubblica di San Marino (o comunque una data ricadente nel mese di ricezione della fattura
+stessa);
+
+−
+
+la data di effettuazione dell’operazione con il cedente extra-UE o con cedente residente nello
+Stato della Città del Vaticano nel caso di emissione dell’autofattura.
+
+Indicazione di imponibile presente nella fattura inviata dal cedente e della relativa imposta calcolata
+dal cessionario o della Natura nel caso non si tratti di un’operazione imponibile (ad esempio per i non
+imponibili con uso del plafond occorre indicare N3.5, nel caso di acquisti da soggetti non residenti di
+beni già presenti in Italia con introduzione in un deposito IVA (articolo 50-bis, comma 4, lettera c))
+oppure per acquisti da soggetti non residenti di beni (o di servizi su beni) che si trovano all’interno di
+un deposito IVA occorre indicare la Natura N3.6).
+Indicazione nel campo 2.1.6 <DatiFattureCollegate> degli estremi della fattura/nota di
+variazione/comunicazione di riferimento e, se disponibile, il relativo IdSdI.
+Campo 2.1.1.4 <Numero>: consigliabile adoperare una numerazione progressiva ad hoc.
+Comunicazione dei dati delle operazioni transfrontaliere tramite il vecchio esterometro
+
+6
+
+Si ricorda che qualora il cedente emetta una fattura riportante la partita IVA italiana aperta tramite un rappresentante
+fiscale o identificazione diretta ai sensi dell’articolo 35-ter del d.P.R. n. 633 del 1972, il documento emesso non avrà
+rilevanza ai fini IVA (Risoluzione n. 89/E del 25 agosto 2010). Pertanto, qualora il cedente sia extra-UE, il cessionario
+deve trasmettere un TD19 avente valore di autofattura indicando l’identificativo estero del cedente; qualora invece il
+cedente sia residente in un paese UE, il cessionario deve trasmettere un TD19 avente valore di integrazione della fattura
+emessa tramite la posizione IVA estera avente rilevanza ai fini IVA indicando l’identificativo estero del cedente.
+
+17
+
+Il cessionario trasmette tramite il vecchio esterometro, i dati della fattura integrata valorizzando il
+blocco DTR (dati fatture ricevute) e adoperando il TD10 nel caso di acquisti di beni da cedente intraUE e un TD01 nel caso di acquisto di beni da cedente extra-UE con l’utilizzo della relativa Natura
+(ad esempio N3.6 per acquisto di beni già presenti in Italia da cedente estero con introduzione in
+deposito IVA e N4 per acquisti di servizi esenti) nel caso non si tratti di un’operazione imponibile.
+Registrazione del documento integrativo
+Il documento integrativo trasmesso dal committente o l’autofattura sono annotati sia nel registro delle
+fatture emesse che in quello delle fatture ricevute.
+
+TD20 AUTOFATTURA PER REGOLARIZZAZIONE E INTEGRAZIONE DELLE
+FATTURE (EX ART. 6 C. 9-BIS D.LGS. N. 471 DEL 1997 O ART. 46, COMMA 5, D.L. N.
+331 DEL 1993)
+
+Descrizione dell’operazione:
+1) Nelle ipotesi di cui all’articolo 6, comma 9-bis, del d.lgs. n. 471 del 1997, il C/C di
+un’operazione soggetta ad inversione contabile, nel caso di omessa fattura da parte del C/P o
+di ricezione di una fattura irregolare, deve emettere una fattura ai sensi dell’articolo 21 del
+d.P.R. n. 633 del 1972, o provvedere alla sua regolarizzazione, e all’assolvimento dell’imposta
+mediante inversione contabile e può farlo trasmettendo allo SDI:
+- un tipo documento TD20, indicando l’imponibile e il sottocodice della Natura N6 relativo
+al tipo di operazione cui si riferisce l’autofattura. Nell’autofattura dovrà indicare come C/P
+l’effettivo cedente o prestatore e come C/C sé stesso;
+- a seguire, un tipo documento TD16 con l’indicazione della relativa imposta.
+La rettifica di un’autofattura trasmessa con tipo documento TD20 in queste ipotesi può essere
+effettuata trasmettendo i due documenti della medesima tipologia già trasmessi allo SDI
+(TD20 più TD16) nel caso di rettifica di imponibile e imposta oppure solo il TD16 nel caso
+di rettifica della sola imposta (il documento rettificativo trasmesso in questi casi assume la
+valenza di una nota di variazione ai fini IVA), indicando gli importi/l’importo con segno
+positivo o negativo a seconda del tipo di errore che si vuole correggere.
+2) Nelle ipotesi riportate nell’articolo 46, comma 5, del D.L. n. 331 del 1993 ed in quelle ad esse
+assimilate, ossia qualora a fronte di un acquisto intracomunitario di cui all’articolo 38, commi
+2 e 3, lettere b) e c), di una prestazione di servizi rilevante nel territorio dello Stato resa da un
+prestatore UE o di acquisto di beni già presenti in Italia da cedente UE, il C/C che non abbia
+ricevuto la relativa fattura entro il secondo mese successivo a quello di effettuazione
+dell’operazione oppure abbia ricevuto una fattura indicante un corrispettivo inferiore a quello
+reale, deve emettere un’autofattura e può farlo trasmettendo allo SDI:
+
+18
+
+-
+
+un tipo documento TD20, indicando l’imponibile e il sottocodice della Natura N2.1 nel
+caso di acquisti da soggetto UE di servizi o di beni già presenti in Italia oppure la Natura
+N3.2 nel caso di acquisti intracomunitari. Nell’autofattura dovrà indicare come C/P
+l’effettivo cedente o prestatore e come C/C sé stesso;
+
+-
+
+a seguire, un tipo documento TD17, TD18 o TD19 con l’indicazione della relativa imposta.
+
+La trasmissione di un tipo documento TD17, TD18 o TD19 nelle ipotesi di cui al numero 3) consente
+anche di adempiere agli obblighi comunicativi di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127 del
+2015 per le operazioni effettuate a partire dal 1° luglio 2022.
+Per rettificare una comunicazione da esterometro trasmessa via SDI con un TD17, TD18 o TD19 per
+operazioni effettuate dal 1° luglio 2022, il cessionario può trasmettere un documento della
+medesima tipologia già trasmesso allo SDI (TD17, TD18 o TD19). Si ricorda che la rettifica delle
+comunicazioni da esterometro incide anche sugli obblighi di emissione dell’autofattura ai fini IVA
+qualora quest’ultimi non siano stati adempiuti in via cartacea. Pertanto, in quest’ultima ipotesi il
+documento rettificativo trasmesso assume anche la valenza di una nota di variazione ai fini IVA.
+
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P.
+Blocco <CessionarioCommittente>: identificativo IVA di colui che effettua la regolarizzazione o
+l’integrazione.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di effettuazione dell’operazione di cessione o di prestazione di servizi, come previsto
+dall’articolo 21, comma 2, del d.P.R. n. 633 del 1972.
+Indicazione dell’imponibile non fatturato dal C/P o dell’imponibile non indicato nella fattura inviata
+dal C/P e della relativa imposta calcolata dal C/C (o della Natura nel caso di non imponibilità o
+esenzione).
+Indicazione della fattura di riferimento nel campo 2.1.6 <DatiFattureCollegate> solo nel caso di
+emissione di una fattura irregolare da parte del cedente.
+Campo 2.1.1.4 <Numero>: si potrà inserire una numerazione progressiva ad hoc.
+Registrazione della fattura
+Nel caso di emissione di un’autofattura ai sensi dell’articolo 6, comma 9-bis, del d.lgs. n. 471 del
+1997, l’autofattura trasmessa dal cessionario è annotata nel registro delle fatture di acquisto. Con
+l’annotazione del relativo documento integrativo TD16, sia nel registro delle fatture emesse che nel
+registro delle fatture ricevute, l’IVA è assolta in liquidazione.
+
+19
+
+Nel caso di emissione di un’autofattura ai sensi dell’articolo 46, comma 5, del D.L. n. 331 del 1993,
+l’autofattura trasmessa dal cessionario è annotata sia nel registro delle fatture emesse che nel registro
+delle fatture ricevute e l’IVA è assolta in liquidazione.
+
+TD21 AUTOFATTURA PER SPLAFONAMENTO
+
+Descrizione dell’operazione: l’esportatore abituale, che acquista con dichiarazione d’intento per un
+importo superiore al plafond disponibile, può sanare la situazione (Risoluzione n. 16/E del 6 febbraio
+2017):
+a)
+
+con richiesta al C/P di effettuare una variazione in aumento dell’IVA, ai sensi dell’articolo 26
+del d.P.R. n. 633 del 1972; resta, comunque, a carico dell’acquirente il pagamento degli
+interessi e delle sanzioni, anche tramite l’istituto del ravvedimento di cui all’articolo 13 del
+d.lgs. n. 472 del 1997;
+
+b) con l’emissione di un’autofattura, contenente gli estremi identificativi di ciascun C/P, il
+numero progressivo delle fatture ricevute, l’ammontare eccedente il plafond e l’imposta che
+avrebbe dovuto essere applicata da versare con F24 insieme agli interessi;
+c)
+
+con l’emissione di un’autofattura (avente le caratteristiche sopra richiamate) entro il 31
+dicembre dell’anno di splafonamento da annotare sia nel registro delle vendite che nel registro
+degli acquisti e con l’assolvimento dell’IVA in sede di liquidazione periodica.
+
+Nei casi b) e c), il C/C predispone e trasmette via SDI un’autofattura con tipologia documento TD21
+che sarà recapitata solo al soggetto emittente.
+La rettifica di un tipo documento TD21 trasmesso via SDI può essere effettuata trasmettendo un
+nuovo TD21 indicando gli importi con segno positivo o negativo a seconda del tipo di errore che si
+vuole correggere (il documento rettificativo trasmesso assume la valenza di una nota di variazione ai
+fini IVA).
+Compilazione del documento
+Blocco <CedentePrestatore>: i dati di colui che emette l’autofattura.
+Blocco <CessionarioCommittente>: i dati di colui che emette l’autofattura.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di effettuazione dell’operazione di regolarizzazione che deve comunque ricadere
+nell’anno in cui si è verificato lo splafonamento.
+Indicazione dell’ammontare eccedente il plafond e della relativa imposta.
+Compilazione del campo 2.2.1.16.1 <TipoDato> della sezione <AltriDatiGestionali> con il valore
+“F24” nel caso in cui la regolarizzazione dell’imposta a debito sia avvenuta con versamento tramite
+modello di versamento F24.
+20
+
+Indicazione della fattura di riferimento nel campo 2.1.6. <DatiFattureCollegate> nel caso in cui
+l’esportatore emette un’autofattura diversa per ogni C/P.
+In alternativa può emettere un unico documento “riepilogativo” e indicare i dati delle fatture di
+riferimento e i nominativi dei relativi fornitori anche, ad esempio, in un allegato alla fattura.
+Campo 2.1.1.4 <Numero>: È consigliabile una numerazione progressiva ad hoc.
+Registrazione della fattura
+Se l’assolvimento dell’IVA avviene con F24, l’autofattura è annotata nel solo registro degli acquisti.
+Se l’assolvimento dell’IVA avviene in sede di liquidazione periodica, il C/C che emette l’autofattura
+annota, entro i termini della liquidazione periodica, la maggiore imposta nel registro IVA delle
+vendite, nonché annota l’autofattura anche nel registro IVA degli acquisti.
+
+TD22 ESTRAZIONE BENI DA DEPOSITO IVA
+
+Descrizione dell’operazione: il soggetto IVA procede all’estrazione dal deposito IVA (ai fini
+dell’utilizzazione o commercializzazione in Italia) di beni precedentemente introdotti a seguito di un
+acquisto intracomunitario (caso A) o di immissione in libera pratica (caso B), ai sensi dell’articolo
+50-bis, comma 6, del D.L. n. 331 del 1993. Sia nel caso A che nel caso B si possono a loro volta
+presentare due sub-casi a seconda che il soggetto che estrae i beni dal deposito IVA sia il medesimo
+che li abbia introdotti (casi A1 e B1) oppure sia un soggetto diverso da quello che li ha introdotti (casi
+A2 e B2).
+In particolare, il soggetto IVA che estrae beni:
+−
+
+nel caso A1 integra la fattura in reverse charge ricevuta dal cedente UE;
+
+−
+
+nel caso B1 emette autofattura ai sensi dell’articolo 17, secondo comma, del d.P.R. n. 633 del
+1972;
+
+−
+
+nei casi A2 e B2 integra con IVA il documento (la fattura oppure, in caso di acquisto da
+soggetto extra-UE, l’autofattura) che certifica l’acquisto immediatamente precedente
+all’estrazione nell’ipotesi di cessioni dei beni all’interno del deposito successive
+all’introduzione.
+
+A tal fine può, in tutti i casi (A1, A2, B1 e B2), predisporre un documento, contenente i dati necessari
+per l’assolvimento dell’imposta compresi i dati del cedente, ed inviarlo tramite SDI con tipo
+documento TD22 che verrà recapitato solo al soggetto emittente, indicando l’aliquota e l’imposta
+dovuta. Tale documento sarà utilizzato in fase di elaborazione delle bozze dei registri IVA da parte
+dell’Agenzia.
+Alternativamente, il soggetto IVA che estrae i beni:
+−
+
+nel caso A1 integra manualmente la fattura ricevuta dal cedente UE;
+21
+
+−
+
+nel caso B1 emette autofattura cartacea;
+
+−
+
+nei casi A2 e B2 integra manualmente con IVA il documento (la fattura, oppure, in caso di
+acquisto da soggetto extra-UE, l’autofattura) che certifica l’acquisto immediatamente
+precedente all’estrazione nell’ipotesi di cessioni dei beni all’interno del deposito successive
+all’introduzione.
+
+In tutti i casi sopra descritti (A1, A2, B1 e B2) la rettifica di un tipo documento TD22 trasmesso via
+SDI può essere effettuata trasmettendo un nuovo TD22 indicando gli importi con segno positivo o
+negativo a seconda del tipo di errore che si vuole correggere (in caso di rettifica di un’autofattura il
+documento trasmesso assume la valenza di una nota di variazione ai fini IVA).
+Per le operazioni effettuate fino al 30 giugno 2022, al momento dell’estrazione dei beni dal deposito,
+il soggetto IVA non è obbligato, in nessun caso, a comunicare tramite vecchio esterometro
+dell’acquisto immediatamente precedente all’estrazione (neanche nel caso si tratti di acquisto
+intracomunitario).
+In generale, l’obbligo di trasmissione dei dati tramite il vecchio esterometro in relazione alla
+fattispecie in esame (beni introdotti a seguito di acquisto intracomunitario o di immissione in libera
+pratica) sussiste in un momento diverso e in particolare:
+−
+
+all’atto dell’introduzione dei beni nel deposito a seguito di acquisto intracomunitario (la
+trasmissione è a cura del soggetto che li ha introdotti) solo qualora, in alternativa, non abbia
+trasmesso un documento integrativo con codice TD18 e Natura N3.6;
+
+−
+
+all’atto dell’acquisto da soggetto non residente (UE o extra-UE) di beni che si trovano
+all’interno del deposito (la trasmissione è a cura del cessionario) solo qualora, in alternativa,
+non abbia trasmesso un documento con codice TD19 e Natura N3.6.
+
+Per le operazioni effettuate dal 1° luglio 2022, fermo restando quanto appena esposto circa il
+momento in cui sorge l’obbligo di trasmissione dei dati di cui all’articolo 1, comma 3-bis, del d.lgs.
+n. 127 del 2015, il predetto obbligo si ritiene assolto con la trasmissione di un documento integrativo
+con codice TD18 e Natura N3.6 nell’ipotesi d’introduzione dei beni nel deposito a seguito di acquisto
+intracomunitario oppure di un documento con codice TD19 e Natura N3.6 nell’ipotesi di acquisto da
+soggetto non residente (UE o extra-UE) di beni che si trovano all’interno del deposito.
+
+Compilazione del documento
+Fattura elettronica TD22
+Blocco <CedentePrestatore>:
+−
+
+nel caso A1 (estrazione effettuata dallo stesso soggetto che ha introdotto i beni): dati del
+cedente estero con l’indicazione del paese di residenza;
+
+−
+
+nel caso B1 (estrazione effettuata dallo stesso soggetto che ha introdotto i beni): dati del
+cedente estero con l’indicazione del paese di residenza;
+22
+
+−
+
+nei casi A2 e B2 (estrazione effettuata da soggetto diverso da quello che ha introdotto i beni):
+dati del cedente (estero o residente) con l’indicazione del paese di residenza, relativi
+all’acquisto immediatamente precedente l’estrazione dal deposito.
+
+Blocco <CessionarioCommittente>: in tutti i casi (A1, A2, B1 e B2), identificativo IVA di colui che
+effettua l’estrazione.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di estrazione.
+Indicazione dell’imponibile presente nel documento che certifica l’acquisto precedente all’estrazione
+dei beni dal deposito IVA (la fattura, bolletta doganale oppure, in caso di acquisto da soggetto extraUE di beni all’interno del deposito, l’autofattura) e la relativa imposta calcolata dal cessionario.
+L’imponibile e la relativa imposta devono essere aumentati in funzione del valore delle prestazioni
+di servizi effettuate sui beni all’interno del deposito.
+Compilazione del campo 2.2.1.16.1 <TipoDato> della sezione <AltriDatiGestionali> con il valore
+“NellAnno” nel caso in cui l’estrazione dal deposito IVA avvenga nello stesso periodo d’imposta in
+cui è stata effettuata l’immissione o l’acquisto del bene custodito in deposito. In alternativa,
+valorizzazione del campo 2.2.1.16.1 <TipoDato> della sezione <AltriDatiGestionali> con il valore
+“AnniPreced” nel caso in cui l’estrazione dal deposito avvenga in un periodo d’imposta successivo a
+quello in cui è stato effettuato l’acquisto senza pagamento d’imposta.
+Indicazione nel campo 2.1.6 <DatiFattureCollegate> dei riferimenti del documento (compresa la
+data), emesso senza applicazione dell’IVA, che certifica l’acquisto immediatamente precedente
+all’estrazione (la fattura, bolletta doganale oppure, in caso di acquisto da soggetto extra-UE di beni
+all’interno del deposito, l’autofattura). In tutti i casi in cui la fattura di riferimento sia passata via SDI,
+occorre indicare nel campo 2.1.6 l’IdSdI attribuito da SDI alla fattura ricevuta, se disponibile.
+Campo 2.1.1.4 <Numero>: consigliabile inserire una numerazione progressiva ad hoc.
+Registrazione del documento integrativo
+Se il documento integrativo TD22 riporta il riferimento alla bolletta doganale oppure un C/P italiano,
+verranno annotati l’imponibile e l’imposta nel registro delle fatture emesse e la sola imposta nel
+registro delle fatture di acquisto. Se il TD22 non riporta il riferimento alla bolletta doganale ed è
+indicato un C/P UE, verrà annotata solo l’imposta nel registro delle fatture emesse e nel registro delle
+fatture di acquisto. Nel caso in cui in fase di estrazione l’imponibile dei beni estratti sia variato rispetto
+a quello risultante dalla bolletta doganale o fatturato in fase di introduzione, il maggiore imponibile
+con la relativa imposta vanno annotati sia nel registro delle fatture emesse sia nel registro delle fatture
+ricevute.
+
+23
+
+TD23 ESTRAZIONE BENI DA DEPOSITO IVA CON VERSAMENTO DELL’IVA
+
+Descrizione dell’operazione: il soggetto IVA che procede all’estrazione dal deposito IVA (ai fini
+dell’utilizzazione o commercializzazione in Italia) di beni introdotti ai sensi dell’articolo 50-bis,
+comma 4, lettera c), del D.L. n. 331 del 1993 (cessioni di beni già presenti in Italia con introduzione
+in un deposito IVA), emette un’autofattura ai sensi dell’articolo 17, secondo comma, del d.P.R. n.
+633 del 1972 e l’imposta è versata, in nome e per conto suo, dal gestore del deposito mediante F24
+intestato al soggetto che estrae, entro il giorno 16 del mese successivo all’estrazione. In alternativa, è
+possibile procedere all’estrazione dei beni senza pagamento dell’imposta utilizzando il plafond
+disponibile.
+Si possono presentare due sub-casi a seconda che il soggetto che estrae i beni dal deposito IVA sia il
+medesimo che li abbia introdotti (caso A1) oppure sia un soggetto diverso da quello che li ha introdotti
+(caso A2).
+In particolare, il soggetto IVA che estrae beni:
+−
+
+nel caso A1 emette un’autofattura con imposta (in caso di acquisto da soggetto extra-UE)
+oppure integra con IVA la fattura (nel caso di acquisto da soggetto UE o italiano) emessa
+senza applicazione dell’IVA all’atto dell’introduzione dei beni nel deposito IVA;
+
+−
+
+nel caso A2 emette un’autofattura con imposta (in caso di acquisto da soggetto extra-UE)
+oppure integra con IVA la fattura emessa senza applicazione dell’IVA (nel caso di acquisto
+da soggetto UE o italiano) che certifica l’acquisto immediatamente precedente all’estrazione
+nell’ipotesi di cessioni dei beni all’interno del deposito successive all’introduzione.
+
+A tal fine può, in entrambi i casi (A1 e A2), predisporre un documento ed inviarlo tramite SDI con
+tipo documento TD23 che verrà recapitato solo al soggetto emittente, indicando l’aliquota e l’imposta
+dovuta.
+Alternativamente, il soggetto IVA che estrae i beni:
+−
+
+nel caso A1: emette un’autofattura cartacea oppure integra manualmente il documento senza
+applicazione dell’IVA (la fattura o, in caso di acquisto da soggetto extra-UE, l’autofattura)
+che certifica la cessione connessa all’introduzione dei beni nel deposito IVA;
+
+−
+
+nel caso A2 emette un’autofattura cartacea oppure integra manualmente il documento senza
+applicazione dell’IVA (la fattura o, in caso di acquisto da soggetto extra-UE, l’autofattura)
+che certifica l’acquisto immediatamente precedente all’estrazione nell’ipotesi di cessioni dei
+beni all’interno del deposito successive all’introduzione.
+
+Nei casi sopra descritti (A1 e A2) la rettifica di un tipo documento TD23 trasmesso via SDI può
+essere effettuata trasmettendo un nuovo TD23 indicando gli importi con segno positivo o negativo a
+seconda del tipo di errore che si vuole correggere (in caso di rettifica di un’autofattura il documento
+trasmesso assume la valenza di una nota di variazione ai fini IVA).
+
+24
+
+Per le operazioni effettuate fino al 30 giugno 2022, al momento dell’estrazione dei beni dal deposito,
+il soggetto IVA non è obbligato, in nessun caso, a comunicare tramite il vecchio esterometro
+dell’acquisto immediatamente precedente all’estrazione (neanche nel caso si tratti di acquisto da un
+soggetto non residente UE o extra-UE).
+In generale l’obbligo di trasmissione dei dati tramite il vecchio esterometro in relazione alla
+fattispecie in esame (beni introdotti ai sensi dell’articolo 50-bis, comma 4, lettera c), del D.L. n. 331
+del 1993) sussiste in un momento diverso e in particolare:
+−
+
+all’atto dell’introduzione nel deposito dei beni (già presenti in Italia) a seguito di acquisto da
+soggetto non residente UE o extra-UE (la trasmissione è a cura del soggetto che li ha
+introdotti) solo qualora, in alternativa, non abbia trasmesso un documento integrativo con
+codice TD19 e Natura N3.6;
+
+−
+
+all’atto dell’acquisto da soggetto non residente (UE o extra-UE) di beni che si trovano
+all’interno del deposito (la trasmissione è a cura del cessionario) solo qualora, in alternativa,
+non abbia trasmesso un documento con codice TD19 e Natura N3.6.
+
+Per le operazioni effettuate dal 1° luglio 2022, fermo restando quanto appena esposto circa il
+momento in cui sorge l’obbligo di trasmissione dei dati di cui all’articolo 1, comma 3-bis, del d.lgs.
+n. 127 del 2015, il predetto obbligo si ritiene assolto con la trasmissione di un documento integrativo
+con codice TD19 e Natura N3.6 sia nell’ipotesi d’introduzione nel deposito dei beni (già presenti in
+Italia) a seguito di acquisto da soggetto non residente UE o extra-UE sia nell’ipotesi di acquisto da
+soggetto non residente (UE o extra-UE) di beni che si trovano all’interno del deposito.
+Compilazione del documento
+Blocco <CedentePrestatore>:
+−
+
+nel caso A1 (estrazione effettuata dallo stesso soggetto che ha introdotto i beni): i dati del
+cedente (residente o estero) con l’indicazione del paese di residenza in relazione all’acquisto
+senza applicazione dell’IVA connesso all’introduzione dei beni nel deposito;
+
+−
+
+nel caso A2 (estrazione effettuata da soggetto diverso da quello che ha introdotto i beni): i dati
+del cedente (residente o estero) con l’indicazione del paese di residenza relativi all’acquisto
+immediatamente precedente l’estrazione dal deposito.
+
+Blocco <CessionarioCommittente>: in entrambi i casi (A1 e A2) identificativo IVA di colui che
+effettua l’estrazione.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di estrazione.
+Indicazione dell’imponibile presente nel documento che certifica l’acquisto precedente all’estrazione
+dei beni dal deposito IVA (la fattura, oppure, in caso di acquisto da soggetto extra-UE di beni
+all’interno del deposito, l’autofattura) e la relativa imposta calcolata dal cessionario. L’imponibile e
+la relativa imposta devono essere aumentati in funzione del valore delle prestazioni di servizi
+
+25
+
+effettuate sui beni all’interno del deposito. Nell’ipotesi in cui si utilizzi il plafond disponibile in fase
+di estrazione dei beni indicare il codice Natura N3.5.
+Compilazione del campo 2.2.1.16.1 <TipoDato> della sezione <AltriDatiGestionali> con il valore
+“NellAnno” nel caso in cui l’estrazione dal deposito IVA avvenga nello stesso periodo d’imposta in
+cui è stata effettuata l’immissione o l’acquisto del bene custodito in deposito. In alternativa,
+valorizzazione del campo 2.2.1.16.1 <TipoDato> della sezione <AltriDatiGestionali> con il valore
+“AnniPreced” nel caso in cui l’estrazione dal deposito avvenga in un periodo d’imposta successivo a
+quello in cui è stato effettuato l’acquisto senza pagamento d’imposta.
+Indicazione nel campo 2.1.6 <DatiFattureCollegate> dei riferimenti del documento, emesso senza
+applicazione dell’IVA che certifica l’acquisto immediatamente precedente all’estrazione (la fattura,
+oppure, in caso di acquisto da soggetto extra-UE di beni all’interno del deposito, l’autofattura). In
+tutti i casi in cui la fattura di riferimento sia passata via SDI, occorre indicare nel campo 2.1.6 l’IdSdI
+attribuito da SDI alla fattura ricevuta, se disponibile.
+Campo 2.1.1.4 <Numero>: si consiglia di adoperare una numerazione progressiva ad hoc.
+Registrazione della fattura
+Il documento trasmesso con TD23 è annotato nel solo registro delle fatture di acquisto (con
+indicazione degli estremi del versamento effettuato con F24). Nel caso in cui in fase di estrazione
+l’imponibile dei beni estratti sia variato rispetto a quello fatturato in fase di introduzione, il maggiore
+imponibile con la relativa imposta va annotato nel registro degli acquisti.
+
+TD24 FATTURA DIFFERITA DI CUI ALL’ART. 21, COMMA 4, TERZO PERIODO,
+LETT. A), DEL D.P.R. N. 633 DEL 1972
+
+Descrizione dell’operazione:
+1) cessioni di beni la cui consegna o spedizione risulta da un DDT o altro documento
+equipollente (con le caratteristiche stabilite dal d.P.R. n. 472 del 1996) che accompagni la
+merce;
+2) prestazioni di servizi individuabili attraverso idonea documentazione effettuate nello stesso
+mese solare nei confronti del medesimo soggetto.
+Nelle suddette ipotesi il C/P può emettere una fattura differita di cui all’articolo 21, comma 4, terzo
+periodo, lettera a), del d.P.R. n. 633 del 1972 adoperando il TD24 e trasmetterla allo SDI entro il
+giorno 15 del mese successivo a quello di effettuazione dell’operazione e annotarla entro gli stessi
+termini.
+
+26
+
+Compilazione del documento
+Trattandosi di una fattura emessa dal C/P, i criteri di compilazione non presentano peculiarità rispetto
+alla compilazione dei campi di una fattura trasmessa con TD01.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica: è indicata
+una data ricadente nel mese in cui è stata effettuata una delle cessioni di beni/prestazioni di servizi
+ovvero in cui è stato pagato in tutto o in parte il relativo corrispettivo, che la fattura documenta (cfr.
+Risposta interpello n. 389 del 24 settembre 2019). È comunque consigliabile utilizzare la data
+dell’ultima operazione che si documenta.
+Registrazione della fattura
+Il C/P annota la fattura emessa nel registro delle fatture emesse entro il giorno 15 del mese successivo
+a quello di effettuazione delle operazioni mentre il C/C annota la fattura ricevuta nel registro delle
+fatture di acquisto con riferimento al mese in cui vuole esercitare il diritto alla detrazione.
+
+TD25 FATTURA DIFFERITA DI CUI ALL’ART. 21, COMMA 4, TERZO PERIODO,
+LETT. B), DEL D.P.R. N. 633 DEL 1972
+
+Descrizione dell’operazione: il cedente con riferimento alle cessioni di beni effettuate dal
+cessionario nei confronti di un soggetto terzo per il tramite del proprio cedente, può emettere una
+fattura differita di cui all’articolo 21, comma 4, terzo periodo, lettera b), del d.P.R. n. 633 del 1972,
+adoperando il TD25 e trasmetterla allo SDI entro il mese successivo a quello della consegna o
+spedizione dei beni e annotarla entro il giorno 15 del mese successivo a quello di emissione e con
+riferimento al medesimo mese (di emissione).
+Compilazione del documento
+Trattandosi di una fattura emessa dal cedente, i criteri di compilazione non presentano peculiarità
+rispetto alla compilazione dei campi di una fattura trasmessa con TD01.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica: è indicata
+una data ricadente nel mese in cui è stata effettuata una delle cessioni di beni ovvero in cui è stato
+pagato in tutto o in parte il relativo corrispettivo, che la fattura documenta.
+Registrazione della fattura
+Il cedente annota la fattura emessa nel registro delle fatture emesse entro il giorno 15 del mese
+successivo a quello di emissione e con riferimento al medesimo mese (di emissione), mentre il
+cessionario annota la fattura ricevuta nel registro delle fatture di acquisto con riferimento al mese in
+cui vuole esercitare il diritto alla detrazione.
+
+27
+
+TD26 CESSIONE DI BENI AMMORTIZZABILI E PASSAGGI INTERNI (EX ART. 36,
+QUINTO COMMA, DEL D.P.R. N. 633 DEL 1972)
+
+Cessione di beni ammortizzabili
+Descrizione dell’operazione: il cedente che cede beni ammortizzabili (secondo la definizione dei
+criteri contabili) che non concorrono al volume di affari ai sensi dell’articolo 20 del d.P.R. n. 633 del
+1972, emette una fattura inviandola al sistema SDI con tipo documento TD26.
+Il TD26 deve essere utilizzato, anche per le cessioni di beni ammortizzabili nei confronti di un
+soggetto non residente al fine di adempiere agli obblighi comunicativi di cui all’articolo 1, comma 3bis, del d.lgs. n. 127 del 2015, per le operazioni effettuate a partire dal 1° luglio 2022.
+La rettifica di un tipo documento TD26 può essere effettuata in ogni caso trasmettendo via SDI un
+nuovo TD26 indicando gli importi con segno positivo o negativo a seconda del tipo di errore che si
+vuole correggere. Il documento rettificativo trasmesso può assumere la valenza di una nota di
+variazione ai fini IVA nell’ipotesi di cessionario residente oppure la valenza di una rettifica
+dell’esterometro nell’ipotesi di cessionario non residente.
+Si ricorda che in quest’ultimo caso la rettifica delle comunicazioni da esterometro incide anche sugli
+obblighi di emissione della fattura ai fini IVA qualora quest’ultimi non siano stati adempiuti in via
+cartacea e, pertanto, in tale ipotesi il documento rettificativo trasmesso assume anche la valenza di
+una nota di variazione ai fini IVA.
+
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del cedente emittente.
+Blocco <CessionarioCommittente>: dati del cessionario.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di effettuazione dell’operazione.
+Indicazione di imponibile e imposta o della Natura nel caso di non imponibilità.
+Campo 2.1.1.4 <Numero>: si potrà seguire la numerazione progressiva delle fatture emesse.
+Registrazione della fattura
+Il cedente annota la fattura nel registro delle fatture emesse. Il cessionario annota la fattura ricevuta
+nel registro delle fatture di acquisto con riferimento al mese in cui vuole esercitare il diritto alla
+detrazione.
+Passaggi interni ex articolo 36, quinto comma, del d.P.R. n. 633 del 1972
+
+28
+
+Descrizione dell’operazione: il C/P emette un’autofattura per i passaggi interni di beni e servizi ex
+articolo 36, quinto comma, del d.P.R. n. 633 del 1972 che non concorrono al volume di affari ai sensi
+dell’articolo 20 del medesimo decreto, inviandola al sistema SDI con tipo documento TD26.
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P emittente.
+Blocco <CessionarioCommittente>: gli stessi dati inseriti nel Blocco <CedentePrestatore>.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di effettuazione dell’operazione.
+Indicazione di imponibile e imposta.
+Campo 2.1.1.4 <Numero>: si potrà seguire la numerazione progressiva delle fatture emesse.
+Registrazione della fattura
+Il C/P annota la fattura sia nel registro delle fatture emesse sia nel registro delle fatture ricevute.
+
+TD27 FATTURA PER AUTOCONSUMO O PER CESSIONI GRATUITE SENZA
+RIVALSA
+
+Descrizione dell’operazione: nei casi di cessioni di beni di cui all’articolo 2, secondo comma, punti
+4) e 5), del d.P.R. n. 633 del 1972, ossia:
+−
+
+cessioni gratuite di beni ad esclusione di quelli la cui produzione o il cui commercio non
+rientra nell’attività propria dell’impresa se di costo unitario non superiore ad euro cinquanta
+e di quelli per i quali non sia stata operata, all’atto dell’acquisto o dell’importazione, la
+detrazione dell’imposta;
+
+−
+
+destinazione di beni all’uso o al consumo personale o familiare dell’imprenditore o di coloro
+i quali esercitano un’arte o una professione o ad altre finalità estranee alla impresa o
+all’esercizio dell’arte o della professione, anche se determinata da cessazione dell’attività, con
+esclusione di quei beni per i quali non è stata operata all’atto dell’acquisto la detrazione
+dell’imposta.
+
+il cedente trasmette allo SDI una fattura con tipo documento TD277.
+Il TD27 potrà essere adoperato anche per le prestazioni gratuite nell’ipotesi previste dall’articolo
+3, terzo comma, del d.P.R. n. 633 del 1972.
+
+7
+
+Nel caso delle cessioni gratuite, qualora la cessione sia con rivalsa, va infatti adoperato il tipo documento TD01 o il
+TD24 se c’è DDT.
+
+29
+
+Compilazione del documento
+Blocco <CedentePrestatore> e Blocco <CessionarioCommittente>: dati del soggetto che emette
+l’autofattura.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di effettuazione dell’operazione. Se si tratta di autofattura riepilogativa, può essere
+la data dell’ultima operazione o comunque una data del mese.
+Indicazione di imponibile e imposta.
+Campo 2.1.1.4 <Numero>: si dovrà inserire la numerazione progressiva delle fatture emesse dal
+soggetto che sta integrando il documento.
+Registrazione della fattura
+Il documento trasmesso con TD27 è annotato nel solo registro delle fatture emesse.
+
+TD28 ACQUISTI DA SAN MARINO CON IVA (fattura cartacea)
+
+Descrizione dell’operazione: il soggetto passivo IVA residente o stabilito in Italia che riceve una
+fattura cartacea8 con addebito dell’imposta da soggetto residente nella Repubblica di San Marino,
+deve predisporre un documento con tipo documento TD28 e inviarlo tramite SDI per rispettare
+l’obbligo di comunicazione di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015. In presenza
+di una fattura cartacea emessa da un C/P di San Marino con addebito dell’imposta va utilizzato il
+documento TD28 e non il TD19 che, invece, deve essere adoperato per l’assolvimento dell’imposta
+ai sensi dell’articolo 17, secondo comma, del d.P.R. n. 633 del 1972, nel caso in cui la fattura ricevuta
+dall’operatore sammarinese (elettronica o cartacea) sia senza addebito dell’imposta.
+Il documento TD28 può essere utilizzato anche per adempiere all’obbligo di comunicazione di cui
+all’articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015 nell’ipotesi di cui all’articolo 6, comma 9-bis1,
+del d.lgs. n. 471 del 1997 in cui il cessionario/committente, anziché assolvere l’imposta con il regime
+dell’inversione contabile, riceva una fattura cartacea con addebito dell’imposta in rivalsa dal C/P non
+stabilito, ancorché identificato in Italia.
+Per rettificare una comunicazione da esterometro trasmessa via SDI con TD28 per operazioni
+effettuate dal 1° luglio 2022, il cessionario trasmette un documento della medesima tipologia del
+
+8
+
+A decorrere dal 1° luglio 2022, in applicazione delle disposizioni del decreto ministeriale del 21 giugno 2021, negli
+scambi con la repubblica di San Marino le fatture saranno solo elettroniche, fatte salve le ipotesi di esonero. Infatti, il
+Decreto Delegato n. 147 del 5 agosto 2021 della Repubblica di San Marino stabilisce che: “Sono esclusi dall’obbligo di
+emettere le fatture elettroniche di cui al comma 3 gli operatori economici stabiliti o identificati nel territorio della
+Repubblica di San Marino che hanno dichiarato ricavi nell’anno solare precedente per un importo inferiore a euro
+100.000,00 (centomila/00). Essi possono comunque decidere per l’emissione delle fatture elettroniche presentando
+apposita opzione”.
+
+30
+
+documento già trasmesso allo SDI (TD28), indicando gli importi con segno positivo o negativo a
+seconda del tipo di errore che si vuole correggere:
+1) se la rettifica è dovuta a seguito di una nota di variazione inviata dal cedente, nel campo
+2.1.6 <DatiFattureCollegate> vanno indicati separatamente il numero e la data della nota
+di variazione ricevuta;
+2) se la rettifica è dovuta a seguito di un errore nella comunicazione precedentemente inviata
+dal cessionario, nel campo 2.1.6 <DatiFattureCollegate> vanno indicati separatamente il
+numero e la data della comunicazione errata e il relativo IdSdI.
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P residente nella Repubblica di San Marino che emette la
+fattura cartacea con addebito dell’imposta
+Blocco <CedentePrestatore>: (solo in caso di emissione del TD28 per adempiere all’obbligo di
+comunicazione di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015 nell’ipotesi di cui
+all’articolo 6, comma 9-bis1, del d.lgs. n. 471 del 1997): dati identificativi del C/P estero che ha
+emesso la fattura con addebito dell’imposta tramite la posizione IVA aperta in Italia (i dati devono
+riferirsi al soggetto estero e non alla posizione IVA italiana)
+Blocco <CessionarioCommittente>: dati del C/C italiano.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file della fattura elettronica deve essere
+riportata la data di effettuazione dell’operazione indicata nella fattura cartacea emessa dal C/P
+sammarinese oppure nella fattura cartacea emessa dal C/P non stabilito identificato in Italia.
+Campo 2.1.1.4 <Numero>: consigliabile adoperare una numerazione progressiva scelta dal mittente
+(ad esempio il protocollo del registro acquisti).
+Campo 2.1.6 <DatiFattureCollegate>: numero e data della fattura/nota di variazione cartacea
+originale emessa dal C/P sammarinese oppure dal C/P non stabilito identificato in Italia, oppure
+numero, data e IdSdI della comunicazione errata precedentemente inviata dal C/C.
+Indicazione di imponibile e imposta come indicato nella fattura cartacea ricevuta.
+
+TD29 COMUNICAZIONE PER OMESSA O IRREGOLARE FATTURAZIONE (ART. 6,
+COMMA 8, D.LGS. 471/97)
+Descrizione dell’operazione: il C/C che abbia acquistato beni o servizi senza che sia stata emessa
+fattura nei termini di legge o con emissione di fattura irregolare da parte del C/P, al fine di non
+incorrere nella sanzione di cui all’articolo 6 comma 8 del d.lgs. n. 471 del 1997, deve comunicare
+l’omissione o l’irregolarità all’Agenzia delle entrate con tipo documento TD29 e inviarlo tramite SDI
+entro novanta giorni dal termine in cui doveva essere emessa la fattura o da quando è stata emessa la
+fattura irregolare. Si ricorda che il documento così trasmesso rappresenta una mera comunicazione
+31
+
+senza alcuna rilevanza ai fini dell’IVA, nel senso che il documento non consente di esercitare la
+detrazione dell’IVA relativa all’acquisto. Tuttavia, nella comunicazione è necessario ugualmente
+indicare alcuni degli elementi previsti dall’articolo 21, comma 2, del d.P.R. n. 633 del 1972, tra i quali
+la natura, la qualità e la quantità dei beni e dei servizi acquistati, l’ammontare del corrispettivo,
+l’aliquota e l’ammontare dell’imposta e dell’imponibile.
+La rettifica di una comunicazione trasmessa con tipo documento TD29 può essere effettuata
+trasmettendo via SDI un nuovo TD29 indicando gli importi con segno positivo o negativo a seconda
+del tipo di errore che si vuole correggere.
+
+Compilazione del documento
+Blocco <CedentePrestatore>: dati del C/P.
+Blocco <CessionarioCommittente>: identificativo IVA del C/C che comunica l’omissione o
+l’irregolarità.
+Blocco <DatiTrasmissione>: il campo 1.1.4 <CodiceDestinatario> deve essere valorizzato con 7 zeri
+“0000000” e il campo 1.1.6 <PECDestinatario> non deve essere valorizzato.
+Nel campo 2.1.1.3 <Data> della sezione <DatiGenerali> del file trasmesso deve essere riportata la
+data di effettuazione dell’operazione di cessione o di prestazione di servizi, come previsto
+dall’articolo 21, comma 2, del d.P.R. n. 633 del 1972.
+Indicazione dell’imponibile non fatturato dal C/P o dell’imponibile non indicato nella fattura inviata
+dal C/P e della relativa imposta calcolata dal C/C (o della Natura nel caso di non imponibilità o
+esenzione).
+Indicazione della fattura di riferimento nel campo 2.1.6 <DatiFattureCollegate> solo nel caso di
+emissione di una fattura irregolare da parte del C/P.
+Campo 2.1.1.4 <Numero>: si potrà inserire una numerazione progressiva ad hoc.
+
+32
+
+Tabella riepilogativa dei codici natura IVA
+N2.1
+N2.2
+N3.1
+N3.2
+N3.3
+N3.4
+N3.5
+N3.6
+N6.1
+
+non soggette ad IVA ai sensi degli artt. da 7 a 7-septies del DPR 633/72
+non soggette - altri casi
+non imponibili - esportazioni
+non imponibili - cessioni intracomunitarie
+non imponibili - cessioni verso San Marino
+non imponibili - operazioni assimilate alle cessioni all'esportazione
+non imponibili - a seguito di dichiarazioni d'intento
+non imponibili - altre operazioni che non concorrono alla formazione del
+plafond
+inversione contabile - cessione di rottami e altri materiali di recupero
+
+N6.2
+
+inversione contabile - cessione di oro e argento ai sensi della legge 7/2000
+nonché di oreficeria usata ad OPO
+
+N6.3
+N6.4
+N6.5
+N6.6
+N6.7
+N6.8
+N6.9
+
+inversione contabile - subappalto nel settore edile
+inversione contabile - cessione di fabbricati
+inversione contabile - cessione di telefoni cellulari
+inversione contabile - cessione di prodotti elettronici
+inversione contabile - prestazioni comparto edile e settori connessi
+inversione contabile - operazioni settore energetico
+inversione contabile - altri casi
+
+33
+
+CORRETTO UTILIZZO DEI CODICI NATURA IVA
+
+N2.1 – Operazioni non soggette ad IVA ai sensi degli artt. da 7 a 7-septies, del d.P.R. n. 633
+del 1972
+Il codice N2.1 deve essere inserito, in luogo dell’imposta, per le operazioni non soggette ad imposta
+per carenza del requisito di territorialità di cui agli articoli da 7 a 7-septies, del d.P.R. n. 633 del 1972
+per le quali è stata emessa la relativa fattura ai sensi dell’articolo 21, comma 6-bis, del medesimo
+decreto IVA. Si tratta delle operazioni che confluiscono nel rigo VE34 della dichiarazione annuale
+IVA. Relativamente alle operazioni di cui all’articolo 21, comma 6-bis, lettera a), dovrà essere
+inserita la dicitura “INVCONT” nel campo 2.2.1.16.1<TipoDato> del blocco 2.2.1.16
+<AltriDatiGestionali>. Si precisa che, per le operazioni di cui all’articolo 21, comma 6-bis, lettera b)
+non è obbligatorio riportare alcuna dicitura nel campo 2.2.1.16.1<TipoDato> del blocco 2.2.1.16
+<AltriDatiGestionali>.
+
+N2.2 – Operazioni non soggette – Altri casi
+Il codice N2.2 va adoperato in tutti i casi in cui un soggetto IVA (ad esempio per le operazioni
+cosiddette “monofase” di cui all’articolo 74 del d.P.R. n. 633 del 1972) non è obbligato ad emettere
+fattura. Al riguardo si confronti la FAQ n. 15 pubblicata il 27 novembre 2018 nell’apposita sezione
+del sito istituzionale dell’Agenzia delle entrate e aggiornata il 29 aprile 2021.
+Inoltre, al fine di adempiere agli obblighi comunicativi di cui all’articolo 1, comma 3-bis, del d.lgs.
+n. 127 del 2015, il codice N2.2 deve essere adoperato anche dal soggetto passivo ammesso al regime
+transfrontaliero di franchigia di cui all’art. 70-octiesdecies e seguenti del d.P.R. n. 633 del 1972, per
+trasmettere tramite SDI le operazioni verso operatori stabiliti nei paesi in cui ha ottenuto l’esenzione.
+Nella comunicazione di tali operazioni dovrà essere indicato anche lo specifico regime fiscale RF20
+denominato “Regime transfrontaliero di Franchigia (Direttiva UE 2020/285)”.
+Il codice N2.2 deve altresì essere adoperato, in associazione ad un tipo documento con codice TD17
+o TD19, per trasmettere tramite SDI i dati degli acquisti di servizi e di beni effettuati da un soggetto
+passivo italiano all’estero (non rilevanti ai fini IVA in Italia) i quali devono obbligatoriamente essere
+comunicati ai sensi dell’articolo 1, comma 3-bis, del d.lgs. n. 127 del 20159.
+Il medesimo codice N2.2 deve essere indicato in associazione ad un tipo documento con codice TD17
+o TD19, nel caso di acquisti di beni e servizi da un soggetto non residente ammesso al regime
+transfrontaliero di franchigia ai sensi dell’art. 70-quaterdecies e seguenti del d.P.R. n. 633 del 1972.
+Per tali acquisti dovrà essere indicato anche lo specifico regime fiscale RF20 denominato “Regime
+transfrontaliero di Franchigia (Direttiva UE 2020/285)”. La trasmissione di tali tipologie di
+documento per questa ultima fattispecie deve essere effettuata al solo fine di adempiere agli obblighi
+9
+
+Si fa riferimento ai casi analoghi a quelli riportati nella Risposta ad interpello n. 85, pubblicata il 27 marzo 2019
+nell’apposita sezione del sito istituzionale dell’Agenzia delle entrate.
+
+34
+
+comunicativi di cui all’articolo 1, comma 3-bis, del d.lgs. n. 127 del 2015 e non assume alcuna
+rilevanza ai fini IVA.
+
+Il codice N2.2 deve essere adoperato anche dall’operatore in regime forfettario o di vantaggio che
+emette fattura elettronica via SDI utilizzando il formato XML.
+
+N3.1 – Non imponibili – Esportazioni
+Il codice N3.1 va adoperato nel caso di fattura trasmessa via SDI per esportazioni di beni effettuate
+nell’anno di cui all’articolo 8, primo comma, lettere a), b) e b-bis), del d.P.R. n. 633 del 1972, tra le
+quali sono ricomprese anche:
+−
+
+le cessioni, nei confronti dei cessionari commissionari di questi, eseguite mediante trasporto o
+spedizione di beni fuori dal territorio dell’Unione Europea, a cura o a nome del cedente o dei suoi
+commissionari;
+
+−
+
+le cessioni di beni prelevati da un deposito IVA con trasporto o spedizione fuori del territorio
+dell’Unione Europea (articolo 50-bis, comma 4, lettera g), del D.L. n. 331 del 1993). Il valore di
+tali operazioni confluisce nel rigo VE30, colonna 2, della dichiarazione annuale IVA.
+
+N3.2 – Non imponibili – Cessioni intracomunitarie
+Il codice N3.2 va adoperato nel caso di fattura trasmessa via SDI per documentare i corrispettivi delle
+cessioni intracomunitarie di cui all’articolo 41 del D.L. n. 331 del 1993, tra le quali sono comprese:
+–
+
+l’ipotesi in cui il cedente nazionale consegni i beni per conto del proprio acquirente UE in uno
+Stato membro diverso da quello di appartenenza di quest’ultimo (triangolare comunitaria
+promossa da soggetto passivo appartenente ad altro Stato membro);
+
+–
+
+l’ipotesi di cessione di merce da parte di un soggetto nazionale che faccia consegnare la stessa
+dal proprio fornitore UE al proprio cessionario di altro Stato membro ivi designato al pagamento
+dell’imposta relativa all’operazione (triangolare comunitaria promossa da soggetto passivo
+nazionale);
+
+–
+
+l’ipotesi di cessioni intracomunitarie di beni prelevati da un deposito IVA con spedizione in altro
+Stato membro dell’Unione europea (articolo 50-bis, comma 4, lettera f), del D.L. n. 331 del
+1993);
+
+–
+
+i corrispettivi delle cessioni intracomunitarie di tutti i prodotti agricoli e ittici, anche se non
+compresi nella Tabella A – parte prima, allegata al d.P.R. n. 633 del 1972, effettuate da produttori
+agricoli di cui all’articolo 34;
+
+–
+
+i corrispettivi delle operazioni di cui all’articolo 58, comma 1, del D.L. n. 331 del 1993, e cioè le
+cessioni, nei confronti di soggetti passivi nazionali o di commissionari di questi, eseguite
+35
+
+mediante trasporto o spedizione dei beni in altro Stato membro a cura o a nome del cedente
+nazionale. Il valore di tali operazioni confluisce nel rigo VE30, colonna 3, della dichiarazione
+annuale IVA.
+
+N3.3 – Non imponibili – Cessioni verso San Marino
+Il codice N3.3 va adoperato nel caso di fattura trasmessa via SDI per cessioni di beni effettuate nei
+confronti di operatori sammarinesi. Il valore di tali operazioni confluisce nel rigo VE30, colonna 4,
+della dichiarazione annuale IVA.
+
+N3.4 – Non imponibili – Operazioni assimilate alle cessioni all’esportazione
+Il codice N3.4 va adoperato nel caso di fattura trasmessa via SDI per le operazioni assimilate alle
+cessioni all’esportazione quali quelle di cui all’articolo 8-bis del decreto IVA (p.e. cessioni di navi
+adibite alla navigazione in alto mare e destinate all’esercizio dell’attività commerciale o di pesca),
+per i servizi internazionali o connessi agli scambi internazionali di cui all’articolo 9 del decreto IVA
+(p.e. trasporti di persone eseguiti in parte nel territorio dello Stato e in parte nel territorio estero in
+dipendenza di un unico evento) e le operazioni effettuate nei confronti dello Stato del Vaticano.
+Il valore di tali operazioni confluisce nel rigo VE30, colonna 5, della dichiarazione annuale IVA.
+Attenzione: il codice N3.4 dovrà essere adoperato anche nel caso di trasmissione di alcuni documenti
+integrativi, inviati dal cessionario/committente debitore d’imposta. A titolo di esempio: dal
+committente in caso di acquisti di servizi non imponibili da prestatore estero trasmessi con tipo
+documento TD17 (integrazione/autofattura per acquisto di servizi dall’estero), oppure nel caso di
+trasmissione di un TD18 per integrazione fattura da reverse charge estero riferito ad acquisti non
+imponibili ai sensi dell’articolo 42 del D.L. n. 331 del 1993 (per acquisti esenti, ai sensi della
+medesima norma, dovrà invece essere adoperato il codice Natura N4).
+
+N3.5 – Non imponibili – Non imponibile a seguito di dichiarazioni d’intento
+Il codice N3.5 va adoperato nel caso di fattura trasmessa via SDI per operazioni non imponibili
+effettuate nei confronti di esportatori che abbiano rilasciato la dichiarazione di intento. Il valore di
+tali operazioni confluisce nel rigo VE31 della dichiarazione annuale IVA.
+
+Attenzione: il codice N3.5 dovrà essere adoperato anche dal cessionario esportatore abituale che
+utilizza il plafond ad esempio nelle seguenti ipotesi:
+−
+
+TD18: integrazione per acquisto intracomunitario di beni;
+
+36
+
+−
+
+TD23: estrazione beni da Deposito IVA introdotti ai sensi dell’articolo 50, comma 4, lettera c),
+del D.L. n. 331 del 1993.
+
+N3.6 – Non imponibili – Altre operazioni che non concorrono alla formazione del plafond
+Il codice N3.6 va adoperato nel caso di fattura trasmessa via SDI per:
+−
+
+le cessioni relative a beni in transito o depositati in luoghi soggetti a vigilanza doganale;
+
+−
+
+le cessioni a soggetti domiciliati o residenti fuori dall’Unione europea di cui all’articolo 38quater, primo comma;
+
+−
+
+le cessioni di beni destinati ad essere introdotti nei depositi IVA di cui all’articolo 50-bis, comma
+4, lettera c), del D.L. n. 331 del 1993;
+
+−
+
+le cessioni di beni e le prestazioni di servizi aventi ad oggetto beni custoditi in un deposito IVA
+(articolo 50-bis, comma 4, lettere e) e h), del D.L. n. 331 del 1993);
+
+−
+
+i trasferimenti di beni da un deposito IVA ad un altro (articolo 50-bis, comma 4, lettera i), del
+D.L. n. 331 del 1993).
+
+Il valore di tali operazioni confluisce nel rigo VE32 della dichiarazione annuale IVA.
+Attenzione: il codice N3.6 dovrà essere utilizzato dal cessionario anche, ad esempio, nelle seguenti
+ipotesi:
+−
+
+TD18 in caso acquisto intracomunitario di beni con introduzione in deposito IVA;
+
+−
+
+TD19 in caso di acquisto da cedente estero di beni già presenti in Italia con introduzione in
+deposito IVA oppure di acquisto da cedente estero di beni all’interno del deposito IVA.
+
+N6.1 – Inversione contabile – Cessione di rottami e altri materiali di recupero
+Il codice N6.1 va adoperato nel caso di fattura trasmessa via SDI per cessioni all’interno dello Stato
+di rottami ed altri materiali di recupero di cui all’articolo 74, commi 7 e 8, del decreto IVA. Il valore
+di tali operazioni confluisce nel rigo VE35, colonna 2, della dichiarazione annuale IVA.
+
+N6.2 – Inversione contabile – Cessione di oro e argento ai sensi della legge n. 7 del 2000
+nonché di oreficeria usata ad OPO
+Il codice N6.2 va adoperato nel caso di fattura trasmessa via SDI per cessioni di oro e argento ai sensi
+della legge 17 gennaio 2000, n. 7, nonché di oreficeria usata ad operatori professionali in oro. Il valore
+di tali operazioni confluisce nel rigo VE35, colonna 3, della dichiarazione annuale IVA.
+
+37
+
+N6.3 – Inversione contabile – Subappalto nel settore edile
+Il codice N6.3 va adoperato nel caso di fattura trasmessa via SDI per prestazioni di servizi rese nel
+settore edile da subappaltatori senza addebito d’imposta ai sensi dell’articolo 17, sesto comma, lettera
+a), del decreto IVA. Il valore di tali operazioni confluisce nel rigo VE35, colonna 4, della
+dichiarazione annuale IVA.
+
+N6.4 – Inversione contabile – Cessione di fabbricati
+Il codice N6.4 va adoperato nel caso di fattura trasmessa via SDI per cessioni di fabbricati o porzioni
+di fabbricato per le quali l’imposta è dovuta dal cessionario, ai sensi dell’articolo 17, sesto comma,
+lettera a-bis), del decreto IVA. Il valore di tali operazioni confluisce nel rigo VE35, colonna 5, della
+dichiarazione annuale IVA.
+
+N6.5 – Inversione contabile – Cessione di telefoni cellulari
+Il codice N6.5 va adoperato nel caso di fattura trasmessa via SDI per cessioni di telefoni cellulari per
+le quali l’imposta è dovuta dal cessionario, ai sensi dell’articolo 17, sesto comma, lettera b), del
+decreto IVA. Il valore di tali operazioni confluisce nel rigo VE35, colonna 6, della dichiarazione
+annuale IVA.
+
+N6.6 – Inversione contabile – Cessione di prodotti elettronici
+Il codice N6.6 va adoperato nel caso di fattura trasmessa via SDI per cessioni di console da gioco,
+tablet, PC e laptop, nonché di dispositivi a circuito integrato, quali microprocessori e unità centrali di
+elaborazione prima della loro installazione in prodotti destinati a consumatori finali per le quali
+l’imposta è dovuta dal cessionario, ai sensi dell’articolo 17, sesto comma, lettera c), del decreto IVA.
+Il valore di tali operazioni confluisce nel rigo VE35, colonna 7, della dichiarazione annuale IVA.
+
+N6.7 – Inversione contabile – Prestazioni comparto edile e settori connessi
+Il codice N6.7 va adoperato nel caso di fattura trasmessa via SDI per prestazioni di servizi di pulizia,
+di demolizione, di installazione di impianti e di completamento relative a edifici per le quali l’imposta
+è dovuta dal cessionario, ai sensi dell’articolo 17, sesto comma, lettera a-ter), del decreto IVA. Il
+valore di tali operazioni confluisce nel rigo VE35, colonna 8, della dichiarazione annuale IVA.
+
+38
+
+N6.8 – Inversione contabile – Operazioni settore energetico
+Il codice N6.8 va adoperato nel caso di fattura trasmessa via SDI per operazioni del settore energetico
+per le quali l’imposta è dovuta dal cessionario, ai sensi dell’articolo 17, sesto comma, lettere d-bis),
+d-ter) e d-quater), del decreto IVA. Il valore di tali operazioni confluisce nel rigo VE35, colonna 9,
+della dichiarazione annuale IVA.
+
+N6.9 – Inversione contabile – Altri casi
+Il codice N6.9 va adoperato nel caso di fattura trasmessa via SDI per eventuali nuove tipologie di
+operazioni, rispetto a quelle elencate negli altri N6, per le quali è previsto il regime dell’inversione
+contabile. Tale codice NON deve essere adoperato per le prestazioni a committente UE per le quali
+occorre adoperare il codice N2.1.
+
+39
+
+Istruzioni sull’utilizzo dei codici presenti nel blocco informativo <AltriDatiGestionali>
+2.2.1.16
+
+In questo blocco informativo il soggetto IVA che emette la fattura può indicare alcuni dati relativi
+all’operazione posta in essere utili alla gestione automatica della liquidazione dell’IVA e della
+compilazione delle comunicazioni e dei modelli dichiarativi nonché allo scambio di informazioni
+pattuite tra le parti. La valorizzazione del blocco secondo le indicazioni di seguito fornite consente di
+compilare in maniera più puntuale la bozza della liquidazione periodica IVA precompilata e la bozza
+della dichiarazione IVA precompilata.
+È possibile inserire più blocchi <AltriDatiGestionali> per ciascuna riga di fattura.
+Il blocco è composto dei seguenti elementi:
+2.2.1.16.1 <TipoDato>: codice che identifica la tipologia di informazione.
+2.2.1.16.2 <RiferimentoTesto>: valore alfanumerico riferito alla tipologia di informazione.
+2.2.1.16.3 <RiferimentoNumero>: valore numerico riferito alla tipologia di informazione.
+2.2.1.16.4 <RiferimentoData>: data riferita alla tipologia di informazione.
+
+1. Regolarizzazione degli acquisti in sospensione eccedenti il plafond disponibile tramite
+modello di versamento F24
+
+I contribuenti che hanno provveduto a regolarizzare le operazioni per le quali sia stata rilasciata
+dichiarazione d’intento oltre il limite del plafond disponibile mediante emissione di autofattura
+elettronica (TD21) e conseguente versamento dell’imposta, utilizzando il modello F24, possono
+fornire tale informazione all’atto dell’emissione dell’autofattura indicando nel campo 2.2.1.16.1
+<TipoDato> la stringa “F24”.
+
+2. Estrazione beni da deposito IVA
+Nel caso di operazioni di estrazione beni da deposito IVA, il soggetto IVA può trasmettere al SDI un
+documento (TD22 o TD23, per ulteriori informazioni vedi i paragrafi dedicati a queste tipologie di
+documenti) contenente i dati necessari per l’assolvimento dell’imposta in sospensione all’atto
+dell’introduzione dei beni nel deposito stesso. L’estrazione dei beni dal deposito IVA può essere
+effettuata nello stesso periodo d’imposta in cui è stata effettuata l’introduzione/acquisto del bene
+custodito in deposito o in anni d’imposta successivi. A seconda se l’anno di estrazione coincida o
+meno con quello di introduzione, l’imponibile e la relativa imposta devono essere compresi in campi
+diversi del quadro VF della dichiarazione IVA annuale (confronta le istruzioni per la compilazione
+del modello IVA). Pertanto, al fine di riportare correttamente i dati dell’operazione di estrazione in
+
+40
+
+dichiarazione annuale, il soggetto IVA può valorizzare l’elemento 2.2.1.16.1 <TipoDato> con la
+stringa:
+• “NellAnno” nel caso in cui l’estrazione dal deposito IVA avvenga nello stesso periodo
+d’imposta in cui è stata effettuata l’immissione o l’acquisto del bene custodito in deposito;
+• “AnniPreced” nel caso in cui l’estrazione dal deposito avvenga in un periodo d’imposta
+successivo a quello in cui è stato effettuato l’acquisto senza pagamento d’imposta.
+
+3. Imprese agricole
+In questo blocco le imprese agricole che effettuano cessione di beni rientrati nel regime speciale
+previsto dall’articolo 34 del d.P.R. n. 633 del 1972, possono fornire le informazioni necessarie per la
+determinazione dell’IVA ammessa in detrazione. Il suddetto regime speciale si applica solamente alle
+cessioni di prodotti agricoli di cui alla Tabella A, parte prima, allegata al d.P.R. n. 633 del 1972 e
+consente la detrazione dell’IVA, non sulla base degli acquisti effettuati, bensì in via forfettaria
+mediante l’applicazione delle percentuali di compensazione sull’ammontare delle cessioni di prodotti
+agricoli e ittici indicati nella Tabella A, parte prima, allegata al d.P.R. n. 633 del 1972.
+Al fine di consentire all’Agenzia la predisposizione delle bozze di liquidazione periodica e
+dichiarazione IVA precompilate con una più puntuale determinazione dell’imposta ammessa in
+detrazione, occorre che l’emittente valorizzi i campi seguenti nella fattura che documenta la cessione
+di prodotti agricoli e ittici compresi nella Tabella A, parte prima, allegata al d.P.R. n. 633 del 1972:
+-
+
+Campo <TipoDato> con la stringa “ALI-COMP” (in presenza di tale stringa deve essere
+valorizzato anche l’elemento <RiferimentoNumero> con la percentuale di compensazione
+applicabile ai prodotti agricoli o ittici ceduti);
+
+-
+
+Campo <RiferimentoNumero> con la percentuale di compensazione stabilita con decreto del
+Ministro delle finanze di concerto con il Ministro per le politiche agricole, per il gruppo di
+prodotti di riferimento del bene ceduto (questo elemento deve essere compilato quando il
+campo <TipoDato> è valorizzato con “ALI-COMP”).
+
+Le suddette informazioni aggiuntive con le medesime modalità di compilazione del blocco
+<AltriDatiGestionali> di cui sopra, possono essere fornite anche nel caso di cessione di prodotti
+agricoli e ittici indicati nella Tabella A non imponibili ai sensi degli articoli 8, primo comma, 38quater e 72, nonché di cessioni intracomunitarie degli stessi (ossia le cessioni con natura N3.X), per
+le quali spetta la detrazione forfetizzata dell’IVA in base alla percentuale di compensazione
+corrispondente.
+Le aziende agricole possono anche effettuare cessioni o prestazioni non rientranti nelle attività
+agricole in regime speciale, per le quali IVA ammessa in detrazione non può essere determinata in
+base alle percentuali di compensazione, in particolare:
+
+41
+
+-
+
+le cessioni di prodotti agricoli diversi da quelli compresi nella Tabella A, parte prima, allegata
+al d.P.R. n. 633 del 1972 (l’IVA ammessa in detrazione è determinata secondo le regole
+ordinarie dell’IVA);
+
+-
+
+operazioni occasionali rientranti nel regime di cui all’articolo 34-bis del d.P.R. n. 633 del 1972
+(l’IVA ammessa in detrazione è forfettizzata nella misura del 50% dell’IVA assolta sulle
+operazioni di vendite).
+
+Al fine di agevolare la liquidazione dell’IVA, il produttore agricolo può indicare nella fattura
+elettronica i dati utili per identificare e soprattutto distinguere le suddette operazioni attive non
+rientrati nel regime speciale.
+Nel caso di cessioni prodotti agricoli diversi da quelli compresi nella Tabella A, parte prima, allegata
+al d.P.R. n. 633 del 1972, il cedente potrà valorizzare il blocco <AltriDatiGestionali> nel modo
+seguente:
+-
+
+campo 2.2.1.16.1 <TipoDato> con la stringa “NO-COMP”.
+
+Nel caso, invece, la fattura emessa sia riferita ad operazioni occasionali rientranti nel regime di cui
+all’articolo 34-bis del d.P.R. n. 633 del 1972, il C/P potrà valorizzare il blocco <AltriDatiGestionali>
+nel modo seguente:
+-
+
+campo 2.2.1.16.1 <TipoDato> con la stringa “OCC34BIS”.
+
+42
+
+

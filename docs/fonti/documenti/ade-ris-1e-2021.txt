@@ -1,0 +1,55 @@
+RISOLUZIONE N. 1/E
+
+Divisione Servizi
+
+Roma, 11 gennaio 2021
+
+OGGETTO: Istituzione delle causali per il versamento, tramite il modello “F24”, dei
+contributi di spettanza della Cassa Nazionale di Previdenza ed Assistenza
+Forense
+Il decreto del Ministro dell’Economia e delle Finanze del 10 gennaio 2014, emanato di
+concerto con il Ministro del Lavoro e delle Politiche Sociali, ha stabilito che il sistema dei
+versamenti unitari e la compensazione previsti dall’articolo 17 del decreto legislativo 9
+luglio 1997, n. 241 si applicano, tra gli altri, anche alla Cassa Nazionale di Previdenza ed
+Assistenza Forense (di seguito CASSA FORENSE).
+Con la convenzione del 26 novembre 2020 stipulata tra l’Agenzia delle Entrate e
+Cassa Forense, è stato regolato il servizio di riscossione, mediante il modello F24, dei
+contributi previdenziali e assistenziali dovuti dagli iscritti alla citata Cassa.
+Ciò premesso, per consentire il versamento dei suddetti contributi tramite il modello
+F24, si istituiscono le causali di seguito indicate:
+ “E100” denominato “CASSA FORENSE - contributo soggettivo minimo”;
+ “E101” denominato “CASSA FORENSE - contributo di maternità”;
+ “E102” denominato “CASSA FORENSE - contributo soggettivo autoliquidazione
+(Mod. 5)”;
+ “E103” denominato “CASSA FORENSE - contributo integrativo autoliquidazione
+(Mod. 5)”.
+
+In sede di compilazione del modello F24, le causali in argomento sono esposte nella
+sezione “Altri enti previdenziali e assicurativi” (secondo riquadro), nel campo “causale
+contributo”, esclusivamente in corrispondenza delle somme indicate nella colonna “importi
+a debito versati”, riportando:
+-
+
+nel campo “codice ente”, il codice “0013”;
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, nessun valore;
+
+-
+
+nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e l’anno di
+competenza del contributo da versare, nel formato “MM/AAAA”.
+Si precisa che le suddette causali sono operativamente efficaci a decorrere dal 25
+
+gennaio 2021.
+IL CAPO DIVISIONE
+Firmato digitalmente
+
+2
+
+

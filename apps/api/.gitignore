@@ -1,0 +1,8 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+/src/generated/prisma
+
+# Separate build of the OpenAPI export (pnpm run openapi), so that it never touches dist/ of a running API
+/dist-openapi

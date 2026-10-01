@@ -1,0 +1,28 @@
+// Pure fiscal rules (no I/O). Every module cites its legal source in the file header.
+export * from './rule-set.js';
+export * from './installment-plan.js';
+export * from './calendar.js';
+export * from './deadlines.js';
+export { ruleSet2025 } from './rule-sets/2025.js';
+export { ruleSet2026 } from './rule-sets/2026.js';
+export { bundledRuleSets } from './rule-sets/bundled.js';
+export * from './inps-offices.js';
+export * from './rounding.js';
+export * from './advance-schedule.js';
+export * from './substitute-tax.js';
+export * from './inps-separate-scheme.js';
+export * from './inps-self-employed.js';
+export * from './contribution-schemes.js';
+export * from './other-entities.js';
+export * from './contribution-rows.js';
+export * from './tax-computation.js';
+export * from './revenue-thresholds.js';
+export * from './f24-schedule.js';
+export * from './eu.js';
+export * from './customer-treatment.js';
+export * from './compensation-limits.js';
+export * from './sources.js';
+export * from './f24-telematic-file.js';
+export * from './tax-return-lm.js';
+export * from './tax-return-rr.js';
+export * from './stamp-duty.js';

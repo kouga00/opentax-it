@@ -1,0 +1,438 @@
+Effettuare Invio - Fisconline
+
+Stampa
+
+Condividi
+
+Facebook : apre un link esterno
+
+X : apre un link esterno
+
+Linkedin : apre un link esterno
+
+Whatsapp : apre un link esterno
+
+I documenti elaborati tramite un software diverso da quelli messi a disposizione dall'Agenzia delle entrate, o soggetti a controllo obbligatorio sulla base di quanto stabilito dai provvedimenti di approvazione (ad es.: i contratti di locazione, gli elenchi INTRA, le comunicazioni all'Anagrafe Tributaria, etc.) devono essere, necessariamente, sottoposti all’operazione di controllo prima di essere preparati per la trasmissione.
+
+A tal fine l’Agenzia delle Entrate distribuisce gratuitamente prodotti software (i c.d. “pacchetti di controllo”) che permettono di verificare la conformità dei documenti alle specifiche tecniche sopra citate.
+
+Completata la compilazione dei documenti, quest’ultimi, prima della definitiva trasmissione, devono essere preparati con l’applicazione “File Internet”, integrata all’interno del Desktop Telematico.
+
+In particolare, nel menù “Documenti” dell’applicazione “File Internet” sono presenti le funzionalità che riguardano le fasi di controllo e di preparazione dei documenti da trasmettere.
+
+Di seguito, l’elenco contenente la descrizione delle singole funzionalità:
+
+Controllare il file: la funzione Controlla file consente di eseguire il controllo dei documenti;
+
+Visualizzare esito: la funzione Visualizza esito permette la visualizzazione e/o la stampa dell'esito del controllo;
+
+Visualizzare il contenuto del file: la funzione Visualizza contenuto file permette la visualizzazione e/o la stampa del contenuto di un documento;
+
+Preparare il file: la funzione Prepara file consente di effettuare la predisposizione (firma, compressione e cifratura) dei file per la trasmissione telematica;
+
+Firmare il file: la funzione Firmare il file consente di sottoscrivere il documento utilizzando il certificato di firma rilasciato dall'Agenzia delle Entrate (da utilizzare solo per alcune specifiche tipologie di documenti).
+
+Inviare il file: la funzione Invia file consente di effettuare l'invio di uno o più file predisposti per la trasmissione telematica;
+
+Dettagli del servizio Effettuare Invio - Fisconline
+
+Rivolto a:
+Cittadini
+
+Ultimo Aggiornamento:
+
+26/02/2026
+
+Argomenti:
+
+Desktop telematico
+
+Strumenti
+
+Controllare il file
+
+I programmi di controllo verificano la rispondenza alle specifiche tecniche allegate ai provvedimenti di approvazione dei documenti fiscali e al termine creano un file contenente l’esito dei controlli (diagnostico).
+
+La funzione "Controlla" consente di eseguire i programmi di controllo distribuiti dall’Agenzia, relativi a documenti contenuti nei file in precedenza predisposti con i prodotti di compilazione.
+
+Attenzione
+
+L’operazione di controllo è obbligatoria solo se il documento è stato compilato con software non distribuito dall’Agenzia delle entrate.
+
+Diversamente, ovvero qualora il documento sia stato compilato con software dell’Agenzia, il controllo non deve essere effettuato a meno che non sia stato reso obbligatorio dal provvedimento di approvazione del documento stesso.
+
+Il controllo di un file comporta:
+
+sempre la creazione di un file di diagnostico (estensione "dgn") che può essere visualizzato dall’utente successivamente all’esecuzione del controllo;
+
+a richiesta, la creazione di un file (detto file controllato) contenente solo i documenti conformi alle specifiche tecniche approvate dall’Agenzia delle entrate (estensione "dcm")..
+
+Ciascuna operazione di controllo viene tracciata in un apposito file di log che può essere visualizzato dall’utente in qualunque momento mediante la funzione "Storico" del menù "Strumenti" dell’applicazione.
+
+Controllare il singolo file
+
+Per eseguire il controllo di un file è necessario effettuare i seguenti passi:
+
+selezionare il file da controllare mediante il bottone “Sfoglia”. Una volta selezionato il file l’applicazione evidenzia il tipo di controllo corrispondente al documento contenuto nel file selezionato. Qualora ciò non avvenga è necessario specificare il tipo di controllo da eseguire;
+
+indicare, se necessario, il nome del file generato dalla procedura di controllo: l’applicazione propone di “default” lo stesso nome del file selezionato (eventualmente troncato se troppo lungo);
+
+specificare, se previsto per il tipo di documento, l’opzione “Controllo e creazione del file contenente i soli documenti conformi” oppure “Solo controllo;
+
+eseguire l’operazione di controllo e verificare l’eventuale presenza di errori mediante la visualizzazione del file di diagnostico tramite la funzione “Visualizza esito” del menù “Documenti”.
+
+Qualora i documenti contenuti nel file da controllare non siano coerenti con il tipo di documento indicato, l'elaborazione termina con esito negativo.
+
+Ciascuna operazione di controllo viene tracciata in un apposito file di log che può essere visualizzato dall’utente in qualunque momento mediante la funzione “Storico” del menù “Strumenti” dell’applicazione.
+
+Attenzione
+
+Se il controllo del file non si conclude positivamente si consiglia di effettuare le seguenti verifiche:
+
+verificare che i documenti contenuti nel file da controllare siano coerenti con il tipo di documento indicato;
+
+verificare che sia stato installato all’interno dell’applicazione il relativo modulo di controllo utilizzando la funzione "Versione --> Moduli di controllo" del menù "Help";
+
+verificare gli errori evidenziati dalla procedura e procedere con la loro rimozione creando un nuovo file telematico.
+
+Visualizzare esito
+
+La funzione “Visualizza esito” permette di visualizzare e/o stampare l’esito del controllo di un file telematico, eseguito in precedenza.
+
+La funzione può essere richiamata secondo modalità diverse:
+
+direttamente dal menu "Documenti" selezionando la voce “Visualizza esito”;
+
+selezionando con doppio click il file con estensione "dgn" dalla cartella "Documenti --> esiti";
+
+selezionando con il tasto destro del mouse il file con estensione "dgn" dalla cartella "Documenti --> esiti"
+
+Per eseguire la visualizzazione dell’esito del controllo di un file è necessario pertanto effettuare i seguenti passi:
+
+selezionare il nome del file che contiene l’esito del controllo dalla cartella “Documenti --> esiti”, utilizzando l’apposita finestra di dialogo evidenziata dall’applicazione e premere il pulsante “Apri”
+
+eseguire l’operazione di visualizzazione e verificare gli errori presenti.
+
+Attenzione
+
+Se l'operazione di visualizzazione dell’esito del file non si conclude positivamente, si consiglia di effettuare le seguenti verifiche:
+
+verificare che sia stato selezionato un file di diagnostico (con estensione "dgn");
+
+verificare che sia stato installato all’interno dell’applicazione il relativo modulo di controllo utilizzando la funzione "Versione --> Moduli di controllo" del menù "Help".
+
+Visualizzare contenuto file
+
+La funzione “Visualizza contenuto file” permette la visualizzazione e/o la stampa del contenuto di un file di documenti.
+
+Per eseguire la visualizzazione del contenuto di un file è necessario effettuare i seguenti passi:
+
+selezionare il nome del file contente i documenti da visualizzare e/o stampare;
+
+selezionare:
+
+il documento relativo ad uno specifico soggetto che si desidera visualizzare;
+
+in questo caso verrà visualizzato l'intero contenuto del corrispondente documento (ad esempio, nel caso di dichiarazioni, vengono evidenziati i dati del frontespizio, i dati contabili, etc.) suddiviso nelle varie tipologie di record di cui è composto;
+
+la voce "record di testa";
+
+in questo caso saranno visualizzate le informazioni di dettaglio comuni a tutta la fornitura (ad esempio: codice fornitura, codice fiscale del fornitore, tipo fornitore, etc.);
+
+eseguire l’operazione di visualizzazione cliccando sul pulsante Crea Pdf.
+
+Attenzione
+
+Se l'operazione di visualizzazione del file non si conclude positivamente si consiglia di verificare che sia stato selezionato un file “gestito” dall’applicazione.
+
+Preparare il file
+
+Una volta predisposto il documento fiscale utilizzando il software fornito dall’Agenzia delle Entrate, ed eventualmente controllato (qualora compilato con un pacchetto software di mercato, o nel caso in cui il controllo sia previsto dal relativo provvedimento di approvazione), è necessario utilizzare, all’interno del Desktop Telematico, la funzione Prepara file dell'applicativo File Internet per "preparare" i vari adempimenti fiscali da inviare telematicamente (ad esempio 730, Redditi Persone Fisiche, IVA).
+
+L’operazione è obbligatoria: un file telematico non preparato e trasmesso comunque dall’utente sarà scartato al momento della ricezione da parte del servizio telematico Fisconline.
+
+Ciascuna operazione di Prepara file viene tracciata in un apposito file di log che può essere visualizzato dall’utente mediante la funzione Storico del menù Strumenti dell’applicazione.
+
+Preparare il singolo file
+
+Selezionare Prepara file dal menu Documenti.
+
+Selezionare il nome del file dal pannello di ricerca
+
+Indicare il codice fiscale del contribuente (e il codice fiscale del dichiarante se diverso dal contribuente) e il codice PIN.
+
+Procedere, quindi, alla preparazione del file selezionando il tasto Prepara file.
+
+Si ricorda che i documenti trasmessi telematicamente si considerano presentati al momento in cui è completa la ricezione, da parte dell’Amministrazione finanziaria, del file che li contiene. Si rende pertanto necessario verificare l'esito della trasmissione del file consultando la ricevuta resa disponibile nella sezione “Ricevute e Comunicazioni” dell’area riservata.
+
+Una volta autenticato il file con l'applicazione File Internet, è possibile, nella successiva schermata, inviare direttamente il file predisposto premendo il pulsante Invia (senza la necessità di aprire il browser) e di accedere al sito web. Se si desidera effettuare l'invio in un momento successivo, premere il pulsante Chiudi.
+
+Preparare un F24
+
+Nel caso in cui il file da preparare contenga dei versamenti per i quali non risulta essere stato indicato il codice iban la procedura richiede l’inserimento dei dati relativi alle coordinate del conto su cui dovrà essere effettuato l’addebito.
+
+Inviare il file
+
+Dopo avere completato l'operazione di 'preparazione del file', l'utente ha a disposizione tre diverse modalità per trasmettere il file in via telematica:
+
+inviare con File Internet integrato al Desktop telematico
+
+inviare dall’area riservata del sito web dell’Agenzia delle entrate tramite l’apposita funzionalità web
+
+Attenzione
+
+Per alcune tipologie di file è prevista la trasmissione in modalità semplificata attraverso la funzione “Invio diretto”, presente all’interno dell’area riservata del sito web dell’Agenzia delle entrate. Nella stessa sezione è disponibile l’elenco dei documenti che possono essere trasmessi con la suddetta funzionalità.
+
+Inviare con File Internet
+
+Per procedere all'invio del file, l'utente deve indicare le credenziali di accesso all'area riservata del sito dell'Agenzia delle Entrate e verificare che sia selezionata l'ozione Invio da effettuare per proprio conto.
+
+Attenzione
+
+Gli utenti in possesso di credenziali SPID, CIE o CNS titolari di partita iva oppure che risultino già autorizzati da soggetti terzi ad operare per loro conto (gestori incaricati e operatori incaricati), possono prelevare l’intero set di credenziali utilizzando l’apposita funzionalità presente all’interno dell’area riservata.
+
+Gli utenti che non hanno i requisiti per ottenere l’intero set di credenziali possono avvalersi della funzionalità di invio documenti presente all’interno dell’area riservata, seguendo le indicazioni descritte nella sezione Inviare dall'area riservata del sito dell'Agenzia delle Entrate.
+
+Eseguire l’operazione di invio cliccando sul pulsante Invia file.
+
+Verificare l’esito dell'invio, evidenziato nell’apposito messaggio fornito dall’applicazione. Tale messaggio, oltre ad alcuni dati del file, riporta anche il protocollo telematico che è stato attribuito al file in fase di trasmissione. Si consiglia di annotare il numero di protocollo rilasciato dal sistema per successive consultazioni, effettuabili tramite la funzione "Ricerca Ricevute" presente all’interno dell’area riservata.
+
+Per verificare se sono disponibili i file delle ricevute autenticate, occorre accedere all'area riservata del sito web dell'Agenzia delle Entrate, selezionare la funzione "Ricerca ricevute" presente nella sezione Servizi --> Consultazioni e ricerca.
+
+Al termine dell'invio, dopo aver verificato che tutti i documenti selezionati sono stati inviati, per chiudere la finestra è necessario cliccare sul pulsante Chiudi. Verrà visualizzata una ulteriore finestra, dove è necessario cliccare sul pulsante Si.
+
+Attenzione
+
+Se l'operazione di invio del file non si conclude positivamente si consiglia di effettuare le seguenti verifiche:
+
+verificare che la connessione internet sia attiva;
+
+verificare che le credenziali (nome utente, password e Codice pin) siano state indicate correttamente.
+
+Inviare dall'area riservata del sito dell'Agenzia delle Entrate
+
+Qualora l'utente debba inviare un file preparato con l'applicazione File Internet, selezionare dall'applicazione stessa la funzione "Sito web". In tal modo l'utente verrà indirizzato al sito web dell'Agenzia delle entrate raggiungibile direttamente anche all'indirizzo www.agenziaentrate.gov.it.
+
+È possibile accedere all'area riservata del sito web dell'Agenzia delle entrate, www.agenziaentrate.gov.it, tramite SPID, CIE (Carta di Identità Elettronica) o CNS (Carta Nazionale dei Servizi). Le persone fisiche, titolari di partita IVA attiva oppure che risultino già autorizzate ad operare in nome e per conto di società, enti o professionisti (gestori incaricati e operatori incaricati), possono accedere all’area riservata anche tramite le credenziali rilasciate dall’Agenzia delle entrate.
+
+Effettuato l'accesso all'area riservata, per procedere all'invio del file preparato con l'applicazione File Internet, selezionare la funzione "Trasmissioni telematiche" dal menu "Servizi"
+
+e, successivamente, selezionare "Invio documenti – Trasmissione file predisposti secondo le specifiche tecniche pubblicate (es. dichiarazioni)" --> Invio di file predisposti con l'applicazione File Internet.
+
+Dopo aver cliccato sul pulsante “Scegli il file”, selezionare il file da inviare dalla cartella "…\fileinternet\documenti\da inviare", sia per le dichiarazioni che per i versamenti.
+
+Se sono state utilizzate le applicazioni predisposte dall'Agenzia delle Entrate sia per le dichiarazioni che per i versamenti e se non sono stati modificati i nomi assegnati automaticamente ai file dalle applicazioni stesse, i file da inviare assumono l’estensione FCF per i versamenti e CCF per tutte le altre tipologie di documenti”.
+
+Dopo aver selezionato il file autenticato (estensione .ccf per i documenti oppure estensione .fcf per i versamenti), il percorso completo verrà visualizzato nella finestra di dialogo. Per confermare l'invio del file cliccare sul pulsante "Invia".
+
+Il messaggio di operazione correttamente eseguita indica che l'invio del file è andato a buone fine ma non costituisce prova della presentazione del documento che è data dalla ricevuta che viene prodotta in seguito.
+
+Per verificare se sono disponibili i file delle ricevute autenticate, occorre accedere all'area riservata del sito web dell'Agenzia delle Entrate, selezionare la funzione "Ricerca ricevute" presente nella sezione Servizi --> Consultazioni e ricerca.
+
+Invio diretto dall'area riservata del sito dell'Agenzia delle Entrate
+
+La funzione Invio diretto consente di effettuare l'invio di alcune tipologie di file che non necessitano di essere preventivamente predisposti per la trasmissione telematica mediante l'applicazione "File internet" del "Desktop telematico", come ad esempio:
+
+Dichiarazione integrativa Unico/Redditi (da comunicazione di invito all'adempimento spontaneo)
+
+Dichiarazione di successione
+
+Iscrizione per essere ammessi al contributo del 5 x 1000
+
+Modelli INTRA 12 e INTRA 13
+
+Comunicazioni anomalie derivanti da studi di settore
+
+Stampati fiscali
+
+Inizio attività (imprese individuali e lavoratori autonomi, soggetti diversi dalle persone fisiche)
+
+Variazione dati anagrafici (imprese individuali e lavoratori autonomi, soggetti diversi dalle persone fisiche)
+
+Cessazione attività ditte e società
+
+Comunicazioni 730/4
+
+Dichiarazione nautica
+
+Comunicazione dati rilevanti ai fini fiscali da parte degli enti associativi
+
+Effettuato l’accesso all’area riservata, per procedere all’invio del file tramite "Invio diretto", selezionare la funzione "Trasmissioni telematiche" dal menu "Servizi" e, successivamente, selezionare "Invio documenti – Trasmissione file predisposti secondo le specifiche tecniche pubblicate (es. dichiarazioni)" --> Invio diretto.
+
+Selezionare, dal menu a tendina, il "Tipo documento" che si desidera inviare.
+
+Selezionare il file da inviare utilizzando il bottone “Scegli file” e premere il tasto Invia.
+
+A questo punto il sistema richiede l'inserimento del Codice PIN.
+
+Una volta selezionato il documento il sistema consente di salvare sulla propria postazione di lavoro il file validato e firmato (.p7m).
+
+Attenzione
+
+se si procede con l'invio, senza salvare il file, non sarà più possibile farlo successivamente.
+
+L'invio del file può ritenersi effettuato solo quando il sistema fornisce in risposta la pagina di conferma della trasmissione.
+
+Firmare il file
+
+La funzione Firma file consente di apporre la firma alle Comunicazioni dei dati delle liquidazioni periodiche IVA.
+
+La funzione può essere richiamata direttamente dal menù Documenti selezionando la voce Firma file.
+
+La schermata iniziale che viene proposta dall’applicazione permette di verificare se il percorso del supporto di sicurezza, indicato nell’apposito campo Percorso del supporto di sicurezza, sia corretto. In caso contrario, l’utente può selezionare un nuovo percorso tramite il pulsante Sfoglia oppure mediante la funzione Impostazioni del menù File.
+
+Per eseguire la firma di più file è necessario effettuare i seguenti passi:
+
+selezionare i file da firmare mediante il pulsante Seleziona file: in caso di errore è possibile rimuovere dalla lista un file mediante la voce Rimuovi file oppure è possibile eliminare tutti i file caricati nella lista tramite il pulsante Svuota lista;
+
+specificare il percorso del supporto di sicurezza su cui è salvato l’ambiente di sicurezza contenente il certificato di firma da utilizzare;
+
+indicare la password di protezione dell’ambiente di sicurezza;
+
+eseguire l’operazione e verificarne l’esito tramite l’apposito messaggio fornito dall’applicazione.
+
+Durante l'operazione di firma, i file "firmati" (in formato "p7m") verranno creati all’interno della cartella "Documenti --> firmati" dell’area di lavoro dell’utente.
+
+Se l'operazione di firma dei file si conclude con esito positivo, viene evidenziata una schermata che riporta il numero totale dei file idonei per l'invio (in formato "p7m").
+
+Selezionando il pulsante Dettagli, verranno evidenziate alcune informazioni rilevate all’interno dei file durante la procedura di firma. Ad esempio: nome e dimensione dei file selezionati, data di creazione dei file selezionati, dimensione e data di creazione dei file firmati, eventuali segnalazioni, etc. Tali informazioni verranno registrate in un file di log e potranno essere consultate in qualunque momento mediante l'apposita funzione Storico del menu Strumenti.
+
+Se l'operazione di firma del file non si conclude positivamente si consiglia di effettuare le seguenti verifiche:
+
+verificare che il percorso del supporto di sicurezza che è stato indicato sia corretto;
+
+verificare che la password di protezione sia stata impostata correttamente;
+
+verificare che i file selezionati siano corretti tramite la funzione Visualizza contenuto file del menù Documenti.
+
+Attenzione
+
+I file "firmati" non devono essere autenticati.
+
+L’invio del file "firmato" deve avvenire tramite il sito web"Fatture e Corrispettivi", seguendo le modalità stabilite dal Provvedimento del Direttore dell'Agenzia delle Entrate n. 58793 del 27 marzo 2017.
+
+Annullare documenti trasmessi
+
+Solo alcuni documenti già trasmessi all'Agenzia delle entrate (ad es. dichiarazione dei redditi, versamenti) possono essere annullati; l’annullamento è però un rimedio estremo da utilizzare in caso di errori "gravi", cui non si può ovviare presentando una dichiarazione integrativa o rettificativa.
+
+Questa operazione può essere compiuta esclusivamente da colui che ha effettuato l’invio del documento da annullare.
+
+In caso di errori commessi nella digitazione dei dati identificativi:
+
+codice fiscale errato
+
+periodo di imposta errata
+
+stesso documento (dichiarazione o versamento) inviato più volte
+
+occorre pertanto annullare i documenti inviati.
+
+In caso di errori riscontrati in seguito all’invio di una dichiarazione fiscale accettata dall'Amministrazione Finanziaria (che non ha comportato, quindi, lo scarto della dichiarazione) è possibile, in alternativa all’annullamento, compilare una dichiarazione "correttiva" o "integrativa" della precedente.
+
+Annullare documenti
+
+Nell'ambito del menu Servizi ➔ Trasmissioni telematiche dell'area riservata del sito dell'Agenzia delle Entrate è presente la funzione Trasmissione delle richieste di annullamento di file trasmessi, che consente di annullare le dichiarazioni o altre tipologie di documenti.
+
+Per annullare un documento è necessario valorizzare i campi:
+
+Codice fiscale del contribuente: il codice fiscale del contribuente deve coincidere con quello presente nella ricevuta
+
+Protocollo: numero di protocollo assegnato al file che contiene il documento da annullare (17 numeri), da ricavare dalla ricevuta del documento
+
+Progressivo: numero progressivo che identifica il documento all’interno del file (6 numeri), da ricavare dalla ricevuta del documento
+
+Modello: tipo di modello cui la richiesta di annullamento si riferisce
+
+Anno Modello: anno cui la richiesta di annullamento si riferisce
+
+Confermare la richiesta con il tasto "Invia".
+
+Attenzione
+
+Per confermare l'annullamento del documento gli utenti autenticati con le credenziali rilasciate dall’Agenzie delle entrate devono indicare il codice Pin e cliccare sul pulsante "Invio".
+
+Annullamento versamento F24 online
+
+L'annullamento del versamento può essere richiesto entro e non oltre il penultimo giorno lavorativo antecedente la data di versamento indicata nella delega. La richiesta di annullamento va effettuata con particolare attenzione, in quanto l'annullamento di un versamento è definitivo. In caso di erronea trasmissione di una richiesta di annullamento sarà necessario effettuare nuovamente il versamento. Pertanto, verificare l’esito dell’invio controllando la successiva ricevuta fornita dall’Agenzia delle entrate.
+
+Per effettuare l’annullamento occorre autenticarsi nell'area riservata del sito dell'Agenzia delle Entrate, selezionare le voci "Servizi --> “Trasmissione delle richieste di annullamento di file trasmessi” e compilare il form seguente:
+
+È possibile annullare solo i propri documenti o quelli in cui il richiedente risulti erede o tutore. Si ricorda che il numero di protocollo del documento, rilevabile dalla ricevuta, è composto di due parti:
+
+la prima, formata da 17 cifre (es. 08060120341234567);
+
+la seconda (progressivo), di 6 cifre individua la dichiarazione all'interno dell'invio (es. per un unico documento: 000001).
+
+Annullamento versamento F24 Enti Pubblici
+
+In caso di errore, con le stesse modalità sopra descritte, è possibile chiedere l’annullamento dei pagamenti effettuati tramite F24EntiPubblici, precedentemente inviati, attraverso le apposite funzioni dei servizi Entratel o Fisconline, entro e non oltre le ore 22:00 del secondo giorno lavorativo antecedente alla data di esecuzione dell’operazione da annullare. Le richieste di annullamento pervenute oltre detto termine precedente saranno scartate.
+
+FAQ
+
+Come controllare i file
+
+La funzione di controllo dei file può essere richiamata secondo modalità diverse:
+
+dal menu Documenti
+
+selezionando il file con doppio click (o con il taso destro) del mouse dalla cartella Archivio
+
+La cartella Archivio consente all’utente di raggruppare tutti i file telematici, predisposti con altre applicazioni di compilazione, in unica cartella di riferimento definita all’interno dell’applicazione FILE INTERNET come Archivio.
+
+Nell’ambito della cartella Archivio, attraverso la selezione diretta del singolo file (doppio click del file) o la selezione del file con il tasto destro del mouse, l’applicazione mostrerà un menu a tendina contenente tutte le operazioni che è possibile effettuare associate alla tipologia di file indicato, tra cui Controlla file (per effettuare il controllo del file).
+
+Come visualizzare il contenuto file
+
+La funzione “Visualizza contenuto file” permette la visualizzazione e/o la stampa del contenuto di un file di documenti.
+
+Tale funzione può essere richiamata secondo modalità diverse:
+
+direttamente dal menu "Documenti" selezionando la voce “Visualizza contenuto file”;
+
+selezionando con doppio click il file con estensione “dcm” dalla cartella “Documenti --> controllati”;
+
+selezionando il file con estensione “dcm” dalla cartella “Documenti --> controllati” con il tasto destro del mouse;
+
+selezionando con doppio click il file dalla cartella “Archivio” predefinita;
+
+selezionando il file dalla cartella “Archivio” con il tasto destro del mouse.
+
+Quale estensione assumono i file di documenti nei vari stadi di lavorazione con File Internet?
+
+Al momento della creazione del file, se l'utente utilizza il software di compilazione dell'Agenzia delle entrate, la prima estensione è indicativa del suo contenuto (ad esempio '.rpf ' per Redditi Persone Fisiche, '.77s' per il modello 770Semplificato).
+
+In fase di controllo dei file generati, effettuato con la funzione 'Controlla' attivabile dal menu 'Documenti' dell'applicativo File Internet (che consente di eseguire i programmi di controllo distribuiti dall'Agenzia), l'applicazione crea il file controllato, che ha estensione ".dcm" oppure nomefile_dcm.xml (a seconda del tipo di documento da controllare) e crea contestualmente un file ".dgn", contenente il diagnostico del controllo.
+
+Successivamente, in fase di autentica, il file da inviare va predisposto per la trasmissione telematica con la funzione "Prepara file" attivabile dal menu "Documenti" dell'applicativo File Internet.
+
+In questa fase di autentica del file, il file con estensione '.dcm' acquisisce l'estensione '.ccf'. Questo file (con estensione 'ccf') è il file da inviare.
+
+Riassumendo, la cartella “Documenti” contiene le seguenti sotto-cartelle:
+
+"controllati",
+
+"da inviare",
+
+"esiti",
+
+“firmati”
+
+"inviati".
+
+Ciascuna sotto-cartella conterrà dei file a seconda dello stato elaborativo in cui si trovano:
+
+nella cartella “Documenti --> controllati” sono presenti tutti i file "controllati" mediante la funzione “Controlla” dell’applicazione e che generalmente hanno estensione “dcm”;
+
+nella cartella “Documenti --> da inviare” sono presenti tutti i file predisposti per la trasmissione telematica mediante la funzione “Autentica” dell’applicazione e che hanno estensione “ccf”;
+
+nella cartella “Documenti --> esiti” sono presenti tutti i file di diagnostico prodotti mediante la funzione “Controlla” dell’applicazione e che hanno estensione “dgn”;
+
+nella cartella “Documenti” --> firma” sono presenti tutti i file che hanno i requisiti per essere sottoscritti con firma digitale e che sono contraddistinti dall’estensione “p7m”;
+
+nella cartella “Documenti --> inviati” sono presenti tutti i file che sono stati inviati telematicamente mediante la funzione “Invia” dell’applicazione e che generalmente hanno lo stesso nome del file predisposto per la trasmissione (ovvero estensione “ccf”) con l’aggiunta del protocollo telematico assegnato al file in fase di invio.
+
+Non hai trovato quello che cercavi?
+
+Consulta le FAQ che trovi qui oppure esegui una ricerca.
+
+Cerca in tutto il sito

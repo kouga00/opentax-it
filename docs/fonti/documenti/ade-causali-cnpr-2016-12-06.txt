@@ -1,0 +1,88 @@
+Causali CNPR
+Codice
+
+Descrizione
+
+E075
+
+CNPR - CONTRIBUTI ANNO
+CORRENTE
+
+E076
+
+CNPR - CONTRIBUTI ANNI
+PRECEDENTI
+
+E077
+
+CNPR - SANZIONI, INTERESSI E
+SPESE LEGALI ANNO CORRENTE
+
+E078
+
+CNPR - SANZIONI, INTERESSI E
+SPESE LEGALI ANNI PRECEDENTI
+
+E079
+
+CNPR - CONTRIBUTI DA
+RICONGIUNZIONE
+
+E080
+
+CNPR - CONTRIBUTI DA RISCATTO
+
+E081
+
+CNPR - CONTRIBUTI VOLONTARI
+
+E082
+
+CNPR - RATEAZIONE
+
+Tipo inizio periodo riferimento
+
+Tipo fine periodo di riferimento
+
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+
+

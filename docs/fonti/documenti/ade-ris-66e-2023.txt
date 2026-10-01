@@ -1,0 +1,56 @@
+RISOLUZIONE N. 66/E
+
+Divisione Servizi
+______________
+Direzione Centrale Servizi
+Istituzionali e di Riscossione
+
+Roma, 4 dicembre 2023
+
+OGGETTO: Istituzione delle causali contributo per il versamento, tramite il modello
+“F24”, dei contributi di spettanza della Cassa nazionale di previdenza ed
+assistenza per gli ingegneri ed architetti liberi professionisti – INARCASSA
+
+Il decreto del Ministro dell’Economia e delle Finanze del 10 gennaio 2014, emanato
+di concerto con il Ministro del Lavoro e delle Politiche Sociali, ha stabilito che il sistema
+dei versamenti unitari e la compensazione previsti dall’articolo 17 del decreto legislativo 9
+luglio 1997, n. 241 si applicano, tra gli altri, anche alla Cassa nazionale di previdenza ed
+assistenza per gli ingegneri ed architetti liberi professionisti (di seguito INARCASSA).
+Con la convenzione stipulata tra l’Agenzia delle entrate e l’INARCASSA è stato
+regolato il servizio di riscossione, mediante il modello F24, dei contributi previdenziali e
+assistenziali dovuti dagli iscritti alla citata Cassa.
+Con nota prot. n. 62 del 16/11/2023, l’INARCASSA ha chiesto l’istituzione di
+ulteriori causali contributo, rispetto alle causali già istituite con la risoluzione n. 22/E del 12
+maggio 2020.
+Tanto premesso, si istituiscono le causali contributo di seguito indicate:
+ “E111” denominata “INARCASSA - contributi e interessi da riscatto deroga
+soggettivo”;
+ “E112” denominata “INARCASSA - contributi e interessi da ricongiunzione”;
+ “E113” denominata “INARCASSA - contributi e interessi da riscatto”;
+ “E114” denominata “INARCASSA - contributo soggettivo facoltativo”;
+
+2
+
+ “E115” denominata “INARCASSA - integrazione contribuzione ridotta
+giovani soggettiva e integrativa”;
+ “E116” denominata “INARCASSA - contributo soggettivo anni precedenti”;
+ “E117” denominata “INARCASSA - contributo integrativo anni precedenti”;
+ “E118” denominata “INARCASSA - sanzioni e interessi soggettivo”;
+ “E119” denominata “INARCASSA - sanzioni e interessi integrativo”;
+ “E120” denominata “INARCASSA - interessi maternità / paternità”;
+ “E121” denominata “INARCASSA - oneri di recupero”.
+
+In sede di compilazione del modello F24, le causali in argomento sono esposte nella
+sezione “Altri enti previdenziali e assicurativi” (secondo riquadro), nel campo “causale
+contributo”, esclusivamente in corrispondenza delle somme indicate nella colonna “importi
+a debito versati”, riportando:
+- nel campo “codice ente”, il codice “0011”;
+- nel campo “codice sede”, nessun valore;
+- nel campo “codice posizione”, nessun valore;
+- nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e l’anno di
+competenza del contributo da versare, nel formato “MM/AAAA”.
+
+IL DIRETTORE CENTRALE
+Firmato digitalmente
+
+

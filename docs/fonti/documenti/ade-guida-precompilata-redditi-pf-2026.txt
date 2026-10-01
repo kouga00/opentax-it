@@ -1,0 +1,864 @@
+LA DICHIARAZIONE PRECOMPILATA 2026
+guida al modello “REDDITI PERSONE FISICHE”
+(LUGLIO 2026)
+
+1.
+
+IL MODELLO “REDDITI PF PRECOMPILATO” ............................................... 2
+Cos’è ............................................................................................................. 2
+I modelli disponibili ......................................................................................... 3
+Chi deve presentare il modello Redditi PF ........................................................... 4
+Quando è disponibile ....................................................................................... 4
+
+2.
+
+LE OPERAZIONI PRIMA DELL’INVIO DELLA DICHIARAZIONE ......................... 6
+Accettazione, modifica o integrazione ................................................................ 6
+Verifica del rimborso spettante o degli importi da pagare ..................................... 6
+
+3.
+
+I QUADRI LM, RR, RU, RP, RL ................................................................. 7
+Quadro LM – Regime di vantaggio e regime forfetario .......................................... 7
+Quadro RR – Contributi previdenziali ............................................................... 11
+Quadro RU – Crediti d’imposta ........................................................................ 13
+Quadro RP – Oneri e spese ............................................................................. 14
+Quadro RL – Altri redditi ................................................................................ 15
+
+4.
+
+LA PRESENTAZIONE E LE OPERAZIONI SUCCESSIVE ................................. 16
+Quando e come si presenta ............................................................................ 16
+Come annullare, integrare o rettificare la dichiarazione presentata ...................... 16
+
+5.
+
+INFO, ASSISTENZA E CALENDARIO ........................................................ 18
+Il sito di assistenza ........................................................................................ 18
+Le date da ricordare ...................................................................................... 19
+
+6.
+
+PER SAPERNE DI PIÙ ........................................................................... 20
+
+1
+
+1. IL MODELLO “REDDITI PF PRECOMPILATO”
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Cos’è
+L’Agenzia delle entrate mette a disposizione dei contribuenti, sul proprio sito internet,
+la dichiarazione dei redditi precompilata, modello “Redditi Persone fisiche”, anche per i
+titolari di partita Iva che aderiscono al regime di vantaggio o forfetario.
+Oltre alle informazioni sui familiari a carico, sugli oneri detraibili e deducibili, su alcune
+indennità e sui dati presenti nelle certificazioni di lavoro autonomo, sono messi a
+disposizione anche i dati reddituali desumibili dalle fatture elettroniche trasmesse
+tramite il Sistema di Interscambio (SDI) e dai corrispettivi giornalieri inviati nell’anno.
+Per l’utilizzo di tali dati, nella precompilazione è stata adottata la presunzione che il
+pagamento sia stato effettuato alla data di emissione della fattura o del corrispettivo,
+non essendo presente tale informazione nelle fonti di input.
+L’applicativo web della dichiarazione precompilata permette di consultare e integrare la
+dichiarazione, inviarla ed effettuare i pagamenti, senza dover scaricare alcun software.
+
+2
+
+I modelli disponibili
+
+•
+
+MODELLO RPF MODALITÀ WEB
+Consente di compilare i principali quadri del modello Redditi PF (fascicolo 1 e, in
+parte, fascicolo 2 e 3) senza scaricare alcun software.
+Possono utilizzare questo modello anche gli imprenditori e i professionisti che
+aderiscono al regime di vantaggio o al regime forfetario (quadro LM). Non possono
+utilizzare Redditi Web (ma devono utilizzare Redditi Online) i contribuenti soggetti
+agli “Indici Sintetici di Affidabilità fiscale” (ISA) o quelli che possiedono redditi da
+partecipazione.
+
+•
+
+MODELLO RPF MODALITÀ ONLINE
+Software completo per la compilazione del modello Redditi PF (fascicoli 1, 2 e 3),
+utilizzabile da tutti i contribuenti con l’installazione sul proprio pc di un apposito
+programma.
+Devono utilizzare Redditi PF Online i contribuenti soggetti agli ISA o con redditi da
+partecipazione.
+
+3
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Per utilizzare il modello Redditi PF sono disponibili:
+
+Chi deve presentare il modello Redditi PF
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Devono presentare il modello Redditi Persone fisiche 2026, non potendo utilizzare il
+modello 730 precompilato (né quello ordinario), i contribuenti che si trovano in una
+delle seguenti situazioni:
+•
+
+nel 2025 hanno percepito
+o
+
+redditi derivanti da produzione di “agroenergie” che non si considerano
+produttive di reddito agrario
+
+o
+
+redditi d’impresa, anche in forma di partecipazione
+
+o
+
+redditi di lavoro autonomo per i quali è richiesta la partita Iva
+
+o
+
+redditi di lavoro autonomo a cui, ai fini delle imposte sui redditi, si applica
+l’articolo 50 del Tuir (soci delle cooperative artigiane)
+
+o
+
+redditi “diversi” non compresi tra quelli indicati nel quadro D, righi D4 e D5
+
+o
+
+redditi provenienti da “trust”, in qualità di beneficiario
+
+•
+
+nel 2025 e/o nel 2026 non sono residenti in Italia
+
+•
+
+devono presentare anche una delle seguenti dichiarazioni: IVA, IRAP, Mod. 770
+(sostituti d’imposta)
+
+•
+
+utilizzano crediti d’imposta per redditi prodotti all’estero diversi da quelli di cui al
+rigo G4 del Modello 730
+
+•
+
+devono compilare il prospetto degli aiuti di Stato, ad eccezione degli agricoltori in
+regime di esonero che sono beneficiari unicamente di crediti d’imposta da utilizzare
+esclusivamente in compensazione nel Mod. F24
+
+•
+
+coloro che destinano a locazione breve più di quattro appartamenti.
+
+Quando è disponibile
+A partire dal 20 maggio 2026, nell’area autenticata del sito internet dell’Agenzia delle
+entrate è disponibile la dichiarazione precompilata modello “Redditi Persone fisiche
+2026” e il relativo foglio riepilogativo.
+La data a partire dalla quale è messo a disposizione il modello Redditi Persone fisiche
+precompilato è stata individuata per poter consentire di utilizzare, nella
+precompilazione, i dati delle Certificazioni Uniche di lavoro autonomo (CUA), che sono
+state trasmesse all’Agenzia delle entrate entro il termine del 30 aprile.
+
+4
+
+Il modello Redditi Persone fisiche può essere inviato a partire dal 27 maggio 2026 e
+fino al 2 novembre 2026 (poiché il 31 ottobre è un sabato e il 1° novembre è un
+giorno festivo).
+Per accedere all’applicativo web della dichiarazione precompilata, occorre prima
+autenticarsi all’area riservata del sito dell’Agenzia delle entrate, utilizzando:
+•
+
+SPID - “Sistema Pubblico dell’Identità Digitale” per accedere ai servizi della
+pubblica amministrazione
+
+•
+
+Carta d’identità elettronica 3.0 (CIE)
+
+•
+
+Carta Nazionale dei Servizi (CNS)
+
+•
+
+credenziali rilasciate dall’Agenzia delle entrate (Entratel/Fisconline), per i soggetti
+titolati ad averle.
+
+Una volta autenticati, si può anche scegliere di operare in qualità di “tutore”,
+“amministratore di sostegno”, “curatore speciale”, “genitore”, “persona di fiducia” o
+“erede”, per accedere alla dichiarazione di un tutelato, di un minore, di una persona
+che ha poca dimestichezza con le funzionalità web o non può gestirle direttamente e ci
+ha autorizzato a farlo nel suo interesse, o di una persona deceduta.
+Effettuato l’accesso, si possono visualizzare:
+•
+
+la dichiarazione dei redditi precompilata
+
+•
+
+l’elenco dei dati inseriti nella dichiarazione e di quelli che l’Agenzia non ha potuto
+inserire perché non completi o incongruenti
+
+•
+
+l’esito della liquidazione (cioè il rimborso, in caso di “esito a credito”, o le somme
+che dovranno essere versate con il modello F24, in caso di “esito a debito”, oppure
+“esito a saldo zero”, se dalla dichiarazione non risultano rimborsi da ottenere o
+pagamenti da effettuare).
+
+5
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Nel foglio informativo allegato alla dichiarazione sono elencate le CUA trasmesse fino
+al 15 aprile 2026.
+I dati delle CUA trasmesse dal 15 aprile al 30 aprile 2026, i cui dati sono stati utilizzati
+per la precompilazione, sono consultabili nel proprio Cassetto fiscale, accessibile
+sempre nell’area riservata del sito internet dell’Agenzia delle entrate.
+
+2. LE OPERAZIONI PRIMA DELL’INVIO DELLA DICHIARAZIONE
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Accettazione, modifica o integrazione
+Dal 20 maggio 2026 è stato messo a disposizione, il modello Redditi precompilato, con
+possibilità di invio a partire dal 27 maggio 2026.
+Nell’applicazione web è possibile consultare la dichiarazione trasmessa e la ricevuta
+telematica dell’avvenuta presentazione.
+Per modificare e inviare il modello “Redditi web” occorre:
+• visualizzare i quadri precompilati per verificare che i dati inseriti siano corretti e
+completi
+• completare i quadri con le informazioni mancanti
+• effettuare le scelte per la destinazione dell’8, 5 e 2 per mille.
+Per l’inserimento dei dati è stata prevista un’apposita funzione che facilita la ricerca dei
+“campi della dichiarazione” in cui vanno riportati.
+
+Verifica del rimborso spettante o degli importi da pagare
+Il contribuente che presenta il modello “Redditi” precompilato può effettuare i
+versamenti e ottenere i rimborsi con le modalità e i termini di seguito descritti. Se
+dalla dichiarazione presentata emerge un credito, occorre compilare il quadro RX e
+scegliere se riceverlo a rimborso, se utilizzarlo in compensazione per il pagamento di
+altri tributi, o se riportarlo nella dichiarazione dell’anno successivo.
+ATTENZIONE:
+se non si effettua alcuna scelta nel quadro RX, il credito viene considerato come
+un’eccedenza da utilizzare nella successiva dichiarazione.
+
+Se si sceglie di chiedere il credito a rimborso, lo stesso viene erogato dall’Agenzia delle
+entrate, eseguiti i normali controlli. Se il contribuente ha indicato le coordinate del
+conto corrente bancario o postale (codice Iban), nell’area riservata del sito dell’Agenzia
+delle entrate, il rimborso viene accreditato su quel conto.
+Se, al contrario, emerge un debito e si invia la dichiarazione, è possibile effettuare il
+pagamento tramite la stessa applicazione online (la procedura consente, infatti, di
+indicare l’Iban del conto corrente su cui effettuare l’addebito). È comunque possibile
+stampare il modello F24 che l’Agenzia ha già precompilato con i dati necessari e
+pagare con le modalità ordinarie.
+Se il contribuente si rivolge per l’assistenza fiscale a un Caf o un professionista
+abilitato, saranno questi ultimi a trasmettere in via telematica all’Agenzia delle entrate
+il modello F24 con gli importi dovuti o, in alternativa, consegneranno il modello F24
+compilato con le somme che il contribuente dovrà versare.
+
+6
+
+3. I QUADRI LM, RR, RU, RP, RL
+
+Se il contribuente aderisce al regime di vantaggio (art. 27, commi 1 e 2, D.L. 6 luglio
+2011, n. 98) o forfetario (art. 1, commi 54 - 89, della legge 23 dicembre 2014, n.
+190) trova già precompilati alcuni campi del quadro LM con le relative informazioni
+presenti nel foglio informativo allegato alla dichiarazione.
+I dati proposti possono essere modificati e integrati dal contribuente prima dell’invio.
+Per la valorizzazione del quadro LM viene presa in considerazione la somma degli
+importi indicati nelle fatture elettroniche e/o nei corrispettivi telematici relativi all’anno
+d’imposta oggetto di precompilazione.
+Per il professionista che ha l’obbligo di iscrizione alla Cassa professionale di
+previdenza, i contributi addebitati al committente in fattura sono esclusi dall’importo
+dei componenti positivi di reddito precompilati.
+Diversamente, per il professionista che esercita un’attività per la quale non è prevista
+un’apposita Cassa professionale di previdenza e che, pertanto, è tenuto all’iscrizione
+alla Gestione Separata dell’INPS, i contributi addebitati al committente in fattura sono
+inclusi nell’importo dei componenti positivi di reddito precompilati.
+Considerato che ai regimi di vantaggio e forfetario si applica il principio di cassa e che
+non è possibile desumere dalle fonti di input la data esatta del pagamento, nella
+precompilazione è adottata la presunzione, indicata con apposito messaggio nel foglio
+informativo, che il pagamento sia stato effettuato alla data di emissione della fattura o
+del corrispettivo.
+Se il pagamento della prestazione o della vendita non coincide con la data di emissione
+della fattura, il contribuente dovrà modificare l’importo dei componenti positivi di
+reddito riportati nel quadro LM, includendo gli importi delle fatture emesse nello scorso
+anno ed incassate nell’anno d’imposta di riferimento ed escludendo quelli delle fatture
+emesse nell’anno d’imposta che non risultano incassate al 31 dicembre.
+Fatture PA rifiutate
+In presenza di fatture elettroniche e note di credito emesse nei confronti della Pubblica
+Amministrazione e da questa rifiutate, le stesse non sono prese in considerazione ai
+fini del calcolo del superamento della soglia per la permanenza nel regime e per il
+calcolo dei componenti positivi di reddito da riportare in dichiarazione. In tal caso, è
+riportato il seguente avviso nel foglio informativo: “Risultano fatture PA rifiutate che
+
+non sono state considerate tra i componenti positivi di reddito, verifica la correttezza
+dei dati precompilati”.
+
+7
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Quadro LM – Regime di vantaggio e regime forfetario
+
+Somma componenti positivi di reddito pari a zero o negativa
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Quando dalla sommatoria dei componenti positivi di reddito, pervenuti col flusso delle
+fatture elettroniche e dei corrispettivi telematici, risulta un valore pari a zero o
+negativo (ad esempio, per effetto dell’emissione di note di credito), il contribuente
+viene informato con il seguente messaggio: “Dal flusso delle fatture elettroniche e dei
+
+corrispettivi telematici pervenuto, risulta una sommatoria dei componenti positivi di
+reddito pari a zero o negativa, verifica la correttezza dei dati”.
+
+Codici Ateco
+Per la precompilazione del codice Ateco al rigo LM1, quindi nella sezione I relativa ai
+contribuenti in regime di vantaggio, viene riportato il codice attività desunto dalla
+dichiarazione dell’anno precedente, tenendo conto della nuova classificazione ATECO
+2025 in vigore dal primo gennaio 2025. In tal caso il contribuente, come anche
+specificato nell’apposito avviso web, deve verificare che il codice attività prevalente
+riportato in dichiarazione sia corretto rispetto all’attività esercitata.
+La precompilazione della colonna 1 (Codice attività) del rigo o dei righi da LM22 a
+LM27, quindi della sezione III relativa ai contribuenti in regime forfetario, è effettuata
+sulla base dei dati presenti nella dichiarazione presentata l’anno precedente, ovvero, in
+assenza di dichiarazione dell’anno precedente, dai dati anagrafici che risultano nelle
+banche dati dell’Agenzia. Il contribuente deve verificare se il suo o i suoi codici attività
+sono stati correttamente riportati in dichiarazione.
+Se, invece, il suo o i suoi codici attività sono stati riportati solo nel foglio informativo,
+gli stessi vanno verificati e indicati nella colonna 1 dei righi da LM22 a LM27. In tal
+caso, i codici attività da riportare sono quelli ATECO 2007.
+In particolare, in presenza di più codici attività, tutti i componenti positivi sono
+riportati nella colonna 3 del rigo LM22, in quanto non è possibile attribuire, in base alle
+fonti di input, i ricavi e/o i compensi percepiti alle attività distinte dai diversi codici
+Ateco.
+Di conseguenza:
+•
+
+se le attività esercitate rientrano nel medesimo gruppo, tra quelli individuati, in
+base ai diversi settori merceologici nella tabella riportata nelle istruzioni del
+modello Redditi PF, il contribuente può confermare il dato precompilato al rigo
+LM22, indicando solo il codice relativo all’attività prevalente
+
+•
+
+se le attività esercitate rientrano, invece, in differenti gruppi, il contribuente deve
+suddividere i ricavi e/o i compensi percepiti compilando un distinto rigo, da LM22 a
+LM27, per ciascuna attività prevalente rientrante nel medesimo gruppo
+merceologico.
+
+8
+
+Con l’introduzione delle semplificazioni fiscali (decreto legislativo n. 1/2024) è stato
+disposto l’esonero dall’invio della CU per i soggetti che corrispondono compensi a
+contribuenti in regime forfetario o di vantaggio. Tuttavia, permane l’obbligo di
+emissione della CU per i medici convenzionati con il Servizio Sanitario Nazionale e per
+alcuni tipi di indennità, come quella di maternità, per le quali non è prevista
+l’emissione di documenti fiscali transitanti nel Sistema di Interscambio (SdI).
+
+“CU – Lavoro autonomo”: medici
+Nel caso di somme erogate (punto 4 della “CU – Lavoro autonomo”) ai medici di
+medicina generale, ai medici di continuità assistenziale con rapporto di lavoro a tempo
+determinato e ai pediatri di libera scelta in regime forfetario, con codice 24 presente
+nel punto 6 della “CU – Lavoro autonomo”, le stesse vengono utilizzate per la
+precompilazione della sezione III – regime forfetario e sono, inoltre, evidenziate con
+un messaggio nel foglio informativo.
+
+“CU – Lavoro autonomo” relative ad alcune indennità
+Se il contribuente è in possesso di una o più “CU – Lavoro autonomo” in cui sono
+presenti i codici 25 e/o 26 al punto 6 (relative ad alcune indennità, ad esempio quelle
+di maternità, che concorrono alla base imponibile, ma non rilevano ai fini del calcolo
+del limite per la permanenza nel regime), la somma dei relativi importi è riportata
+nell’apposito rigo del quadro LM con il seguente messaggio nel foglio informativo:
+“Risultano CU–Lavoro Autonomo in regime forfetario e/o in regime fiscale di vantaggio.
+Importo: XXXX”.
+In caso di soggetto in regime forfetario è riportato, inoltre, il codice 1 in colonna 7 dei
+righi da LM22 a LM27.
+
+“CU - Lavoro autonomo”: lavoratori sportivi del settore dilettantistico
+Il contribuente in regime forfetario che nella dichiarazione “modello Redditi” dell’anno
+precedente ha compilato la sezione III del quadro RR (Contributi previdenziali dovuti
+dai lavoratori autonomi iscritti alla Gestione Separata di cui all’articolo 2, comma 26,
+della legge n. 335/1995 – riforma dello sport: decreto legislativo n. 36/2021) deve
+verificare, come indicato nello specifico messaggio riportato nel foglio informativo e
+nell’applicativo web, se ha percepito compensi da lavoro autonomo sportivo
+dilettantistico.
+In tal caso, come da istruzioni, deve inserire tali compensi in un distinto rigo da LM22
+a LM27 inserendo il codice 2 in colonna 7.
+
+9
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Certificazioni uniche di lavoro autonomo (CUA)
+
+“CU – Lavoro autonomo”: diritti d’autore e opere dell’ingegno
+I dati delle somme di cui alle “CU – lavoro autonomo” con causale B (“utilizzazione
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+economica, da parte dell’autore o inventore di opere di ingegno, brevetti industriali,
+processi, formule o informazioni relativi ad esperienze acquisite in campo industriale
+commerciale o scientifico”) sono già riportati al quadro RL “Altri redditi” e, in
+particolare, al rigo RL25.
+In caso di contribuente in regime forfetario (sezione III del quadro LM precompilata)
+con presenza di “CU – lavoro autonomo” aventi la causale B, se tale tipologia di
+reddito è correlata all’attività di lavoro autonomo svolta, i dati dei compensi vanno
+riportati in colonna 4 dei righi da LM22 a LM27, eliminandoli dal quadro RL, come
+riportato anche in un apposito avviso sia nel foglio informativo che nell’applicativo
+web.
+
+Contributi previdenziali e assistenziali
+Se il quadro LM risulta precompilato, tutti i contributi previdenziali ed assistenziali
+versati nell’anno oggetto di precompilazione e comunicati dai soggetti terzi sono
+riportati solo nel foglio informativo, in quanto, le fonti informative non consentono di
+distinguere i contributi inerenti all’attività svolta nel regime di vantaggio o forfetario da
+altre tipologie di contributi deducibili versati nell’anno.
+Al contribuente, quindi, spetta verificare il dato e riportare:
+•
+
+nel quadro LM, i contributi relativi all’attività svolta nel regime di vantaggio (LM7)
+o forfetario (LM35)
+
+•
+
+nel rigo RP21, l’eventuale parte eccedente dei contributi che non hanno trovato
+capienza nel quadro LM, insieme agli altri contributi deducibili in base alla
+normativa vigente (ad esempio, i contributi versati per il riscatto degli anni di
+laurea e degli anni di frequenza degli ITS Academy, per la prosecuzione volontaria,
+eccetera).
+
+Eccedenze e acconti
+Sono precompilati anche i dati dell’eccedenza delle rimanenze finali (sezione I),
+dell’eccedenza e degli acconti dell’imposta sostitutiva con le informazioni provenienti
+dalla dichiarazione dell’anno precedente e dai modelli F24. Tali informazioni sono
+comunque riportate nel foglio informativo del contribuente, anche in caso di mancata
+precompilazione del quadro LM.
+
+10
+
+Quadro RR – Contributi previdenziali
+
+In particolare, per quanto riguarda la sezione I del quadro RR, l’Inps fornisce i dati
+relativi alla tipologia iscritto, al codice azienda, alle attività particolari, al codice fiscale
+del titolare, al codice INPS, al periodo di imposizione contributiva, al tipo e al periodo
+di riduzione contributiva, al reddito minimale, ai contributi IVS dovuti sul reddito
+minimale, al contributo di maternità, alle quote associative, ai contributi versati sul
+minimale, al contributo per le prestazioni di maternità - per coloro che svolgono
+attività di affittacamere o di produttori di assicurazione di terzo e quarto gruppo - ai
+contributi versati sul reddito che eccede il minimale e ai contributi compensati con
+crediti previdenziali senza esposizione nel mod. F24.
+Ai dati comunicati da Inps sono aggiunti i dati relativi al credito del precedente anno,
+anche compensato con F24, precompilabili direttamente dall’Agenzia.
+Se risultano interruzioni nel periodo di imposizione e/o di riduzione contributiva, il
+contribuente viene informato con un messaggio sia nel foglio informativo che
+nell’applicativo web e deve verificare i mesi corretti da indicare rispettivamente nelle
+colonne 4 e 5, oppure 8 e 9, dei righi RR2/RR3.
+In caso di precompilazione della colonna 7 (tipo riduzione) con il codice “C”, relativo
+alla riduzione spettante ai lavoratori in regime forfetario, spetta al contribuente
+verificare se ha superato in corso d’anno il limite di 100.000 euro.
+In caso positivo, il contribuente integra la dichiarazione, riportando nella colonna 7 dei
+righi RR2/RR3 il codice “D” (lavoratore in regime forfetario nel caso di avvenuto
+superamento in corso dell’anno 2025 del limite di 100.000 euro).
+Se risulta precompilato il quadro RR con almeno un dato, viene fornito un messaggio
+nel foglio informativo che avvisa il contribuente di verificare se il reddito eccede il
+minimale e integrare, eventualmente, i dati compilando le colonne 24 e 25 dei righi
+RR2/RR3, come da istruzioni.
+In particolare, alla colonna 24 va riportato il reddito eccedente il minimale fino al
+massimale di 92.413 euro, mentre alla colonna 25 vanno indicati i contributi IVS
+dovuti sul reddito eccedente il minimale, calcolati applicando al reddito indicato nella
+colonna 24 le aliquote per scaglioni di imponibile stabilite per la gestione di
+appartenenza (artigiani o commercianti), al netto di eventuali riduzioni indicate a
+colonna 7.
+
+11
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+L’INPS fornisce all’Agenzia delle entrate i dati utili alla precompilazione di alcuni campi
+del quadro RR del modello Redditi PF.
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Se è presente un collaboratore, quindi in presenza di almeno un dato precompilato al
+rigo RR3, con la contemporanea presenza della colonna 35 del rigo RR2 precompilata
+(credito dell’anno precedente compensato con F24), va verificato che il credito
+compensato che emerge dalla singola posizione contributiva, riferito al reddito
+eccedente il minimale dell’anno precedente, sia stato correttamente attribuito.
+Il credito compensato con F24, infatti, potrebbe essere riferito sia al titolare che al
+collaboratore. In tal caso, il contribuente deve suddividere il credito compensato tra il
+titolare, alla colonna 35 del rigo RR2, e il collaboratore, alla colonna 35 del rigo RR3.
+Al riguardo, viene anche fornito uno specifico avviso nel foglio informativo e
+nell’applicativo web.
+
+12
+
+Quadro RU – Crediti d’imposta
+•
+
+investimenti beni strumentali – “ZES unica” – codice “T1”
+
+•
+
+investimenti realizzati nelle Zone Logistiche Semplificate “ZLS” – codice “U4”
+
+•
+
+investimenti nella ZES unica per le imprese del settore agricolo, della pesca e
+acquacoltura “ZES UNICA AGRICOLA” - codice “U3”
+
+•
+
+spese sostenute per la partecipazione a corsi di formazione attinenti alla gestione
+dell’azienda agricola “GESTIONE AZIENDA AGRICOLA” - codice “U6”.
+
+In particolare, il contribuente ritrova:
+•
+
+nella colonna 1 (“Codice credito”) del rigo RU1, il codice del credito di imposta
+
+•
+
+nella colonna 3 (“Credito d’imposta spettante nel periodo”) del rigo RU5,
+l’ammontare del credito d’imposta fruibile, come indicato nel cassetto fiscale del
+beneficiario
+
+•
+
+nel rigo RU6 “Credito utilizzato in compensazione con il mod. F24”, l’eventuale
+importo del credito utilizzato in compensazione con il codice tributo specifico.
+
+Il contribuente viene inoltre avvisato, con uno specifico messaggio nel foglio
+informativo, se risultano effettuate compensazioni con modello F24 da verificare.
+Nei casi di precompilazione del quadro RU, nel foglio informativo è riportato il seguente
+messaggio “Risulta che hai presentato istanza per il riconoscimento del credito
+d’imposta XXX. Importo: xxxxx,00”.
+
+13
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Nel quadro RU sono precompilati i dati riferiti ai seguenti crediti d’imposta:
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+L’eventuale ammontare del credito d’imposta residuo viene riportato automaticamente
+nella colonna 2 del rigo RU12. Nel caso in cui, però, si sia verificata la perdita totale o
+parziale del diritto al credito (ad esempio per revoca o decadenza), come da avviso
+nell’applicativo web, vanno consultate con attenzione le istruzioni del rigo RU12,
+barrando la casella di colonna 1 in modo che il residuo del credito d’imposta non venga
+riportato, in tutto o in parte, nella successiva dichiarazione dei redditi.
+Per quanto riguarda il credito d'imposta residuo, indicato nella dichiarazione dell’anno
+precedente, relativo:
+•
+
+agli investimenti nel Mezzogiorno per le imprese del settore agricolo, della pesca e
+acquacoltura “CIMAGRICOLTURA” – codice “U2”
+
+•
+
+agli investimenti beni strumentali – “ZES unica” – codice “T1”
+
+lo stesso viene precompilato nel rigo RU2, e indicato nel foglio informativo, se nella
+dichiarazione dell’anno precedente non è stata barrata la casella di colonna 1 nel rigo
+RU12. In caso contrario, infatti, l’importo residuo non va riportato (in tutto o in parte)
+nella dichiarazione dei redditi.
+
+Quadro RP – Oneri e spese
+Se il quadro LM risulta precompilato, tutti i contributi previdenziali e assistenziali
+versati nell’anno oggetto di precompilazione, comunicati dai soggetti terzi, sono
+riportati nel solo foglio informativo.
+Il contribuente deve verificare il dato e riportare:
+•
+
+nel quadro LM, i contributi relativi all’attività svolta nel regime di vantaggio (LM7)
+o forfetario (LM35)
+
+•
+
+nel rigo RP21, l’eventuale parte eccedente dei contributi che non hanno trovato
+capienza nel quadro LM, insieme agli altri contributi deducibili in base alla
+normativa vigente (ad esempio, i contributi versati per il riscatto degli anni di
+laurea e degli anni di frequenza degli ITS Academy, per la prosecuzione volontaria,
+eccetera).
+
+14
+
+Quadro RL – Altri redditi
+I dati delle somme di cui alle “CU – lavoro autonomo” con causale B (“utilizzazione
+
+particolare, al rigo RL25).
+Se il contribuente è in regime forfetario (sezione III del quadro LM precompilata),
+risultano pervenute “CU – lavoro autonomo” con causale B e tale tipologia di reddito è
+correlata all'attività di lavoro autonomo svolta, vanno riportati i dati dei compensi in
+colonna 4 dei righi da LM22 a LM27, eliminandoli dal quadro RL, come indicato anche
+in un apposito avviso sia nel foglio informativo che nell’applicativo web.
+
+Se il contribuente è in possesso di una “CU – Lavoro autonomo” con causale F
+(“indennità in denaro o in natura percepite nel periodo di imposta dai giudici onorari di
+pace e dai viceprocuratori onorari”), viene precompilato il rigo RL26 con codice 2,
+indicando in colonna 3 l’importo delle indennità certificate presente nel punto 4 della
+CUA.
+Nel rigo RL 33, dedicato alle ritenute d’acconto, viene riportata la somma degli importi
+(ritenuta operata) indicata nel punto 9 della CUA.
+In caso di più CUA, con la stessa causale “F” al punto 1, vengono compilati tanti righi
+quante sono le CUA pervenute.
+
+15
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+economica, da parte dell’autore o inventore di opere di ingegno, brevetti industriali,
+processi, formule o informazioni relativi ad esperienze acquisite in campo industriale
+commerciale o scientifico”) sono precompilati al quadro RL “Altri redditi” (in
+
+4. LA PRESENTAZIONE E LE OPERAZIONI SUCCESSIVE
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Quando e come si presenta
+Chi sceglie il modello Redditi precompilato può inviarlo a partire dal 27 maggio 2026 e
+fino al 2 novembre 2026 (poiché il 31 ottobre è un sabato e il 1° novembre è un
+giorno festivo).
+La presentazione può essere effettuata, in alternativa:
+•
+
+direttamente dal contribuente all’Agenzia delle entrate, in via telematica
+
+•
+
+tramite un Caf, un professionista abilitato o altro soggetto incaricato della
+trasmissione telematica delle dichiarazioni (solo per il modello Redditi Persone
+fisiche).
+
+PRESENTAZIONE DIRETTA DEL MODELLO REDDITI
+Se il contribuente presenta direttamente il modello deve:
+•
+
+verificare con attenzione che i dati precompilati siano corretti e completi
+
+•
+
+compilare la scheda per la scelta dell’8, del 5 e del 2 per mille dell’Irpef (anche se
+non si vuole esprimere alcuna scelta)
+
+•
+
+effettuare il pagamento degli importi dovuti, in caso di “esito a debito”.
+
+DICHIARAZIONE INVIATA
+Dopo la presentazione, in una apposita sezione è possibile visualizzare e stampare la
+dichiarazione inviata all’Agenzia delle entrate. Inoltre, nella sezione “Ricevute” si
+possono controllare e stampare le ricevute dell’invio della dichiarazione e dei
+versamenti F24 effettuati.
+
+Come annullare, integrare o rettificare la dichiarazione presentata
+ANNULLARE LA DICHIARAZIONE INVIATA
+L’annullamento del modello Redditi già inviato e la presentazione di una nuova
+dichiarazione tramite l’applicazione web, invece, sono possibili a partire dal 27 maggio
+2026.
+Tutti i dati inseriti dal contribuente saranno cancellati e sarà di nuovo disponibile la
+dichiarazione precompilata dall’Agenzia delle entrate.
+
+16
+
+Entro il 15 ottobre 2026, infine, è possibile annullare il modello Redditi (e i modelli
+Redditi Persone fisiche correttivi, ad esso collegati) già inviato, se non è stato
+predisposto un modello F24.
+Per annullare la dichiarazione è necessario che lo stato della ricevuta dell’invio risulti
+con la dicitura “Elaborato” e occorre accedere all’applicazione con le stesse credenziali
+utilizzate per l’invio.
+Quando si annulla la dichiarazione inviata, automaticamente viene rimosso anche il
+modello F24 eventualmente predisposto e nella sezione “Ricevute” è possibile
+controllare e stampare le ricevute dell’annullamento.
+ATTENZIONE
+Quando si annulla il modello inviato, all’Agenzia delle entrate non risulta presentata alcuna
+dichiarazione e, pertanto, occorre trasmetterne una nuova, altrimenti la dichiarazione
+risulterà omessa. L’invio della nuova dichiarazione può essere fatto dopo che sono trascorse
+24/48 ore dall’annullamento della precedente.
+
+REDDITI CORRETTIVO/INTEGRATIVO DOPO INVIO “REDDITI WEB”
+Se dopo aver inviato il modello Redditi web ci si accorge di aver dimenticato dei dati o
+di averli inseriti in modo errato, ed è trascorso il periodo utile per poterlo annullare,
+occorre presentare “Redditi correttivo”, entro il 2 novembre 2026, per modificarli o
+integrarli.
+Dopo questa data è possibile presentare solo “Redditi integrativo”.
+Il modello “Redditi correttivo” è predisposto con i dati già presenti nell’ultima
+dichiarazione inviata.
+
+17
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Il 26 giugno 2026 è l’ultimo giorno per annullare, tramite l’applicativo web, il modello
+Redditi (e i modelli Redditi Persone fisiche correttivi, ad esso collegati) già inviato, se è
+stato predisposto un modello F24.
+
+5. INFO, ASSISTENZA E CALENDARIO
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Il sito di assistenza
+L’Agenzia delle entrate, come ogni anno, predispone un sito internet dedicato alla
+dichiarazione precompilata.
+All’indirizzo https://infoprecompilata.agenziaentrate.gov.it/ sono presenti tutte le
+informazioni utili e i passi da seguire per accedere al modello precompilato e inviarlo
+direttamente da casa.
+Nel sito, inoltre, è presente l’elenco delle scadenze e altre utili sezioni quali: le
+principali novità, i vantaggi, le risposte alle domande più frequenti.
+Si ricorda, infine, che l’Agenzia delle entrate garantisce, in ogni caso, il servizio di
+assistenza ai cittadini attraverso i seguenti canali:
+•
+
+Assistenza telefonica: 800.90.96.96 da telefono fisso, 06.97.61.76.89 (da
+cellulare) e +39 06.45.47.04.68 per chi chiama dall’estero, operativi dal lunedì al
+venerdì dalle ore 9 alle 17, con esclusione delle festività nazionali
+
+•
+
+Assistenza prima informazione canale facebook.
+
+18
+
+Le date da ricordare
+
+20
+MAGGIO
+
+da questa data è possibile accedere e modificare la dichiarazione modello Redditi persone
+fisiche precompilato direttamente tramite l’applicativo web
+
+27 MAGGIO
+
+da questa data possibile:
+•
+inviare il modello Redditi persone fisiche precompilato
+•
+inviare il modello Redditi aggiuntivo del 730, presentando il frontespizio e i quadri
+interessati (RM – Sez. IV, RS, RU)
+•
+inviare il modello Redditi correttivo, per correggere e sostituire il 730 o il modello Redditi
+già inviato
+•
+annullare il modello Redditi già inviato e presentare una nuova dichiarazione tramite
+l’applicazione web (l’annullamento può essere fatto solo una volta)
+
+26
+GIUGNO
+
+ultimo giorno per annullare, tramite l’applicativo web, il modello Redditi (e i modelli Redditi
+Pf correttivi ad esso collegati) inviato con modello F24
+
+30
+GIUGNO
+
+Ultimo giorno per il versamento di saldo e primo acconto (salvo i casi per cui opera la
+proroga al 20 luglio)
+
+20
+LUGLIO
+
+Ultimo giorno per il versamento, senza alcuna maggiorazione, di saldo e primo acconto per i
+contribuenti ISA (o che presentano cause di esclusione), per coloro che adottano il regime
+fiscale di vantaggio e per i forfetari
+
+30
+LUGLIO
+
+Ultimo giorno utile per il versamento, con la maggiorazione dello 0,40 per cento a titolo di
+interesse, di saldo e primo acconto (salvo i casi per cui opera la proroga al 20 agosto)
+
+20
+AGOSTO
+
+Ultimo giorno per il versamento, con la maggiorazione dello 0,80 per cento, di saldo e primo
+acconto per i contribuenti ISA (o che presentano cause di esclusione), per coloro che
+adottano il regime fiscale di vantaggio e per i forfetari
+
+15
+OTTOBRE
+
+ultimo giorno per annullare, tramite l’applicativo web, il modello Redditi (e i modelli Redditi
+Pf correttivi ad esso collegati) inviato senza modello F24
+
+2
+NOVEMBRE
+
+scade il termine per inviare:
+•
+il modello Redditi Persone fisiche 2026
+•
+il modello Redditi correttivo del 730
+•
+il modello Redditi aggiuntivo del 730 (frontespizio e i quadri RM – Sez. IV, RS, RU)
+
+30
+NOVEMBRE
+
+scade il termine per versare il secondo o unico acconto
+
+1° FEBBRAIO
+2027
+
+ultimo giorno per presentare il modello Redditi precompilato “tardivo” (entro 90 giorni dalla
+scadenza), mediante l’applicazione web, o scaricando il software Redditi PF On line 2026
+
+19
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Di seguito le date da ricordare per la dichiarazione precompilata Redditi Pf 2026.
+
+6. PER SAPERNE DI PIÙ
+
+La dichiarazione precompilata 2026 - guida al modello “Redditi Persone fisiche” – LUGLIO 2026
+
+Dpr n. 917/1986 (Testo unico delle imposte sui redditi)
+Dpr n. 322/1998 (Regolamento su modalità per la presentazione delle dichiarazioni
+relative alle imposte sui redditi, all’imposta regionale sulle attività produttive e
+all’imposta sul valore aggiunto)
+Decreto legislativo n. 175/2014 (semplificazione fiscale e dichiarazione dei redditi
+precompilata)
+Decreto legge n. 146/2021 – articolo 5-ter (controllo formale delle dichiarazioni
+precompilate)
+Decreto legge n. 73/2022 – articolo 6 (disposizioni in materia di dichiarazione dei
+redditi precompilata)
+Decreto legislativo n. 1/2024 (razionalizzazione e semplificazione delle norme in
+materia di adempimenti tributari)
+Circolare n. 8/2024 (semplificazione delle norme sugli adempimenti tributari – misure
+in materia di dichiarazioni fiscali)
+Decreto legislativo n. 108/2024 - articolo 2 (modifiche
+adempimenti tributari) e articolo 4, comma 1, lettera u)
+
+alla
+
+disciplina
+
+degli
+
+Provvedimento dell’Agenzia delle entrate del 28 aprile 2026 (accesso alla dichiarazione
+precompilata da parte del contribuente e degli altri soggetti autorizzati)
+Decreto legge n. 89/2026 - articolo 6 (proroga dei versamenti del 30 giugno 2026, per
+i contribuenti ISA o per quelli che presentano cause di esclusione dagli ISA, per coloro
+che adottano il regime fiscale di vantaggio e per i “forfetari”)
+“Tutte le agevolazioni della dichiarazione 2026” (raccolta di guide sulle disposizioni
+normative e sulle indicazioni di prassi riguardanti ritenute, oneri detraibili e deducibili,
+crediti di imposta, erogazioni liberali e detrazioni pluriennali relative a spese per
+interventi edilizi)
+SITO DI ASSISTENZA ALLA DICHIARAZIONE PRECOMPILATA:
+https://infoprecompilata.agenziaentrate.gov.it/
+SITO DI ASSISTENZA AI SERVIZI TELEMATICI:
+https://assistenza.agenziaentrate.gov.it/
+ISTRUZIONI PER LA COMPILAZIONE DELLA DICHIARAZIONE DEI REDDITI (sito
+dell’Agenzia delle entrate):
+“Modello Redditi persone fisiche 2026 e istruzioni”
+I documenti di normativa e di prassi indicati sono reperibili attraverso il servizio curato dal
+CERDEF (Centro di Ricerche e Documentazione Economica e Finanziaria), presente sul sito
+del Dipartimento delle Finanze
+
+20
+
+

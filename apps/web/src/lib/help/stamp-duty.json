@@ -1,0 +1,35 @@
+{
+  "stampDutyPage": {
+    "label": "Come si paga il bollo",
+    "paragraphs": [
+      "Il bollo da 2 € sulle fatture elettroniche lo calcola l'**Agenzia delle Entrate**, trimestre per trimestre, dagli elenchi A e B del portale Fatture e corrispettivi. OpenTax IT ne fa una **stima** dalle tue fatture con bollo virtuale, utile per controllare l'elenco B.",
+      "Si paga in due modi: dal portale, indicando l'IBAN di un conto intestato a te (l'importo viene addebitato), oppure con un **F24 telematico** con il codice del trimestre (2521-2524) e l'anno. Fonti: [guida AdE sul bollo, giugno 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/l-imposta_di_bollo_sulle_fatture_elettronichegiugno2026), [risoluzione 42/E/2019](https://www.agenziaentrate.gov.it/portale/documents/20143/302007/risoluzione+n+42+del+09042019_RISOLUZIONE+n.+42_09042019.pdf/3de9d99b-74e2-7f36-df09-9ef8be8f445b)."
+    ]
+  },
+  "stampDutyListB": {
+    "label": "Elenco B",
+    "paragraphs": [
+      "L'elenco B contiene le fatture in cui, secondo l'Agenzia, il bollo andava indicato e non c'è. Entro questa data puoi togliere quelle che non lo richiedono e aggiungere quelle che mancano, nel portale Fatture e corrispettivi; se non lo modifichi, vale come confermato. Per il 2° trimestre il termine è il 10 settembre.",
+      "Se paghi prima di questa data, l'elenco B non si può più modificare (guida AdE sul bollo, giugno 2026, §3)."
+    ]
+  },
+  "stampDutyAmount": {
+    "label": "Importo dell'Agenzia",
+    "paragraphs": [
+      "Dopo la data limite per l'elenco B, l'Agenzia calcola l'imposta dovuta e la mostra nel portale Fatture e corrispettivi entro la data indicata (per il 2° trimestre il 20 settembre). L'importo da pagare è quello: se è diverso dalla stima di OpenTax IT, controlla gli elenchi A e B."
+    ]
+  },
+  "stampDutyF24": {
+    "label": "F24 del bollo",
+    "paragraphs": [
+      "L'F24 del bollo ha una riga nella sezione Erario, con il codice del trimestre e, nel campo \"anno di riferimento\", l'anno del trimestre (risoluzione AdE 42/E/2019). Un trimestre pagato più tardi con il differimento mantiene il suo codice (2521 o 2522).",
+      "Va presentato in modalità telematica: lo trovi in **F24 e rate** e finisce nel **File per File Internet** della stessa data. Dopo la scadenza servono anche sanzione e interessi del ravvedimento: in quel caso paga dal portale, che li calcola da solo."
+    ]
+  },
+  "stampDutyPortal": {
+    "label": "Pagamento dal portale",
+    "paragraphs": [
+      "Se hai pagato dalla funzione del portale Fatture e corrispettivi, con l'addebito sul tuo IBAN, segnalo qui con l'importo e la data: il trimestre risulta pagato senza un F24."
+    ]
+  }
+}

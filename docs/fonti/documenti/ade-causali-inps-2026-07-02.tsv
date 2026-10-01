@@ -1,0 +1,200 @@
+# Foglio1
+Causale	Tipo Soggetto	"Matricola INPS Codice INPS Filiale azienda (cfr. tabella ""Formati"")"	Inizio riferimento	Fine riferimento	Modalità di utilizzo (1)								
+DM10	DM10 attivi, passivi, insoluti	Formato 1	MM/AAAA>=01/1989 MM/AAAA<=Data Riscossione	0	E								
+DMRA	DMRA rettificativi	Formato 1	MM/AAAA>=01/1989 MM/AAAA<=Data Riscossione	0	D								
+RC01	Crediti previdenziali	Formato 1	MM/AAAA<=Data Riscossione	MM/AAAA >= periodo inizio riferimento	D								
+DMDP-DMDD	Rate dilazioni previdenziali	Formato 1	MM/AAAA<=Data Riscossione	MM/AAAA >= periodo inizio riferimento	D								
+SSDP-SSDD 	Recupero crediti sanitari	Formato 1	MM/AAAA<=Data Riscossione	MM/AAAA >= periodo inizio riferimento	D								
+DPPI	Gestione 10% professionisti - Rate ed interessi	Formato 6	MM/AAAA>=01/1998 MM/AAAA<=Data Riscossione	MM/AAAA; dove AAAA = AAAA inizio riferimento e MM >= MM inizio riferimento	D								
+AF-CF	Artigiani e Commercianti - contributi sul minimale e correnti	Formato 3	MM/AAAA<=Data Riscossione	MM/AAAA; dove AAAA = AAAA inizio riferimento e MM >= MM inizio riferimento	E								
+AP-CP	Artigiani e Commercianti - contributi extra minimale e correnti	Formato 3	MM/AAAA<=Data Riscossione	MM/AAAA; dove AAAA = AAAA inizio riferimento e MM >= MM inizio riferimento	E								
+APR-API-CPI-CPR	Artigiani e Commercianti - contributi extra minimale e correnti	Formato 3	MM/AAAA>=01/1998 MM/AAAA<=Data Riscossione	MM/AAAA; dove AAAA = AAAA inizio riferimento e MM >= MM inizio riferimento	D								
+AFP-CFP-APP-CPP	Artigiani e Commercianti - contributi anni pregressi	Formato 3	MM/AAAA<=Data Riscossione	MM/AAAA >= periodo inizio riferimento	D								
+AD-AR-ARI-ARM-CD-CR-CRI-CRM-ARN-ARIN-ARMN-CRN-CRIN-CRMN	Artigiani e Commercianti - recupero	Formato 3	MM/AAAA<=Data Riscossione	MM/AAAA >= periodo inizio riferimento	D								
+LAS	Aziende agricole per OTI e OTD - contributi correnti	Formato 5	MM/AAAA>=10/1997 MM/AAAA<=Data Riscossione	MM/AAAA; dove AAAA = AAAA inizio riferimento e MM >= MM inizio riferimento	D								
+LASP	Aziende agricole per OTI e OTD - contributi pregressi	Formato 5	MM/AAAA<=Data Riscossione	MM/AAAA >= periodo inizio riferimento	D								
+LAA-PCF-LAAP-PCFP	Lavoratori autonomi agricoli e PC/CF	Formato 5	NN/AAAA; dove NN=N°rata (da 01 a 04) e AAAA=anno (>1997)	0	D								
+LASS	Aziende agricole per OTI e OTD - contributi pregressi - SSN	Formato 5	MM/AAAA<=Data Riscossione	MM/AAAA>=inizio periodo di rifer.	D								
+RLAA-RLAS-RPCF-KLAA-KPCF-KLAS	Lavoratori agricoli e PC/CF- versamenti IVS	Formato 5	MM/AAAA<=Data Riscossione	MM/AAAA>=inizio periodo di rifer.	D								
+PCFS	PC/CF - contributi pregressi SSN	Formato 5	NN/AAAA; dove NN=N°rata (da 01 a 04) e AAAA=anno (>1997)	0	D								
+PESC	Pescatori autonomi	Formato 4	MM/AAAA>=01/1998 MM/AAAA<=Data Riscossione	0	D								
+C10-CXX	Gestione Committenti	Formato 2	MM/AAAA>=01/1996 MM/AAAA<=Data Riscossione	0	D								
+P10-PXX	Gestione Professionisti	Formato 6	MM/AAAA>=01/1996 MM/AAAA<=Data Riscossione	MM/AAAA; dove AAAA = AAAA inizio riferimento e MM >= MM inizio riferimento	E								
+P10R-PXXR	Gestione Professionisti - Rate e interessi	Formato 6	MM/AAAA>=01/1998 MM/AAAA<=Data Riscossione	MM/AAAA; dove AAAA = AAAA inizio riferimento e MM >= MM inizio riferimento	D								
+DOM1	Datori di lavoro domestico	Formato 9 	MM/AAAA<=Data Riscossione	MM/AAAA>=inizio periodo di rifer.	D								
+DOM2	Datori di lavoro domestico (condono Legge 140/1997)	Formato 7	0	0	D								
+BLAA-BPCF-BLAS	Agricoli	Formato 5	0	0	R								
+DLAS-DLAA	Agricoli	Formato 5	0	0	D								
+ABS-CBS	Artigiani–Commercianti Condoni/Bonus Sanzioni	Formato 3	0	0	R								
+VMCF- VMCS	Rimborsi visite mediche di controllo	Formato 8	MMAAAA oppure 0	MMAAAA oppure 0	D								
+EBCM-EBTU	Contributi dovuti dai datori di lavoro per finanziamento di Enti Bilaterali (Commercio, Turismo)	Formato 1	MMAAAA	0	D								
+EMCO	Regolarizzazione lavoro sommerso -Collaboratori continuativi	Formato 2	MMAAAA	0	D								
+EMLA	Regolarizzazione lavoro sommerso - Lavoratori agricoli	Formato 5	MMAAAA	0	D								
+VAL - PIE -LOM - VEN - FRI - LIG - EMI - TOS - MAR - UMB - LAZ - ABR - MOL - CAM - PUG - BAS - CAL - SIC - SAR - TRE - BOL   	Crediti Servizio Sanitario Nazionale regione xxx	Formato 1	0	0	D								
+DMC	Area DM - Condono	Formato 1	0	0	D								
+DOM3	Area lavoratori domestici - recupero crediti LD03	Formato 9	MMAAAA >= 4/1973, < = data di riscossione	MM/AAAA>=inizio periodo di rifererimento 	D								
+COC - COS - COSI	Gestione commitenti - recupero crediti, sanzioni, interessi	Formato 9	MMAAAA oppure 0	MMAAAA oppure 0	D								
+POC - POS - POSI	Gestione Professionisti - Rate e interessi	Formato 9	MMAAAA oppure 0	MMAAAA oppure 0	D								
+DSOS	DM - calamità	Formato 10	MMAAAA oppure 0	MMAAAA oppure 0	D								
+APMF	Gestione artigiani - Contributi a percentuale richiesti a seguito di accertamento fiscale	Formato 7	MMAAAA	MM/AAAA>=inizio periodo di rifererimento 	D								
+CPMF	Gestione commercianti - Contributi a percentuale richiesti a seguito di accertamento fiscale	Formato 7	MMAAAA	MM/AAAA>=inizio periodo di rifererimento 	D								
+LPMF	Gestione liberi professionisti - Contributi a percentuale richiesti a seguito di accertamento fiscale	Formato 7	MMAAAA	MM/AAAA>=inizio periodo di rifererimento 	D								
+FIPP	Federazione Panificatori  Pasticceri	Formato 1	MMAAAA	0	D								
+MOBL	Mobilità lunga	Formato 1	MMAAAA	MM/AAAA>=inizio periodo di rifererimento 	D								
+ASS	Associati in partecipazione	Formato 2	MM/AAAA<=Data Riscossione	0	D								
+EBCE	Finanziamento Enti Bilaterali CED	Formato 1	MMAAAA	0	D								
+TUEB	Finanziamento Enti Bilaterali Turismo	Formato 1	MMAAAA	0	D								
+PORT	Finanziamento Enti Bilaterali Portieri	Formato 1	MMAAAA	0	D								
+RCFL	Recupero sgravi CFL UE	Formato 1	0	0	D								
+UNSI	Unione Nazionale Sindacale Imprenditori e Coltivatori	Formato 1	0	0	D								
+TCEB	Enti Bilaterali per il Terziario	Formato 1	MMAAAA	0	D								
+DMRP	Rettifiche da mod. DM10/2	Formato 1	MM/AAAA >= 01/2005, < = data di riscossione	0	R								
+ASSP	Contributi di assistenza sanitaria supplementare	Formato 1	MM/AAAA<=data di riscossione	MM/AAAA >= periodo inizio riferimento	D								
+PRCA	Aziende DM -Dilazione on line	Formato 1	MM/AAAA<=data di riscossione	MM/AAAA >= periodo inizio riferimento	D								
+EBNA	Datori di lavoro - Contributi per il finanziamento dell’Ente bilaterale settore artigianato	Formato 1	MMAAAA	0	D								
+CIFE	Datori di lavoro - Contributi per il finanziamento dell’Ente Bilaterale Settore Privato- E.BI.NA.S.PRI	Formato 1	MMAAAA	0	D								
+EST1	Datori di lavoro - Contributi per il finanziamento dell’Ente di Assistenza Sanitaria Integrativa Fondo Est	Formato 1	MMAAAA	0	D								
+EBAR	Datori di lavoro - contributi per il finanziamento dell’Ente bilaterale EBAR	Formato 1	MMAAAA	0	D								
+ONBS	Datori di lavoro - contributi per il finanziamento dell’Ente bilaterale ONBSI	Formato 1	MMAAAA	0	D								
+HTL1	Datori di lavoro - contributi per finanziamento di Federalberghi 	Formato 1	MMAAAA	0	D								
+ACIM	Datori di lavoro - anticipazione contributo di ingresso mobilità 	Formato 1	MM/AAAA<=Data Riscossione	0	D								
+EBA1	Contributo di finanziamento dell'Ente Bilaterale dell'artigianato per la formazione e la sicurrezza EBAFOS	Formato 1	MM/AAAA<=Data Riscossione	0	D								
+PANE	Contributo di finanziamento dell'Ente Bilaterale nazionale della panificazione e attività affini EBIPAN	Formato 1	MM/AAAA<=Data Riscossione	0	D								
+ENBA	Datori di lavoro - contributi per il finanziamento dell'Ente Bilaterale ENBASS	Formato 1	MMAAAA	0	D								
+CCNL	Contributo di finanziamento dell’Ente Bilaterale della pesca (EBI PESCA)	Formato 1	MM/AAAA<=Data Riscossione	0	D								
+ART1	Fondo di Assistenza Sanitaria Integrativa per i Lavoratori dell’Artigianato-SAN.ARTI	Formato 1	MM/AAAA<=Data Riscossione	0	D								
+SADP	Sanzione amministrativa per incremento addizionale passeggeri – omessa comunicazione	Formato 1	MM/AAAA<=Data Riscossione	0	D								
+ENBI	Ente Nazionale Bilaterale del Terziario-EBITEN	Formato 1	MMAAAA	0	D								
+FEDA	Ente bilaterale aziende private - E.BI.AP.	Formato 1	MMAAAA	0	D								
+OPNC	Organismo paritetico nazionale CONFAPI 	Formato 1	MMAAAA	0	D								
+ENBC	Ente Bilaterale Confederale EN.BI.C.	Formato 1	MMAAAA	0	D								
+ENBF	Ente Bilaterale Federale EN.BI.F.	Formato 1	MMAAAA	0	D								
+EDFO	Ente Paritetico nazionale per la formazione professionale e la tutela della salute e della sicurezza nei luoghi di lavoro nel settore dell’edilizia e affini  EDILFORMA ITALIA	Formato 1	MMAAAA	0	D								
+EBAT	Ente Bilaterale Nazionale per l'Artigianato e il Terziario - E.BI.N.AR.T.	Formato 1	MMAAAA	0	D								
+ENFE	Ente Nazionale per la Formazione e l'Ambiente -  ENFEA	Formato 1	MMAAAA	0	D								
+EBTS	Ente Mutualistico Bilaterale Contrattuale Nazionale per il Turismo e Servizi - E.M.B.P.T.S.	Formato 1	MMAAAA	0	D								
+MI53	Ente Bilaterale Contrattuale  per la Vigilanza e la Sicurezza EN.BI.VI.SI.	Formato 1	MMAAAA	0	D								
+EBIL	Ente Bilaterale Nazionale Imprese e Lavoratori - EBIL	Formato 1	MMAAAA	0	D								
+CUST	FONDO COASCO	Formato 1	MMAAAA	0	D								
+PULI	FONDO COASCO ADDETTI ALLE PULIZIE	Formato 1	MMAAAA	0	D								
+CLIS	Ente Nazionale Bilaterale Lavoro Impresa e Sanità – E.N.B.L.I.S.	Formato 1	MMAAAA	0	D								
+EBAN	Ente Bilaterale Agricolo Nazionale  E.B.A.N.	Formato 5	MMAAAA	0	D								
+EBMS	Ente Bilaterale Metalmeccanici e Servizi – En.Bi.M.S.	Formato 1	MMAAAA	0	D								
+EBSA	Ente Bilaterale Contrattuale Nazionale per la Sanità Privata - E.B.SA.P.	Formato 1	MMAAAA	0	D								
+ENBL	Ente Nazionale Bilaterale Lavoro e Impresa – E.N.B.L.I.	Formato 1	MMAAAA	0	D								
+EPAR	Ente Paritetico C.I.F.A. - CONFSAL	Formato 1	MMAAAA	0	D								
+FSL1	Fondo SANIOLG – Fondo integrativo del servizio sanitario nazionale – Associazione non riconosciuta	Formato 1	MMAAAA	0	D								
+EBMC	Ente Bilaterale Metalmeccanici – EBM	Formato 1	MMAAAA	0	D								
+QUAS	Cassa assistenza sanitaria quadri - QUAS	Formato 1	MMAAAA	0	D								
+EBAS	EBAS – Ente Bilaterale Autoscuole e Studi	Formato 1	MMAAAA	0	D								
+EBIP	Ente Bilaterale EBILP –  Ente Bilaterale Nazionale delle libere professioni	Formato 1	MMAAAA	0	D								
+ASIM	Fondo ASIM - Ente di assistenza sanitaria integrativa per i dipendenti delle imprese esercenti servizi di pulizia e servizi integrati/multiservizi	Formato 1	MMAAAA	0	D								
+EBIT	EBIT - Ente Bilaterale Nazionale Industria Turistica	Formato 1	MMAAAA	0	D								
+EBI1	Ente Bilaterale Piccole Imprese e Cooperative in breve E.BI.P.I.C. 	Formato 1	MMAAAA	0	D								
+EFEI	Ente Formazione Edile Italia in breve “E.F.E.I” Ente Bilaterale Nazionale 	Formato 1	MMAAAA	0	D								
+FASD	Fondo di Assistenza Sanitaria per i Dipendenti dei servizi Ambientali - FASDA	Formato 1	MMAAAA	0	D								
+EBI7	E.B.I. Ente Bilaterale Italia	Formato 1	MMAAAA	0	D								
+EBG9	Ente Bilaterale Generale EN.BIL.GEN. Ente Bilaterale nazionale	Formato 1	MMAAAA	0	D								
+1AST	Ente di Assistenza Sanitaria Integrativa per i dipendenti delle aziende del commercio, del turismo e dei servizi	Formato 1	MMAAAA	0	D								
+EBTI	Ente Bilaterale Terziario Italiano (E.B.T.I.)	Formato 1	MMAAAA	0	D								
+EB04	Ente Bilaterale Settore Privato (EBISEP)	Formato 1	MMAAAA	0	D								
+RCAD	Recupero Contributo Addizionale CIG	Formato 12	MMAAAA	MMAAAA	D								
+EBL1	Ente Nazionale Bilaterale (E.N.Bi.)	Formato 1	MMAAAA	0	D								
+INVE	Ente Bilaterale Nazionale Investigazioni e Sicurezza Privata (E.BI.N.I.S.P.) 	Formato 1	MMAAAA	0	D								
+ASPO	Cassa Portieri	Formato 1	MMAAAA	0	D								
+LAV1	Ente Bilaterale Nazionale EBILAV	Formato 1	MMAAAA	0	D								
+TG15	Ente Nazionale Bilaterale per la Formazione E.N.Bi.Form.	Formato 1	MMAAAA	0	D								
+EGB1	Ente Generale Bilaterale EN.GE.B.	Formato 1	MMAAAA	0	D								
+EBC1	Ente Bilaterale EBILCOOP	Formato 1	MMAAAA	0	D								
+EILA	Ente Bilaterale per le Imprese e i Lavoratori Autonomi EBILA	Formato 1	MMAAAA	0	D								
+EB16	Ente Nazionale Bilaterale Italiano ENBITAL	Formato 1	MMAAAA	0	D								
+CALL	Ente Bilaterale Nazionale dei Call Center ENBICALL	Formato 1	MMAAAA	0	D								
+ENBT	Ente Nazionale Bilaterale Lavoro Impresa e Terziario E.N.B.L.I.T.	Formato 1	MMAAAA	0	D								
+EBCT	Ente Bilaterale Contrattuale Nazionale per il Turismo E.BI.TUR.	Formato 1	MMAAAA	0	D								
+ANBA	Ente Nazionale Bilaterale Lavoro Impresa e Agricoltura E.N.B.L.I.A.	Formato 1	MMAAAA	0	D								
+EBLC	Ente Nazionale Bilaterale Lavoro Impresa e Costruzioni E.N.B.L.I.C.	Formato 1	MMAAAA	0	D								
+ENP1	Ente Nazionale per i Patti Bilaterali ENPABIL	Formato 1	MMAAAA	0	D								
+RCSO	Contribuzione addizionale e straordinaria di finanziamento delle prestazioni erogate dai Fondi di solidarietà	Formato 12	MMAAAA	MMAAAA	D								
+OBIL	Ente Bilaterale – Organismo Bilaterale Italiano Lavoro OBIL	Formato 1	MMAAAA	0	D								
+BINT	Ente Bilaterale Intercategoriale  EBINT	Formato 1	MMAAAA	0	D								
+EBCO	Ente Bilaterale Confederale E.BI.CONF.	Formato 1	MMAAAA	0	D								
+EBAP	Ente Bilaterale Autonomo Settore Privato – E.BI.A.S.P.	Formato 1	MMAAAA	0	D								
+ASI1	ASICOOP - Fondo Assistenza Sanitaria Integrativa per i lavoratori di Cooperative	Formato 1	MMAAAA	0	D								
+EBIC	EBICOST - Ente Bilaterale Commercio Servizi Turismo	Formato 1	MMAAAA	0	D								
+EBG1	E.BI.GEN. – UGL/CONFIMEA Ente Bilaterale Generale	Formato 1	MMAAAA	0	D								
+MET1	METASALUTE -  Fondo Sanitario Lavoratori Metalmeccanici e istallazione impianti	Formato 1	MMAAAA	0	D								
+EBCD	E.BI.N.CONF. - Ente Bilaterale Nazionale Confederale	Formato 1	MMAAAA	0	D								
+ELAV	E.LAV. - Ente Bilaterale dei Lavoratori	Formato 1	MMAAAA	0	D								
+FAST	Fondo per i Dipendenti da Aziende Settore Turismo FAST	Formato 1	MMAAAA	0	D								
+FOSI	FORMASICURO – Ente Paritetico Nazionale	Formato 1	MMAAAA	0	D								
+ENAB	ENTE NAZIONALE  AUTONOMO BILATERALE E.N.A.B. IMPRESE	Formato 1	MMAAAA	0	D								
+EBIS	EBISport - Ente Bilaterale Nazionale degli impianti ed attività sportive profit e non profit	Formato 1	MMAAAA	0	D								
+EBSP	Ente Bilaterale Nazionale Settore Privato  E.BI.NA.S.P.	Formato 1	MMAAAA	0	D								
+EBIG	Ente Bilaterale Generale della Sicurezza e del Terziario  “EBIGEST” 	Formato 1	MMAAAA	0	D								
+EBPM	EBIN.PMI - Ente Bilaterale Nazionale per le piccole e medie imprese	Formato 1	MMAAAA	0	D								
+ETUR	EBINTUR - Ente Bilaterale Ebintur	Formato 1	MMAAAA	0	D								
+HELS	FONDO UNIHELSE	Formato 1	MMAAAA	0	D								
+FASN	FASNI - Fondo Assistenza Sanitaria Nazionale Integrativa	Formato 1	MMAAAA	0	D								
+EBUA	ENBIUC - Ente Bilaterale UAI-CONFINTESA	Formato 1	MMAAAA	0	D								
+BIMO	EBIMO - Ente Bilaterale per l'Innovazione del Mercato Occupazionale	Formato 1	MMAAAA	0	D								
+EBUN	EBIUNI - Ente Bilaterale Nazionale delle industrie e imprese	Formato 1	MMAAAA	0	D								
+IT24	ENBILAV - E.N.BI.LAV.	Formato 1	MMAAAA	0	D								
+BILD	ENTEBILD – Ente Bilaterale Italiano Imprenditori, Lavoratori e Dirigenti	Formato 1	MMAAAA	0	D								
+ASS1	Fondo Integrativo del Servizio Sanitario Nazionale ASSICURMED	Formato 1	MMAAAA	0	D								
+ESIT	Ente Nazionale Bilaterale Sicurezza, Investigazioni e Tutela “ENBISIT”	Formato 1	MMAAAA	0	D								
+FAVP	Fondo di Assistenza Sanitaria Integrativa Vigilanza Privata “FASIV”	Formato 1	MMAAAA	0	D								
+RSCT	Recupero spese CTU	Formato 8	MMAAAA	0	D								
+RSLE	Recupero spese legali	Formato 8	MMAAAA	0	D								
+PFAC	CONTRIBUTI ARTIGIANI – Definizione agevolata dei processi verbali di constatazione – art. 1 del DL n. 119/2018	Formato 7	MMAAAA	MMAAAA	D								
+PFCP	CONTRIBUTI COMMERCIANTI – Definizione agevolata dei processi verbali di constatazione – art. 1 del DL n. 119/2018	Formato 7	MMAAAA	MMAAAA	D								
+PFLP	CONTRIBUTI LIBERI PROFESSIONISTI – Definizione agevolata dei processi verbali di constatazione – art. 1 del DL n. 119/2018	Formato 7	MMAAAA	MMAAAA	D								
+Errata	Non identificato	Formati 1/2/3/4/5/6/7/8/9/10	E' considerato comunque errato	E' considerato comunque errato	D								
+APM1	Contributi artigiani – Definizione agevolata dei processi verbali di constatazione – art. 5-quater del d.lgs. n. 218/1997	Formato 7	MMAAAA	MMAAAA	D								
+CPM1	Contributi commercianti – Definizione agevolata dei processi verbali di constatazione – art. 5-quater del d.lgs. n. 218/1997	Formato 7	MMAAAA	MMAAAA	D								
+LPM1	Contributi gestione separata liberi professionisti – Definizione agevolata dei processi verbali di constatazione – art. 5-quater del d.lgs. n. 218/1997	Formato 7	MMAAAA	MMAAAA	D								
+EBNL	EBINAL - Ente Bilaterale Nazionale del Lavoro	Formato 1	MMAAAA	0	D								
+PREV	Fondo Sanitario PREVILAVORO ITALIA (PREVILAVORO ITALIA)	Formato 1	MMAAAA	0	D								
+SARC	Fondo Bilaterale di Assistenza Sanitaria - SANARCOM (SANARCOM)	Formato 1	MMAAAA	0	D								
+EBOS	Ente Bilaterale Operatori Sicurezza - (EBILOS)	Formato 1	MMAAAA	0	D								
+MEDI	FONDO MEDIPREV - Fondo Integrativo del Servizio Sanitario Nazionale (MEDIPREV)	Formato 1	MMAAAA	0	D								
+EBNU	Ente Bilaterale Nazionale di Unione (E.B.N.U.)	Formato 1	MMAAAA	0	D								
+EFAR	EBIFARM - Ente Bilaterale Nazionale Farmacie Private (EBIFARM)	Formato 1	MMAAAA	0	D								
+EBIO	Ente Bilaterale EN.BI.FO.SI e O.P.N. EN.BI.FO.SI (EN.BI.FO.SI e O.P.N. EN.BI.FO.SI)	Formato 1	MMAAAA	0	D								
+EBMQ	Fondo EBM SALUTE (EBM SALUTE)	Formato 1	MMAAAA	0	D								
+ENIL	EBINAIL - Ente Bilaterale Nazionale Intersettoriale Lavoro	Formato 1	MMAAAA	0	D								
+PLAS	Aziende agricole per OTI e OTD - contribuzione pregressa	Formato 5	MMAAAA	MMAAAA	D								
+SPCF	PC/CF - sanzioni civili	Formato 5	MMAAAA	MMAAAA	D								
+RUGS	Rateazione Gestione separata	Formato 9	MMAAAA	MMAAAA	D								
+SLAA	Lavoratori autonomi agricoli - sanzioni civili	Formato 5	MMAAAA	MMAAAA	D								
+PPCF	PC/CF - contribuzione pregressa	Formato 5	MMAAAA	MMAAAA	D								
+SLAS	Aziende agricole per OTI e OTD - sanzioni civili	Formato 5	MMAAAA	MMAAAA	D								
+PLAA	Lavoratori autonomi agricoli - contribuzione pregressa	Formato 5	MMAAAA	MMAAAA	D								
+ESAL	FONDO ASSISTENZA SANITARIA INTEGRATIVA CONFAPI (Enfea Salute)	Formato 1	MMAAAA	0	D								
+FASS	FONDO di ASSISTENZA SANITARIA (F.AS.S.)	Formato 1	MMAAAA	0	D								
+SAL1	FONDO SALUS (FONDO SALUS)	Formato 1	MMAAAA	0	D								
+EBEN	E.BI.N.L. – Ente Bilaterale Nazionale del Lavoro	Formato 1	MMAAAA	0	D								
+EPAB	E.PA.BIC. – Ente Bilaterale Paritetico	Formato 1	MMAAAA	0	D								
+FAFP	FASIFAR - Fondo di Assistenza Sanitaria Integrativa per i dipendenti di Farmacie Private	Formato 1	MMAAAA	0	D								
+FCBI	FCBI - Ente Bilaterale FOR.ITALY CIU	Formato 1	MMAAAA	0	D								
+SANI	FONDOSANI - Fondo di Assistenza Sanitaria	Formato 1	MMAAAA	0	D								
+6BIC	6EBIC	Formato 1	MMAAAA	0	D								
+EBSC	Ente Nazionale Bilaterale Scuola non statale (ENBiScuNS)	Formato 1	MMAAAA	0	D								
+ESBI	Ente Sviluppo Bilaterale Imprese per l’Italia (E.S.B.I.I.)	Formato 1	MMAAAA	0	D								
+EBWO	Ente Bilaterale EB WORK	Formato 1	MMAAAA	0	D								
+EISO	Ente Bilaterale Nazionale Innovazione e Sviluppo Organismo Paritetico (EBINNOVA)	Formato 1	MMAAAA	0	D								
+FUEB	Ente Bilaterale FESICA CONFSAL UNCI (FUEB)	Formato 1	MMAAAA	0	D								
+ECON	Ente Bilaterale Confederale (EBICON)	Formato 1	MMAAAA	0	D								
+EPOP	Ente Bilaterale Nazionale Plurisettore - Organismo Paritetico (EBIPS)	Formato 1	MMAAAA	0	D								
+ESE6	Ente Bilaterale per i Servizi ai Lavoratori (E.SE.LAV.)	Formato 1	MMAAAA	0	D								
+EBOP	ENBITALIA OPN (ENBITALIA OPN)	Formato 1	MMAAAA	0	D								
+EIMP	Fondo di Assistenza Sanitaria Integrativa SANILAV (SANILAV)	Formato 1	MMAAAA	0	D								
+CARE	Ente Bilaterale (EBICON)	Formato 1	MMAAAA	0	D								
+SANL	Ente Bilaterale Imprese Private (EBIP)	Formato 1	MMAAAA	0	D								
+EBON	Fondo di Assistenza Sanitaria Integrativa al SSN (INNOVACARE)	Formato 1	MMAAAA	0	D								
+NOTE	(1)	"L'indicazione del termine ""D"" nella colonna MODALITA' DI UTILIZZO sta a significare che il tributo  deve essere utilizzato solo per il versamento di imposte a debito."											
+		"L'indicazione del termine ""R"" nella colonna MODALITA' DI UTILIZZO sta a significare che il tributo deve essere utilizzato solo per fruire di importi a credito."											
+		"L'indicazione del termine ""E"" nella colonna  MODALITA' DI UTILIZZO sta a significare che il tributo può essere utilizzato  sia per il versamento di imposte a debito che per fruire di importi a credito."											
+# Foglio2
+
+# Foglio3
+

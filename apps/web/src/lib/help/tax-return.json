@@ -1,0 +1,382 @@
+{
+  "return.LM21.4": {
+    "label": "Codice ATECO 2025",
+    "paragraphs": [
+      "Il codice dell'attività secondo la classificazione ATECO 2025, in vigore dal 2025. L'app conosce il codice ATECO 2007 (quello che dà il coefficiente in LM22) ma non il nuovo: lo trovi nei dati della tua partita IVA o nella tabella dei codici attività sul sito dell'Agenzia. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM21.type": {
+    "label": "Tipo di attività (Impresa o Autonomo)",
+    "paragraphs": [
+      "Barra \"Impresa\" se svolgi un'attività d'impresa (artigiani e commercianti), \"Autonomo\" se sei un professionista (Gestione Separata o cassa professionale). Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM21.3": {
+    "label": "Casella dell'aliquota al 5%",
+    "paragraphs": [
+      "Barrala se nel profilo hai indicato di avere i requisiti per l'aliquota ridotta del 5% delle nuove attività e l'anno rientra nei primi cinque. Barrandola attesti di avere i requisiti (L. 190/2014 art. 1 c. 65). Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM22.1": {
+    "label": "Codice attività (ATECO 2007)",
+    "paragraphs": [
+      "Il codice ATECO 2007 dell'attività, che determina il coefficiente di redditività. La precompilata lo propone: controlla che sia questo. Con più attività di gruppi diversi servono più righi (LM22-LM27), caso che l'app non gestisce. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM22.2": {
+    "label": "Coefficiente di redditività",
+    "paragraphs": [
+      "La percentuale dei ricavi che diventa reddito, fissata per il codice attività (allegato 4 della L. 190/2014). Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM22.3": {
+    "label": "Ricavi e compensi incassati",
+    "paragraphs": [
+      "I ricavi **incassati** nell'anno (principio di cassa), come li calcola l'app. La precompilata propone invece la somma delle fatture **emesse** nell'anno, presumendo \"che il pagamento sia stato effettuato alla data di emissione della fattura\": correggila con l'elenco qui sotto. Fonte: [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche)."
+    ]
+  },
+  "return.LM22.5": {
+    "label": "Reddito dell'attività",
+    "paragraphs": [
+      "Ricavi di colonna 3 per il coefficiente di colonna 2. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM22.6": {
+    "label": "Forma dell'attività",
+    "paragraphs": [
+      "Codice 1 se l'attività è svolta come impresa, 2 se come lavoro autonomo. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM34.1": {
+    "label": "Reddito lordo: Artigiani e Commercianti",
+    "paragraphs": [
+      "Il reddito d'impresa della gestione Artigiani e Commercianti: è la base dei contributi oltre il minimale nel quadro RR. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM34.2": {
+    "label": "Reddito lordo: Gestione Separata",
+    "paragraphs": [
+      "Il reddito di lavoro autonomo soggetto alla Gestione Separata INPS: è la base del contributo nel quadro RR. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM34.3": {
+    "label": "Reddito lordo",
+    "paragraphs": [
+      "La somma dei redditi delle attività (colonna 5 dei righi LM22-LM27). Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM35.1": {
+    "label": "Contributi previdenziali versati",
+    "paragraphs": [
+      "I contributi **versati** nell'anno: quelli degli F24 segnati come pagati più quelli inseriti a mano in Imposte. La precompilata **non** li mette in questo rigo: sono \"riportati solo nel foglio informativo\" e tocca a te scriverli qui. Controlla il totale con il foglio informativo. Fonte: [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche); [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM35.2": {
+    "label": "Contributi dedotti",
+    "paragraphs": [
+      "La parte dei contributi che \"trova capienza\" nel reddito lordo di LM34: al massimo il reddito stesso. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM36": {
+    "label": "Reddito netto",
+    "paragraphs": [
+      "Reddito lordo (LM34) meno i contributi dedotti (LM35 colonna 2). Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM38": {
+    "label": "Reddito al netto delle perdite",
+    "paragraphs": [
+      "Reddito netto meno le perdite degli anni precedenti (LM37). L'app non gestisce le perdite pregresse: se ne hai, questo valore e i successivi cambiano. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM39": {
+    "label": "Imposta sostitutiva",
+    "paragraphs": [
+      "Il 15% di LM38, oppure il 5% se hai barrato la casella di LM21 colonna 3. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM40.41": {
+    "label": "Crediti d'imposta (totale)",
+    "paragraphs": [
+      "I crediti e le ritenute che hai indicato in Imposte, entro il limite dell'imposta di LM39. L'app ne conosce solo il totale: nella dichiarazione vanno divisi nelle colonne di LM40 per tipo di credito (e le ritenute in LM41). Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM42": {
+    "label": "Differenza",
+    "paragraphs": [
+      "Imposta sostitutiva (LM39) meno crediti (LM40 colonna 41) e ritenute (LM41). Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM43": {
+    "label": "Eccedenza della dichiarazione precedente",
+    "paragraphs": [
+      "Il credito d'imposta sostitutiva della dichiarazione dell'anno scorso (rigo RX31 colonna 5) per cui non hai chiesto il rimborso. L'app lo prende dal registro dei [Crediti](/credits) (codice 1792 dell'anno precedente); se lì non c'è, il rigo resta vuoto. La precompilata lo propone: confronta. Fonte: [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche); [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM44": {
+    "label": "Eccedenza compensata con F24",
+    "paragraphs": [
+      "La parte del credito di LM43 già usata in compensazione negli F24: l'app somma gli usi registrati in [Crediti](/credits). Proposta dalla precompilata: controllala. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM45.2": {
+    "label": "Acconti versati",
+    "paragraphs": [
+      "Gli acconti dell'imposta sostitutiva versati per l'anno (codici 1790 e 1791), senza maggiorazioni e interessi: quelli degli F24 pagati più quelli inseriti a mano. La precompilata li propone dagli F24: confronta. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM46": {
+    "label": "Imposta a debito",
+    "paragraphs": [
+      "LM42 meno LM43 più LM44 meno gli acconti (LM45): il saldo da versare con il codice 1792, da riportare in RX31 colonna 1. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM47": {
+    "label": "Imposta a credito",
+    "paragraphs": [
+      "Se il risultato di LM42 meno LM43 più LM44 meno gli acconti è negativo, è un credito utilizzabile in compensazione, da riportare in RX31 colonna 2. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.LM49": {
+    "label": "Contributi eccedenti",
+    "paragraphs": [
+      "I contributi che non trovano capienza nel reddito (LM35 colonna 1 meno colonna 2): si deducono dal reddito complessivo nel rigo RP21 del quadro RP. Fonte: [istruzioni Redditi PF 2026, fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "returnGuide": {
+    "label": "Come usare la guida",
+    "paragraphs": [
+      "Apri la dichiarazione precompilata **Redditi PF** nell'area riservata dell'Agenzia delle Entrate (SPID, CIE o CNS) e vai al quadro LM. Per ogni rigo: **da inserire** vuol dire che la precompilata non lo propone, **da controllare** che lo propone e va verificato, **risultato** che deriva dai righi sopra, **dato tuo** che l'app non lo conosce.",
+      "Chi ha la partita IVA non può usare il 730: deve presentare Redditi PF. La guida riguarda solo la parte della partita IVA; familiari, spese e altri redditi restano nei quadri della precompilata. Fonte: [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche)."
+    ]
+  },
+  "returnRevenue": {
+    "label": "Perché i ricavi proposti sono diversi",
+    "paragraphs": [
+      "La precompilata somma le fatture elettroniche emesse nell'anno. Il forfettario però dichiara quello che ha incassato: vanno aggiunte le fatture degli anni precedenti incassate nell'anno e tolte quelle dell'anno non incassate entro il 31 dicembre. Fonte: [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche).",
+      "Le differenze di cambio sulle fatture in valuta e il bollo addebitato possono far differire di poco i totali: conta il valore incassato."
+    ]
+  },
+  "return.RR5.1": {
+    "label": "Codice del reddito",
+    "paragraphs": [
+      "Codice 1: reddito di lavoro autonomo del quadro LM, sezione III (regime forfetario). Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR5.2": {
+    "label": "Reddito",
+    "paragraphs": [
+      "Il reddito del codice di colonna 1: il reddito lordo di LM34 colonna 2. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR5.11": {
+    "label": "Reddito imponibile previdenziale",
+    "paragraphs": [
+      "Il reddito su cui si calcola il contributo della Gestione Separata, entro il massimale dell'anno. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR5.12": {
+    "label": "Dal mese",
+    "paragraphs": [
+      "Il primo mese in cui hai avuto il reddito: 01 se l'attività copre tutto l'anno. Se hai iniziato nell'anno indica tu il mese. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR5.13": {
+    "label": "Al mese",
+    "paragraphs": [
+      "L'ultimo mese: 12 se l'attività copre tutto l'anno. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR5.14": {
+    "label": "Codice dell'aliquota",
+    "paragraphs": [
+      "**A** per l'aliquota del 24% (chi ha già un'altra previdenza obbligatoria o è pensionato), **C** per il 26,07% (chi non ha altra tutela). È quella scelta in Imposte. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR5.15": {
+    "label": "Contributo dovuto",
+    "paragraphs": [
+      "L'aliquota di colonna 14 applicata al reddito di colonna 11. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR5.16": {
+    "label": "Acconti versati",
+    "paragraphs": [
+      "Gli acconti del contributo versati con F24 per l'anno: quelli degli F24 pagati più quelli inseriti a mano in Imposte. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR6.1": {
+    "label": "Totale contributi dovuti",
+    "paragraphs": [
+      "Il totale di colonna 15 del rigo RR5. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR6.2": {
+    "label": "Totale acconti versati",
+    "paragraphs": [
+      "Il totale di colonna 16 del rigo RR5. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR7": {
+    "label": "Contributo a debito",
+    "paragraphs": [
+      "Dovuti meno acconti (RR6 colonna 1 meno colonna 2), se positivo: è il saldo da versare con la causale PXX. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR8.1": {
+    "label": "Contributo a credito",
+    "paragraphs": [
+      "Se gli acconti superano il dovuto, la differenza è un credito. Si usa solo in compensazione con F24 o si chiede a rimborso all'INPS. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR8.2": {
+    "label": "Credito da compensare",
+    "paragraphs": [
+      "La parte del credito che userai in compensazione con F24 (indicando l'anno d'imposta); la parte da chiedere a rimborso all'INPS va in colonna 3. L'app propone tutto in compensazione. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.type": {
+    "label": "Tipologia iscritto",
+    "paragraphs": [
+      "Codice 1 per il titolare. L'app gestisce solo il titolare: familiari collaboratori e coadiuvanti vanno in righi propri. Proposto dall'INPS nella precompilata. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026); [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche)."
+    ]
+  },
+  "return.RR2.1": {
+    "label": "Codice fiscale",
+    "paragraphs": [
+      "Il codice fiscale del titolare. Proposto dall'INPS nella precompilata. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.2": {
+    "label": "Codice INPS",
+    "paragraphs": [
+      "Il codice INPS di 17 caratteri dell'anno, quello degli F24 per i contributi oltre il minimale. L'app lo prende da Imposte se l'hai inserito. Proposto dall'INPS nella precompilata. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.3": {
+    "label": "Reddito d'impresa",
+    "paragraphs": [
+      "Il reddito d'impresa dell'anno: il reddito lordo di LM34 colonna 1. Va indicato anche se è sotto il minimale. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.4": {
+    "label": "Dal mese",
+    "paragraphs": [
+      "Inizio del periodo per cui sono dovuti i contributi: 01 per tutto l'anno. Se hai iniziato nell'anno, il minimale va rapportato ai mesi: calcolo che l'app non fa. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.5": {
+    "label": "Al mese",
+    "paragraphs": [
+      "Fine del periodo: 12 per tutto l'anno. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.6": {
+    "label": "Senza contributi prima del 1996",
+    "paragraphs": [
+      "Casella da barrare se non avevi contributi al 31 dicembre 1995 (iscritto dal 1996): il massimale è più alto. Dipende dal profilo. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.7": {
+    "label": "Codice della riduzione",
+    "paragraphs": [
+      "**C** per la riduzione del 35% del regime forfetario agevolato. Se nell'anno hai superato 100.000 € va il codice **D**. Proposto dall'INPS: controlla. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026); [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche)."
+    ]
+  },
+  "return.RR2.10": {
+    "label": "Reddito minimale",
+    "paragraphs": [
+      "Il reddito minimo su cui i contributi sono dovuti comunque. Proposto dall'INPS nella precompilata. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.11": {
+    "label": "Contributi sul minimale",
+    "paragraphs": [
+      "Contributi IVS dovuti sul minimale, al netto dell'eventuale riduzione. Proposti dall'INPS. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.12": {
+    "label": "Contributo di maternità",
+    "paragraphs": [
+      "0,62 € al mese. Proposto dall'INPS. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.14": {
+    "label": "Versato sul minimale",
+    "paragraphs": [
+      "Le rate fisse versate per l'anno: l'app somma quelle degli F24 segnati come pagati. Se le hai pagate in altro modo il valore è più basso. Proposto dall'INPS: controlla. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.16": {
+    "label": "Minimale: a debito",
+    "paragraphs": [
+      "Contributi sul minimale più maternità meno il versato, se positivo. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.17": {
+    "label": "Minimale: a credito",
+    "paragraphs": [
+      "Se hai versato più del dovuto sul minimale, la differenza è un credito. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.24": {
+    "label": "Reddito oltre il minimale",
+    "paragraphs": [
+      "Il reddito che supera il minimale, fino al massimale. La precompilata **non** lo mette: l'INPS avvisa di integrarlo. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026); [guida AdE alla precompilata Redditi PF 2026](https://www.agenziaentrate.gov.it/portale/documents/d/guest/precompilata_2026_redditi_persone_fisiche)."
+    ]
+  },
+  "return.RR2.25": {
+    "label": "Contributi oltre il minimale",
+    "paragraphs": [
+      "Contributi IVS sul reddito di colonna 24, con l'aliquota più alta di un punto sopra la prima fascia e al netto della riduzione. Da inserire con la colonna 24. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.27": {
+    "label": "Versato oltre il minimale",
+    "paragraphs": [
+      "Gli acconti dei contributi oltre il minimale versati per l'anno: F24 pagati più importi inseriti a mano. Proposto dall'INPS: controlla. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.29": {
+    "label": "Oltre il minimale: a debito",
+    "paragraphs": [
+      "Contributi di colonna 25 meno il versato, se positivo: è il saldo da versare con la causale AP o CP. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR2.30": {
+    "label": "Oltre il minimale: a credito",
+    "paragraphs": [
+      "Se hai versato più del dovuto, la differenza è un credito. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR4.1": {
+    "label": "Totale crediti",
+    "paragraphs": [
+      "La somma dei crediti delle colonne 17 e 30. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RR4.4": {
+    "label": "Crediti da compensare",
+    "paragraphs": [
+      "La parte dei crediti che userai in compensazione con F24; quella da chiedere a rimborso va in colonna 3. L'app propone tutto in compensazione. Fonte: [istruzioni Redditi PF 2026, fascicolo 2](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf2_istruzioni_2026_agg-13-05-2026)."
+    ]
+  },
+  "return.RX31.1": {
+    "label": "Imposta sostitutiva a debito",
+    "paragraphs": [
+      "L'importo del rigo LM46: il saldo dell'imposta sostitutiva da versare. Fonte: [istruzioni Redditi PF 2026, fascicolo 1](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf1_istruzioni_2026_agg-28-05-2026)."
+    ]
+  },
+  "return.RX31.2": {
+    "label": "Imposta sostitutiva a credito",
+    "paragraphs": [
+      "L'importo del rigo LM47. Fonte: [istruzioni Redditi PF 2026, fascicolo 1](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf1_istruzioni_2026_agg-28-05-2026)."
+    ]
+  },
+  "return.RX31.5": {
+    "label": "Credito da compensare",
+    "paragraphs": [
+      "La parte del credito da usare in compensazione con F24; quella da chiedere a rimborso va in colonna 4 (non sotto 12 €). L'app propone tutto in compensazione. Fonte: [istruzioni Redditi PF 2026, fascicolo 1](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf1_istruzioni_2026_agg-28-05-2026)."
+    ]
+  }
+}

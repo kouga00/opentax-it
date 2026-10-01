@@ -1,0 +1,127 @@
+Dettaglio
+
+Pubblicazione:
+3 aprile 2017
+
+Ultimo aggiornamento:
+8 luglio 2025
+
+Gli artigiani e i commercianti sono tenuti al versamento della contribuzione dovuta annualmente tramite il modello F24.
+
+Termini di pagamento
+
+Il pagamento del contributo minimo obbligatorio deve essere effettuato in quattro rate che hanno le seguenti scadenze:
+
+16 maggio;
+
+20 agosto;
+
+16 novembre;
+
+16 febbraio (anno successivo).
+
+Leggi di più
+
+In caso di prima iscrizione, limitatamente al primo anno, è possibile che l'Istituto invii una emissione differita, con scadenze successive a quella del 16 maggio (per esempio 20 agosto).
+
+I contributi dovuti sul reddito eccedente il minimale (acconti e saldo) devono essere versati entro i termini previsti per il pagamento dell'IRPEF.
+
+Leggi meno
+
+Compilazione della sezione INPS
+
+Per compilare correttamente il modello F24, bisogna indicare:
+
+il codice sede, presso cui è aperta la posizione contributiva;
+
+la causale contributo, come indicata nel paragrafo successivo;
+
+il codice INPS, rilevato dalla comunicazione inviata dall'Istituto con i modelli di pagamento (composto da 17 cifre);
+
+il periodo di riferimento "da", con mese e anno di inizio periodo contributivo nella forma mm/aaaa;
+
+il periodo di riferimento "a", con mese e anno di fine periodo contributivo nella forma mm/aaaa;
+
+gli importi a debito versati, riferiti ai contributi o agli interessi che si versano;
+
+gli importi a credito eventualmente compensati.
+
+Causali di versamento
+
+Contributi correnti
+
+Descrizione causale
+
+Causale per artigiani
+
+Causale per commercianti
+
+Pagamento contributi dovuti sul minimale di reddito
+
+AF
+
+CF
+
+Pagamento contributi eccedenti il minimale di reddito (a debito)
+
+AP
+
+CP
+
+Indicazione dell'importo versato in eccedenza sui contributi eccedenti il minimale di reddito risultanti dalla dichiarazione dei redditi (a credito)
+
+AP
+
+CP
+
+Pagamenti rateale dei contributi dovuti eccedenti il minimale
+
+APR
+
+CPR
+
+Contributi richiesti dall'INPS per prima emissione di modello F24 che recupera anche anni precedenti
+
+Descrizione causale
+
+Causale per artigiani
+
+Causale per commercianti
+
+Contributi dovuti sul minimale di reddito anni pregressi
+
+AFP
+
+CFP
+
+Contributi dovuti sul reddito eccedente il minimale anni pregressi
+
+APP
+
+CPP
+
+Contributi scaduti oggetto di regolarizzazione (da avviso di pagamento)
+
+Descrizione causale
+
+Causale per artigiani
+
+Causale per commercianti
+
+Pagamento per intero dei debiti segnalati con avviso di pagamento
+
+AR ARN
+
+CR CRN
+
+Pagamento debiti contributivi eccedenti il minimale di reddito a seguito di accertamento con adesione derivante da accertamenti dell'Amministrazione Finanziaria
+
+APMF
+
+CPMF
+
+Pagamenti rateizzati a seguito di domanda di dilazione in fase amministrativa
+
+AD
+
+CD

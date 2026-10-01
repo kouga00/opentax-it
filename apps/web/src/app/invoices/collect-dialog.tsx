@@ -1,0 +1,105 @@
+'use client';
+
+import { useActionState, useEffect, useState } from 'react';
+import { addPayment, getInvoiceCollection, type ActionState } from '@/lib/actions';
+import { formatMoney, todayInItaly } from '@/lib/format';
+import type { Invoice, InvoiceCollection } from '@/lib/types';
+import { paymentMethodLabel } from '@/lib/payment-methods';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Field } from '@/components/field';
+import { ErrorAlert } from '@/components/error-alert';
+import { useExchangeRate } from '@/components/exchange-rate';
+
+type CollectInvoice = Pick<Invoice, 'id' | 'type' | 'number'>;
+
+
+export const collectLabel = (invoice: Pick<Invoice, 'type'>) => (invoice.type === 'TD04' ? 'Registra rimborso' : 'Segna come incassata');
+
+/**
+ * Dialog of the invoice list that records a collection, with today's date and the amount still to collect. On a
+ * credit note it records the refund, as a negative amount. Opened from the row menu, which holds its state.
+ */
+export function CollectDialog({ invoice, open, onOpenChange }: { invoice: CollectInvoice; open: boolean; onOpenChange: (open: boolean) => void }) {
+  const refund = invoice.type === 'TD04';
+  const label = collectLabel(invoice);
+  return (
+      <Dialog open={open} onOpenChange={onOpenChange}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>{label} · {invoice.number}</DialogTitle>
+            <DialogDescription>
+              {refund
+                ? "Il rimborso è registrato come incasso negativo nell'anno in cui avviene."
+                : "Principio di cassa: l'incasso concorre al reddito dell'anno in cui avviene (L. 190/2014 art. 1 c. 64) e conta per le soglie di 85.000 e 100.000 € (c. 54 e 71)."}
+            </DialogDescription>
+          </DialogHeader>
+          {open && <CollectForm invoice={invoice} refund={refund} onDone={() => onOpenChange(false)} />}
+        </DialogContent>
+      </Dialog>
+  );
+}
+
+/** Mounted only while the dialog is open, so every opening loads the collections and starts from today. */
+function CollectForm({ invoice, refund, onDone }: { invoice: CollectInvoice; refund: boolean; onDone: () => void }) {
+  const [collection, setCollection] = useState<InvoiceCollection | null>(null);
+  const [loadError, setLoadError] = useState<string>();
+  const [date, setDate] = useState(() => todayInItaly());
+  const [ecbRate, setEcbRate] = useState('');
+  const currency = collection?.currency ?? 'EUR';
+  const rate = useExchangeRate(currency, date, ecbRate, setEcbRate);
+  const [state, action, pending] = useActionState(async (prev: ActionState, formData: FormData) => {
+    const result = await addPayment(prev, formData);
+    if (!result?.error) onDone();
+    return result;
+  }, undefined);
+
+  useEffect(() => {
+    let cancelled = false;
+    getInvoiceCollection(invoice.id).then((r) => {
+      if (cancelled) return;
+      if ('error' in r) {
+        setLoadError(r.error);
+        return;
+      }
+      setCollection(r.collection);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [invoice.id]);
+
+  if (loadError) return <ErrorAlert message={loadError} />;
+  if (!collection) return <p className="text-muted-foreground">Caricamento degli incassi…</p>;
+
+  // Refunds of a credit note are recorded as negative amounts.
+  const sign = refund ? -1 : 1;
+  const { total, collected, remaining, paymentMethod } = collection;
+  return (
+    <form action={action} className="grid gap-3">
+      <ErrorAlert message={state?.error} />
+      <input type="hidden" name="invoiceId" value={invoice.id} />
+      <dl className="grid grid-cols-2 gap-1">
+        <dt className="text-muted-foreground">Totale documento</dt><dd className="text-right font-mono">{formatMoney(total, currency)}</dd>
+        <dt className="text-muted-foreground">{refund ? 'Già rimborsato' : 'Già incassato'}</dt><dd className="text-right font-mono">{formatMoney(collected, currency)}</dd>
+        <dt className="font-medium">Residuo</dt><dd className="text-right font-mono font-medium">{formatMoney(remaining, currency)}</dd>
+        <dt className="text-muted-foreground">Modalità in fattura</dt><dd className="text-right">{paymentMethodLabel(paymentMethod)}</dd>
+      </dl>
+      {remaining <= 0 && <p className="text-muted-foreground">{refund ? 'La nota di credito risulta già rimborsata del tutto: puoi solo annullare un rimborso con un importo positivo.' : 'La fattura risulta già incassata del tutto: puoi solo registrare una restituzione al cliente, con un importo negativo.'}</p>}
+      <Field label={refund ? 'Data rimborso' : 'Data incasso'} htmlFor="collect-date"><Input id="collect-date" name="date" type="date" required max={todayInItaly()} value={date} onChange={(e) => setDate(e.target.value)} /></Field>
+      <Field label={`Importo (${currency})`} htmlFor="collect-amount" hint={refund ? 'Negativo: è un rimborso al cliente' : 'Negativo per un rimborso'}>
+        <Input id="collect-amount" name="amount" type="number" step="0.01" required defaultValue={remaining > 0 ? sign * remaining : ''} />
+      </Field>
+      {currency !== 'EUR' && (
+        <Field label={`Cambio del giorno: 1 EUR = … ${currency}`} htmlFor="collect-rate" hint={rate.info ?? "Cambio del giorno dell'incasso (art. 9 c. 2 TUIR)"}>
+          <Input id="collect-rate" name="ecbRate" type="number" step="0.000001" min="0.000001" required value={ecbRate} onChange={(e) => rate.onManualChange(e.target.value)} />
+        </Field>
+      )}
+      <DialogFooter>
+        <DialogClose render={<Button type="button" variant="outline" />}>Annulla</DialogClose>
+        <Button type="submit" disabled={pending}>{pending ? 'Salvataggio…' : refund ? 'Registra rimborso' : 'Registra incasso'}</Button>
+      </DialogFooter>
+    </form>
+  );
+}

@@ -1,0 +1,1060 @@
+Mod. F24
+
+genzia
+
+ntrate
+
+DELEGA IRREVOCABILE A:
+
+MODELLO DI PAGAMENTO
+UNIFICATO
+
+AGENZIA
+PER L’ACCREDITO ALLA TESORERIA COMPETENTE
+
+PROV.
+
+CONTRIBUENTE
+barrare in caso di anno d’imposta
+non coincidente con anno solare
+
+CODICE FISCALE
+cognome, denominazione o ragione sociale
+
+nome
+
+DATI ANAGRAFICI
+data di nascita
+
+prov.
+
+sesso (M o F) comune (o Stato estero) di nascita
+
+anno
+
+mese
+
+giorno
+
+prov.
+
+comune
+
+via e numero civico
+
+DOMICILIO FISCALE
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+
+codice identificativo
+
+SEZIONE ERARIO
+codice tributo
+
+rateazione/regione/
+prov./mese rif.
+
+anno di
+riferimento
+
+importi a debito versati
+
+,
+,
+,
+,
+,
+,
+,
+
+IMPOSTE DIRETTE – IVA
+RITENUTE ALLA FONTE
+ALTRI TRIBUTI ED INTERESSI
+codice ufficio
+
+codice atto
+
+TOTALE
+
+A
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+,
+,
+
+B
+
++/–
+
+SALDO (A-B)
+
+,
+
+SEZIONE INPS
+codice
+sede
+
+causale
+contributo
+
+periodo di riferimento:
+da mm/aaaa
+a mm/aaaa
+
+matricola INPS/codice INPS/
+filiale azienda
+
+importi a debito versati
+
+TOTALE
+
+SEZIONE REGIONI
+
+codice
+regione
+
+rateazione/
+mese rif.
+
+codice tributo
+
+C
+
+anno di
+riferimento
+
+codice ente/
+codice comune
+
+Immob.
+Ravv. variati Acc. Saldo
+
+numero
+immobili
+
+,
+,
+,
+,
+,
+
+E
+
+,
+,
+,
+,
+,
+
+D
+
++/–
+
+SALDO (C-D)
+
+,
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+
+F
+
++/–
+
+SALDO (E-F)
+
+,
+
+IDENTIFICATIVO OPERAZIONE
+
+rateazione/
+mese rif.
+
+codice tributo
+
+,
+
+detrazione
+
+importi a credito compensati
+
+importi a debito versati
+
+TOTALE
+
+SEZIONE IMU E ALTRI TRIBUTI LOCALI
+
+,
+,
+,
+,
+,
+
+anno di
+riferimento
+
+TOTALE
+
+importi a debito versati
+
+,
+,
+,
+,
+,
+
+G
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+
+H
+
++/–
+
+SALDO (G-H)
+
+,
+
+SEZIONE ALTRI ENTI PREVIDENZIALI E ASSICURATIVI
+codice sede
+
+codice ditta
+
+c.c.
+
+numero
+di riferimento
+
+causale
+
+importi a debito versati
+
+,
+,
+,
+,
+
+INAIL
+
+codice ente
+
+codice sede
+
+TOTALE
+
+causale
+contributo
+
+codice posizione
+
+I
+
+periodo di riferimento:
+da mm/aaaa
+a mm/aaaa
+
+TOTALE
+
+importi a credito compensati
+
+L
+
+M
+
+,
+,
+,
+
+N
+
+SALDO FINALE
+
+FIRMA
+
++/–
+
+SALDO (I-L)
+
+,
+
+importi a credito compensati
+
+importi a debito versati
+
+,
+,
+,
+
+,
+,
+,
+,
+
++/–
+
+SALDO (M-N)
+
+,
+
+EURO +
+
+MOD. F24 – 2013 EURO
+
+ESTREMI DEL VERSAMENTO
+
+giorno
+
+mese
+
+(DA COMPILARE A CURA DI BANCA/POSTE/AGENTE DELLA RISCOSSIONE)
+
+CODICE BANCA/POSTE/AGENTE DELLA RISCOSSIONE
+
+DATA
+
+AZIENDA
+anno
+
+CAB/SPORTELLO
+
+Pagamento effettuato con assegno
+
+bancario/postale
+
+n.ro
+
+circolare/vaglia postale
+
+tratto / emesso su
+cod. ABI
+
+Autorizzo addebito su
+conto corrente codice IBAN
+
+,
+
+I T
+
+firma
+1a COPIA PER LA BANCA/POSTE/AGENTE DELLA RISCOSSIONE
+
+CAB
+
+Mod. F24
+
+genzia
+
+ntrate
+
+DELEGA IRREVOCABILE A:
+
+MODELLO DI PAGAMENTO
+UNIFICATO
+
+AGENZIA
+PER L’ACCREDITO ALLA TESORERIA COMPETENTE
+
+PROV.
+
+CONTRIBUENTE
+barrare in caso di anno d’imposta
+non coincidente con anno solare
+
+CODICE FISCALE
+cognome, denominazione o ragione sociale
+
+nome
+
+DATI ANAGRAFICI
+data di nascita
+
+prov.
+
+sesso (M o F) comune (o Stato estero) di nascita
+
+anno
+
+mese
+
+giorno
+
+prov.
+
+comune
+
+via e numero civico
+
+DOMICILIO FISCALE
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+
+codice identificativo
+
+SEZIONE ERARIO
+codice tributo
+
+rateazione/regione/
+prov./mese rif.
+
+anno di
+riferimento
+
+importi a debito versati
+
+,
+,
+,
+,
+,
+,
+,
+
+IMPOSTE DIRETTE – IVA
+RITENUTE ALLA FONTE
+ALTRI TRIBUTI ED INTERESSI
+codice ufficio
+
+codice atto
+
+TOTALE
+
+A
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+,
+,
+
+B
+
++/–
+
+SALDO (A-B)
+
+,
+
+SEZIONE INPS
+codice
+sede
+
+causale
+contributo
+
+periodo di riferimento:
+da mm/aaaa
+a mm/aaaa
+
+matricola INPS/codice INPS/
+filiale azienda
+
+importi a debito versati
+
+TOTALE
+
+SEZIONE REGIONI
+
+codice
+regione
+
+rateazione/
+mese rif.
+
+codice tributo
+
+C
+
+anno di
+riferimento
+
+codice ente/
+codice comune
+
+Immob.
+Ravv. variati Acc. Saldo
+
+numero
+immobili
+
+,
+,
+,
+,
+,
+
+E
+
+,
+,
+,
+,
+,
+
+D
+
++/–
+
+SALDO (C-D)
+
+,
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+
+F
+
++/–
+
+SALDO (E-F)
+
+,
+
+IDENTIFICATIVO OPERAZIONE
+
+rateazione/
+mese rif.
+
+codice tributo
+
+,
+
+detrazione
+
+importi a credito compensati
+
+importi a debito versati
+
+TOTALE
+
+SEZIONE IMU E ALTRI TRIBUTI LOCALI
+
+,
+,
+,
+,
+,
+
+anno di
+riferimento
+
+TOTALE
+
+importi a debito versati
+
+,
+,
+,
+,
+,
+
+G
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+
+H
+
++/–
+
+SALDO (G-H)
+
+,
+
+SEZIONE ALTRI ENTI PREVIDENZIALI E ASSICURATIVI
+codice sede
+
+codice ditta
+
+c.c.
+
+numero
+di riferimento
+
+causale
+
+importi a debito versati
+
+,
+,
+,
+,
+
+INAIL
+
+codice ente
+
+codice sede
+
+TOTALE
+
+causale
+contributo
+
+codice posizione
+
+I
+
+periodo di riferimento:
+da mm/aaaa
+a mm/aaaa
+
+TOTALE
+
+importi a credito compensati
+
+L
+
+M
+
++/–
+
+SALDO (I-L)
+
+,
+
+importi a credito compensati
+
+importi a debito versati
+
+,
+,
+,
+
+,
+,
+,
+,
+,
+,
+,
+
+N
+
+SALDO FINALE
+
++/–
+
+SALDO (M-N)
+
+,
+
+EURO +
+
+MOD. F24 – 2013 EURO
+
+ESTREMI DEL VERSAMENTO
+
+giorno
+
+mese
+
+(DA COMPILARE A CURA DI BANCA/POSTE/AGENTE DELLA RISCOSSIONE)
+
+CODICE BANCA/POSTE/AGENTE DELLA RISCOSSIONE
+
+DATA
+
+AZIENDA
+anno
+
+,
+
+CAB/SPORTELLO
+
+Pagamento effettuato con assegno
+
+bancario/postale
+
+n.ro
+
+circolare/vaglia postale
+
+tratto / emesso su
+cod. ABI
+
+2a COPIA PER LA BANCA/POSTE/AGENTE DELLA RISCOSSIONE
+
+CAB
+
+Mod. F24
+
+genzia
+
+ntrate
+
+DELEGA IRREVOCABILE A:
+
+MODELLO DI PAGAMENTO
+UNIFICATO
+
+AGENZIA
+PER L’ACCREDITO ALLA TESORERIA COMPETENTE
+
+PROV.
+
+CONTRIBUENTE
+barrare in caso di anno d’imposta
+non coincidente con anno solare
+
+CODICE FISCALE
+cognome, denominazione o ragione sociale
+
+nome
+
+DATI ANAGRAFICI
+data di nascita
+
+prov.
+
+sesso (M o F) comune (o Stato estero) di nascita
+
+anno
+
+mese
+
+giorno
+
+prov.
+
+comune
+
+via e numero civico
+
+DOMICILIO FISCALE
+CODICE FISCALE del coobbligato, erede,
+genitore, tutore o curatore fallimentare
+
+codice identificativo
+
+SEZIONE ERARIO
+codice tributo
+
+rateazione/regione/
+prov./mese rif.
+
+anno di
+riferimento
+
+importi a debito versati
+
+,
+,
+,
+,
+,
+,
+,
+
+IMPOSTE DIRETTE – IVA
+RITENUTE ALLA FONTE
+ALTRI TRIBUTI ED INTERESSI
+codice ufficio
+
+codice atto
+
+TOTALE
+
+A
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+,
+,
+
+B
+
++/–
+
+SALDO (A-B)
+
+,
+
+SEZIONE INPS
+codice
+sede
+
+causale
+contributo
+
+matricola INPS/codice INPS/
+filiale azienda
+
+periodo di riferimento:
+da mm/aaaa
+a mm/aaaa
+
+importi a debito versati
+
+TOTALE
+
+SEZIONE REGIONI
+
+codice
+regione
+
+rateazione/
+mese rif.
+
+codice tributo
+
+C
+
+anno di
+riferimento
+
+codice ente/
+codice comune
+
+Immob.
+Ravv. variati Acc. Saldo
+
+numero
+immobili
+
+,
+,
+,
+,
+,
+
+E
+
+,
+,
+,
+,
+,
+
+D
+
++/–
+
+SALDO (C-D)
+
+,
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+
+F
+
++/–
+
+SALDO (E-F)
+
+,
+
+IDENTIFICATIVO OPERAZIONE
+
+rateazione/
+mese rif.
+
+codice tributo
+
+,
+
+detrazione
+
+importi a credito compensati
+
+importi a debito versati
+
+TOTALE
+
+SEZIONE IMU E ALTRI TRIBUTI LOCALI
+
+,
+,
+,
+,
+,
+
+anno di
+riferimento
+
+TOTALE
+
+importi a debito versati
+
+,
+,
+,
+,
+,
+
+G
+
+importi a credito compensati
+
+,
+,
+,
+,
+,
+
+H
+
++/–
+
+SALDO (G-H)
+
+,
+
+SEZIONE ALTRI ENTI PREVIDENZIALI E ASSICURATIVI
+codice sede
+
+codice ditta
+
+c.c.
+
+numero
+di riferimento
+
+causale
+
+importi a debito versati
+
+,
+,
+,
+,
+
+INAIL
+
+codice ente
+
+codice sede
+
+TOTALE
+
+causale
+contributo
+
+codice posizione
+
+I
+
+periodo di riferimento:
+da mm/aaaa
+a mm/aaaa
+
+TOTALE
+
+importi a credito compensati
+
+L
+
+M
+
++/–
+
+SALDO (I-L)
+
+,
+
+importi a credito compensati
+
+importi a debito versati
+
+,
+,
+,
+
+,
+,
+,
+,
+,
+,
+,
+
+N
+
+SALDO FINALE
+
++/–
+
+SALDO (M-N)
+
+,
+
+EURO +
+
+MOD. F24 – 2013 EURO
+
+ESTREMI DEL VERSAMENTO
+
+giorno
+
+mese
+
+(DA COMPILARE A CURA DI BANCA/POSTE/AGENTE DELLA RISCOSSIONE)
+
+CODICE BANCA/POSTE/AGENTE DELLA RISCOSSIONE
+
+DATA
+
+AZIENDA
+anno
+
+,
+
+CAB/SPORTELLO
+
+Pagamento effettuato con assegno
+
+bancario/postale
+
+n.ro
+
+circolare/vaglia postale
+
+tratto / emesso su
+cod. ABI
+
+COPIA PER IL SOGGETTO CHE EFFETTUA IL VERSAMENTO
+
+CAB
+
+

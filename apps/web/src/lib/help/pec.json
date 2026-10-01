@@ -1,0 +1,13 @@
+{
+  "pecProvider": {
+    "paragraphs": [
+      "Il gestore deve essere nell'elenco pubblico AgID (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). Per i gestori in elenco i server sono già compilati, presi dalle pagine ufficiali dei gestori; per gli altri scegli \"Altro gestore\" e copia i dati dalla guida del tuo gestore.",
+      "Server di {providerName}: [pagina del gestore]({providerUrl}), verificata il {verifiedOn}."
+    ]
+  },
+  "sdiPecAssigned": {
+    "paragraphs": [
+      "Il primo invio va a sdi01@pec.fatturapa.it; con il primo messaggio di risposta lo SDI comunica l'indirizzo da usare per gli invii successivi, e un indirizzo diverso \"non garantisce il buon fine della ricezione\" (Specifiche tecniche FatturaPA 1.9.1 §1.3.1). L'app lo legge da sola: è il mittente della prima ricevuta dello SDI, che lo usa anche per le risposte successive (Specifiche tecniche SdI, Allegato B, v1.8.4 §3.1.1). Finché non è noto, dopo il primo invio i successivi sono bloccati."
+    ]
+  }
+}

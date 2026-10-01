@@ -1,0 +1,72 @@
+{
+  "atecoCode": {
+    "label": "Dove trovo il codice ATECO",
+    "paragraphs": [
+      "Lo trovi nel [cassetto fiscale](https://www.agenziaentrate.gov.it/portale/web/guest/area-riservata) (area riservata AdE → Dati anagrafici → Attività) o sul certificato di attribuzione della partita IVA (mod. AA9).",
+      "Per cercare la descrizione: [ISTAT ATECO](https://www.istat.it/classificazione/ateco-2025/). Qui va il codice ATECO 2007, usato per il coefficiente fino ai nuovi coefficienti ATECO 2025 (D.Lgs. 81/2025 art. 1)."
+    ]
+  },
+  "activityStartYear": {
+    "label": "Dove trovo la data di inizio attività",
+    "paragraphs": [
+      "Nel cassetto fiscale (Dati anagrafici → partita IVA: data inizio attività) o sul certificato di attribuzione della partita IVA.",
+      "L'aliquota ridotta del 5% vale per l'anno di inizio e i quattro successivi, se ricorrono le condizioni dell'art. 1 c. 65 L. 190/2014."
+    ]
+  },
+  "isaSubject": {
+    "paragraphs": [
+      "Chi esercita un'attività per cui è approvato un indice sintetico di affidabilità (ISA), con compensi entro il limite dell'indice, versa gli acconti in due rate del 50% invece di 40% + 60%: DL 124/2019 art. 58, esteso ai forfettari e all'imposta sostitutiva dalla Risoluzione AdE 93/E/2019. Verifica con chi ti assiste se al tuo codice ATECO corrisponde un ISA (elenco sul sito AdE, sezione ISA)."
+    ]
+  },
+  "revenueLimit": {
+    "paragraphs": [
+      "Quando emetti una fattura, incassato dell'anno + fatture non ancora incassate + la nuova fattura vengono confrontati con questo limite: se lo superano, l'emissione chiede una conferma esplicita. Le soglie di legge restano quelle della L. 190/2014 c. 54 e 71 (85.000 €: uscita dall'anno successivo; 100.000 €: uscita immediata e IVA dalla fattura che fa superare la soglia)."
+    ]
+  },
+  "socialSecurityScheme": {
+    "label": "Quale gestione scegliere",
+    "paragraphs": [
+      "**Gestione Separata**: professionisti senza un albo con una cassa propria. Per legge ci sono iscritti \"esclusivamente i soggetti che svolgono attività il cui esercizio non sia subordinato all'iscrizione ad appositi albi professionali\" (DL 98/2011 art. 18 c. 12).",
+      "**Artigiani** e **Commercianti**: chi esercita un'attività d'impresa ed è iscritto a una di queste gestioni INPS. **Cassa professionale**: chi è iscritto a un albo con una cassa propria (per esempio Cassa Forense, Inarcassa).",
+      "L'iscrizione la trovi nel cassetto previdenziale INPS o, per le casse, nell'area riservata della tua cassa. OpenTax IT calcola i contributi della Gestione Separata e di Artigiani e Commercianti. Le casse professionali arriveranno una alla volta: fino ad allora la voce non si può scegliere. La rivalsa INPS del 4% spetta solo alla Gestione Separata (L. 662/1996 art. 1 c. 212)."
+    ]
+  },
+  "inpsOffice": {
+    "label": "Dove trovo la sede INPS",
+    "paragraphs": [
+      "È la sede INPS presso cui è aperta la tua posizione. La trovi su un F24 già pagato (sezione INPS, colonna \"codice sede\") o nel cassetto previdenziale INPS.",
+      "Elenco ufficiale: [Tabella codici sede INPS (AdE)](https://www.agenziaentrate.gov.it/portale/strumenti/codici-attivita-e-tributo/f24-codici-tributo-per-i-versamenti/tabelle-dei-codici-tributo-e-altri-codici-per-il-modello-f24/tabelle-codici-inps-e-enti-previdenziali-ed-assicurativi/tabella-codici-sede-inps)."
+    ]
+  },
+  "flatRateReduction": {
+    "paragraphs": [
+      "Per i forfettari iscritti ad Artigiani o Commercianti che ne fanno domanda all'INPS \"entro il termine di decadenza del 28 febbraio di ciascun anno\": la contribuzione è \"ridotta del 35 per cento\" (L. 190/2014 art. 1 c. 77 e 83), sia sul minimale sia sull'eccedenza; il contributo di maternità resta intero (Circ. INPS 35/2016). Lo trovi nel cassetto previdenziale INPS."
+    ]
+  },
+  "seniorityBefore1996": {
+    "paragraphs": [
+      "Cambia il massimale di reddito: 93.707 € nel 2026 per chi ha anzianità contributiva al 31 dicembre 1995, 122.295 € per chi è iscritto dal 1996 (Circ. INPS 14/2026 §4)."
+    ]
+  },
+  "professionalFund": {
+    "paragraphs": [
+      "La cassa a cui sei iscritto, con i codici \"TipoCassa\" delle specifiche della fattura elettronica. In fattura il forfettario iscritto a una cassa compila i \"Dati cassa previdenziale\" (guida AdE \"La fattura elettronica\")."
+    ]
+  },
+  "professionalFundRate": {
+    "paragraphs": [
+      "OpenTax IT non conosce le aliquote delle singole casse: indica quella del regolamento della tua cassa. Il contributo si aggiunge al totale della fattura e non è un ricavo: per l'AdE, per chi è iscritto a una cassa \"i contributi addebitati al committente in fattura sono esclusi\" dai compensi (precompilata, quadro LM)."
+    ]
+  },
+  "sdiFileProgressive": {
+    "paragraphs": [
+      "Il nome del file inviato allo SDI è codice paese + codice fiscale + \"_\" + un progressivo di massimo 5 caratteri alfanumerici; un nome già usato con lo stesso codice fiscale viene scartato (errore 00002, Specifiche tecniche 1.9.1 §1.2.2). OpenTax IT parte già dal progressivo più alto tra le fatture emesse e importate qui; se hai inviato altre fatture con il tuo codice fiscale da altri strumenti (es. il portale Fatture e Corrispettivi) senza importarle, indica qui un valore più alto di quelli usati."
+    ]
+  },
+  "activeTenantCookie": {
+    "label": "Dove viene salvata la partita IVA attiva",
+    "paragraphs": [
+      "Finché non c'è l'autenticazione, la partita IVA attiva è salvata in un cookie del browser."
+    ]
+  }
+}

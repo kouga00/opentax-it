@@ -1,0 +1,41 @@
+RISOLUZIONE N. 32/E
+
+Divisione Servizi
+______________
+Direzione Centrale Servizi
+Istituzionali e di Riscossione
+
+Roma, 24 giugno 2024
+
+OGGETTO: EPPI - Ente di Previdenza dei Periti Industriali e dei Periti Industriali
+Laureati – Istituzione causale contributo per il versamento, tramite modello
+F24, delle somme derivanti dal recupero delle prestazioni pensionistiche
+
+Con convenzione stipulata tra l’Agenzia delle entrate e l’EPPI è stato regolato il
+servizio di riscossione, mediante il modello F24, dei contributi previdenziali e assistenziali
+dovuti dagli iscritti al citato Ente e con le risoluzioni n. 19/E, n. 52/E e 53/E,
+rispettivamente, del 17 febbraio 2015, del 9 luglio 2018 e del 22 settembre 2023, sono state
+istituite e modificate le causali contributo per il versamento tramite il modello F24 dei
+suddetti contributi.
+A seguito della richiesta pervenuta dall’EPPI, per consentire il versamento delle
+somme derivanti dal recupero delle prestazioni pensionistiche, si istituisce la seguente
+causale contributo:
+
+• “E073” denominata “EPPI – Recupero oneri pensionistici”.
+In sede di compilazione del modello F24, la causale in argomento è esposta nella
+sezione “Altri enti previdenziali e assicurativi” (secondo riquadro), nel campo “causale
+contributo”, in corrispondenza, esclusivamente, delle somme indicate nella colonna
+“importi a debito versati”, indicando:
+- nel campo “codice ente”, il codice “0009”;
+- nel campo “codice sede”, nessun valore;
+- nel campo “codice posizione”, nessun valore;
+
+2
+
+- nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e l’anno nel
+quale si effettua il versamento, nel formato “MM/AAAA”.
+
+IL DIRETTORE CENTRALE
+Firmato digitalmente
+
+

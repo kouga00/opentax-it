@@ -1,0 +1,7446 @@
+Allegato 1
+
+Specifiche tecniche per la trasmissione telematica
+dei Modelli F24 da parte dei contribuenti
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+Specifiche tecniche per la trasmissione telematica
+dei Modelli F24 da parte dei contribuenti
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+1. AVVERTENZE GENERALI
+I contribuenti che compilano il modello F24 tramite il software predisposto dall’Agenzia delle
+Entrate ovvero con strumenti informatici diversi, possono trasmettere i dati dei versamenti ed
+effettuare il relativo pagamento all’Agenzia stessa per via telematica.
+Il contenuto e le caratteristiche della fornitura dei dati da trasmettere sono riportati nelle
+specifiche tecniche di seguito esposte. Si rammenta che possono essere inviati flussi
+compilati secondo la corrente o la precedente versione delle specifiche tecniche.
+Si precisa che la non rispondenza dei dati alle specifiche tecniche non consente di
+eseguire il versamento.
+
+2. CONTENUTO DELLA FORNITURA
+2.1 Generalità
+Ciascuna fornitura dei dati in via telematica si compone di una sequenza di record aventi la
+lunghezza fissa di 1.900 caratteri.
+Ciascun record presente nella fornitura è contraddistinto da uno specifico “tipo-record” che ne
+individua il contenuto e che determina l’ordinamento dei record all’interno della fornitura
+stessa.
+I record previsti per la fornitura dei versamenti Mod. F24 sono:
+•
+
+record di tipo “A”: è il record di testa della fornitura e contiene i dati identificativi
+della fornitura e del soggetto responsabile dell’invio telematico (fornitore del flusso);
+
+•
+
+record di tipo “M”: è il record che contiene tutti i dati anagrafici e di residenza del
+contribuente presenti sul modello di versamento F24, dell’eventuale soggetto
+coobbligato, nonché, qualora diverso dal contribuente, i dati anagrafici e di residenza
+del versante;
+
+•
+
+record di tipo “V”: è il record che contiene tutti i dati contabili presenti sul
+modello di versamento F24;
+
+•
+
+record di tipo “Z”: è il record di coda della fornitura e contiene alcuni dati
+riepilogativi della fornitura stessa.
+
+2
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+2.2
+
+La sequenza dei record
+La sequenza dei record all’interno della fornitura deve rispettare le seguenti regole:
+
+2.3
+
+•
+
+presenza di un solo record di tipo “A”, posizionato come primo record della fornitura;
+
+•
+
+presenza di un solo record di tipo “M”;
+
+•
+
+presenza di un record di tipo “V” per ciascun modello F24 relativo al soggetto ed alla
+data di versamento indicati sul record M che lo precede;
+
+•
+
+presenza di un solo record di tipo “Z”, posizionato come ultimo record della fornitura.
+
+La struttura dei record
+I record di tipo “A”, “M”, “V” e “Z” contengono unicamente campi posizionali, ovvero
+campi la cui posizione all’interno del record è fissa. La posizione, la lunghezza ed il formato
+di tali campi sono esposti in dettaglio nelle specifiche di seguito riportate.
+In coda ai record di ciascun tipo sono riportati 3 caratteri di controllo, così come descritto in
+dettaglio nelle specifiche che seguono.
+
+2.4
+
+La struttura dei dati
+I campi dei record di tipo “A”, “M”, “V”, “Z”, possono assumere struttura numerica o
+alfanumerica e nelle specifiche che seguono per ciascuno di essi è indicato, rispettivamente,
+il simbolo NU o AN.
+L’allineamento dei dati è a destra per i campi a struttura numerica (con riempimento a zeri
+dei caratteri non significativi) ed a sinistra per quelli a struttura alfanumerica (con
+riempimento a spazi dei caratteri non significativi).
+I campi devono essere inizializzati con impostazione di zeri se a struttura numerica e di spazi
+se a struttura alfanumerica.
+Gli importi devono essere espressi in centesimi di euro.
+
+2.5
+
+Il trattamento del Codice Fiscale
+I Codici Fiscali di Persone Fisiche (PF) o Persone non Fisiche (PNF) riportati nel
+modello F24 devono essere formalmente corretti e correttamente strutturati secondo
+quanto definito negli articoli 7 e 9 del Decreto Ministeriale del 23 Dicembre 1976 (G.U. n.
+345 del 29 Dicembre 1976).
+
+3
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+2.6
+
+Il trattamento della matricola INPS, codice posizione INPDAI e codice
+ditta/c.c. INAIL
+Relativamente ai formalismi da indicare per i versamenti INPS, INAIL e INPDAI, bisogna
+fare riferimento alle specifiche tecniche rilasciate dalle amministrazioni di competenza.
+
+2.7
+
+Tabelle di decodifica
+Per tutte le tabelle referenziate nelle specifiche tecniche di fornitura, si rimanda al sito
+Internet dell’Agenzia delle Entrate (www.agenziaentrate.gov.it).
+
+3. AVVERTENZE PARTICOLARI
+L’addebito dell’eventuale saldo positivo del modello F24 deve sempre essere richiesto sul
+conto corrente intestato al fornitore del flusso, indicato nel record “A”, identificato dal
+relativo codice fiscale.
+Il conto corrente è individuato dal relativo codice IBAN, da indicare nell’apposito campo n.
+40 del record “M”, oppure dalle coordinate BBAN (CIN, ABI, CAB e numero di C/C), da
+indicare in fase di autentica del file.
+Il codice fiscale del contribuente, presente nel record “M”, deve sempre coincidere con il
+codice fiscale del fornitore del flusso, presente nel record “A”; di conseguenza, l’addebito
+dell’eventuale saldo del modello F24 deve sempre essere richiesto sul conto corrente
+intestato al contribuente, tranne nei casi particolari di seguito descritti.
+Nel caso in cui il pagamento è eseguito da un soggetto diverso dal contribuente, in qualità di
+“genitore/tutore” (codice identificativo ‘02’), “erede” (codice identificativo ‘07’), “obbligato
+solidale” (codice identificativo ‘50’), “garante/terzo datore” (codice identificativo ‘60’),
+oppure “rappresentante fiscale” (codice identificativo ‘72’), ovvero in caso di “intervento
+sostitutivo” (codice identificativo ‘51’), il codice fiscale del soggetto che esegue il
+pagamento deve essere indicato quale fornitore del flusso (nel record “A”) e deve, quindi,
+coincidere con il codice fiscale indicato nel record “M” (campi 12 o 38), in corrispondenza
+del codice identificativo del soggetto medesimo.
+Anche nel caso in cui si scelga di indicare che il pagamento è effettuato dal “curatore
+fallimentare” del contribuente (codice identificativo ’03’), si rammenta che il codice fiscale
+del curatore fallimentare deve essere indicato quale fornitore del flusso nel record “A” e che
+l’addebito dell’eventuale saldo del modello F24 dovrà essere richiesto esclusivamente sul
+conto corrente intestato al curatore medesimo.
+Si rammenta, infine, che non è obbligatorio indicare il codice fiscale e i dati del
+“rappresentante legale/socio amministratore” dei soggetti “persone non fisiche” (PNF),
+nonché i dati della residenza/domicilio o della sede legale dei vari soggetti coinvolti
+nell’operazione.
+
+4
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+4. DATA DI ESECUZIONE DEL VERSAMENTO
+L’eventuale addebito del saldo del modello F24 sarà richiesto e - in caso di esito positivo - il
+versamento sarà considerato eseguito:
+a) alla “data di versamento” indicata nel campo 45 del record ‘M’, per i versamenti
+pervenuti entro tale data;
+b) alla data di ricezione del flusso, per i versamenti pervenuti successivamente alla “data di
+versamento” indicata nel citato campo 45 del record ‘M’.
+Si precisa che, in caso di forniture contenenti un record ‘M’ seguito da più record ‘V’
+attribuiti allo stesso contribuente, la data di versamento indicata deve essere omogenea su
+tutti i record ‘V’.
+
+***
+
+Di seguito viene descritto il contenuto dei record da inserire nella fornitura dei dati da inviare
+all’Agenzia delle Entrate.
+
+5
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+RECORD DI TIPO "A": Record di testa
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+1
+2
+3
+4
+
+Tipo record
+Filler
+Codice fornitura
+Tipo fornitore
+
+1
+2
+16
+21
+
+5
+
+Codice fiscale del
+fornitore**
+
+23
+
+CONTROLLI BLOCCANTI
+
+1
+14
+5
+2
+
+AN
+AN
+AN
+AN
+
+Vale sempre "A"
+Impostare a spazi
+Vale "F24A0"
+Può assumere i seguenti valori:
+04 - Persona fisica
+14 - Persona non fisica
+
+16
+
+AN
+
+Obbligatorio e uguale al Codice Fiscale (C.F.)
+del contribuente, tranne che nei casi di
+seguito descritti.
+Nel caso in cui il versamento venga effettuato
+dal Genitore, Tutore, Curatore Fallimentare o
+dall'Erede del contribuente, il C.F. del
+fornitore deve coincidere con il C.F. del
+soggetto che effettua il versamento (C.F. del
+versante, indicato nel campo 12 del record
+M).
+Nel caso in cui il versamento venga effettuato
+da un soggetto identificato con i codici '50',
+'51', '60' o '72', il C.F. del fornitore dovrà
+coincidere con il C.F. di tale soggetto
+(indicato nel campo 38 del record M).
+
+Dati del fornitore persona fisica
+(da impostare sempre e solo se tipo fornitore = "04")
+6
+
+Cognome
+
+39
+
+24
+
+AN
+
+7
+
+Nome
+
+63
+
+20
+
+AN
+
+8
+
+Sesso
+
+83
+
+1
+
+AN
+
+9
+
+Data di nascita
+
+84
+
+8
+
+NU
+
+10
+
+Comune o stato
+estero di nascita
+Sigla della
+provincia di nascita
+
+92
+
+40
+
+AN
+
+132
+
+2
+
+AN
+
+134
+
+40
+
+AN
+
+174
+
+2
+
+AN
+
+11
+
+12
+
+13
+
+Comune di
+residenza
+anagrafica o
+domicilio fiscale
+Sigla della
+provincia della
+residenza
+anagrafica o del
+domicilio fiscale
+
+6
+
+Se richiesto è obbligatorio e deve essere
+congruente con il C.F. del fornitore
+Se richiesto è obbligatorio e deve essere
+congruente con il C.F. del fornitore
+Se richiesto può assumere i valori 'F' o 'M' e
+deve essere congruente con il C.F. del
+fornitore
+Se richiesto deve essere nel formato
+GGMMAAAA e deve essere congruente con il
+C.F. del fornitore
+Se richiesto è obbligatorio
+Se Flag versante/firmatario è uguale a 1 deve
+essere la sigla di una provincia italiana, con
+estensione alle province soppresse o EE in
+caso di stato estero
+Facoltativo
+
+Facoltativo, se indicato deve essere una sigla
+di provincia italiana o EE in caso di stato
+estero
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "A": Record di testa
+CAMPO
+
+DESCRIZIONE
+
+14
+
+Indirizzo (frazione,
+via e numero
+civico) della
+residenza
+anagrafica o del
+domicilio fiscale
+C.A.P. della
+residenza
+anagrafica o del
+domicilio fiscale
+
+15
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+176
+
+35
+
+AN
+
+Facoltativo
+
+211
+
+5
+
+NU
+
+Facoltativo
+
+Dati riservati al fornitore persona non fisica
+(da impostare sempre e solo se tipo fornitore = "14")
+16
+17
+18
+
+19
+
+20
+21
+22
+
+23
+
+24
+
+Denominazione
+Comune della sede
+legale
+Sigla della
+provincia della
+sede legale
+Indirizzo (frazione,
+via e numero
+civico) della sede
+legale
+C.A.P. della sede
+legale
+Comune del
+domicilio fiscale
+Sigla della
+provincia del
+domicilio fiscale
+Indirizzo (frazione,
+via e numero
+civico) del domicilio
+fiscale
+C.A.P. del domicilio
+fiscale
+
+216
+276
+
+60
+40
+
+AN
+AN
+
+Se richiesta è obbligatoria
+Facoltativo
+
+316
+
+2
+
+AN
+
+Facoltativo, se indicato deve essere una sigla
+di provincia italiana
+
+318
+
+35
+
+AN
+
+Facoltativo
+
+353
+
+5
+
+NU
+
+Facoltativo
+
+358
+
+40
+
+AN
+
+Facoltativo
+
+398
+
+2
+
+AN
+
+400
+
+35
+
+AN
+
+Facoltativo, se indicato deve essere una sigla
+di provincia italiana o EE in caso di stato
+estero
+Facoltativo
+
+435
+
+5
+
+NU
+
+Facoltativo
+
+Flag origine
+Spazio riservato al
+Servizio
+Telematico
+
+440
+441
+
+Progressivo
+dell'invio telematico
+Numero totale degli
+invii telematici
+
+522
+
+3
+
+NU
+
+Vale sempre 001
+
+525
+
+3
+
+NU
+
+Vale sempre 001
+
+Altre informazioni modelli F24
+25
+26
+
+1
+81
+
+AN
+AN
+
+Impostare a spazio
+Impostare a spazi
+
+Dati dell'invio modelli F24
+27
+28
+
+Spazio a disposizione dell'utente
+29
+
+Campo utente
+
+528
+
+30
+
+Spazio riservato al
+Servizio
+Telematico
+
+628
+
+Filler
+
+1898
+
+100
+
+AN
+
+Spazio non utilizzato
+1270
+
+AN
+
+Impostare a spazi
+
+Ultimi tre caratteri di controllo
+31
+
+1
+
+AN
+
+7
+
+Vale sempre "A"
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "A": Record di testa
+CAMPO
+
+32
+
+DESCRIZIONE
+
+Filler
+
+POSIZIONE CONFIGURAZIONE
+
+1899
+
+2
+
+AN
+
+8
+
+CONTROLLI BLOCCANTI
+
+Impostare i valori esadecimali '0D' e '0A'
+(caratteri ASCII 'CR' e 'LF').
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+RECORD DI TIPO "M": Dati anagrafici F24
+CAMPO
+
+1
+2
+3
+4
+5
+6
+
+7
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+Tipo record
+Codice fiscale
+contribuente**
+Progressivo modulo
+Spazio a disposizione
+dell'utente
+Filler
+Spazio a disposizione
+dell'utente per
+l'identificazione del
+modello F24
+Filler
+
+CONTROLLI BLOCCANTI
+
+1
+2
+
+1
+16
+
+AN
+AN
+
+Vale sempre "M"
+Obbligatorio e formalmente corretto
+
+18
+26
+
+8
+3
+
+NU
+AN
+
+Vale sempre '00000001'
+
+29
+54
+
+25
+20
+
+AN
+AN
+
+impostare a spazi
+
+74
+
+16
+
+AN
+
+impostare a spazi
+
+CAMPI POSIZIONALI (da carattere 90)
+Spazio non utilizzato
+Filler
+
+90
+
+9
+
+Valuta delega
+
+91
+
+1
+
+AN
+
+10
+
+Esercizio a cavallo
+
+92
+
+1
+
+NU
+
+8
+
+1
+
+AN
+
+impostare a spazi
+
+Altri dati della delega
+Vale sempre 'E' (delega compilata in
+Euro)
+Nel caso in cui il contribuente sia un
+soggetto PNF, sarà valorizzato ad 1 (uno)
+per indicare l'anno imposta non
+coincidente con l'anno solare.
+
+Dati di chi effettua il pagamento per altri - versante/firmatario
+(da impostare sempre e solo se Flag versante/firmatario è uguale a 1)
+11
+
+Flag
+versante/firmatario
+
+93
+
+1
+
+NU
+
+12
+
+Codice fiscale
+versante/firmatario**
+
+94
+
+16
+
+AN
+
+13
+
+Tipo
+versante/firmatario
+
+110
+
+1
+
+NU
+
+14
+
+Cognome
+versante/firmatario
+Nome
+versante/firmatario
+Sesso
+versante/firmatario
+
+111
+
+24
+
+AN
+
+135
+
+20
+
+AN
+
+155
+
+1
+
+AN
+
+15
+16
+
+9
+
+Dovrà essere impostato ad 1, nel caso in
+cui il soggetto che effettua il versamento
+sia diverso dal contribuente ovvero nel
+caso in cui si intendano fornire i dati (non
+obbligatori) del 'Rappresentante Legale o
+Socio Amministratore' di un contribuente
+PNF.
+Se Flag versante/firmatario è uguale a 1 è
+obbligatorio e deve essere formalmente
+corretto
+Se Flag versante/firmatario è uguale a 1,
+può assumere uno dei seguenti valori:
+1 - rappresentante legale o socio
+amministratore (solo per contribuenti
+PNF);
+2 - genitore o tutore (solo per contribuenti
+PF);
+3 - curatore fallimentare;
+7 - erede (solo per contribuenti PF).
+Se Flag versante/firmatario è uguale a 1 è
+obbligatorio
+Se Flag versante/firmatario è uguale a 1 è
+obbligatorio
+Se Flag versante/firmatario è uguale a 1
+può assumere i valori 'F' o 'M'
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "M": Dati anagrafici F24
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+17
+
+Data di nascita
+versante/firmatario
+
+156
+
+8
+
+NU
+
+18
+
+Comune o stato estero
+di nascita
+versante/firmatario
+Sigla della provincia di
+nascita
+versante/firmatario
+
+164
+
+40
+
+AN
+
+204
+
+2
+
+AN
+
+Comune o Stato
+Estero di residenza
+anagrafica del
+versante/firmatario
+Sigla della provincia di
+residenza anagrafica
+del versante/firmatario
+C.A.P. della residenza
+anagrafica del
+versante/firmatario
+Indirizzo, frazione, via
+e numero civico della
+residenza anagrafica
+del versante/firmatario
+
+206
+
+40
+
+AN
+
+246
+
+2
+
+AN
+
+248
+
+5
+
+NU
+
+253
+
+35
+
+AN
+
+19
+
+20
+
+21
+
+22
+
+23
+
+CONTROLLI BLOCCANTI
+
+Se Flag versante/firmatario è uguale a 1
+deve essere una data valida, nel formato
+GGMMAAAA.
+Se Flag versante/firmatario è uguale a 1 è
+obbligatorio
+Se Flag versante/firmatario è uguale a 1
+deve essere la sigla di una provincia
+italiana, con estensione alle province
+soppresse o EE in caso di stato estero
+Se Flag versante/firmatario è uguale a 1
+può essere indicato
+
+Se Flag versante/firmatario è uguale a 1
+può essere la sigla di una provincia
+italiana o EE in caso di stato estero
+Se Flag versante/firmatario è uguale a 1
+può essere indicato
+Se Flag versante/firmatario è uguale a 1
+può essere indicato
+
+Residenza anagrafica del contribuente (facoltativa)
+Comune o Stato
+Estero di residenza
+anagrafica o di
+domicilio fiscale del
+contribuente
+Sigla della provincia di
+residenza anagrafica o
+di domicilio fiscale del
+contribuente
+C.A.P. della residenza
+anagrafica o del
+domicilio fiscale del
+contribuente
+Indirizzo, frazione, via
+e numero civico della
+residenza anagrafica o
+del domicilio fiscale
+del contribuente
+Telefono - Prefisso e
+numero
+
+288
+
+40
+
+AN
+
+Facoltativo
+
+328
+
+2
+
+AN
+
+Facoltativo, se indicato deve essere la
+sigla di una provincia italiana o EE in caso
+di stato estero
+
+330
+
+5
+
+NU
+
+Facoltativo
+
+335
+
+35
+
+AN
+
+Facoltativo
+
+370
+
+12
+
+AN
+
+29
+
+Filler
+
+382
+
+56
+
+AN
+
+Facoltativo, se ne consiglia l'indicazione
+per la ricezione di eventuali comunicazioni
+urgenti da parte dell'Amministrazione
+Finanziaria
+Impostare a spazi
+
+30
+
+Cognome
+
+438
+
+24
+
+AN
+
+31
+
+Nome
+
+462
+
+20
+
+AN
+
+32
+
+Data di nascita
+
+482
+
+8
+
+NU
+
+24
+
+25
+
+26
+
+27
+
+28
+
+Dati anagrafici del contribuente persona fisica
+
+10
+
+Se contribuente è una persona fisica è
+obbligatorio
+Se contribuente è una persona fisica è
+obbligatorio
+Se contribuente è una persona fisica deve
+essere una data valida, nel formato
+GGMMAAAA.
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "M": Dati anagrafici F24
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+33
+
+Sesso
+
+490
+
+1
+
+AN
+
+34
+
+491
+
+25
+
+AN
+
+35
+
+Comune o stato estero
+di nascita
+Provincia di nascita
+
+516
+
+2
+
+AN
+
+36
+
+Denominazione
+
+CONTROLLI BLOCCANTI
+
+Se contribuente è una persona fisica può
+assumere i valori 'F' o 'M'
+Se contribuente è una persona fisica è
+obbligatorio
+Se contribuente è una persona fisica deve
+essere la sigla di una provincia italiana,
+con estensione alle province soppresse o
+EE in caso di stato estero
+
+Dati anagrafici del contribuente persona non fisica
+518
+
+55
+
+AN
+
+Se contribuente è una persona non fisica
+è obbligatoria
+
+Identificazione del coobbligato
+37
+
+Codice Identificativo
+
+573
+
+2
+
+AN
+
+38
+
+Codice Fiscale del
+Coobbligato**
+
+575
+
+16
+
+AN
+
+Se il "Tipo Versante" (campo 13) assume
+il valore 0 (zero) oppure 1, può assumere
+uno dei valori presenti nella tabella dei
+"Codici Identificativi" (tranne i valori '02',
+'03' e '07')
+Valorizzabile obbligatoriamente ed in
+formato corretto, solo se indicato un
+"Codice Identificativo" (campo 37)
+
+Spazio non utilizzato
+39
+
+Filler
+
+591
+
+1150
+
+AN
+
+impostare a spazi
+
+INFORMAZIONI CONTO DI ADDEBITO
+N.B. Impostare solo se il "Saldo totale a debito" (campo 44) è diverso da 0,00.
+40
+
+Coordinate IBAN
+
+1741
+
+27
+
+AN
+
+Facoltative. Sono le coordinate IBAN del
+conto di addebito dell'eventuale saldo
+positivo (saldo totale a debito). Se indicate
+dovranno essere le coordinate di un conto
+corrente italiano, formalmente corrette
+rispetto alle specifiche IBAN. Se non
+indicate, in caso di saldo totale a debito
+positivo, in fase di autentica del file
+dovranno essere fornite le coordinate
+BBAN (CIN, ABI, CAB e numero di C/C).
+
+Spazio non utilizzato
+41
+
+Filler
+
+1768
+
+41
+
+AN
+
+impostare a spazi
+
+Recapito di Posta Elettronica del Versante
+42
+
+Indirizzo di posta
+elettronica
+
+43
+
+Valuta
+
+1809
+
+60
+
+AN
+
+Facoltativo, se ne consiglia l'indicazione,
+qualora possibile, per la ricezione di
+eventuali comunicazioni da parte
+dell'Amministrazione Finanziaria
+
+Dati di riepilogo della delega
+1869
+
+4
+
+11
+
+AN
+
+Vale sempre 'EURO'
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "M": Dati anagrafici F24
+CAMPO
+
+DESCRIZIONE
+
+44
+
+Saldo totale a debito
+
+POSIZIONE CONFIGURAZIONE
+
+1873
+
+15
+
+AN
+
+45
+
+Data di versamento
+
+1888
+
+10
+
+AN
+
+46
+47
+
+Filler
+Filler
+
+CONTROLLI BLOCCANTI
+
+Saldo totale con i separatori di migliaia e
+due decimali dopo la virgola, congruente
+con la somma dei campi "Saldo finale
+modello F24" di tutti i Record V
+appartenenti al presente pagamento.
+N.B.: In caso di saldo a zero indicare 0,00
+allineato a sinistra.
+Nel caso in cui il valore da indicare superi
+la lunghezza massima di 15 caratteri,
+potranno essere omessi i separatori di
+migliaia mantenendo esclusivamente la
+virgola decimale.
+Obbligatoria e valida nel formato GG-MMAAAA
+
+Ultimi tre caratteri di controllo
+1898
+1899
+
+1
+2
+
+12
+
+AN
+AN
+
+Vale sempre "A"
+Impostare i valori esadecimali '0D' e '0A'
+(caratteri ASCII 'CR' e 'LF').
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+1
+2
+
+Tipo record
+Codice fiscale contribuente**
+
+1
+2
+
+1
+16
+
+AN
+AN
+
+3
+
+Progressivo modulo
+
+18
+
+8
+
+NU
+
+4
+
+Spazio a disposizione
+dell'utente
+Filler
+Spazio a disposizione
+dell'utente per l'identificazione
+del modello F24
+Filler
+
+26
+
+3
+
+AN
+
+29
+54
+
+25
+20
+
+AN
+AN
+
+Impostare a spazi
+
+74
+
+16
+
+AN
+
+Impostare a spazi
+
+5
+6
+
+7
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Vale sempre "V"
+Obbligatorio, formalmente corretto
+e congruente con il valore indicato
+sul record M che lo precede
+Progressivo invio all'interno del
+flusso, congruente con il valore
+indicato sul record M che lo
+precede
+
+Identificazione modello
+8
+
+TIPO MODELLO
+
+90
+
+1
+
+AN
+
+Vale sempre 'A' (Modello con
+sezione IMU v.2013)
+
+Sezione Erario
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+9
+
+Codice ufficio finanziario
+
+91
+
+3
+
+AN
+
+10
+
+Codice atto
+
+94
+
+11
+
+NU
+
+11
+
+Codice tributo
+
+105
+
+4
+
+AN
+
+12
+
+Numero Certificazione
+
+109
+
+16
+
+AN
+
+CONTROLLI BLOCCANTI
+
+Se richiesto deve assumere uno
+dei valori presenti nelle "Tabelle
+dei codici degli uffici finanziari e
+delle Direzioni Regionali e
+Provinciali". E' obbligatorio nel
+caso in cui nella presente sezione
+viene utilizzato un codice tributo
+che lo richiede.
+Rappresenta l'identificativo
+dell'atto attribuito dall'ente
+percettore. E' obbligatorio nel caso
+in cui nella presente sezione viene
+utilizzato un codice tributo che lo
+richiede.
+
+Riga 1
+
+13
+
+Vedi tabella Tributi Erariali validi
+alla data di versamento (CAMPO
+210)
+E' il numero della certificazione
+relativa al credito utilizzato in
+compensazione, rilasciato dalla
+piattaforma elettronica di
+certificazione. Deve essere
+compilato in corrispondenza
+dell'apposito codice tributo da
+indicare per utilizzare in
+compensazione i crediti certificati.
+Negli altri casi, non deve essere
+compilato.
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+13
+
+Rateazione/Regione/Provincia
+
+POSIZIONE CONFIGURAZIONE
+
+125
+
+4
+
+AN
+
+CONTROLLI BLOCCANTI
+
+14
+
+Anno di Riferimento
+
+129
+
+4
+
+NU
+
+15
+
+Importo a debito
+
+133
+
+15
+
+NU
+
+16
+
+Importo a credito
+
+148
+
+15
+
+NU
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+163
+167
+183
+187
+191
+206
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+221
+225
+241
+245
+249
+264
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+279
+283
+299
+303
+307
+322
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+337
+341
+357
+361
+365
+380
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+
+395
+
+4
+
+AN
+
+Vedi descrizione del CAMPO 11
+
+Vedi formalismo su tabella tributi.
+Nel caso sia prevista l'indicazione
+di un codice regione o di una sigla
+provincia, occorre impostare nei
+primi due byte a sinistra 00
+(zero+zero) e nei restanti due byte
+a destra il codice previsto, avendo
+cura di indicare i codici numerici
+minori di 10 con lo 0 (zero) iniziale
+(es. 0001=Regione Abruzzo,
+00RM=Provincia di Roma)
+Se è richiesta indicazione dell'anno
+il formato è AAAA, altrimenti vale
+0000
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Riga 2
+
+17
+18
+19
+20
+21
+22
+Riga 3
+
+23
+24
+25
+26
+27
+28
+Riga 4
+
+29
+30
+31
+32
+33
+34
+Riga 5
+
+35
+36
+37
+38
+39
+40
+Riga 6
+
+41
+
+14
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+42
+43
+44
+45
+46
+
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+399
+415
+419
+423
+438
+
+16
+4
+4
+15
+15
+
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Totali Sezione Erario
+
+47
+
+Totale a debito
+
+453
+
+15
+
+NU
+
+48
+
+Totale a credito
+
+468
+
+15
+
+NU
+
+49
+
+Segno saldo
+
+483
+
+1
+
+AN
+
+50
+
+Saldo debito - credito
+
+484
+
+15
+
+NU
+
+Sezione INPS
+CAMPO
+Riga 1
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+51
+
+Codice sede
+
+499
+
+4
+
+NU
+
+52
+
+Causale contributo
+
+503
+
+4
+
+AN
+
+53
+
+Matricola INPS **
+
+507
+
+17
+
+AN
+
+54
+
+Periodo di riferimento da
+
+524
+
+6
+
+NU
+
+55
+
+Periodo di riferimento a
+
+530
+
+6
+
+NU
+
+56
+
+Importo a debito
+
+536
+
+15
+
+NU
+
+57
+
+Importo a credito
+
+551
+
+15
+
+NU
+
+Codice sede
+Causale contributo
+Matricola INPS **
+
+566
+570
+574
+
+4
+4
+17
+
+NU
+AN
+AN
+
+CONTROLLI BLOCCANTI
+
+Obbligatorio, deve essere un
+codice presente sulla tabella SEDI
+INPS
+Obbligatorio, deve essere un
+codice presente sulla tabella
+CAUSALI CONTRIBUTO
+Dipendente dal formalismo
+previsto per la causale indicata,
+come descritto sul documento
+"Tabella formati matricole e codici"
+Congruente con il formalismo
+previsto per la causale indicata e
+qualora ammesso dovrà essere
+indicato nel formato MMAAAA
+Congruente con il formalismo
+previsto per la causale indicata e
+qualora ammesso dovrà essere
+indicato nel formato MMAAAA
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Riga 2
+
+58
+59
+60
+
+15
+
+Vedi descrizione del CAMPO 51
+Vedi descrizione del CAMPO 52
+Vedi descrizione del CAMPO 53
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+61
+62
+63
+64
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Periodo di riferimento da
+Periodo di riferimento a
+Importo a debito
+Importo a credito
+
+591
+597
+603
+618
+
+6
+6
+15
+15
+
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 54
+Vedi descrizione del CAMPO 55
+Vedi descrizione del CAMPO 56
+Vedi descrizione del CAMPO 57
+
+Codice sede
+Causale contributo
+Matricola INPS **
+Periodo di riferimento da
+Periodo di riferimento a
+Importo a debito
+Importo a credito
+
+633
+637
+641
+658
+664
+670
+685
+
+4
+4
+17
+6
+6
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 51
+Vedi descrizione del CAMPO 52
+Vedi descrizione del CAMPO 53
+Vedi descrizione del CAMPO 54
+Vedi descrizione del CAMPO 55
+Vedi descrizione del CAMPO 56
+Vedi descrizione del CAMPO 57
+
+Codice sede
+Causale contributo
+Matricola INPS **
+Periodo di riferimento da
+Periodo di riferimento a
+Importo a debito
+Importo a credito
+
+700
+704
+708
+725
+731
+737
+752
+
+4
+4
+17
+6
+6
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 51
+Vedi descrizione del CAMPO 52
+Vedi descrizione del CAMPO 53
+Vedi descrizione del CAMPO 54
+Vedi descrizione del CAMPO 55
+Vedi descrizione del CAMPO 56
+Vedi descrizione del CAMPO 57
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Riga 3
+
+65
+66
+67
+68
+69
+70
+71
+Riga 4
+
+72
+73
+74
+75
+76
+77
+78
+
+Totali Sezione INPS
+
+79
+
+Totale a debito
+
+767
+
+15
+
+NU
+
+80
+
+Totale a credito
+
+782
+
+15
+
+NU
+
+81
+
+Segno saldo
+
+797
+
+1
+
+AN
+
+82
+
+Saldo debito - credito
+
+798
+
+15
+
+NU
+
+Sezione Regioni
+CAMPO
+Riga 1
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+83
+
+Codice regione
+
+813
+
+2
+
+NU
+
+84
+
+Codice tributo
+
+815
+
+4
+
+AN
+
+85
+
+Rateazione
+
+819
+
+4
+
+AN
+
+86
+
+Anno riferimento
+
+823
+
+4
+
+NU
+
+16
+
+CONTROLLI BLOCCANTI
+
+Vedi tabella T0 Codici delle
+Regione e delle Province
+Autonome
+Vedi tabella Tributi Regionali validi
+alla data di versamento (CAMPO
+210)
+Nel formato previsto per il tributo
+indicato
+Se è richiesta indicazione dell'anno
+il formato è AAAA, altrimenti vale
+0000
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+87
+
+Importo a debito
+
+827
+
+15
+
+NU
+
+88
+
+Importo a credito
+
+842
+
+15
+
+NU
+
+Codice regione
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+857
+859
+863
+867
+871
+886
+
+2
+4
+4
+4
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 83
+Vedi descrizione del CAMPO 84
+Vedi descrizione del CAMPO 85
+Vedi descrizione del CAMPO 86
+Vedi descrizione del CAMPO 87
+Vedi descrizione del CAMPO 88
+
+Codice regione
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+901
+903
+907
+911
+915
+930
+
+2
+4
+4
+4
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 83
+Vedi descrizione del CAMPO 84
+Vedi descrizione del CAMPO 85
+Vedi descrizione del CAMPO 86
+Vedi descrizione del CAMPO 87
+Vedi descrizione del CAMPO 88
+
+Codice regione
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+945
+947
+951
+955
+959
+974
+
+2
+4
+4
+4
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 83
+Vedi descrizione del CAMPO 84
+Vedi descrizione del CAMPO 85
+Vedi descrizione del CAMPO 86
+Vedi descrizione del CAMPO 87
+Vedi descrizione del CAMPO 88
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Riga 2
+
+89
+90
+91
+92
+93
+94
+Riga 3
+
+95
+96
+97
+98
+99
+100
+Riga 4
+
+101
+102
+103
+104
+105
+106
+
+Totali Sezione Regioni
+
+107
+
+Totale a debito
+
+989
+
+15
+
+NU
+
+108
+
+Totale a credito
+
+1004
+
+15
+
+NU
+
+109
+
+Segno saldo
+
+1019
+
+1
+
+AN
+
+110
+
+Saldo debito - credito
+
+1020
+
+15
+
+NU
+
+Sezione IMU ed Altri Tributi Locali
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+17
+
+CONTROLLI BLOCCANTI
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Identificativo Operazione
+
+1035
+
+18
+
+AN
+
+Rappresenta l'identificativo
+dell'operazione di versamento
+attribuito dall'ente locale e deve
+essere indicato qualora richiesto e
+comunicato dall'ente medesimo.
+Può essere indicato solo per quei
+tributi che lo prevedono.
+
+112
+
+Codice ente/prov/Comune
+
+1053
+
+4
+
+AN
+
+113
+
+Flag Ravvedimento Operoso
+
+1057
+
+1
+
+NU
+
+114
+
+Flag Immobili Variati
+
+1058
+
+1
+
+NU
+
+115
+
+Flag Acconto
+
+1059
+
+1
+
+NU
+
+116
+
+Flag Saldo
+
+1060
+
+1
+
+NU
+
+117
+118
+
+Numero Immobili
+Detrazione abitazione
+principale ***
+
+1061
+1064
+
+3
+15
+
+NU
+NU
+
+119
+
+Codice tributo
+
+1079
+
+4
+
+AN
+
+120
+
+Rateazione
+
+1083
+
+4
+
+AN
+
+121
+
+Anno riferimento
+
+1087
+
+4
+
+NU
+
+122
+
+Importo a debito
+
+1091
+
+15
+
+NU
+
+123
+
+Importo a credito
+
+1106
+
+15
+
+NU
+
+Vedi tabelle Codici Enti Locali,
+Sigle Province o Codici catastali
+dei Comuni, in relazione al Codice
+Tributo indicato (CAMPO 119)
+(solo per tributi che lo richiedono)
+vale 1 se SI
+(solo per tributi che lo richiedono)
+vale 1 se SI
+(solo per tributi che lo richiedono)
+vale 1 se SI
+(solo per tributi che lo richiedono)
+vale 1 se SI
+se richiesto è obbligatorio
+Congruente al formalismo previsto
+per il tributo indicato, se richiesto è
+obbligatorio. Esso è indicabile su
+di una sola riga all'interno della
+sezione Enti Locali.
+Vedi tabella Tributi per Enti Locali
+validi alla data di versamento
+(campo 210)
+Congruente con il formalismo
+relativo al codice tributo indicato
+Se è richiesta indicazione dell'anno
+il formato è AAAA, altrimenti vale
+0000
+Se ammesso, congruentemente al
+formalismo previsto per il tributo
+indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente al
+formalismo previsto per il tributo
+indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Codice ente/prov/Comune
+Flag Ravvedimento Operoso
+Flag Immobili Variati
+Flag Acconto
+Flag Saldo
+Numero Immobili
+Detrazione abitazione
+principale ***
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+
+1121
+1125
+1126
+1127
+1128
+1129
+1132
+
+4
+1
+1
+1
+1
+3
+15
+
+AN
+NU
+NU
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 112
+Vedi descrizione del CAMPO 113
+Vedi descrizione del CAMPO 114
+Vedi descrizione del CAMPO 115
+Vedi descrizione del CAMPO 116
+Vedi descrizione del CAMPO 117
+Vedi descrizione del CAMPO 118
+
+1147
+1151
+1155
+1159
+
+4
+4
+4
+15
+
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 119
+Vedi descrizione del CAMPO 120
+Vedi descrizione del CAMPO 121
+Vedi descrizione del CAMPO 122
+
+111
+
+Riga 1
+
+Riga 2
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+
+18
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+135
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Importo a credito
+
+1174
+
+15
+
+NU
+
+Vedi descrizione del CAMPO 123
+
+Codice ente/prov/Comune
+Flag Ravvedimento Operoso
+Flag Immobili Variati
+Flag Acconto
+Flag Saldo
+Numero Immobili
+Detrazione abitazione
+principale ***
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+1189
+1193
+1194
+1195
+1196
+1197
+1200
+
+4
+1
+1
+1
+1
+3
+15
+
+AN
+NU
+NU
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 112
+Vedi descrizione del CAMPO 113
+Vedi descrizione del CAMPO 114
+Vedi descrizione del CAMPO 115
+Vedi descrizione del CAMPO 116
+Vedi descrizione del CAMPO 117
+Vedi descrizione del CAMPO 118
+
+1215
+1219
+1223
+1227
+1242
+
+4
+4
+4
+15
+15
+
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 119
+Vedi descrizione del CAMPO 120
+Vedi descrizione del CAMPO 121
+Vedi descrizione del CAMPO 122
+Vedi descrizione del CAMPO 123
+
+Codice ente/prov/Comune
+Flag Ravvedimento Operoso
+Flag Immobili Variati
+Flag Acconto
+Flag Saldo
+Numero Immobili
+Detrazione abitazione
+principale ***
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+1257
+1261
+1262
+1263
+1264
+1265
+1268
+
+4
+1
+1
+1
+1
+3
+15
+
+AN
+NU
+NU
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 112
+Vedi descrizione del CAMPO 113
+Vedi descrizione del CAMPO 114
+Vedi descrizione del CAMPO 115
+Vedi descrizione del CAMPO 116
+Vedi descrizione del CAMPO 117
+Vedi descrizione del CAMPO 118
+
+1283
+1287
+1291
+1295
+1310
+
+4
+4
+4
+15
+15
+
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 119
+Vedi descrizione del CAMPO 120
+Vedi descrizione del CAMPO 121
+Vedi descrizione del CAMPO 122
+Vedi descrizione del CAMPO 123
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Riga 3
+
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+Riga 4
+
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+
+Totali Sezione IMU ed Altri Tributi Locali
+
+160
+
+Totale a debito
+
+1325
+
+15
+
+NU
+
+161
+
+Totale a credito
+
+1340
+
+15
+
+NU
+
+162
+
+Segno saldo
+
+1355
+
+1
+
+AN
+
+163
+
+Saldo debito - credito
+
+1356
+
+15
+
+NU
+
+Sezione INAIL
+CAMPO
+Riga 1
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+164
+
+Codice sede
+
+1371
+
+5
+
+NU
+
+165
+
+Codice ditta
+
+1376
+
+8
+
+NU
+
+19
+
+CONTROLLI BLOCCANTI
+
+Vedi tabella Codici Sede relativi
+alla Sezione INAIL
+Obbligatorio
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+1384
+
+2
+
+NU
+
+167
+168
+169
+
+Codice controllo (c.c.) del
+Codice Ditta**
+Numero di riferimento
+Causale
+Importo a debito
+
+1386
+1392
+1393
+
+6
+1
+15
+
+NU
+AN
+NU
+
+170
+
+Importo a credito
+
+1408
+
+15
+
+NU
+
+Codice sede
+Codice ditta
+Codice controllo (c.c.) del
+Codice Ditta**
+Numero di riferimento
+Causale
+Importo a debito
+Importo a credito
+
+1423
+1428
+1436
+
+5
+8
+2
+
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 164
+Vedi descrizione del CAMPO 165
+Vedi descrizione del CAMPO 166
+
+1438
+1444
+1445
+1460
+
+6
+1
+15
+15
+
+NU
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+Vedi descrizione del CAMPO 170
+
+Codice sede
+Codice ditta
+Codice controllo (c.c.) del
+Codice Ditta**
+Numero di riferimento
+Causale
+Importo a debito
+Importo a credito
+
+1475
+1480
+1488
+
+5
+8
+2
+
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 164
+Vedi descrizione del CAMPO 165
+Vedi descrizione del CAMPO 166
+
+1490
+1496
+1497
+1512
+
+6
+1
+15
+15
+
+NU
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+Vedi descrizione del CAMPO 170
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+166
+
+Obbligatorio e congruente con il
+Codice Ditta
+Obbligatorio
+Obbligatorio in alternativa
+all'importo a credito
+Obbligatorio in alternativa
+all'importo a debito
+
+Riga 2
+
+171
+172
+173
+174
+175
+176
+177
+Riga 3
+
+178
+179
+180
+181
+182
+183
+184
+
+Totali Sezione INAIL
+
+185
+
+Totale a debito
+
+1527
+
+15
+
+NU
+
+186
+
+Totale a credito
+
+1542
+
+15
+
+NU
+
+187
+
+Segno saldo
+
+1557
+
+1
+
+AN
+
+188
+
+Saldo debito - credito
+
+1558
+
+15
+
+NU
+
+Sezione Altri Enti previdenziali ed assicurativi
+CAMPO
+
+189
+
+DESCRIZIONE
+
+Codice ente
+
+POSIZIONE CONFIGURAZIONE
+
+1573
+
+4
+
+Riga 1
+
+20
+
+NU
+
+CONTROLLI BLOCCANTI
+
+Se indicato, deve essere un codice
+presente nella "Tabella dei Codici
+altri enti previdenziali ed
+assicurativi", pubblicata sul sito
+internet dell'Agenzia delle Entrate
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+190
+
+Codice sede
+
+1577
+
+5
+
+AN
+
+191
+
+Causale contributo
+
+1582
+
+4
+
+AN
+
+192
+
+Codice posizione**
+
+1586
+
+9
+
+NU
+
+193
+
+Periodo di riferimento da
+
+1595
+
+6
+
+NU
+
+194
+
+Periodo di riferimento a
+
+1601
+
+6
+
+NU
+
+195
+
+Importo a debito
+
+1607
+
+15
+
+NU
+
+196
+
+Importo a credito
+
+1622
+
+15
+
+NU
+
+Codice sede
+Causale contributo
+Codice posizione**
+Periodo di riferimento da
+Periodo di riferimento a
+Importo a debito
+Importo a credito
+
+1637
+1642
+1646
+1655
+1661
+1667
+1682
+
+5
+4
+9
+6
+6
+15
+15
+
+AN
+AN
+NU
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 190
+Vedi descrizione del CAMPO 191
+Vedi descrizione del CAMPO 192
+Vedi descrizione del CAMPO 193
+Vedi descrizione del CAMPO 194
+Vedi descrizione del CAMPO 195
+Vedi descrizione del CAMPO 196
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Obbligatorio, tranne che per l'ente
+0002 (INPDAI). Se richiesto, dovrà
+assumere un valore presente nella
+Tabella delle Sedi relativa all'Ente
+indicato.
+Obbligatorio, dovrà assumere uno
+dei valori previsto nella tabella
+Causali Contributo relativamente
+all'Ente indicato
+Obbligatorio, tranne che per l'ente
+0003 (INPDAP). Se richiesto deve
+essere formalmente corretto.
+Se richiesto dal formalismo
+associato alla Causale Contributo
+utilizzata, deve essere indicato nel
+formato MMAAAA.
+Se richiesto dal formalismo
+associato alla Causale Contributo
+utilizzata, deve essere indicato nel
+formato MMAAAA.
+Se ammesso, congruentemente al
+formalismo previsto per la Causale
+Contributo, è obbligatorio in
+alternativa all'importo a credito.
+Se ammesso, congruentemente al
+formalismo previsto per la Causale
+Contributo, è obbligatorio in
+alternativa all'importo a debito.
+
+Riga 2
+
+197
+198
+199
+200
+201
+202
+203
+
+Totali Sezione Altri Enti previdenziali ed assicurativi
+
+204
+
+Totale a debito
+
+1697
+
+15
+
+NU
+
+205
+
+Totale a credito
+
+1712
+
+15
+
+NU
+
+206
+
+Segno saldo
+
+1727
+
+1
+
+AN
+
+207
+
+Saldo debito - credito
+
+1728
+
+15
+
+NU
+
+Spazio non utilizzato
+208
+
+Filler
+
+1743
+
+50
+
+21
+
+AN
+
+Impostare a spazi
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione IMU) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Saldo Finale
+209
+
+Saldo finale modello F24
+
+1793
+
+15
+
+NU
+
+Deve essere sempre MAGGIORE
+o UGUALE A ZERO e congruente
+con gli importi sopra indicati
+
+Estremi del versamento
+210
+
+Data di versamento
+
+211
+
+Filler
+
+212
+213
+
+Filler
+Filler
+
+1808
+
+8
+
+NU
+
+Obbligatorio nel formato
+GGMMAAAA e congruente con
+quanto indicato sul record M
+
+Spazio non utilizzato
+1816
+
+82
+
+AN
+
+Impostare a spazi
+
+Ultimi tre caratteri di controllo
+1898
+1899
+
+1
+2
+
+22
+
+AN
+AN
+
+Vale sempre "A"
+Impostare i valori esadecimali '0D'
+e '0A'
+(caratteri ASCII 'CR' e 'LF').
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+1
+2
+
+Tipo record
+Codice fiscale contribuente**
+
+1
+2
+
+1
+16
+
+AN
+AN
+
+3
+
+Progressivo modulo
+
+18
+
+8
+
+NU
+
+4
+
+Spazio a disposizione
+dell'utente
+Filler
+Spazio a disposizione
+dell'utente per l'identificazione
+del modello F24
+Filler
+
+26
+
+3
+
+AN
+
+29
+54
+
+25
+20
+
+AN
+AN
+
+impostare a spazi
+
+74
+
+16
+
+AN
+
+impostare a spazi
+
+5
+6
+
+7
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Vale sempre "V"
+Obbligatorio, formalmente corretto
+e congruente con il valore indicato
+sul record M che lo precede
+Progressivo invio all'interno del
+flusso, congruente con il valore
+indicato sul record M che lo
+precede
+
+Identificazione modello
+8
+
+TIPO MODELLO
+
+90
+
+1
+
+AN
+
+Vale sempre 'B' (Modello con
+sezione ACCISE v.2013)
+Dalla posizione 91 alla posizione 1370 il tracciato assume la medesima struttura del Modello IMU v.2013
+(Tipo A).
+
+Sezione Erario
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+9
+
+Codice Ufficio Finanziario *
+
+91
+
+3
+
+AN
+
+10
+
+Codice Atto *
+
+94
+
+11
+
+NU
+
+11
+
+Codice tributo
+
+105
+
+4
+
+AN
+
+12
+
+Numero Certificazione
+
+109
+
+16
+
+AN
+
+CONTROLLI BLOCCANTI
+
+Se richiesto deve assumere uno
+dei valori presenti nelle "Tabelle
+dei codici degli uffici finanziari e
+delle Direzioni Regionali e
+Provinciali". E' obbligatorio nel
+caso in cui nella presente sezione
+viene utilizzato un codice tributo
+che lo richiede.
+Rappresenta l'identificativo
+dell'atto attribuito dall'ente
+percettore. E' obbligatorio nel caso
+in cui nella presente sezione viene
+utilizzato un codice tributo che lo
+richiede.
+
+Riga 1
+
+23
+
+Vedi tabella Tributi Erariali validi
+alla data di versamento (CAMPO
+220)
+E' il numero della certificazione
+relativa al credito utilizzato in
+compensazione, rilasciato dalla
+piattaforma elettronica di
+certificazione. Deve essere
+compilato in corrispondenza
+dell'apposito codice tributo da
+indicare per utilizzare in
+compensazione i crediti certificati.
+Negli altri casi, non deve essere
+compilato.
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+13
+
+Rateazione/Regione/Provincia
+
+POSIZIONE CONFIGURAZIONE
+
+125
+
+4
+
+AN
+
+CONTROLLI BLOCCANTI
+
+14
+
+Anno di Riferimento
+
+129
+
+4
+
+NU
+
+15
+
+Importo a debito
+
+133
+
+15
+
+NU
+
+16
+
+Importo a credito
+
+148
+
+15
+
+NU
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+163
+167
+183
+187
+191
+206
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+221
+225
+241
+245
+249
+264
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+279
+283
+299
+303
+307
+322
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+337
+341
+357
+361
+365
+380
+
+4
+16
+4
+4
+15
+15
+
+AN
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+
+Codice tributo
+
+395
+
+4
+
+AN
+
+Vedi descrizione del CAMPO 11
+
+Vedi formalismo su tabella tributi;
+Nel caso sia prevista l'indicazione
+di un codice regione o di una sigla
+provincia, occorre impostare nei
+primi due byte a sinistra 00
+(zero+zero) e nei restanti due byte
+a destra il codice previsto, avendo
+cura di indicare i codici numerici
+minori di 10 con lo 0 (zero) iniziale
+(es. 0001=Regione Abruzzo,
+00RM=Provincia di Roma)
+Se è richiesta indicazione dell'anno
+il formato è AAAA, altrimenti vale
+0000
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Riga 2
+
+17
+18
+19
+20
+21
+22
+Riga 3
+
+23
+24
+25
+26
+27
+28
+Riga 4
+
+29
+30
+31
+32
+33
+34
+Riga 5
+
+35
+36
+37
+38
+39
+40
+Riga 6
+
+41
+
+24
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+42
+43
+44
+45
+46
+
+Numero Certificazione
+Rateazione/Regione/Provincia
+Anno di Riferimento
+Importo a debito
+Importo a credito
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+399
+415
+419
+423
+438
+
+16
+4
+4
+15
+15
+
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+Vedi descrizione del CAMPO 16
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Totali Sezione Erario
+
+47
+
+Totale a debito
+
+453
+
+15
+
+NU
+
+48
+
+Totale a credito
+
+468
+
+15
+
+NU
+
+49
+
+Segno saldo
+
+483
+
+1
+
+AN
+
+50
+
+Saldo debito - credito
+
+484
+
+15
+
+NU
+
+Sezione INPS
+CAMPO
+Riga 1
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+51
+
+Codice sede
+
+499
+
+4
+
+NU
+
+52
+
+Causale contributo
+
+503
+
+4
+
+AN
+
+53
+
+Matricola INPS **
+
+507
+
+17
+
+AN
+
+54
+
+Periodo di riferimento da
+
+524
+
+6
+
+NU
+
+55
+
+Periodo di riferimento a
+
+530
+
+6
+
+NU
+
+56
+
+Importo a debito
+
+536
+
+15
+
+NU
+
+57
+
+Importo a credito
+
+551
+
+15
+
+NU
+
+Codice sede
+Causale contributo
+Matricola INPS **
+
+566
+570
+574
+
+4
+4
+17
+
+NU
+AN
+AN
+
+CONTROLLI BLOCCANTI
+
+Obbligatorio, deve essere un
+codice presente sulla tabella SEDI
+INPS
+Obbligatorio, deve essere un
+codice presente sulla tabella
+CAUSALI CONTRIBUTO
+Dipendente dal formalismo
+previsto per la causale indicata,
+come descritto sul documento
+"Tabella formati matricole e codici"
+Congruente con il formalismo
+previsto per la causale indicata e
+qualora ammesso dovrà essere
+indicato nel formato MMAAAA
+Congruente con il formalismo
+previsto per la causale indicata e
+qualora ammesso dovrà essere
+indicato nel formato MMAAAA
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Riga 2
+
+58
+59
+60
+
+25
+
+Vedi descrizione del CAMPO 51
+Vedi descrizione del CAMPO 52
+Vedi descrizione del CAMPO 53
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+61
+62
+63
+64
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Periodo di riferimento da
+Periodo di riferimento a
+Importo a debito
+Importo a credito
+
+591
+597
+603
+618
+
+6
+6
+15
+15
+
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 54
+Vedi descrizione del CAMPO 55
+Vedi descrizione del CAMPO 56
+Vedi descrizione del CAMPO 57
+
+Codice sede
+Causale contributo
+Matricola INPS **
+Periodo di riferimento da
+Periodo di riferimento a
+Importo a debito
+Importo a credito
+
+633
+637
+641
+658
+664
+670
+685
+
+4
+4
+17
+6
+6
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 51
+Vedi descrizione del CAMPO 52
+Vedi descrizione del CAMPO 53
+Vedi descrizione del CAMPO 54
+Vedi descrizione del CAMPO 55
+Vedi descrizione del CAMPO 56
+Vedi descrizione del CAMPO 57
+
+Codice sede
+Causale contributo
+Matricola INPS **
+Periodo di riferimento da
+Periodo di riferimento a
+Importo a debito
+Importo a credito
+
+700
+704
+708
+725
+731
+737
+752
+
+4
+4
+17
+6
+6
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 51
+Vedi descrizione del CAMPO 52
+Vedi descrizione del CAMPO 53
+Vedi descrizione del CAMPO 54
+Vedi descrizione del CAMPO 55
+Vedi descrizione del CAMPO 56
+Vedi descrizione del CAMPO 57
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Riga 3
+
+65
+66
+67
+68
+69
+70
+71
+Riga 4
+
+72
+73
+74
+75
+76
+77
+78
+
+Totali Sezione INPS
+
+79
+
+Totale a debito
+
+767
+
+15
+
+NU
+
+80
+
+Totale a credito
+
+782
+
+15
+
+NU
+
+81
+
+Segno saldo
+
+797
+
+1
+
+AN
+
+82
+
+Saldo debito - credito
+
+798
+
+15
+
+NU
+
+Sezione Regioni
+CAMPO
+Riga 1
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+83
+
+Codice regione
+
+813
+
+2
+
+NU
+
+84
+
+Codice tributo
+
+815
+
+4
+
+AN
+
+85
+
+Rateazione
+
+819
+
+4
+
+AN
+
+86
+
+Anno riferimento
+
+823
+
+4
+
+NU
+
+26
+
+CONTROLLI BLOCCANTI
+
+Vedi tabella T0 Codici delle
+Regione e delle Province
+Autonome
+Vedi tabella Tributi Regionali validi
+alla data di versamento (CAMPO
+220)
+Nel formato previsto per il tributo
+indicato
+Se è richiesta indicazione dell'anno
+il formato è AAAA, altrimenti vale
+0000
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+87
+
+Importo a debito
+
+827
+
+15
+
+NU
+
+88
+
+Importo a credito
+
+842
+
+15
+
+NU
+
+Codice regione
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+857
+859
+863
+867
+871
+886
+
+2
+4
+4
+4
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 83
+Vedi descrizione del CAMPO 84
+Vedi descrizione del CAMPO 85
+Vedi descrizione del CAMPO 86
+Vedi descrizione del CAMPO 87
+Vedi descrizione del CAMPO 88
+
+Codice regione
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+901
+903
+907
+911
+915
+930
+
+2
+4
+4
+4
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 83
+Vedi descrizione del CAMPO 84
+Vedi descrizione del CAMPO 85
+Vedi descrizione del CAMPO 86
+Vedi descrizione del CAMPO 87
+Vedi descrizione del CAMPO 88
+
+Codice regione
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+945
+947
+951
+955
+959
+974
+
+2
+4
+4
+4
+15
+15
+
+NU
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 83
+Vedi descrizione del CAMPO 84
+Vedi descrizione del CAMPO 85
+Vedi descrizione del CAMPO 86
+Vedi descrizione del CAMPO 87
+Vedi descrizione del CAMPO 88
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente
+con il formalismo previsto per il
+tributo indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Riga 2
+
+89
+90
+91
+92
+93
+94
+Riga 3
+
+95
+96
+97
+98
+99
+100
+Riga 4
+
+101
+102
+103
+104
+105
+106
+
+Totali Sezione Regioni
+
+107
+
+Totale a debito
+
+989
+
+15
+
+NU
+
+108
+
+Totale a credito
+
+1004
+
+15
+
+NU
+
+109
+
+Segno saldo
+
+1019
+
+1
+
+AN
+
+110
+
+Saldo debito - credito
+
+1020
+
+15
+
+NU
+
+Sezione IMU ed Altri Tributi Locali
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+27
+
+CONTROLLI BLOCCANTI
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Identificativo Operazione
+
+1035
+
+18
+
+AN
+
+Rappresenta l'identificativo
+dell'operazione di versamento
+attribuito dall'ente locale e deve
+essere indicato qualora richiesto e
+comunicato dall'ente medesimo.
+Può essere indicato solo per quei
+tributi che lo prevedono.
+
+112
+
+Codice ente/prov/Comune
+
+1053
+
+4
+
+AN
+
+113
+
+Flag Ravvedimento Operoso
+
+1057
+
+1
+
+NU
+
+114
+
+Flag Immobili Variati
+
+1058
+
+1
+
+NU
+
+115
+
+Flag Acconto
+
+1059
+
+1
+
+NU
+
+116
+
+Flag Saldo
+
+1060
+
+1
+
+NU
+
+117
+118
+
+Numero Immobili
+Detrazione abitazione
+principale ***
+
+1061
+1064
+
+3
+15
+
+NU
+NU
+
+119
+
+Codice tributo
+
+1079
+
+4
+
+AN
+
+120
+
+Rateazione
+
+1083
+
+4
+
+AN
+
+121
+
+Anno riferimento
+
+1087
+
+4
+
+NU
+
+122
+
+Importo a debito
+
+1091
+
+15
+
+NU
+
+123
+
+Importo a credito
+
+1106
+
+15
+
+NU
+
+Vedi tabelle Codici Enti Locali,
+Sigle Province o Codici catastali
+dei Comuni, in relazione al Codice
+Tributo indicato (CAMPO 119)
+(solo per tributi che lo richiedono)
+vale 1 se SI
+(solo per tributi che lo richiedono)
+vale 1 se SI
+(solo per tributi che lo richiedono)
+vale 1 se SI
+(solo per tributi che lo richiedono)
+vale 1 se SI
+se richiesto è obbligatorio
+Congruente al formalismo previsto
+per il tributo indicato, se richiesto è
+obbligatorio. Esso è indicabile su
+di una sola riga all'interno della
+sezione Enti Locali.
+Vedi tabella Tributi per Enti Locali
+validi alla data di versamento
+(campo 220)
+Congruente con il formalismo
+relativo al codice tributo indicato
+Se è richiesta indicazione dell'anno
+il formato è AAAA, altrimenti vale
+0000
+Se ammesso, congruentemente al
+formalismo previsto per il tributo
+indicato, è obbligatorio in
+alternativa all'importo a credito
+Se ammesso, congruentemente al
+formalismo previsto per il tributo
+indicato, è obbligatorio in
+alternativa all'importo a debito
+
+Codice ente/prov/Comune
+Flag Ravvedimento Operoso
+Flag Immobili Variati
+Flag Acconto
+Flag Saldo
+Numero Immobili
+Detrazione abitazione
+principale ***
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+
+1121
+1125
+1126
+1127
+1128
+1129
+1132
+
+4
+1
+1
+1
+1
+3
+15
+
+AN
+NU
+NU
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 112
+Vedi descrizione del CAMPO 113
+Vedi descrizione del CAMPO 114
+Vedi descrizione del CAMPO 115
+Vedi descrizione del CAMPO 116
+Vedi descrizione del CAMPO 117
+Vedi descrizione del CAMPO 118
+
+1147
+1151
+1155
+1159
+
+4
+4
+4
+15
+
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 119
+Vedi descrizione del CAMPO 120
+Vedi descrizione del CAMPO 121
+Vedi descrizione del CAMPO 122
+
+111
+
+Riga 1
+
+Riga 2
+
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+
+28
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+135
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Importo a credito
+
+1174
+
+15
+
+NU
+
+Vedi descrizione del CAMPO 123
+
+Codice ente/prov/Comune
+Flag Ravvedimento Operoso
+Flag Immobili Variati
+Flag Acconto
+Flag Saldo
+Numero Immobili
+Detrazione abitazione
+principale ***
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+1189
+1193
+1194
+1195
+1196
+1197
+1200
+
+4
+1
+1
+1
+1
+3
+15
+
+AN
+NU
+NU
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 112
+Vedi descrizione del CAMPO 113
+Vedi descrizione del CAMPO 114
+Vedi descrizione del CAMPO 115
+Vedi descrizione del CAMPO 116
+Vedi descrizione del CAMPO 117
+Vedi descrizione del CAMPO 118
+
+1215
+1219
+1223
+1227
+1242
+
+4
+4
+4
+15
+15
+
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 119
+Vedi descrizione del CAMPO 120
+Vedi descrizione del CAMPO 121
+Vedi descrizione del CAMPO 122
+Vedi descrizione del CAMPO 123
+
+Codice ente/prov/Comune
+Flag Ravvedimento Operoso
+Flag Immobili Variati
+Flag Acconto
+Flag Saldo
+Numero Immobili
+Detrazione abitazione
+principale ***
+Codice tributo
+Rateazione
+Anno riferimento
+Importo a debito
+Importo a credito
+
+1257
+1261
+1262
+1263
+1264
+1265
+1268
+
+4
+1
+1
+1
+1
+3
+15
+
+AN
+NU
+NU
+NU
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 112
+Vedi descrizione del CAMPO 113
+Vedi descrizione del CAMPO 114
+Vedi descrizione del CAMPO 115
+Vedi descrizione del CAMPO 116
+Vedi descrizione del CAMPO 117
+Vedi descrizione del CAMPO 118
+
+1283
+1287
+1291
+1295
+1310
+
+4
+4
+4
+15
+15
+
+AN
+AN
+NU
+NU
+NU
+
+Vedi descrizione del CAMPO 119
+Vedi descrizione del CAMPO 120
+Vedi descrizione del CAMPO 121
+Vedi descrizione del CAMPO 122
+Vedi descrizione del CAMPO 123
+
+1325
+
+15
+
+NU
+
+Riga 3
+
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+Riga 4
+
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+
+Totali Sezione IMU ed Altri Tributi Locali
+
+160
+
+Totale a debito
+
+Deve corrispondere alla somma
+dei campi "Importo a debito" della
+presente sezione
+1340
+15
+161
+Totale a credito
+NU
+Deve corrispondere alla somma
+dei campi "Importo a credito" della
+presente sezione
+1355
+1
+162
+Segno saldo
+AN
+Può assumere i seguenti valori:
+" " (spazio) se la sezione non è
+utilizzata;
+"N" se il totale credito è superiore
+al totale debito;
+"P" se il totale debito è superiore o
+uguale al totale credito.
+1356
+15
+163
+Saldo debito - credito
+NU
+Congruente con la differenza, in
+valore assoluto, del debito meno il
+credito
+Dalla posizione 1371 alla posizione 1792 il tracciato assume una struttura diversa a seconda del tipo
+modello:
+- in caso di Modello IMU v.2013 (Tipo A), sono presenti le sezioni INAIL ed Altri Enti;
+- in caso di Modello ACCISE v.2013 (Tipo B) è presente la sezione ACCISE.
+
+Sezione ACCISE ed altri versamenti non ammessi in compensazione
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+29
+
+CONTROLLI BLOCCANTI
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+164
+
+Codice Ufficio Finanziario *
+
+1371
+
+3
+
+AN
+
+165
+
+Codice Atto *
+
+1374
+
+11
+
+NU
+
+Riga 1
+166
+
+Codice Ente
+
+1385
+
+2
+
+AN
+
+167
+
+Sigla Provincia
+
+1387
+
+2
+
+AN
+
+168
+
+Codice Tributo
+
+1389
+
+4
+
+AN
+
+169
+
+Codice Identificativo
+
+1393
+
+14
+
+AN
+
+170
+
+Rateazione
+
+1407
+
+4
+
+AN
+
+171
+
+Periodo di Riferimento
+
+1411
+
+6
+
+NU
+
+172
+
+Importo a Debito
+
+1417
+
+15
+
+NU
+
+Può assumere i seguenti valori
+(vedi comunque la tabella
+pubblicata sul sito internet
+dell'Agenzia delle Entrate):
+"D" per pagamenti ACCISE;
+"A" ASSICURAZIONI;
+"G" per i versamenti della CASSA
+GEOMETRI;
+"P" per pagamenti tributi destinati
+all'INPGI;
+"M" per pagamenti tributi destinati
+ai Monopoli di Stato;
+"R" per il pagamento dei RUOLI.
+Congruentemente al formalismo
+previsto per il Codice Tributo
+indicato sulla presente riga, se
+richiesta deve essere una Sigla
+Provincia (v. Tabella delle
+Province Italiane).
+Vedi tabella Tributi Sezione
+ACCISE in relazione all'ente
+indicato sulla presente riga.
+Se richiesto dal Codice Tributo
+indicato, è obbligatorio e deve
+essere indicato nel formato
+specifico per il tributo stesso.
+Congruentemente al formalismo
+previsto per il Codice Tributo
+indicato sulla presente riga.
+Se richiesto dal Codice Tributo
+indicato, è obbligatorio e deve
+essere indicato nel formato
+specifico 00AAAA oppure
+MMAAAA in funzione del
+formalismo previsto dal tributo
+stesso.
+Obbligatorio
+
+Codice Ente
+Sigla Provincia
+Codice Tributo
+Codice Identificativo
+
+1432
+1434
+1436
+1440
+
+2
+2
+4
+14
+
+AN
+AN
+AN
+AN
+
+Vedi descrizione del CAMPO 166
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+
+Riga 2
+173
+174
+175
+176
+
+30
+
+Se richiesto deve assumere uno
+dei valori presenti nelle "Tabelle
+dei codici degli uffici finanziari e
+delle Direzioni Regionali e
+Provinciali". E' obbligatorio nel
+caso in cui nella presente sezione
+viene utilizzato un codice tributo
+che lo richiede.
+Rappresenta l'identificativo
+dell'atto attribuito dall'ente
+percettore. E' obbligatorio nel caso
+in cui nella presente sezione viene
+utilizzato un codice tributo che lo
+richiede.
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+177
+178
+179
+
+Rateazione
+Periodo di Riferimento
+Importo a Debito
+
+1454
+1458
+1464
+
+4
+6
+15
+
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 170
+Vedi descrizione del CAMPO 171
+Vedi descrizione del CAMPO 172
+
+Riga 3
+180
+181
+182
+183
+184
+185
+186
+
+Codice Ente
+Sigla Provincia
+Codice Tributo
+Codice Identificativo
+Rateazione
+Periodo di Riferimento
+Importo a Debito
+
+1479
+1481
+1483
+1487
+1501
+1505
+1511
+
+2
+2
+4
+14
+4
+6
+15
+
+AN
+AN
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 166
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+Vedi descrizione del CAMPO 170
+Vedi descrizione del CAMPO 171
+Vedi descrizione del CAMPO 172
+
+Riga 4
+187
+188
+189
+190
+191
+192
+193
+
+Codice Ente
+Sigla Provincia
+Codice Tributo
+Codice Identificativo
+Rateazione
+Periodo di Riferimento
+Importo a Debito
+
+1526
+1528
+1530
+1534
+1548
+1552
+1558
+
+2
+2
+4
+14
+4
+6
+15
+
+AN
+AN
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 166
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+Vedi descrizione del CAMPO 170
+Vedi descrizione del CAMPO 171
+Vedi descrizione del CAMPO 172
+
+Riga 5
+194
+195
+196
+197
+198
+199
+200
+
+Codice Ente
+Sigla Provincia
+Codice Tributo
+Codice Identificativo
+Rateazione
+Periodo di Riferimento
+Importo a Debito
+
+1573
+1575
+1577
+1581
+1595
+1599
+1605
+
+2
+2
+4
+14
+4
+6
+15
+
+AN
+AN
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 166
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+Vedi descrizione del CAMPO 170
+Vedi descrizione del CAMPO 171
+Vedi descrizione del CAMPO 172
+
+Riga 6
+201
+202
+203
+204
+205
+206
+207
+
+Codice Ente
+Sigla Provincia
+Codice Tributo
+Codice Identificativo
+Rateazione
+Periodo di Riferimento
+Importo a Debito
+
+1620
+1622
+1624
+1628
+1642
+1646
+1652
+
+2
+2
+4
+14
+4
+6
+15
+
+AN
+AN
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 166
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+Vedi descrizione del CAMPO 170
+Vedi descrizione del CAMPO 171
+Vedi descrizione del CAMPO 172
+
+Riga 7
+208
+209
+210
+211
+212
+213
+214
+
+Codice Ente
+Sigla Provincia
+Codice Tributo
+Codice Identificativo
+Rateazione
+Periodo di Riferimento
+Importo a Debito
+
+1667
+1669
+1671
+1675
+1689
+1693
+1699
+
+2
+2
+4
+14
+4
+6
+15
+
+AN
+AN
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 166
+Vedi descrizione del CAMPO 167
+Vedi descrizione del CAMPO 168
+Vedi descrizione del CAMPO 169
+Vedi descrizione del CAMPO 170
+Vedi descrizione del CAMPO 171
+Vedi descrizione del CAMPO 172
+
+1714
+
+15
+
+NU
+
+Congruente con gli importi sopra
+indicati
+
+Saldi di Sezione
+215
+Totale a debito
+
+31
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (modello 2013 con Sezione ACCISE) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+216
+
+Segno saldo
+
+1729
+
+1
+
+AN
+
+217
+218
+
+Saldo debito
+Filler
+
+1730
+1745
+
+15
+48
+
+NU
+AN
+
+219
+
+Saldo finale modello F24
+
+1793
+
+220
+
+Data di versamento
+
+221
+
+Filler
+
+222
+223
+
+Filler
+Filler
+
+CONTROLLI BLOCCANTI
+
+Nel caso in cui la sezione non è
+utilizzata, dovrà assumere il valore
+" " (spazio), altrimenti dovrà
+assumere il valore "P".
+Vale sempre SPAZI
+
+Saldo Finale
+15
+
+NU
+
+Deve essere sempre MAGGIORE
+o UGUALE A ZERO e congruente
+con gli importi sopra indicati
+
+Estremi del versamento
+1808
+
+8
+
+NU
+
+Obbligatorio nel formato
+GGMMAAAA e congruente con
+quanto indicato sul record M
+
+Spazio non utilizzato
+1816
+
+82
+
+AN
+
+Impostare a spazi
+
+Ultimi tre caratteri di controllo
+1898
+1899
+
+1
+2
+
+32
+
+AN
+AN
+
+Vale sempre "A"
+Impostare i valori esadecimali '0D'
+e '0A'
+(caratteri ASCII 'CR' e 'LF').
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+RECORD DI TIPO "V": Dati contabili F24 (pagamenti con Elementi Identificativi) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+1
+2
+
+Tipo record
+Codice fiscale
+contribuente**
+
+1
+2
+
+1
+16
+
+AN
+AN
+
+3
+
+Progressivo modulo
+
+18
+
+8
+
+NU
+
+4
+
+Spazio a disposizione
+dell'utente
+Filler
+Spazio a disposizione
+dell'utente per
+l'identificazione del
+modello F24
+Filler
+
+26
+
+3
+
+AN
+
+29
+54
+
+25
+20
+
+AN
+AN
+
+Impostare a spazi
+
+74
+
+16
+
+AN
+
+Impostare a spazi
+
+TIPO MODELLO
+
+90
+
+5
+6
+
+7
+
+Vale sempre "V"
+Obbligatorio, formalmente corretto e
+congruente con il valore indicato sul
+record M che lo precede
+Progressivo invio all'interno del flusso,
+congruente con il valore indicato sul
+record M che lo precede
+
+Identificazione modello
+8
+
+1
+
+AN
+
+Vale sempre '8' (modello con Elementi
+Identificativi)
+
+Sezione Erario
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+9
+
+Codice ufficio
+finanziario
+
+91
+
+3
+
+AN
+
+10
+
+Codice atto
+
+94
+
+11
+
+NU
+
+11
+
+Tipo
+
+105
+
+1
+
+AN
+
+12
+
+Elementi Identificativi
+
+106
+
+17
+
+AN
+
+13
+
+Codice Tributo
+
+123
+
+4
+
+AN
+
+14
+15
+
+Anno di Riferimento
+Importo a debito
+
+127
+131
+
+4
+15
+
+NU
+NU
+
+Tipo
+
+146
+
+1
+
+AN
+
+CONTROLLI BLOCCANTI
+
+Se richiesto deve assumere uno dei
+valori presenti nelle "Tabelle dei codici
+degli uffici finanziari e delle Direzioni
+Regionali e Provinciali". E' obbligatorio
+nel caso in cui nella presente sezione
+viene utilizzato un codice tributo che lo
+richiede.
+Rappresenta l'identificativo dell'atto
+attribuito dall'ente percettore. E'
+obbligatorio nel caso in cui nella presente
+sezione viene utilizzato un codice tributo
+che lo richiede.
+
+Riga 1
+
+Se la riga è utilizzata, è obbligatorio e
+deve assumere uno dei valori presenti
+all'interno della tabella "Tipi di
+versamento con Elementi Identificativi"
+pubblicata sul sito WEB dell'A.E.
+Deve essere compilato coerentemente
+con il formalismo previsto nella 'Tabella
+dei Codici Tributo versamenti con
+Elementi Identificativi', disponibile sul sito
+WEB dell'A.E.
+Se la riga è utilizzata, è obbligatorio e
+deve assumere uno dei valori indicati
+nella 'Tabella dei Codici Tributo
+versamenti con Elementi Identificativi',
+disponibile sul sito WEB dell'A.E.
+Se la riga è utilizzata, è obbligatorio
+Se la riga è utilizzata, deve essere
+maggiore di ZERO.
+
+Riga 2
+
+16
+
+33
+
+Vedi descrizione del CAMPO 11
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (pagamenti con Elementi Identificativi) ****
+CAMPO
+
+17
+18
+19
+20
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+147
+164
+168
+172
+
+17
+4
+4
+15
+
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+187
+188
+205
+209
+213
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+228
+229
+246
+250
+254
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+269
+270
+287
+291
+295
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+310
+311
+328
+332
+336
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+351
+352
+369
+373
+377
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+392
+393
+410
+414
+418
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+433
+434
+451
+455
+459
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+
+474
+
+1
+
+AN
+
+Vedi descrizione del CAMPO 11
+
+Riga 3
+
+21
+22
+23
+24
+25
+Riga 4
+
+26
+27
+28
+29
+30
+Riga 5
+
+31
+32
+33
+34
+35
+Riga 6
+
+36
+37
+38
+39
+40
+Riga 7
+
+41
+42
+43
+44
+45
+Riga 8
+
+46
+47
+48
+49
+50
+Riga 9
+
+51
+52
+53
+54
+55
+Riga 10
+
+56
+
+34
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (pagamenti con Elementi Identificativi) ****
+CAMPO
+
+57
+58
+59
+60
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+475
+492
+496
+500
+
+17
+4
+4
+15
+
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+515
+516
+533
+537
+541
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+556
+557
+574
+578
+582
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+597
+598
+615
+619
+623
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+638
+639
+656
+660
+664
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+679
+680
+697
+701
+705
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+720
+721
+738
+742
+746
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+761
+762
+779
+783
+787
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+
+802
+
+1
+
+AN
+
+Vedi descrizione del CAMPO 11
+
+Riga 11
+
+61
+62
+63
+64
+65
+Riga 12
+
+66
+67
+68
+69
+70
+Riga 13
+
+71
+72
+73
+74
+75
+Riga 14
+
+76
+77
+78
+79
+80
+Riga 15
+
+81
+82
+83
+84
+85
+Riga 16
+
+86
+87
+88
+89
+90
+Riga 17
+
+91
+92
+93
+94
+95
+Riga 18
+
+96
+
+35
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (pagamenti con Elementi Identificativi) ****
+CAMPO
+
+97
+98
+99
+100
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+803
+820
+824
+828
+
+17
+4
+4
+15
+
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+843
+844
+861
+865
+869
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+884
+885
+902
+906
+910
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+925
+926
+943
+947
+951
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+966
+967
+984
+988
+992
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+1007
+1008
+1025
+1029
+1033
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+1048
+1049
+1066
+1070
+1074
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+1089
+1090
+1107
+1111
+1115
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+
+1130
+
+1
+
+AN
+
+Vedi descrizione del CAMPO 11
+
+Riga 19
+
+101
+102
+103
+104
+105
+Riga 20
+
+106
+107
+108
+109
+110
+Riga 21
+
+111
+112
+113
+114
+115
+Riga 22
+
+116
+117
+118
+119
+120
+Riga 23
+
+121
+122
+123
+124
+125
+Riga 24
+
+126
+127
+128
+129
+130
+Riga 25
+
+131
+132
+133
+134
+135
+Riga 26
+
+136
+
+36
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+RECORD DI TIPO "V": Dati contabili F24 (pagamenti con Elementi Identificativi) ****
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+CONTROLLI BLOCCANTI
+
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+1131
+1148
+1152
+1156
+
+17
+4
+4
+15
+
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+1171
+1172
+1189
+1193
+1197
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+Tipo
+Elementi Identificativi
+Codice Tributo
+Anno di Riferimento
+Importo a debito
+
+1212
+1213
+1230
+1234
+1238
+
+1
+17
+4
+4
+15
+
+AN
+AN
+AN
+NU
+NU
+
+Vedi descrizione del CAMPO 11
+Vedi descrizione del CAMPO 12
+Vedi descrizione del CAMPO 13
+Vedi descrizione del CAMPO 14
+Vedi descrizione del CAMPO 15
+
+151
+
+Totale a Debito
+
+1253
+
+15
+
+NU
+
+152
+153
+154
+
+Filler
+Segno saldo
+Saldo di Sezione
+
+1268
+1283
+1284
+
+15
+1
+15
+
+NU
+AN
+NU
+
+155
+
+Filler
+
+1299
+
+137
+138
+139
+140
+Riga 27
+
+141
+142
+143
+144
+145
+Riga 28
+
+146
+147
+148
+149
+150
+
+Totali di Sezione
+Obbligatorio e maggiore di ZERO. Dovrà
+corrispondere alla somma di valori
+indicati nei campi "Importo a debito"
+Assume il valore '000000000000000'
+Assume sempre il valore "P"
+Assume sempre il valore indicato nel
+"Totale a Debito"
+
+Spazio non utilizzato
+494
+
+AN
+
+Impostare a spazi
+
+Saldo Finale
+Saldo finale modello
+F24
+
+1793
+
+Data di versamento
+
+1808
+
+158
+
+Filler
+
+1816
+
+159
+160
+
+Filler
+Filler
+
+156
+
+15
+
+NU
+
+Assume sempre il valore indicato nel
+"Totale a Debito"
+
+Estremi del versamento
+157
+
+8
+
+NU
+
+Obbligatorio nel formato GGMMAAAA e
+congruente con quanto indicato sul
+record M
+
+Spazio non utilizzato
+82
+
+AN
+
+Impostare a spazi
+
+Ultimi tre caratteri di controllo
+1898
+1899
+
+1
+2
+
+37
+
+AN
+AN
+
+Vale sempre "A"
+Impostare i valori esadecimali '0D' e '0A'
+(caratteri ASCII 'CR' e 'LF').
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+RECORD DI TIPO "Z": Record di coda
+CAMPO
+
+DESCRIZIONE
+
+POSIZIONE CONFIGURAZIONE
+
+Tipo record
+Filler
+Numero record di tipo
+'V'
+Numero record di tipo
+'M'
+
+1
+2
+16
+
+1
+14
+9
+
+AN
+AN
+NU
+
+25
+
+9
+
+NU
+
+5
+
+Filler
+
+34
+
+6
+7
+
+Filler
+Filler
+
+1
+2
+3
+4
+
+CONTROLLI BLOCCANTI
+
+Vale sempre "Z".
+Impostare a spazi
+Numero dei record di tipo V registrati nel
+file
+Vale sempre 1
+
+Spazio non utilizzato
+1864
+
+AN
+
+Impostare a spazi
+
+Ultimi tre caratteri di controllo del record
+1898
+1899
+
+1
+2
+
+38
+
+AN
+AN
+
+Vale sempre "A"
+Impostare i valori esadecimali '0D' e '0A'
+(caratteri ASCII 'CR' e 'LF').
+
+SPECIFICHE TECNICHE PER LA TRASMISSIONE TELEMATICA DEI MODELLI F24 DA
+PARTE DEI CONTRIBUENTI
+
+NOTE
+* Su ciascun Modello F24 (Record V) è possibile indicare una sola coppia di
+Codice Ufficio / Codice Atto.
+E' pertanto necessario utilizzare Record V distinti nel caso in cui più
+Codici Tributo richiedano l'indicazione di coppie distinte di Codice
+Ufficio / Codice Atto.
+In particolare l'utilizzo del Codice Ufficio e/o Codice Atto nella Sezione
+ERARIO ne impedisce l'utilizzabilità all'interno della Sezione ACCISE e
+viceversa.
+** Relativamente ai formalismi dei seguenti dati:
+Codice Fiscale,
+Matricola INPS,
+Codice di Controllo del Codice Ditta dell'INAIL,
+Codice Posizione dell'INPDAI;
+occorre far riferimento alle specifiche tecniche rilasciate dalle
+amministrazioni di competenza.
+
+*** Nella sezione IMU e Altri Tributi Locali la detrazione abitazione
+principale può comparire una sola volta congruentemente al tributo
+indicato.
+Inoltre l'indicazione di un eventuale importo a credito su tributi IMU,
+compatibilmente con il tributo selezionato, prevede la presenza
+obbligatoria di un debito totale sullo stesso comune, di importo uguale o
+superiore al credito indicato.
+**** Tutti i record di tipo "V" posti di seguito al record di tipo "M" dovranno
+essere omogenei per tipologia. Ovvero non potrà essere inoltrato il
+pagamento composto nel seguente modo:
+Record "A" ( Record di Testa );
+Record "M" ( Dati Anagrafici );
+Record "V" ( Tipo IMU 2013);
+Record "V" ( Tipo ACCISE 2013);
+Record "V" ( Tipo Elementi Identificativi);
+..........................
+Record "Z" ( Record di Coda ).
+
+39
+
+

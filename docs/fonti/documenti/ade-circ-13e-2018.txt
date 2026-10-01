@@ -1,0 +1,649 @@
+CIRCOLARE N. 13/E
+
+Direzione Centrale Coordinamento Normativo
+
+Roma, 2 luglio 2018
+
+OGGETTO: Ulteriori chiarimenti in tema di fatturazione elettronica ai sensi
+dell’articolo 1, commi 909 e ss., della legge n. 205 del 27
+dicembre 2017
+
+INDICE
+
+PREMESSA .......................................................................................................................................... 3
+1
+
+FATTURAZIONE ELETTRONICA E CARBURANTI ............................................................ 3
+1.1
+1.2
+1.3
+1.4
+
+CARBURANTI IDONEI AD ALIMENTARE MOTORI DI DIVERSA TIPOLOGIA .................................... 3
+SOGGETTI IDENTIFICATI IN ITALIA .............................................................................................. 5
+FATTURE DIFFERITE ...................................................................................................................... 7
+CESSIONE DI CARBURANTE PER TRATTORI AGRICOLI E FORESTALI: STRUMENTI TRACCIABILI
+DI PAGAMENTO ........................................................................................................................................ 8
+1.5 TERMINI DI TRASMISSIONE DELLE FATTURE AL SISTEMA DI INTERSCAMBIO (SDI) ................... 9
+1.6 MODALITÀ DI INOLTRO DI UNA FATTURA SCARTATA ................................................................ 11
+2
+
+FATTURAZIONE ELETTRONICA ED APPALTI ................................................................ 13
+2.1
+2.2
+2.3
+
+3
+
+CHIARIMENTI IN TEMA DI AMBITO SOGGETTIVO DI APPLICAZIONE.......................................... 13
+COMMITTENTE CONTROLLATO DA UNA PUBBLICA AMMINISTRAZIONE .................................. 14
+AMBITO DI APPLICAZIONE AI CONSORZI.................................................................................... 15
+
+REGISTRAZIONE E CONSERVAZIONE DELLE FATTURE ELETTRONICHE ............. 16
+3.1
+3.2
+3.3
+
+CRITERI DI REGISTRAZIONE ....................................................................................................... 16
+CRITERI DI CONSERVAZIONE ...................................................................................................... 17
+SERVIZIO DI CONSERVAZIONE DELL’AGENZIA DELLE ENTRATE............................................... 18
+
+2
+
+Premessa
+In data 28 giugno 2018 è stato pubblicato in gazzetta ufficiale il decreto-legge n.
+79, entrato in vigore il giorno immediatamente successivo.
+Tale decreto, intervenendo sull’articolo 1, commi 917, lettera a), e 927 della
+legge n. 205 del 27 dicembre 2017 (legge di bilancio 2018), ha:
+- rinviato al 1° gennaio 2019 l’obbligo di emissione della fattura elettronica per le
+cessioni di carburante per autotrazione da parte degli esercenti gli impianti di
+distribuzione stradale (cfr. l’articolo 1, comma 1, lettera a);
+- sino al 31 dicembre 2018, mantenuto per le medesime cessioni le modalità di
+documentazione precedentemente in essere, previste dal regolamento di cui al
+decreto del Presidente della Repubblica 10 novembre 1997, n. 444 e dall’articolo
+12 del decreto-legge 30 dicembre 1997, n. 457, nonché dal relativo decreto di
+attuazione (si veda l’articolo 1, comma 1, lettera b).
+Alla luce del provvedimento in ultimo emanato e delle richieste di chiarimenti
+giunte da più parti in ordine ai limiti oggettivi e soggettivi relativi
+all’applicazione delle novità introdotte dalla legge n. 205 del 2017, si forniscono
+di seguito le risposte ai principali quesiti pervenuti dalle Associazioni di
+categoria e dai singoli contribuenti.
+
+1
+1.1
+
+Fatturazione elettronica e carburanti
+Carburanti idonei ad alimentare motori di diversa tipologia
+
+Si chiede di chiarire se l’obbligo di fatturazione elettronica introdotto dalla legge
+di bilancio 2018 riguardi anche i carburanti idonei ad alimentare motori di
+diversa tipologia.
+
+3
+
+Risposta
+Secondo i chiarimenti già forniti nella circolare n. 8/E del 2018 (cfr. il punto 1
+della stessa) e nel provvedimento del direttore dell’Agenzia delle entrate prot. n.
+89757 del 30 aprile 2018 (si vedano le relative motivazioni), sono da
+documentare con fattura elettronica tutte le cessioni di benzina e gasolio,
+effettuate tra soggetti passivi d’imposta - con esclusione, ex articolo 1, comma
+909, della legge n. 205 del 2017, delle vendite operate da chi rientra nel
+cosiddetto “regime di vantaggio” di cui all’articolo 27, commi 1 e 2, del decretolegge 6 luglio 2011, n. 98, convertito, con modificazioni, dalla legge 15 luglio
+2011, n. 111, e da coloro che applicano il regime forfettario di cui all’articolo 1,
+commi da 54 a 89, della legge 23 dicembre 2014, n. 190, nonché, sino al 31
+dicembre 2018, di quelle presso gli impianti stradali di distribuzione - destinati
+ad essere utilizzati come carburanti per motori per uso autotrazione.
+Tale modalità di documentazione riguarda qualsiasi cessione dei beni indicati e,
+quindi, anche quelle intermedie (ad esempio l’acquisto del singolo distributore da
+un grossista).
+Vale evidenziare che, per espressa previsione legislativa (si veda l’articolo 1,
+comma 918, della legge n. 205 del 2017), sono la tipologia di carburante ed il suo
+utilizzo ad imporre l’obbligo di fatturazione elettronica, così che ne sono escluse
+le cessioni di benzina e gasolio diversi da quelli destinati all’uso in motori per
+autotrazione, ossia, diversi da quelli impiegati nei veicoli (di qualunque
+tipologia) che circolano normalmente su strada (per l’identificazione di questi
+ultimi si vedano, a titolo esemplificativo, gli articoli 53, 54 e 55 del decreto
+legislativo 30 aprile 1992, n. 285, c.d. “Codice della strada”). Saranno dunque
+esclusi dai nuovi obblighi, ad esempio, i rifornimenti di carburante per
+aeromobili ed imbarcazioni.
+Per identificare con puntualità le tipologie di benzina e gasolio da riportare nella
+fattura elettronica, le specifiche tecniche allegate al provvedimento del direttore
+dell’Agenzia delle entrate del 30 aprile 2018 n. 89757 definiscono i seguenti
+
+4
+
+codici di riferimento per i prodotti energetici della tabella TA13, pubblicata sul
+sito dell’Agenzia delle dogane: “27101245” (per vendita di Benzina senza
+piombo ottani => 95 e < 98); “27101249” (per vendita di Benzina senza piombo
+ottani => 98); “27101943” (per vendita di Olii da gas aventi tenore, in peso, di
+zolfo inferiore o uguale a 0,001%); “27102011” (per vendita di Olio da gas
+denaturato tenore in peso di zolfo nell’olio da gas =< 0,001%).
+Laddove, al momento della cessione, non vi sia certezza sull’impiego di una
+determinata tipologia di carburante rientrante tra quelle sopra richiamate –
+astrattamente idoneo ad essere utilizzato in motori tra loro diversi (si pensi al
+gasolio, che può essere impiegato tanto per il funzionamento del motore di
+un’imbarcazione/aeromobile, quanto per quello di un auto/motoveicolo) – le
+esigenze più volte espresse di presidio e contrasto ai fenomeni di evasione e di
+frode IVA (si veda la già citata circolare n. 8/E del 2018) impongono che la
+fatturazione sia elettronica.
+
+1.2
+
+Soggetti identificati in Italia
+
+Alla luce della decisione di esecuzione (UE) 2018/593 si chiede di chiarire se le
+operazioni effettuate da e verso i soggetti identificati in Italia siano da
+documentare con fattura elettronica.
+Risposta
+Con la decisione di esecuzione (UE) 2018/593 del Consiglio del 16 aprile 2018,
+l’Italia è stata autorizzata ad applicare misure speciali di deroga agli articoli 218
+e 232 della direttiva 2006/112/CE, al fine di consentire un’applicazione della
+fatturazione elettronica obbligatoria generalizzata sul territorio nazionale.
+In particolare, l’Italia è stata autorizzata ad accettare come fatture documenti o
+messaggi solo in formato elettronico se sono emessi da soggetti passivi
+“stabiliti” sul territorio italiano, diversi da soggetti che beneficiano della
+
+5
+
+franchigia delle piccole imprese, nonché a disporre che l’uso delle fatture
+elettroniche emesse da soggetti stabiliti sul territorio italiano non sia subordinato
+all’accordo del destinatario.
+L’articolo 1, comma 3, del decreto legislativo 5 agosto 2015, n. 127, così come
+modificato dall’articolo 1, comma 909, della legge n. 205 del 2017, dispone che
+l’obbligo di fatturazione elettronica riguarda «le cessioni di beni e le prestazioni
+di servizi effettuate tra soggetti residenti, stabiliti o identificati nel territorio
+dello Stato»).
+Si osserva, peraltro, che la stessa norma indica che i soggetti precedenti
+trasmettono telematicamente all’Agenzia delle entrate i dati relativi alle
+operazioni di cessione di beni e di prestazione di servizi effettuate e ricevute
+verso e da soggetti non stabiliti nel territorio dello Stato.
+Relativamente al trattamento dei soggetti identificati in Italia a fini IVA, tuttavia,
+l’articolo 11, paragrafo 3, del Regolamento di esecuzione (UE) n. 282/2011 del
+Consiglio, del 15 marzo 2011, recante disposizioni di applicazione della direttiva
+2006/112/CE relativa al sistema comune di imposta sul valore aggiunto statuisce
+che «il fatto di disporre di un numero di identificazione IVA non è di per sé
+sufficiente per ritenere che un soggetto passivo abbia una stabile
+organizzazione».
+Ne consegue che, a sensi della normativa comunitaria, tra i soggetti “stabiliti”
+non possono essere inclusi i soggetti non residenti meramente identificati, a
+meno che non possa essere dimostrata l’esistenza di una stabile organizzazione.
+La norma nazionale sulla fatturazione elettronica deve essere, quindi, interpretata
+in senso conforme alla decisione di autorizzazione, oltre che alla direttiva IVA e
+ai principi di proporzionalità e neutralità fiscale. Pertanto, in base alla decisione
+di deroga solo i soggetti stabiliti possono essere obbligati ad emettere fattura
+elettronica.
+Di converso, la decisione non richiede che il soggetto ricevente la fattura debba
+
+6
+
+essere stabilito sul territorio nazionale.
+Non è, quindi, incompatibile con la decisione di deroga (e con il principio di
+proporzionalità) la possibilità di indirizzare una fattura elettronica a soggetti non
+residenti identificati in Italia, sempre che a questi sia assicurata la possibilità di
+ottenere copia cartacea della fattura ove ne facciano richiesta.
+In conclusione, le operazioni tra soggetti diversi - ad esempio cessioni da e verso
+soggetti comunitari ed extracomunitari (fra i quali vanno annoverati, in base
+all’articolo 6 della direttiva 2006/112/CE e all’articolo 7 del d.P.R. n. 633 del
+1972 che vi ha dato attuazione nel nostro ordinamento, coloro che risiedono nei
+comuni di Livigno e di Campione d’Italia) - non rientrano nell’obbligo di
+fatturazione elettronica, ma, semmai, in quello previsto dall’articolo 1, comma 3bis, del medesimo D.Lgs. n. 127 del 2015 e, prima, dall’articolo 21 del decretolegge 31 maggio 2010, n. 78, ossia costituiranno oggetto di trasmissione
+telematica all’Agenzia delle entrate dei dati delle relative fatture.
+
+1.3
+
+Fatture differite
+
+Si chiede se le cessioni di gasolio e benzina destinati ad essere utilizzati come
+carburanti per motori ad uso autotrazione, effettuate entro il 30 giugno 2018, ma
+legittimamente documentate dopo il 1° luglio 2018 (tipicamente ex articolo 21,
+comma 4, lettera a), del decreto del Presidente della Repubblica 26 ottobre 1972,
+n. 633), rientrino negli obblighi di fatturazione elettronica.
+Risposta
+L’articolo 1, comma 917, della legge n. 205 del 2017, in tema di cessioni di
+carburanti – diverse, almeno sino al 31 dicembre 2018, da quelle effettuate presso
+gli impianti stradali di distribuzione - e prestazioni rese da soggetti subappaltatori
+e subcontraenti della filiera delle imprese operanti nel quadro di un contratto di
+appalto con la pubblica amministrazione, ha previsto che le nuove disposizioni
+sulla fatturazione elettronica si applicano «alle fatture emesse a partire dal 1°
+
+7
+
+luglio 2018».
+Per determinare gli obblighi di forma, dunque, occorre tenere in considerazione il
+momento di emissione del documento.
+Ne deriva che, nei citati ambiti, seppure riguardanti operazioni effettuate in epoca
+precedente, tutte le fatture emesse a far data dal 1° luglio 2018 - come quelle c.d.
+“differite”, emesse, ex articolo 21, comma 4, lettera a), del d.P.R. n. 633 del
+1972, entro il 15 luglio 2018 in riferimento al mese di giugno 2018 - dovranno
+essere elettroniche e veicolate tramite il Sistema di Interscambio (SdI).
+
+1.4
+
+Cessione di carburante per trattori agricoli e forestali: strumenti
+
+tracciabili di pagamento
+Si chiede se la cessione di carburante per trattori agricoli e forestali rientri tra
+quelle da documentare con fattura elettronica ed il relativo pagamento, ai fini
+della detraibilità IVA e della deducibilità della spesa sostenuta, sia da effettuare
+con strumenti tracciabili ai sensi dell’articolo 1, commi 909 e ss., della legge n.
+205 del 2017.
+Risposta
+Sull’obbligo di fatturazione elettronica per le cessioni di carburanti si rinvia alle
+precisazioni già fornite in risposta al quesito 1.1, alla luce delle quali benzina e
+gasolio destinati ad essere utilizzati per veicoli agricoli di varia tipologia (tra cui i
+trattori agricoli e forestali, nonché, in generale, le macchine individuate
+nell’articolo 57 del codice della strada) devono ritenersi esclusi dall’applicazione
+delle nuove disposizioni.
+Quanto alla deducibilità del costo d’acquisto ed alla detraibilità della relativa
+IVA, valgono le disposizioni di ordine generale dettate per tutti i carburanti (cfr.
+la circolare n. 8/E del 2018, punto 2), nonché l’articolo 1, comma 1, lettera b),
+ultimo periodo, del decreto-legge n. 79 del 2018) e, quindi, l’obbligo di
+
+8
+
+procedere
+
+al
+
+pagamento
+
+utilizzando
+
+gli
+
+strumenti
+
+individuati
+
+con
+
+il
+
+provvedimento del direttore dell’Agenzia delle entrate prot. n. 73203 del 4 aprile
+2018.
+
+1.5
+
+Termini di trasmissione delle fatture al Sistema di Interscambio (SdI)
+
+Considerate le norme esistenti e le modalità di fatturazione elettronica tramite
+SdI specificate nel provvedimento del direttore dell’Agenzia delle entrate prot. n.
+89757 del 30 aprile 2018, nonché nelle regole tecniche allo stesso allegate, si
+chiedono chiarimenti su quale sia il termine ultimo di trasmissione al SdI delle
+fatture che documentano le cessioni di carburante.
+Risposta
+Va in primo luogo evidenziato che le disposizioni in tema di fatturazione
+elettronica, sia su base volontaria che obbligatoria, non hanno in alcun modo
+derogato ai termini di emissione dei documenti, che restano ancorati, ex articolo
+21, comma 4, del d.P.R. n. 633 del 1972, al momento di effettuazione
+dell’operazione (nel caso in esame, la cessione del carburante) e di esigibilità
+dell’imposta, secondo la previsione dell’articolo 6 del medesimo d.P.R..
+Ne deriva che, fatte salve le eccezioni contenute nello stesso articolo 21, comma
+4 (si pensi alle fatture c.d. “differite”, ovvero, in generale, sempre in tema di
+eccezioni, a quelle riconducibili all’articolo 73 del d.P.R. n. 633 del 1972),
+l’emissione della fattura dovrà essere contestuale alla cessione del carburante.
+La contestualità - ossia l’emissione entro le ore 24 del medesimo giorno della
+cessione (cfr., in questo senso, le circolari n. 42 del 31 ottobre 1974 e n. 225/E
+del 16 settembre 1996) - deve, tuttavia, essere valutata alla luce del processo,
+legislativamente e tecnicamente imposto, per la creazione e trasmissione del
+documento al SdI.
+In questo senso, considerato che la fattura elettronica «si ha per emessa all’atto
+
+9
+
+della sua consegna, spedizione, trasmissione o messa a disposizione del
+cessionario o committente» (così l’articolo 21, comma 1, del d.P.R. n. 633 del
+1972), non è improbabile che un iter di emissione, pur tempestivamente avviato,
+si concluda oltre le ore 24 del medesimo giorno.
+Proprio in ragione di tale possibilità, visti anche i controlli che il SdI deve
+effettuare sui documenti dallo stesso veicolati, nonché le variabili operative
+legate ai canali di invio/ricezione, nel punto 4.1 del provvedimento del direttore
+dell’Agenzia delle entrate prot. n. 89757 del 30 aprile 2018, si è specificato che
+«La data di emissione della fattura elettronica è la data riportata nel campo
+“Data” della sezione “Dati Generali” del file della fattura elettronica, che
+rappresenta una delle informazioni obbligatorie ai sensi degli articoli 21 e 21bis
+del decreto del Presidente della Repubblica 26 ottobre 1972, n. 633».
+In altri termini, inviato tempestivamente al SdI il documento, in assenza di un
+suo scarto – che comporta comunque la possibilità di un nuovo inoltro nei 5
+giorni successivi (si veda il quesito successivo) – i tempi di elaborazione (ossia
+consegna/messa
+
+a
+
+disposizione
+
+del
+
+cessionario/committente)
+
+diventano
+
+marginali, assumendo rilievo, ai fini dell’emissione della fattura immediata, la
+sola data di formazione e contestuale invio al SdI, riportata nel campo indicato.
+Tuttavia, in fase di prima applicazione delle nuove disposizioni , considerato
+anche il necessario adeguamento tecnologico richiesto alla platea di soggetti
+coinvolti e le connesse difficoltà organizzative, si ritiene che il file fattura,
+predisposto nel rispetto delle regole tecniche previste dal provvedimento del
+direttore dell’Agenzia delle entrate del 30 aprile 2018 ed inviato con un minimo
+ritardo, comunque tale da non pregiudicare la corretta liquidazione dell’imposta,
+costituisca violazione non punibile ai sensi dell’articolo 6, comma 5-bis, del
+decreto legislativo 18 dicembre 1997, n. 472.
+
+10
+
+1.6
+
+Modalità di inoltro di una fattura scartata
+
+Si chiede se, a fronte dello scarto di una fattura da parte del SdI, si possa
+procedere ad un nuovo inoltro del medesimo documento con un numero diverso
+e stessa data di quello iniziale.
+Risposta
+Secondo quanto indicato nel provvedimento del direttore dell’Agenzia delle
+entrate prot. n. 89757 del 30 aprile 2018, il SdI, per ogni file della fattura
+elettronica o lotto di fatture elettroniche correttamente ricevuti, effettua
+successivi controlli del file stesso.
+In caso di mancato superamento dei controlli viene recapitata - entro 5 giorni una “ricevuta di scarto” del file al soggetto trasmittente sul medesimo canale con
+cui è stato inviato il file al SdI (cfr. il punto 2.4 del provvedimento).
+Allo stesso modo, la fattura, pur formalmente corretta, viene scartata laddove si
+utilizzi un codice destinatario inesistente (si veda il punto 3.4 del medesimo
+provvedimento).
+In tali ipotesi la fattura elettronica (o le fatture del lotto) di cui al file scartato dal
+SdI si considera non emessa. Circostanza che, qualora il cedente/prestatore abbia
+effettuato la registrazione contabile del documento, comporta - se necessario una variazione contabile valida ai soli fini interni, senza la trasmissione di alcuna
+nota di variazione al SdI (si veda il punto 6.3 del citato provvedimento prot. n.
+89757/2018).
+In tutti i casi, a fronte della mancata emissione della fattura, è necessario
+documentare correttamente l’operazione sottesa.
+In questo senso, valgono i principi generali in materia, legati non solo alla tenuta
+di una ordinata contabilità, ma anche ai requisiti legislativamente previsti per
+l’emissione e la registrazione dei documenti in esame (cfr., ad esempio, gli
+articoli 21 e 23 del d.P.R. n. 633 del 1972).
+
+11
+
+Si ritiene, dunque, fermi i chiarimenti già resi con la risoluzione n. 1/E del 10
+gennaio 2013 sull’identificazione univoca del documento - nonché quelli della
+risposta al quesito precedente - che la fattura elettronica, relativa al file scartato
+dal SdI, vada preferibilmente emessa (ossia nuovamente inviata tramite SdI entro
+cinque giorni dalla notifica di scarto) con la data ed il numero del documento
+originario.
+Peraltro, come indicato nelle specifiche tecniche allegate al richiamato
+provvedimento del direttore dell’Agenzia delle entrate prot. n. 89757/2018 (cfr.
+pag. 142 della versione 1.1 aggiornata al 7 giugno 2018), le verifiche di unicità
+della fattura, effettuate dal SdI al fine di intercettare ed impedire l’inoltro di un
+documento già trasmesso ed elaborato, comporteranno lo scarto della fattura che
+rechi dati (identificativo cedente/prestatore, anno della data fattura, numero
+fattura) coincidenti con quelli di una fattura precedentemente trasmessa, solo ove
+non sia stata inviata al soggetto trasmittente una ricevuta di scarto del precedente
+documento.
+Qualora l’emissione del documento con medesimo numero e data non sia
+possibile, i citati principi, ferma la necessità di procedere alla corretta
+liquidazione dell’imposta in ragione dell’operazione effettuata, impongono
+alternativamente:
+a) l’emissione di una fattura con nuovo numero e data (coerenti con gli ulteriori
+documenti emessi nel tempo trascorso dal primo inoltro tramite SdI), per la quale
+risulti un collegamento alla precedente fattura scartata da Sdi e successivamente
+stornata con variazione contabile interna onde rendere comunque evidente la
+tempestività della fattura stessa rispetto all’operazione che documenta;
+b) l’emissione di una fattura come sub a), ma ricorrendo ad una specifica
+numerazione che, nel rispetto della sua progressività, faccia emergere che si tratta
+di un documento rettificativo del precedente, variamente viziato e scartato dal
+SdI. Si pensi a numerazioni quali “1/R” o “1/S” volte ad identificare le fatture,
+inserite in un apposito registro sezionale, emesse in data successiva in luogo della
+
+12
+
+n. 1 (nell’esempio fatto) prima scartata dal SdI. Così, ad esempio, a fronte delle
+fatture n. 1 del 2/01/2019 e n. 50 dell’1/03/2019 (uniche 2 fatture del
+contribuente scartate dal SdI sino a quella data), potranno essere emesse la n. 1/R
+del 10/01/2019 e la n. 50/R dell’8/03/2019 annotate nell’apposito sezionale.
+
+2
+2.1
+
+Fatturazione elettronica ed appalti
+Chiarimenti in tema di ambito soggettivo di applicazione
+
+Si chiede di chiarire se il disposto dell’articolo 1, comma 917, lettera b), della
+legge n. 205 del 2017 trovi applicazione anche per i soggetti passivi d’imposta
+che effettuano cessioni di beni e prestazioni di servizi nei confronti di appaltatori
+di una pubblica amministrazione (nel prosieguo PA o PPAA), non in diretta
+dipendenza dal contratto di appalto di questi ultimi.
+Risposta
+L’articolo 105, comma 2, del decreto legislativo 18 aprile 2016, n. 50 (c.d.
+“Codice appalti pubblici e contratti di concessione”) stabilisce che «il subappalto
+è il contratto con il quale l’appaltatore affida a terzi l’esecuzione di parte delle
+prestazioni o lavorazioni oggetto del contratto di appalto. […] L’affidatario
+comunica alla stazione appaltante, prima dell’inizio della prestazione, per tutti i
+sub-contratti che non sono subappalti, stipulati per l’esecuzione dell’appalto, il
+nome del sub-contraente, l’importo del sub-contratto, l’oggetto del lavoro,
+servizio o fornitura affidati. Sono, altresì, comunicate alla stazione appaltante
+eventuali modifiche a tali informazioni avvenute nel corso del sub-contratto».
+Alla luce di tale indicazione, le disposizioni dell’articolo 1, comma 917, lettera
+b), della legge n. 205 del 2017 trovano applicazione solo nei confronti dei
+soggetti subappaltatori e subcontraenti per i quali l’appaltatore ha provveduto
+alle comunicazioni prescritte dalla legge.
+Dunque, fermo l’obbligo di indicare in fattura, ove prescritti, il codice
+
+13
+
+identificativo di gara (CIG) ed il codice unico di progetto (CUP) per la
+tracciabilità diretta dei flussi finanziari, nell’ambito degli appalti vi sarà obbligo
+di emettere fattura elettronica via SdI solo in capo a coloro che operano nei
+confronti della stazione appaltante pubblica ovvero a chi, nell’esecuzione del
+contratto di appalto, è titolare di contratti di subappalto propriamente detto (ossia
+esegue direttamente una parte dello stesso) o riveste la qualifica di subcontraente
+(vale a dire colui che per vincolo contrattuale esegue un’attività nei confronti
+dell’appaltatore e in quanto tale viene comunicato alla stazione appaltante con
+obbligo di CIG e/o CUP).
+Calando le indicazioni fornite in un esempio pratico, si ritiene che siano esclusi
+dai nuovi obblighi di fatturazione tutti coloro che cedono beni ad un cliente senza
+essere direttamente coinvolti nell’appalto principale con comunicazioni verso la
+stazione appaltante ovvero con l’imposizione di CIG e/o CUP (si pensi, in
+ipotesi, a chi fornisce beni all’appaltatore senza sapere quale utilizzo egli ne farà,
+utilizzandone magari alcuni per l’appalto pubblico, altri in una fornitura privata).
+
+2.2
+
+Committente controllato da una Pubblica Amministrazione
+
+Si chiede se il disposto dell’articolo 1, comma 917, lettera b), della legge n. 205
+del 2017, trovi applicazione anche qualora il committente a monte dell’appalto
+non sia una pubblica amministrazione, ma un soggetto dalla stessa controllato e/o
+variamente partecipato.
+Risposta
+L’articolo 1, comma 917, lettera b), della legge n. 205 del 2017, impone
+l’emissione di fatture elettroniche per le «prestazioni rese da soggetti
+subappaltatori e subcontraenti della filiera delle imprese nel quadro di un
+contratto
+
+di
+
+appalto
+
+di
+
+lavori,
+
+servizi
+
+o
+
+forniture
+
+stipulato
+
+con
+
+un’amministrazione pubblica».
+Deve dunque escludersi che l’obbligo di fatturazione elettronica si estenda ai
+
+14
+
+rapporti in cui, a monte della filiera contrattuale, vi sia un soggetto che non
+rientra tra quelli da qualificarsi come PA.
+Per l’identificazione di tali ultimi soggetti - PPAA a loro volta destinatarie di
+fatture elettroniche in base all’articolo 1, commi da 209 a 214, della legge 24
+dicembre 2007, n. 244, nonché al decreto ministeriale 3 aprile 2013, n. 55 che vi
+ha dato attuazione - si rinvia alle precisazioni già fornite con la circolare n. 1/DF
+del 9 marzo 2015.
+
+2.3
+
+Ambito di applicazione ai Consorzi
+
+Si chiede se il disposto dell’articolo 1, comma 917, lettera b), della legge n. 205
+del 2017, trovi applicazione anche per le prestazioni rese dalle imprese
+consorziate al consorzio aggiudicatario di un appalto nei confronti di una PA o
+che si inserisce nella filiera dei contratti di subappalto.
+Risposta
+Si è osservato in più occasioni come le prestazioni rese dai consorziati al
+consorzio assumono la medesima valenza delle prestazioni rese dal consorzio ai
+terzi, in analogia a quanto previsto dall’articolo 3, terzo comma, del d.P.R. n. 633
+del 1972, con riferimento al mandato senza rappresentanza.
+Ne deriva che le modalità di fatturazione nei confronti dei terzi si riverberano
+anche nei rapporti interni (cfr., tra le più recenti, le circolari n. 14/E del 27 marzo
+2015 e 20/E del 18 maggio 2016).
+Ciò potrebbe far ritenere tali prestazioni oggetto di fatturazione elettronica sul
+presupposto che il rapporto PA-consorzio rientri comunque in tale modalità di
+documentazione ex D.M. n. 55 del 2013.
+Va ribadito, tuttavia, che «come affermato in numerosi documenti di prassi,
+l’equiparazione delle prestazioni rese o ricevute dal mandatario senza
+rappresentanza con quelle che intervengono nei rapporti tra mandante e
+
+15
+
+mandatario, contenuta nell’articolo 3, terzo comma, ultimo periodo, del DPR 26
+ottobre 1972, n. 633, opera, ai fini dell’IVA, in relazione alla qualificazione
+oggettiva delle prestazioni, ma non anche in relazione all’aspetto soggettivo (cfr.
+risoluzioni 23 maggio 2000, n. 67/E, 15 maggio 2002, n. 145/E e 14 novembre
+2002, n. 355/E)» (così la risoluzione n. 242/E del 27 agosto 2009).
+In altri termini, l’obbligo di fatturazione elettronica in capo al consorzio (legato
+alla qualificazione soggettiva del committente PA) non si estenderà ai rapporti
+consorzio-consorziate.
+È peraltro da escludersi che l’obbligo di fatturazione elettronica sorga nei
+rapporti interni laddove il consorzio non sia il diretto referente della PA, ma si
+inserisca nella filiera dei subappalti.
+Infatti, senza entrare nel merito delle diverse tipologie di prestazioni e dei
+rapporti tra le parti, da valutare caso per caso, nella circolare n. 8/E del 2018 si è
+già chiarito che la novella recata dal citato articolo 1, comma 917, lettera b), della
+legge n. 205 del 2017, troverà applicazione per i soli rapporti (appalti e/o altri
+contratti) “diretti” tra il soggetto titolare del contratto e la PA, nonché tra il primo
+e coloro di cui egli si avvale (in ipotesi il consorzio X), con esclusione degli
+ulteriori passaggi successivi (ossia, in tutti i casi, i rapporti interni tra X e i
+singoli consorziati, che, in linea generale, non configurano comunque subappalti
+o ipotesi affini [cfr. il punto 5 della circolare n. 37/E del 29 dicembre 2006]).
+
+3
+3.1
+
+Registrazione e conservazione delle fatture elettroniche
+Criteri di registrazione
+
+Si chiede se, ai fini della registrazione delle fatture elettroniche emesse e ricevute
+a partire dal prossimo 1° luglio 2018, le stesse, dopo l’invio tramite SdI, previa
+stampa, possano essere trattate come quelle analogiche.
+Risposta
+
+16
+
+L’insieme delle norme dettate in tema di fatturazione elettronica con la legge n.
+205 del 2017 - fatto salvo il disposto dell’articolo 4 del D.Lgs. n. 127 del 2015 non ha inciso sugli obblighi di registrazione delle fatture emesse e ricevute dettati
+dagli articoli 23 e 25 del d.P.R. n. 633 del 1972.
+Restano dunque valide non solo tali disposizioni, ma anche le delucidazioni
+fornite in passato sulle stesse tramite molteplici documenti di prassi cui si rinvia.
+Si evidenzia, peraltro, con specifico riferimento all’articolo 25 del d.P.R. n. 633
+del 1972, vista la natura del documento elettronico transitato tramite SdI - di per
+sé non modificabile e, quindi, non integrabile - che la numerazione della fattura o
+qualsiasi altra integrazione della stessa (si pensi, in generale, alle ipotesi di
+inversione contabile di cui all’articolo 17 del d.P.R. n. 633 del 1972) possa essere
+effettuata secondo le modalità già ritenute idonee in precedenza (cfr. la
+risoluzione n. 46/E del 10 aprile 2017 e le circolari ivi richiamate), ossia, ad
+esempio, predisponendo un altro documento, da allegare al file della fattura in
+questione, contenente sia i dati necessari per l’integrazione sia gli estremi della
+stessa.
+
+3.2
+
+Criteri di conservazione
+
+Si chiede se le fatture transitate tramite il SdI possano essere conservate in
+formati diversi dall’XML (eXtensible Markup Language).
+Risposta
+Riprendendo osservazioni già formulate nel corso di incontri con la stampa
+specializzata, occorre rammentare che l’articolo 23-bis del decreto legislativo 7
+marzo 2005, n. 82 (c.d. “Codice dell’amministrazione digitale” o “CAD”), al
+comma 2, stabilisce che «Le copie e gli estratti informatici del documento
+informatico, se prodotti in conformità alle vigenti regole tecniche di cui
+all’articolo 71, hanno la stessa efficacia probatoria dell’originale da cui sono
+tratte se la loro conformità all’originale, in tutti le sue componenti, è attestata da
+
+17
+
+un pubblico ufficiale a ciò autorizzato o se la conformità non è espressamente
+disconosciuta.
+
+Resta
+
+fermo,
+
+ove
+
+previsto,
+
+l’obbligo
+
+di
+
+conservazione
+
+dell’originale informatico».
+Ne deriva che ciascun operatore, conformemente alla propria organizzazione
+aziendale, potrà portare in conservazione anche copie informatiche delle fatture
+elettroniche in uno dei formati (ad esempio “PDF”, “JPG” o “TXT”) contemplati
+dal decreto del Presidente del Consiglio dei Ministri 3 dicembre 2013 (attuativo
+dello stesso CAD) e considerati idonei a fini della conservazione.
+Si rammenta, in questo senso, che chi emette/riceve fatture elettroniche, ha
+facoltà di conservare le stesse, così come le altre scritture contabili, tanto sul
+territorio nazionale, quanto all’estero, in Paesi con i quali esista uno strumento
+giuridico che disciplini la reciproca assistenza (sul punto, si veda, in generale, la
+risoluzione n. 81/E del 25 settembre 2015, nonché, per le peculiarità delle fatture
+elettroniche PA, gli articoli 5, comma 3, e 9, comma 2, del d.P.C.M. 3 dicembre
+2013).
+
+3.3
+
+Servizio di conservazione dell’Agenzia delle entrate
+
+Si chiede se la conservazione delle fatture tramite il sevizio gratuito messo a
+disposizione dall’Agenzia delle entrate valga solo per le operazioni B2B e B2C o
+anche per quelle nei confronti della PA.
+Risposta
+Nel provvedimento del direttore dell’Agenzia delle entrate prot. n. 89757 del 30
+aprile 2018 e nella circolare n. 8/E di pari data, si è specificamente segnalato che,
+per chi aderirà ad apposito accordo di servizio (mediante modalità online), tutte
+le fatture elettroniche emesse o ricevute attraverso il SdI saranno portate in
+conservazione a norma del D.M. 17 giugno 2014.
+Tale servizio - messo gratuitamente a disposizione dall’Agenzia delle entrate e
+
+18
+
+conforme alle disposizioni del d.P.C.M. 3 dicembre 2013 - nei limiti di quanto
+indicato nel relativo accordo preventivo alla sua utilizzazione, non è limitato ad
+una tipologia di destinatario delle fatture (soggetto passivo d’imposta,
+consumatore o altro), ma riguarda le fatture elettroniche in generale e, dunque,
+anche quelle emesse nei confronti della PA e transitate tramite SdI.
+
+******
+Le Direzioni regionali vigileranno affinché le istruzioni fornite e i principi
+enunciati con la presente circolare vengano puntualmente osservati dalle
+Direzioni provinciali e dagli Uffici dipendenti.
+
+IL DIRETTORE DELL’AGENZIA
+Ernesto Maria Ruffini
+(firmato digitalmente)
+
+19
+
+

@@ -1,0 +1,72 @@
+Ti trovi in:
+
+Home
+
+Tutti i servizi
+
+Servizi Trasversali
+
+Desktop Telematico
+
+Applicazione Desktop Telematico
+
+Versamenti di imposta con il modello F24
+
+I soggetti che devono effettuare il pagamento telematico per proprio conto possono predisporre il modello F24 e
+trasmetterlo in via telematica in maniera del tutto analoga a quanto effettuato per le dichiarazioni
+e non hanno bisogno di stipulare la convenzione che invece deve essere stipulata solo per poter
+inviare i modelli F24 per conto di altri soggetti.
+
+La trasmissione telematica del modello F24 richiede l'utilizzo di un prodotto che ne consenta la
+compilazione in formato elettronico.
+
+L'Agenzia delle Entrate rende disponibile il pacchetto software "F24 OnLine", che è possibile scaricare
+collegandosi alla sezione "Software" del sito www.agenziaentrate.gov.it.
+
+E' comunque possibile utilizzare un qualsiasi altro prodotto disponibile sul mercato. Tuttavia coloro
+che predispongono i versamenti utilizzando software di compilazione diversi da quello messo a disposizione
+dall'Agenzia delle Entrate, dovranno installare obbligatoriamente il programma di controllo
+"Pagamenti con modello F24" disponibile nella sezione "Software" di questo sito. La sua
+funzione è quella di verificare l'aderenza dei dati alle specifiche tecniche previste per il
+modello F24 telematico, segnalando immediatamente eventuali difformità che potrebbero inficiare
+l'effettuazione del versamento.
+
+Gli utenti (persone fisiche, società, etc.) possono compilare il modello F24 senza alcuna limitazione nel
+numero delle imposte e nel tipo di importo (a credito o a debito) ed effettuare il pagamento in
+via telematica senza doversi recare presso gli sportelli bancari.
+
+E' necessario essere titolari di un conto corrente presso una delle banche che hanno stipulato con
+l'Agenzia delle Entrate una specifica convenzione: l'elenco è disponibile sul sito www.agenziaentrate.gov.it.
+
+Il pagamento non viene effettuato mediante carta di credito, ma tramite un ordine di addebito sul proprio
+conto rivolto dal contribuente alla banca (praticamente, una sorta di "bonifico virtuale").
+Il pagamento delle somme dovute è totalmente sicuro, in quanto i dati viaggiano "cifrati" e possono essere "letti"
+soltanto dall'Agenzia delle Entrate.
+
+Termini di versamento
+
+I termini di versamento sono gli stessi previsti per i pagamenti effettuati con i mezzi tradizionali,
+con il vantaggio che i versamenti eseguiti PRIMA della scadenza, sono addebitati sul conto alla
+data di versamento indicata dal contribuente: ad esempio se compilando il modello di versamento
+si indica come "data di versamento" il 20 novembre, ed il contribuente esegue il versamento via
+internet il 5 novembre, l'addebito sul conto avverrà con valuta 20 novembre.
+
+Per i versamenti derivanti da dichiarazione PRIMA della scadenza prevista, inoltre, l'addebito
+sul conto avverrà con valuta alla data di scadenza, anche se nel modello è stata indicata una
+data di versamento precedente. Si consiglia quindi a tutti i contribuenti che intendono effettuare
+i pagamenti via Internet, di eseguire tutte le operazioni necessarie alcuni giorni prima della scadenza,
+in modo da evitare eventuali problemi negli ultimi giorni.
+
+Comunicazione delle coordinate bancarie
+
+Se l'importo complessivo del modello comporta un saldo da versare, è necessario indicare, durante
+la preparazione del file telematico mediante l'apposita applicazione (File internet per gli utenti abilitati
+a Fisconline ed Entratel per gli abilitati all'omonimo servizio), le coordinate bancarie del
+conto di cui si è titolari per l'addebito delle somme dovute.
+
+Con la comunicazione delle coordinate bancarie del conto corrente all'Agenzia delle Entrate, si
+autorizza l'Agenzia stessa a richiedere alla banca che detiene il conto l'addebito delle somme
+dovute relative ai modelli F24 inviati via Internet e si autorizza la Banca ad effettuarne il prelievo.
+
+Le modalità di invio del file e di visualizzazione delle ricevute sono contenute nel paragrafo
+Presentazione dei documenti.

@@ -1,0 +1,83 @@
+RISOLUZIONE N. 42/E
+
+Divisione Servizi
+
+Roma, 9 aprile 2019
+OGGETTO: Istituzione dei codici tributo per il versamento, tramite i modelli “F24” e
+“F24 Enti pubblici”, dell’imposta di bollo sulle fatture elettroniche ai sensi
+dell’articolo 6, comma 2, del decreto del Ministro dell’economia e delle
+finanze 17 giugno 2014, come sostituito dall’articolo 1, comma 1, del
+decreto del Ministro dell’economia e delle finanze 28 dicembre 2018
+
+L’articolo 6, comma 2, del decreto del Ministro dell’economia e delle finanze 17
+giugno 2014, come sostituito dall’articolo 1, comma 1, del decreto del Ministro
+dell’economia e delle finanze 28 dicembre 2018, pubblicato nella Gazzetta Ufficiale n. 5 del
+7 gennaio 2019, prevede, tra l’altro, che “Il pagamento dell'imposta relativa alle fatture
+elettroniche emesse in ciascun trimestre solare è effettuato entro il giorno 20 del primo
+mese successivo. A tal fine, l'Agenzia delle entrate rende noto l'ammontare dell'imposta
+dovuta sulla base dei dati presenti nelle fatture elettroniche inviate attraverso il Sistema di
+interscambio di cui all'art. 1, commi 211 e 212, della legge 24 dicembre 2007, n. 244,
+riportando l'informazione all'interno dell'area riservata del soggetto passivo I.V.A. presente
+sul sito dell'Agenzia delle entrate. Il pagamento dell'imposta può essere effettuato mediante
+il servizio presente nella predetta area riservata, con addebito su conto corrente bancario o
+postale, oppure utilizzando il modello F24 predisposto dall'Agenzia delle entrate (…).”
+La suddetta disposizione si applica alle fatture elettroniche emesse dal 1° gennaio
+2019.
+Tanto premesso, fermo restando che il versamento dell’imposta di bollo sulle fatture
+elettroniche può essere effettuato attraverso l’apposito servizio telematico reso disponibile
+nell’area riservata del soggetto passivo IVA, accessibile dal sito internet dell'Agenzia delle
+entrate, in alternativa, per consentirne il pagamento tramite i modelli “F24” e “F24 Enti
+pubblici” (F24 EP), si istituiscono i seguenti codici tributo:
+
+ “2521” denominato “Imposta di bollo sulle fatture elettroniche – primo trimestre
+– art. 6 decreto 17 giugno 2014”;
+ “2522” denominato “Imposta di bollo sulle fatture elettroniche – secondo
+trimestre – art. 6 decreto 17 giugno 2014”;
+ “2523” denominato “Imposta di bollo sulle fatture elettroniche – terzo trimestre
+– art. 6 decreto 17 giugno 2014”;
+ “2524” denominato “Imposta di bollo sulle fatture elettroniche – quarto
+trimestre – art. 6 decreto 17 giugno 2014”;
+ “2525” denominato “Imposta di bollo sulle fatture elettroniche – art. 6 decreto 17
+giugno 2014 – SANZIONI”;
+ “2526” denominato “Imposta di bollo sulle fatture elettroniche – art. 6 decreto 17
+giugno 2014 – INTERESSI”.
+In sede di compilazione del modello “F24”, i suddetti codici tributo sono esposti nella
+sezione “Erario”, esclusivamente in corrispondenza delle somme indicate nella colonna
+“Importi a debito versati”, con l’indicazione nel campo “anno di riferimento” dell’anno cui
+si riferisce il versamento, nel formato “AAAA”.
+In sede di compilazione del modello “F24 Enti pubblici”, i suddetti codici tributo sono
+esposti esclusivamente in corrispondenza delle somme indicate nella colonna “Importi a
+debito versati”, riportando nella sezione “DETTAGLIO VERSAMENTO” i seguenti dati:
+-
+
+nel campo “sezione”, il valore “F” (Erario);
+
+-
+
+nel campo “codice tributo/causale”, uno dei suddetti codici tributo;
+
+-
+
+nel campo “riferimento A”, nessun valore;
+
+-
+
+nel campo “riferimento B”, l’anno cui si riferisce il versamento, nel formato
+“AAAA”.
+
+Infine, si precisa che i codici tributo di seguito indicati, istituiti con le risoluzioni n.
+106/E del 2 dicembre 2014 e n. 32/E del 23 marzo 2015, sono utilizzati per il versamento
+dell’imposta di bollo relativa ai documenti informatici diversi dalle fatture elettroniche,
+nonché alle fatture elettroniche emesse fino al 31 dicembre 2018:
+ “2501” denominato “Imposta di bollo su libri, registri ed altri documenti
+rilevanti ai fini tributari – art. 6 decreto 17 giugno 2014”;
+ “2502” denominato “Imposta di bollo su libri, registri ed altri documenti
+rilevanti ai fini tributari – art. 6 decreto 17 giugno 2014 - SANZIONI”;
+
+ “2503” denominato “Imposta di bollo su libri, registri ed altri documenti
+rilevanti ai fini tributari – art. 6 decreto 17 giugno 2014 - INTERESSI”.
+
+IL CAPO DIVISIONE
+firmato digitalmente
+
+

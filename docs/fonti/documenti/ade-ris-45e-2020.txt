@@ -1,0 +1,53 @@
+RISOLUZIONE N. 45/E
+
+Divisione Servizi
+
+Roma, 29 luglio 2020
+
+OGGETTO: Istituzione delle causali contributo per il versamento, tramite il
+modello “F24”, dei contributi di spettanza dell’Ente Nazionale di
+Previdenza ed Assistenza dei Biologi – E.N.P.A.B.
+Il decreto del Ministro dell’Economia e delle Finanze del 10 gennaio 2014,
+emanato di concerto con il Ministro del Lavoro e delle Politiche Sociali, ha stabilito
+che il sistema dei versamenti unitari e la compensazione previsti dall’articolo 17
+del decreto legislativo 9 luglio 1997, n. 241 si applicano, tra gli altri, anche all’Ente
+Nazionale di Previdenza ed Assistenza dei Biologi (di seguito E.N.P.A.B.).
+Con la convenzione del 28 luglio 2020 stipulata tra l’Agenzia delle entrate e
+l’E.N.P.A.B., è stato regolato il servizio di riscossione, mediante il modello F24,
+dei contributi previdenziali e assistenziali dovuti dagli iscritti al citato Ente.
+Ciò premesso, per consentire il versamento dei suddetti contributi tramite il
+modello F24, si istituiscono le causali contributo di seguito indicate:
+ “E095” denominato “ENPAB – CONTRIBUTI CORRENTI”;
+ “E096” denominato “ENPAB – CONTRIBUTI PREGRESSI”;
+ “E097” denominato “ENPAB – RATEAZIONI CONTRIBUTIVE”;
+ “E098” denominato “ENPAB – RISCATTI”;
+ “E099” denominato “ENPAB – CONTRIBUTI VOLONTARI”.
+In sede di compilazione del modello F24, le causali in argomento sono
+esposte nella sezione “Altri enti previdenziali e assicurativi” (secondo riquadro),
+
+nel campo “causale contributo”, esclusivamente in corrispondenza delle somme
+indicate nella colonna “importi a debito versati”, riportando:
+-
+
+nel campo “codice ente”, il codice “0012”;
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, nessun valore;
+
+-
+
+nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e
+
+l’anno di competenza del contributo da versare, nel formato “MM/AAAA”.
+Si precisa che le suddette causali sono operativamente efficaci a decorrere
+dal 1° agosto 2020.
+per IL CAPO DIVISIONE
+IL DIRETTORE CENTRALE
+Firmato digitalmente
+
+

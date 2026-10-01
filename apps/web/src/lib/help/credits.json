@@ -1,0 +1,29 @@
+{
+  "creditCode": {
+    "paragraphs": [
+      "Come risulta dalla dichiarazione: 4001 saldo IRPEF, 1792 imposta sostitutiva forfettari (LM47), 3844 addizionale comunale, 3801 addizionale regionale; PXX per il credito INPS Gestione Separata (RR8 col. 2, utilizzabile solo in F24 con l'anno di riferimento). Istr. Redditi PF 2026, Fasc. 1 \"Principali codici tributo\"."
+    ]
+  },
+  "creditLocalCode": {
+    "paragraphs": [
+      "Codice catastale del comune (es. D567) per l'addizionale comunale; codice regione per l'addizionale regionale (tabelle T0/T4 sul sito AdE)."
+    ]
+  },
+  "creditUsableFrom": {
+    "paragraphs": [
+      "Sopra 5.000 € annui il credito è utilizzabile dal decimo giorno successivo alla presentazione della dichiarazione, con visto di conformità (art. 3 D.Lgs. 33/2025; L. 147/2013 art. 1 c. 574). Campo informativo."
+    ]
+  },
+  "creditExhausted": {
+    "label": "Esaurito",
+    "paragraphs": [
+      "Il credito è già stato usato del tutto negli F24 generati qui. Se un piano che lo usa viene eliminato, la parte usata torna disponibile."
+    ]
+  },
+  "creditUsed": {
+    "label": "Usato",
+    "paragraphs": [
+      "Quanto del credito è già stato usato in compensazione negli F24 dei piani di versamento. Un credito usato non si modifica né si elimina: prima si elimina il piano che lo usa."
+    ]
+  }
+}

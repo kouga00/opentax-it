@@ -1,0 +1,10 @@
+{
+  "revenueThresholds": {
+    "label": "Come si leggono le soglie",
+    "paragraphs": [
+      "Per le soglie di 85.000 € e 100.000 € contano i pagamenti ricevuti nell'anno, non le fatture emesse: una fattura conta nell'anno in cui ti pagano (principio di cassa, L. 190/2014 c. 54 e 71).",
+      "Nelle barre la parte piena è quanto hai già incassato. La parte chiara aggiunge le fatture emesse e non ancora pagate: è dove arriveresti se le incassassi tutte quest'anno.",
+      "Le note di credito non ancora rimborsate non vengono sottratte, quindi la parte chiara può risultare un po' più lunga del reale: meglio un avviso in anticipo che in ritardo."
+    ]
+  }
+}

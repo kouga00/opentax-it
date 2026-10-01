@@ -1,0 +1,143 @@
+Causali ENPACL
+Codice
+E050
+
+E051
+
+E052
+
+E053
+
+E054
+
+E055
+
+E056
+
+E057
+
+E058
+
+E059
+
+Descrizione
+
+Tipo inizio periodo riferimento
+
+Tipo fine periodo di riferimento
+
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Contribuzione soggettiva - pari
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+al 12% del reddito professionale
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+Formato MMAAAA = mese/anno di inizio del
+ENPACL - Contribuzione integrativa - pari
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+al 4% del volume d’affari IVA
+a “inizio periodo di riferimento”
+a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Contribuzione facoltativa
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+aggiuntiva - pari a 500 euro o multipli
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+Formato MMAAAA = mese/anno di inizio del
+ENPACL - Contribuzione in acconto periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+contribuzione soggettiva e integrativa
+a “inizio periodo di riferimento”
+a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Contribuzione per maternità periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+per oneri della relativa indennità
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+Formato MMAAAA = mese/anno di inizio del
+ENPACL - Rateazione - morosità
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+contributiva
+a “inizio periodo di riferimento”
+a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+Formato MMAAAA = mese/anno di inizio del
+ENPACL - Ravvedimento - morosità
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+contributiva
+a “inizio periodo di riferimento”
+a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Contribuzione volontaria ai fini
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+della pensione di vecchiaia
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Sanzioni fisse o percentuali
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+Formato MMAAAA = mese/anno di inizio del
+ENPACL - Ricongiunzione - onere a carico
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+del richiedente
+a “inizio periodo di riferimento”
+a “fine periodo di riferimento”
+
+E060
+
+E061
+
+E062
+
+E063
+
+E064
+
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Riscatto laurea - onere a carico
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+del richiedente
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+Formato MMAAAA = mese/anno di inizio del
+ENPACL - Riscatto praticantato - onere a
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+carico del richiedente
+a “inizio periodo di riferimento”
+a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Riscatto quote ridotte - onere a
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+carico del richiedente
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+ENPACL - Altro - causale generica
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+
+ENPACL - Riscatto militare - onere a
+carico del richiedente
+
+

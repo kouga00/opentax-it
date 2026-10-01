@@ -1,0 +1,45 @@
+Tabella dei valori che può assumere il campo "matricola INPS/codice INPS/filiale azienda" della sezione INPS del
+modello F24, in base alla causale indicata
+ID Formato
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+12
+
+Descrizione
+Matricola INPS (tipo 1)
+Filiale azienda
+Codice INPS (tipo 1)
+Matricola INPS (tipo 2)
+Codice INPS (tipo 2)
+Non valorizzato
+Codice fiscale persona fisica
+Codice INPS (tipo 3)
+Lavoratore domestico
+Calamità
+Codice univoco di identificazione del
+pagamento
+
+Lunghezza/Formato caratteri (*)
+10 numerici (+ 7 blank a riempimento)
+5 numerici + 12 alfanumerici
+17 numerici
+8 numerici + 2 alfabetici (+ 7 blank a riempimento)
+17 numerici
+17 blank
+16 alfanumerici (+ 1 blank a riempimento)
+17 numerici
+12 numerici (+ 5 blank a riempimento)
+14 alfanumerici (+ 3 blank a riempimento)
+14 numerici (+ 3 blank a riempimento)
+
+(*) N.B. La compilazione deve avvenire secondo le specifiche istruzioni fornite dall'INPS.
+
+

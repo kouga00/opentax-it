@@ -1,0 +1,61 @@
+Causali ENPAB
+Codice
+
+Descrizione
+
+E095
+
+ENPAB - CONTRIBUTI CORRENTI
+
+E096
+
+ENPAB - CONTRIBUTI PREGRESSI
+
+E097
+
+ENPAB - RATEAZIONI
+CONTRIBUTIVE
+
+E098
+
+ENPAB - RISCATTI
+
+E099
+
+ENPAB - CONTRIBUTI VOLONTARI
+
+Tipo inizio periodo riferimento
+Formato MMAAAA = mese/anno di inizio del
+periodo di riferimento - Non può essere
+superiore a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+periodo di riferimento - Non può essere
+superiore a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+periodo di riferimento - Non può essere
+superiore a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+periodo di riferimento - Non può essere
+superiore a “fine periodo di riferimento”
+Formato MMAAAA = mese/anno di inizio del
+periodo di riferimento - Non può essere
+superiore a “fine periodo di riferimento”
+
+Tipo fine periodo di riferimento
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere inferiore
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere inferiore
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere inferiore
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere inferiore
+a “inizio periodo di riferimento”
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere inferiore
+a “inizio periodo di riferimento”
+
+

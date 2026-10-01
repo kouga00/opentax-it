@@ -1,0 +1,29 @@
+{
+  "name": "opentax-it",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Open source management tool for Italian flat-rate (forfettario) VAT holders: e-invoicing (SDI), deadlines, installments, INPS, tax credit offsetting.",
+  "license": "AGPL-3.0-only",
+  "packageManager": "pnpm@10.18.1",
+  "engines": {
+    "node": ">=24 <25",
+    "pnpm": ">=10"
+  },
+  "pnpm": {
+    "overrides": {
+      "mysql2": ">=3.23.1",
+      "deepmerge-ts": ">=8.0.0"
+    }
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "db:up": "docker compose up -d db",
+    "db:migrate": "pnpm --filter @opentax-it/api exec prisma migrate dev",
+    "demo:seed": "pnpm --filter @opentax-it/api run demo:seed",
+    "admin:create": "pnpm --filter @opentax-it/api run admin:create",
+    "fonti": "node scripts/fonti.mjs"
+  }
+}

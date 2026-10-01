@@ -1,0 +1,19 @@
+Causali EPAP
+Codice
+E065
+
+Descrizione
+EPAP - CONTRIBUZIONE
+PREVIDENZIALE OBBLIGATORIA
+
+Tipo inizio periodo riferimento
+
+Tipo fine periodo di riferimento
+
+Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+
+

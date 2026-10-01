@@ -1,0 +1,34 @@
+{
+  "name": "@opentax-it/fiscal-rules",
+  "version": "0.0.1",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "description": "Pure fiscal rules (no I/O) for the Italian flat-rate regime: installments, advance payments, INPS, stamp duty. Every rule cites its legal source.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
+    "test": "vitest run",
+    "lint": "oxlint src/"
+  },
+  "devDependencies": {
+    "oxlint": "^1.58.0",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.2",
+    "@types/node": "^24.0.0"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ]
+}

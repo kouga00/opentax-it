@@ -1,0 +1,76 @@
+Direzione Centrale Servizi ai Contribuenti
+____________
+
+RISOLUZIONE N. 55/E
+
+Roma, 29 maggio 2014
+
+OGGETTO: Istituzione di causali per il versamento, tramite modello F24, dei
+contributi previdenziali e assistenziali dovuti dagli iscritti all’Ente
+Nazionale di Previdenza e Assistenza per i Consulenti del Lavoro E.N.P.A.C.L.
+Il decreto interministeriale del 10 gennaio 2014 del Ministro dell’Economia
+e delle Finanze di concerto con il Ministro del Lavoro e delle Politiche Sociali, ha
+stabilito che il sistema dei versamenti unitari e la compensazione, previsti
+dall’articolo 17 del decreto legislativo 9 luglio 1997, n. 241, si applicano, tra gli
+altri, anche all’Ente Nazionale di Previdenza e Assistenza Consulenti del Lavoro
+(di seguito E.N.P.A.C.L.).
+Con la convenzione del 14 aprile 2014, stipulata tra l’Agenzia delle entrate
+e l’E.N.P.A.C.L., è stato regolato il servizio di riscossione, mediante il modello
+F24, per il versamento dei contributi previdenziali e assistenziali dovuti dagli
+iscritti al suddetto Ente, pertanto, per consentirne il versamento, tramite il modello
+F24, si istituiscono le causali contributo di seguito indicate:
+
+“E050” denominato “ENPACL - Contribuzione soggettiva - pari al 12%
+del reddito professionale”;
+“E051” denominato “ENPACL - Contribuzione integrativa - pari al 4% del
+volume d’affari IVA”;
+
+“E052” denominato “ENPACL - Contribuzione facoltativa aggiuntiva pari a 500 euro o multipli”;
+“E053” denominato “ENPACL - Contribuzione in acconto - contribuzione
+soggettiva e integrativa”;
+“E054” denominato “ENPACL - Contribuzione per maternità - per oneri
+della relativa indennità”;
+“E055” denominato “ENPACL - Rateazione - morosità contributiva”;
+“E056” denominato “ENPACL - Ravvedimento - morosità contributiva”;
+“E057” denominato “ENPACL - Contribuzione volontaria ai fini della
+pensione di vecchiaia”;
+“E058” denominato “ENPACL - Sanzioni fisse o percentuali”;
+“E059” denominato “ENPACL - Ricongiunzione - onere a carico del
+richiedente”;
+“E060” denominato “ENPACL - Riscatto militare - onere a carico del
+richiedente”;
+“E061” denominato “ENPACL - Riscatto laurea - onere a carico del
+richiedente”;
+“E062” denominato “ENPACL - Riscatto praticantato - onere a carico del
+richiedente”;
+“E063” denominato “ENPACL - Riscatto quote ridotte - onere a carico del
+richiedente”;
+“E064” denominato “ENPACL - Altro - causale generica”.
+
+In sede di compilazione del modello F24, le suddette causali contributo sono
+esposte nella sezione “Altri enti previdenziali e assicurativi” (secondo riquadro)
+in corrispondenza, esclusivamente, delle somme indicate nella colonna “importi a
+debito versati”, indicando:
+-
+
+nel campo “codice ente”, il codice “0006”;
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, nessun valore;
+
+-
+
+nel campo “periodo di riferimento da mm/aaaa a mm/aaaa”, il periodo di
+competenza del contributo da versare, nel formato “MM/AAAA”.
+
+Si precisa che le suddette causali contributo sono operativamente efficaci a
+decorrere dal 3 giugno 2014.
+
+IL DIRETTORE CENTRALE
+
+

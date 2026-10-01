@@ -1,0 +1,1102 @@
+LA FATTURA ELETTRONICA E I SERVIZI GRATUITI
+DELL’AGENZIA DELLE ENTRATE
+(DICEMBRE 2025)
+
+INDICE
+
+1.
+
+LA FATTURA ELETTRONICA ................................................................. 2
+Cos’è la fattura elettronica e che differenze ci sono con la fattura cartacea ............. 3
+Soggetti obbligati all’emissione di fattura elettronica e soggetti esonerati ............... 3
+Quali sono i vantaggi della fattura elettronica ..................................................... 4
+
+2.
+
+COME PREDISPORRE, INVIARE E RICEVERE L’E-FATTURA ........................ 5
+Come si predispone una fattura elettronica ......................................................... 5
+Fattura elettronica per i forfettari .................................................................... 12
+Come si invia una fattura elettronica al cliente .................................................. 15
+Cosa fa il Sistema di Interscambio quando riceve una fattura ............................. 16
+Come si riceve una fattura elettronica dal Sistema di Interscambio ...................... 19
+Come si conservano le fatture elettroniche ....................................................... 22
+
+3.
+
+I SERVIZI DELL’AGENZIA ................................................................. 23
+Il portale “Fatture e Corrispettivi” .................................................................... 23
+Come si accede al portale “Fatture e Corrispettivi” ............................................ 23
+La home page del portale “Fatture e Corrispettivi”: i servizi principali .................. 24
+La procedura web.......................................................................................... 27
+Il servizio di conservazione a norma ................................................................ 29
+Il servizio di Consultazione delle fatture e delle ricevute ..................................... 30
+Il software“stand alone” e l’App ...................................................................... 34
+
+4.
+
+PER SAPERNE DI PIÙ: NORMATIVA E PRASSI....................................... 35
+
+1
+
+1. LA FATTURA ELETTRONICA
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Dal 1° gennaio 2019 tutte le fatture emesse, a seguito di cessioni di beni e prestazioni
+di servizi effettuate tra soggetti residenti o stabiliti in Italia, potranno essere solo
+fatture elettroniche.
+L’obbligo di fattura elettronica, introdotto dalla Legge di Bilancio 2018, vale sia nel
+caso in cui la cessione del bene o la prestazione di servizio è effettuata tra due
+soggetti Iva (operazioni B2B, cioè Business to Business), sia nel caso in cui la
+cessione/prestazione è effettuata da un soggetto Iva verso un consumatore finale
+(operazioni B2C, cioè Business to Consumer). Questo obbligo si affianca a quello già
+previsto dal 31 marzo 2015 per le fatture emesse nei confronti della Pubblica
+Amministrazione (operazioni B2G, cioè Business to Government).
+
+ATTENZIONE
+Per quanto riguarda le fatture emesse verso soggetti esteri e le autofatture o fatture di
+integrazione Iva delle fatture ricevute da soggetti esteri, l’emissione della fattura
+elettronica è facoltativa. Gli operatori italiani che decidono di non emettere fattura
+elettronica per queste operazioni devono trasmettere all’Agenzia delle entrate i dati delle
+fatture, attraverso il nuovo “esterometro”, con l’eccezione delle operazioni supportate da
+bolletta doganale e per gli acquisti di importo non superiore a 5.000 euro.
+
+Le regole per predisporre, trasmettere, ricevere e conservare le fatture elettroniche
+sono state definite dal provvedimento n. 433608 del 24 novembre 2022 (come
+successivamente modificato), pubblicato sul sito internet dell’Agenzia delle entrate.
+L’Agenzia delle entrate mette a disposizione una serie di servizi gratuiti che
+consentono di predisporre, trasmettere e ricevere le fatture elettroniche in modo
+semplice e sicuro. Tali servizi permettono anche di conservarle nel tempo in maniera
+conforme, sicura e inalterabile, nonché di consultare e acquisire la copia originale delle
+fatture correttamente emesse e ricevute. È sempre possibile utilizzare software e
+servizi reperibili sul mercato, purché conformi alle specifiche tecniche allegate al citato
+provvedimento del 24 novembre 2022.
+
+ATTENZIONE
+Le regole tecniche definite nel provvedimento del 24 novembre 2022 sono valide solo per le
+fatture elettroniche tra privati. Per le fatture elettroniche emesse verso le Pubbliche
+Amministrazioni restano valide le regole riportate nel Decreto Ministeriale n. 55/2013 e nel
+sito www.fatturapa.gov.it.
+
+2
+
+Cos’è la fattura elettronica e che differenze ci sono con la fattura
+cartacea
+La fattura elettronica si differenzia da una fattura cartacea, in generale, solo per due
+aspetti:
+1) deve essere necessariamente redatta utilizzando un pc, un tablet o uno
+smartphone, in un formato strutturato (XML)
+
+ATTENZIONE
+Restano valide le regole che consentono di predisporre la c.d. “fattura (elettronica)
+differita” entro il giorno 15 del mese successivo a quello di effettuazione dell’operazione,
+nel rispetto delle disposizioni previste dall’articolo 21, comma 4 lett. a), del Dpr n. 633/72.
+Dal punto di vista operativo, questa disposizione può consentire all’utente di avere più
+tempo per predisporre e trasmettere al SdI la fattura elettronica, fermo restando l’obbligo
+di rilasciare al cliente – al momento dell’operazione – un documento di trasporto o altro
+documento equipollente anche su carta.
+
+Soggetti obbligati all’emissione di fattura elettronica e soggetti
+esonerati
+Sono obbligati ad emettere la fattura elettronica tutti i soggetti, residenti o stabiliti in
+Italia, titolari di partita Iva che effettuano operazioni nei confronti di soggetti residenti
+o stabiliti in Italia.
+Sono esonerati dall’obbligo di fatturazione elettronica i soggetti già in precedenza
+dispensati per legge dall’emissione della fattura (anche cartacea) quali, ad esempio, i
+“piccoli produttori agricoli” (di cui all’art. 34, comma 6, del Dpr n. 633/1972) e i
+soggetti che hanno richiesto la dispensa dagli adempimenti di fatturazione ai sensi
+dell’art. 36-bis del Dpr n. 633/72 relativamente alle operazioni esenti.
+Vige il divieto di emissione di fattura elettronica via SdI per le prestazioni sanitarie
+verso consumatori finali, effettuate dagli operatori sanitari, in virtù dei dati
+particolarmente sensibili contenuti in tali fatture.
+
+3
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+2) deve essere trasmessa elettronicamente all’indirizzo telematico dove il cliente
+vuole che venga consegnata la fattura, tramite il c.d. Sistema di Interscambio
+(SdI) descritto nel paragrafo “Cosa fa il Sistema di Interscambio quando riceve una
+fattura” (capitolo 2 di questa guida).
+
+Quali sono i vantaggi della fattura elettronica
+La fatturazione elettronica innanzitutto permette di eliminare il consumo della carta,
+risparmiando i costi di stampa, spedizione e conservazione dei documenti.
+Quest’ultima può essere eseguita gratuitamente aderendo all’apposito servizio reso
+disponibile dall’Agenzia delle entrate.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Inoltre, potendo acquisire la fattura sottoforma di file XML (eXtensible Markup
+Language), è possibile rendere più rapido il processo di contabilizzazione dei dati
+contenuti nelle fatture stesse, riducendo sia i costi di gestione di tale processo che gli
+errori che si possono generare dall’acquisizione manuale dei dati.
+Infine, essendo certa la data di emissione e consegna della fattura (poiché la stessa
+viene trasmessa e consegnata solo tramite SdI), si incrementa l’efficienza nei rapporti
+commerciali tra clienti e fornitori.
+La fattura elettronica, poi, determina ulteriori vantaggi dal punto di vista strettamente
+fiscale. Infatti:
+•
+
+l’Agenzia delle entrate mette a disposizione degli operatori Iva, inclusi nella platea
+definita dal provvedimento n. 183994 del 8 luglio 2021, le bozze dei registri Iva,
+(artt. 23 e 25 del Dpr n 633/1972), delle liquidazioni periodiche Iva e della bozza
+della dichiarazione annuale Iva, consentendo di effettuare questi adempimenti in
+modo semplificato
+
+•
+
+se si ricevono e si effettuano pagamenti esclusivamente in modalità tracciata sopra
+il valore di 500 euro, i termini di accertamento fiscale sono ridotti di 2 anni (ci si
+riferisce al termine di decadenza di cui all’art. 57, primo comma, del Dpr n.
+633/1972 e al termine di decadenza di cui all’art. 43, primo comma, del Dpr n.
+600/1973)
+
+•
+
+qualsiasi soggetto Iva, così come i consumatori finali, possono – in qualsiasi
+momento – consultare e acquisire copia delle proprie fatture elettroniche emesse e
+ricevute attraverso un semplice e sicuro servizio online messo a disposizione
+dall’Agenzia delle entrate e descritto nel capitolo 3 di questa guida.
+
+ATTENZIONE
+Se la fattura viene predisposta ed inviata al cliente in forma diversa da quella XML ovvero
+con modalità diverse dal Sistema di Interscambio, così come previsto dal provvedimento
+del 24 novembre 2022, tale fattura si considera non emessa, con conseguenti sanzioni (di
+cui all’art. 6 del Dlgs n. 471/1997) a carico del fornitore e con la impossibilità di detrazione
+dell’Iva a carico del cliente.
+
+4
+
+2. COME PREDISPORRE, INVIARE E RICEVERE L’E-FATTURA
+Come si predispone una fattura elettronica
+•
+
+un PC, un tablet o uno smartphone
+
+•
+
+un programma (software) che consenta la compilazione del file della fattura nel
+formato XML previsto dal provvedimento del Direttore dell’Agenzia delle entrate del
+24 novembre 2022.
+
+L’Agenzia delle entrate mette a disposizione gratuitamente tre tipi di programmi per la
+predisposizione del file della fattura elettronica:
+•
+
+una procedura web, utilizzabile accedendo al portale “Fatture e Corrispettivi” del
+sito internet dell’Agenzia (per l’uso di tale procedura occorre disporre di una
+connessione in rete)
+
+•
+
+un software scaricabile su PC (tale procedura può essere utilizzata anche senza
+essere connessi in rete)
+
+•
+
+un’App per tablet e smartphone, denominata FatturAE, scaricabile dagli store
+Android o Apple (per l’uso di tale procedura occorre disporre di una connessione in
+rete).
+
+Tali procedure sono rivolte soprattutto ai soggetti Iva che emettono un numero
+contenuto di fatture e sono soliti predisporle con gli usuali programmi di videoscrittura
+ovvero su modelli prestampati di carta. Per le informazioni di dettaglio su tali
+procedure si rinvia alla sezione “I servizi dell’Agenzia” al capitolo 3 di questa guida. In
+alternativa, è possibile utilizzare software privati forniti da provider specializzati o
+rilasciati dagli stessi produttori dei software gestionali per predisporre e registrare in
+contabilità le fatture.
+
+PREDISPOSIZIONE DELLA FATTURA ELETTRONICA MEDIANTE LA PROCEDURA
+WEB DELL’AGENZIA
+Le schermate di seguito riportate descrivono, a titolo di esempio, la compilazione di
+una fattura “ordinaria” con i dati minimi obbligatori previsti dalla legge (art. 21 del Dpr
+n. 633/1972) mediante la procedura web messa a disposizione gratuitamente
+dell’Agenzia delle entrate.
+ATTENZIONE
+Questa procedura si può utilizzare solo se si è connessi ad internet e accedendo al portale
+“Fatture e Corrispettivi” presente sul sito internet dell’Agenzia delle entrate con le
+credenziali SPID ("Sistema Pubblico dell'Identità Digitale"), CIE (Carta di Identità
+Elettronica), CNS (Carta Nazionale dei Servizi) oppure credenziali Fisconline/Entratel
+rilasciate dall’Agenzia delle entrate.
+
+5
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Per compilare una fattura elettronica è necessario disporre di:
+
+1) La prima volta che si utilizza la procedura occorre verificare la correttezza dei dati
+del fornitore (cedente/prestatore), presenti nella sezione “I miei dati”, che la
+procedura riporta in automatico recuperandoli dall’Anagrafe Tributaria: possono
+essere modificati tutti i dati ad eccezione della Partita Iva.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Dopo aver verificato e salvato i dati riportati nella schermata, la stessa non verrà
+più riproposta per la compilazione delle successive fatture.
+
+2) Nella sezione “Cliente”, inserire i dati del cliente (cessionario/committente). La
+procedura, operando direttamente in rete, verifica subito l’esistenza in Anagrafe
+Tributaria della partita Iva/codice fiscale del cliente: nel caso in cui tali valori siano
+inesistenti, viene esposto un messaggio che lo evidenzia e non è possibile
+proseguire nella compilazione della fattura. Infatti, qualora venga trasmessa
+tramite il SdI una fattura elettronica che riporta un identificativo fiscale non
+esistente in Anagrafe tributaria, la fattura viene scartata dal SdI.
+È possibile acquisire e precompilare in automatico i dati del cliente qualora lo stesso
+presenti il suo QR Code (utilizzando la funzionalità “QR code” in alto a destra nella
+schermata che segue): a tal fine, il soggetto Iva deve utilizzare un PC o altro
+dispositivo (tablet o smartphone) in grado di leggere il codice bidimensionale.
+Una volta compilati i dati del cliente, la procedura consente di salvarli in una rubrica
+dalla quale sarà possibile selezionarli per la compilazione di una nuova fattura verso
+lo stesso cliente.
+
+6
+
+•
+
+inserendo il codice alfanumerico di 7 cifre comunicato dal cliente
+
+•
+
+inserendo il valore “0000000” e valorizzando il campo “PEC Destinatario” con
+l’indirizzo PEC comunicato dal cliente
+
+•
+
+inserendo il valore “0000000” se il cliente è un consumatore finale o se è un
+soggetto passivo Iva che non ha comunicato il suo codice destinatario e la PEC. In
+tal caso, il fornitore dovrà rilasciare al suo cliente una copia informatica o analogica
+della fattura elettronica, ricordandogli che la fattura originale è quella elettronica e
+che potrà consultarla e scaricarla in quanto il documento è messo a sua
+disposizione dal SdI nell’area riservata del sito web dell’Agenzia delle entrate (per i
+soggetti Iva tale area è nel portale “Fatture e Corrispettivi” in “Consultazione →
+Fatture elettroniche e altri dati Iva” (si veda il capitolo 3 di questa guida – sezione
+“Il servizio di consultazione delle fatture e delle ricevute”).
+
+7
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Si ricorda che per inviare correttamente una fattura elettronica è indispensabile che al
+suo interno sia compilato il campo “Codice destinatario” come segue:
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+3) Nella sezione “Dati della fattura”, compilare i campi obbligatori relativi al tipo
+documento, numero e data documento e alla divisa da utilizzare.
+
+Inoltre, nell’apposita area “Beni e servizi”, inserire i dati relativi alla natura,
+quantità e qualità del bene ceduto o del servizio prestato, nonché i valori
+dell’imponibile, dell’aliquota Iva e dell’imposta (ovvero, nel caso di operazioni
+esenti, non imponibili eccetera, l’apposito codice che identifica la “natura”
+dell’operazione ai fini Iva).
+
+Si evidenzia che una fattura può contenere più “linee” quando è emesso un unico
+documento per la cessione di più beni o la prestazione di più servizi, anche con
+aliquote Iva differenti: in tal caso sarà sufficiente cliccare sul tasto “Aggiungi” della
+sezione “Beni e Servizi” per aggiungere una nuova linea.
+
+8
+
+La procedura web dell’Agenzia, tuttavia, consente anche di inserire ulteriori dati a
+seconda dell’esigenza del soggetto Iva che deve emettere la fattura (ad esempio,
+inserimento del campo relativo alla ritenuta d’imposta ovvero della cassa previdenziale
+in caso di fatture emesse da un professionista, l’inserimento di sconti o maggiorazioni,
+eccetera).
+Una volta conclusa la predisposizione della fattura, la procedura permette, nella
+sezione “Verifica dati”, di ricontrollare tutte le informazioni inserite e salvare il file della
+fattura nel formato obbligatorio XML: tale file potrà essere anche visualizzato e salvato
+in formato PDF, ma occorre ricordarsi che il file da inviare al SdI è quello XML.
+Inoltre, la schermata propone anche il tasto “Sigilla” che consente di garantire
+l’integrità del file XML da inviare al SdI. La trasmissione del file della fattura avviene
+cliccando il tasto “Invia”.
+
+9
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+L’importo totale della fattura viene calcolato automaticamente e deve essere
+confermato valorizzando il campo “Importo totale documento”.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Una volta inviato il file della fattura, la procedura mostra una schermata che contiene
+– in alto – un numero identificativo univoco (denominato IdSdI) che il Sistema di
+Interscambio ha assegnato al file e ricorda che la ricevuta è consultabile nella apposita
+sezione (per maggiori dettagli, si rimanda al capitolo Errore. L'origine riferimento non
+è stata trovata. di questa guida - sezione “Consultazione”).
+
+10
+
+Cliccando sul tasto “Invia il file”, la procedura consente di scegliere il file XML dalla
+cartella di lavoro del proprio PC dove è stato salvato, caricarlo a sistema e inviarlo.
+Nella stessa pagina, sono presenti altre due funzionalità per rendere il processo di
+fatturazione elettronica più semplice e preciso:
+1. la funzionalità “Riprendi ultimo file” consente di aprire nuovamente l’ultima
+fattura elettronica predisposta e, modificandone il contenuto, crearne una nuova
+2. la funzionalità “Importa da file XML” consente di importare in procedura una
+fattura elettronica, anche incompleta, per le eventuali modifiche e l’invio.
+
+11
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Qualora il soggetto Iva abbia già compilato e salvato sul suo PC il file XML della fattura
+ma non l’abbia ancora trasmesso, potrà in qualsiasi momento utilizzare la funzione di
+“Trasmissione” presente nella schermata principale della procedura web, come
+mostrato nella figura seguente.
+
+Fattura elettronica per i forfettari
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Il soggetto Iva che opera in regime forfettario per emettere fattura elettronica tramite
+la procedura web, dopo aver compilato la sezione relativa all’anagrafica del
+cessionario/committente come descritto nel paragrafo 2 della presente guida, nella
+sezione “Dati della fattura” deve valorizzare il campo “Regime fiscale valido per la
+fattura che si sta generando” con “Regime forfettario (art.1, c.54-89, L. 190/2014)”.
+
+I forfettari, che per operazioni nazionali non espongono Iva, nelle linee di dettaglio
+Beni/servizi devono valorizzare il campo “Aliquota Iva” con “0%” e il campo “Natura”
+con “Non soggette - altri casi”.
+
+Il forfettario deve obbligatoriamente indicare in fattura il riferimento normativo da cui
+scaturisce la non indicazione dell’Iva in fattura; quindi, dovrà selezionare il campo
+“Causale” nel menu a destra “Altri dati” e valorizzarlo con la seguente dicitura:
+“Operazione effettuata in regime forfettario ai sensi dell'articolo 1, commi da 54 a 89,
+della Legge n. 190/2014 e successive modificazioni”.
+
+12
+
+Inoltre, il professionista forfettario deve inserire anche i dati relativi alla cassa
+previdenziale nel box “Dati cassa previdenziale”, attivabile dalla voce del menu a
+destra “Altri dati”.
+Se il soggetto forfettario emette una fattura elettronica soggetta all’imposta di bollo,
+deve attivare la sezione “Dati bollo”, dal menu a destra “Altri dati” e valorizzare il
+campo “Bollo virtuale” con “Sì”.
+In questo caso, nel valore dell’importo totale del documento devono essere ricompresi
+anche i 2 euro dell’imposta di bollo.
+
+13
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Se il soggetto forfettario che emette la fattura è un professionista (e quindi non è
+soggetto alla ritenuta d’acconto) occorre inserire un’ulteriore causale, cliccando
+sull’apposito pulsante “Aggiungi Causale”, riportando la seguente dicitura: “Operazione
+non soggetta a ritenuta alla fonte a titolo di acconto ai sensi dell’articolo 1, comma 67,
+Legge n. 190 del 2014 e successive modificazioni”.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Inoltre, per i soggetti forfettari, è possibile generare fatture ordinarie o verso la PA
+utilizzando un apposito template in cui i campi appena sopra riportati sono già
+precompilati. Il template è disponibile accedendo alla sezione “Fatturazione elettronica
+e Conservazione” nella home del portale “Fatture e Corrispettivi”, cliccando sul box
+“Generazione da template”.
+
+14
+
+Come si invia una fattura elettronica al cliente
+Le fatture elettroniche vanno sempre inviate ai propri clienti attraverso il SdI (Sistema
+di Interscambio), altrimenti sono considerate non emesse.
+Per trasmettere al SdI il file XML della fattura elettronica ci sono diverse modalità. È
+possibile utilizzare:
+a) un servizio online presente nel portale “Fatture e Corrispettivi”, che consente
+l’upload del file XML preventivamente predisposto e salvato sul proprio PC
+b) la procedura web ovvero l’App FatturAE, messe a disposizione gratuitamente
+dall’Agenzia delle entrate, che consentono di compilare e inviare il file XML
+
+d) un canale telematico (SFTP o Web Service) preventivamente attivato con il SdI.
+Per maggiori informazioni sulle modalità di cui alle precedenti lettere a) e b), si rinvia
+al paragrafo precedente (“Come predisporre, inviare e ricevere l’e-fattura”).
+ATTENZIONE
+Il soggetto Iva può trasmettere direttamente la fattura elettronica oppure può farla
+trasmettere, per suo conto, da un soggetto terzo, solitamente un intermediario o un
+provider che offre servizi specifici di trasmissione e ricezione delle fatture elettroniche.
+
+Esempio: se il soggetto Iva ha predisposto il file XML della fattura e vuole inviarlo
+
+autonomamente, potrà accedere con le sue credenziali al portale “Fatture e Corrispettivi” e
+usare il servizio di trasmissione oppure, se dispone di una PEC, potrà allegare al messaggio
+PEC il file della fattura; se il soggetto Iva non dispone di una PEC, potrà concordare con il
+suo intermediario l’invio del file della fattura mediante la PEC di quest’ultimo.
+In definitiva, il SdI accetta le fatture elettroniche di un soggetto Iva anche da una PEC o un
+canale telematico (SFTP o Web Service) non direttamente gestito dall’operatore stesso.
+
+ATTENZIONE
+La creazione di un “canale telematico” SFTP o Web Service (precedente punto d) dovrà
+essere effettuata solo se un’azienda intende creare un canale telematico dedicato e sempre
+attivo (canale di tipo SFTP o Web-Service) tra i suoi server e il Sistema di Interscambio.
+Questa procedura, quindi, è rivolta a quei soggetti Iva caratterizzati da un particolare grado
+di informatizzazione, capaci di gestire con continuità e con costante presidio di personale il
+sistema informativo collegato al SdI e che devono trasmettere un numero molto rilevante
+di file fatture elettroniche.
+Per attivare questo canale telematico, inoltre, occorre stipulare un “accordo di servizio” con
+il SdI attraverso l’invio di una “richiesta di accreditamento”, cioè compilando un modulo
+online all’interno del quale vanno inseriti una serie di informazioni tecniche dettagliate (per
+maggiori informazioni si rimanda alle specifiche tecniche dell’allegato A al provvedimento
+del Direttore dell’Agenzia delle entrate del 24 novembre 2022).
+Se occorre inviare poche fatture al giorno, è sufficiente utilizzare una PEC ovvero il servizio
+web del portale “Fatture e Corrispettivi”.
+
+15
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+c) una PEC (Posta Elettronica Certificata), inviando il file XML della fattura come
+allegato del messaggio di PEC all’indirizzo “sdi01@pec.fatturapa.it”
+
+Cosa fa il Sistema di Interscambio quando riceve una fattura
+Come anticipato, le fatture elettroniche vanno sempre inviate ai propri clienti
+attraverso il SdI (Sistema di Interscambio), altrimenti sono considerate non emesse.
+Una volta che il file della fattura elettronica è stato trasmesso al SdI, quest’ultimo
+esegue alcuni controlli e, se tali controlli sono superati, trasmette il file all’indirizzo
+telematico presente nella fattura. I tempi in cui il SdI effettua le operazioni di controllo
+e consegna della fattura possono variare da pochi minuti ad un massimo di 5 giorni nel
+caso in cui è molto elevato il numero di fatture che il SdI sta elaborando in quel
+momento.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+QUALI CONTROLLI ESEGUE IL SDI SULLA FATTURA ELETTRONICA
+Il SdI effettua i seguenti controlli sulla fattura elettronica:
+•
+
+verifica che siano presenti i dati minimi obbligatori previsti per legge (art. 21
+ovvero 21-bis del Dpr n. 633/1972), cioè – in generale – gli identificativi del
+fornitore e del cliente, il numero e la data della fattura, la descrizione della natura,
+quantità e qualità del bene ceduto o del servizio prestato, l’imponibile, l’aliquota e
+l’Iva
+
+•
+
+verifica che i valori della partita Iva del fornitore (cedente/prestatore) e della
+partita Iva/Codice Fiscale del cliente (cessionario/committente) siano esistenti in
+Anagrafe Tributaria
+
+•
+
+verifica che sia valorizzato il campo «Codice destinatario» con l’indirizzo telematico
+dove recapitare il file
+
+•
+
+verifica la coerenza tra i valori dell’imponibile, dell’aliquota e dell’Iva (ad esempio,
+se l’imponibile è 100 euro e l’aliquota è 22%, verifica che l’Iva sia di 22 euro).
+
+ATTENZIONE
+Per tutte le fatture elettroniche inviate a soggetti Iva o consumatori finali, il SdI accetta
+anche file non firmati digitalmente.
+Nel caso in cui, però, il file della fattura elettronica sia firmato digitalmente, il SdI esegue
+controlli sulla validità del certificato di firma.
+
+Il SdI controlla inoltre che il file della stessa fattura elettronica non sia stato già inviato
+(duplicato).
+Indipendentemente dall’esito dei controlli sopra descritti, il SdI invia una ricevuta (di
+scarto, di consegna o di mancata consegna) al soggetto trasmittente. Tali ricevute
+sono consultabili nell’apposita area del portale Fatture e Corrispettivi (si veda il
+paragrafo “Il servizio di consultazione delle fatture e delle ricevute” di questa guida.
+
+16
+
+FATTURA ELETTRONICA NON CORRETTA: LA RICEVUTA DI SCARTO
+
+La ricevuta di scarto viene trasmessa dal SdI alla medesima PEC o al medesimo canale
+telematico (SFTP o Web Service) da cui ha ricevuto la fattura elettronica. Se la fattura
+elettronica è stata trasmessa mediante i servizi gratuiti offerti dall’Agenzia delle
+entrate, l’eventuale ricevuta di scarto è consultabile esclusivamente nel portale
+“Fatture e Corrispettivi”.
+Di seguito un esempio della ricevuta di scarto:
+
+Se la fattura elettronica è stata scartata dal SdI, occorrerà correggere l’errore che ha
+prodotto lo scarto e inviare nuovamente al SdI il file della fattura corretta: al riguardo
+si consiglia di ricompilare la fattura con la stessa data e numerazione di quella scartata
+ma il nome del file deve essere modificato se la fattura non viene prodotta tramite la
+procedura web del portale “Fatture e Corrispettivi” (per maggiori informazioni su
+questa tematica si rimanda alla circolare 13/E del 2 luglio 2018).
+
+FATTURA ELETTRONICA CORRETTA: LA RICEVUTA DI CONSEGNA O LA RICEVUTA
+
+DI IMPOSSIBILITÀ DI RECAPITO
+
+Se i controlli sopra descritti vanno a buon fine, il SdI recapita la fattura elettronica
+all’indirizzo telematico che legge nel file della fattura (campi “Codice destinatario” e
+“PEC destinatario”) e al soggetto che ha trasmesso il file invia una ricevuta di
+consegna che contiene anche l’informazione della data di ricezione da parte del
+destinatario.
+
+17
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Se uno o più dei controlli sopra descritti non va a buon fine, il SdI “scarta” la fattura
+elettronica e invia al soggetto che ha trasmesso il file una ricevuta di scarto all’interno
+della quale sarà anche indicato il codice errore e una sintetica descrizione del motivo
+dello scarto (per spiegazioni più dettagliate di tali motivi si rimanda alle specifiche
+tecniche allegate al provvedimento del Direttore dell’Agenzia delle entrate del 24
+novembre 2022).
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Nella ricevuta, inoltre, sono riportate le seguenti informazioni:
+•
+
+l’Identificativo SdI, ossia un numero – attribuito dal SdI e denominato “IdSdI” –
+che identifica univocamente il file della fattura
+
+•
+
+il nome file, ossia il nome assegnato al file dal soggetto che ha predisposto la
+fattura
+
+•
+
+il codice hash, che consente di garantire l’integrità del file stesso.
+
+Se la casella PEC ovvero il canale telematico SFTP o Web Service, dove il SdI prova a
+recapitare il file della fattura, non fossero attivi (ad esempio se la casella PEC è piena
+ovvero il server del canale telematico è momentaneamente non disponibile) ovvero se
+nel campo “Codice destinatario” della fattura è indicato il valore “0000000”,il SdI –
+leggendo
+il
+numero
+di
+partita
+Iva/Codice
+Fiscale
+del
+cliente
+(c.d.
+cessionario/committente) all’interno della fattura – mette comunque a disposizione il
+duplicato della fattura nell’area riservata del portale “Fatture e Corrispettivi” in
+“Consultazione → Fatture elettroniche e altri dati Iva”.
+In tale situazione, il SdI invia al soggetto che ha trasmesso il file una ricevuta di
+impossibilità di recapito all’interno della quale è indicata la data di messa a
+disposizione del file al cliente all’interno del portale “Fatture e Corrispettivi”.
+In questo caso la fattura si considera emessa per il fornitore ma non ancora
+definitivamente ricevuta (ai fini fiscali) dal cliente. Per tale motivo, è importante che il
+fornitore (cedente/prestatore) avvisi il cliente – per vie diverse dal SdI (ad esempio
+tramite email, telefono o altro contatto) – che la fattura elettronica è a sua
+disposizione nell’area riservata, in modo tale che quest’ultimo possa prenderne
+visione, consultandola e/o scaricandola dalla predetta area: la data di decorrenza della
+detraibilità dell’Iva, per il cliente, scatterà dal momento di presa visione della fattura.
+ATTENZIONE
+Ai fini della esigibilità e detraibilità dell’Iva, in sintesi, si ricorda che:
+•
+
+per il fornitore, ogni qualvolta il SdI invia una ricevuta di consegna o una ricevuta di
+impossibilità di recapito, la fattura si considera emessa e la data di esigibilità coincide
+con la data riportata nella fattura (al contrario, una ricevuta di scarto determina che la
+fattura non è mai stata emessa e occorre correggere l’errore in essa contenuto e
+ritrasmetterla al SdI)
+
+•
+
+per il cliente, ogni qualvolta il SdI consegna la fattura, la stessa si considera ricevuta e
+la data a partire dalla quale può essere detratta l’Iva coincide con quella della consegna
+del documento; nel caso in cui la fattura superasse i controlli ma il SdI non riuscisse a
+consegnarla per problemi del canale telematico a cui tenta di recapitarla, emettendo
+ricevuta di impossibilità di recapito, la data dalla quale può essere detratta l’Iva
+coincide con quella di “presa visione” (da parte del cliente) della fattura nell’area
+riservata “Consultazione → Fatture elettroniche e altri dati Iva” del portale “Fatture e
+Corrispettivi”.
+
+18
+
+Come si riceve una fattura elettronica dal Sistema di Interscambio
+
+ATTENZIONE
+Il soggetto Iva può decidere di ricevere la fattura ad un indirizzo PEC direttamente a lui
+intestato o su un canale telematico (SFTP o Web Service) direttamente da lui gestito
+oppure può farla ricevere, per suo conto, da un soggetto terzo, solitamente un
+intermediario o un provider che offre servizi specifici di trasmissione e ricezione delle
+fatture elettroniche.
+In definitiva, il SdI consegna le fatture elettroniche all’indirizzo PEC o sul canale telematico
+(SFTP o Web Service) che legge dalla fattura, indipendentemente se questi sono
+direttamente riconducibili al cliente o meno.
+
+Per essere quindi sicuri di ricevere correttamente una fattura, è indispensabile
+comunicare in modo chiaro e tempestivo al fornitore non solo la propria partita Iva e i
+propri dati anagrafici, come accadeva con le fatture tradizionali, ma anche l’indirizzo
+telematico (PEC ovvero codice destinatario di 7 cifre) che il fornitore dovrà riportare
+nella fattura affinché il SdI sia in grado di consegnarla.
+Per agevolare il fornitore nella fase di acquisizione dei dati del cliente, tutti i soggetti
+Iva possono:
+1) registrare preventivamente presso il SdI l’indirizzo telematico dove desiderano
+ricevere di default tutte le loro fatture
+2) generare e portare con sé un codice bidimensionale (QR Code) contenente il
+numero di partita Iva, tutti i dati anagrafici e l’indirizzo telematico di default
+comunicato preventivamente al SdI.
+Queste due azioni possono essere effettuate dal soggetto Iva (o da un suo
+intermediario appositamente delegato: per maggiori informazioni si rinvia a questo link
+del sito internet dell’Agenzia delle entrate, nella sezione “Fatture Elettroniche”)
+nell’area riservata del portale “Fatture e Corrispettivi” utilizzando i due appositi servizi
+online denominati “Registrazione dell’indirizzo telematico dove ricevere tutte le fatture
+elettroniche” e “Generazione QR Code partita Iva”.
+
+19
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Una volta trasmessa la fattura e in caso di esito positivo dei controlli previsti, il SdI
+consegna la fattura elettronica all’indirizzo telematico presente nella fattura stessa.
+Pertanto, la fattura elettronica verrà recapitata alla casella PEC ovvero al canale
+telematico (SFTP o Web Service) che il cliente ha comunicato al suo fornitore e che
+quest’ultimo (o il suo intermediario) ha correttamente riportato nella fattura.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Attraverso il servizio di “Registrazione dell’indirizzo telematico dove ricevere tutte le
+fatture elettroniche” è possibile associare al proprio numero di partita Iva un indirizzo
+telematico (PEC o codice destinatario di 7 cifre identificativo di un canale SFTP o Web
+Service fornito dal provider del software/applicazione di gestione fatture elettroniche)
+sul quale ricevere sempre tutte le fatture elettroniche. In questo modo, l’indirizzo
+registrato prevale su quello eventualmente indicato dal fornitore in fattura: il SdI
+recapita infatti le fatture direttamente all’indirizzo telematico abbinato alla partita Iva.
+
+20
+
+Attraverso il servizio “Generazione QR Code partita Iva” è possibile ottenere un vero e
+proprio “biglietto da visita digitale”, disponibile come immagine da conservare sullo
+smartphone o stampare su carta. Mostrando il QR Code al fornitore - in modo analogo
+a quanto avviene con la tessera sanitaria per le spese mediche - quest’ultimo può
+acquisire automaticamente il numero di partita Iva del cliente, i suoi dati anagrafici e il
+suo indirizzo telematico (solo se previamente registrato dal cliente).
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Qualora il fornitore utilizzi una delle procedure gratuite dell’Agenzia delle entrate o un
+software di mercato abilitato alla lettura del QR Code, i dati in esso contenuti vengono
+riportati in fattura in modo automatico e senza possibilità di errore.
+
+21
+
+Come si conservano le fatture elettroniche
+Per legge (art. 39 del Dpr n. 633/1972) sia chi emette sia chi riceve una fattura
+elettronica è obbligato a conservarla a norma.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+La conservazione a norma non è la semplice memorizzazione su PC del file della
+fattura, bensì un processo regolamentato tecnicamente dalla legge (CAD – Codice
+dell’Amministrazione Digitale). Con il processo di conservazione a norma, infatti, si
+avrà la garanzia – negli anni – di non perdere mai le fatture, riuscire sempre a leggerle
+e, soprattutto, di poter recuperare in qualsiasi momento l’originale della fattura stessa
+(così come degli altri documenti informatici che si decide di portare in conservazione).
+Il processo di conservazione a norma è solitamente offerto da operatori privati
+certificati, facilmente reperibili online. L’Agenzia delle entrate mette tuttavia a
+disposizione, gratuitamente, un servizio di conservazione a norma per tutte le fatture
+elettroniche emesse e ricevute, accessibile al soggetto Iva dalla propria area riservata
+del portale “Fatture e Corrispettivi”. Per ulteriori dettagli si rimanda alla sezione “I
+servizi dell’Agenzia”.
+
+22
+
+3. I SERVIZI DELL’AGENZIA
+Il portale “Fatture e Corrispettivi”
+
+Il portale è un’area riservata, accessibile ai titolari di partita Iva mediante delle
+credenziali personali, al fine di garantire la sicurezza e l’inviolabilità dei dati contenuti
+nelle fatture: per accedere è necessario essere in possesso di SPID ("Sistema Pubblico
+dell'Identità Digitale"), CIE (Carta di identità elettronica), Carta Nazionale dei Servizi
+(CNS) oppure delle credenziali Fisconline/Entratel rilasciate dall’Agenzia delle entrate.
+È importante sapere che con tali credenziali (SPID, CIE, CNS o Fisconline/Entratel) il
+soggetto accede anche a tutti gli altri servizi online offerti dall’Agenzia delle entrate,
+quali ad esempio la consultazione delle proprie dichiarazioni fiscali, dei versamenti,
+degli atti del registro, delle visure ipotecarie e catastali relative ai propri immobili.
+ATTENZIONE
+
+Il contribuente può conferire una specifica delega all’intermediario di fiducia per
+autorizzarlo a usare i servizi della propria area riservata dell’Agenzia.
+Non tutti gli intermediari sono delegabili, ma solo i soggetti individuati all’art. 3,
+comma 3, del Dpr n. 322 del 1998 quali incaricati alla trasmissione telematica delle
+dichiarazioni (per esempio CAF, commercialisti, consulenti del lavoro, etc.).
+N.B.: i servizi di “fatturazione elettronica e conservazione delle fatture elettroniche” e
+di “accreditamento e censimento dispositivi” possono essere delegati anche a soggetti
+diversi dagli intermediari di cui sopra.
+Si possono delegare tutti i servizi presenti nel portale “Fatture e Corrispettivi” o solo
+alcuni di essi.
+Per maggiori informazioni sui servizi delegabili e sulle modalità di conferimento e
+comunicazione dei dati relativi alla delega conferita si rimanda alla pagina “Delega ai
+servizi on line dell’Agenzia delle entrate e dell’Agenzia delle entrate-Riscossione
+(Delega Unica)”
+
+Come si accede al portale “Fatture e Corrispettivi”
+Il link per accedere al portale “Fatture e Corrispettivi” si trova nella home page del sito
+www.agenziaentrate.gov.it nell’area tematica denominata “Fatture elettroniche e
+Corrispettivi”. Cliccando sul link del portale si apre la maschera dove vanno inserite le
+credenziali di accesso.
+
+23
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Per semplificare il processo di fatturazione elettronica e valorizzarne i vantaggi in
+termini di efficienza amministrativa, l’Agenzia delle entrate ha messo a disposizione
+una serie di servizi gratuiti, nel portale web “Fatture e Corrispettivi”, che consentono di
+predisporre, trasmettere, consultare e conservare le fatture elettroniche.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Inserite le credenziali, il sistema apre una nuova maschera in cui l’utente deve
+scegliere il profilo con cui vuole operare:
+•
+
+se si vuole accedere ai servizi relativi alla propria partita Iva, selezionare la voce
+“Me stesso”
+
+•
+
+se si è stati incaricati ad operare per conto dell’azienda per cui si lavora,
+selezionare la voce “Incaricato”
+
+•
+
+se si è ricevuta una delega come intermediario dal proprio cliente titolare di partita
+Iva, selezionare la voce “Delega diretta”
+
+•
+
+se si deve operare come tutore del soggetto titolare di partita Iva (perché, ad
+esempio, quest’ultimo è interdetto), selezionare la voce “Tutore”.
+
+Successivamente il sistema consentirà di scegliere il numero di partita Iva per il quale
+si intende operare (se si è selezionata la voce “Me stesso”, il sistema consentirà la
+scelta solo della partita Iva di cui si è titolare).
+Infine, prima di accedere alla pagina principale del portale, occorrerà leggere e
+accettare l’informativa sul trattamento dei dati personali ai sensi degli artt. 13 e 14 del
+Regolamento (UE) 2016/679.
+
+La home page del portale “Fatture e Corrispettivi”: i servizi
+principali
+Dopo l’inserimento delle credenziali e la scelta di quale profilo usare, il sistema
+propone la pagina principale del portale nella quale appariranno alcune sezioni che, a
+loro volta, conterranno i link ai singoli servizi.
+In alto a destra è visualizzato un piccolo riquadro dove è evidenziato il codice fiscale
+dell’utente che ha eseguito l’accesso al portale e il numero di partita Iva per il quale si
+sta operando.
+
+24
+
+ATTENZIONE
+Il portale “Fatture e Corrispettivi”, oltre ai servizi gratuiti per supportare i soggetti Iva nel
+processo di fatturazione elettronica, contiene anche servizi gratuiti per gestire:
+˗
+
+il processo di trasmissione dei dati dei corrispettivi
+
+˗
+
+il processo di trasmissione delle comunicazioni periodiche di liquidazione Iva
+
+˗
+
+la consultazione della bozza dei documenti Iva precompilati.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Per maggiori informazioni sui predetti processi, si rimanda all’apposita area informativa del sito
+internet dell’Agenzia delle entrate accessibile cliccando su questo link.
+
+25
+
+Con riferimento ai servizi per la fatturazione elettronica, i link da utilizzare sono quelli
+illustrati di seguito.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Nel riquadro denominato “Fatturazione elettronica e Conservazione”, si trovano:
+•
+
+”Registrazione dell’indirizzo telematico dove ricevere tutte le fatture elettroniche”
+cioè il servizio che permette di abbinare alla partita Iva un unico indirizzo
+telematico dove ricevere di default tutte le fatture elettroniche pervenute e
+correttamente elaborate dal SdI (per la descrizione di tale servizio si rimanda al
+capitolo 2 “Come si riceve una fattura elettronica dal Sistema di Interscambio” di
+questa guida)
+
+•
+
+”Fatturazione elettronica e conservazione” per predisporre e trasmettere le fatture
+elettroniche e per sottoscrivere la convenzione per usufruire del servizio gratuito di
+conservazione elettronica di tutte le fatture emesse e ricevute tramite il SdI
+
+•
+
+”Censimento dei canali abituali di trasmissione” che permette ai soggetti Iva di
+comunicare al SdI gli indirizzi telematici (PEC o canali SFTP o Web Service
+accreditati a SdI) da cui invia abitualmente le proprie fatture elettroniche, al fine di
+ricevere un messaggio di avvertimento ogni qualvolta il SdI riceva da un canale
+diverso una fattura elettronica in cui il soggetto Iva figura come fornitore
+
+•
+
+”Censimento codici contratto per società di Utilities” cioè il servizio che permette ai
+soggetti Iva che erogano a consumatori finali prestazioni di servizi di pubblica
+utilità di comunicare i codici contratto, relativi a contratti stipulati anteriormente al
+1° gennaio 2005 nei quali non sia stato riportato, o non sia stato possibile
+identificare, il codice fiscale del committente. Tali codici contratto verranno
+utilizzati per l’emissione delle fatture elettroniche in sostituzione del codice fiscale
+del committente.
+
+26
+
+Nel riquadro denominato “Generazione QR Code partita Iva”, si trovano i link per
+generare il QR Code – in pdf o in formato immagine (stampabile o da salvare sul
+proprio dispositivo mobile) – contenente i dati identificativi fiscali del soggetto Iva (per
+la descrizione di tale servizio si rimanda al capitolo 2 “Come si riceve una fattura
+elettronica dal Sistema di Interscambio” di questa guida).
+
+•
+
+”Fatture elettroniche e altri dati Iva” che permette di accedere alle funzioni di
+ricerca, visualizzazione e download dei file delle fatture elettroniche emesse e
+ricevute attraverso il SdI
+
+•
+
+”Monitoraggio delle ricevute dei file trasmessi” che permette di accedere alle
+funzioni di ricerca e visualizzazione delle ricevute di scarto o di consegna o di
+impossibilità di consegna delle fatture elettroniche
+
+•
+
+”Consultazioni e download massivi” che consente di scaricare i file delle fatture
+elettroniche, dei corrispettivi giornalieri e le ricevute dei file trasmessi
+
+•
+
+”Trasmissioni corrispettivi lotteria” che consente di ricercare e visualizzare l’elenco
+delle trasmissioni inviate ai fini della lotteria in base ai criteri di ricerca impostati
+
+•
+
+”Censimento canale per forniture massive” che consente di registrare a sistema i
+canali su cui ricevere massivamente i file delle fatture elettroniche, corrispettivi
+giornalieri e gli elenchi A e B per il pagamento dell’imposta di bollo, in
+cooperazione applicativa.
+
+La procedura web
+La procedura web, presente nella sezione “Fatturazione elettronica e conservazione”,
+consente di predisporre una fattura elettronica nel formato XML obbligatorio, ma anche
+di poterla visualizzare in un formato leggibile (pdf). Una volta predisposto, il file (XML)
+della fattura può essere ricontrollato, modificato, salvato sul proprio PC e, infine,
+trasmesso al Sistema di Interscambio.
+La procedura è flessibile e consente anche solo di controllare e trasmettere file (XML)
+di fatture elettroniche predisposte con altre procedure, come ad esempio il software
+gratuito per PC fisso sempre offerto dall’Agenzia delle entrate.
+ATTENZIONE
+La procedura web è utilizzabile solo se si è connessi alla rete internet.
+Nel caso in cui si avesse difficoltà a connettersi in rete, è possibile utilizzare un software
+c.d. “stand alone”, cioè che permette di predisporre le fatture anche senza collegamento
+come la procedura gratuitamente installabile su PC fisso messa a disposizione dall’Agenzia
+delle entrate a questo link.
+Una volta predisposta la fattura e salvato sul proprio PC il file (XML) della stessa, ci si potrà
+connettere ad internet per il solo tempo necessario a trasmettere al SdI il file (si veda al
+riguardo il paragrafo “Come si invia una fattura elettronica al cliente” (capitolo 2 di questa
+guida).
+
+27
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Nel riquadro denominato “Consultazione” (si veda il paragrafo “Il servizio di
+consultazione delle fatture e delle ricevute” di questa guida) si trovano i seguenti
+servizi:
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Per accedere alla procedura e predisporre una fattura elettronica, occorre cliccare sul
+link “Fatturazione elettronica e Conservazione” nello specifico riquadro della home
+page del portale:
+
+Il sistema propone una pagina con alcune ulteriori sezioni di lavoro: nella sezione
+“Crea nuovo file”, è possibile scegliere la tipologia di fattura da predisporre: è possibile
+scegliere uno dei due link Fattura ordinaria oppure Fattura semplificata (si ricorda che
+per legge – art. 21-bis del Dpr n. 633/1972 – la fattura semplificata può essere
+utilizzata solo per importi complessivi di imponibile e Iva non superiori a 400 euro)
+oppure, se si sta predisponendo una fattura per una Pubblica Amministrazione, è
+possibile scegliere il link Fattura PA.
+
+Per approfondimenti sulla generazione di una fattura elettronica, si rimanda al
+paragrafo 2 di questa guida.
+
+28
+
+Il servizio di conservazione a norma
+
+Cliccando sul link “Accedi alla sezione conservazione” si apre una nuova pagina in cui
+l’utente deve prendere visione del Manuale del servizio di Conservazione (nel quale
+sono descritte tutte le caratteristiche tecniche del processo di conservazione eseguito
+sulle fatture) e dell’Accordo di servizio.
+
+29
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Selezionando il link “Fatturazione elettronica e Conservazione” nella home page del
+portale “Fatture e Corrispettivi” è possibile attivare il servizio gratuito di conservazione
+a norma delle fatture elettroniche.
+
+Con la sottoscrizione dell’accordo è possibile portare in conservazione fatture
+elettroniche già transitate per SdI in data antecedente alla data di adesione. Se si
+intende utilizzare questa funzionalità è necessario indicare la data a partire dalla quale
+le fatture elettroniche transitate da SdI, verranno portate automaticamente in
+conservazione. La data antecedente per il recupero di fatture già transitate per SdI
+non può essere inferiore al primo gennaio del secondo anno precedente a quello
+dell'adesione all'accordo di servizio. Se non viene indicata una data retroattiva,
+verranno portate in conservazione tutte le fatture inviate a SdI a partire dal giorno
+successivo alla data di adesione.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Il servizio di Consultazione delle fatture e delle ricevute
+Tutte le fatture elettroniche (nonché le note di variazione) emesse e ricevute
+correttamente attraverso il Sistema di Interscambio sono messe a disposizione del
+soggetto Iva attraverso un servizio accessibile dalla home page del portale “Fatture e
+Corrispettivi” nel box “Consultazione” cliccando sul link “Fatture elettroniche e altri dati
+Iva”.
+
+La consultazione non deve essere confusa con la conservazione:
+•
+
+la consultazione è la funzione attraverso cui visualizzare ed eventualmente
+scaricare la copia conforme del file della fattura, necessaria per la gestione
+ordinaria d’impresa tipicamente svolte nel periodo a ridosso dell’emissione/ricezione
+delle fatture, come ad esempio le attività di verifica rispetto agli ordini,
+contabilizzazione, effettuazione incassi/pagamenti
+
+•
+
+la conservazione è la funzione che consente di archiviare il file originale della
+fattura in modo sicuro e nel rispetto delle norme del CAD (Codice
+dell’Amministrazione Digitale). Tale funzione è necessaria per essere sicuri che il file
+non vada mai smarrito o distrutto e sia recuperabile nel tempo solo quando
+strettamente necessario (ad esempio, nell’ambito di un contenzioso quando è
+necessario esibire l’originale della fattura).
+
+30
+
+I file delle fatture elettroniche correttamente trasmessi al SdI rimarranno disponibili in
+consultazione nell’area riservata del sito web dell’Agenzia delle entrate sino al 31
+dicembre del secondo anno successivo a quello di ricezione da parte del SdI. Dopo tale
+data, saranno consultabili solo i c.d. “dati fattura” sino al 31 dicembre dell’ottavo anno
+successivo a quello di presentazione della dichiarazione di riferimento.
+
+Selezionando il link “Pagamento imposta di bollo”, il soggetto Iva potrà consultare gli
+elenchi A e B per visualizzare l’importo da pagare ed eventualmente modificare
+l’elenco B proposto dall’Agenzia. Per maggiori dettagli si può consultare la relativa
+guida pubblicata nell’area tematica della Fatturazione elettronica.
+Selezionando il link “Le tue fatture emesse”, verrà visualizzato un elenco delle fatture
+emesse nell’ultimo trimestre ovvero nel periodo selezionato con l’apposita funzionalità.
+Il servizio consente, inoltre, di effettuare una ricerca avanzata delle fatture con
+ulteriori chiavi come la partita Iva o il codice fiscale del cliente o del fornitore e un
+range di importo imponibile Iva.
+
+31
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Accedendo a “Fatture elettroniche e altri dati Iva” dal box “Consultazione”, è possibile
+scegliere se consultare le fatture elettroniche emesse, ricevute o messe a disposizione
+(fatture di acquisto per le quali è stata prodotta ricevuta di impossibilità di consegna e
+sono in attesa della presa visione da parte del soggetto Iva), o effettuare una ricerca
+puntuale di una fattura mediante l’indicazione dell’identificativo univoco attribuito dal
+SdI (IdSdI) cliccando su “Ricerca per Sdi/file”.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+La schermata consente di visualizzare, su ogni riga della tabella, i dati di sintesi del
+singolo documento (numero, data, identificativo fiscale del fornitore o del cliente,
+imponibile, imposta, identificativo univoco assegnato dal SdI al file XML contenente la
+fattura-, applicazione del bollo). Al passaggio del mouse sull’identificativo del soggetto,
+viene visualizzata la sua denominazione.
+Inoltre, potranno essere identificate le fatture elettroniche consegnate (per le quali è
+stata emessa una ricevuta di consegna) così come quelle che, per problemi del canale
+di ricezione del cliente, non sono state consegnate ma solo messe a disposizione sul
+portale (per le quali è stata emessa una ricevuta di impossibilità di consegna):
+•
+
+le fatture consegnate sono marcate da un simbolo verde di spunta
+
+•
+
+le fatture non consegnate e da prendere in visione sono marcate da un simbolo
+rosso di alert.
+
+32
+
+Il secondo link presente nel box “Consultazione”, denominato “Monitoraggio delle
+ricevute dei file trasmessi”, consente di accedere alla pagina mostrata nella schermata
+seguente.
+In questa sezione si può scegliere di consultare le ricevute relative alle fatture emesse,
+trasmesse o ricevute (si veda il capitolo “Cosa fa il Sistema di Interscambio quando
+riceve una fattura” di questa guida).
+
+Selezionando una delle tre voci (es: “Fatture emesse”), si accede ad una pagina dove,
+impostando un range di date (non superiore a 7 giorni), è possibile ottenere l’elenco
+delle ricevute (di scarto, di consegna o di impossibilità di consegna) relative a tutte le
+fatture (o le note di variazione) transitate dal SdI in quel periodo.
+33
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Cliccando poi sul simbolo della lente di ingrandimento presente nell’ultima colonna, il
+soggetto Iva può visualizzare i dati di dettaglio della fattura o effettuare il download
+del file fattura, come mostrato nella figura che segue.
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+Il servizio consente inoltre di effettuare una ricerca avanzata delle ricevute con
+ulteriori chiavi come la partita Iva del cliente o del fornitore o il numero identificativo
+assegnato alla fattura dal SdI.
+
+Il software“stand alone” e l’App
+La predisposizione della fattura elettronica può essere effettuata anche con altre due
+procedure gratuite offerte dall’Agenzia delle entrate: il software per PC e l’App
+denominata “FatturAE” per smartphone o tablet.
+Il software per PC consente solo di predisporre la fattura perché permette di lavorare
+anche in assenza di una connessione ad internet: una volta terminata la
+predisposizione della fattura e salvato il file sul proprio PC, l’utente potrà collegarsi alla
+rete, aprire il portale “Fatture e Corrispettivi” e utilizzare la funzione di sola
+“Trasmissione” della fattura elettronica presente nella sezione “Fatturazione elettronica
+e Conservazione” descritta al paragrafo precedente. In alternativa, si potrà
+trasmettere la fattura via PEC, inviandola come allegato al messaggio di PEC
+all’indirizzo “sdi01@pec.fatturapa.it”.
+Il software per PC è scaricabile dal sito internet dell’Agenzia delle entrate nell’area
+tematica dedicata alla fatturazione elettronica e nella stessa area è presente la guida
+della procedura.
+L’App “FatturAE” consente sia di predisporre che di trasmettere al SdI la fattura
+elettronica. L’App e la sua descrizione sono accessibili sugli Store online iOS (Apple
+Store) e Android (Play Store): una volta scaricata l’App sul proprio dispositivo, si può
+accedere con le stesse credenziali con cui si accede al portale “Fatture e Corrispettivi”.
+
+34
+
+4. PER SAPERNE DI PIÙ: NORMATIVA E PRASSI
+Decreto Legislativo n. 127 del 5 agosto 2015
+Provvedimento del Direttore dell’Agenzia delle Entrate del 24 novembre 2022 (Regole
+
+Provvedimento del Direttore dell’Agenzia delle Entrate del 20 maggio 2025 (“Modifiche
+
+al provvedimento del Direttore dell’Agenzia delle entrate n. 375356 del 2 ottobre 2024
+recante la disciplina della “Delega unica agli intermediari per l’utilizzo dei servizi on
+line dell’Agenzia delle entrate e dell’Agenzia delle entrate-Riscossione”) e relative
+specifiche tecniche
+Circolare 13/E del 2 luglio 2018
+Delegare i servizi di fatturazione elettronica
+
+35
+
+La fattura elettronica e i servizi gratuiti dell’ Agenzia delle Entrate – DICEMBRE 2025
+
+tecniche per l’emissione e la ricezione delle fatture elettroniche per le cessioni di beni e
+le prestazioni di servizi effettuate tra soggetti residenti o stabiliti nel territorio dello
+Stato e per le relative variazioni, utilizzando il Sistema di Interscambio, nonché per la
+trasmissione telematica dei dati delle operazioni di cessione di beni e prestazioni di
+servizi transfrontaliere e per l’attuazione delle ulteriori disposizioni di cui all’articolo 1
+del decreto legislativo 5 agosto 2015, n. 127) e relative specifiche tecniche
+
+

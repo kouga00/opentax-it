@@ -1,0 +1,46 @@
+RISOLUZIONE N. 24/E
+
+Divisione Servizi
+______________
+Direzione Centrale Servizi
+Istituzionali e di Riscossione
+
+Roma, 24 maggio 2023
+
+OGGETTO: Istituzione della causale contributo “E107” per il versamento, tramite il
+modello “F24”, dei contributi di spettanza della Cassa Nazionale di
+Previdenza ed Assistenza Forense
+Il decreto del Ministro dell’Economia e delle Finanze del 10 gennaio 2014, emanato di
+concerto con il Ministro del Lavoro e delle Politiche Sociali, ha stabilito che il sistema dei
+versamenti unitari e la compensazione previsti dall’articolo 17 del decreto legislativo 9
+luglio 1997, n. 241, si applicano, tra gli altri, anche alla Cassa Nazionale di Previdenza ed
+Assistenza Forense (di seguito “Cassa Forense”).
+Con convenzione del 26 novembre 2020 stipulata tra l’Agenzia delle entrate e la Cassa
+Forense, è stato regolato il servizio di riscossione, mediante il modello F24, dei contributi
+previdenziali e assistenziali dovuti dagli iscritti alla citata Cassa.
+Con nota prot. n. 47793 del 24 febbraio 2023, la Cassa Forense ha richiesto
+l’istituzione di una ulteriore causale contributo, rispetto alle causali già istituite con le
+risoluzioni n. 1/E dell’11 gennaio 2021, n. 34/E del 21 maggio 2021 e n. 56/E del 6
+settembre 2021.
+Ciò premesso, si istituisce la causale contributo di seguito indicata:
+ “E107” denominata “CASSA FORENSE – contributo minimo integrativo”.
+
+In sede di compilazione del modello F24, la causale in argomento è esposta nella
+sezione “Altri enti previdenziali e assicurativi” (secondo riquadro), nel campo “causale
+contributo”, esclusivamente in corrispondenza delle somme indicate nella colonna “importi
+a debito versati”, riportando:
+- nel campo “codice ente”, il codice “0013”;
+
+2
+
+- nel campo “codice sede”, nessun valore;
+- nel campo “codice posizione”, nessun valore;
+- nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e l’anno
+di competenza del contributo da versare, nel formato “MM/AAAA”.
+Si precisa che la suddetta causale è operativamente efficace a decorrere dal 5 giugno
+2023.
+
+IL DIRETTORE CENTRALE
+Firmato digitalmente
+
+

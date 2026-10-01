@@ -1,0 +1,22 @@
+{
+  "contributionsPaid": {
+    "paragraphs": [
+      "Deducibili per intero dal reddito forfettario, nel limite della capienza (L. 190/2014 art. 1 c. 64: \"I contributi previdenziali versati in ottemperanza a disposizioni di legge\"; rigo LM35: contributi \"versati nel presente periodo d'imposta\"), qualunque sia la gestione, compresa una cassa professionale. Le deleghe segnate come pagate in \"F24 e rate\" (saldo e acconti INPS, esclusi gli interessi) sono già contate: qui indica solo i versamenti fatti altrove."
+    ]
+  },
+  "taxAdvancesPaid": {
+    "paragraphs": [
+      "Codici tributo 1790 e 1791 con anno di riferimento {year}, al netto di maggiorazioni e interessi (rigo LM45 col. 2)."
+    ]
+  },
+  "inpsAdvancesPaid": {
+    "paragraphs": [
+      "Causale PXX/PXXR con periodo di riferimento {year} (rigo RR5 col. 16)."
+    ]
+  },
+  "taxCredits": {
+    "paragraphs": [
+      "Righi LM40 e LM41. Normalmente zero per un forfettario."
+    ]
+  }
+}

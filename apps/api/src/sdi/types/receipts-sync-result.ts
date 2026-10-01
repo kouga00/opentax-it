@@ -1,0 +1,13 @@
+/** Outcomes of reading the PEC mailbox for receipts. */
+export const RECEIPTS_SYNC_STATUSES = ['DONE', 'BUSY', 'NOT_CONFIGURED', 'ERROR'] as const;
+
+/** Outcome of reading the PEC mailbox for receipts. */
+export interface ReceiptsSyncResult {
+  /** DONE; BUSY when another sync of the same tenant is running; NOT_CONFIGURED; ERROR when the mailbox could not be read. */
+  status: (typeof RECEIPTS_SYNC_STATUSES)[number];
+  /** Messages read from the inbox. */
+  read: number;
+  /** Messages that concerned one of our transmissions. */
+  matched: number;
+  message?: string;
+}

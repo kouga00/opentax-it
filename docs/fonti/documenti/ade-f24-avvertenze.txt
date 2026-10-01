@@ -1,0 +1,181 @@
+AVVERTENZE PER LA COMPILAZIONE DEL MOD. F24
+QUESTO MODELLO VA USATO:
+PER PAGARE: Imposte sui redditi e ritenute alla fonte; Iva; IMU;TARES; Imposte sostitutive delle imposte sui
+redditi e dell’Iva; Irap; Addizionale regionale o comunale all’Irpef; Contributi e premi INPS, INAIL, ENPALS,
+INPDAI; Diritti camerali; Interessi in caso di pagamento rateale e quanto altro previsto.
+PER PAGARE TUTTE LE SOMME DOVUTE (COMPRESI INTERESSI E SANZIONI) IN CASO DI: Liquidazione e
+controllo formale della dichiarazione; Avviso di accertamento; Atto di contestazione delle sanzioni o Avviso di
+irrogazione sanzioni; Accertamento con adesione (concordato); Conciliazione giudiziale; Ravvedimento.
+Come si paga
+È possibile pagare le somme dovute ad ogni singola scadenza anche utilizzando più modelli.
+Il versamento, per i soggetti titolari di partita IVA, deve essere effettuato con modalità di pagamento telematica, come
+previsto dall’art. 37,comma 49 del D.L. 04/07/2006, n. 223, ad eccezione dei casi d’esenzione previsti.
+In tali casi, il versamento può essere effettuato presso gli sportelli di qualunque agente della riscossione o banca
+convenzionata e presso gli uffici postali:
+• in contanti;
+• con carte PagoBANCOMAT, presso gli sportelli abilitati;
+• con carta POSTAMAT, POSTEPAY, con addebito su conto corrente postale presso qualsiasi ufficio postale;
+• con assegni bancari o postali tratti dal contribuente a favore di se stesso o con assegni circolari o vaglia postali o
+assegni postali vidimati emessi all’ordine dello stesso contribuente e girati per l’incasso alla banca o a Poste. In ogni
+caso l’assegno o il vaglia devono essere di importo pari al saldo finale del modello di versamento. Nel caso in cui
+l’assegno postale venga utilizzato per pagare tramite Poste l’operazione dovrà essere eseguita all’ufficio postale ove è
+intrattenuto il conto;
+• con assegni circolari e vaglia cambiari, presso gli agenti della riscossione.
+Attenzione: nel caso in cui l’assegno risulti anche solo parzialmente scoperto o comunque non pagabile, il versamento
+si considera omesso.
+Come va compilato il modello
+Il contribuente è tenuto a riportare con particolare attenzione il codice fiscale, i dati anagrafici e il domicilio fiscale.
+Il "Codice fiscale del coobbligato, erede, genitore, tutore o curatore fallimentare", deve essere compilato unitamente al
+"codice
+identificativo",
+desumibile
+dalla
+tabella
+“codici
+identificativi"
+pubblicata
+sul
+sito
+internet
+“www.agenziaentrate.gov.it”, ( es.: genitore/tutore = 02; curatore fallimentare = 03; erede = 07), con il codice fiscale del:
+– coobbligato;
+– erede, genitore, tutore o curatore fallimentare che effettua il pagamento per conto del contribuente e che deve firmare il
+modello.
+Nelle apposite colonne delle varie sezioni del modello devono essere evidenziati i codici tributo o le causali contributo
+per i quali si effettua il versamento e l’anno cui si riferisce il versamento stesso, da indicare con quattro cifre (es.: 2002).
+Per i versamenti con cadenza periodica nel campo rateazione/ regione/provincia/mese rif., andrà indicato il mese di
+riferimento (es: per ritenute lavoro dipendente di novembre occorre scrivere 0011).
+Eventuali errori commessi nella compilazione possono comportare richieste di pagamento della stessa somma già
+versata.
+I soggetti il cui periodo d’imposta non coincide con l’anno solare, devono barrare l’apposita casella ed indicare nella
+colonna “anno di riferimento” il primo dei due anni solari interessati.
+Gli importi devono sempre essere indicati con le prime due cifre decimali anche nel caso che tali cifre siano pari a zero.
+In presenza di più cifre decimali occorre procedere all’arrotondamento della seconda cifra decimale con il seguente
+criterio: se la terza cifra è uguale o superiore a 5, l’arrotondamento al centesimo va effettuato per eccesso; se la terza
+cifra è inferiore a 5, l’arrotondamento va effettuato per difetto (es.: euro 52,752 arrotondato diventa euro 52,75; euro
+52,755 arrotondato diventa euro 52,76; euro 52,758 arrotondato diventa euro 52,76).
+Si richiama l’attenzione sulla circostanza che le prime due cifre decimali vanno indicate anche se pari a zero come
+nell’ipotesi in cui l’importo sia espresso in unità di euro (es.: somma da versare pari a 52 euro, va indicato 52,00).
+Si precisa, inoltre, che i commi secondo e terzo dell’art. 51 D.Lgs. 213/98 dispongono in materia di conversione delle
+sanzioni pecuniarie ed amministrative quanto segue:
+1. A decorrere dal 1° gennaio 2002 ogni sanzione penale o amministrativa espressa in lire nelle vigenti disposizioni
+normative è tradotta in Euro secondo il tasso di conversione irrevocabilmente fissato ai sensi del Trattato.
+2. Se l’operazione di conversione prevista dal comma secondo produce un risultato espresso anche con decimali, la cifra
+è arrotondata eliminando i decimali.
+Se gli importi dovuti a titolo di saldo o di acconto sono pagati in unica soluzione, nelle colonne
+“rateazione/regione/prov./mese rif.” della sezione “Erario” e “rateazione/mese rif.” delle sezioni “Regioni” ed “IMU e altri
+tributi locali”, indicare 0101; in caso di pagamento rateale, è necessario attenersi alle indicazioni di seguito fornite nel
+paragrafo rateazioni.
+L’elenco completo di codici e causali è disponibile presso gli agenti della riscossione, le banche e gli uffici postali e può
+essere prelevato anche dal sito internet “www.agenziaentrate.gov.it”.
+Sono disponibili presso banche, agenti della riscossione e uffici postali modelli nei quali sono prestampati i codici tributo
+relativi ai versamenti più frequenti.
+
+Rateazione
+Nel caso in cui il contribuente abbia scelto di pagare ratealmente le somme dovute a titolo di saldo e acconto delle
+imposte e dei contributi risultanti dalla dichiarazione (fatta eccezione per gli acconti dovuti nei mesi di novembre e
+dicembre, che non sono rateizzabili) tali somme possono essere ripartite in rate mensili di pari importo.
+La rateazione non deve necessariamente riguardare tutti gli importi che, sulla base della dichiarazione, sono dovuti a
+titolo di saldo o di acconto.
+Ad esempio, è possibile rateizzare l’IRPEF e versare in unica soluzione l’IRAP, ovvero rateizzare l’acconto IRPEF e
+versare in unica soluzione il saldo IRPEF. Relativamente ai tributi da indicare nelle sezioni “Erario”, “Regioni” ed “IMU e
+altri tributi locali”, in occasione del pagamento di ciascuna rata, il contribuente deve indicare per ogni tributo,
+rispettivamente, nella colonna “rateazione/regione/prov/mese rif.” e in quella “rateazione/mese rif.”, la rata che sta
+pagando e il numero di rate prescelto (ad es., se versa la seconda di sei rate, deve indicare 0206).
+Si ricorda che la prima rata deve essere versata entro il giorno di scadenza del saldo e/o dell’acconto e che in ogni caso,
+il pagamento rateale deve essere completato entro il mese di novembre.
+L’importo da pagare ad ogni scadenza è dato dalla rata di capitale e dagli interessi ad essa relativi, da calcolare al tasso
+indicato presso le banche, gli agenti della riscossione e gli uffici postali. Gli interessi sono dovuti in misura forfettaria,
+indipendentemente dal giorno del pagamento e vanno calcolati con la seguente formula: C x i x t / 36.000, in cui “C” è
+l’importo rateizzato, “i” è l’interesse e “t” è il numero dei giorni che intercorrono tra la scadenza della prima rata e quella
+della seconda. Essi devono essere pagati utilizzando, per ogni sezione del modello, l’apposito codice tributo o causale
+contributo.
+Compensazione
+Il contribuente può compensare gli importi a credito di propria spettanza con debiti inerenti a tributi, contributi o premi
+indicati nello stesso modello F24 tenendo presente che deve essere indicato, quale importo massimo di credito
+compensato, l’importo necessario all’azzeramento del totale dei debiti indicati nelle varie sezioni; infatti il saldo finale del
+modello non può essere mai negativo (e non può essere negativo, nel caso si compili una sola sezione, neppure il saldo
+della singola sezione); il modello quindi non può chiudere mai con un’eccedenza di credito, ma può chiudere a zero o
+con un saldo positivo, cioè con un importo da versare.
+L’eventuale eccedenza di credito spettante potrà essere compensata, sempre nel rispetto del medesimo criterio, in
+occasione dei pagamenti successivi.
+Il modello va compilato e presentato anche nel caso in cui nulla risulti dovuto a seguito della compensazione, cioè nel
+caso in cui il saldo finale sia pari a zero.
+Chi effettua la compensazione, per esporre correttamente i crediti, deve indicare:
+a) nella colonna “codice tributo” o “causale contributo”, i relativi codici dai quali scaturisce il credito;
+b) nella colonna ”anno di riferimento” o “periodo di riferimento”, il periodo d’imposta o contributivo cui si riferisce il credito;
+c) nella colonna “importi a credito compensati”, l’ammontare del credito che si intende utilizzare in compensazione. In
+particolare:
+– nelle sezioni “Erario”, “Regioni” ed “IMU e altri tributi locali” occorre indicare la parte del credito d’imposta che si
+intende utilizzare in compensazione con il presente modello;
+– nelle sezioni “INPS” e “Altri enti previdenziali e assicurativi”, i crediti vantati nei confronti degli enti previdenziali
+risultanti dalle denunce contributive che si intendono compensare con il presente modello.
+Si ricorda che in ogni caso l’importo massimo compensabile è pari a euro 516.456,90;
+d) limitatamente ai crediti previdenziali e assicurativi, gli altri dati identificativi previsti nelle relative sezioni del modello.
+Compensazione e rateazione
+Nel caso in cui il contribuente intenda procedere sia alla compensazione che alla rateazione, può utilizzare due modelli: il
+primo con saldo finale eguale a zero per utilizzare il credito da compensare e con l’indicazione 0101 nello spazio
+rateazione in corrispondenza dell’importo a debito versato; il secondo per evidenziare l’importo della prima rata da
+versare del residuo debito, riportando nello spazio rateazione il numero della rata in pagamento e quello complessivo del
+numero delle rate prescelto (ad esempio, se la prima di cinque rate indicare 0105); a partire dalla seconda rata da
+versare sono dovuti gli interessi.
+ISTRUZIONI PARTICOLARI PER ALCUNI TIPI DI PAGAMENTO
+Pagamento delle somme dovute in caso di liquidazione e controllo della dichiarazione
+In questo caso il contribuente deve attenersi alle istruzioni fornite nell’apposita comunicazione.
+Pagamento delle somme dovute in caso di avviso di accertamento, di avviso di irrogazione o atto di
+contestazione di sanzioni, accertamento con adesione e conciliazione giudiziale
+Per tali pagamenti deve essere utilizzata la sezione “Erario” anche per pagare l’Irap e le addizionali regionali o comunali
+all’Irpef. Il contribuente deve indicare:
+– nello spazio “codice ufficio”, il codice dell’ufficio che ha emesso l’atto oggetto della definizione;
+– nello spazio “codice atto”, il codice dell’atto oggetto di definizione;
+– nella colonna “anno di riferimento”, l’anno cui si riferisce la violazione;
+– per l’Irap, e le addizionali regionali e le addizionali comunali, nella colonna “rateazione/regione/prov/mese rif./codice
+ente/codice comune”, il codice dell’ente territoriale destinatario della somma, prelevabile dal sito internet
+“www.agenziaentrate.gov.it”.
+Il tributo e gli interessi devono essere pagati cumulativamente, utilizzando il codice del tributo, mentre le sanzioni devono
+essere pagate a parte, utilizzando l’apposito codice.
+Se il contribuente effettua il pagamento in relazione a più atti, deve compilare tanti modelli quanti sono gli atti.
+
+Attenzione: l’utilizzazione di uno dei codici istituiti per il versamento delle somme oggetto di questo paragrafo comporta
+l’obbligo di riempire anche i campi relativi al codice ufficio ed al codice atto.
+Ravvedimento
+Questo modello deve essere utilizzato anche per il versamento sia dell’imposta e degli interessi, sia delle sanzioni
+dovute a seguito di ravvedimento. In tal caso non deve mai essere compilato lo spazio relativo al “codice ufficio”.
+SEZIONE IMU E ALTRI TRIBUTI LOCALI
+(Per i versamenti da indicare in questa sezione, nel campo
+“IDENTIFICATIVO OPERAZIONE” è riportato, ove richiesto dal Comune, il codice identificativo dell’operazione cui si
+riferisce il versamento, comunicato dallo stesso Comune).
+Istruzioni per il versamento dell’IMU
+Per il versamento dell’Imposta Municipale Propria (IMU) deve essere utilizzata la sezione “IMU e altri tributi
+locali”. In particolare, in ogni riga devono essere indicati i seguenti dati:
+Nello spazio “codice ente/codice comune” il codice catastale del Comune nel cui territorio sono situati gli immobili,
+costituito da quattro caratteri.
+Nello spazio “Ravv.” barrare la casella se il pagamento si riferisce al ravvedimento.
+Nello spazio “Immob. variati” barrare qualora siano intervenute delle variazioni per uno o più immobili che richiedano la
+presentazione della dichiarazione di variazione.
+Nello spazio “Acc.” barrare se il pagamento si riferisce all’acconto.
+Nello spazio “Saldo” barrare se il pagamento si riferisce al saldo. Se il pagamento è effettuato in unica soluzione per
+acconto e saldo, barrare entrambe le caselle.
+Nello spazio “Numero immobili” indicare il numero degli immobili (massimo 3 cifre).
+Lo spazio “rateazione” deve essere compilato solo se l’Amministrazione finanziaria fornisce le relative istruzioni, ad
+esempio con circolari o risoluzioni.
+Nello spazio “Anno di riferimento” deve essere indicato l’anno d’imposta cui si riferisce il pagamento. Nel caso in cui sia
+barrato lo spazio “Ravv.”, indicare l’anno in cui l’imposta avrebbe dovuto essere versata.
+Nello spazio “Importi a debito versati” indicare l’importo a debito dovuto. Nel caso di diritto alla detrazione, indicare
+l’imposta al netto della detrazione, da esporre nell’apposita casella in basso a sinistra.
+Istruzioni per il versamento della TARES
+Per il versamento del Tributo comunale sui rifiuti e sui servizi (TARES), deve essere utilizzata la sezione “IMU e
+altri tributi locali”. In particolare, in ogni riga devono essere indicati i seguenti dati:
+Nello spazio “codice ente/codice comune”, il codice catastale del Comune nel cui territorio sono situati gli immobili,
+costituito da quattro caratteri.
+Nello spazio “Ravv.”, barrare la casella se il pagamento si riferisce al ravvedimento.
+Nello spazio “Numero immobili”, indicare il numero degli immobili (massimo 3 cifre).
+Lo spazio “rateazione” deve essere compilato indicando il numero della rata in pagamento, seguito dal numero
+complessivo delle rate in cui è suddiviso il pagamento stesso. Ad esempio, nel caso in cui il pagamento è suddiviso in
+due rate e si procede al versamento della prima rata, indicare “0102”. Se il pagamento avviene in unica soluzione
+indicare “0101”.
+Nello spazio “Anno di riferimento”, deve essere indicato l’anno d’imposta cui si riferisce il pagamento. Nel caso in cui sia
+barrato lo spazio “Ravv.”, indicare l’anno in cui l’imposta avrebbe dovuto essere versata.
+Nello spazio “Importi a debito versati”, indicare l’importo a debito dovuto.
+
+

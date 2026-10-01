@@ -1,0 +1,42 @@
+La home page del portale "Fatture e Corrispettivi": i servizi principali
+
+Dopo l’inserimento delle credenziali e la scelta di quale profilo usare, il sistema propone la pagina principale del portale nella quale appariranno alcune sezioni che, a loro volta, conterranno i link ai singoli servizi.
+
+In alto a destra è visualizzato un piccolo riquadro dove è evidenziato il codice fiscale dell’utente che ha eseguito l’accesso al portale e il numero di partita Iva per il quale si sta operando.
+
+ATTENZIONE
+Il portale “Fatture e Corrispettivi”, oltre ai servizi gratuiti per supportare i soggetti Iva nel processo di fatturazione elettronica, contiene anche servizi gratuiti per gestire:
+
+● il processo di trasmissione dei dati dei corrispettivi
+
+● il processo di trasmissione delle comunicazioni periodiche di liquidazione Iva
+
+● la consultazione della bozza dei documenti Iva precompilati
+
+Per maggiori informazioni sui predetti processi, si rimanda all’apposita area informativa del sito internet dell’Agenzia delle entrate accessibile cliccando su questo link.
+
+Con riferimento ai servizi per la fatturazione elettronica, i link da utilizzare sono quelli illustrati di seguito.
+
+Nel riquadro denominato “Fatturazione elettronica e Conservazione”, si trovano:
+
+”Registrazione dell’indirizzo telematico dove ricevere tutte le fatture elettroniche” cioè il servizio che permette di abbinare alla partita Iva un unico indirizzo telematico dove ricevere di default tutte le fatture elettroniche pervenute e correttamente elaborate dal SdI (per la descrizione di tale servizio si rimanda al capitolo 2 “Come si riceve una fattura elettronica dal Sistema di Interscambio” di questa guida)
+
+”Fatturazione elettronica e conservazione” per predisporre e trasmettere le fatture elettroniche e per sottoscrivere la convenzione per usufruire del servizio gratuito di conservazione elettronica di tutte le fatture emesse e ricevute tramite il SdI
+
+”Censimento dei canali abituali di trasmissione” che permette ai soggetti Iva di comunicare al SdI gli indirizzi telematici (PEC o canali SFTP o Web Service accreditati a SdI) da cui invia abitualmente le proprie fatture elettroniche, al fine di ricevere un messaggio di avvertimento ogni qualvolta il SdI riceva da un canale diverso una fattura elettronica in cui il soggetto Iva figura come fornitore
+
+”Censimento codici contratto per società di Utilities” cioè il servizio che permette ai soggetti Iva che erogano a consumatori finali prestazioni di servizi di pubblica utilità di comunicare i codici contratto, relativi a contratti stipulati anteriormente al 1° gennaio 2005 nei quali non sia stato riportato, o non sia stato possibile identificare, il codice fiscale del committente. Tali codici contratto verranno utilizzati per l’emissione delle fatture elettroniche in sostituzione del codice fiscale del committente.
+
+Nel riquadro denominato “Generazione QR Code partita Iva”, si trovano i link per generare il QR Code – in pdf o in formato immagine (stampabile o da salvare sul proprio dispositivo mobile) – contenente i dati identificativi fiscali del soggetto Iva (per la descrizione di tale servizio si rimanda al capitolo 2 “Come si riceve una fattura elettronica dal Sistema di Interscambio” di questa guida).
+
+Nel riquadro denominato “Consultazione” (si veda il paragrafo “Il servizio di consultazione delle fatture e delle ricevute” di questa guida) si trovano i seguenti servizi:
+
+”Fatture elettroniche e altri dati Iva” che permette di accedere alle funzioni di ricerca, visualizzazione e download dei file delle fatture elettroniche emesse e ricevute attraverso il SdI
+
+”Monitoraggio delle ricevute dei file trasmessi” che permette di accedere alle funzioni di ricerca e visualizzazione delle ricevute di scarto o di consegna o di impossibilità di consegna delle fatture elettroniche
+
+”Consultazioni e download massivi” che consente di scaricare i file delle fatture elettroniche, dei corrispettivi giornalieri e le ricevute dei file trasmessi
+
+”Trasmissioni corrispettivi lotteria” che consente di ricercare e visualizzare l’elenco delle trasmissioni inviate ai fini della lotteria in base ai criteri di ricerca impostati
+
+”Censimento canale per forniture massive” che consente di registrare a sistema i canali su cui ricevere massivamente i file delle fatture elettroniche, corrispettivi giornalieri e gli elenchi A e B per il pagamento dell’imposta di bollo, in cooperazione applicativa.

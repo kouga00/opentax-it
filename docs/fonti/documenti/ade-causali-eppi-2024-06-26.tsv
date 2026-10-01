@@ -1,0 +1,12 @@
+# Foglio1
+Causali EPPI					
+Codice	Descrizione	Tipo inizio periodo riferimento	Tipo fine periodo di riferimento		
+E068	EPPI - Saldo contributivo – art. 8, c. 1, del Regolamento di previdenza	Formato MMAAAA = mese/anno di inizio del periodo di riferimento - Non può essere superiore a “fine periodo di riferimento”	Formato MMAAAA = mese/anno di fine del periodo di riferimento - Non può essere inferiore a “inizio periodo di riferimento”		
+E069	EPPI – Capitale e/o spese legali – art. 8, c. 4 e 6, Regolamento per l’attuazione delle attività di previdenza	Formato MMAAAA = mese/anno di inizio del periodo di riferimento - Non può essere superiore a “fine periodo di riferimento”	Formato MMAAAA = mese/anno di fine del periodo di riferimento - Non può essere inferiore a “inizio periodo di riferimento”		
+E070	EPPI – Interessi di mora e sanzioni e/o spese legali – art. 8, c. 5 e 6, Regolamento per l’attuazione delle attività di previdenza	Formato MMAAAA = mese/anno di inizio del periodo di riferimento - Non può essere superiore a “fine periodo di riferimento”	Formato MMAAAA = mese/anno di fine del periodo di riferimento - Non può essere inferiore a “inizio periodo di riferimento”		
+E072	EPPI – Spese legali a seguito di procedimento giudiziario	Formato MMAAAA = mese/anno di inizio del periodo di riferimento - Non può essere superiore a “fine periodo di riferimento”	Formato MMAAAA = mese/anno di fine del periodo di riferimento - Non può essere inferiore a “inizio periodo di riferimento”		
+E073	EPPI – Recupero oneri pensionistici	Formato MMAAAA = mese/anno di inizio del periodo di riferimento - Non può essere superiore a “fine periodo di riferimento”	Formato MMAAAA = mese/anno di fine del periodo di riferimento - Non può essere inferiore a “inizio periodo di riferimento”		
+# Foglio2
+
+# Foglio3
+

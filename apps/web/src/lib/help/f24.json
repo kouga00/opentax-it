@@ -1,0 +1,40 @@
+{
+  "firstDueDate": {
+    "paragraphs": [
+      "Ordinaria 30 giugno; con la proroga dell'anno, se prevista per i forfettari; oppure entro 30 giorni con maggiorazione dello 0,40% (art. 17 c. 2 DPR 435/2001), applicata prima di rateizzare."
+    ]
+  },
+  "installments": {
+    "paragraphs": [
+      "1 = unica soluzione (rateazione 0101 sull'F24). Il massimo dipende dalla prima scadenza: rate al 16 di ogni mese fino al 16 dicembre; quelle tra il 1 e il 20 agosto slittano al 20 agosto (art. 11)."
+    ]
+  },
+  "useCredits": {
+    "paragraphs": [
+      "Istr. Redditi PF 2026 Fasc. 1 §8 e Avvertenze F24 \"Compensazione e rateazione\": un primo modello a saldo zero con i crediti (rateazione 0101) e un secondo con la prima rata del debito residuo. Il modello con compensazione si trasmette solo con i servizi telematici AdE; sopra 5.000 € annui serve il visto di conformità. I crediti si gestiscono in [Crediti](/credits)."
+    ]
+  },
+  "creditOrder": {
+    "paragraphs": [
+      "Le istruzioni non impongono un ordine: è una scelta del contribuente. Nei modelli reali visti i crediti IRPEF coprivano il saldo INPS."
+    ]
+  },
+  "otherEntityCode": {
+    "paragraphs": [
+      "{periodRule}",
+      "Nel modello F24 la sezione ha un solo codice ente: per due casse servono due modelli."
+    ]
+  },
+  "deductibleContribution": {
+    "paragraphs": [
+      "Questa causale unisce contributo soggettivo, deducibile dal reddito (rigo LM35), e contributo integrativo, che non lo è (Ris. AdE 69/E/2006): indica la parte soggettiva."
+    ]
+  },
+  "telematicFile": {
+    "paragraphs": [
+      "Contiene **tutti gli F24 da pagare in questa data**, con l'IBAN del conto predefinito e la data di addebito. Invece di ricopiarli in F24 web, lo carichi nel programma gratuito **File Internet** del Desktop Telematico dell'Agenzia delle Entrate, per chi accede con Fisconline ([guida all'invio](https://assistenza.agenziaentrate.gov.it/portale/effettuare-invio-fisconline)).",
+      "In File Internet: **Controlla** (serve il programma di controllo \"Pagamenti con modello F24\", obbligatorio per i file preparati con altri software), poi **Prepara file** e **Invia**, oppure invialo dall'area riservata in \"Servizi → Trasmissioni telematiche\". L'addebito avviene alla data di versamento indicata.",
+      "Dopo l'addebito segna gli F24 come pagati. Fonti: [specifiche tecniche F24 per i contribuenti](https://www.agenziaentrate.gov.it/portale/schede/pagamenti/f24/specifiche-tecniche-f24-ordinario), [versamenti con il modello F24](https://telematici.agenziaentrate.gov.it/Main/Versamenti.jsp)."
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+Inviare la FatturaPA
+
+Il file preparato, firmato e nominato nel rispetto delle regole previste, può essere inviato al Sistema di Interscambio.
+Sono previsti quattro diversi canali di trasmissione per l’invio dei file:
+
+Posta Elettronica Certificata (PEC)
+
+Invio via web
+
+Servizio SDICoop - Trasmissione
+
+Servizio SDIFTP
+
+Invio tramite Posta Elettronica Certificata (PEC)
+
+La Posta Elettronica Certificata (PEC) è un sistema di posta elettronica che:
+
+garantisce l’ invio e la ricezione di messaggi e di eventuali documenti allegati,
+
+attesta con valenza legale l’invio e la ricezione dei messaggi al pari di una raccomandata con ricevuta di ritorno.
+
+L’invio mediante PEC è possibile per i soggetti forniti di una casella di Posta Elettronica Certificata.
+Per fare richiesta di una casella di PEC ci si può rivolgere ai gestori presenti nell’elenco pubblico dei gestori di Posta Elettronica Certificata pubblicato sul sito dell'Agenzia per l'Italia Digitale.
+
+L'utilizzo del canale PEC non presuppone alcun tipo di accreditamento preventivo presso il Sistema di Interscambio.
+
+I file FatturaPA e i file archivio devono essere spediti come allegato del messaggio di PEC.
+
+L'indirizzo PEC a cui destinare i file è il seguente: sdi01@pec.fatturapa.it.
+
+Il messaggio, comprensivo dell’allegato, non deve superare la dimensione di 30 megabytes. Se tale limite dimensionale non viene rispettato non è garantito il buon esito della trasmissione.
+
+Il soggetto che utilizza il canale PEC riceverà, sulla casella di PEC da cui ha effettuato la trasmissione, i file messaggio prodotti dal SdI relativi al proprio invio.
+
+Nota bene: il Sistema, con il primo messaggio di risposta, notifica di scarto o ricevuta di consegna, comunica al trasmittente l’indirizzo di PEC che dovrà utilizzare per i successivi eventuali invii.
+L’utilizzo di un indirizzo di PEC diverso da quello assegnato dal SdI non garantisce il buon fine della ricezione del file FatturaPA.
+
+Per approfondire
+
+Consultare la sezione PEC del sito dell'Agenzia per l'Italia Digitale
+
+Si consiglia di consultare la sezione File, fatture e messaggi per una descrizione dettagliata dei file messaggio prodotti dal SdI
+
+Invio via web
+
+Il servizio consente di inviare un file FatturaPA o un file archivio attraverso un’interfaccia web. Per accedervi è necessario essere in possesso di credenziali Entratel o Fisconline o essere provvisti di Carta Nazionale dei Servizi (CNS) precedentemente abilitata ai servizi telematici dell'Agenzia delle Entrate, oppure di credenziali SPID (Sistema Pubblico di Identita Digitale).
+
+Il file inviato via web non deve superare la dimensione di 5 megabytes.
+
+Il soggetto che usa il canale Web per l’invio di file potrà visualizzare i file messaggio relativi al proprio invio attraverso l’applicazione Monitorare la FatturaPA disponibile nella sezione Servizi online.
+
+Per approfondire
+
+Vai al servizio “Inviare via web la FatturaPA” del sito "fattura e corrispettivi
+
+Per ottenere le credenziali di autenticazione, consulta il sito "fattura e corrispettivi
+
+Per una descrizione dettagliata dei file messaggio prodotti dal SdI consultare la sezione File, fatture e messaggi.
+
+Invio tramite Servizio SDICoop - Trasmissione
+
+Il Servizio SDICoop - Trasmissione è disponibile per coloro che desiderano inviare i file FatturaPA e ricevere i file messaggio utilizzando dei servizi di cooperazione applicativa (web-services).
+
+Per usufruire di questo canale di trasmissione è necessario accreditarsi presso il Sistema di Interscambio mediante l’ applicazione Sistema di Accreditamento disponibile nella sezione Servizi online di questo sito.
+
+Per approfondire
+
+Vai al servizio Sistema di accreditamento
+
+Istruzioni per il servizio SDICoop - Trasmissione - pdf
+
+Per scaricare tutti file necessari per interagire con il Servizio SDICoop - Trasmissione consultare la sezione Documentazione Sistema di Interscambio
+
+Si consiglia di consultare la sezione File, fatture e messaggi per una descrizione dettagliata dei file messaggio prodotti dal SdI
+
+Invio tramite Servizio SDIFTP
+
+Il Servizio SDIFTP è disponibile per coloro che intendono inviare i file FatturaPA e ricevere i file messaggio utilizzando una modalità di trasferimento dati tramite protocollo SFTP (Secure File Transfer Protocol ).
+L'utilizzo di questa modalità presuppone la presenza di una struttura a supporto delle attività informatiche con capacità di gestire sistemi informativi e di un centro elaborazione dati con continuità operativa e con disponibilità di personale di presidio; risulta pertanto adatta a soggetti che movimentano elevati volumi di fatture.
+
+Per usufruire di questo canale di trasmissione è necessario accreditarsi presso il Sistema di Interscambio mediante il servizio Sistema di Accreditamento disponibile nella sezione Servizi online di questo sito.
+
+Vai al servizio Sistema di Accreditamento
+
+Istruzioni per il servizio SDIFTP - pdf
+
+Per scaricare tutti file necessari per interagire con il Servizio SDIFTP consultare la sezione Documentazione Sistema di Interscambio
+
+Si consiglia di consultare la sezione File, fatture e messaggi per una descrizione dettagliata dei file messaggio prodotti dal SdI

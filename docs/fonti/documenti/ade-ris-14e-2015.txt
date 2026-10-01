@@ -1,0 +1,52 @@
+Direzione Centrale Servizi ai Contribuenti
+____________
+
+RISOLUZIONE N. 14/E
+
+Roma, 12 febbraio 2015
+
+OGGETTO: Istituzione della causale contributo per il versamento, tramite
+modello F24, dei contributi previdenziali e assistenziali dovuti
+dagli iscritti all’Ente di Previdenza e Assistenza Pluricategoriale EPAP
+Il decreto interministeriale del 10 gennaio 2014 del Ministro dell’Economia
+e delle Finanze di concerto con il Ministro del Lavoro e delle Politiche Sociali, ha
+stabilito che il sistema dei versamenti unitari e la compensazione, previsti
+dall’articolo 17 del decreto legislativo 9 luglio 1997, n. 241, si applicano, tra gli
+altri, anche all’Ente di Previdenza e Assistenza Pluricategoriale (di seguito
+denominato “EPAP”).
+Con la convenzione del 4 febbraio 2015, stipulata tra l’Agenzia delle
+entrate e l’EPAP, è stato regolato il servizio di riscossione, mediante il modello
+F24, per il versamento dei contributi previdenziali e assistenziali dovuti dagli
+iscritti al suddetto Ente.
+Pertanto, per consentire il versamento dei suddetti contributi, tramite il
+modello F24, si istituisce la causale contributo di seguito indicata:
+“E065” denominato “EPAP - Contribuzione previdenziale obbligatoria”
+
+In sede di compilazione del modello F24, la suddetta causale contributo è
+esposta nella sezione “Altri enti previdenziali e assicurativi” (secondo riquadro)
+
+in corrispondenza, esclusivamente, delle somme indicate nella colonna “importi a
+debito versati”, indicando:
+-
+
+nel campo “codice ente”, il codice “0008”;
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, nessun valore;
+
+-
+
+nel campo “periodo di riferimento da mm/aaaa a mm/aaaa”, il mese e
+l’anno del versamento, nel formato “MM/AAAA”.
+
+Si precisa che la suddetta causale contributo è operativamente efficace a
+decorrere dal 23 febbraio 2015.
+
+IL DIRETTORE CENTRALE
+
+

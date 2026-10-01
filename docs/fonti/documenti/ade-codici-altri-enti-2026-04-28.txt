@@ -1,0 +1,66 @@
+Codici altri Enti Previdenziali ed Assicurativi
+Codice
+
+Descrizione
+
+0001
+
+ENPALS
+
+0002
+
+INPDAI
+
+0003
+
+INPDAP
+
+0004
+
+Fondi pensione Trentino Alto Adige
+
+0005
+
+Consulenti del Lavoro
+
+0006
+
+ENPACL
+
+0007
+
+ENPAP
+
+0008
+
+EPAP
+
+0009
+
+EPPI
+
+0010
+
+CNPR
+
+0011
+
+INARCASSA
+
+0012
+
+ENPAB
+
+0013
+
+CASSA FORENSE
+
+0014
+
+ENPAIA
+
+0015
+
+CNPADC
+
+

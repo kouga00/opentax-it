@@ -1,0 +1,5 @@
+# Generated: Docusaurus cache and build, OpenAPI document of the API and the API pages built from it
+.docusaurus
+build
+openapi.json
+api

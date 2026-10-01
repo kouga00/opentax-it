@@ -1,0 +1,68 @@
+RISOLUZIONE N. 13/E
+
+Divisione Servizi
+______________
+Direzione Centrale Servizi
+Istituzionali e di Riscossione
+
+Roma, 1 aprile 2026
+
+OGGETTO: Istituzione della causale per il versamento, tramite il modello
+“F24”, dei contributi previdenziali e assistenziali, delle sanzioni e
+degli interessi di spettanza della Cassa Nazionale di Previdenza e
+Assistenza a favore dei Dottori Commercialisti
+Il decreto del Ministro dell’Economia e delle finanze, di concerto con il
+Ministro del Lavoro e delle Politiche Sociali, del 10 gennaio 2014, pubblicato nella
+Gazzetta Ufficiale n. 16 del 21 gennaio 2014, ha stabilito che il sistema dei
+versamenti unitari e la compensazione previsti dall’articolo 17 del decreto
+legislativo 9 luglio 1997, n. 241 e s.m.i., si applicano, tra gli altri, anche alla Cassa
+nazionale di previdenza e assistenza dei dottori commercialisti (di seguito
+“Cassa”).
+Con convenzione del 15 ottobre 2025 stipulata tra l’Agenzia delle entrate e
+la Cassa è stato regolato il servizio di riscossione, mediante il modello F24, dei
+contributi previdenziali e assistenziali, delle sanzioni e degli interessi dovuti dagli
+obbligati alla Cassa.
+Tanto premesso, al fine di consentire il versamento delle suddette somme
+mediante il modello F24, si istituisce la seguente causale contributo:
+• “E150” denominata “Cassa Nazionale di previdenza e assistenza a
+favore dei Dottori commercialisti - adempimenti CNPADC”.
+1
+
+In sede di compilazione del modello F24, la causale in argomento è esposta
+nella sezione “Altri enti previdenziali e assicurativi” (secondo riquadro), nel
+campo “causale contributo”, esclusivamente in corrispondenza delle somme
+indicate nella colonna “importi a debito versati”, riportando:
+-
+
+nel campo “codice ente”, il codice “0015”;
+
+-
+
+nel campo “codice sede”, nessun valore;
+
+-
+
+nel campo “codice posizione”, un codice univoco e personale,
+composto da caratteri numerici fino a 9 cifre, generato dalla Cassa,
+per ogni scadenza contributiva, e reso disponibile dalla stessa
+all’interno dei servizi online;
+
+-
+
+nel campo “periodo di riferimento: da mm/aaaa”, il mese di gennaio
+(01) e l’anno del versamento, nel formato “MM/AAAA”
+
+-
+
+nel campo “periodo di riferimento: a mm/aaaa”, il mese di dicembre
+(12) e l’anno del versamento, nel formato “MM/AAAA”.
+
+La suddetta causale è operativamente efficace a decorrere dal 4 maggio
+2026.
+
+IL DIRETTORE CENTRALE ad interim
+Firmato digitalmente
+
+2
+
+

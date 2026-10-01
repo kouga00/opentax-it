@@ -1,0 +1,1544 @@
+CIRCOLARE N. 10/E
+
+Direzione Centrale Normativa
+
+Roma 4 aprile 2016
+
+OGGETTO: Regime forfetario - legge 23 dicembre 2014, n. 190, articolo 1,
+commi da 54 a 89, Stabilità 2015.
+
+2
+
+1.
+2.
+
+PREMESSA ............................................................................................................. 3
+APPLICAZIONE DEL REGIME FORFETARIO ................................................... 6
+2.1. Ingresso e permanenza nel regime forfetario ........................................................ 6
+2.2. Requisiti di accesso al regime. .............................................................................. 6
+2.3. Cause di esclusione dal regime. ........................................................................... 12
+2.4. modalità di accesso al regime .............................................................................. 18
+2.4.1. Contribuenti in attività ...................................................................................... 18
+2.4.2. Contribuenti che iniziano l’attività. .................................................................. 18
+2.4.3. Comunicazione della sussistenza delle condizioni per l’applicazione del
+regime. ........................................................................................................................ 18
+3. DISAPPLICAZIONE DEL REGIME FORFETARIO .......................................... 19
+3.1. Disapplicazione per opzione................................................................................ 19
+3.1.1. Opzione per il regime ordinario. ...................................................................... 19
+3.1.2. Effetti dell’opzione per il regime fiscale di vantaggio per coloro che hanno
+iniziato l’attività nel corso del 2015. .......................................................................... 21
+3.2. Disapplicazione per legge.................................................................................... 21
+3.3. Disapplicazione a seguito di accertamento. ......................................................... 22
+4. CARATTERISTICHE DEL REGIME FORFETARIO ......................................... 22
+4.1. Semplificazioni e adempimenti ai fini Iva ........................................................... 22
+4.1.1 semplificazioni .................................................................................................. 22
+4.1.2 Adempimenti ..................................................................................................... 24
+4.1.3. Rettifica della detrazione .................................................................................. 27
+4.1.4. IVA ad esigibilità differita ................................................................................ 28
+4.1.5. Utilizzo eccedenza credito IVA ........................................................................ 29
+4.2. Semplificazioni e adempimenti ai fini delle imposte sui redditi ......................... 29
+4.2.1. Semplificazioni ................................................................................................. 29
+4.2.2. Adempimenti .................................................................................................... 30
+4.2.3. Adempimenti dichiarativi ai fini dell’incremento della compliance dichiarativa
+e dell’analisi del rischio .............................................................................................. 31
+4.3. Determinazione del reddito imponibile ............................................................... 32
+4.3.1 Componenti positivi e negativi di reddito maturati in corso di regime ............. 34
+4.3.2. Componenti di reddito riferiti a periodi precedenti .......................................... 35
+4.3.3. Trattamento delle perdite generatesi nei periodi di imposte precedenti. .......... 36
+4.3.4. Le rimanenze finali e le deduzioni forfetarie maturate per effetto di altre norme
+.................................................................................................................................... 37
+4.3.5. Cessazione dell’attività ..................................................................................... 37
+4.3.6 La valutazione delle merci e dei beni strumentali nei passaggi di regime ........ 38
+4.3.7. Calcolo delle detrazioni .................................................................................... 40
+4.4. Applicazione dell’imposta sostitutiva ................................................................. 40
+5. LE AGEVOLAZIONI PER I SOGGETTI CHE INIZIANO UNA NUOVA
+ATTIVITA’ .................................................................................................................... 42
+6. SANZIONI ............................................................................................................. 45
+
+3
+
+DEFINIZIONI
+Ai fini della presente circolare si intende per:
+- "Regime dei contribuenti minimi", il regime disciplinato dall'art. 1, commi da
+96 a 117, della legge n. 244 del 2007, in vigore dal 1° gennaio 2008 al 31
+dicembre 2011;
+- "Regime delle nuove attività produttive", il regime fiscale agevolato per le
+nuove iniziative imprenditoriali e di lavoro autonomo, disciplinato dall'art. 13
+della legge n. 388 del 2000, in vigore dal 1° gennaio 2001 al 31 dicembre 2014; ;
+- " Regime fiscale di vantaggio", il regime fiscale di vantaggio per
+l'imprenditoria giovanile e lavoratori in mobilità disciplinato dall'art. 27, commi
+1 e 2, del D.L. n. 98 del 2011 e dall'art. 1, commi da 96 a 117, della legge n. 244
+del 2007, in vigore dal 1° gennaio 2012 al 31 dicembre 2014. Tale regime aveva
+assorbito quello dei contribuenti minimi;
+- “Regime contabile agevolato”, il regime disciplinato dall'art. 27, comma 3, del
+D.L. n. 98 del 2011, in vigore dal 1° gennaio 2012 al 31 dicembre 2014;
+- “Legge di stabilità per il 2016”, legge 28 dicembre 2015 n. 208;
+- “Legge di stabilità per il 2015”, legge 23 dicembre 2014, n. 190.
+
+1. PREMESSA
+Conformemente a quanto stabilito dalla legge di delega fiscale 11 marzo
+2014, n. 23, il cui articolo 11, comma 1, prevede l’introduzione di regimi
+semplificati per i contribuenti di minori dimensioni, “nonché, per i contribuenti
+di dimensioni minime, di regimi che prevedano il pagamento forfetario di
+un'unica imposta in sostituzione di quelle dovute, purché con invarianza
+dell'importo complessivo dovuto, prevedendo eventuali differenziazioni in
+funzione del settore economico e del tipo di attività svolta…”, ai commi da 54 a
+89 dell’articolo 1 della legge 23 dicembre 2014, n. 190 (c.d. "legge di stabilità
+2015”) è stato disciplinato il nuovo regime forfetario, destinato agli operatori
+
+4
+
+economici di ridotte dimensioni. Tale regime, applicabile dal 1° gennaio 2015,
+poi significativamente modificato dall’articolo 1, commi da 111 a 113, della
+legge n. 208 del 2015 (di seguito “legge di stabilità per il 2016”), ha inteso
+razionalizzare la tassazione delle attività produttive di ridotte dimensioni - sia per
+i soggetti in attività che per coloro che intraprendono una nuova impresa, arte o
+professione - e superare, progressivamente, le criticità e le sovrapposizioni
+generate dalla coesistenza di più regimi di favore destinati a soggetti con
+caratteristiche simili.
+Proprio al fine di consentire la graduale sostituzione di tutti i regimi di
+favore in vigore per le piccole attività economiche con il regime forfetario, il
+legislatore ha previsto che, a decorrere dal 1° gennaio 2015 (data di entrata in
+vigore del regime in argomento), con i limiti e le eccezioni di cui si dirà in
+seguito, fossero abrogati (comma 85):
+1. il regime delle le nuove attività produttive;
+2. il regime fiscale di vantaggio, in vigore dal 1° gennaio 2012, che
+aveva assorbito il regime dei contribuenti minimi
+3. il regime contabile agevolato;
+consentendo a coloro che al 31 dicembre 2014 si avvalevano dei regimi indicati
+ai punti 1 e 2, il passaggio al regime forfetario, in presenza dei requisiti previsti
+dalla legge (comma 86).
+Inoltre, per i soggetti che a quella stessa data applicavano il regime fiscale di
+vantaggio, ovvero il regime delle nuove attività produttive, era altresì prevista la
+possibilità di avvalersi delle peculiari agevolazioni previste per le nuove attività
+dal comma 65 (v. in proposito par. n. 5) “per i soli periodi d'imposta che
+residuavano al completamento” del periodo agevolato, fissato in cinque anni
+dall’articolo 1, comma 111, della legge di stabilità per il 2016. In coerenza con la
+suddetta disciplina, si ritiene, pertanto, che i soggetti che al 31 dicembre 2014
+applicavano il regime di vantaggio o il regime delle nuove attività produttive,
+possano applicare le agevolazioni in parola fino a compimento dell’intero
+
+5
+
+periodo agevolato, ossia fino a compimento del quinquennio. Ciò significa, ad
+esempio, che laddove un soggetto abbia iniziato una nuova attività nel 2014
+applicando il regime fiscale di vantaggio, ovvero il regime delle nuove attività
+produttive, potrà applicare le specifiche agevolazioni previste dal comma 65
+(riduzione dell’imponibile di un terzo per il 2015, applicazione dell’imposta
+sostitutiva nella misura del 5 per cento a decorrere dal 2016) fino al 2018.
+Il legislatore ha, inoltre, consentito ai soggetti che, al 31 dicembre 2014,
+applicavano il regime fiscale di vantaggio di continuare ad applicarlo per il
+periodo che residua al completamento del quinquennio agevolato ovvero fino al
+compimento del trentacinquesimo anno di età se successivo alla scadenza del
+quinquennio (comma 88), ampliando poi detta possibilità anche a coloro che
+hanno iniziato l’attività nel 2015 (cfr. il DL n. 192 del 2014, articolo 10, comma
+12-undecies, aggiunto dalla legge di conversione 27 febbraio 2015, n. 11;
+sull’argomento cfr anche la risoluzione n. 67/E del 2015).
+
+Il regime forfetario prevede, come i precedenti regimi di favore per le
+piccole imprese e i piccoli professionisti, rilevanti semplificazioni ai fini IVA e ai
+fini contabili, e consente, altresì, la determinazione forfetaria del reddito da
+assoggettare a un’unica imposta in sostituzione di quelle ordinariamente previste,
+nonché di accedere ad un regime contributivo opzionale per le imprese. Una
+novità rilevante rispetto al passato, consiste nella possibilità, come per
+l’originario regime dei minimi, di permanere nel regime di favore senza limiti di
+tempo, mentre i criteri di accesso o di determinazione del reddito imponibile
+tengono conto delle caratteristiche del tipo di attività svolta, di cui si dirà più
+avanti. Ulteriori agevolazioni sono, infine, previste - questa volta “a tempo” - per
+coloro che intraprendono una nuova attività economica.
+Si evidenzia, poi che le disposizioni in commento non solo delineano i
+profili strutturali del nuovo regime ma contengono già una serie di previsioni più
+propriamente attuative che rendono il regime immediatamente applicabile, senza
+
+6
+
+dover attendere, diversamente dal passato, l’emanazione di un decreto di
+attuazione del Ministro che, nella previsione di legge, è meramente eventuale.
+In questa sede, si forniscono indicazioni in relazione alle modalità di
+applicazione del nuovo regime forfetario - anche alla luce delle modifiche
+apportate con la predetta legge di stabilità per il 2016 - e si chiariscono alcuni
+dubbi interpretativi emersi nel corso del primo anno di applicazione del regime
+agevolato. Considerate le connessioni con i regimi che lo hanno preceduto nel
+tempo, si rinvia, per gli aspetti compatibili, ai chiarimenti contenuti nei numerosi
+documenti di prassi già emanati al riguardo.
+
+2. APPLICAZIONE DEL REGIME FORFETARIO
+2.1. Ingresso e permanenza nel regime forfetario
+Il regime forfetario rappresenta il regime naturale delle persone fisiche che
+esercitano un’attività di impresa, arte o professione in forma individuale, purché
+siano in possesso dei requisiti stabiliti dal comma 54 e, contestualmente, non
+incorrano in una delle cause di esclusione previste dal successivo comma 57.
+Come chiarito con circ. n. 6/E del 2015, a differenza di quanto previsto per il
+regime fiscale di vantaggio, possono accedervi i soggetti già in attività.
+Il regime in esame, inoltre, non prevede una scadenza legata ad un numero
+di anni di attività o al raggiungimento di una particolare età anagrafica, la sua
+applicazione è, pertanto, subordinata solo al verificarsi delle condizioni di
+seguito descritte.
+
+2.2. Requisiti di accesso al regime.
+Possono accedere al regime in commento i soggetti già in attività e/o i
+soggetti che iniziano un’attività di impresa, arte o professione, purché nell’anno
+precedente (comma 54):
+
+7
+
+a) abbiano conseguito ricavi o percepito compensi non superiori ai
+limiti indicati nell’allegato 4 alla legge n. 190 del 2014, e successive
+modifiche, diversificati in base al codice ATECO che contraddistingue l’attività
+esercitata. In particolare, a differenza dei precedenti regimi che prevedevano un
+limite di accesso unico per tutte le attività, il legislatore ha inteso proporzionare
+la soglia di accesso al tipo di attività svolta, nel presupposto che i diversi tipi di
+attività hanno proficuità differenti. Tale limite deve essere ragguagliato all’anno
+nel caso di attività iniziata in corso di anno.
+Di seguito i valori soglia dei ricavi/compensi per attività.
+Progressivo
+
+1
+2
+
+3
+
+4
+5
+6
+7
+
+8
+
+9
+
+Gruppo di settore
+
+Codici attività ATECO 2007 Valore soglia dei Valore soglia dei
+ricavi/compensi ricavi/compensi
+in vigore dal 1° in vigore dal 1°
+gennaio al 31
+gennaio 2016
+dicembre 2015
+(10-11)
+35.000
+45.000
+
+Industrie alimentari e
+delle bevande
+Commercio
+45 - (da 46.2 a 46.9) - (da
+all'ingrosso e al
+47.1 a 47.7) - 47.9
+dettaglio
+Commercio ambulante 47.81
+di prodotti alimentari e
+bevande
+Commercio ambulante 47.82 - 47.89
+di altri prodotti
+Costruzioni e attività (41 - 42 - 43) - (68)
+immobiliari
+Intermediari del
+46.1
+commercio
+Attività dei servizi di (55-56)
+alloggio e di
+ristorazione
+Attività professionali, (64-65-66) - (69-70-71-72-73scientifiche, tecniche, 74-75) - (85) - (86-87-88)
+sanitarie, di istruzione,
+servizi finanziari ed
+assicurativi
+Altre attività
+(01 - 02 - 03) - (05 - 06 - 07 economiche
+08 - 09) - (12 - 13 - 14 - 15 16 - 17 - 18 - 19 - 20 - 21 - 22
+- 23 - 24 - 25 - 26 - 27 - 28 29 - 30 - 31 - 32 - 33) - (35) (36 - 37 - 38 - 39) - (49 - 50 51 - 52 - 53) - (58 - 59 - 60 61 - 62 - 63) - (77 - 78 - 79 80 - 81 - 82) - (84) - (90 - 91 92 - 93) - (94 - 95 - 96) - (97 98) - (99)
+
+40.000
+
+50.000
+
+30.000
+
+40.000
+
+20.000
+
+30.000
+
+15.000
+
+25.000
+
+15.000
+
+25.000
+
+40.000
+
+50.000
+
+15.000
+
+30.000
+
+20.000
+
+30.000
+
+8
+
+Le soglie indicate nell’allegato 4 tengono conto degli incrementi disposti,
+a decorrere dal 1° gennaio 2016, dal comma 112 della legge di stabilità per il
+2016. Ne consegue che la verifica dei limiti ai fini dell’accesso o della
+permanenza nel regime, a partire dal periodo d’imposta 2016, va fatta con
+riferimento ai nuovi valori in vigore dal 1° gennaio 2016. Ciò significa, ad
+esempio, che laddove un professionista in regime forfetario dal 1° gennaio 2015
+abbia conseguito al 31 dicembre di quell’anno compensi per un ammontare
+complessivo di 18.000 euro (superiori al limite di 15.000 euro in vigore nel
+2015), continua ad applicare il regime anche nel 2016, in quanto la soglia dei
+compensi percepiti nell’anno precedente è stata elevata a 30.000 euro.
+Concorrono alla determinazione dell’ammontare conseguito il valore
+normale dei beni destinati al consumo personale o familiare dell’imprenditore, di
+cui all’articolo 85 del TUIR, da attribuire in conformità alle disposizioni
+contenute nell'articolo 9, comma 3, del TUIR.
+Si ricorda, che con circ. n. 6/E del 2015 è stato chiarito che concorrono,
+altresì, alla determinazione dell’ammontare conseguito i ricavi relativi alle
+cessioni poste in essere con la Città del Vaticano e con San Marino.
+Per espressa previsione normativa, invece, non concorrono alla
+determinazione del limite di riferimento i ricavi e i compensi derivanti
+dall’adeguamento agli studi di settore (comma 55 lett. a)).
+Il medesimo comma 55, alla lettera b) prevede, inoltre, che quando il
+contribuente esercita più attività, contraddistinte da codici ATECO differenti, ai
+fini del diritto all’accesso o alla permanenza nel regime forfetario, occorre
+considerare il limite più elevato tra quelli fissati per ciascuna delle attività
+esercitate. Ad esempio, in presenza di esercizio contemporaneo di una attività di
+commercio all’ingrosso ricompresa nella Divisione 45 dei codici ATECO e di
+un’attività di intermediario del commercio rientrante nel Gruppo 46.1 il limite di
+ricavi annui è pari, a decorrere dal 2016, a 50.000 euro.
+
+9
+
+Con la citata circ. n. 6/E è stato, inoltre, già chiarito che, per la verifica
+dell’eventuale superamento del limite, si deve tener conto del regime contabile
+applicato nell’anno di riferimento. In altre parole, coloro che hanno operato in
+contabilità ordinaria devono calcolare l’ammontare dei ricavi conseguiti
+applicando il criterio di competenza, mentre chi, ad esempio, ha applicato il
+regime fiscale di vantaggio, deve utilizzare il criterio di cassa;
+
+b) abbiano sostenuto spese complessivamente non superiori a 5.000
+euro lordi per lavoro accessorio (articolo 70 D.lgs. n. 276 del 2003), lavoro
+dipendente e per compensi erogati ai collaboratori (articolo 50, comma 1, lettere
+c) e c-bis) del DPR 22 dicembre 1986, n. 917 - di seguito TUIR), anche assunti
+per l’esecuzione di specifici progetti, a norma dell’articolo 61 del D.lgs. n. 276
+del 2003.
+Alla determinazione del limite in parola concorrono gli utili di
+partecipazione erogati agli associati in partecipazione con apporto costituito da
+solo lavoro (articolo 53, comma 2, lett. c) del TUIR), nonché le somme
+corrisposte per le prestazioni di lavoro effettuate dall’imprenditore medesimo o
+dai suoi familiari (articolo 60 del TUIR).
+Risulta, pertanto, superata la preclusione, prevista nel regime fiscale di
+vantaggio, che impediva l’accesso al regime a coloro che nell’anno precedente
+avessero sostenuto spese per lavoro dipendente o assimilato, nel presupposto che
+l’esigua spesa prevista non rappresenta di per sé indice di una struttura
+organizzativa incompatibile con il regime forfetario;
+
+c) il costo complessivo dei beni strumentali, assunto al lordo degli
+ammortamenti, non superi, alla data di chiusura dell’esercizio, i 20.000 euro.
+Diversamente dal passato, la norma dispone espressamente che non
+concorrono alla formazione di detto limite i beni immobili, comunque acquisiti, e
+anche se detenuti in locazione, utilizzati per l’esercizio dell’impresa, arte o
+professione.
+
+10
+
+Rilevano, invece, nel calcolo del limite:
+-
+
+per i beni in locazione finanziaria, il costo sostenuto dal concedente;
+
+-
+
+per i beni in locazione, noleggio e comodato, il valore normale
+determinato, ai sensi dell’articolo 9 TUIR, alla data del contratto di
+locazione/noleggio o comodato;
+
+-
+
+per i beni in proprietà, il prezzo di acquisto.
+Al fine di verificare il limite riferito all’acquisto dei beni strumentali, sia
+
+in fase di accesso al regime forfetario che durante la sua applicazione, si deve far
+riferimento al costo sostenuto al netto dell’imposta sul valore aggiunto, anche se
+non è stato esercitato il diritto alla detrazione (cfr. circ. 6/E del 2015).
+I beni utilizzati promiscuamente per l’esercizio dell’impresa, arte o
+professione e per l’uso personale o familiare, concorrono alla formazione del
+predetto limite nella misura del 50 per cento, indipendentemente dal loro
+effettivo utilizzo e da eventuali diverse percentuali di deducibilità contenute nel
+TUIR.
+Al riguardo si ricorda che si presumono, comunque, ad uso promiscuo tutti
+i beni a deducibilità limitata indicati negli articoli 164 e 102, comma 9, del TUIR
+(ad esempio autovetture, autocaravan, ciclomotori, motocicli, e telefonia) per i
+quali, tuttavia, non devono essere presi a riferimento i limiti di deducibilità
+previsti dai suddetti articoli.
+Non concorrono, infine, al calcolo del limite dei 20.000 euro i beni
+strumentali all’esercizio dell’arte o della professione, ovvero all’esercizio
+dell’impresa il cui costo unitario non sia superiore ad euro 516,45 (articoli 54,
+comma 2 e 102, comma 5, del TUIR).
+Nella disposizione in esame non sono espressamente menzionati i beni
+immateriali e le spese relative a più esercizi ma si fa riferimento, analogamente a
+quanto avvenuto in occasione del regime “dei minimi”, ai “beni strumentali”.
+
+11
+
+Nella circolare n. 6/E del 20151 - con la quale sono stati forniti chiarimenti
+interpretativi relativi a quesiti posti in occasione degli eventi Videoforum Italia
+Oggi, Telefisco Sole 24ore e Forum lavoro - è stato ritenuto applicabile il
+chiarimento fornito con riguardo al detto regime di vantaggio nella circolare n.
+7/E del 20082, nella quale è stato affermato che il riferimento contenuto nella
+norma alla “nozione di strumentalità dei beni” induce a ritenere che non debbano
+essere presi in considerazione “taluni costi riferibili ad attività immateriali, come
+quello sostenuto per l’avviamento o altri elementi immateriali comunque
+riferibili all’attività, che non si caratterizzano per il loro concreto utilizzo
+nell’ambito dell’attività d’impresa o di lavoro autonomo”.
+Tale precisazione non riguarda i beni immateriali ammortizzabili che
+rientrano nella locuzione normativa di “beni strumentali” - bensì l’avviamento e
+le spese relative a più esercizi, che non sono qualificabili quali “beni” utilizzabili
+nell’esercizio dell’attività. Si osserva, infine, che l’art. 1, comma 111 della legge
+di stabilità per il 2016 ha abrogato la lettera d) del comma 54, secondo cui
+potevano accedere al regimo forfetario i soli contribuenti che avevano conseguito
+redditi nell’attività d’impresa, arte o professione in misura prevalente rispetto ai
+redditi di lavoro dipendente o assimilati eventualmente percepiti.
+Alla luce di tale modifica, la soppressa disposizione dispiega effetti solo
+nei confronti dei contribuenti che hanno adottato il regime forfetario nel corso
+del 2015.
+Coloro che applicano il regime forfetario a partire dal 2016, devono,
+tuttavia, tener conto della causa di esclusione introdotta dallo stesso art. 1,
+comma 11, della legge di stabilità per il 2016, alla lettera d-bis) del comma 57,
+che preclude l’accesso al regime forfetario a coloro che nell’anno precedente
+hanno percepito redditi di lavoro dipendente o assimilati di importo superiore ad
+euro 30.000 (vedi par. 2.3. al cui commento si rinvia).
+
+1
+2
+
+Punto 9.7.
+Punto 2.8 quesito h).
+
+12
+
+2.3. Cause di esclusione dal regime.
+A differenza di quanto accade per i requisiti di accesso o permanenza nel
+regime forfetario, per i quali è necessario far riferimento all’anno precedente a
+quello in cui si intende applicare il regime di favore, le cause di esclusione
+rilevano con riferimento al medesimo anno di applicazione del regime ad
+eccezione di quella di cui alla lettera d-bis del comma 57, precedentemente
+indicata.
+Ai sensi del citato comma 57, non possono avvalersi del regime forfetario:
+
+a) I soggetti che si avvalgono di regimi speciali ai fini IVA o di regimi
+forfetari di determinazione del reddito.
+In particolare, come già disposto per i regimi agevolati del passato, non
+sono compatibili con il regime in esame i regimi speciali IVA riguardanti le
+seguenti attività:
+ Agricoltura e attività connesse e pesca (artt. 34 e 34-bis del D.P.R. n. 633
+del 1972);
+ Vendita sali e tabacchi (articolo 74, primo comma, del D.P.R. n. 633/72);
+ Commercio dei fiammiferi (articolo 74, primo comma, del D.P.R. n.
+633/72);
+ Editoria (articolo 74, primo comma, del D.P.R. n. 633/72);
+ Gestione di servizi di telefonia pubblica (articolo 74, primo comma, del
+D.P.R. n. 633/72);
+ Rivendita di documenti di trasporto pubblico e di sosta (articolo 74, primo
+comma, del D.P.R. n. 633/72);
+ Intrattenimenti, giochi e altre attività di cui alla tariffa allegata al D.P.R. n.
+640/72 (articolo 74, sesto comma del D.P.R. n. 633/72);
+ Agenzie di viaggi e turismo (articolo 74-ter, del D.P.R. n. 633/72);
+ Agriturismo (articolo 5, comma 2, della legge 413/91);
+ Vendite a domicilio (articolo 25-bis, comma 6, del D.P.R. n. 600/73);
+
+13
+
+ Rivendita di beni usati, di oggetti d’arte, d’antiquariato o da collezione
+(articolo 36 del D.L. n. 41/95);
+ Agenzie di vendite all’asta di oggetti d’arte, antiquariato o da collezione
+(articolo 40-bis del D.L. n. 41/95).
+L’esercizio di una attività esclusa dal regime forfetario, in quanto soggetta
+ad un regime speciale IVA ed espressiva, ai fini dell’imposta sul reddito delle
+persone fisiche, di un reddito d’impresa o di lavoro autonomo, preclude l’accesso
+al regime per tutte le altre attività anche se non soggette ad un regime speciale.
+In proposito, si ritiene opportuno evidenziare che i produttori agricoli, che
+rispettano i limiti previsti all’articolo 32 del TUIR, sono titolari di reddito
+fondiario e, pertanto, non esercitando l’attività d’impresa, possono applicare il
+regime forfetario per le altre attività che intendono svolgere (cfr. circolare 7/E del
+28 gennaio 2008, paragrafo 2.2.)
+Si ritiene, infine, coerentemente con il citato comma 57, che il regime
+forfetario sia incompatibile anche con il regime opzionale di tassazione agevolata
+(c.d. “Patent Box”) per i redditi derivanti dall’utilizzo di opere dell’ingegno, di
+brevetti industriali, di marchi, di disegni e modelli, nonché di processi, formule e
+informazioni relativi ad esperienze acquisite nel campo industriale, commerciale
+o scientifico giuridicamente tutelabili, istituito dall’articolo 1, commi da 37 a 45,
+della legge n. 190 del 2014, con lo scopo di incentivare gli investimenti in attività
+di ricerca e sviluppo. Le citate norme prevedono, infatti, per tutti i soggetti
+titolari di reddito d’impresa, la parziale detassazione dei proventi derivanti dallo
+sfruttamento dei sopra citati beni immateriali, sul modello di altri Stati europei e
+in coerenza con standard internazionali condivisi.
+
+b) I soggetti non residenti, ad eccezione di coloro che risiedono in uno
+degli Stati membri dell’Unione europea, o in uno Stato aderente all’Accordo
+sullo Spazio economico europeo che assicuri un adeguato scambio di
+
+14
+
+informazioni, e producono in Italia almeno il 75 per cento del reddito
+complessivamente prodotto.
+In altre parole, la norma in commento, al fine di favorire un più ampio
+accesso al regime di favore, ha consentito anche ai soggetti residenti in uno Stato
+Membro o in un Paese aderente all’accordo sullo Spazio economico europeo, che
+svolgono un’attività prevalente nel nostro Stato di aderirvi, superando, quindi, la
+preclusione contemplata dal regime fiscale di vantaggio.
+
+c) I soggetti che effettuano, in via esclusiva o prevalente, operazioni di
+cessione di fabbricati e relative porzioni o di terreni edificabili (di cui
+all’articolo 10, primo comma, n. 8), del DPR n.633 del 1972), ovvero cessioni
+intracomunitarie di mezzi di trasporto nuovi (di cui all’articolo 53, comma 1,
+del D.L. n. 331 del 1993, convertito con modificazioni dalla n. 427 del 1993).
+La medesima preclusione era già prevista nell’ambito dell’originario
+regime dei contribuenti minimi di cui alla legge n. 244 del 2007 e del successivo
+regime fiscale di vantaggio, di cui al D.L. n. 98 del 2011, e, pertanto si rinvia ai
+chiarimenti già resi con i documenti di prassi a commento dei precedenti regimi.
+
+d) I soggetti che partecipano a società di persone, ad associazioni
+professionali, di cui all’articolo 5 del TUIR, o a società a responsabilità
+limitata aventi ristretta base proprietaria che hanno optato per la
+trasparenza fiscale, ai sensi dell’articolo 116 del TUIR.
+La relazione illustrativa chiarisce in proposito che “Il riferimento alla
+contemporaneità per la verifica della causa ostativa impedisce l’accesso al
+regime a coloro che detengono partecipazioni in costanza di applicazione del
+regime. Pertanto, è possibile accedere al regime nelle ipotesi in cui la
+partecipazione in una società di persone o in una S.r.l. trasparente venga ceduta
+prima dell’inizio di una nuova attività che da diritto all’accesso al regime
+forfetario. Conseguentemente, nel caso di inizio attività, è possibile accedere al
+regime anche nelle ipotesi in cui la partecipazione in una società di persone o in
+
+15
+
+un S.r.l. trasparente venga ceduta nel corso dello stesso periodo di imposta, ma
+prima dell’accesso al regime forfetario. Analogamente, non è preclusa
+l’applicazione del regime forfetario nelle ipotesi in cui la partecipazione sia
+acquisita nel corso dello stesso periodo di imposta, successivamente alla
+cessazione dell’attività per la quale il regime è stato applicato.”.
+Con la risoluzione n. 146/E/2009, per il regime dei minimi (richiamata
+anche dalla circolare 17/E/2012 per il regime fiscale di vantaggio) – è stato
+chiarito che la causa di esclusione in parola si realizza ogni qual volta, per il
+medesimo periodo d’imposta, il possesso della partecipazione comporta anche la
+titolarità del relativo reddito. L’applicazione del regime di favore, in tal caso,
+comporterebbe, infatti, l’assoggettamento a due diversi regimi di tassazione di
+redditi appartenenti alla stessa categoria, d’impresa o di lavoro autonomo,
+conseguiti nello stesso periodo d’imposta.
+Pertanto, in coerenza con quanto affermato anche nella relazione
+illustrativa, se la partecipazione viene ceduta nel corso del periodo d’imposta nel
+quale si intende applicare il regime di favore, la causa di esclusione non opera,
+perché lo stesso soggetto non sarà titolare anche del reddito di partecipazione,
+che sarà imputato al titolare della medesima alla data di chiusura dell’esercizio.
+Inoltre, la causa di esclusione in parola non opera anche quando, in corso
+di applicazione del regime forfetario, il contribuente erediti una partecipazione
+societaria che viene ceduta entro la fine dell’esercizio, poiché, anche in tal caso
+non ricorre l’assoggettamento a due diversi regimi di tassazione di redditi
+appartenenti alla stessa categoria.
+Sono, invece, superate le indicazioni fornite con la citata risoluzione n.
+146/E del 2009 nella quale era stato precisato che la preclusione operava quando
+il contribuente restava titolare del reddito di partecipazione. In altre parole,
+l’esclusione non opera nelle ipotesi in cui il contribuente, in regime forfetario:
+ dismetta, in corso d’anno, la partecipazione a causa dello
+scioglimento della società,
+
+16
+
+ erediti una partecipazione in società di persone o in una società di
+capitali trasparente, di cui rispettivamente agli articoli 5 e 116 del
+TUIR, di una società che viene liquidata entro il 31 dicembre del
+medesimo anno in cui ha acquisito la qualifica di socio.
+Infine, come sottolineato dalla relazione illustrativa, la preclusione non
+opera “nell’ipotesi in cui la partecipazione sia acquisita nel corso dello stesso
+periodo d’imposta, successivamente alla cessazione dell’attività per la quale il
+regime è stato applicato.”. D’altronde anche in questo caso si applica la regola
+generale secondo cui la causa di esclusione produce effetti dall’anno successivo a
+quello in cui la medesima si realizza.
+d-bis) I soggetti che nell’anno precedente hanno percepito redditi di
+lavoro dipendente e/o assimilati di importo superiore a 30.000 euro.
+Tale causa di esclusione che preclude l’applicazione del regime forfetario
+a coloro che nell’anno precedente hanno percepito redditi di lavoro dipendente o
+assimilati, nella misura sopra indicata, è stata introdotta dal comma 111
+dell’articolo 1 dalla legge di stabilità per il 2016. Tale disposizione ha
+contemporaneamente abrogato la lettera d) del comma 54, che prevedeva, quale
+requisito per l’applicazione del regime forfetario, che nell’anno precedente il
+reddito dell’attività d’impresa, arte o professione esercitata fosse prevalente
+rispetto al reddito di lavoro dipendente o assimilato eventualmente percepito (v.
+paragrafo 2.2 al cui commento si rimanda).
+Pertanto ai fini del necessario coordinamento tra la disposizione in
+commento e quella di cui al soppresso comma 54 lettera d), si precisa che:
+1) il requisito previsto dalla lettera d) del comma 54 ha costituito
+condizione di accesso al regime forfetario per coloro che lo hanno
+applicato nel 2015;
+2) la causa di esclusione prevista dalla lettera d-bis) del comma 57 preclude
+l’applicazione del regime forfetario a decorrere dal 2016. Ne consegue
+che coloro che intendono applicare nel 2016 il regime di favore non
+
+17
+
+devono aver percepito nel 2015 un reddito di lavoro dipendente o
+assimilato superiore a 30.000 euro.
+Tale limite, introdotto, con decorrenza 1° gennaio 2016, dalla legge di
+stabilità del 2016, non opera se il rapporto di lavoro dipendente è cessato nel
+corso dell’anno precedente, sempre che nel medesimo anno non sia stato
+percepito un reddito di pensione che, in quanto assimilato al reddito di lavoro
+dipendente, assume rilievo, anche autonomo, ai fini del raggiungimento della
+citata soglia. Rileva, invece, il citato limite nell’ipotesi in cui, nello stesso anno,
+il contribuente abbia cessato il rapporto di lavoro dipendente ma ne abbia
+intrapreso uno nuovo, ancora in essere al 31 dicembre. Ciò in coerenza con la
+ratio della disposizione, che ha il fine di incoraggiare il lavoratore rimasto senza
+impiego e senza trattamento pensionistico mediante la concessione di
+agevolazioni fiscali. Si evidenzia, inoltre, che ai fini della non applicabilità della
+causa di esclusione in commento rilevano solo le cessazioni del rapporto di
+lavoro intervenute nell’anno precedente a quello di applicazione del regime
+forfetario. E’ utile, infine, evidenziare che il nuovo regime non prevede, come i
+precedenti regimi agevolati, l’esclusione dei soggetti che effettuano operazioni
+con l’estero e, in particolare, esportazioni ed operazioni assimilate, nel
+presupposto che la peculiare tipologia di operazioni non rappresenta di per sé
+indice di un’attività di maggiori dimensioni, incompatibile con il regime
+forfetario. Al contempo il comma 58, lettera e) - di cui si dirà infra - rinvia alla
+disposizioni del DPR n. 633 del 1972 ai fini dell’individuazione della disciplina
+da applicare in caso di effettuazione di importazioni, esportazioni od operazioni
+assimilate.
+
+18
+
+2.4. modalità di accesso al regime
+2.4.1. Contribuenti in attività
+Poiché il regime forfetario è un regime naturale, i contribuenti che già
+svolgono un’attività di impresa, arte o professione, vi accedono senza dover fare
+alcuna comunicazione preventiva (con il modello AA9/12) o successiva (con la
+dichiarazione annuale) (cfr. circ. n. 6/E del 2015). Tali soggetti sono, tuttavia,
+obbligati ad inviare apposita comunicazione telematica all’INPS entro il 28
+febbraio di ciascun anno, come disposto al comma 83, qualora interessati a fruire
+del regime contributivo agevolato.
+2.4.2. Contribuenti che iniziano l’attività.
+I contribuenti che iniziano un’attività d’impresa, arte o professione e che
+presumono di rispettare i requisiti e le condizioni previste per l’applicazione del
+regime in esame, hanno l’obbligo di darne comunicazione nella dichiarazione di
+inizio attività, da presentare ai sensi dell’articolo 35 del D.P.R. 633 del 1972
+(modello AA9/12); tale comunicazione non ha valore di opzione, trattandosi di
+un regime naturale, ma è richiesta unicamente ai fini anagrafici.
+L’omessa indicazione nella dichiarazione di inizio attività, dell’intenzione
+di applicare il regime forfetario non preclude, quindi, l’accesso al regime
+medesimo, ma è punibile con la sanzione amministrativa di cui all’articolo 11,
+comma 1, lett. a) del d.lgs. n. 471 del 1997 (da euro 250 a euro 2.000).
+2.4.3. Comunicazione della sussistenza delle condizioni per l’applicazione del
+regime.
+L’attestazione della sussistenza dei requisiti per l’accesso al regime
+(comma 54) e dell’assenza della cause ostative (comma 57) va fatta in sede di
+dichiarazione annuale dei redditi.
+
+19
+
+In particolare, per il periodo di imposta 2015 detta attestazione va
+effettuata barrando, rispettivamente, i campi 1 (requisiti per l’accesso al regime)
+e 2 (assenza della cause ostative), del rigo LM21 di UNICO 2016 PF.
+
+3. DISAPPLICAZIONE DEL REGIME FORFETARIO
+3.1. Disapplicazione per opzione
+3.1.1. Opzione per il regime ordinario.
+I contribuenti che potenzialmente devono applicare il regime forfetario
+hanno la possibilità di disapplicarlo, ovvero di fuoriuscirne, optando per la
+determinazione delle imposte sul reddito e dell’imposta sul valore aggiunto nei
+modi ordinari, ai sensi del comma 70.
+L’opzione per il regime ordinario avviene tramite comportamento
+concludente, ma deve, in ogni caso, essere comunicata barrando l’apposito
+campo della dichiarazione annuale IVA da presentare (compilando il quadro VO)
+successivamente alla scelta operata.
+I soggetti che, effettuando solo operazioni esenti, sono esonerati dalla
+presentazione
+
+della
+
+dichiarazione
+
+annuale
+
+IVA,
+
+comunicano
+
+l’opzione
+
+presentando il quadro VO unitamente alla dichiarazione dei redditi ed entro gli
+stessi termini.
+Come chiarito con circ. n. 209/E del 1998, l’omessa comunicazione in
+dichiarazione della volontà di applicare il regime ordinario non inficia l’opzione
+effettuata, ma è punibile con la sanzione prevista dall’art. 8 del D.lgs. n. 471 del
+1997 (da euro 250 a euro 2.000).
+Ai sensi dell’articolo 3 del DPR n. 442 del 1997, l’opzione per un regime
+di determinazione dell’imposta vincola il contribuente alla sua concreta
+applicazione almeno per un triennio, trascorso il quale si rinnova tacitamente per
+ciascun anno successivo, finché permane la concreta applicazione del regime
+ordinario.
+
+20
+
+L’articolo 1 del citato decreto, tuttavia, consente “la variazione
+dell'opzione e della revoca nel caso di modifica del relativo sistema in
+conseguenza di nuove disposizioni normative.”
+Tenuto conto delle significative modifiche apportate al regime forfetario
+dalla legge di stabilità per il 2016, i soggetti che nel 2015 hanno optato per il
+regime ordinario possono, dal 1° gennaio 2016, revocare la scelta effettuata e
+accedere al regime forfetario. Coloro che intendono applicare il nuovo regime
+possono, pertanto, effettuare le opportune rettifiche dei documenti emessi, nel
+corso del 2016, con addebito dell'imposta, entro sessanta giorni dalla
+pubblicazione, sul sito istituzionale dell’Agenzia delle entrate, del presente
+documento di prassi o entro la prima liquidazione Iva successiva, se la stessa
+scade dopo il predetto termine. In particolare, ai sensi del combinato disposto
+degli articoli 26, comma 3 e 7, e 21, comma 4, del D.P.R. n. 633 del 1972, per
+correggere gli errori commessi in fattura, può essere emessa una nota di
+variazione (da conservare, ma senza obbligo di registrazione ai fini Iva), che il
+cessionario/committente dovrà registrare, salvo il suo diritto alla restituzione
+dell'importo pagato al cedente o al prestatore a titolo di rivalsa.
+Nel caso ne sussistano i presupposti, i medesimi soggetti applicano le
+disposizioni di cui al comma 65, previste per le nuove attività economiche, per il
+periodo che residua al compimento del quinquennio dall’inizio dell’attività
+(articolo 1, comma 113 della legge di stabilità per il 2016). La possibilità di
+accesso al regime forfetario è ammessa anche per coloro che nel 2014, in
+presenza dei requisiti di accesso al regime di vantaggio, hanno optato per il
+regime ordinario di determinazione del reddito e dell’IVA. In tal caso possono
+revocare l’opzione effettuata e applicare, dal 2016, il regime forfetario con
+l’ulteriore agevolazione prevista dal comma 65 (applicazione dell’ imposta
+sostitutiva nella misura del 5 per cento), fino alla fine del quinquennio agevolato,
+ossia fino al 2018.
+
+21
+
+3.1.2. Effetti dell’opzione per il regime fiscale di vantaggio per coloro che hanno
+iniziato l’attività nel corso del 2015.
+Come già anticipato, i soggetti che, al 31 dicembre 2014, applicavano il
+regime fiscale di vantaggio, di cui all’articolo 27, commi 1 e 2, del D.L. n. 98 del
+2011, possono continuare ad applicarlo per il periodo che residua al
+completamento del quinquennio agevolato ovvero fino al compimento del
+trentacinquesimo anno di età se successivo alla scadenza del quinquennio
+(comma 88).
+L’articolo 10, comma 12-undecies, del D.L. n. 192 del 2014, ha, inoltre,
+consentito a coloro che hanno iniziato l’attività nel 2015, di avvalersi ancora del
+medesimo regime (cfr. ris. n. 67 del 2015). Tale possibilità era frutto, però, di
+una di esplicita opzione non più esercitabile da coloro che iniziano l’attività nel
+2016.
+Per i motivi addotti nel paragrafo precedente, anche i soggetti che hanno
+optato, ai sensi del citato articolo 10, nel corso del 2015 per l’applicazione del
+regime di vantaggio possono revocare la scelta effettuata senza attendere il
+decorso dei termini di permanenza nel regime (cinque anni) e accedere al regime
+forfetario, applicando ove possibile, le disposizioni di cui al comma 65.
+
+3.2. Disapplicazione per legge
+Il regime forfetario cessa di avere efficacia a partire dall’anno successivo a
+quello in cui viene meno anche solo uno dei requisiti di accesso previsti dal
+comma 54 (vedi par. 2.2), ovvero si verifica una delle cause di esclusione
+previste dal comma 57 (vedi par. 2.3).
+A differenza di quanto previsto per il regime fiscale di vantaggio di cui al
+DL n. 98 del 2011, non è più contemplata la cessazione del regime in corso
+d’anno.
+
+22
+
+3.3. Disapplicazione a seguito di accertamento.
+Ai sensi del comma 74, il passaggio in giudicato dell’avviso di
+accertamento che dimostri l’assenza di una delle condizioni di cui al comma 54 o
+l’esistenza di una delle ipotesi elencate nel comma 57, determina l’uscita dal
+regime forfetario dal periodo successivo a quello accertato (cfr. par. 4.2.2 della
+circolare n. 17/E del 2012, in relazione alla previsione di cui all’articolo 1,
+comma 114, della legge n. 244 del 2008).
+Ciò significa che la definitività dispiega effetti, ai fini della permanenza
+nel regime, dall’anno successivo a quello al quale è riferita la violazione.
+Pertanto, qualora un accertamento relativo all’anno di imposta 2015 dovesse
+rendersi definitivo nel 2020, il regime forfetario si considererà cessato già a
+decorrere dal 2016.
+In ogni caso, la norma non deroga ai termini di cui all’articolo 43 del DPR
+600 del 1973.
+
+4. CARATTERISTICHE DEL REGIME FORFETARIO
+
+4.1. Semplificazioni e adempimenti ai fini Iva
+4.1.1 semplificazioni
+Come già avveniva per il regime dei contribuenti minimi e per il regime
+fiscale di vantaggio, il comma 58 stabilisce che i contribuenti in regime forfetario
+non addebitano l’Iva in rivalsa né esercitano il diritto alla detrazione dell’imposta
+assolta, dovuta o addebitata sugli acquisti nazionali, comunitari e sulle
+importazioni. Le fatture emesse non devono, pertanto, recare l’addebito
+dell’imposta.
+
+23
+
+Come già chiarito con la circolare n. 17/E del 2012, con riferimento al
+regime fiscale di vantaggio, nell’ipotesi in cui un soggetto che applica il regime
+forfetario emetta una fattura senza esercitare la rivalsa, ed il corrispettivo sia
+incassato nell’anno successivo, nel quale il contribuente applica il regime
+ordinario, la fattura non andrà integrata con l’IVA, considerato che, ai sensi
+dell’articolo 6, quarto comma, del DPR n. 633 del 1972, l’operazione si intende
+comunque effettuata al momento dell’emissione della fattura (anche se diverso
+da quello in cui un operazione si considera effettuata ai sensi dei commi 1 e 3
+dello stesso articolo). Così, ad esempio le fatture emesse da un forfetario nel
+2016, ed incassate nel 2017, non dovranno essere integrate con l’IVA anche se il
+soggetto - per scelta o per legge - è fuoriuscito dal regime in commento.
+Ai sensi del successivo comma 59, i soggetti che applicano il regime
+forfetario sono esonerati dagli obblighi di liquidazione e versamento dell’imposta
+e da tutti gli obblighi contabili e dichiarativi previsti dal D.P.R. n. 633 del 1972,
+ossia dalla:
+ registrazione delle fatture emesse (articolo 23 del D.P.R. n. 633 del
+1972);
+ registrazione dei corrispettivi (articolo 24 del medesimo D.P.R.);
+ registrazione degli acquisti (articolo 25 del medesimo D.P.R.);
+ tenuta e conservazione dei registri e documenti (articolo 39 del
+medesimo D.P.R.), fatta eccezione per le fatture e i documenti di
+acquisto e le bollette doganali di importazione;
+ dichiarazione e comunicazione annuale IVA (articoli 8 e 8-bis del
+D.P.R. n. 322 del 1998).
+In considerazione di quanto precisato nella relazione illustrativa, si ritiene
+che i medesimi contribuenti possano considerarsi esonerati:
+ dall’obbligo di effettuare la comunicazione di cui all’articolo 21,
+comma 1, del decreto legge 31 maggio 2010, n. 78, convertito dalla
+legge 30 luglio 2010, n. 122 (comunicazione telematica all’Agenzia
+
+24
+
+delle entrate delle operazioni rilevanti ai fini dell’imposta sul valore
+aggiunto - cd. spesometro);
+ dall’obbligo di comunicazione di cui all’articolo 1, comma 1, del
+decreto-legge 25 marzo 2010, n. 40, convertito dalla legge 22 maggio
+2010, n. 73 (comunicazione telematica all’Agenzia delle Entrate delle
+operazioni effettuate nei confronti di operatori economici aventi sede,
+residenza o domicilio in Paesi cosiddetti black list) ;
+
+4.1.2 Adempimenti
+I contribuenti che applicano il regime forfetario (come già i contribuenti
+che applicavano il regime dei minimi e di vantaggio) restano soggetti agli
+obblighi di:
+ numerazione e conservazione delle fatture di acquisto e delle
+bollettedoganali;
+ certificazione dei corrispettivi, fatta eccezione - per espressa previsione
+contenuta nel comma 59 - per quelle attività esonerate ai sensi
+dell’articolo 2 del D.P.R. 21 dicembre 1996, n. 696 (purché, in ogni
+caso, ottemperino all’obbligo di certificazione dei corrispettivi
+mediante l’annotazione in un apposito registro cronologico, effettuata
+con le modalità previste dall’art. 24 del D.P.R. n. 633 del 1972 (cfr
+risoluzione n. 108/E del 23 aprile 2009).
+ integrazione delle fatture per le operazioni di cui risultano debitori di
+imposta con l’indicazione dell’aliquota e della relativa imposta, da
+versare entro il giorno 16 del mese successivo a quello di effettuazione
+delle operazioni, senza diritto alla detrazione dell’imposta relativa.
+Peraltro, il comma 58 individua, diversamente dal passato, in modo più
+puntuale le disposizioni da applicare in caso di effettuazione di operazioni attive
+
+25
+
+e passive con operatori non residenti. In particolare, i contribuenti che applicano
+il regime forfetario sono tenuti ad assolvere i seguenti adempimenti:
+a) cessioni di beni intracomunitarie: le cessioni di beni effettuate nei
+confronti di soggetti appartenenti ad altro Stato membro dell’Unione Europea,
+continuano, come nel precedente regime fiscale di vantaggio, a non essere
+considerate cessioni intracomunitarie in senso tecnico, essendo assimilate alle
+operazioni interne, per le quali l’IVA non viene evidenziata in fattura. Il
+cedente deve indicare nella fattura emessa nei confronti dell’operatore
+comunitario che l’operazione, soggetta al regime in esame, “non costituisce
+cessione intracomunitaria ai sensi dell’articolo 41, comma 2-bis, del D.L. 30
+agosto1993, n. 331”. Non essendo considerate cessioni intracomunitarie, i
+medesimi contribuenti non sono tenuti ad iscriversi nella banca dati VIES, né
+alla compilazione degli elenchi riepilogativi Intrastat (comma 58 lettera b));
+b) acquisti di beni intracomunitari: diversamente dal passato, gli acquisti
+di beni intracomunitari sono ora, per espressa previsione di legge, soggetti alle
+disposizioni contenute nell’articolo 38, comma 5, lettera c) del D.L. n. 331 del
+1993, secondo cui “non costituiscono acquisti intracomunitari…(omissis)… c)
+gli acquisti di beni, diversi dai mezzi di trasporto nuovi e da quelli soggetti ad
+accisa, effettuati dai soggetti indicati nel comma 3, lettera c), dai soggetti
+passivi per i quali l’imposta è totalmente indetraibile a norma dell’articolo
+19, secondo comma, del decreto del Presidente della Repubblica 26 ottobre
+1972, n. 633, e dai produttori agricoli di cui all’articolo 34 dello stesso
+decreto che non abbiano optato per l’applicazione dell’imposta nei modi
+ordinari se l’ammontare complessivo degli acquisti intracomunitari e degli
+acquisti di cui all’articolo 40, comma 3, del presente decreto, effettuati
+nell’anno solare precedente, non ha superato 10.000 euro e fino a quando,
+nell’anno in corso, tale limite non è superato. L’ammontare complessivo degli
+acquisti è assunto al netto dell’imposta sul valore aggiunto e al netto degli
+acquisti di mezzi di trasporto nuovi di cui al comma 4 del presente articolo e
+degli acquisti di prodotti soggetti ad accisa;”. (comma 58 lettera c)).
+
+26
+
+Pertanto, laddove gli acquisti da Paesi comunitari siano di ammontare
+inferiore ai 10.000 euro, l’IVA è assolta dal cedente nel paese di origine dei
+beni e, conseguentemente, il cessionario che applica il regime forfetario non ha
+l’obbligo di iscriversi al VIES, né di compilare gli elenchi riepilogativi Intrastat,
+salva la possibilità per lo stesso di optare per l’applicazione dell’imposta in Italia
+anche prima del raggiungimento della soglia.
+Quando, invece, gli acquisti intracomunitari superano il limite dei 10.000
+euro l’acquisto assume rilevanza in Italia, secondo le regole ordinarie degli
+acquisti Ue, e pertanto il cessionario che applica il regime forfetario deve
+adempiere ai seguenti obblighi:
+ iscrizione al VIES (cfr articolo 35, comma 2, lett. e-bis) del dPR 26
+ottobre 1972, n. 633);
+ integrazione della fattura rilasciata dal fornitore intracomunitario - in
+base al meccanismo di cui all’articolo 46, comma 1, D.L. 331 del 1993
+- indicando l’aliquota dovuta e la relativa imposta, da versare entro il
+giorno 16 del mese successivo a quello di effettuazione dell’operazione,
+senza diritto alla detrazione dell’Iva relativa;
+ compilazione dell’elenco riepilogativo degli acquisti intracomunitari ex
+articolo 50 comma 6, del DL 331 del 1993.
+c) prestazioni di servizi ricevute da soggetti non residenti o rese ai
+medesimi: con riguardo a tali operazioni, diversamente dal passato, la
+modifica normativa dispone che le stesse rimangono soggette alle ordinarie
+regole e trovano la propria disciplina nelle disposizioni previste dagli articoli
+7-ter e seguenti del decreto del Presidente della Repubblica n. 633 del 1972
+(comma 58 lettera d)). Pertanto, nel caso di acquisti di prestazioni di servizio
+intracomunitarie, l’IVA è sempre assolta in Italia, senza che a tal fine il
+legislatore abbia fissato una soglia minima. Il cessionario che applica il regime
+forfetario è soggetto ai medesimi adempimenti previsti con riferimento agli
+acquisti intracomunitari di beni per importo superiore a 10.000 euro.
+
+27
+
+Nel caso di prestazioni di servizio rese ad un committente, soggetto
+passivo d’imposta, stabilito in un altro Paese Ue, va emessa fattura senza
+addebito di imposta (articolo 7-ter del D.P.R. n. 633 del 1972) e compilato
+l’elenco Intrastat delle prestazioni di servizio rese.
+d) importazioni, esportazioni ed operazioni ad esse assimilate, come già
+anticipato, effettuare esportazioni non costituisce più motivo di preclusione
+all’accesso e/o permanenza nel regime forfetario e alle suddette operazioni si
+applicano gli articolo 8, 8-bis, 9, 67 e seguenti del DPR 633 del 1972, , fermo
+restando l’impossibilità di avvalersi della facoltà di acquistare utilizzando il
+plafond ai sensi dell’ 8, comma 1, lettera c) e comma 2 del medesimo decreto
+(comma 58, lettera e)).
+
+4.1.3. Rettifica della detrazione
+L’applicazione del regime in parola, comporta, altresì, la rettifica dell’IVA
+già detratta negli anni in cui si è applicato il regime ordinario, ai sensi
+dell’articolo 19-bis2 del D.P.R. n. 633 del 1972 (comma 61).
+Si ricorda che, nel caso di ingresso nel regime, l’IVA relativa a beni e
+servizi non ancora ceduti o non ancora utilizzati deve essere rettificata in
+un’unica soluzione, senza attendere il materiale impiego degli stessi, fatta
+eccezione per i beni ammortizzabili, compresi i beni immateriali, la cui rettifica
+va eseguita soltanto se non siano ancora trascorsi quattro anni da quello della loro
+entrata in funzione, ovvero dieci anni dalla data di acquisto o di ultimazione se
+trattasi di fabbricati o loro porzioni.
+Come già evidenziato con le circolari n. 73/E del 2007 e 17/E del 2012
+(per coloro che applicavano il regime dei minimi o di vantaggio), ai fini della
+rettifica occorre predisporre un’apposita documentazione nella quale indicare,
+per categorie omogenee, la quantità e i valori dei beni facenti parte del
+patrimonio aziendale (secondo le modalità illustrate nella circolare n. 328/E del
+24 dicembre 1997).
+
+28
+
+La rettifica va eseguita nella dichiarazione IVA dell’ultimo anno di
+applicazione delle regole ordinarie e il versamento dell’eventuale importo a
+debito va operato in un’unica soluzione.
+La rettifica della detrazione va effettuata anche in caso di passaggio dal
+regime forfetario al regime ordinario nella dichiarazione del primo anno di
+applicazione delle regole ordinarie.
+
+4.1.4. IVA ad esigibilità differita
+Al fine di rendere neutrali gli effetti del passaggio dal regime ordinario
+IVA al regime forfetario, il comma 62 dispone che, nella dichiarazione relativa
+all’ultimo anno in cui è stata applicata l’IVA nei modi ordinari, si deve tener
+conto dell’imposta relativa alle operazioni ad esigibilità differita di cui
+all’articolo 6, quinto comma, del DPR n. 633 del 1972, ossia delle operazioni per
+le quali, generalmente, l’esigibilità dell’imposta si realizza al momento del
+pagamento del corrispettivo (cessioni di beni e prestazioni di servizi fatte, ad
+esempio, allo Stato, agli enti pubblici territoriali e ai consorzi tra essi costituiti,
+alle camere di commercio, industria, artigianato e agricoltura, agli istituti
+universitari, alle unità sanitarie locali, agli enti ospedalieri, agli enti pubblici di
+ricovero e cura aventi prevalente carattere scientifico, agli enti pubblici di
+assistenza e beneficenza e a quelli di previdenza).
+Analogamente, occorre tener conto anche delle operazioni per le quali si è
+liquidata l’imposta secondo il regime di IVA per cassa di cui all’articolo 32-bis
+del decreto-legge 22 giugno 2012, n. 83, convertito dalla legge 7 agosto 2012, n.
+134. In pratica, l’accesso al regime forfetario comporta, per il cedente o
+prestatore che se ne avvalga, la rinuncia al differimento dell’esigibilità. Per
+converso, nella stessa liquidazione può essere esercitato, sempreché spettante, il
+diritto alla detrazione dell’imposta relativa alle operazioni di acquisto soggette
+allo stesso regime di IVA per cassa ed i cui corrispettivi non sono stati ancora
+
+29
+
+pagati, per la quale la norma di riferimento dispone il differimento della
+detrazione.
+
+4.1.5. Utilizzo eccedenza credito IVA
+Sempre con riferimento alla dichiarazione IVA relativa all’ultimo periodo
+di applicazione dell’imposta nei modi ordinari, il successivo comma 63 prevede
+che laddove, eseguite le opportune rettifiche previste dall’articolo 19-bis2,
+emerga una eccedenza di credito Iva, la stessa potrà essere chiesta a rimborso,
+ovvero potrà essere utilizzata in compensazione con altre imposte e contributi ai
+sensi dell’articolo 17 del D.lgs. n. 241 del 1997.
+La suddetta disposizione non fa rifermento ai presupposti, fissati, ai
+commi 2 e 3 dell’articolo 30 del D.P.R. n. 633 del 1972, in presenza dei quali il
+credito Iva può essere chiesto a rimborso. Si ritiene pertanto, che il diritto al
+rimborso dell’eccedenza maturata nell’ultima dichiarazione presentata prima
+dell’entrata nel regime forfetario non sia subordinato alle ordinarie condizioni
+previste nel citato articolo 30, ma derivi dalla previsione di un ulteriore
+presupposto di rimborso introdotto dalla normativa sul nuovo regime forfetario.
+Trattandosi di rimborsi Iva è comunque applicabile la disciplina contenuta
+nell’articolo 38-bis del D.P.R. n. 633 del 1972.
+
+4.2. Semplificazioni e adempimenti ai fini delle imposte sui redditi
+4.2.1. Semplificazioni
+Ai contribuenti che applicano il regime forfetario, è riconosciuto un
+consistente vantaggio contabile.
+In particolare, tali soggetti, sono esonerati dagli obblighi di registrazione e
+tenuta delle scritture contabili, fermo restando l’obbligo di tenere e conservare i
+registri previsti da disposizioni diverse da quelle tributarie (comma 69); sono,
+
+30
+
+inoltre, esclusi dall’applicazione degli studi di settore e dei parametri (comma
+73).
+Non sono tenuti ad operare le ritenute alla fonte, pur essendo obbligati a
+indicare in dichiarazione il codice fiscale del soggetto a cui sono stati corrisposti
+emolumenti senza operare, all’atto del pagamento, la relativa ritenuta d’acconto.
+Inoltre, i ricavi o i compensi percepiti da coloro che applicano il regime
+forfetario, in ragione dell’esiguità della misura dell’imposta sostitutiva, non sono
+soggetti alla ritenuta d’acconto.
+A tal fine, come già accadeva per i contribuenti in regime di vantaggio, è
+necessario che il contribuente rilasci un’apposita dichiarazione al sostituto dalla
+quale risulti che il reddito cui le somme percepite afferiscono è soggetto
+all’imposta sostitutiva in parola.
+Tuttavia, ove il contribuente erroneamente abbia subito delle ritenute e
+non sia più possibile correggere l’errore, le stesse potranno essere chieste a
+rimborso, con le modalità previste all’articolo 38 del DPR n. 602 del 1973,
+ovvero in alternativa, scomputate in dichiarazione, a condizione che le stesse
+siano state regolarmente certificate dal sostituto d’imposta.
+In tale evenienza, analogamente a quanto previsto per i soggetti rientranti
+nel regime fiscale di vantaggio di cui all’art. 27, commi 1 e 2 del decreto legge 6
+luglio 2011, n. 98 l’importo totale delle ritenute complessivamente subite sui
+ricavi e compensi afferenti al regime forfetario, andrà indicato per il periodo di
+imposta 2015, nel rigo RS 40 di “Unico 2016-PF”, denominato “Ritenute regime
+di vantaggio casi particolari”, e riportato, ai fini dello scomputo, nel rigo RN33,
+colonna 4 e/o nel rigo LM41 “Ritenute consorzio”.
+
+4.2.2. Adempimenti
+I contribuenti che applicano il regime forfetario sono tenuti a conservare i
+documenti emessi e ricevuti, in coerenza con quanto previsto dall’articolo 22 del
+
+31
+
+D.P.R. 29 settembre 1973, n. 600, nonché a presentare la dichiarazione dei
+redditi nei termini e con le modalità previste dal D.P.R. n. 322 del 1998.
+4.2.3. Adempimenti dichiarativi ai fini dell’incremento della compliance
+dichiarativa e dell’analisi del rischio
+Il comma 73, nel disporre l’esclusione per i contribuenti che applicano il
+regime forfetario dall’applicazione degli studi di settore, prevede che, con
+provvedimento del direttore dell’Agenzia delle Entrate recante approvazione dei
+modelli da utilizzare per la dichiarazione dei redditi siano individuati, per i
+contribuenti che applicano il regime forfetario, specifici obblighi informativi
+relativamente all’attività svolta.
+Al riguardo, il quadro RS del modello di dichiarazione “Unico 2016–PF”,
+approvato con il Provvedimento del 29 gennaio 2016 del Direttore dell’Agenzia
+delle Entrate, prevede un nuovo prospetto denominato “Regime forfetario per gli
+esercenti attività d’impresa, arti e professioni - Obblighi informativi”.
+Tale prospetto deve essere compilato dai soli contribuenti che hanno
+applicato il regime forfetario in argomento nel 2015, al fine di fornire
+all’Amministrazione Finanziaria alcuni elementi informativi dalla stessa
+individuati per le finalità previste dal citato comma 73. In particolare, i soggetti
+forfettari devono dichiarare, cumulativamente, le informazioni relative al tipo di
+attività svolta (ad esempio, informazioni riguardanti i lavoratori dipendenti, i
+mezzi di trasporto, i costi e le spese sostenute, i compensi corrisposti, i
+consumi,...), indicate nei righi da RS374 a RS378, per l’attività di impresa, ed nei
+righi da RS379 a RS381, per quella di lavoro autonomo. Nel caso vengano
+esercitate sia attività di impresa che di lavoro autonomo, dovranno essere
+compilate entrambe le sezioni del prospetto.
+Tanto premesso si osserva che, in linea generale - coerentemente con gli
+adempimenti richiesti ai contribuenti che applicano il regime forfetario ed alle
+significative semplificazioni loro riconosciute - i dati richiesti nel prospetto
+
+32
+
+dichiarativo devono essere indicati con riguardo alla documentazione ricevuta o
+emessa da tali soggetti.
+Ad esempio, le informazioni relative ai costi richieste agli esercenti
+attività di impresa dovranno essere dichiarate solo laddove i contribuenti abbiano
+ricevuto la relativa documentazione fiscale nel periodo di imposta e nella misura
+in essa indicata.
+Si rileva, inoltre, che i beni strumentali utilizzati promiscuamente per
+l’esercizio dell’impresa, dell’arte o professione e per l’uso personale o familiare
+del contribuente, dovranno essere dichiarati nella misura del 50%.
+Si osserva, poi, che, in base a quanto previsto dall’art. 1, comma 69, della
+legge 23 dicembre 2014, n. 190, i dati relativi ai redditi erogati, per i quali,
+all’atto del pagamento, non è stata operata la ritenuta alla fonte (cfr. par. 4.2.1)
+devono essere indicati negli appositi righi RS371, RS372 ed RS373 del
+medesimo prospetto, facendo riferimento ai redditi e compensi pagati nel periodo
+d’imposta oggetto di dichiarazione, indipendentemente dal motivo per cui la
+ritenuta non è stata effettuata (ossia anche quando il soggetto percipiente sia a
+sua volta un soggetto forfetario per il quale la ritenuta non si applica).
+
+4.3. Determinazione del reddito imponibile
+Il comma 64, stabilisce che, chi aderisce al regime determina “…il reddito
+imponibile applicando all’ammontare dei ricavi o dei compensi percepiti il
+coefficiente di redditività nella misura indicata nell’allegato n.4 annesso alla
+presente legge, diversificata a seconda del codice ATECO che contraddistingue
+l’attività esercitata.”.
+Di seguito i coefficienti di redditività, distinti per codice ATECO, da
+applicare ai ricavi o ai compensi percepiti nel periodo di imposta, calcolati in
+base al criterio di cassa.
+
+33
+
+Progressivo
+Gruppo di settore
+Codici attività ATECO 2007
+Redditività
+1
+Industrie alimentari e
+(10-11)
+40%
+delle bevande
+2
+Commercio all'ingrosso e 45 - (da 46.2 a 46.9) - (da 47.1 a 47.7) - 47.9
+40%
+al dettaglio
+3
+Commercio ambulante di 47.81
+40%
+prodotti alimentari e
+bevande
+4
+Commercio ambulante di 47.82 - 47.89
+54%
+altri prodotti
+5
+Costruzioni e attività
+(41 - 42 - 43) - (68)
+86%
+immobiliari
+6
+Intermediari del
+46.1
+62%
+commercio
+7
+Attività dei servizi di
+(55-56)
+40%
+alloggio e di ristorazione
+8
+Attività professionali,
+(64-65-66) - (69-70-71-72-73-74-75) - (85) - (86-8778%
+scientifiche, tecniche,
+88)
+sanitarie, di istruzione,
+servizi finanziari ed
+assicurativi
+9
+Altre attività economiche (01 - 02 - 03) - (05 - 06 - 07 - 08 - 09) - (12 - 13 - 14
+67%
+- 15 - 16 - 17 - 18 - 19 - 20 - 21 - 22 - 23 - 24 - 25 26 - 27 - 28 - 29 - 30 - 31 - 32 - 33) - (35) - (36 - 37 38 - 39) - (49 - 50 - 51 - 52 - 53) - (58 - 59 - 60 - 61 62 - 63) - (77 - 78 - 79 - 80 - 81 - 82) - (84) - (90 91 - 92 - 93) - (94 - 95 - 96) - (97 - 98) - (99)
+
+Le spese sostenute nello svolgimento dell’attività di impresa, arte o
+professione rilevano, dunque, in base alla percentuale di redditività attribuita, in
+via presuntiva, all’attività effettivamente esercitata.
+Conseguentemente, in presenza di ricavi o compensi derivanti dal
+contemporaneo esercizio di attività riconducibili a codici ATECO diversi, il
+contribuente determina l’imponibile lordo applicando ai ricavi/compensi
+imputabili a ciascuna attività il relativo coefficiente di redditività.
+Da tale reddito sono deducibili i contributi previdenziali dovuti per legge,
+compresi i contributi previdenziali versati per conto dei collaboratori
+dell’impresa familiare fiscalmente a carico, nonché quelli versati per conto dei
+collaboratori non fiscalmente a carico, a condizione che il titolare non abbia
+esercitato nei loro confronti il diritto di rivalsa.
+Al riguardo, si evidenzia che, qualora i contributi versati siano superiori al
+reddito d’impresa o di lavoro autonomo determinato applicando i coefficienti di
+
+34
+
+redditività, l’eccedenza può essere dedotta dal reddito complessivo, ai sensi
+dell’articolo 10 del DPR n. 917 del 1986.
+E’ utile precisare, inoltre, che l’eventuale eccedenza dei contributi
+previdenziali ed assistenziali versati da un contribuente che applica il regime
+forfetario e che sia fiscalmente a carico, può essere dedotta, ai sensi dell’articolo
+10, comma 2, del DPR n. 917 del 1986, dai familiari indicati nell’articolo 433 del
+codice civile.
+Si rinvia, in proposito, ai chiarimenti forniti con la circolare n. 17 del 2012
+relativa al regime fiscale di vantaggio
+Coerentemente con la ratio seguita dal comma 54, gli immobili, a qualsiasi
+titolo posseduti, non vanno considerati ai fini del regime forfetario. Alla luce di
+quanto previsto, il reddito prodotto dagli immobili strumentali o patrimoniali
+eventualmente posseduti va imputato, quale reddito di fabbricati, alla persona
+fisica titolare dell’impresa o dell’attività di lavoro autonomo.
+
+4.3.1 Componenti positivi e negativi di reddito maturati in corso di regime
+Il comma 64 richiamato al precedente paragrafo non contiene riferimento
+alcuno al trattamento fiscale riservato alle plusvalenze e alle minusvalenze - la
+cui imponibilità era, invece, espressamente prevista nei precedenti regimi
+dedicati ai contribuenti di minori dimensioni dall’articolo 1, comma 104, della
+legge n. 244 del 2007.
+La mutata lettera della norma, in un ottica di maggiore semplificazione,
+consente di ritenere che le plusvalenze e le minusvalenze realizzate effettuate in
+corso di regime non abbiano alcun rilievo fiscale, anche se riferite a beni
+acquistati negli anni che hanno preceduto l’adozione del regime forfetario.
+Inoltre, non assumono rilevanza neppure le sopravvenienze sia attive che passive.
+
+35
+
+4.3.2. Componenti di reddito riferiti a periodi precedenti
+In considerazione delle peculiarità delle regole di determinazione del
+reddito, il comma 66 introduce alcune disposizioni volte ad effettuare un
+coordinamento tra i periodi di imposta nei quali tali regole trovano applicazione e
+i periodi precedenti o successivi, con riferimento ai quali risultano applicabili le
+regole ordinarie.
+Tale coordinamento si rende necessario in particolare per i redditi di
+impresa, in considerazione del diverso criterio di imputazione temporale dei
+componenti positivi (principio di cassa) adottato dal regime in esame rispetto al
+criterio di imputazione previsto dalle disposizione ordinarie (principio di
+competenza), al fine di evitare duplicazioni o salti di imposta nei periodi di
+entrata o di uscita dal regime.
+Il citato comma 66, in particolare, stabilisce che le quote residue di
+componenti positivi e/o negativi di reddito, la cui tassazione o deduzione è stata
+rinviata in attuazione delle regole fissate dal TUIR, devono essere utilizzate
+interamente nel periodo immediatamente precedente all’adozione del regime
+forfetario. Tale disposizione si applica, altresì, anche ai fini della determinazione
+del valore della produzione.
+I componenti positivi cui fa riferimento la disposizione in commento sono,
+ad esempio, quelli realizzati a titolo di plusvalenza che, a norma dell’articolo 86
+del TUIR, il contribuente può decidere di imputare nell’esercizio stesso in cui
+sono realizzate, in base a quanto previsto dal comma 4 della stessa norma, o in
+quote costanti in detto esercizio e nei quattro successivi, nonché i proventi in
+denaro e in natura di cui al comma 3 lett. b), del successivo articolo 88, che sono
+imputabili nel medesimo modo previsto per la plusvalenze.
+I componenti negativi, invece, sono, ad esempio, relativi alle spese
+destinate a produrre effetti positivi sul reddito di più esercizi, indicate nel
+dettaglio all’articolo 108 del TUIR. Tali componenti possono essere utilizzati, a
+scelta del contribuente, nella determinazione del reddito dell’esercizio in cui sono
+state sostenuti, oppure, in detto esercizio e nei quattro successivi. Tra i
+
+36
+
+componenti negativi rientrano anche le spese di manutenzione, di cui al comma 6
+dell’articolo 102. Tali spese, per la parte che eccede il 5% del valore dei beni
+ammortizzabili, sono utilizzabili nell’esercizio in cui sono state sostenute e nei 5
+esercizi successivi.
+
+4.3.3. Trattamento delle perdite generatesi nei periodi di imposte precedenti.
+Il comma 68 consente al contribuente, che adotta il regime forfetario, di
+utilizzare le perdite pregresse riportate nei periodi precedenti in deduzione dal
+reddito determinato secondo le modalità indicate nel comma 64.
+Naturalmente, le perdite realizzate nei periodi di applicazione della
+contabilità ordinaria possono essere riportate fino al 5° anno successivo a quello
+di conseguimento, esclusivamente dal reddito d’impresa, come previsto
+all’articolo 8 del TUIR. A tale regola fanno eccezione le perdite delle imprese in
+fase di start-up, nei primi 3 anni d’attività, che sono riportabili senza limiti
+temporali.
+Le perdite derivanti dall'esercizio di imprese in contabilità semplificata,
+invece, non potendo essere portate a nuovo negli esercizi successivi, non
+influenzano il reddito d’impresa realizzato nel periodo di applicazione del regime
+forfetario.
+Si precisa, tuttavia, che sono riportabili, senza tener conto di eventuali
+limiti anche temporali, le perdite maturate dalle start up negli anni 2006 e 2007,
+anche se realizzate da imprese in contabilità semplificata e da lavoratori
+autonomi3.
+Le perdite maturate nel periodo di applicazione del “regime dei
+contribuenti minimi” di cui alla L. n. 244 del 2007 e del “regime fiscale di
+vantaggio” di cui al DL n. 98 del 2011, infine, possono essere scomputate dal
+3
+
+Si ricorda che l’articolo 8 del TUIR nel testo in vigore dal 4 luglio 2006 al 31 dicembre 2007 consentiva
+il riporto delle perdite anche alle imprese in contabilità semplificata e ai lavoratori autonomi per 5 anni.
+Peraltro, per effetto del rinvio, contenuto nel medesimo articolo 8, all’articolo 84, comma 2, del TUIR, le
+perdite realizzate nei primi tre periodi d’imposta dai citati soggetti possono essere computate
+illimitatamente in diminuzione del reddito prodotto nelle annualità successive.
+
+37
+
+reddito forfetario - qualunque sia stata il tipo di attività (impresa o lavoro
+autonomo) esercitata - nei periodi d’imposta successivi, ma non oltre il quinto,
+per l’intero ammontare che trova capienza, fermo restando l’applicazione del
+comma 3 dell’art. 8 del TUIR ove ricorrano le condizioni (cfr ris. n. 123/E del 30
+novembre 2010).
+
+4.3.4. Le rimanenze finali e le deduzioni forfetarie maturate per effetto di altre
+norme
+La determinazione forfetaria del reddito sulla base di coefficienti di
+redditività dell’attività esercitata, in re ipsa, esclude la rilevanza fiscale dei
+componenti negativi realizzati in concreto e, al tempo stesso, di eventuali
+deduzioni, determinate in applicazione di altre norme non espressamente
+richiamate dalle disposizioni istitutive o modificative del regime.
+Alla luce di quanto sopra, le rimanenze di merci dei periodi pregressi, in
+linea con quanto previsto dal comma 66 per i componenti positivi e negativi di
+reddito sospesi, devono concorrere al reddito dell’esercizio immediatamente
+precedente all’adozione del regime forfetario.
+4.3.5. Cessazione dell’attività
+E’ noto che il trattamento fiscale da riservare ai ricavi e ai compensi
+fatturati e non ancora riscossi, così come ai costi e agli oneri che non hanno
+ancora ricevuto il proprio regolamento finanziario, rappresenta una delle
+problematiche che si verificano all’uscita dell’attività economica.
+Come già precisato con riferimento al regime fiscale di vantaggio nella
+circolare n. 17 del 2012, laddove l’attività cessi quando ancora esistono ricavi e
+compensi fatturati e non ancora riscossi, ovvero costi ed oneri per i quali manca
+ancora la manifestazione numeraria, l’attività non si può “considerare cessata
+fino all'esaurimento di tutte le operazioni, ulteriori rispetto all'interruzione delle
+prestazioni professionali, dirette alla definizione dei rapporti giuridici pendenti,
+
+38
+
+e, in particolare, di quelli aventi ad oggetto crediti strettamente connessi alla
+fase di svolgimento dell'attività professionale”. Ciò in analogia a quanto già in
+precedenza chiarito con circolare n. 11/E del 16 febbraio 2007 in merito alla
+cessazione dell’attività professionale. Il regime forfetario, infatti, determina il
+reddito, al pari di quello professionale, secondo il criterio di cassa, a prescindere
+dal tipo di attività esercitata (professionale o di impresa).
+Ne consegue che, in caso di cessazione dell’attività, il contribuente che
+applica il regime forfetario dovrà adempiere agli obblighi dichiarativi prescritti,
+compilando il quadro LM del modello UNICO fino all’ultima operazione
+concernente la riscossione dei crediti; fino a tale data non potrà, pertanto,
+chiedere la cessazione della partita IVA. La cessazione della partita Iva non
+potrà, inoltre, essere chiesta fino a quando non siano state ricevute tutte le fatture
+relative alle operazioni passive effettuate, tenuto conto dell’ obbligo di
+regolarizzare delle fatture omesse ovvero emesse in forma irregolare, imposto al
+cessionario o committente dall’art. 6, comma 8, del D.lgs. n. 471 del 1997.
+In alternativa, tenendo conto delle dimensioni dell'impresa e, in
+particolare, dall'esiguità delle operazioni economiche che ne caratterizzano
+l'attività, in un’ottica di semplificazione, si ritiene applicabile al regime forfetario
+la soluzione, prevista in via interpretativa per il regime fiscale di vantaggio,
+secondo cui, il contribuente ha la facoltà di chiudere le proprie pendenze fiscali,
+imputando all’ultimo anno anche delle operazioni che non hanno avuto ancora
+manifestazione finanziaria. (cfr. circolare n. 17/E del 2012).
+
+4.3.6 La valutazione delle merci e dei beni strumentali nei passaggi di regime
+Il comma 72 disciplina i casi di passaggio dal regime forfetario al regime
+ordinario, e viceversa, al fine di evitare salti o duplicazioni di imposta, dispone
+che “…Nel caso di passaggio da un periodo di imposta soggetto al regime
+forfetario a un periodo di imposta soggetto a un diverso regime, …, i ricavi e i
+compensi che hanno già concorso a formare il reddito non assumono rilevanza
+
+39
+
+nella determinazione del reddito degli anni successivi ancorché di competenza di
+tali periodi; viceversa i ricavi e i compensi che, ancorché di competenza del
+periodo in cui il reddito è stato determinato in base alle regole del regime
+forfetario, non hanno concorso a formare il reddito imponibile del periodo
+assumono rilevanza nei periodi d’imposta successivi nel corso dei quali si
+verificano i presupposti previsti dal regime forfetario.”.
+La disposizione, in altri termini, stabilisce che i ricavi e i compensi che
+non hanno concorso a formare il reddito nel periodo di applicazione del regime
+forfetario, a causa della mancata riscossione delle somme attese, al fine di evitare
+salti e duplicazioni di imposta, concorreranno a determinare il reddito in regime
+ordinario - adottato dopo l’uscita dal forfetario - nel medesimo anno in cui si
+realizza la manifestazione finanziaria, senza tener conto della competenza
+economica. Analogamente, il principio di competenza non può essere applicato
+ai ricavi e ai compensi che hanno concorso alla formazione del reddito nel
+periodo di applicazione del regime forfetario, avendo avuto in tale periodo la
+rispettiva manifestazione finanziaria.
+Viceversa, in caso di passaggio dal regime ordinario al regime forfetario,
+laddove il ricavo abbia già concorso, per competenza, a determinare il reddito nel
+periodo di applicazione del regime ordinario, la sua manifestazione finanziaria in
+corso di regime forfetario non assume rilevanza.
+Con riferimento ai costi, infine, la norma stabilisce che “…le spese
+sostenute nel periodo di applicazione del regime forfetario…” non rilevano ai
+fini della determinazione del reddito negli anni successivi al passaggio al regime
+ordinario.
+Ciò significa, dunque, che le esistenze finali in corso di regime forfetario
+non rilevano come esistenze iniziali del regime ordinario se il loro prezzo è stato
+pagato nel periodo di permanenza nel regime di favore, mentre le medesime
+costituiscono esistenze iniziali limitatamente alla parte non ancora pagata.
+Il comma 72, in riferimento alla plusvalenze/minusvalenze realizzate dopo
+l’uscita dal regime di favore, dispone che il costo dei beni acquistati negli anni
+
+40
+
+anteriori all’ingresso nel regime forfetario è pari al costo non ammortizzato,
+risultante dal libro dei beni ammortizzabili nell’anno che precede l’adozione del
+regime forfetario, mentre il costo dei beni strumentali acquistati nel periodo di
+applicazione del regime forfetario è pari al prezzo d’acquisto.
+La norma, per converso, non contiene ulteriori precisazioni, e in tal senso
+avvalora l’ipotesi dell’implicita volontà del legislatore di non attribuire rilievo
+alcuno alle plusvalenze/minusvalenze realizzate nel corso del regime forfetario
+per effetto dell’alienazione dei beni strumentali acquisiti nel medesimo periodo o
+nei periodi precedenti all’ingresso nel regime di favore.
+
+4.3.7. Calcolo delle detrazioni
+Il comma 75 prevede che il reddito determinato secondo i criteri del regime
+forfetario sia rilevante, unitamente al reddito complessivo, ai fini del riconoscimento
+delle detrazioni per carichi di famiglia di cui all’articolo 12, comma 2, del TUIR. Il
+reddito soggetto all’imposta sostitutiva non rileva, invece, ai fini della spettanza delle
+detrazioni oggettive individuate nell’articolo 13 del TUIR. Per effetto di tale irrilevanza,
+il contribuente che ha percepito redditi di lavoro dipendente o assimilati ha diritto a
+determinare la detrazione prevista senza tener conto del reddito soggetto al regime
+forfetario.
+
+4.4. Applicazione dell’imposta sostitutiva
+Una volta determinato il reddito imponibile, con le modalità sopra
+descritte, il contribuente forfetario applica un’unica imposta, nella misura del 15
+per cento, sostitutiva delle imposte sui redditi, delle addizionali regionali e
+comunali e dell’IRAP.
+Nel caso di imprese familiari di cui all’articolo 5, comma 4, del TUIR, il
+comma 64 precisa, l’imposta sostitutiva, applicata sul reddito al lordo dei
+compensi dovuti dal titolare al coniuge e ai suoi familiari, è dovuta
+dall’imprenditore.
+
+41
+
+Il
+
+contribuente
+
+potrà
+
+scomputare
+
+le
+
+detrazioni
+
+d’imposta
+
+complessivamente spettanti dall’imposta lorda emergente dal quadro RN, nel
+caso in cui percepisca altre categorie di reddito.
+I contribuenti in regime forfetario possono maturare il credito d’imposta di
+cui ai commi 98 e 99 dell’articolo 1 della legge n. 208 del 2015, previsto - nella
+misura del 20% per le piccole imprese, del 15% per le medie imprese e del 10%
+per le grandi imprese - a favore di chi acquista, anche per mezzo di contratti di
+locazione finanziaria, beni strumentali nuovi per le strutture produttive
+impiantate o già esistenti nel Mezzogiorno. Si ricorda che l’agevolazione, che
+riguarda macchinari, impianti e attrezzature varie, come precisa il successivo
+comma 100, non si applica alle imprese che operano nel settore siderurgico,
+carbonifero, della costruzione navale, delle fibre sintetiche, dei trasporti e relative
+infrastrutture, in quello della produzione/distribuzione energetica, nei settori
+assicurativi, finanziari e creditizi. Inoltre, il credito non può essere riconosciuto
+alle imprese in difficoltà, come definite dalla comunicazione della Commissione
+europea 2014/C249/01 del 31 luglio 2014, mentre le aziende che operano nei
+settori agricolo, ittico e forestale possono fruire dell’aiuto nei limiti e alle
+condizioni previste dalla normativa europea in tali settori.
+Pertanto, al di fuori dei casi indicati, si ritiene che la disciplina dettata ai
+commi 98-106 dell’articolo 1 della legge n. 208 del 2015, nel rispetto delle
+condizioni prescritte nel provvedimento del direttore dell’Agenzia delle entrate,
+permetta alle imprese minori di fruire del credito d’imposta in argomento che, ai
+sensi dell’articolo 1, comma 104, della legge di stabilità per il 2016, può essere
+utilizzato esclusivamente in compensazione ex articolo 17 del d.lgs. n. 241 del
+1997.
+Gli acconti ed il saldo dell’imposta sostitutiva così determinata sono
+versati con le modalità ed entro i termini ordinari stabiliti per il versamento degli
+acconti e del saldo IRPEF, utilizzando nel modello F24 i codici tributo istituiti
+con risoluzione n. 59/E del 11 giugno 2015. Si applicano, quindi, tutte le
+
+42
+
+disposizioni vigenti in materia di versamenti a saldo ed in acconto,
+compensazione e rateazione dell’IRPEF.
+
+5. LE AGEVOLAZIONI PER I SOGGETTI CHE INIZIANO UNA
+NUOVA ATTIVITA’
+Il legislatore, con il comma 65 della norma in commento, ha previsto
+ulteriori vantaggi volti a favorire la nascita di nuove iniziative economiche.
+La norma, nella versione originaria applicabile per l’anno di imposta
+2015, prevedeva che i contribuenti in regime forfetario beneficiassero della
+riduzione di 1/3 dell’imponibile determinato con le modalità fissate al comma 64,
+al lordo delle deduzioni.
+In particolare, si precisa che, per il solo anno 2015, la suddetta riduzione
+va operata sul reddito forfetariamente determinato al lordo dei contributi
+previdenziali versati e dedotti e delle perdite pregresse da portare in diminuzione
+del reddito.
+Pertanto nel modello UNICO 2016 PF la riduzione andrà operata con
+riferimento al reddito lordo indicato al rigo LM34.
+Con l’intento di favorire ulteriormente le nuove iniziative economiche e di
+consentire la definitiva abrogazione del regime c.d. di vantaggio, di cui
+all’articolo 27 co.2 del DL n. 98 del 2011, il legislatore con la legge di stabilità
+per il 2016, ha modificato il comma 65 disponendo che, a decorrere dal 2016, il
+reddito determinato con i criteri sopra richiamati, sia assoggettato ad un’imposta
+sostitutiva del 5%, per i primi 5 anni di attività. Si ricorda, inoltre, che il comma
+113 dell’art. 1 della legge n. 208 del 2015 ha previsto, anche per i soggetti che
+nel 2015 hanno iniziato una nuova attività, l’applicazione, per il quadriennio che
+residua al compimento del quinquennio , dell’imposta sostitutiva nella misura del
+5%. Per poter beneficiare degli ulteriori vantaggi in termini di tassazione è,
+tuttavia, necessario che:
+
+43
+
+a) il contribuente non abbia esercitato, nei tre anni precedenti l'inizio
+dell’attività di cui al comma 54, attività artistica, professionale ovvero
+d'impresa, anche in forma associata o familiare;
+b) l’attività da esercitare non costituisca, in nessun modo, mera prosecuzione
+di altra attività precedentemente svolta sotto forma di lavoro dipendente o
+autonomo, escluso il caso in cui l’attività precedentemente svolta consista
+nel periodo di pratica obbligatoria ai fini dell'esercizio di arti o
+professioni;
+c) qualora venga proseguita un’attività svolta in precedenza da altro
+soggetto, l'ammontare dei relativi ricavi e compensi, realizzati nel periodo
+d'imposta precedente quello di riconoscimento del predetto beneficio, non
+sia superiore ai limiti di cui al comma 54.
+I suddetti requisiti sono analoghi a quelli previsti dall’articolo 27 del D.L.
+n. 98 del 2011 per l’accesso al regime di vantaggio, descritti nella circolare n.
+17/E del 2012, paragrafi da 2.2.1 a 2.2.3, cui in generale si rinvia.
+Ad ogni buon fine, si riassumono le caratteristiche più significative del
+suddette disposizioni.
+In particolare, si ricorda che, laddove la norma richiama il precedente
+triennio quale limite di riferimento per l’avvio di una precedente iniziativa
+economica, intende riferirsi al triennio calcolato secondo il calendario
+gregoriano, e non al periodo d’imposta né all’anno solare; pertanto, un
+contribuente che intenda avviare una nuova attività ad aprile 2016 potrà
+beneficare delle agevolazioni in parola qualora abbia concluso la precedente
+attività entro marzo del 2013. La preclusione in argomento, in ogni caso, non
+opera qualora i redditi percepiti dal contribuente nel triennio siano riconducibili
+ad un contratto di associazione in partecipazione con apporto di solo lavoro, né in
+caso di partecipazione ad una società inattiva.
+Si rammenta, altresì, che il vincolo che la nuova attività non sia mera
+prosecuzione di una precedente attività d’impresa, di lavoro dipendente o di
+
+44
+
+lavoro autonomo (salvo l’eccezione prevista per la pratica obbligatoria) persegue,
+in generale, una finalità antielusiva, poiché mira ad evitare che il beneficio possa
+essere fruito da soggetti che si limitino a modificare la sola veste giuridica della
+attività esercitata in precedenza o dispongano, scientemente, la mera variazione
+del codice ATECO sfruttando il cambio di denominazione previsto per il
+“rinnovo” dell’attività.
+Restano, peraltro, valide tutte le considerazioni già svolte con riguardo ai
+precedenti regimi, nel senso che la prosecuzione dell’attività deve essere valutata
+sotto il profilo sostanziale e non formale. A tal fine, pertanto, è indispensabile
+valutare se la nuova attività si rivolge alla medesima clientela e necessita delle
+stesse competenze lavorative. Ciò significa che ci sarà continuità quando il
+contribuente sceglierà di esercitare la medesima attività, svolta precedentemente
+come lavoratore dipendente rivolgendosi allo stesso mercato di riferimento. Si
+ritiene che la prosecuzione rilevi anche quando la cessazione del rapporto di
+lavoro avvenga per cause indipendenti dalla volontà del dipendente, tenuto conto
+che la norma in esame non fa riferimento a specifiche agevolazioni per i
+lavoratori in mobilità.
+Con precedenti documenti di prassi è stato, altresì, chiarito che la
+continuità non sussiste quando la nuova attività o il mercato di riferimento sono
+diversi, ovvero quando la precedente attività abbia il carattere di marginalità
+economica, ossia il lavoro dipendente o assimilato sia svolto, in base a contratti a
+tempo determinato o di collaborazione coordinata o a progetto per un periodo di
+tempo non superiore alla metà del triennio.
+Come già chiarito per i precedenti regimi, infine, laddove vi sia
+proseguimento dell’attività precedentemente esercitata da un terzo, ai fini
+dell’applicazione della ulteriore riduzione della tassazione, andrà verificata la
+sussistenza dei requisiti previsti al comma 54 per l’accesso al regime forfetario,
+da eseguirsi in relazione al periodo di imposta precedente a quello di inizio
+dell’attività con riferimento ai ricavi e compensi del dante causa.
+
+45
+
+Qualora il trasferimento dell’attività avvenga in corso d’anno, i ricavi
+riferibili al dante causa e quelli riferibili all’avente causa, relativi all’anno di
+cessione dell’attività, devono essere considerati cumulativamente per la verifica
+del superamento del richiamato limite. Ove detto evento si realizzasse, il
+contribuente sarà obbligato ad uscire dal regime di favore a decorrere dall’anno
+successivo.
+6. SANZIONI
+Il comma 74, infine, rinvia per l’attività di accertamento, riscossione, per
+le sanzioni e il contenzioso, alle disposizioni vigenti, per quanto compatibili, in
+materia di imposte dirette, imposta sul valore aggiunto e di imposta regionale
+sulle attività produttive.
+Il medesimo comma, tuttavia, dispone un aggravio delle sanzioni nel caso
+di infedele indicazione dei dati attestanti i requisiti e le condizioni per accedere al
+regime di cui al comma 54, di quelle che ne determinano l’esclusione o la
+cessazione, di cui al comma 57, ovvero di quelle che consentono l’accesso al
+regime di favore previsto per le nuove attività, di cui al comma 65. In tale
+evenienza, infatti, le sanzioni disposte dal d.lgs. n. 471 del 1997 sono maggiorate
+del 10 per cento se il maggior reddito accertato supera del 10 per cento quello
+dichiarato.
+
+Le Direzioni regionali vigileranno affinché le istruzioni fornite e i principi
+enunciati con la presente circolare vengano puntualmente osservati dalle
+Direzioni provinciali e dagli Uffici dipendenti.
+******
+
+IL DIRETTORE DELL’AGENZIA
+
+

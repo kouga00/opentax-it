@@ -1,0 +1,14 @@
+{
+  "art7SeptiesServices": {
+    "paragraphs": [
+      "Per un privato extra UE il servizio si considera reso in Italia (art. 7-ter c. 1 lett. b), quindi Natura N2.2 come per un cliente italiano. Fanno eccezione i servizi elencati nell'art. 7-septies, che non si considerano effettuati in Italia quando il committente privato è domiciliato e residente fuori dall'UE: tra questi (lett. c) \"consulenza e assistenza tecnica o legale nonché quelle di elaborazione e fornitura di dati e simili\". In quel caso la fattura ha Natura N2.1 e la dicitura \"operazione non soggetta\". Se hai dubbi sul tuo servizio, chiedi a chi ti assiste."
+    ]
+  },
+  "recipientCodeOrPec": {
+    "label": "Codice destinatario o PEC?",
+    "paragraphs": [
+      "Nessuno dei due è obbligatorio per il cliente: il campo CodiceDestinatario c'è sempre e vale `0000000` quando non si conosce il canale. Lo SDI recapita così (Specifiche tecniche 1.9.1 §1.5.5): 1) se il cliente ha registrato un indirizzo telematico nel portale Fatture e Corrispettivi, usa quello, qualunque cosa ci sia in fattura; 2) altrimenti, se c'è un codice destinatario valido, usa quel canale; 3) altrimenti, con `0000000` e PEC indicata, invia alla PEC; 4) con `0000000` e nessuna PEC, mette la fattura nell'area riservata del cliente.",
+      "Puoi inserire entrambi: con un codice valido la PEC non viene usata dallo SDI."
+    ]
+  }
+}

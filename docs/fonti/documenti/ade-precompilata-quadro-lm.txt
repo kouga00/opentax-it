@@ -1,0 +1,147 @@
+Quadro LM
+
+Attenzione: per confermare i dati che inserisci ricordati sempre di selezionare "Salva".
+
+Poi dal menù "Redditi PF 2026" scegli la successiva voce che ti interessa.
+
+QUADRO LM
+
+Il presente quadro deve essere utilizzato per dichiarare il reddito derivante dall’esercizio di attività commerciali o dall’esercizio di arti e professioni, determinato ai sensi dell’art. 27, commi 1 e 2, del D.L. 6 luglio 2011, n. 98, ovvero il reddito prodotto in regime forfetario, determinato ai sensi dell’art. 1, commi dal 54 a 89, della legge n.190 del 23 dicembre 2014 e successive modificazioni.
+
+Inoltre nel quadro sono presenti le informazioni necessarie per determinare le imposte dovute sul reddito concordato (CPB) relativo al periodo d’imposta oggetto di dichiarazione, con riferimento ai soggetti in regime forfetario. Per maggiori dettagli sulle condizioni e modalità di applicazione del Concordato si rimanda alle informazioni rese disponibili nell’apposita area tematica del sito web dell’Agenzia delle entrate: www.agenziaentrate.gov.it.
+
+[...]
+
+- Fonte: Istruzioni per la compilazione Redditi 2026 [Fascicolo 3]
+
+Se sei un soggetto in regime di vantaggio o forfetario, verifica i dati precompilati e le informazioni presenti nel foglio informativo della tua dichiarazione.
+
+Ricorda che per la valorizzazione del quadro LM viene presa in considerazione la somma degli importi indicati nelle fatture elettroniche e/o nei corrispettivi telematici relativi all’anno d’imposta oggetto di precompilazione.
+
+Se sei un professionista per il quale è previsto l’obbligo di iscrizione alla Cassa professionale di previdenza, i contributi addebitati al committente in fattura sono esclusi dall’importo dei componenti positivi di reddito precompilati.
+
+Diversamente, se sei un professionista che esercita un’attività per la quale non è prevista un’apposita Cassa professionale di previdenza e, pertanto, sei tenuto all’iscrizione alla Gestione Separata dell’INPS, i contributi addebitati al committente in fattura sono inclusi nell’importo dei componenti positivi di reddito precompilati.
+
+Considerato che ai regimi di vantaggio e forfetario si applica il principio di cassa e non è possibile desumere dalle fonti di input la data esatta del pagamento, nella precompilazione è adottata la presunzione, prevista con apposito messaggio nel foglio informativo, che il pagamento sia stato effettuato alla data di emissione della fattura o del corrispettivo.
+
+Qualora, ad esempio, hai incassato una fattura in un anno d’imposta diverso da quello di emissione del documento, modifica l’importo dei componenti positivi di reddito nel quadro LM, includendo il dato delle fatture emesse nello scorso anno ed incassate nell’anno d’imposta ed escludendo quello delle fatture emesse nell’anno d’imposta che non risultano incassate.
+
+Fatture PA rifiutate
+
+In presenza di fatture elettroniche e note di credito emesse nei confronti della Pubblica Amministrazione e da questa rifiutate, le stesse non sono prese in considerazione ai fini del calcolo del superamento della soglia per la permanenza nel regime e per il calcolo dei componenti positivi di reddito da riportare in dichiarazione. In tal caso è riportato il seguente avviso nel foglio informativo: “Risultano fatture PA rifiutate che non sono state considerate tra i componenti positivi di reddito, verifica la correttezza dei dati precompilati.”
+
+Somma componenti positivi di reddito pari a zero o negativa
+
+Nel particolare caso in cui dalla sommatoria dei componenti positivi di reddito, pervenuti col flusso delle fatture elettroniche e dei corrispettivi telematici, risulti un valore pari a zero o negativo (ad esempio per effetto dell’emissione di note di credito) sarai informato con il seguente messaggio: “Dal flusso delle fatture elettroniche e dei corrispettivi telematici pervenuto, risulta una sommatoria dei componenti positivi di reddito pari a zero o negativa, verifica la correttezza dei dati”.
+
+Codici Ateco
+
+Per quanto riguarda la precompilazione dei codici Ateco nel quadro LM, i dati vengono prelevati dal modello Redditi PF presentato per l’anno d’imposta precedente, ovvero, in assenza di dichiarazione dell’anno precedente, dai dati anagrafici che risultano nelle banche dati dell’Agenzia.
+
+In particolare, per la precompilazione del codice Ateco al rigo LM1, quindi nella sezione I relativa ai contribuenti in regime di vantaggio, viene riportato il codice attività desunto dalla dichiarazione dell’anno precedente tenendo conto della nuova classificazione ATECO 2025, in vigore dal primo gennaio 2025.
+
+In merito alla precompilazione della colonna 1 (Codice attività) del rigo o dei righi da LM22 a LM27, quindi della sezione III relativa ai contribuenti in regime forfetario, verifica se il tuo o i tuoi codici attività sono stati correttamente riportati in dichiarazione. Se, invece, il tuo o i tuoi codici attività sono stati riportati solo nel foglio informativo, verificali e indicali nella colonna 1 dei righi da LM22 a LM27. In tal caso, i codici attività da riportare sono quelli ATECO 2007.
+
+In particolare, in presenza di più codici attività, tutti i componenti positivi sono riportati nella colonna 3 del rigo LM22, in quanto non è possibile attribuire, in base alle fonti di input, i ricavi e/o i compensi percepiti per ogni codice Ateco.
+
+Verifica il dato e se le attività rientrano nel medesimo gruppo, tra quelli individuati, in base ai settori merceologici nella tabella riportata nelle istruzioni del modello Redditi PF, conferma il dato precompilato al rigo LM22, indicando solo il codice relativo all’attività prevalente; se invece le attività rientrano in differenti gruppi, devi suddividere i ricavi e/o i compensi percepiti compilando un distinto rigo per le attività rientranti nello stesso gruppo merceologico.
+
+CU – Lavoro autonomo relative ad alcune indennità
+
+Ricorda che se hai una o più CU – Lavoro autonomo in cui sono presenti i codici 25 e/o 26 al punto 6 (relative ad alcune indennità, ad esempio quelle di maternità, che concorrono alla base imponibile, ma non rilevano ai fini del calcolo del limite per la permanenza nel regime), la somma dei relativi importi è riportata nell’apposito rigo con il seguente messaggio nel foglio informativo: “Risultano CU–Lavoro Autonomo in regime forfetario e/o in regime fiscale di vantaggio. Importo: XXXX”. In tal caso, se sei un soggetto in regime forfetario è riportato, inoltre, il codice 1 in colonna 7 dei righi da LM22 a LM27.
+
+CU – Lavoro autonomo (medici)
+
+Nel caso di somme erogate (punto 4 della CU – Lavoro autonomo) ai medici di medicina generale, ai medici di continuità assistenziale con rapporto di lavoro a tempo determinato e ai pediatri di libera scelta in regime forfetario con codice 24 presente nel punto 6 della CU – Lavoro autonomo, le stesse vengono utilizzate per la precompilazione della sezione III – regime forfetario e sono, inoltre, evidenziate con un messaggio nel foglio informativo.
+
+Compensi lavoro autonomo sportivo dilettantistico
+
+Se sei un soggetto in regime forfetario e nella dichiarazione modello Redditi dell’anno precedente hai compilato la sezione III del quadro RR, come indicato nello specifico messaggio riportato nel foglio informativo e nell’applicativo web, verifica se hai percepito compensi da lavoro autonomo sportivo dilettantistico nel qual caso, come da istruzioni, inseriscili in un distinto rigo da LM22 a LM27 inserendo il codice 2 in colonna 7.
+
+Contributi previdenziali e assistenziali
+
+Se il tuo quadro LM risulta precompilato, tutti i contributi previdenziali ed assistenziali versati nell’anno oggetto di precompilazione e comunicati dai soggetti terzi sono riportati nel solo foglio informativo. Verifica il dato e riporta:
+
+nel quadro LM i contributi relativi all’attività svolta nel regime di vantaggio (LM7) o forfetario (LM35);
+
+nel rigo RP21 l’eventuale parte eccedente dei contributi che non hanno trovato capienza nel quadro LM insieme agli altri contributi deducibili in base alla normativa vigente (ad esempio i contributi versati per il riscatto degli anni di laurea e degli anni di frequenza degli ITS Academy, per la prosecuzione volontaria, etc.).
+
+CU – Lavoro autonomo diritti d’autore e opere dell’ingegno
+
+I dati delle somme di cui alle CU – lavoro autonomo con causale B (“utilizzazione economica, da parte dell’autore o inventore di opere di ingegno, brevetti industriali, processi, formule o informazioni relativi ad esperienze acquisite in campo industriale commerciale o scientifico”) sono già riportati al quadro RL “Altri redditi” e in particolare al rigo RL25. Se sei, però, un contribuente in regime forfetario (sezione III del quadro LM precompilata) e risultano pervenute CU – lavoro autonomo con causale B e tale tipologia di reddito fosse correlata all'attività di lavoro autonomo svolta, allora riporta i dati dei compensi in colonna 4 dei righi da LM22 a LM27, eliminandoli dal quadro RL, come riportato anche in un apposito avviso sia nel foglio informativo che nell’applicativo web.
+
+Eccedenze e acconti
+
+Infine, trovi precompilati anche i dati dell’eccedenza delle rimanenze finali (sezione I) e dell’eccedenza e degli acconti dell’imposta sostitutiva con le informazioni provenienti dalla dichiarazione dell’anno precedente e dai modelli F24.
+
+Legenda pulsanti
+
+Puoi selezionare
+
+per salvare i dati inseriti
+
+per recuperare i dati precedenti
+
+per cancellare i dati presenti
+
+Se lo spazio disponibile nel modello non è sufficiente per i dati che devi inserire, clicca su "Aggiungi modulo" in alto a destra per compilare altri moduli.
+
+Inserisci le ulteriori informazioni nel modulo aggiunto.
+
+Clicca sul numero del modulo, in alto a destra, per visualizzare tutte le informazioni inserite.
+
+In caso di errore seleziona "Rimuovi modulo", per eliminare il nuovo modulo.
+
+Per ulteriori informazioni sulla compilazione relativa al presente quadro è possibile consultare le istruzioni per la compilazione di Redditi 2026 [Fascicolo 3] - pdf (da pagina 40)
+
+Sezione I - Regime di vantaggio
+
+I soggetti che aderiscono al regime fiscale di vantaggio per l’imprenditoria giovanile e lavoratori in mobilità compilano la presente sezione. Il regime di vantaggio, si applica, per il periodo d’imposta in cui l’attività è iniziata e per i quattro successivi, esclusivamente alle persone fisiche che hanno intrapreso un’attività d’impresa, arte o professione successivamente al 31 dicembre 2007 e che già fruivano del medesimo regime alla data del 31 dicembre 2015. Il regime è applicabile anche oltre il quarto periodo di imposta successivo a quello di inizio dell’attività ma non oltre il periodo di imposta di compimento del trentacinquesimo anno di età. Pertanto la presente sezione non può essere compilata dai contribuenti nati prima del 1° gennaio 1990. Possono accedere al regime fiscale di vantaggio per l’imprenditoria giovanile e lavoratori in mobilità le persone fisiche esercenti attività di impresa, arti o professioni che, al contempo:
+
+[...]
+
+- Fonte: Istruzioni per la compilazione Redditi 2026 [Fascicolo 3]
+
+Per ulteriori informazioni sulla compilazione relativa al presente quadro è possibile consultare le istruzioni per la compilazione di Redditi 2026 [Fascicolo 3] - pdf (da pagina 40)
+
+Sezione III - Regime forfetario
+
+La presente sezione deve essere utilizzata dai contribuenti esercenti attività d’impresa, arti e professioni che applicano il regime forfetario e che determinano il reddito ai sensi dell’art. 1, commi dal 54 a 89, della legge n.190 del 23 dicembre 2014 e successive modificazioni.
+
+[...]
+
+L’infedele indicazione, da parte dei contribuenti, dei requisiti e le condizioni di cui ai commi 54 e 57 e 65, comporta l’aumento delle sanzioni stabilite dal decreto legislativo 18 dicembre 1997, n. 471, in misura del 10 per cento, nei casi previsti dal comma 74 del citato articolo 1.
+
+[...]
+
+- Fonte: Istruzioni per la compilazione Redditi 2026 [Fascicolo 3]
+
+Per ulteriori informazioni sulla compilazione relativa al presente quadro è possibile consultare le istruzioni per la compilazione di Redditi 2026 [Fascicolo 3] - pdf (da pagina 43)
+
+Sezione IV – Determinazione dell’imposta dovuta
+
+Nel rigo LM40 (crediti d’imposta), vanno indicati, i crediti d’imposta che possono essere utilizzati in diminuzione dell’imposta sostitutiva dovuta.
+
+I predetti crediti d’imposta possono essere utilizzati fino a concorrenza dell’imposta sostitutiva indicata ai righi LM11 (attività in regime di vantaggio) e LM39 (attività in regime forfetario), ovvero, per i contribuenti che aderiscono al regime della tassa piatta incrementale, fino a concorrenza dell’imposta sostitutiva indicata nel rigo LM15.
+
+La parte dei crediti d’imposta del rigo LM40 non utilizzata nel presente quadro deve essere riportata negli appositi campi del quadro RN, seguendo le istruzioni fornite con riferimento a ciascun credito. Ad esempio, se nel rigo CR7 (credito d’imposta per il riacquisto della prima casa) è stato indicato un importo pari a 1.000 euro e nella colonna 1 del rigo LM40 è stato indicato un importo di 300 euro, deve essere riportato nella colonna 1 del rigo RN24 il credito non utilizzato pari a 700 euro.
+
+[...]
+
+I righi LM43 ed LM44 sono utilizzati dai contribuenti che compilano la sezione I del quadro (regime di vantaggio) e/o la sezione III (regime forfetario), per indicare le eventuali eccedenze d’imposta sostitutiva risultanti dalla precedente dichiarazione. I contribuenti che aderiscono alla tassa piatta incrementale (sez. II) e che nel 2022 fruivano del regime forfetario o del regime di vantaggio, devono invece indicare le eventuali eccedenze delle relative imposte sostitutive nel quadro RN, rigo RN36.
+
+[...]
+
+- Fonte: Istruzioni per la compilazione Redditi 2026 [Fascicolo 3]
+
+Per ulteriori informazioni sulla compilazione relativa al presente quadro è possibile consultare le istruzioni per la compilazione di Redditi 2026 [Fascicolo 3] - pdf (da pagina 47)
+
+Sezione V - Perdite non compensate
+
+Nel rigo LM50 vanno indicate le eventuali perdite formatesi nel regime di vantaggio non compensate. Tali perdite, ai sensi dell’art. 8, comma 3, del TUIR, richiamato dall’art. 1, comma 108, legge 24 dicembre 2007, n. 244, sono scomputate dal reddito conseguito nell’esercizio d’impresa, arte o professione dei periodi d’imposta successivi, ma non oltre il quinto, per l’intero importo che trova capienza in essi (Circolare 4 aprile 2016, n. 10/E).
+
+[...]
+
+- Fonte: Istruzioni per la compilazione Redditi 2026 [Fascicolo 3]
+
+Per ulteriori informazioni sulla compilazione relativa al presente quadro è possibile consultare le istruzioni per la compilazione di Redditi 2026 [Fascicolo 3] - pdf (da pagina 50)

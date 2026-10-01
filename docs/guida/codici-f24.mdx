@@ -1,0 +1,57 @@
+---
+title: Codici e causali F24
+---
+
+import { InpsCodes, OtherEntityCodes, RuleSetYears, SelfEmployedCodes, Source, StampDutyCodes, TreasuryCodes } from '@site/src/components/F24Codes';
+
+# Codici e causali F24
+
+> **In breve.** Ogni riga di un F24 ha un codice che dice all'Agenzia delle Entrate o all'INPS *cosa* stai pagando e *per quale anno*. Per il forfettario i codici sono pochi: quelli dell'imposta sostitutiva nella sezione Erario, quelli dei contributi nella sezione INPS e quelli del bollo sulle fatture elettroniche. OpenTax IT li compila da solo; questa pagina serve a capire cosa c'è scritto.
+
+Le tabelle sono costruite dai set di regole forniti con OpenTax IT, gli stessi usati per compilare gli F24: <RuleSetYears />. Su GitHub le tabelle non si vedono: aprile nel sito della documentazione. Il calcolo degli importi è spiegato in [Imposte, contributi e F24](imposte-e-f24.md), i termini nel [glossario](glossario.md).
+
+## Sezione Erario: imposta sostitutiva
+
+Nella sezione Erario ogni riga ha il codice tributo, la colonna "rateazione", l'anno di riferimento e l'importo.
+
+<TreasuryCodes />
+
+<Source refKey="taxCodes" />
+
+## Sezione INPS: contributi Gestione Separata
+
+
+Nella sezione INPS ogni riga ha il codice della sede INPS (quella della tua residenza, indicata nel profilo), la causale e il periodo a cui si riferisce il pagamento. Se paghi con il differimento di 30 giorni, per l'imposta la maggiorazione è compresa nell'importo della riga, per i contributi va sulla riga degli interessi.
+
+<InpsCodes />
+
+<Source refKey="inpsReasons" />
+<Source refKey="inpsReasons.table" />
+<Source refKey="inps.reducedRatePct" />
+
+## Sezione INPS: contributi Artigiani e Commercianti
+
+Per chi è iscritto alla gestione Artigiani o Commercianti le causali sono diverse: la prima lettera è **A** per gli artigiani e **C** per i commercianti. Ogni riga ha anche il **codice INPS** di 17 cifre, che l'INPS assegna a ogni rata e che si trova nel cassetto previdenziale ("Dati del mod. F24"): va inserito in OpenTax IT, nella pagina Imposte dell'anno.
+
+<SelfEmployedCodes />
+
+<Source refKey="inpsSelfEmployed.artisansReasons" />
+<Source refKey="inpsSelfEmployed.fixedInstallmentDates" />
+
+## Sezione altri enti previdenziali: casse professionali
+
+OpenTax IT non gestisce ancora le casse professionali (arriveranno una alla volta): questa tabella serve a capire i codici. Alcune casse professionali si pagano con l'F24, nella seconda parte della sezione "Altri enti previdenziali e assicurativi": codice dell'ente (uno solo per modello), causale e periodo, senza codice sede. Importi e scadenze li comunica la cassa; le altre casse (per esempio medici, geometri, veterinari) si pagano con pagoPA o altri canali. Codici e causali vengono dalle tabelle e dalle risoluzioni dell'Agenzia delle Entrate di ciascun ente.
+
+<OtherEntityCodes />
+
+## Imposta di bollo sulle fatture elettroniche
+
+Il bollo si paga dal portale Fatture e Corrispettivi oppure con un F24 telematico, con un codice tributo per ogni trimestre, nella sezione Erario e con l'anno nel campo "anno di riferimento" (risoluzione AdE 42/E/2019). Se gli importi sono piccoli si possono versare più trimestri insieme, ognuno con il suo codice: vedi [Scadenze](scadenze.md) e [Bollo sulle fatture elettroniche](imposte-e-f24.md#bollo-sulle-fatture-elettroniche-stamp-duty).
+
+<StampDutyCodes />
+
+<Source refKey="stampDuty" />
+
+## Crediti in compensazione
+
+I codici dei crediti che usi in compensazione (per esempio un credito della dichiarazione dei redditi) sono quelli indicati nella dichiarazione o nell'atto da cui nasce il credito: li inserisci tu nel registro dei crediti. Vedi [Crediti e compensazione](imposte-e-f24.md#crediti-e-compensazione-credits).

@@ -1,0 +1,30 @@
+# Dependency updates. Actions are pinned to commit SHAs (see ci.yml): Dependabot updates the SHA
+# and keeps the version comment in sync. npm updates are grouped by toolchain so that one PR covers
+# related packages: the workspace shares one lockfile, so separate PRs would conflict with each other.
+# Dependabot proposes released versions only (a pre-release is proposed only if one is already in use),
+# which matches the project rule of staying on stable releases.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: deps
+    groups:
+      nest:
+        patterns: ['@nestjs/*']
+      prisma:
+        patterns: ['prisma', '@prisma/*']
+      web:
+        patterns: ['next', 'react', 'react-dom', '@types/react', '@types/react-dom']
+      dev-tooling:
+        patterns: ['typescript', 'vitest', '@vitest/*', 'oxlint*', 'prettier', '@types/*']

@@ -1,0 +1,44 @@
+Causali ENPAP
+Codice
+
+Descrizione
+
+ECTR ENPAP - Contributi (Acconto/Saldo)
+ERPS
+
+ENPAP - Riscatto periodi di studio
+
+ENPAP - Riscatto anni di esercizio
+EAPR professionale precedenti la fondazione
+dell'Ente
+ESNZ ENPAP - Sanzioni
+EINT
+
+ENPAP - Interessi
+
+ERC2 ENPAP – regolarizzazione contributiva
+
+Tipo inizio periodo riferimento
+Formato AAAA >= 1996 e <= anno di
+riscossione
+Formato AAAA >= 1996 e <= anno di
+riscossione
+Formato AAAA >= 1996 e <= anno di
+riscossione
+Formato AAAA >= 1996 e <= anno di
+riscossione
+Formato AAAA >= 1996 e <= anno di
+riscossione
+Formato AAAA >= 1996 e <= anno di
+riscossione
+
+PAP
+Tipo fine periodo di riferimento
+Valorizzato a zero
+Valorizzato a zero
+Valorizzato a zero
+Valorizzato a zero
+Valorizzato a zero
+Valorizzato a zero
+
+

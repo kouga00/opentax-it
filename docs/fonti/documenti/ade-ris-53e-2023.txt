@@ -1,0 +1,45 @@
+RISOLUZIONE N. 53/E
+
+Divisione Servizi
+______________
+Direzione Centrale Servizi
+Istituzionali e di Riscossione
+
+Roma, 22 settembre 2023
+
+OGGETTO: EPPI - Ente di Previdenza dei Periti Industriali e dei Periti Industriali
+Laureati – riattivazione causale contributo per il versamento, tramite
+modello F24, dei contributi di spettanza dell’Ente
+
+Il decreto del Ministro dell’Economia e delle Finanze del 10 gennaio 2014, emanato
+di concerto con il Ministro del Lavoro e delle Politiche Sociali, ha stabilito che il sistema
+dei versamenti unitari e la compensazione previsti dall’articolo 17 del decreto legislativo 9
+luglio 1997, n. 241, si applicano, tra gli altri, anche all’Ente di Previdenza dei Periti
+Industriali e dei Periti Industriali Laureati (di seguito “EPPI”).
+Con convenzione stipulata tra l’Agenzia delle entrate e l’EPPI, è stato regolato il
+servizio di riscossione, mediante il modello F24, dei contributi previdenziali e assistenziali
+dovuti dagli iscritti al citato Ente.
+Con risoluzione n. 19/E del 17 febbraio 2015, è stata istituita, tra l’altro, la causale
+contributo “E068” denominata “EPPI - Saldo contributivo – art. 8, c. 1, del Regolamento di
+previdenza”, per il versamento delle somme di pertinenza tramite modello F24,
+successivamente soppressa, con risoluzione n. 52/E del 9 luglio 2018, a decorrere dal 18
+luglio 2018.
+A seguito della richiesta pervenuta dall’EPPI, con la presente risoluzione si dispone
+la riattivazione della suddetta causale contributo “E068”.
+Si rammenta che in sede di compilazione del modello F24, la causale in argomento è
+esposta nella sezione “Altri enti previdenziali e assicurativi” (secondo riquadro), nel campo
+“causale contributo”, in corrispondenza, esclusivamente, delle somme indicate nella
+colonna “importi a debito versati”, indicando:
+
+2
+
+- nel campo “codice ente”, il codice “0009”;
+- nel campo “codice sede”, nessun valore;
+- nel campo “codice posizione”, nessun valore;
+- nel campo “periodo di riferimento: da mm/aaaa a mm/aaaa”, il mese e l’anno nel
+quale si effettua il versamento, nel formato “MM/AAAA”.
+
+IL DIRETTORE CENTRALE
+Firmato digitalmente
+
+

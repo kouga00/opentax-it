@@ -1,0 +1,79 @@
+{
+  "revenueProjection": {
+    "label": "Come si calcola la proiezione",
+    "paragraphs": [
+      "Proiezione = incassato nell'anno + fatture emesse non ancora incassate + questa fattura. Serve solo per l'avviso: le soglie di legge valgono sugli incassi (principio di cassa, L. 190/2014 c. 54 e 71), quindi una fattura conta nell'anno in cui viene pagata.",
+      "Le note di credito non ancora rimborsate non vengono sottratte: la stima è per eccesso, cioè prudente."
+    ]
+  },
+  "exchangeRate": {
+    "paragraphs": [
+      "Il cliente è fatturato in {currency}. Gli importi in valuta si convertono con il cambio del giorno di effettuazione dell'operazione o, se non indicato in fattura, del giorno di emissione (art. 13 c. 4 DPR 633/72). Si può usare il cambio di riferimento della Banca centrale europea, pubblicato dalla Banca d'Italia nella forma \"1 EUR = X {currency}\". Il reddito invece si calcola con il cambio del giorno dell'incasso (art. 9 c. 2 TUIR), da indicare quando registri l'incasso."
+    ]
+  },
+  "professionalFundOnInvoice": {
+    "paragraphs": [
+      "Per legge il contributo si applica a \"tutti i corrispettivi rientranti nel volume annuale d'affari ai fini dell'IVA\" (per esempio L. 576/1980 art. 11 per Cassa Forense), ma alcune casse escludono certe fatture: Inarcassa, per esempio, quelle emesse ai sensi dell'art. 21 c. 6-bis DPR 633/72 (molti servizi a clienti esteri). Controlla il regolamento della tua cassa."
+    ]
+  },
+  "invoiceStatus.DRAFT": {
+    "label": "Bozza",
+    "paragraphs": [
+      "Non ha ancora un numero: la puoi modificare o eliminare. Per lo SDI e per il fisco non esiste."
+    ]
+  },
+  "invoiceStatus.ISSUED": {
+    "label": "Da inviare",
+    "paragraphs": [
+      "Ha il numero e l'XML è pronto, ma non è ancora stata inviata allo SDI. Diventa una fattura emessa solo quando lo SDI la consegna al cliente o gliela mette a disposizione."
+    ]
+  },
+  "invoiceStatus.SENT": {
+    "label": "Inviata allo SDI",
+    "paragraphs": [
+      "Inviata allo SDI, in attesa dell'esito: consegna, messa a disposizione o scarto. Le ricevute arrivano nella casella PEC; se è scartata, la ricevuta di scarto arriva \"entro 5 giorni dalla corretta ricezione del file\" (Specifiche tecniche FatturaPA 1.9.1, §1.6)."
+    ]
+  },
+  "invoiceStatus.DELIVERED": {
+    "label": "Consegnata",
+    "paragraphs": [
+      "Lo SDI l'ha consegnata al cliente e ha mandato la ricevuta di consegna: la fattura è emessa. Il bollo conta nel trimestre della data di consegna."
+    ]
+  },
+  "invoiceStatus.NOT_DELIVERED": {
+    "label": "Messa a disposizione",
+    "paragraphs": [
+      "Lo SDI non ha trovato un canale per consegnarla (per esempio un cliente privato senza PEC né codice destinatario): la \"rende disponibile [...] nell'area riservata del cessionario/committente\" e manda una ricevuta di impossibilità di recapito (Specifiche tecniche FatturaPA 1.9.1, §1.5). La fattura è emessa; conviene comunque mandare al cliente la copia di cortesia in PDF."
+    ]
+  },
+  "invoiceStatus.REJECTED": {
+    "label": "Scartata",
+    "paragraphs": [
+      "Lo SDI l'ha scartata: le fatture del file scartato \"si considerano non emesse\" (Specifiche tecniche FatturaPA 1.9.1, §1.6). Correggila e reinviala con lo stesso numero e la stessa data, oppure riemettila con un nuovo numero: le azioni sono nella riga."
+    ]
+  },
+  "invoiceStatus.CANCELLED": {
+    "label": "Annullata",
+    "paragraphs": [
+      "Documento annullato: non conta come fattura emessa."
+    ]
+  },
+  "invoiceStatus.imported": {
+    "label": "Importata",
+    "paragraphs": [
+      "Emessa e inviata allo SDI con un altro programma e caricata qui dal suo XML: conta come emessa. Se importi anche le ricevute SDI, l'app sa quando è stata consegnata."
+    ]
+  },
+  "invoiceStatus.correction": {
+    "label": "Da correggere",
+    "paragraphs": [
+      "Bozza riaperta dopo uno scarto: correggila e reinviala con lo stesso numero e la stessa data della fattura scartata."
+    ]
+  },
+  "invoiceStatus.replaced": {
+    "label": "Scartata e sostituita",
+    "paragraphs": [
+      "Scartata dallo SDI e sostituita da una nuova fattura con un altro numero: non serve fare altro."
+    ]
+  }
+}

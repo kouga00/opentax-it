@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build
+dist/
+build/
+.turbo/
+coverage/
+
+# env & secrets
+.env
+.env.*
+!.env.example
+
+# prisma
+apps/api/prisma/*.db
+
+# editor / os
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# local notes (non pubblicare)
+conversazione.md
+notes/
+*.tsbuildinfo
+apps/api/storage/
+
+# agent artifacts
+.agents/
+.claude/
+.windsurf/
+skills-lock.json

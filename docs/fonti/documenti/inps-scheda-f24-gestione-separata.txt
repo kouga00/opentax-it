@@ -1,0 +1,103 @@
+Dettaglio
+
+Pubblicazione:
+3 aprile 2017
+
+Ultimo aggiornamento:
+8 luglio 2025
+
+I professionisti sono tenuti al versamento della contribuzione dovuta annualmente tramite il modello F24.
+
+Termini di pagamento
+
+I versamenti degli acconti e del saldo devono essere effettuati entro le scadenze previste per il pagamento delle imposte dirette:
+
+entro il 30 giugno va saldato il pagamento dell’anno di imposta precedente e va versato il primo acconto dell’anno in corso;
+
+entro il 1° dicembre, in quanto il 30 novembre 2025 cade di domenica, va versato il secondo acconto dell’anno in corso.
+
+Leggi di più
+
+Come per l’IRPEF, i versamenti del saldo e del primo acconto possono essere differiti di 30 giorni (maggiorando le somme da versare dello 0,4% a titolo di interesse) e possono essere rateizzati (aggiungendo una “R” alla casuale contributi correnti P10 o PXX).
+
+Sia in caso di differimento che di rateizzazione, la maggiorazione per interessi deve essere esposta nel modello di pagamento separatamente dal contributo, utilizzando la causale contributo "DPPI" e compilando nella relativa riga di F24 tutti i campi previsti per il versamento dei contributi a cui gli interessi si riferiscono.
+
+Leggi meno
+
+Compilazione della sezione INPS
+
+La sezione INPS deve essere così compilata:
+
+codice sede, in base alla residenza del professionista;
+
+causale contributo, come indicato nel paragrafo successivo;
+
+matricola INPS/codice INPS/filiale azienda, nessun dato;
+
+periodo di riferimento "da", inizio periodo cui si riferiscono i contributi (esempio 012025);
+
+periodo di riferimento "a", fine periodo cui si riferiscono i contributi (esempio 122025);
+
+importi a debito versati, riferiti alle somme dovute a titolo di contributi o interessi che si versano;
+
+importi a credito compensati, risultante dal modello Redditi PF.
+
+Il periodo di riferimento può essere anche inferiore all'anno.
+
+Causali di versamento
+
+Contributi correnti
+
+Descrizione causale
+
+Causale fino al 31 dicembre 2000
+
+Causale dal 1° gennaio 2001
+
+Contributo per saldo o acconto a debito del professionista (o a credito se posto in compensazione), così come risultante dal quadro RR del modello Redditi PF.
+
+La causale va utilizzata per i versamenti in unica soluzione dei professionisti iscritti alla Gestione Separata non titolari di pensione e non assicurati presso altre forme di previdenza obbligatorie.
+
+DPP
+
+PXX
+
+Contributo per saldo o acconto a debito del professionista (o a credito se posto in compensazione), così come risultante dal quadro RR del modello Redditi PF.
+
+La causale va utilizzata per i versamenti in unica soluzione dei professionisti iscritti alla Gestione Separata titolari di pensione e/o di assicurati presso altre forme di previdenza obbligatorie.
+
+P10
+
+Interesse dello 0,4% per eventuale differimento del versamento del saldo e del primo acconto.
+
+DPPI
+
+DPPI
+
+Contributi correnti rateizzati
+
+Descrizione causale
+
+Causale fino al 31 dicembre 2000
+
+Causale dal 1° gennaio 2001
+
+Contributo per saldo o acconto a debito del professionista, così come risultante dal quadro RR del modello Redditi PF.
+
+La causale va utilizzata per i versamenti rateali dei professionisti iscritti alla Gestione Separata non titolari di pensione e non assicurati presso altre forme di previdenza obbligatorie.
+
+DPPR
+
+PXXR
+
+Contributo per saldo o acconto a debito del professionista, così come risultante dal quadro RR del modello Redditi PF.
+
+La causale va utilizzata per i versamenti rateali dei professionisti iscritti alla Gestione Separata titolari di pensione e/o di assicurati presso altre forme di previdenza obbligatorie.
+
+P10R
+
+Interessi di rateizzazione
+
+DPPI
+
+DPPI

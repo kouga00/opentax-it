@@ -1,0 +1,726 @@
+Febbraio 2022
+
+Intrastat
+
+Argomenti
+• Il quadro giuridico di riferimento
+• La dichiarazione Intrastat
+
+• I soggetti coinvolti
+• Richieste da presentare negli uffici territoriali
+
+• Il software Intr@web per la compilazione
+• I controlli nella dichiarazione Intrastat
+• Gli adempimenti degli operatori economici
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Cenni storici …
+
+1992: Trattato di Maastricht: il 1 gennaio 1993 nasce l’Unione Europea (Italia, Francia, Spagna, Portogallo,
+Belgio, Paesi Bassi, Grecia, Lussemburgo, Germania, Danimarca, Regno Unito, Irlanda)
+1995: entrano in UE l’Austria, la Finlandia e la Svezia
+2000-2002: adozione dell’EURO da parte di alcuni Stati Membri
+2004: entrano in UE 10 nuovi paesi (Polonia, Repubblica Ceca, Repubblica Slovacca, Ungheria, Slovenia,
+Lettonia, Estonia, Lituania, Malta, Cipro)
+2007: entrano in UE Romania e Bulgaria
+2013: entra in UE la Croazia
+2021: Brexit esce dall’ Unione Doganale UE il Regno Unito (tranne Irlanda del Nord)
+2023: adozione dell’EURO da parte della Croazia
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Cenni storici …
+
+Nei territori dell’Unione è prevista la libera circolazione delle
+merci, delle persone, dei servizi e dei capitali e la soppressione
+delle frontiere fra i paesi membri che rimangono soltanto negli
+scambi di merci con i paesi terzi.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Principi generali
+Gli scambi di beni fra soggetti appartenenti a due diversi Stati membri sono considerate
+“operazioni intracomunitarie” se sono presenti i seguenti tre requisiti:
+
+soggettivo: ciascun partner comunitario possiede un codice di identificazione IVA (valido nel
+sistema VIES);
+oggettivo: l’operazione è a titolo oneroso (*);
+
+territoriale: i beni vengono trasportati o spediti nel territorio di un altro Stato membro.
+
+(*) ad esclusione delle operazioni di trasferimento merci sotto il regime di «call off stock» e altre modalità di trasferimento di interesse
+statistico
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Le operazioni intracomunitarie di beni
+Acquisto intracomunitario: l’operazione è soggetta ad IVA nello Stato di destinazione del bene;
+l’acquirente riceve la fattura senza addebito dell’IVA e liquida l’imposta, con l’aliquota vigente,
+contabilizzandola (art. 38 Legge 427/93);
+
+Cessione intracomunitaria: l’operazione non è soggetta ad IVA nello Stato di origine del bene; il
+cedente emette la fattura senza addebito di IVA (art. 41 Legge 427/93);
+Invio/trasferimento di beni in regime di call off stock
+Queste operazioni vanno riepilogate negli elenchi INTRA
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Il quadro giuridico di riferimento
+
+Il Sistema Intrastat è l’insieme delle procedure volte a garantire l’assolvimento di due funzioni:
+− la riscossione dei tributi
+− il rilevamento statistico delle operazioni intracomunitarie.
+A questo fine le Autorità degli Stati membri hanno adottato, in recepimento di apposite direttive
+unionali, norme volte a disciplinare gli aspetti fiscali e statistici connessi con tali operazioni.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+1/3
+
+Il quadro giuridico di riferimento
+Ai fini degli adempimenti IVA:
+−
+
+DL 30.08.1993 n. 331, convertito dalla Legge n. 427 del 29 ottobre 1993
+
+−
+
+Principali atti normativi contenenti le regole per la compilazione dei riepiloghi Intrastat:
+
+−
+
+Decreto 21 ottobre 1992: decreto che istituisce il sistema Intrastat italiano
+
+−
+
+Decreto 27 ottobre 2000: decreto che introduce l’euro nel sistema Intrastat
+
+−
+
+Decreti di semplificazione (DPR 7 gennaio 1999; decreto 12 dicembre 2002; decreto 3 agosto 2005, decreto 20
+dicembre 2006)
+
+−
+
+Determinazione n° 22778 del 22 febbraio 2010 (Introduzione dei servizi)
+
+−
+
+Decreto Legislativo 21 novembre 2014, n.175. Semplificazione fiscale e dichiarazione dei redditi precompilata. Art.23.
+Semplificazione elenchi Intrastat servizi Determinazione n. 18978 del 19 febbraio 2015
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+2/3
+
+Il quadro giuridico di riferimento
+
+3/3
+
+− Disposizione congiunta Entrate Dogane n. 194409 del 25.09.2017 - Misure di semplificazione degli obblighi
+comunicativi dei contribuenti in relazione agli elenchi riepilogativi delle operazioni intracomunitarie –
+− Determinazione n. 13799 del 8 febbraio 2018 - Semplificazione elenchi Intrastat - pdf
+− Comunicazione n. 18558 del 20/02/2018 - Semplificazione elenchi INTRA presentati per finalità statistiche ISTRUZIONI - pdf - pubblicato il 21/02/2018
+− Determinazione n. 493869 del 23 dicembre 2021 - Nuovi modelli degli elenchi riepilogativi delle cessioni e degli
+acquisti intracomunitari di beni e delle prestazioni di servizio rese e ricevute in ambito comunitario (Introduzione
+della sezione per le call off stock Consultare il sito web istituzionale dell’Agenzia delle Entrate)
+La normativa completa è disponibile sul sito ADM nella sezione Intrastat -> Riferimenti normativi Intrastat
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+I Paesi dell’Unione Europea
+CODICE ISO
+
+PAESE UE
+
+N. CARATTERI CODICE IVA
+
+EURO
+
+AT
+
+AUSTRIA
+
+9
+
+SI
+
+BE
+
+BELGIO
+
+9
+
+SI
+
+BG
+
+BULGARIA
+
+9 ovvero 10
+
+NO
+
+CY
+
+CIPRO
+
+9
+
+SI
+
+DK
+
+DANIMARCA
+
+8
+
+NO
+
+EE
+
+ESTONIA
+
+9
+
+SI
+
+DE
+
+GERMANIA
+
+9
+
+SI
+
+EL
+
+GRECIA
+
+9
+
+SI
+
+FI
+
+FINLANDIA
+
+8
+
+SI
+
+FR
+
+FRANCIA
+
+11
+
+SI
+
+GB*
+
+GRAN BRETAGNA
+
+5 ovvero 9 ovvero 12
+
+NO
+
+HR
+
+CROAZIA
+
+11
+
+SI
+
+IE
+
+IRLANDA
+
+8
+
+SI
+
+IT
+
+ITALIA
+
+11
+
+SI
+
+LV
+
+LETTONIA
+
+9 ovvero 11
+
+SI
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+* Sino al 31/12/2020
+
+I Paesi dell’Unione Europea
+
+* dal 01/01/2021 solo per i beni
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Territorio UE ed extra UE
+Confini del territorio dello Stato Italiano: si intende il territorio della Repubblica italiana, con esclusione dei comuni di
+Livigno e di Campione d’Italia e delle acque italiane del lago di Lugano comprese nel tratto tra Ponte Tresa e Porto Ceresio
+(art. 7, primo comma, lettera a) del DPR 633/72).
+Confini del territorio UE: vengono definiti i confini del territorio stabiliti dal Trattato istitutivo dell’Unione Europea e
+successive modifiche. Tale territorio risulta ora composto da 27 Stati (art. 7, primo comma, lettera b) del DPR 633/72).
+Territori esclusi o extra-doganali: Livigno, Campione d’Italia, acque italiane del lago di Lugano comprese nel tratto Ponte
+Tresa e Porto Ceresio, il Monte Athos, l’isola di Helgoland, il territorio di Busingen, i dipartimenti d’oltremare (Guadalupa,
+Guyana francese, Martinica, Reunion), le isole Canarie, Ceuta, Melilla, isole del Canale, la zona turca di Cipro, l’Isola Aland.
+Territori inclusi o UE: sono territori UE il Principato di Monaco, Akrotiri, Dhekelia (art. 7, primo comma, lettera c) del
+DPR 633/72
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Prestazioni di servizio
+
+Dal 1° gennaio 2010 assumono rilevanza intrastat solo le prestazioni di servizio generiche disciplinate dall’articolo 7 ter
+DPR 633/72 effettuate tra soggetti passivi di imposta (regola del B2B: soggetto passivo di imposta che fattura la prestazione
+a soggetto passivo di imposta):
+CICLO ATTIVO: fatture emesse art. 7 ter DPR 633/72 per le quali il committente estero dichiara di assolvere l’iva con il
+reverse charge (vedi circolare 43/E dell’agosto 2010). Dal 01.01.2011 le prestazioni inerenti ai servizi relativi ad attività
+culturali, artistiche, sportive, scientifiche, educative, ricreative e simili, ivi comprese fiere ed esposizioni, nonché i servizi
+degli organizzatori di dette attività e i servizi accessori (disciplinate nell’articolo 7 quinquies) rientrano nella regola generale
+del 7 ter e come tali rilevanti ai fini intrastat.
+CICLO PASSIVO: integrazioni con iva italiana esposta (dal 01.01.2013 tutte le prestazioni di servizio rilevanti ai fini iva in
+Italia dovranno assolvere l’iva per integrazione). Un elenco, non esaustivo delle principali prestazioni di servizio disciplinate
+dall’articolo 7 ter del DPR 633/72 è contenuto nella circolare 58/E del 31.12.2009.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Prestazioni di servizio escluse
+
+Sicuramente escluse:
+1) Prestazioni di servizio disciplinate dagli artt. 7 quater e 7 quinquies (prestazioni di servizio fatturate tra soggetti passivi di
+imposta in deroga al principio generale esposto nell’articolo 7 ter).
+Dal 01.01.11 le prestazioni di servizi relativi ad attività culturali, artistiche, sportive, scientifiche, educative, ricreative e simili, ivi comprese fiere
+ed esposizioni, nonché i servizi degli organizzatori di dette attività ed i servizi accessori (disciplinate nell’articolo 7 quinquies) rientrano nella regola
+generale del 7 ter e come tali rilevanti ai fini intrastat. Essi, quindi, a partire dal 1 gennaio 2011 sono rilevanti in Italia (rientrano quindi nella
+sfera applicativa dell’IVA) se il committente (cliente), soggetto passivo, è ivi stabilito (domiciliato o residente).
+2) Per i servizi di accesso alle manifestazioni (biglietteria) e relativi servizi accessori, invece, la tassazione sarà sempre
+collegata al luogo di esecuzione della prestazione, a prescindere dallo status del committente (art. 7 quinquies)
+3) Le prestazioni nei confronti di privati
+4) Le prestazioni passive auto fatturate come non imponibili iva o esenti
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+I soggetti coinvolti
+
+
+
+Soggetto Obbligato
+
+
+
+Soggetto Delegato
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Soggetti obbligati
+
+Sono tenuti alla presentazione degli elenchi riepilogativi delle cessioni e degli acquisti intracomunitari i soggetti passivi
+d’imposta sul valore aggiunto che effettuano scambi di beni e/o servizi comunitari e/o trasferimenti di beni in regime di
+call off stock, con i soggetti passivi d’imposta sul valore aggiunto degli altri Stati membri.
+Sono identificati da un codice di identificazione IVA, costituito dal numero di partita IVA preceduto dal codice dello Stato
+(codice ISO) composto da due lettere.
+Sono inoltre tenuti alla presentazione degli elenchi riepilogativi gli enti, associazioni ed altre organizzazioni, non soggetti
+passivi d’imposta, che effettuano acquisti intracomunitari soggetti all’imposta sul valore aggiunto
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Soggetti delegati
+Gli elenchi possono essere presentati e sottoscritti:
+− Direttamente dall’interessato
+− Da un suo delegato
+Articolo 2 (Soggetti delegati) Determinazione 22278 febbraio 2010
+«I soggetti obbligati alla presentazione degli elenchi riepilogativi delle operazioni intracomunitarie, individuati dall’articolo 1 del decreto del
+Ministro dell’Economia e delle Finanze 22 febbraio 2010, possono delegare, mediante apposita procura, terzi soggetti alla sottoscrizione degli
+elenchi medesimi, ferma restando la loro responsabilità in materia. La delega è conferita dal soggetto obbligato in forma scritta, con autenticazione
+della sottoscrizione effettuata con le modalità di cui all’articolo 38 del D.P.R. 28 dicembre 2000, n. 445, e deve essere esibita a richiesta degli
+organi di controllo»
+
+La delega è conferita dal soggetto obbligato in forma scritta, con autenticazione della sottoscrizione effettuata con le
+modalità di cui all’articolo 38 del D.P.R. 28 dicembre 2000, n. 445, e deve essere esibita a richiesta degli organi di controllo
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Richieste da presentare negli uffici territoriali
+
+Modifica/Annullamento delle dichiarazioni intrastat a seguito di:
+ Verbali dei controlli effettuati dalle autorità preposte
+ Richieste della parte
+Iter per l’annullamento delle dichiarazioni:
+ Richiesta della parte
+ Analisi della richiesta
+ Effettuazione dell’operazione
+ Comunicazione alla parte
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Il software Intr@web per la compilazione
+I soggetti con partita iva comunitaria operanti all’interno della Unione Europea, o i loro intermediari, possono compilare il
+relativo modello intrastat attraverso il software intr@web fornito dall’Agenzia delle Dogane e dei Monopoli.
+Il pacchetto software intr@web fornisce agli operatori economici una serie di servizi per la gestione degli elenchi
+riepilogativi delle cessioni e degli acquisti intracomunitari di beni e dei servizi resi o ricevuti in ambito comunitario.
+Il software è formato dai seguenti moduli:
+• modulo compilazione che consente la compilazione degli elenchi INTRA in maniera semplice ed efficace mediante
+funzionalità guidate per l’acquisizione dei dati sia manuale che automatica da flussi esterni;
+• modulo controllo che consente di effettuare il controllo formale degli elenchi Intrastat su file prodotti anche con altri
+software;
+• modulo telematico che fornisce all’operatore economico una serie di funzionalità che gli consentono in maniera
+semplice e guidata di effettuare l’invio telematico (Servizio Telematico Doganale e/o Entratel) degli elenchi prodotti
+anche con altri software. L’invio telematico dei dati tra l’Agenzia delle Dogane e dei Monopoli e l’operatore economico
+avviene mediante il collegamento dei sistemi informatici di quest’ultimo con il sistema informativo doganale.
+L’Agenzia delle Dogane e dei Monopoli mette poi a disposizione il portale per la compilazione e l’invio del modello
+intrastat direttamente online attraverso l’apposito servizio intr@web online.
+Infine per ciò che concerne il solo invio, gli intermediari abilitati hanno la possibilità di inviare il file degli elenchi intrastat
+attraverso il portale ENTRATEL dell’ Agenzia delle Entrate.
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+I controlli nella dichiarazione Intrastat
+
+Controllo partite iva comunitarie
+E’ possibile controllare la validità di una partita iva comunitaria verificando che il codice è formalmente valido ed attribuito
+ad un soggetto passivo d’imposta.
+Si può accedere al servizio V.I.E.S. (VAT Information Exchange System) fornito dall’Unione Europea direttamente dal
+seguente link:
+
+https://ec.europa.eu/taxation_customs/vies/?locale=it
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+VIES
+Art. 22 D. Lgs. 175/2014 DECRETO SEMPLIFICAZIONI
+ Iscrizione dell’archivio con efficacia immediata, senza la necessità di attendere i 30 giorni di «silenzio-assenso»
+
+ L’Agenzia delle Entrate, previo invio di apposita comunicazione all’interessato, procede all’esclusione dal VIES della
+partite IVA che non abbiano presentato alcun elenco riepilogativo Intrastat per 4 trimestri consecutivi. Il contribuente
+interessato a conservare l’iscrizione potrà rivolgersi all’Ufficio competente per le attività di controllo ai fini dell’IVA,
+fornendo la documentazione di tutte le operazioni intracomunitarie effettuate nel predetto periodo dei quattro trimestri di
+riferimento previsto dalla norma, ovvero fornire adeguati elementi circa la operazioni intracomunitarie in corso o da
+effettuare.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Gli adempimenti degli operatori economici
+
+Invio telematico delle dichiarazioni INTRA attraverso :
+
+ Agenzia delle Entrate - ENTRATEL,
+ Agenzia delle Dogane e dei Monopoli Servizio Telematico
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Nuova periodicità degli Elenchi Acquisti
+
+Mensili:
+− soggetti che hanno realizzato, per almeno uno dei quattro trimestri precedenti, acquisti di beni per un ammontare
+totale trimestrale uguale o superiore a 350.000 euro.
+− soggetti che hanno realizzato, per almeno uno dei quattro trimestri precedenti, acquisti di servizi per un ammontare
+totale trimestrale uguale o superiore a 100.000 euro.
+
+Le dichiarazioni Trimestrali per gli acquisti di beni e/o per i servizi ricevuti non sono più richiesti per periodi decorrenti
+dal 1° gennaio 2022
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Distinzione presentazione elenchi acquisti
+
+N.B. Le soglie operano in maniera indipendente: il superamento della soglia per una singola categoria non incide sulla
+periodicità relativa alle altre operazioni es.:
+ acquisti intracomunitari di beni pari a 500.000 euro in un trimestre
+ acquisti intracomunitari di servizi pari a 10.000 euro in un trimestre
+Obbligo presentazione mensile elenco riepilogativo dei soli acquisti intracomunitari di beni, e non quello dei servizi
+intracomunitari ricevuti
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Cambio di periodicità
+
+I soggetti che presentano un elenco riepilogativo INTRA 1 con periodicità trimestrale e che, nel corso di un trimestre,
+superano la soglia presentano l’elenco riepilogativo con periodicità mensile a partire dal mese successivo in cui tale soglia è
+superata.
+In tal caso sono presentati gli elenchi riepilogativi, appositamente contrassegnati, per i periodi mensili già trascorsi.
+I soggetti che presentano l’elenco riepilogativo con periodicità trimestrale fanno riferimento ai quattro trimestri che
+compongono l’anno solare.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Scadenza di presentazione
+
+Calendario del contribuente
+Elenchi mensili: entro il 25 (posticipato se sabato domenica e festivi) del mese successivo a quello di riferimento (es. mensile
+di gennaio 2023 entro il 27 febbraio 2023)
+Elenchi Trimestrali per le cessioni di beni e/o per i servizi resi e/o pel le operazioni «call off stock»: entro il 25 del mese
+successivo al trimestre di riferimento (es. 1° trimestre 2023 entro il 26 aprile 2023)
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Compilazione elenco cessioni di beni trimestrale
+
+Ammontare trimestrale < 50.000 euro in ciascuno dei 4 trimestri precedenti
+Intra 1-bis colonne obbligatorie
+
+
+
+
+
+
+Numero progressivo riga;
+Codice ISO dello Stato membro dell’acquirente;
+Codice identificativo dell’acquirente;
+Valore in euro della cessione;
+Natura della transazione A letterale (solo nel caso di operazioni triangolari).
+
+; Valore in euro della cessione;
+Natura della transazione letterale (solo nel caso di operazioni triangolari).
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Compilazione elenco cessioni di beni mensile
+
+Ammontare trimestrale < 100.000 euro in ciascuno dei 4 trimestri precedenti
+Intra 1-bis colonne obbligatorie
+ Numero progressivo riga;
+ Codice ISO dello Stato membro dell’acquirente;
+ Codice identificativo dell’acquirente;
+ Valore in euro della cessione;
+ Natura della transazione A letterale (solo nel caso di operazioni triangolari).
+TUTTE LE ALTRE COLONNE SONO FACOLTATIVE
+
+Natura della transazione letterale (solo nel caso di operazioni triangolari).
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Compilazione elenco cessioni beni mensili
+Ammontare trimestrale >= 100.000 euro in almeno uno dei 4 trimestri precedenti
+
+Intra 1-bis colonne obbligatorie:
+ Numero progressivo riga;
+ Codice ISO dello Stato membro dell’acquirente;
+ Codice identificativo dell’acquirente;
+ Valore in euro della cessione;
+ Natura della transazione A
+ Codice NC della merce;
+ Peso in Kg al netto degli imballaggi (se richiesta l’unità supplementare, è facoltativa per operatori che movimento meno
+di 20.000.000 di euro annui);
+ Quantità nell’unità di misura supplementare (obbligatoria solo se prevista);
+ Codice ISO Paese di destinazione;
+ Provincia di origine o di spedizione;
+ Paese di Origine.
+Le seguenti colonne sono obbligatorie solo in caso di ammontare spedizioni superiori ai 20.000.000 di euro annui
+ Natura delle transazione B
+ Valore statistico in euro;
+ Condizioni di consegna;
+ Modalità di trasporto
+
+NB: L’indicazione del valore statistico rimane obbligatoria nel caso di operazioni di perfezionamento.
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Compilazione elenco acquisti beni trimestrale – soppresso
+Ammontare trimestrale < 350.000 euro in ciascuno dei 4 trimestri precedenti
+Per periodi di riferimento decorrenti dal 1° gennaio 2022 non è più richiesta la compilazione degli elenchi INTRA 2 trimestrali
+; Valore in euro della cessione;
+
+Natura della transazione letterale (solo nel caso di operazioni triangolari).
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Compilazione elenco acquisti servizi trimestrale – soppresso
+Ammontare trimestrale < 100.000 euro in ciascuno dei 4 trimestri precedenti
+Per periodi di riferimento decorrenti dal 1° gennaio 2022 non è più richiesta la compilazione degli elenchi INTRA 2 trimestrali
+; Valore in euro della cessione;
+
+Natura della transazione letterale (solo nel caso di operazioni triangolari).
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Compilazione elenco acquisti beni - dati statistici
+Ammontare trimestrale >= 350.000 euro in almeno uno dei 4 trimestri precedenti
+Intra 2-bis colonne:
+ Numero progressivo riga;
+ Codice ISO dello Stato membro del fornitore (facoltativo);
+ Codice identificativo del fornitore (facoltativo);
+ Valore in euro dell’acquisto;
+ Valore dell’acquisto nella valuta del fornitore (facoltativo e solo se il fornitore è di un paese non euro).
+ Natura della transazione A;
+ Codice NC della merce;
+ Peso in Kg al netto degli imballaggi (se richiesta l’unità supplementare, è facoltativa per operatori che movimento meno di
+20.000.000 di euro annui);
+ Quantità nell’unità di misura supplementare (es. litri);
+ Codice ISO del Paese di provenienza;
+ Codice ISO del Paese di origine;
+ Provincia di destinazione
+Le seguenti colonne sono obbligatorie solo in caso di ammontare arrivi superiori ai 20.000.000 di euro annui
+o Natura della transazione B
+o Valore statistico in euro;
+o Condizioni di consegna;
+o Modalità di trasporto;
+NB: L’indicazione del valore statistico rimane obbligatoria nel caso di operazioni di perfezionamento
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Le soglie in breve …
+
+Acquisto di beni
+
+Acquisto di servizi
+
+Cessione di beni
+
+Cessione di servizi
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+ammontare < 350.000 euro in tutti e 4 i trim prec.:
+Nessun adempimento
+
+ammontare >= 350.000 euro in almeno uno dei 4
+trim prec.:
+Modello mensile
+
+ammontare < 100.000 euro in tutti e 4 i trim prec.:
+Nessun adempimento
+
+ammontare >= 100.000 euro in almeno uno dei 4
+trim prec.:
+Modello mensile con minor dettaglio Codice servizio
+
+ammontare < 50.000 euro in tutti e 4 i trim prec:
+Modello trimestrale
+
+ammontare >=50.000 euro in almeno uno dei 4 trim
+prec.:
+Modello mensile (per gli attributi solo statistici, soglia
+di compilazione obbligatoria >= 100.000 euro)
+
+ammontare < 50.000 euro in tutti e 4 i trim prec:
+Modello Trimestrale con minor dettaglio Codice
+servizio
+
+ammontare >=50.000 euro in almeno uno dei 4 trim
+prec.:
+Modello mensile con minor dettaglio Codice servizio
+
+Semplificazioni per gli elenchi riepilogativi relativi alle cessioni e agli
+acquisti intracomunitari di beni (Modelli INTRA 1bis e INTRA 2bis)
+(Art. 3 Determinazione n. 493869 del 23 dicembre 2021)
+Per le spedizioni di valore inferiore a euro 1.000, è possibile compilare gli elenchi
+riepilogativi relativi alle cessioni di beni senza disaggregazione della nomenclatura
+combinata, utilizzando il codice unico 99500000. Tale semplificazione si applica anche
+agli elenchi riepilogativi relativi agli acquisti intracomunitari.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Semplificazioni per gli elenchi riepilogativi relativi agli acquisti
+intracomunitari di servizi (Modello INTRA 2quater)
+(Art. 4 Determinazione n. 493869 del 23 dicembre 2021)
+Le informazioni relative al codice IVA del fornitore, all’ammontare delle operazioni in
+valuta, alla modalità di erogazione, alla modalità di incasso e al Paese di pagamento non
+sono più rilevate negli elenchi riepilogativi relativi agli acquisti intracomunitari di servizi.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Variazioni a periodi precedenti
+Vanno effettuate compilando i modelli Intra 1-ter o Intra 2-ter (sezione 2):
+− Tale sezione va compilata esclusivamente per comunicare le rettifiche alle sezioni 1 di elenchi riferiti a periodi
+precedenti (già presentati) dovute a variazioni nell'ammontare delle operazioni riferite ad uno stesso
+acquirente/fornitore intervenute successivamente alla presentazione degli elenchi, ovvero dovute ad errori od
+omissioni non già rilevati dagli uffici doganali o dagli altri organi dell’Amministrazione finanziaria, nel qual caso, per le
+necessarie rettifiche, si dovrà procedere secondo quanto indicato o stabilito nei relativi verbali di accertamento;
+− Tale sezione non può essere utilizzata per integrare la sezione 1 di elenchi riferiti a periodi precedenti con l’indicazione
+di operazioni riferite ad acquirenti diversi da quelli già indicati. In tale evenienza deve essere compilato un nuovo
+elenco riepilogativo delle cessioni di beni indicando le operazioni nella sezione 1;
+− Le rettifiche relative agli elenchi con periodo di riferimento precedente a gennaio 2018 vanno presentate con le
+modalità vigenti a tale data.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Modalità di rettifica - 1
+
+In caso di rettifica dei seguenti dati:
+
+
+
+
+
+partita iva partner;
+nomenclatura combinata;
+natura della transazione A
+si compilano due righe distinte di sezione 2:
+o la prima, con segno “-”, annulla l’operazione da rettificare;
+o la seconda, con segno “+”, reca i dati corretti.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Modalità di rettifica - 2
+
+In caso di rettifica dei seguenti dati:
+
+
+
+
+ammontare delle operazioni;
+ammontare in valuta;
+valore statistico.
+
+È sufficiente indicare in una sola riga di sezione 2 le variazioni in aumento o in diminuzione.
+Vanno effettuate con una comunicazione scritta alla dogana le variazioni dei dati statistici non inclusi nel modello
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Modalità di rettifica - 3
+
+Al contribuente è consentito operare una “rettifica globale” delle variazioni, in aumento o in diminuzione, concernenti più
+periodi di riferimento, anche compresi in più anni solari, relativi agli acquisti o alle cessioni, a condizione che le operazioni di
+riferimento:
+ siano state effettuate con lo stesso cliente o fornitore;
+ abbiano avuto ad oggetto una sola tipologia di merce;
+ avessero la stessa natura.
+
+Il periodo cui riferire la rettifica è l’ultimo (o gli ultimi nel caso l’ultimo abbia un importo inferiore a quello della rettifica) tra
+quelli nei quali sono state riepilogate le operazioni da rettificare.
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Modello quinquies rettifiche operazioni di servizio
+Il modello quinquies (sez. 4), per le rettifiche alle operazioni di servizio precedentemente presentate, opera con la
+sovrascrittura della riga che viene compilata a livello di quinquies sulla riga del quater(sez. 3) in questione. E’ per questo che
+si rende sempre necessario, quando si voglia modificare anche solo un campo del quater, riscrivere tutte le colonne, così
+come le si erano dichiarate a suo tempo, limitandosi a modificare il campo della colonna originariamente compilata in modo
+errato .
+Le modifiche ad elenchi di operazioni di servizio precedentemente presentati si possono così riassumere:
+
+
+
+MODIFICHE DI MOVIMENTI DICHIARATI IN PRECEDENZA Vanno registrate nei modelli Intra1Quinquies o
+Intra2Quinquies (sezioni 4) specificando gli estremi dell’elenco da modificare (colonne 1-5) e i nuovi dati che
+sostituiscono quelli precedentemente dichiarati (colonne 6-15).
+CANCELLAZIONI DI MOVIMENTI DICHIARATI IN PRECEDENZA Vanno registrate nei modelli
+Intra1Quinquies o Intra2Quinquies (sezioni 4) specificando gli estremi dell’elenco da modificare (colonne 1-5) lasciando
+vuote le successive informazioni (colonne 6-15)
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+Il ravvedimento operoso
+
+Presentazione modelli Intra: è obbligatoria in ogni caso la presentazione del modello Intra in precedenza omesso.
+Il versamento delle sanzioni relative all’Intra va effettuato con il modello F24 codice tributo 8911.
+ Circolare n. 42/E del 12/10/2016- Agenzia delle Entrate
+ Circolare n. 23/E del 09/06/15 - pdf - Ravvedimento – Articolo 13, comma 1, lettera a-bis), del decreto legislativo 18
+dicembre 1997, n. 472 – Chiarimenti
+ Circolare n. 27/E del 02/08/13 - pdf - Errati versamenti da parte dei contribuenti. Problematiche applicative e
+soluzioni interpretative
+ Risoluzione 67/E del 23/06/2011 -Ravvedimento eseguito in forma “frazionata” – Art. 13 del decreto legislativo 18
+dicembre 1997, n. 472 - pdf
+
+AGENZIA DELLE DOGANE E DEI MONOPOLI
+
+

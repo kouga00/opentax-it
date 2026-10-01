@@ -1,0 +1,18 @@
+Causali CNPADC
+Codice
+E150
+
+Descrizione
+
+Tipo inizio periodo riferimento
+
+Tipo fine periodo di riferimento
+
+Cassa Nazionale di previdenza e assistenza Formato MMAAAA = mese/anno di inizio del
+Formato MMAAAA = mese/anno di fine del
+a favore dei Dottori commercialisti - periodo di riferimento - Non può essere superiore periodo di riferimento - Non può essere inferiore
+adempimenti CNPADC
+a “fine periodo di riferimento”
+a “inizio periodo di riferimento”
+
+

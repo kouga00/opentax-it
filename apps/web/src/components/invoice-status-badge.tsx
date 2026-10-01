@@ -1,0 +1,48 @@
+import type { InvoiceStatus } from '@/lib/types';
+import type { ReactNode } from 'react';
+import type { HelpTopic } from '@/lib/help';
+import { Badge } from '@/components/ui/badge';
+import { Help } from '@/components/help';
+import { cn } from '@/lib/utils';
+
+/**
+ * The invoice is issued only when SDI delivers it (Consegnata) or makes it available to the customer (Messa a
+ * disposizione, MC); a rejection means it was never issued (Spec. 1.9.1 §1.6), and once replaced by a new invoice it
+ * needs nothing more. Before sending it is numbered with its XML ready: "Da inviare".
+ */
+export const STATUS_LABELS: Record<InvoiceStatus, string> = {
+  DRAFT: 'Bozza',
+  ISSUED: 'Da inviare',
+  SENT: 'Inviata allo SDI',
+  DELIVERED: 'Consegnata',
+  NOT_DELIVERED: 'Messa a disposizione',
+  REJECTED: 'Scartata',
+  CANCELLED: 'Annullata',
+};
+
+/**
+ * One color per state along the SDI flow: neutral while in progress, blue once issued and sent,
+ * green when delivered, amber when it needs a check (made available on the portal), red when rejected.
+ */
+const STATUS_CLASSES: Record<InvoiceStatus, string> = {
+  DRAFT: 'border-dashed border-border text-muted-foreground',
+  ISSUED: 'bg-blue-500/10 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300',
+  SENT: 'bg-indigo-500/10 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300',
+  DELIVERED: 'bg-green-500/10 text-green-700 dark:bg-green-500/20 dark:text-green-300',
+  NOT_DELIVERED: 'bg-amber-500/15 text-amber-800 dark:bg-amber-500/20 dark:text-amber-300',
+  REJECTED: 'bg-red-500/10 text-red-700 dark:bg-red-500/20 dark:text-red-300',
+  CANCELLED: 'bg-muted text-muted-foreground line-through',
+};
+
+/**
+ * Imported invoices were issued and sent with another tool: shown as such instead of "Da inviare". A draft reopened
+ * after a rejection is "Da correggere", not a plain draft.
+ */
+export function InvoiceStatusBadge({ status, imported, correction, replaced, className }: { status: InvoiceStatus; imported?: boolean; correction?: boolean; replaced?: boolean; className?: string }) {
+  // Each state explains itself on hover (texts in lib/help/invoices.json).
+  const tip = (topic: HelpTopic, badge: ReactNode) => <Help topic={topic} trigger={badge} />;
+  if (replaced && status === 'REJECTED') return tip('invoiceStatus.replaced', <Badge variant="outline" className={cn('border-transparent bg-muted text-muted-foreground', className)}>Scartata e sostituita</Badge>);
+  if (correction && status === 'DRAFT') return tip('invoiceStatus.correction', <Badge variant="outline" className={cn(STATUS_CLASSES.REJECTED, 'border-transparent', className)}>Da correggere</Badge>);
+  if (imported && status === 'ISSUED') return tip('invoiceStatus.imported', <Badge variant="outline" className={cn('border-transparent bg-muted text-muted-foreground', className)}>Importata</Badge>);
+  return tip(`invoiceStatus.${status}`, <Badge variant="outline" className={cn(STATUS_CLASSES[status], status !== 'DRAFT' && 'border-transparent', className)}>{STATUS_LABELS[status]}</Badge>);
+}
