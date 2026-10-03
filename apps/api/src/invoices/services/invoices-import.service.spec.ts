@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import type { PrismaService } from '../../prisma/prisma.service.js';
 import type { StorageService } from '../../storage/storage.service.js';
 import type { TenantsService } from '../../tenants/tenants.service.js';
-import { InvoicesImportService } from './invoices-import.service.js';
+import { InvoicesImportService, parseSequence } from './invoices-import.service.js';
 
 // Each test file carries its own document number, which the mocked parser returns.
 const file = (name: string, number: string) => ({ name, fileName: name, xml: number });
@@ -51,6 +51,29 @@ function setup() {
   const service = new InvoicesImportService(prisma, tenants, storage as unknown as StorageService);
   return { service, storage, tx, invoiceFindFirst, invoiceFindUnique, customerFindFirst, getWithProfile };
 }
+
+describe('parseSequence', () => {
+  it.each([
+    ['12/2026', 12],
+    ['2026-12', 12],
+    ['2026/12', 12],
+    ['2026/FE/0012', 12],
+    ['FPA 12', 12],
+    ['NC-3/2026', 3],
+    ['12', 12],
+    ['2026', 2026],
+  ])('"%s" of 2026 → %i', (number, expected) => {
+    expect(parseSequence(number, 2026)).toBe(expected);
+  });
+
+  it('keeps a number equal to another year', () => {
+    expect(parseSequence('2025', 2026)).toBe(2025);
+  });
+
+  it('is undefined without digits', () => {
+    expect(parseSequence('FPA', 2026)).toBeUndefined();
+  });
+});
 
 describe('InvoicesImportService.importEntries', () => {
   it('stores each file under the invoice id, never overwriting', async () => {

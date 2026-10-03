@@ -19,6 +19,7 @@ export function toTaxCreditDto(c: TaxCreditBalance): TaxCreditDto {
     notes: c.notes,
     used: c.used,
     remaining: c.remaining,
+    absorbedInReturnYear: c.absorbedByReturn?.year ?? null,
     usages: c.usages.map((u) =>
       Object.assign(new TaxCreditUsageDto(), {
         amount: Number(u.amount),

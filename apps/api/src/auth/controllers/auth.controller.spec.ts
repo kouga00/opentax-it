@@ -8,21 +8,12 @@ describe('AuthController', () => {
 
   beforeEach(() => {
     authServiceMock = {
-      register: vi.fn(),
       login: vi.fn(),
       logout: vi.fn(),
       getMe: vi.fn(),
       selectTenant: vi.fn(),
     };
     controller = new AuthController(authServiceMock as unknown as AuthService);
-  });
-
-  it('delegates register to service', async () => {
-    const dto = { email: 'test@example.com', password: 'password123', name: 'Test' };
-    const req = { ip: '1.2.3.4', header: vi.fn().mockReturnValue('Agent/1.0') } as any;
-
-    await controller.register(dto, req);
-    expect(authServiceMock.register).toHaveBeenCalledWith(dto, '1.2.3.4', 'Agent/1.0');
   });
 
   it('delegates login to service', async () => {

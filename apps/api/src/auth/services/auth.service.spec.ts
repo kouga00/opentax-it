@@ -1,7 +1,6 @@
-import { ConflictException, ForbiddenException, UnauthorizedException } from '@nestjs/common';
+import { ForbiddenException, UnauthorizedException } from '@nestjs/common';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { AuditLogService } from '../../audit-log/services/audit-log.service.js';
-import { Prisma } from '../../generated/prisma/client.js';
 import { UserRole } from '../../generated/prisma/enums.js';
 import type { PrismaService } from '../../prisma/prisma.service.js';
 import { AuthService } from './auth.service.js';
@@ -43,114 +42,6 @@ describe('AuthService', () => {
       passwordService,
       auditLogMock as unknown as AuditLogService,
     );
-  });
-
-  describe('register', () => {
-    it('creates new user as TENANT_USER and creates a session', async () => {
-      prismaMock.user.findUnique.mockResolvedValue(null);
-
-      const fakeUser = {
-        id: 'u1',
-        email: 'user@opentax.it',
-        name: 'User',
-        role: UserRole.TENANT_USER,
-        memberships: [],
-      };
-      prismaMock.user.create.mockResolvedValue(fakeUser);
-
-      const fakeSession = {
-        id: 's1',
-        tokenHash: 'somehash',
-        userId: 'u1',
-        activeTenantId: null,
-        expiresAt: new Date(Date.now() + 100000),
-      };
-      prismaMock.session.create.mockResolvedValue(fakeSession);
-
-      const res = await authService.register({
-        email: 'User@OpenTax.it',
-        password: 'password123',
-        name: 'User',
-      });
-
-      expect(res.user.email).toBe('user@opentax.it');
-      expect(res.user.role).toBe(UserRole.TENANT_USER);
-      expect(res.token).toHaveLength(64);
-      expect(prismaMock.$transaction).toHaveBeenCalled();
-      expect(auditLogMock.log).toHaveBeenCalledWith(
-        expect.objectContaining({ action: 'AUTH_REGISTER', userId: 'u1' }),
-      );
-    });
-
-    it('assigns PLATFORM_ADMIN role when matching setupToken is provided', async () => {
-      process.env.SETUP_TOKEN = 'super-secret-token';
-      prismaMock.user.findUnique.mockResolvedValue(null);
-
-      const fakeUser = {
-        id: 'u-admin',
-        email: 'admin@opentax.it',
-        name: 'Admin',
-        role: UserRole.PLATFORM_ADMIN,
-        memberships: [],
-      };
-      prismaMock.user.create.mockResolvedValue(fakeUser);
-
-      const fakeSession = {
-        id: 's-admin',
-        tokenHash: 'hash',
-        userId: 'u-admin',
-        activeTenantId: null,
-        expiresAt: new Date(Date.now() + 100000),
-      };
-      prismaMock.session.create.mockResolvedValue(fakeSession);
-
-      const res = await authService.register({
-        email: 'admin@opentax.it',
-        password: 'password123',
-        setupToken: 'super-secret-token',
-      });
-
-      expect(res.user.role).toBe(UserRole.PLATFORM_ADMIN);
-      expect(prismaMock.user.create).toHaveBeenCalledWith(
-        expect.objectContaining({
-          data: expect.objectContaining({ role: UserRole.PLATFORM_ADMIN }),
-        }),
-      );
-      delete process.env.SETUP_TOKEN;
-    });
-
-    it('rejects duplicate email (P2002)', async () => {
-      prismaMock.user.create.mockRejectedValue(
-        new Prisma.PrismaClientKnownRequestError('Unique constraint failed', {
-          code: 'P2002',
-          clientVersion: '7.10.0',
-        }),
-      );
-
-      await expect(
-        authService.register({
-          email: 'user@opentax.it',
-          password: 'password123',
-        }),
-      ).rejects.toThrow(ConflictException);
-    });
-
-    it('throws ConflictException on concurrent registration with same email (P2002)', async () => {
-      prismaMock.user.findUnique.mockResolvedValue(null);
-      prismaMock.user.create.mockRejectedValue(
-        new Prisma.PrismaClientKnownRequestError('Unique constraint failed', {
-          code: 'P2002',
-          clientVersion: '7.10.0',
-        }),
-      );
-
-      await expect(
-        authService.register({
-          email: 'dup@opentax.it',
-          password: 'Password123!',
-        }),
-      ).rejects.toThrow(ConflictException);
-    });
   });
 
   describe('login', () => {

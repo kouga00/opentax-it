@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { api, currentTenantId, fetchOrNull } from '@/lib/api';
+import { api, currentTenantId, currentUser, fetchOrNull } from '@/lib/api';
 import { selectTenant } from '@/lib/actions';
 import type { PecSettings } from '@/lib/types';
 import { Button } from '@/components/ui/button';
@@ -15,6 +15,7 @@ const TABS = ['profile', 'pec'] as const;
 export default async function SetupPage({ searchParams }: PageProps<'/setup'>) {
   const { tab, error } = (await searchParams) ?? {};
   const year = new Date().getFullYear();
+  const admin = (await currentUser())?.role === 'PLATFORM_ADMIN';
   const [tenants, offices, funds, me, rules, pecProviders, pecSettings] = await Promise.all([
     fetchOrNull(() => api.tenants()),
     fetchOrNull(() => api.inpsOffices()),
@@ -47,9 +48,9 @@ export default async function SetupPage({ searchParams }: PageProps<'/setup'>) {
             <Help topic="activeTenantCookie" />
           </form>
         ) : (
-          <p className="text-sm text-muted-foreground">Nessuna partita IVA: creala con il pulsante &quot;Nuova partita IVA&quot;.</p>
+          <p className="text-sm text-muted-foreground">{admin ? <>Nessuna partita IVA: creala con il pulsante &quot;Nuova partita IVA&quot;.</> : 'Nessuna partita IVA: chiedi all\'amministratore di assegnartela.'}</p>
         )}
-        <Button render={<Link href="/setup/new" />}>Nuova partita IVA</Button>
+        {admin && <Button render={<Link href="/setup/new" />}>Nuova partita IVA</Button>}
       </div>
 
       {me ? (

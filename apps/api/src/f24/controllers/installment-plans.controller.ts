@@ -7,6 +7,7 @@ import { PlanOptionsDto } from '../dto/response/plan-options.dto.js';
 import { PlanPreviewDto } from '../dto/response/plan-preview.dto.js';
 import { toInstallmentPlanDto, toPlanOptionsDto, toPlanPreviewDto } from '../mappers/f24.mapper.js';
 import { F24Service } from '../services/f24.service.js';
+import { AllowReadOnly } from '../../common/allow-read-only.decorator.js';
 
 /** Installment plan of the balance and advances of a tax year, one per year, and the F24 forms it creates. */
 @ApiTags('F24')
@@ -33,6 +34,7 @@ export class InstallmentPlansController {
   /** Forms that a plan with these choices would produce (nothing is saved). */
   @ApiOperation({ summary: 'Modelli F24 che un piano con queste scelte produrrebbe, senza salvare' })
   @Post(':taxYear/preview')
+  @AllowReadOnly()
   @HttpCode(200)
   @ApiOkResponse({ type: PlanPreviewDto })
   async preview(@TenantId() tenantId: string, @Param('taxYear', ParseIntPipe) taxYear: number, @Body() dto: PlanParametersDto): Promise<PlanPreviewDto> {

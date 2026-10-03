@@ -60,13 +60,16 @@ describe('create-admin CLI', () => {
         'admin@example.com',
         'short',
       ),
-    ).rejects.toThrow('Per creare un nuovo utente amministratore è richiesta una password di almeno 8 caratteri.');
+    ).rejects.toThrow('Per creare un nuovo utente amministratore è richiesta una password da 8 a 128 caratteri.');
   });
 
-  it('promotes an existing user to PLATFORM_ADMIN and updates password if provided', async () => {
+  it('promotes an existing user to PLATFORM_ADMIN and updates password if provided, closing the old sessions', async () => {
     const mockPrisma = {
       user: {
         update: vi.fn().mockResolvedValue({ id: 'user-existing', email: 'user@example.com' }),
+      },
+      session: {
+        deleteMany: vi.fn(),
       },
       tenant: {
         findMany: vi.fn().mockResolvedValue([]),
@@ -96,6 +99,7 @@ describe('create-admin CLI', () => {
         name: 'Updated Name',
       },
     });
+    expect(mockPrisma.session.deleteMany).toHaveBeenCalledWith({ where: { userId: 'user-existing' } });
   });
 
   it('promotes an existing user to PLATFORM_ADMIN without changing password if not provided', async () => {

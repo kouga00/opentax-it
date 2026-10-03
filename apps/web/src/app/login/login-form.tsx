@@ -1,7 +1,6 @@
 'use client';
 
 import { useActionState } from 'react';
-import Link from 'next/link';
 import { loginAction } from '@/lib/actions';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -41,12 +40,9 @@ export function LoginForm() {
         {pending ? 'Accesso in corso...' : 'Accedi'}
       </Button>
 
-      <div className="text-center text-sm text-muted-foreground pt-2">
-        Non hai ancora un account?{' '}
-        <Link href="/register" className="underline text-primary hover:text-primary/80">
-          Registrati
-        </Link>
-      </div>
+      <p className="text-center text-sm text-muted-foreground pt-2">
+        Non hai un account? Chiedilo a chi gestisce questa installazione.
+      </p>
     </form>
   );
 }

@@ -1,18 +1,15 @@
 import {
   BadRequestException,
-  ConflictException,
   ForbiddenException,
   Injectable,
   Logger,
   UnauthorizedException,
 } from '@nestjs/common';
-import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
+import { createHash, randomBytes } from 'node:crypto';
 import { AuditLogService } from '../../audit-log/services/audit-log.service.js';
-import { Prisma } from '../../generated/prisma/client.js';
 import { UserRole } from '../../generated/prisma/enums.js';
 import { PrismaService } from '../../prisma/prisma.service.js';
 import type { LoginDto } from '../dto/request/login.dto.js';
-import type { RegisterDto } from '../dto/request/register.dto.js';
 import type { AuthResponseDto } from '../dto/response/auth-response.dto.js';
 import type { UserResponseDto } from '../dto/response/user-response.dto.js';
 import { AuthMapper } from '../mappers/auth.mapper.js';
@@ -20,18 +17,6 @@ import type { UserWithMemberships } from '../types/user-with-memberships.js';
 import { PasswordService } from './password.service.js';
 
 const SESSION_LIFETIME_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
-
-// Pre-computed scrypt hash to equalize timing against account enumeration when user does not exist
-const DUMMY_PASSWORD_HASH =
-  'scrypt$16384$8$1$0123456789abcdef0123456789abcdef$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
-
-function safeCompareTokens(provided?: string, expected?: string): boolean {
-  if (!provided || !expected) return false;
-  const a = Buffer.from(provided);
-  const b = Buffer.from(expected);
-  if (a.length !== b.length) return false;
-  return timingSafeEqual(a, b);
-}
 
 @Injectable()
 export class AuthService {
@@ -48,75 +33,6 @@ export class AuthService {
    */
   hashToken(token: string): string {
     return createHash('sha256').update(token).digest('hex');
-  }
-
-  async register(
-    dto: RegisterDto,
-    ipAddress?: string,
-    userAgent?: string,
-  ): Promise<AuthResponseDto> {
-    const email = dto.email.trim().toLowerCase();
-
-    // Explicit admin role: only if a valid SETUP_TOKEN is configured in environment and provided
-    const isSetupAdmin = safeCompareTokens(dto.setupToken?.trim(), process.env.SETUP_TOKEN);
-    const role = isSetupAdmin ? UserRole.PLATFORM_ADMIN : UserRole.TENANT_USER;
-
-    // Always compute password hash upfront to ensure constant-time response whether email already exists or not
-    const passwordHash = await this.passwordService.hash(dto.password);
-    const token = randomBytes(32).toString('hex');
-    const tokenHash = this.hashToken(token);
-    const expiresAt = new Date(Date.now() + SESSION_LIFETIME_MS);
-
-    let result;
-    try {
-      result = await this.prisma.$transaction(async (tx) => {
-        const user = await tx.user.create({
-          data: {
-            email,
-            passwordHash,
-            name: dto.name?.trim() || null,
-            role,
-          },
-          include: {
-            memberships: {
-              orderBy: { createdAt: 'asc' },
-              include: {
-                tenant: { select: { id: true, name: true } },
-              },
-            },
-          },
-        });
-
-        const session = await tx.session.create({
-          data: {
-            tokenHash,
-            userId: user.id,
-            expiresAt,
-            ipAddress: ipAddress ?? null,
-            userAgent: userAgent ?? null,
-          },
-        });
-
-        return { user, session };
-      });
-    } catch (err: unknown) {
-      if (err instanceof Prisma.PrismaClientKnownRequestError && err.code === 'P2002') {
-        throw new ConflictException('Registrazione non riuscita. Se hai già un account, accedi.');
-      }
-      throw err;
-    }
-
-    const { user, session } = result;
-
-    await this.auditLog.log({
-      userId: user.id,
-      action: 'AUTH_REGISTER',
-      entityType: 'User',
-      entityId: user.id,
-      data: { email: user.email, role: user.role, ip: ipAddress },
-    });
-
-    return AuthMapper.toAuthResponse(token, session, user);
   }
 
   async login(
@@ -139,8 +55,8 @@ export class AuthService {
     });
 
     if (!user) {
-      // Run dummy password verification to equalize timing against account enumeration
-      await this.passwordService.verify(dto.password, DUMMY_PASSWORD_HASH);
+      // Same time as a known email, so the response does not reveal who has an account.
+      await this.passwordService.verifyDummy(dto.password);
       await this.auditLog.log({
         action: 'AUTH_LOGIN_FAILED',
         entityType: 'User',

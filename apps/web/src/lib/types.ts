@@ -17,6 +17,17 @@ export interface User {
   tenants: TenantMembershipSummary[];
 }
 
+/** A user as the platform admin manages it (GET /users). */
+export interface UserAccount {
+  id: string;
+  email: string;
+  name: string | null;
+  role: UserRole;
+  createdAt: string;
+  /** VAT numbers the user can access: TENANT_ADMIN reads and writes, TENANT_USER only reads. */
+  memberships: Array<{ tenantId: string; tenantName: string; role: UserRole }>;
+}
+
 export interface AuthResponse {
   token: string;
   expiresAt: string;
@@ -425,6 +436,8 @@ export interface TaxCredit {
   notes: string | null;
   used: number;
   remaining: number;
+  /** Year of the return that reported the credit in LM43: the part not used in F24 is subtracted there. */
+  absorbedInReturnYear: number | null;
   /** Uses in F24 forms. */
   usages: Array<{ amount: number; f24Id: string; paymentDate: string; f24Status: string }>;
 }

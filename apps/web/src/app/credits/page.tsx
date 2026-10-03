@@ -60,16 +60,16 @@ export default async function CreditsPage({ searchParams }: PageProps<'/credits'
                   <TableCell className="text-sm">{c.description ?? '—'}{c.usableFrom && <span className="block text-xs text-muted-foreground">dal {formatDate(c.usableFrom)}</span>}</TableCell>
                   <TableCell className="text-right font-mono tabular-nums">{formatMoney(c.amount)}</TableCell>
                   <TableCell className="text-right font-mono tabular-nums">{formatMoney(c.used)}</TableCell>
-                  <TableCell className="text-right font-mono tabular-nums">{c.remaining > 0 ? formatMoney(c.remaining) : <Help topic="creditExhausted" trigger={<Badge variant="secondary">esaurito</Badge>} />}</TableCell>
+                  <TableCell className="text-right font-mono tabular-nums">{c.absorbedInReturnYear ? <Help topic="creditAbsorbed" params={{ returnYear: c.absorbedInReturnYear }} trigger={<Badge variant="secondary">in dichiarazione {c.absorbedInReturnYear}</Badge>} /> : c.remaining > 0 ? formatMoney(c.remaining) : <Help topic="creditExhausted" trigger={<Badge variant="secondary">esaurito</Badge>} />}</TableCell>
                   <TableCell>
                     <RowActions>
-                      {c.used === 0 ? (
+                      {c.used === 0 && !c.absorbedInReturnYear ? (
                         <>
                           <RowAction label="Modifica" render={<Link href={`/credits/${c.id}`} />}><Pencil /></RowAction>
                           <DeleteRowAction action={deleteTaxCredit} fields={{ id: c.id }} confirm={`Eliminare il credito ${c.code} ${c.referenceYear}?`} />
                         </>
                       ) : (
-                        <RowAction label="Apri (usato in F24, non modificabile)" render={<Link href={`/credits/${c.id}`} />}><FileText /></RowAction>
+                        <RowAction label={c.absorbedInReturnYear ? `Apri (nella dichiarazione ${c.absorbedInReturnYear}, non modificabile)` : 'Apri (usato in F24, non modificabile)'} render={<Link href={`/credits/${c.id}`} />}><FileText /></RowAction>
                       )}
                     </RowActions>
                   </TableCell>

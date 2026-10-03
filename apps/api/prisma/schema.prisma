@@ -658,7 +658,8 @@ model TaxReturn {
   createdAt             DateTime        @default(now())
   updatedAt             DateTime        @updatedAt
 
-  credits TaxCredit[]
+  credits         TaxCredit[] @relation("ReturnCredits")
+  absorbedCredits TaxCredit[] @relation("AbsorbedCredits")
 
   @@unique([tenantId, year])
 }
@@ -670,7 +671,11 @@ model TaxCredit {
   tenantId        String
   tenant          Tenant     @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   taxReturnId     String?
-  taxReturn       TaxReturn? @relation(fields: [taxReturnId], references: [id])
+  taxReturn       TaxReturn? @relation("ReturnCredits", fields: [taxReturnId], references: [id])
+  /// Return of the following year that absorbed the part not used in F24: "LM42 – LM43 + LM44 – LM45" (Redditi PF
+  /// booklet 3, LM43/LM44), so nothing is left to compensate. Cleared when that return is no longer marked filed.
+  absorbedByReturnId String?
+  absorbedByReturn   TaxReturn? @relation("AbsorbedCredits", fields: [absorbedByReturnId], references: [id], onDelete: SetNull)
   section         F24Section
   /// Tax code or INPS reason as written on the F24 credit row.
   code            String

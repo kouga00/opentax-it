@@ -15,5 +15,6 @@ export class TaxCreditDto {
   @ApiProperty({ type: String, nullable: true }) notes!: string | null;
   @ApiProperty({ description: 'Già usato negli F24' }) used!: number;
   @ApiProperty({ description: 'Ancora da usare' }) remaining!: number;
+  @ApiProperty({ type: Number, nullable: true, description: 'Anno della dichiarazione che ha riportato il credito nel rigo LM43: la parte non usata negli F24 è scalata lì' }) absorbedInReturnYear!: number | null;
   @ApiProperty({ type: [TaxCreditUsageDto] }) usages!: TaxCreditUsageDto[];
 }

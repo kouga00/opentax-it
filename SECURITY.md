@@ -9,9 +9,10 @@ Stato attuale (fase iniziale):
 
 Protezioni presenti:
 - header di sicurezza (helmet nell'API; divieto di incorporare le pagine web in altri siti, `nosniff`);
-- autenticazione con rate limiting mirato solo su `/auth/register` e `/auth/login` (5 tentativi ogni 15 minuti per IP, 20 tentativi all'ora per email tramite `@nestjs/throttler`), evitando blocchi durante la normale navigazione web;
+- niente registrazione libera: il primo amministratore si crea da riga di comando (`pnpm admin:create`), gli altri utenti li crea solo l'amministratore dalla pagina Utenti, con la password scelta da lui; una nuova password chiude le sessioni aperte;
+- permessi per partita IVA: l'amministratore della piattaforma accede a tutte; gli altri utenti solo a quelle assegnate, in lettura e scrittura (`TENANT_ADMIN`) o in sola lettura (`TENANT_USER`: ogni richiesta che modifica dati è rifiutata da `ReadOnlyGuard`); solo l'amministratore crea partite IVA;
+- autenticazione con rate limiting mirato solo su `/auth/login` (5 tentativi ogni 15 minuti per IP, 20 tentativi all'ora per email tramite `@nestjs/throttler`), evitando blocchi durante la normale navigazione web;
 - mitigazione timing attack: hash fittizio `scrypt` su utente non trovato in fase di login;
-- registrazione: tempo di risposta costante (hashing `scrypt` computato sempre prima dell'inserimento, gestione del duplicato intercettata dal vincolo univoco del database), messaggio di errore generico se l'email è già registrata ("Registrazione non riuscita. Se hai già un account, accedi.") e rate limiting rigoroso; la completa neutralizzazione dell'account enumeration richiede un flusso di attivazione via email (vedi TODO.md);
 - percorso di aggiornamento: `pnpm admin:create` associa automaticamente all'amministratore tutte le partite IVA esistenti prive di membri come `TENANT_ADMIN` e conferisce il ruolo `PLATFORM_ADMIN` necessario per l'attivazione dei set di regole;
 - reverse proxy: in produzione è necessario che il reverse proxy fidato (es. Nginx, Caddy, Traefik) sovrascriva o imposti `X-Forwarded-For` e che la variabile `TRUST_PROXY` sia configurata di conseguenza (default `loopback`; accetta booleano `true`/`false`, numero di hop es. `1`, o IP/subnet; vedi [guida Express](https://expressjs.com/en/guide/behind-proxies.html)), prevenendo IP spoofing e garantendo l'accuratezza di audit log e rate limiter;
 - body JSON limitato a 1 MB, 50 MB solo per l'import di fatture e ricevute (`/api/imports`); gli archivi ZIP si aprono con limiti contro gli zip bomb;

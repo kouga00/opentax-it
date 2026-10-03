@@ -142,6 +142,14 @@ export class F24Service {
         compensationWarnings.push(`Credito ${over.code} ${over.referenceYear} usato in compensazione per ${over.total.toFixed(2).replace('.', ',')} € nell'anno, oltre 5.000 €: utilizzabile solo dal decimo giorno successivo alla presentazione della dichiarazione e con il visto di conformità (art. 3 D.Lgs. 33/2025; L. 147/2013 art. 1 c. 574; ris. AdE 110/E/2019). Indica la data in "utilizzabile dal" del credito.`);
       }
     }
+    // The previous year's 1792 credit goes in LM43 of this return and its F24 uses in LM44: what is not compensated by
+    // filing lowers LM46 ("LM42 – LM43 + LM44 – LM45, col. 2", Redditi PF booklet 3), while the balance here is before it.
+    const previousCredits = (await this.credits.available(tenantId)).filter((c) => c.section === 'TREASURY' && c.code === paymentRules.taxCodes.substituteTaxBalance && c.referenceYear === taxYear - 1);
+    const previousIds = new Set(previousCredits.map((c) => c.id));
+    const previousNotUsed = round2(previousCredits.reduce((s, c) => s + c.amount, 0) - compensation.usages.filter((u) => previousIds.has(u.creditId)).reduce((s, u) => s + u.amount, 0));
+    if (previousNotUsed > 0) {
+      compensationWarnings.push(`Credito ${paymentRules.taxCodes.substituteTaxBalance} del ${taxYear - 1} non usato in questo piano: ${previousNotUsed.toFixed(2).replace('.', ',')} €. Va nel rigo LM43 della dichiarazione ${taxYear} e la parte non compensata in un F24 prima di presentarla abbassa il saldo ${paymentRules.taxCodes.substituteTaxBalance} (LM46): la dichiarazione chiederà meno di questo piano. Usa i crediti nel piano, così i due importi coincidono (Istr. Redditi PF 2026, Fasc. 3, righi LM43-LM46).`);
+    }
     return {
       taxYear,
       paymentYear: taxYear + 1,

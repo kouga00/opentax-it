@@ -1,0 +1,29 @@
+{
+  "usersPage": {
+    "label": "Chi gestisce gli utenti",
+    "paragraphs": [
+      "Solo l'**amministratore** crea gli utenti, sceglie la loro password e decide a quali partite IVA accedono. Non c'è una pagina di registrazione: il primo amministratore si crea con `pnpm admin:create`.",
+      "L'amministratore vede e modifica tutte le partite IVA; gli altri utenti solo quelle assegnate qui."
+    ]
+  },
+  "userRole": {
+    "label": "Ruolo",
+    "paragraphs": [
+      "**Amministratore**: gestisce utenti e partite IVA, carica e attiva le regole fiscali e accede a tutte le partite IVA.",
+      "**Utente**: accede solo alle partite IVA assegnate, con il permesso scelto per ciascuna."
+    ]
+  },
+  "userPassword": {
+    "label": "Password",
+    "paragraphs": [
+      "Da {min} a {max} caratteri. Comunicala all'utente in modo sicuro. Quando la cambi, l'utente viene disconnesso da tutti i dispositivi."
+    ]
+  },
+  "membershipAccess": {
+    "label": "Permessi",
+    "paragraphs": [
+      "**Lettura e scrittura**: l'utente usa la partita IVA come te (fatture, incassi, F24, profilo).",
+      "**Sola lettura**: vede tutto ma non può modificare niente; utile per esempio per il commercialista. Può comunque fare le anteprime (piano F24, import) senza salvarle."
+    ]
+  }
+}

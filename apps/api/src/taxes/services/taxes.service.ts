@@ -143,7 +143,9 @@ export class TaxesService {
       taxCredits: Number(data.taxCredits),
     });
     // Return rows are whole euro (Redditi PF instructions, "Modalità di arrotondamento").
-    const taxBalance = roundEuro(result.taxNetOfCredits - roundEuro(taxAdvancesPaid)); // LM46 (>0) / LM47 (<0)
+    // LM42 − LM45: LM46 (>0) / LM47 (<0) before the previous year's credit (LM43 − LM44), which the F24 plan compensates
+    // or, when it does not, warns about (f24.service.ts).
+    const taxBalance = roundEuro(result.taxNetOfCredits - roundEuro(taxAdvancesPaid));
     const inpsBalance = scheme ? roundCents(result.inpsContribution - inpsAdvancesPaid) : 0; // RR7 / RR8
     return {
       year,

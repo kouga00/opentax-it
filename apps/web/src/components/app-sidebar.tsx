@@ -1,6 +1,6 @@
 'use client';
 
-import { BadgePercent, CalendarClock, CalendarDays, Calculator, FileText, Landmark, LayoutDashboard, Library, Receipt, Scale, Settings, Stamp, Users } from 'lucide-react';
+import { BadgePercent, CalendarClock, CalendarDays, Calculator, FileText, Landmark, LayoutDashboard, Library, Receipt, Scale, Settings, Stamp, UserCog, Users } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -38,12 +38,18 @@ const GROUPS = [
   { label: 'Normativa', items: [{ href: '/rules', label: 'Regole fiscali', icon: Scale }, { href: '/sources', label: 'Fonti ufficiali', icon: Library }] },
 ];
 
+/** Only the platform admin manages users (apps/api/src/users). */
+const ADMIN_NAV = { label: 'Amministrazione', items: [{ href: '/users', label: 'Utenti', icon: UserCog }] };
+
 export function AppSidebar({
   tenantName,
+  admin,
 }: {
   tenantName: string | null;
+  admin: boolean;
 }) {
   const pathname = usePathname();
+  const groups = admin ? [...GROUPS, ADMIN_NAV] : GROUPS;
   return (
     <Sidebar collapsible="icon" className="print:hidden">
       <SidebarHeader>
@@ -60,7 +66,7 @@ export function AppSidebar({
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        {GROUPS.map((group) => (
+        {groups.map((group) => (
           <SidebarGroup key={group.label}>
             <SidebarGroupLabel>{group.label}</SidebarGroupLabel>
             <SidebarGroupContent>

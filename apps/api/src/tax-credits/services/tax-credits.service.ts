@@ -14,10 +14,15 @@ export class TaxCreditsService {
   constructor(private readonly prisma: PrismaService) {}
 
   async list(tenantId: string): Promise<TaxCreditBalance[]> {
-    const rows = await this.prisma.taxCredit.findMany({ where: { tenantId }, include: { usages: { include: { f24Line: { include: { f24: { select: { id: true, paymentDate: true, status: true } } } } } } }, orderBy: [{ referenceYear: 'desc' }, { createdAt: 'asc' }] });
+    const rows = await this.prisma.taxCredit.findMany({
+      where: { tenantId },
+      include: { usages: { include: { f24Line: { include: { f24: { select: { id: true, paymentDate: true, status: true } } } } } }, absorbedByReturn: { select: { year: true } } },
+      orderBy: [{ referenceYear: 'desc' }, { createdAt: 'asc' }],
+    });
     return rows.map((c) => {
       const used = round2(c.usages.reduce((s, u) => s + Number(u.amount), 0));
-      return { ...c, used, remaining: round2(Number(c.amount) - used) };
+      // A credit absorbed by the next return (LM43 − LM44) has nothing left to compensate.
+      return { ...c, used, remaining: c.absorbedByReturnId ? 0 : round2(Number(c.amount) - used) };
     });
   }
 
@@ -45,7 +50,7 @@ export class TaxCreditsService {
     return this.get(tenantId, credit.id);
   }
 
-  /** Like deletion, allowed only while no F24 uses the credit: its rows would no longer match. */
+  /** Like deletion, allowed only while no F24 uses the credit and no return absorbed it: their figures would no longer match. */
   async update(tenantId: string, id: string, dto: SaveTaxCreditDto): Promise<TaxCreditBalance> {
     await this.unused(tenantId, id);
     await this.prisma.taxCredit.update({ where: { id }, data: fields(dto) });
@@ -67,9 +72,12 @@ export class TaxCreditsService {
   }
 
   private async unused(tenantId: string, id: string) {
-    const credit = await this.prisma.taxCredit.findFirst({ where: { id, tenantId }, include: { usages: true } });
+    const credit = await this.prisma.taxCredit.findFirst({ where: { id, tenantId }, include: { usages: true, absorbedByReturn: { select: { year: true } } } });
     if (!credit) throw new NotFoundException('Credito non trovato');
     if (credit.usages.length > 0) throw new ConflictException('Il credito è usato in un F24: elimina prima quel piano');
+    if (credit.absorbedByReturn) {
+      throw new ConflictException(`Il credito è riportato nella dichiarazione dei redditi ${credit.absorbedByReturn.year} (rigo LM43): togli prima "presentata" da quella dichiarazione`);
+    }
   }
 }
 

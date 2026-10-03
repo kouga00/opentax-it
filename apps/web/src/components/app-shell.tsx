@@ -45,7 +45,7 @@ export async function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <SidebarProvider>
-      <AppSidebar tenantName={tenant?.name ?? null} />
+      <AppSidebar tenantName={tenant?.name ?? null} admin={user.role === 'PLATFORM_ADMIN'} />
       <SidebarInset>
         <header className="flex h-12 items-center gap-2 border-b px-4 print:hidden">
           <SidebarTrigger />

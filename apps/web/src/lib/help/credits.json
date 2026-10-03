@@ -14,6 +14,13 @@
       "Sopra 5.000 € annui il credito è utilizzabile dal decimo giorno successivo alla presentazione della dichiarazione, con visto di conformità (art. 3 D.Lgs. 33/2025; L. 147/2013 art. 1 c. 574). Campo informativo."
     ]
   },
+  "creditAbsorbed": {
+    "label": "Nella dichiarazione",
+    "paragraphs": [
+      "Il credito è riportato nel rigo LM43 della dichiarazione dei redditi {returnYear}, segnata come presentata: la parte non usata negli F24 (rigo LM44) è già scalata dall'imposta a debito di quella dichiarazione, quindi non si può più compensare.",
+      "Fonte: [istruzioni Redditi PF 2026, Fascicolo 3](https://www.agenziaentrate.gov.it/portale/documents/d/guest/pf3_istruzioni_2026_agg-13-05-2026), righi LM43-LM47: \"LM42 – LM43 + LM44 – LM45, col. 2\"."
+    ]
+  },
   "creditExhausted": {
     "label": "Esaurito",
     "paragraphs": [

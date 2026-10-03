@@ -61,8 +61,8 @@ Gestionale **open source** (`opentax-it`) per partite IVA italiane in **regime f
 - **Regole fiscali versionate per anno** (`FiscalRuleSet`): niente valori scritti nel codice, ogni nuovo set si attiva a mano, dopo aver visto cosa cambia rispetto a quello attivo; consultabili per sezione, ogni valore con la sua fonte e la citazione esatta.
 - **Registro delle fonti ufficiali** con la copia archiviata di ogni documento; i test verificano che ogni citazione compaia nel documento archiviato.
 
-**Account** (`/login`, `/register`)
-- Login con sessione, **più partite IVA per utente** e ruoli; solo un amministratore carica e attiva le regole fiscali.
+**Account** (`/login`)
+- Login con sessione, **più partite IVA per utente** e ruoli; solo un amministratore carica e attiva le regole fiscali. Nessuna registrazione libera: il primo amministratore si crea con `pnpm admin:create`, gli altri utenti li crea lui nella pagina **Utenti** (`/users`), con accesso a ogni partita IVA in sola lettura o in lettura e scrittura.
 
 **In arrivo** (dettagli in [TODO.md](TODO.md))
 - **Casse professionali**, una alla volta, a partire da quelle che si pagano con F24 (Cassa Forense, Inarcassa, ENPAP).

@@ -51,26 +51,6 @@ export async function loginAction(_prev: ActionState, formData: FormData): Promi
   redirect('/dashboard');
 }
 
-export async function registerAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const email = String(formData.get('email') ?? '').trim();
-  const password = String(formData.get('password') ?? '');
-  const confirmPassword = String(formData.get('confirmPassword') ?? '');
-  const name = String(formData.get('name') ?? '').trim();
-
-  if (password !== confirmPassword) {
-    return { error: 'Le password non coincidono' };
-  }
-
-  try {
-    const res = await api.register({ email, password, name: name || undefined });
-    const store = await cookies();
-    store.set(SESSION_COOKIE, res.token, SESSION_COOKIE_OPTIONS);
-  } catch (e) {
-    return { error: errorMessage(e) };
-  }
-  redirect('/setup/new');
-}
-
 export async function logoutAction(): Promise<void> {
   try {
     await api.logout();
@@ -780,4 +760,53 @@ export async function unmarkStampDutyPaid(formData: FormData) {
     return handleActionError(e, failTo(`/stamp-duty?year=${year}`));
   }
   revalidateStampDuty();
+}
+
+/** Creates a user with the password chosen by the platform admin. */
+export async function createUser(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const f = (k: string) => String(formData.get(k) ?? '').trim();
+  let id: string;
+  try {
+    id = (await api.createUser({ email: f('email'), name: f('name') || undefined, password: String(formData.get('password') ?? ''), role: f('role') })).id;
+  } catch (e) {
+    return handleActionError(e);
+  }
+  revalidatePath('/users');
+  redirect(`/users/${id}`);
+}
+
+/** Name, role and, when filled in, a new password (which closes the user's sessions). */
+export async function updateUser(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const f = (k: string) => String(formData.get(k) ?? '').trim();
+  const password = String(formData.get('password') ?? '');
+  try {
+    await api.updateUser(f('id'), { name: f('name'), role: f('role'), ...(password ? { password } : {}) });
+  } catch (e) {
+    return handleActionError(e);
+  }
+  revalidatePath('/users');
+  redirect('/users');
+}
+
+/** The VAT numbers the user can access: one select per VAT number ("" = no access). */
+export async function saveUserMemberships(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const memberships = [...formData.entries()]
+    .filter(([key, value]) => key.startsWith('access:') && value !== '')
+    .map(([key, value]) => ({ tenantId: key.slice('access:'.length), role: String(value) }));
+  try {
+    await api.setUserMemberships(String(formData.get('id')), memberships);
+  } catch (e) {
+    return handleActionError(e);
+  }
+  revalidatePath('/users');
+  redirect('/users');
+}
+
+export async function deleteUser(formData: FormData) {
+  try {
+    await api.deleteUser(String(formData.get('id')));
+  } catch (e) {
+    return handleActionError(e, failTo('/users'));
+  }
+  revalidatePath('/users');
 }

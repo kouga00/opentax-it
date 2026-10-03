@@ -146,7 +146,7 @@ export class InvoicesImportService implements ImportHandler {
     const type = p.documentType as DocumentType;
 
     const existing = await this.prisma.invoice.findFirst({ where: { tenantId, year, type, number: p.number } });
-    const sequence = parseSequence(p.number);
+    const sequence = parseSequence(p.number, year);
     if (existing) return { parsed: p, year, type, sequence: sequence ?? existing.sequence ?? 0, existingId: existing.id };
     if (sequence === undefined) throw new BadRequestException(`Impossibile ricavare un progressivo dal numero "${p.number}"`);
     const clash = await this.prisma.invoice.findFirst({ where: { tenantId, year, type, sequence } });
@@ -272,10 +272,16 @@ function partyName(c: { businessName?: string | null; firstName?: string | null;
   return c.businessName ?? `${c.firstName ?? ''} ${c.lastName ?? ''}`.trim();
 }
 
-/** "12/2026", "12", "FPA 12", "2026-12" → 12. Undefined when no digits are found. */
-export function parseSequence(number: string): number | undefined {
-  const m = number.match(/(\d+)\s*\/\s*\d{4}$/) ?? number.match(/(\d+)/);
-  return m ? Number(m[1]) : undefined;
+/**
+ * Progressive of a document number of the given year: "12/2026", "2026-12", "2026/FE/0012", "FPA 12", "12" → 12.
+ * The year of the document is dropped wherever it appears, then the last group of digits is the progressive.
+ * Undefined when no digits are found.
+ */
+export function parseSequence(number: string, year: number): number | undefined {
+  const groups = number.match(/\d+/g) ?? [];
+  const withoutYear = groups.filter((g) => g !== String(year));
+  const last = (withoutYear.length > 0 ? withoutYear : groups).at(-1);
+  return last === undefined ? undefined : Number(last);
 }
 
 /** Profile data the import checks: the supplier must be the active VAT number, and its scheme decides fund contributions. */

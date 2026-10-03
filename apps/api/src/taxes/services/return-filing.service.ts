@@ -15,7 +15,8 @@ const value = (rows: ReturnRow[], id: string) => {
  * registry for the F24 compensations: the substitute tax credit to compensate (RX31 col. 5, code 1792, per the
  * registry schema "LM47 → 1792") and the Gestione Separata credit to compensate (RR8 col. 2, the contribution reason,
  * "indicando come periodo di riferimento esclusivamente l'anno", booklet 2). The Artigiani and Commercianti credits are
- * left out: their F24 rows need the 17-digit INPS code, which the registry does not hold yet.
+ * left out: their F24 rows need the 17-digit INPS code, which the registry does not hold yet. The previous year's
+ * substitute tax credits, reported in LM43, are closed by the filed return (`absorbedByReturnId`).
  */
 @Injectable()
 export class ReturnFilingService {
@@ -81,11 +82,17 @@ export class ReturnFilingService {
       for (const c of credits) {
         await tx.taxCredit.create({ data: { tenantId, taxReturnId: taxReturn.id, section: c.section, code: c.code, referenceYear: year, amount: c.amount, description: c.description } });
       }
+      // The previous year's credits are in LM43 and their F24 uses in LM44: the rest lowers LM46 (or raises LM47), so it
+      // can no longer be compensated. The same credits the guide reads for LM43.
+      await tx.taxCredit.updateMany({
+        where: { tenantId, section: 'TREASURY', code: incomeRules.taxCodes.substituteTaxBalance, referenceYear: year - 1, absorbedByReturnId: null },
+        data: { absorbedByReturnId: taxReturn.id },
+      });
     });
     return (await this.get(tenantId, year))!;
   }
 
-  /** Back to not filed: allowed while no F24 uses the credits it registered. */
+  /** Back to not filed: allowed while no F24 uses the credits it registered. The previous year's credits it absorbed reopen (ON DELETE SET NULL). */
   async unmark(tenantId: string, year: number): Promise<void> {
     const filed = await this.prisma.taxReturn.findUnique({ where: { tenantId_year: { tenantId, year } }, include: { credits: { include: { usages: { select: { id: true } } } } } });
     if (!filed) throw new NotFoundException(`La dichiarazione dei redditi ${year} non è segnata come presentata`);

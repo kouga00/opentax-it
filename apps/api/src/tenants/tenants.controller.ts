@@ -2,6 +2,8 @@ import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put } from '@nest
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CurrentUser } from '../common/current-user.decorator.js';
 import { Public } from '../common/public.decorator.js';
+import { Roles } from '../common/roles.decorator.js';
+import { UserRole } from '../generated/prisma/enums.js';
 import { SessionToken } from '../common/session-token.decorator.js';
 import type { UserWithMemberships } from '../auth/types/user-with-memberships.js';
 import { TenantId } from '../common/tenant.decorator.js';
@@ -13,7 +15,8 @@ import { TenantsService } from './tenants.service.js';
 export class TenantsController {
   constructor(private readonly service: TenantsService) {}
 
-  @ApiOperation({ summary: 'Crea una partita IVA con il suo profilo fiscale' })
+  @ApiOperation({ summary: 'Crea una partita IVA con il suo profilo fiscale (solo amministratore)' })
+  @Roles(UserRole.PLATFORM_ADMIN)
   @Post()
   create(
     @Body() dto: CreateTenantDto,

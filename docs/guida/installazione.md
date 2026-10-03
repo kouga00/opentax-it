@@ -28,9 +28,11 @@ Per salvare la password della casella PEC serve anche `APP_ENCRYPTION_KEY` in `.
 
 Poi:
 
-1. apri http://localhost:3001/register e crea il tuo account;
-2. rendilo amministratore, perché solo un amministratore carica e attiva i set di regole fiscali: `pnpm admin:create <tua-email>` (con `pnpm dev` attivo, che compila l'API);
+1. crea il tuo account, che è anche l'amministratore (solo un amministratore carica e attiva i set di regole fiscali): `pnpm admin:create <tua-email>` (con `pnpm dev` attivo, che compila l'API), che ti chiede la password. Non c'è una pagina di registrazione: gli account si creano solo così;
+2. accedi su http://localhost:3001/login;
 3. apri http://localhost:3001/setup/new e crea la partita IVA (profilo fiscale).
+
+Altri utenti (per esempio il commercialista) li crei tu nella pagina **Utenti** (`/users`, solo per l'amministratore): scegli la loro password e a quali partite IVA accedono, in sola lettura o in lettura e scrittura.
 
 In **Regole fiscali** (`/rules`) carica i set forniti con l'applicazione e attiva quello di ogni anno; conti bancari e profili di scadenza si aggiungono nelle pagine **Banche** (`/banks`) e **Profili di scadenza** (`/payment-terms`).
 
@@ -42,7 +44,7 @@ pnpm db:migrate     # nuove migrazioni del database
 pnpm dev            # rigenera il client Prisma e riavvia api e web
 ```
 
-**Se aggiorni da una versione senza login**, le partite IVA che hai già non appartengono ancora a nessun account: registrati su http://localhost:3001/register e poi esegui `pnpm admin:create <tua-email>`. Il comando ti rende amministratore e ti assegna tutte le partite IVA senza un account. Senza questo passo, dopo il login non vedresti i tuoi dati.
+**Se aggiorni da una versione senza login**, le partite IVA che hai già non appartengono ancora a nessun account: esegui `pnpm admin:create <tua-email>`. Il comando crea il tuo account (o, se esiste già, lo rende amministratore) e ti assegna tutte le partite IVA senza un account. Senza questo passo, dopo il login non vedresti i tuoi dati.
 
 Se l'aggiornamento porta nuovi set di regole, in **Regole fiscali** (`/rules`) vengono proposti come nuova versione in bozza, con il confronto rispetto al set attivo: controlla cosa cambia e attivali. Non vengono mai attivati automaticamente.
 

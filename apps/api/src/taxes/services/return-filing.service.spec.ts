@@ -21,7 +21,7 @@ function service(existing: object | null = null) {
   const created: unknown[] = [];
   const tx = {
     taxReturn: { upsert: vi.fn().mockResolvedValue({ id: 'r1' }) },
-    taxCredit: { create: vi.fn().mockImplementation(({ data }) => { created.push(data); return Promise.resolve(data); }) },
+    taxCredit: { create: vi.fn().mockImplementation(({ data }) => { created.push(data); return Promise.resolve(data); }), updateMany: vi.fn().mockResolvedValue({ count: 1 }) },
   };
   const findUnique = vi.fn().mockResolvedValueOnce(existing).mockResolvedValue({ status: 'FILED', filedOn: new Date('2026-09-30T00:00:00Z'), credits: [] });
   const prisma = { taxReturn: { findUnique }, $transaction: (fn: (t: typeof tx) => unknown) => fn(tx) } as unknown as PrismaService;
@@ -39,6 +39,15 @@ describe('ReturnFilingService', () => {
       expect.objectContaining({ section: 'TREASURY', code: '1792', referenceYear: 2025, amount: 500, taxReturnId: 'r1' }),
       expect.objectContaining({ section: 'INPS', code: 'PXX', referenceYear: 2025, amount: 300 }),
     ]);
+  });
+
+  it('closes the previous year\'s 1792 credits, reported in LM43: what F24 did not use lowers LM46 (Fasc. 3)', async () => {
+    const { service: s, tx } = service();
+    await s.markFiled('t1', 2025, '2026-09-30');
+    expect(tx.taxCredit.updateMany).toHaveBeenCalledWith({
+      where: { tenantId: 't1', section: 'TREASURY', code: '1792', referenceYear: 2024, absorbedByReturnId: null },
+      data: { absorbedByReturnId: 'r1' },
+    });
   });
 
   it('refuses a return already marked as filed, and going back when a credit is used in an F24', async () => {

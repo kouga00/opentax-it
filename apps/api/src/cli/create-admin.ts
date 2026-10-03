@@ -14,7 +14,7 @@ import process, { stdin as input, stdout as output } from 'node:process';
 import * as readline from 'node:readline/promises';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from '../app.module.js';
-import { PasswordService } from '../auth/services/password.service.js';
+import { PASSWORD_MAX_LENGTH, PASSWORD_MIN_LENGTH, PasswordService } from '../auth/services/password.service.js';
 import { UserRole } from '../generated/prisma/enums.js';
 import { PrismaService } from '../prisma/prisma.service.js';
 
@@ -71,8 +71,8 @@ export async function promote(
   };
 
   if (effectivePassword) {
-    if (effectivePassword.length < 8) {
-      throw new Error('La nuova password deve contenere almeno 8 caratteri.');
+    if (effectivePassword.length < PASSWORD_MIN_LENGTH || effectivePassword.length > PASSWORD_MAX_LENGTH) {
+      throw new Error(`La nuova password deve contenere da ${PASSWORD_MIN_LENGTH} a ${PASSWORD_MAX_LENGTH} caratteri.`);
     }
     data.passwordHash = await passwordService.hash(effectivePassword);
   }
@@ -85,6 +85,10 @@ export async function promote(
     where: { id: existing.id },
     data,
   });
+  // A new password closes the sessions opened with the old one (e.g. after a compromised account).
+  if (data.passwordHash) {
+    await prisma.session.deleteMany({ where: { userId: existing.id } });
+  }
   console.log(`Utente ${updated.email} (${updated.id}) promosso a PLATFORM_ADMIN con successo.`);
 
   await claimOrphanTenants(prisma, updated);
@@ -105,8 +109,8 @@ export async function create(
     rl.close();
   }
 
-  if (!effectivePassword || effectivePassword.length < 8) {
-    throw new Error('Per creare un nuovo utente amministratore è richiesta una password di almeno 8 caratteri.');
+  if (!effectivePassword || effectivePassword.length < PASSWORD_MIN_LENGTH || effectivePassword.length > PASSWORD_MAX_LENGTH) {
+    throw new Error(`Per creare un nuovo utente amministratore è richiesta una password da ${PASSWORD_MIN_LENGTH} a ${PASSWORD_MAX_LENGTH} caratteri.`);
   }
 
   const passwordHash = await passwordService.hash(effectivePassword);

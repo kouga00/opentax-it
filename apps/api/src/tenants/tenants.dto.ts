@@ -68,7 +68,8 @@ export class UpdateTenantProfileDto {
   @IsOptional() @IsString() @Matches(/^[MF]?$/) sex?: string;
   @IsOptional() @IsString() @Length(0, 60) birthPlace?: string;
   @IsOptional() @IsString() @Matches(/^([A-Z]{2})?$/) birthProvince?: string;
-  @IsOptional() @IsString() @Matches(/^\d{4}-[a-z0-9-]+$/) inpsOfficeId?: string;
+  /** INPS office of the Gestione Separata; '' removes it (the profile form sends it empty when not set). */
+  @IsOptional() @IsString() @Matches(/^(\d{4}-[a-z0-9-]+)?$/) inpsOfficeId?: string;
 }
 
 export class BankAccountDto {

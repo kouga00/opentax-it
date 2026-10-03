@@ -10,7 +10,7 @@ export function buildOpenApiDocument(app: INestApplication, version: string): Op
     .setTitle('OpenTax IT API')
     .setDescription('API REST del gestionale per partite IVA in regime forfettario. Ascolta solo su 127.0.0.1. Ogni richiesta, tranne quelle pubbliche (stato, regole fiscali, fonti, cambi, sedi INPS, casse), vuole il token di sessione di /auth/login o /auth/register nell\'header `Authorization: Bearer`; la partita IVA attiva è quella scelta con /auth/select-tenant.')
     .setVersion(version)
-    // The session token of /auth/login or /auth/register (common/auth.guard.ts); the active tenant comes from the session.
+    // The session token of /auth/login (common/auth.guard.ts); the active tenant comes from the session.
     .addBearerAuth({ type: 'http', scheme: 'bearer', description: 'Token di sessione' }, 'session')
     .addSecurityRequirements('session')
     .build();

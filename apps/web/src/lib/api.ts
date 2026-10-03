@@ -41,6 +41,7 @@ import type {
   TenantWithProfile,
   ThresholdOutlook,
   User,
+  UserAccount,
 } from './types';
 
 export * from './types';
@@ -144,10 +145,16 @@ export async function fetchOrReason<T>(fn: () => Promise<T>): Promise<{ value: T
 export const api = {
   // Authentication
   login: (data: unknown) => request<AuthResponse>('/auth/login', { method: 'POST', body: JSON.stringify(data) }),
-  register: (data: unknown) => request<AuthResponse>('/auth/register', { method: 'POST', body: JSON.stringify(data) }),
   logout: () => request<void>('/auth/logout', { method: 'POST' }),
   authMe: () => request<User>('/auth/me'),
   selectTenant: (tenantId: string) => request<User>('/auth/select-tenant', { method: 'POST', body: JSON.stringify({ tenantId }) }),
+
+  // Users (platform admin only)
+  users: () => request<UserAccount[]>('/users'),
+  createUser: (data: unknown) => request<UserAccount>('/users', { method: 'POST', body: JSON.stringify(data) }),
+  updateUser: (id: string, data: unknown) => request<UserAccount>(`/users/${seg(id)}`, { method: 'PATCH', body: JSON.stringify(data) }),
+  setUserMemberships: (id: string, memberships: unknown) => request<UserAccount>(`/users/${seg(id)}/memberships`, { method: 'PUT', body: JSON.stringify({ memberships }) }),
+  deleteUser: (id: string) => request<void>(`/users/${seg(id)}`, { method: 'DELETE' }),
 
   // Tenants and Profiles
   tenants: () => request<Tenant[]>('/tenants'),

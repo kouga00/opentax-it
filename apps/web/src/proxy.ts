@@ -24,6 +24,8 @@ const PROTECTED_PREFIXES = [
   '/banks',
   '/payment-terms',
   '/setup',
+  '/stamp-duty',
+  '/users',
 ];
 
 export function proxy(request: NextRequest) {

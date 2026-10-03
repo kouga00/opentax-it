@@ -8,6 +8,7 @@ import { AppService } from './app.service.js';
 import { AuditLogModule } from './audit-log/audit-log.module.js';
 import { AuthModule } from './auth/auth.module.js';
 import { AuthGuard } from './common/auth.guard.js';
+import { ReadOnlyGuard } from './common/read-only.guard.js';
 import { RolesGuard } from './common/roles.guard.js';
 import { CustomersModule } from './customers/customers.module.js';
 import { ExchangeRatesModule } from './exchange-rates/exchange-rates.module.js';
@@ -23,6 +24,7 @@ import { StorageModule } from './storage/storage.module.js';
 import { TaxCreditsModule } from './tax-credits/tax-credits.module.js';
 import { TaxesModule } from './taxes/taxes.module.js';
 import { TenantsModule } from './tenants/tenants.module.js';
+import { UsersModule } from './users/users.module.js';
 
 @Module({
   imports: [
@@ -59,6 +61,7 @@ import { TenantsModule } from './tenants/tenants.module.js';
     StorageModule,
     FiscalRulesModule,
     TenantsModule,
+    UsersModule,
     CustomersModule,
     InvoicesModule,
     PaymentsModule,
@@ -80,6 +83,10 @@ import { TenantsModule } from './tenants/tenants.module.js';
     {
       provide: APP_GUARD,
       useClass: RolesGuard,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: ReadOnlyGuard,
     },
   ],
 })
