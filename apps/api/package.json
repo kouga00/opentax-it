@@ -25,13 +25,13 @@
     "openapi": "prisma generate && tsc -p tsconfig.build.json --outDir dist-openapi --incremental false && node dist-openapi/openapi/export-openapi.js"
   },
   "dependencies": {
-    "@nestjs/common": "^12.0.1",
-    "@nestjs/config": "^12.0.0",
-    "@nestjs/core": "^12.0.1",
-    "@nestjs/platform-express": "^12.0.1",
-    "@nestjs/schedule": "12.0.2",
-    "@nestjs/swagger": "12.0.2",
-    "@nestjs/throttler": "6.7.1",
+    "@nestjs/common": "^12.5.1",
+    "@nestjs/config": "^12.1.1",
+    "@nestjs/core": "^12.5.1",
+    "@nestjs/platform-express": "^12.5.1",
+    "@nestjs/schedule": "12.0.4",
+    "@nestjs/swagger": "12.1.2",
+    "@nestjs/throttler": "6.8.0",
     "@opentax-it/fatturapa": "workspace:*",
     "@opentax-it/fiscal-rules": "workspace:*",
     "@prisma/adapter-pg": "7.10.0",
@@ -51,9 +51,9 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
-    "@nestjs/cli": "^12.0.0",
-    "@nestjs/schematics": "^12.0.0",
-    "@nestjs/testing": "^12.0.1",
+    "@nestjs/cli": "^12.0.13",
+    "@nestjs/schematics": "^12.0.13",
+    "@nestjs/testing": "^12.5.1",
     "@types/express": "^5.0.0",
     "@types/node": "^24.0.0",
     "@types/pg": "^8.23.1",
